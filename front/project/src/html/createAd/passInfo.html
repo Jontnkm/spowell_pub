@@ -1,0 +1,195 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h3>나의 광고</h5>
+            </div>
+
+            <!-- kb 2024.10.29 수정 -->
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <p class="subTitle">나에게 맞는 광고지역, 예산을 추천해 드려요</p>
+                </div>
+                <div class="cptBtnForm d-flex gap10 excpBtn">
+                    <button type="button" class="btn scnd" onclick="openTutorial()"><span></span>영상 제작 튜토리얼</button>
+                </div>
+            </div>
+            
+            <!-- kb 2024.10.29 수정 -->
+            <div class="cptModeSuggest">
+                <div class="modeSuggestBox">
+                    <div class="modeBox">
+                        <p class="modeAsk">1. 광고하실 지역은 어디신가요?</p>
+                        <p class="modeMore"><a href="#"><span class="modeImg"><img src="../../images/common/ico_location.svg" alt=""></span>지역 위치 설정하기<span class="arrow"><img src="../../images/common/ico_arr03.svg" alt=""></span></a></p>
+                    </div>
+                    <ul class="modeList modeList1">
+                        <li>
+                            <ul>
+                                <li class="fir">0KM ~ 1KM
+                                    <span class="recommend">추천</span> <!-- 추천 버튼 클릭시 툴팁 활성화 -->
+                                    <span class="modeTooltip">외식업 업종의 다른 광고주분들은<br>평균 매장 0km~3km 광고 청약하였습니다.
+                                        <img src="../../images/common/ico_tooltip_cls.svg" alt="" class="imgClose">
+                                    </span>
+                                </li>
+                                <li class="sec">매장인근 0~1KM 이내</li>
+                                <li class="thir">광고 대상 <span class="num">2,200+</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">1KM ~ 3KM</li>
+                                <li class="sec">매장인근 1~3KM 이내</li>
+                                <li class="thir">광고 대상 <span class="num">2,800+</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">3KM ~ 5KM</li>
+                                <li class="sec">매장인근 3~5KM 이내</li>
+                                <li class="thir">광고 대상 <span class="num">2,800+</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">5KM ~ 10KM</li>
+                                <li class="sec">매장인근 5~10KM 이내</li>
+                                <li class="thir">광고 대상 <span class="num">2,800+</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modeSuggestBox">
+                    <div class="modeBox">
+                        <p class="modeAsk">2. 광고는 언제부터 송출하고 싶은신가요?</p>
+                    </div>
+                    <ul class="modeList modeList2">
+                        <li>
+                            <ul>
+                                <li class="fir">1개월</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">2개월
+                                    <span class="recommend">추천</span> <!-- 추천 버튼 클릭시 툴팁 활성화 -->
+                                    <span class="modeTooltip">외식업 업종의 다른 광고주분들은<br>평균 매장 0km~3km 광고 청약하였습니다.
+                                        <img src="../../images/common/ico_tooltip_cls.svg" alt="" class="imgClose">
+                                    </span>
+                                    <!-- active시 툴팁 활성화 -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">3개월</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">6개월</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">1년</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">직접입력</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <div class="iptArea">
+                                <input type="text" placeholder="2024-10-01 ~ 2024-10-31 (31일간)" id="ipt05" disabled />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modeSuggestBox">
+                    <div class="modeBox">
+                        <p class="modeAsk">3. 광고비용은 얼마정도 생각하고 계신가요?</p>
+                    </div>
+                    <ul class="modeList modeList3">
+                        <li>
+                            <ul>
+                                <li class="fir">10만원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">20만원
+                                    <span class="recommend">추천</span> <!-- 추천 버튼 클릭시 툴팁 활성화 -->
+                                    <span class="modeTooltip">외식업 업종의 다른 광고주분들은<br>평균 매장 0km~3km 광고 청약하였습니다.
+                                        <img src="../../images/common/ico_tooltip_cls.svg" alt="" class="imgClose">
+                                    </span>
+                                    <!-- active시 툴팁 활성화 -->
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">30만원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="fir">직접입력</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cptBtnForm d-flex gap10 excpBtn"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+                    <!--default-->
+                    <button type="button" class="btn scnd">다음</button>
+                </div>    
+            </div>
+
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

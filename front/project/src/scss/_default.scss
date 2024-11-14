@@ -1,0 +1,153 @@
+/*color value*/
+:root{
+  --prm-color : #3617CE;
+  --snd-color : #FF404E;
+
+  --btn-hover : #2105AB; /*button hover case*/
+
+  --txt-black : #000000;
+  --txt-gray01 : #303030;
+  --txt-gray02 : #797979;
+  --txt-gray03 : #a9a9a9;
+  --txt-gray04 : #d9d9d9;
+  --txt-gray05 : #f7f9fb;
+  
+  --clr-white : #ffffff;
+
+  --sub-color01 : #ffeef0;
+  --sub-color02 : #fff4e5;
+  --sub-color03 : #fff9e5;
+  --sub-color04 : #eaf6fe; 
+  --sub-color05 : #f7ecff;
+  --sub-color06 : #F9FCFF;
+}
+
+/* 본고딕 Thin */
+@font-face {
+    font-family: "NotoSansCJKkr";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../../common/webfont/NotoSansKR-Thin.woff") format("font-woff"),
+      url("../../common/webfont/NotoSansKR-Thin.woff2") format("font-woff2"),
+      url("../../common/webfont/NotoSansKR-Thin.otf") format("opentype");   
+  }
+  /* 본고딕 Light */
+  @font-face {
+    font-family: "NotoSansCJKkr";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../common/webfont/NotoSansKR-Light.woff") format("font-woff"),
+      url("../../common/webfont/NotoSansKR-Light.woff2") format("font-woff2"),
+      url("../../common/webfont/NotoSansKR-Light.otf") format("opentype");
+      
+  }
+  /* 본고딕 Regular */
+  @font-face {
+    font-family: "NotoSansCJKkr";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../common/webfont/NotoSansKR-Regular.woff") format("font-woff"),
+      url("../../common/webfont/NotoSansKR-Regular.woff2") format("font-woff2"),
+      url("../../common/webfont/NotoSansKR-Regular.otf") format("opentype");
+  }
+  /* 본고딕 Medium */
+  @font-face {
+    font-family: "NotoSansCJKkr";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../common/webfont/NotoSansKR-Medium.woff") format("font-woff"),
+      url("../../common/webfont/NotoSansKR-Medium.woff2") format("font-woff2"),
+      url("../../common/webfont/NotoSansKR-Medium.otf") format("opentype");
+  }
+  /* 본고딕 Bold */
+  @font-face {
+    font-family: "NotoSansCJKkr";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../common/webfont/NotoSansKR-Bold.woff") format("font-woff"),
+      url("../../common/webfont/NotoSansKR-Bold.woff2") format("font-woff2"),
+      url("../../common/webfont/NotoSansKR-Bold.otf") format("opentype");
+  }
+
+  /*==========================================roboto==========================================*/
+  @font-face {
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../../common/webfont/Roboto-Thin.woff") format("font-woff"),
+      url("../../common/webfont/Roboto-Thin.woff2") format("font-woff2"),
+      url("../../common/webfont/Roboto-Thin.otf") format("opentype");   
+  }
+  /* 본고딕 Light */
+  @font-face {
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../common/webfont/roboto-Light.woff") format("font-woff"),
+      url("../../common/webfont/roboto-Light.woff2") format("font-woff2"),
+      url("../../common/webfont/roboto-Light.otf") format("opentype");
+      
+  }
+  /* 본고딕 Regular */
+  @font-face {
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../common/webfont/roboto-Regular.woff") format("font-woff"),
+      url("../../common/webfont/roboto-Regular.woff2") format("font-woff2"),
+      url("../../common/webfont/roboto-Regular.otf") format("opentype");
+  }
+  /* 본고딕 Medium */
+  @font-face {
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../../common/webfont/roboto-Medium.woff") format("font-woff"),
+      url("../../common/webfont/roboto-Medium.woff2") format("font-woff2"),
+      url("../../common/webfont/roboto-Medium.otf") format("opentype");
+  }
+  /* 본고딕 Bold */
+  @font-face {
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../common/webfont/roboto-Bold.woff") format("font-woff"),
+      url("../../common/webfont/roboto-Bold.woff2") format("font-woff2"),
+      url("../../common/webfont/roboto-Bold.otf") format("opentype");
+  }
+* {box-sizing: border-box; font-family:'NotoSansCJKkr', sans-serif; letter-spacing: -0.4px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none; display:block;}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input, textarea {-webkit-border-radius:0; -webkit-appearance:none;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:10px;line-height:1.5; font-family:'roboto', 'NotoSansCJKkr', sans-serif; color:#000} /* color값은 디자인가이드에 맞게사용 */
+a {color:#000;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+caption {font-size: 0;}
+
+input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+
+select {-moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../common/images/icon_select.png) calc(100% - 9px) center no-repeat;}
+select::-ms-expand {display:none}
+label {font-size: 0;}
+
+.skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
+.skip .quickBtn:focus {height:auto;}
+
+.hidden {font-size:0 !important; position:fixed; left:-5000px; top:0;}
+
+*::-webkit-scrollbar {width:4px;}
+*::-webkit-scrollbar-thumb {background:var(--txt-gray04); border-radius:8px;}
+// :root::-webkit-scrollbar{
+//   width:8px; background:rgba(0,0,0,0.1);
+// }
+// :root::-webkit-scrollbar-thumb{
+//   background:rgba(0,0,0,0.2);
+// }

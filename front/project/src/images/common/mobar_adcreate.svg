@@ -1,0 +1,11 @@
+<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 63">
+<path id="Line 2" d="M6.5 19.5H14.5" stroke="#303030" stroke-width="1.5" stroke-linecap="round"/>
+<rect id="Rectangle 34" x="1.25" y="4.25" width="18.5" height="12.5" rx="3.25" stroke="#303030" stroke-width="1.5"/>
+<path id="Polygon 1" d="M13.5 10.5L9 13.0981L9 7.90192L13.5 10.5Z" stroke="#303030" stroke-width="1.5" stroke-linejoin="round"/>
+<g id="Group 62">
+<line id="Line 3" x1="7.52452" y1="0.774519" x2="9.27452" y2="3.80561" stroke="#303030" stroke-width="1.5" stroke-linecap="round"/>
+<line id="Line 4" x1="0.75" y1="-0.75" x2="4.25" y2="-0.75" transform="matrix(-0.5 0.866025 0.866025 0.5 14.5 0.5)" stroke="#303030" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

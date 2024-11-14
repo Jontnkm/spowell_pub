@@ -1,0 +1,139 @@
+<!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<div class="modPopup type01 popOpen" id="clause02"><!-- 작업하실때 클래스명 'popOpen' 삭제하시길 바랍니다 -->
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">타이틀</div>
+            <button class="closeBtn" onclick="popClose('clause02')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <!-- 달력 -->
+            <div class="cptCalendar">
+                <div class="calArea prevMonth">
+                    <div class="calTop">
+                        <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                        <p class="currentDate">2024년 10월</p>
+                        <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                    </div>
+                    <div class="calBottom">
+                        <ul class="weeks">
+                            <li>일</li>
+                            <li>월</li>
+                            <li>화</li>
+                            <li>수</li>
+                            <li>목</li>
+                            <li>금</li>
+                            <li>토</li>
+                        </ul>
+                        <ul class="days">
+                            <li class="inactive"><span>29</span></li>
+                            <li class="inactive"><span>30</span></li>
+                            <li class="start active"><span>1</span></li>
+                            <li class="during"><span>2</span></li>
+                            <li class="during"><span>3</span></li>
+                            <li class="during"><span>4</span></li>
+                            <li class="during"><span>5</span></li>
+                            <li class="holiday during"><span>6</span></li>
+                            <li class="during"><span>7</span></li>
+                            <li class="during"><span>8</span></li>
+                            <li class="end active"><span>9</span></li>
+                            <li><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li class="holiday"><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li class="holiday"><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li><span>23</span></li>
+                            <li><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li class="holiday"><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                            <li><span>31</span></li>
+                            <li class="inactive"><span>1</span></li>
+                            <li class="inactive"><span>2</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calArea nextMonth">
+                    <div class="calTop">
+                        <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                        <p class="currentDate">2024년 11월</p>
+                        <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                    </div>
+                    <div class="calBottom">
+                        <ul class="weeks">
+                            <li>일</li>
+                            <li>월</li>
+                            <li>화</li>
+                            <li>수</li>
+                            <li>목</li>
+                            <li>금</li>
+                            <li>토</li>
+                        </ul>
+                        <ul class="days">
+                            <li class="inactive"><span>27</span></li>
+                            <li class="inactive"><span>28</span></li>
+                            <li class="inactive"><span>29</span></li>
+                            <li class="inactive"><span>30</span></li>
+                            <li class="inactive"><span>31</span></li>
+                            <li><span>1</span></li>
+                            <li class="start active"><span>2</span></li>
+                            <li class="during holiday"><span>3</span></li>
+                            <li class="during"><span>4</span></li>
+                            <li class="during"><span>5</span></li>
+                            <li class="during"><span>6</span></li>
+                            <li class="during"><span>7</span></li>
+                            <li class="during"><span>8</span></li>
+                            <li class="end active"><span>9</span></li>
+                            <li class="holiday"><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li class="holiday"><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li><span>23</span></li>
+                            <li class="holiday"><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>                       
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('clause02')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('clause02')">확인</button>
+        </div>
+    </div>
+</div>

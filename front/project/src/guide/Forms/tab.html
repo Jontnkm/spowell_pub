@@ -1,0 +1,104 @@
+ <!-- Guide : s -->
+<div class="g-area">
+    <strong class="g-area-tit">tab</strong>  
+    <xmp>
+        <!-- tab1 -->
+        <div class="modTab">
+            <div class="tabInner">
+                <ul class="tabMenu">
+                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">공지/이벤트</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">서비스</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">운영</button></li>
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">기타</button></li>
+                </ul>
+            </div>
+            <!--샘플 컨텐츠 필요시 대체 가능하며 tabCont 클래스는 가져가야함-->
+            <div class="tabContainer">
+                <div class="tabCont active">
+                    탭내용1
+                </div> 
+                <div class="tabCont">
+                    탭내용2
+                </div>
+                <div class="tabCont">
+                    탭내용3
+                </div>
+                <div class="tabCont">
+                    탭내용4
+                </div>
+                <div class="tabCont">
+                    탭내용5
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">tab 와이드 버전2</strong>  
+    <xmp>
+        <!-- tab 와이드 버전2 -->
+        <div class="modTabWide">
+            <ul class="tabMenu">
+                <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">진행중인 이벤트</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">종료된 이벤트</button></li>
+            </ul>
+            <div class="tabContainer">
+                <div class="tabCont active">
+                    <div class="cptNoData">
+                        <div class="noImg">
+                            <img src="../../images/common/ico_warning.svg" alt="경고 아이콘">
+                        </div>
+                        <p class="noTxt">진행중인 이벤트가 없습니다.</p>
+                    </div>
+                </div> 
+                <div class="tabCont">
+                    탭내용2
+                </div>
+            </div>
+        </div>
+    </xmp>
+</div>
+
+<script>
+    //=====================================================================================//
+    //=================================공통 탭 타입1=======================================//
+    //=====================================================================================//
+    function showTab(index) {
+        var tabButtons = document.querySelectorAll('.tabName');
+        var tabContents = document.querySelectorAll('.tabCont');
+
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove('active');
+            tabContents[i].classList.remove('active');
+        }
+
+        tabButtons[index].classList.add('active');
+        tabContents[index].classList.add('active');
+    }
+
+
+
+    // 가이드 공통
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+
+</script>

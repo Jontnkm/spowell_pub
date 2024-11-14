@@ -1,0 +1,96 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+             <!-- KB 2024.10.29 수정 -->
+            <div class="comSubTitle">
+                <h3>광고 만들기</h5>
+            </div>
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <p class="subTitle">우리매장의<br>광고영상을 만들어 보세요</p>
+                </div>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+            
+            <div class="createOption">
+                <ul>
+                    <!-- KB 2024.10.29 수정 -->
+                    <li>
+                        <span class="flag">AI영상</span>
+                        <p class="title">AI가 5분이면 광고영상을<br>만들어 드려요.</p>
+                        <div class="cptBtnForm d-flex gap10">
+                            <button type="button" class="startBtn btn prmy">영상 만들기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flag">템플릿 영상</span>
+                        <p class="title">사진과 문구만 넣으면<br>광고영상을 만들수 있어요.</p>
+                        <p class="subTitle">*5장 내외 매장사진을 미리 준비해주세요.</p>
+                        <div class="cptBtnForm d-flex gap10">
+                            <button type="button" class="startBtn btn prmy">영상 만들기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="flag">내 컴퓨터</span>
+                        <p class="title">이미 광고영상이<br>있으신가요?
+                        </p>
+                        <div class="cptBtnForm d-flex gap10">
+                            <button type="button" class="startBtn btn prmy">광고영상 업로드하기</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="callCenter">
+                 <p class="tit">B tv 우리동네광고 전화 상담을 원하시면 1566-7762으로 문의 바랍니다.</p>
+                 <p class="date">평일 AM 09시 ~ PM 18시</p>
+                 <div class="cptBtnForm">
+                    <button type="button" class="btn scnd">전화상담 예약</button>
+                 </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

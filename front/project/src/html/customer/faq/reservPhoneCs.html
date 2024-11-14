@@ -1,0 +1,235 @@
+ <!-- Header -->
+ <%- include('../../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../../" 
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h3>전화상담 예약</h3>
+            </div>
+            <div class="cptCallTop">
+                <ul class="callTopArea">
+                    <li class="step step1"><span class="num">1</span>간단한 신청
+                        <ul>
+                            <li>연락처와 상담을 희망하는 날짜를 알려주세요.<br>
+                                B tv 우리동네광고의 전문 컨설턴트가<br>
+                                연락드리겠습니다.
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="step step2"><span class="num">2</span>전문 컨설턴트 배정
+                        <ul>
+                            <li>고객님께서 희망하시는 광고에 대해<br>
+                                파악하고 쉽고 빠르게 광고를 제작해<br>
+                                청약하실 수 있도록 도와드리겠습니다.
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="step step3"><span class="num">3</span>TV광고 청약
+                        <ul>
+                            <li>여러분의 비즈니스를 TV에서 광고해보세요.<br>
+                                B tv 우리동네광고가 여러분의 비즈니스<br>
+                                성장 파트너가 되어드리겠습니다.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="callBottom">
+                <div class="left">
+                    <div class="stepTitle">
+                        <span>Step 1</span> 희망 상담일자
+                    </div>
+                    <!-- 달력 -->
+                    <div class="cptCalendar callCalendar">
+                        <div class="calArea nextMonth oneMonth">
+                            <div class="calTop">
+                                <button class="icoLeft"><img src="../../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                                <p class="currentDate">2024년 11월</p>
+                                <button class="icoRight"><img src="../../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                            </div>
+                            <div class="calBottom">
+                                <ul class="weeks">
+                                    <li>일</li>
+                                    <li>월</li>
+                                    <li>화</li>
+                                    <li>수</li>
+                                    <li>목</li>
+                                    <li>금</li>
+                                    <li>토</li>
+                                </ul>
+                                <ul class="days">
+                                    <li class="inactive"><span>27</span></li>
+                                    <li class="inactive"><span>28</span></li>
+                                    <li class="inactive"><span>29</span></li>
+                                    <li class="inactive"><span>30</span></li>
+                                    <li class="inactive"><span>31</span></li>
+                                    <li><span>1</span></li>
+                                    <li class="start active"><span>2</span></li>
+                                    <li class="during holiday"><span>3</span></li>
+                                    <li class="during"><span>4</span></li>
+                                    <li class="during"><span>5</span></li>
+                                    <li class="during"><span>6</span></li>
+                                    <li class="during"><span>7</span></li>
+                                    <li class="during"><span>8</span></li>
+                                    <li class="end active"><span>9</span></li>
+                                    <li class="holiday"><span>10</span></li>
+                                    <li><span>11</span></li>
+                                    <li><span>12</span></li>
+                                    <li><span>13</span></li>
+                                    <li><span>14</span></li>
+                                    <li><span>15</span></li>
+                                    <li><span>16</span></li>
+                                    <li class="holiday"><span>17</span></li>
+                                    <li><span>18</span></li>
+                                    <li><span>19</span></li>
+                                    <li><span>20</span></li>
+                                    <li><span>21</span></li>
+                                    <li><span>22</span></li>
+                                    <li><span>23</span></li>
+                                    <li class="holiday"><span>24</span></li>
+                                    <li><span>25</span></li>
+                                    <li><span>26</span></li>
+                                    <li><span>27</span></li>
+                                    <li><span>28</span></li>
+                                    <li><span>29</span></li>
+                                    <li><span>30</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="callWarning">※ 주말 및 공휴일은 제외하고 선택해 주세요.</p>
+                    <!--// 달력 -->
+                </div>
+                <div class="right">
+                    <div class="stepTitle">
+                        <span>Step 2</span> 정보입력
+                    </div>
+                    <div class="cptForm callFrm">
+                        <div class="frmIpt withBtn">
+                            <label for="iptName01">상호명(또는 성함)을 입력해주세요 <span class="required">*</span></label>
+                            <div class="iptArea">
+                                <input type="text" placeholder="상호명을 입력해주세요" id="iptName01" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cptForm callFrm">
+                        <div class="frmIpt withBtn">
+                            <label for="iptName02">연락처를 입력해주세요 <span class="required">*</span></label>
+                            <div class="iptArea">
+                                <input type="text" placeholder="010-0000-0000" id="iptName02" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="cptForm callFrm">
+                        <div class="frmIpt withBtn">
+                            <label for="iptName02">상담 희망 영역</label>
+                        </div>
+                    </div> -->
+                    <div class="cptFormWrap">
+                        <div class="cptForm">                  
+                            <div class="frmIpt withBtn">
+                                <label>상담 희망 영역</label>
+                            </div>
+                        </div>
+                        <div class="cptFormArea">
+                            <div class="cptForm">
+                                <label class="frmChk">
+                                    <input type="radio" checked="checked" name="radio01">
+                                    <span class="radiomark"></span>
+                                    <span class="labelTxt">IPTV(B tv 우리동네 광고)</span>
+                                </label>
+                            </div>
+                            <div class="cptForm">
+                                <label class="frmChk">
+                                    <input type="radio" name="radio02">
+                                    <span class="radiomark"></span>
+                                    <span class="labelTxt">케이블TV 지역 광고</span>
+                                </label>
+                            </div>
+                            <div class="cptForm">
+                                <label class="frmChk">
+                                    <input type="radio" name="radio03">
+                                    <span class="radiomark"></span>
+                                    <span class="labelTxt">IPTV+케이블TV 결합 광고</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cptForm callTime">
+                        <div class="frmIpt withBtn">
+                            <label for="iptName02">상담 희망 시간</label>
+                        </div>
+                        <ul class="callList">
+                            <li class="active">11:00 ~ 11:20</li>
+                            <li>11:20 ~ 11:40</li>
+                            <li>11:40 ~ 12:00</li>
+                            <li>13:20 ~ 13:40</li>
+                            <li>13:00 ~ 13:20</li>
+                            <li>13:40 ~ 14:00</li>
+                        </ul>
+                    </div>
+                    <div class="cptForm agreeForm">
+                        <label class="frmChk">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            <span class="labelTxt">개인정보 수집 및 이용 동의</span>
+                        </label>
+                        <!-- pdf 뷰어 추가 -->
+                        <div class="pdfClick">
+                            <a href="#">약관보기 <span><img src="../../../images/common/ico_arr03.svg" alt=""></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="callBtn">
+                <div class="cptBtnForm d-flex gap10"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+                    <!--default-->
+                    <button type="button" class="btn scnd">이전으로</button>
+                    <!--disabled-->
+                    <button type="button" class="btn prmy">예약 신청하기</button>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../../ejs/quick.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../../ejs/bottom.ejs', { }) %>
+<%- include('../../ejs/moBar.ejs', { }) %>
