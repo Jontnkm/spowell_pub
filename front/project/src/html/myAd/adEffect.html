@@ -1,0 +1,329 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+             <!-- KB 2024.10.24 수정 -->
+            <div class="comSubTitle mobileTop">
+                <h3>나의 광고 <p class="mobileClick"><span class="img"></span>제작 중 <span class="count">00</span> <span class="arrow"><img src="../../images/common/ico_infoDown.svg" alt=""></span></p></h3>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+
+            <!-- KB 2024.10.24 수정 -->
+            <!--스탭 영역-->
+            <%- include('../ejs/stepBar.ejs', {
+                depth2: 7,
+                url: "../../"
+            }) %>
+            <!--//스탭 영역-->
+            <!--// KB 2024.10.24 수정 -->
+
+            <!-- KB 2024.10.24 수정 -->
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <p class="subTitle">광고 효과 보기</p>
+                </div>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+
+            <div class="modTabWide adEffect">
+                <ul class="tabMenu">
+                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab2(0)">상세정보</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab2(1)">리포트</button></li>
+                </ul>
+                <div class="tabContainer">
+                    <div class="tabCont active">
+                        <div class="adDetail">
+                            <div class="adThumb">
+                                <img src="../../images/temp/tmp_thumbnail2.png" alt="">
+                                <span class="hoverBg" onclick="popOpen('showAd')">
+                                    <span class="hidden">마우스오버 효과</span>
+                                </span>
+                            </div>
+                            <div class="adDetailBox">
+                                <ul>
+                                    <li>
+                                        <p class="tit">선택한 지역</p>
+                                        <p class="desc">
+                                            <span>서울시 강남구</span>,
+                                            <span>서울시 서초구</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="tit">광고 기간</p>
+                                        <p class="desc">
+                                            <span>2024년 10월 01일 ~ 2024년 10월 30일</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd"><span>광고영상 다운로드</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="tabCont">
+                        <div class="adReport">
+                            <div class="cptForm">
+                                <div class="frmIpt withBtn">
+                                    <div class="iptArea">
+                                        <input type="text" placeholder="기간을 설정해주세요" readonly onclick="popOpen('dateSett')"/>
+                                        <div class="cptBtnForm">
+                                            <button type="button" class="btn scnd date" onclick="popOpen('dateSett')">기간 설정</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cptButtonForm">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="chk01" checked>
+                                        <label for="chk01">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk02">
+                                        <label for="chk02">지역</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk03">
+                                        <label for="chk03">채널</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk04">
+                                        <label for="chk04">날짜</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk05">
+                                        <label for="chk05">성별</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk06">
+                                        <label for="chk06">세대</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk07">
+                                        <label for="chk07">관심사</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk08">
+                                        <label for="chk08">컨텐츠</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="chk09">
+                                        <label for="chk09">관심상품</label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="chartArea">
+                                <div class="chartTemp" style="width:100%; height:500px; background:rgba(255,3,3,0.2)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+
+<div class="modPopup type01" id="showAd">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">타이틀</div>
+            <button class="closeBtn" onclick="popClose('showAd')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="tempBox" style="width:100%; height:500px; background:rgba(255,3,3,0.2);">
+
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('showAd')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('showAd')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup type01" id="dateSett">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">기간 설정</div>
+            <button class="closeBtn" onclick="popClose('dateSett')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <!-- 달력 -->
+            <div class="cptCalendar">
+                <div class="calArea prevMonth">
+                    <div class="calTop">
+                        <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                        <p class="currentDate">2024년 10월</p>
+                        <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                    </div>
+                    <div class="calBottom">
+                        <ul class="weeks">
+                            <li>일</li>
+                            <li>월</li>
+                            <li>화</li>
+                            <li>수</li>
+                            <li>목</li>
+                            <li>금</li>
+                            <li>토</li>
+                        </ul>
+                        <ul class="days">
+                            <li class="inactive"><span>29</span></li>
+                            <li class="inactive"><span>30</span></li>
+                            <li class="start active"><span>1</span></li>
+                            <li class="during"><span>2</span></li>
+                            <li class="during"><span>3</span></li>
+                            <li class="during"><span>4</span></li>
+                            <li class="during"><span>5</span></li>
+                            <li class="holiday during"><span>6</span></li>
+                            <li class="during"><span>7</span></li>
+                            <li class="during"><span>8</span></li>
+                            <li class="end active"><span>9</span></li>
+                            <li><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li class="holiday"><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li class="holiday"><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li><span>23</span></li>
+                            <li><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li class="holiday"><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                            <li><span>31</span></li>
+                            <li class="inactive"><span>1</span></li>
+                            <li class="inactive"><span>2</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="calArea nextMonth">
+                    <div class="calTop">
+                        <button class="icoLeft"><img src="../../images/common/ico_calLeft.svg" alt="이전달로 가기"></button>
+                        <p class="currentDate">2024년 11월</p>
+                        <button class="icoRight"><img src="../../images/common/ico_calRight.svg" alt="다음달로 가기"></span>
+                    </div>
+                    <div class="calBottom">
+                        <ul class="weeks">
+                            <li>일</li>
+                            <li>월</li>
+                            <li>화</li>
+                            <li>수</li>
+                            <li>목</li>
+                            <li>금</li>
+                            <li>토</li>
+                        </ul>
+                        <ul class="days">
+                            <li class="inactive"><span>27</span></li>
+                            <li class="inactive"><span>28</span></li>
+                            <li class="inactive"><span>29</span></li>
+                            <li class="inactive"><span>30</span></li>
+                            <li class="inactive"><span>31</span></li>
+                            <li><span>1</span></li>
+                            <li class="start active"><span>2</span></li>
+                            <li class="during holiday"><span>3</span></li>
+                            <li class="during"><span>4</span></li>
+                            <li class="during"><span>5</span></li>
+                            <li class="during"><span>6</span></li>
+                            <li class="during"><span>7</span></li>
+                            <li class="during"><span>8</span></li>
+                            <li class="end active"><span>9</span></li>
+                            <li class="holiday"><span>10</span></li>
+                            <li><span>11</span></li>
+                            <li><span>12</span></li>
+                            <li><span>13</span></li>
+                            <li><span>14</span></li>
+                            <li><span>15</span></li>
+                            <li><span>16</span></li>
+                            <li class="holiday"><span>17</span></li>
+                            <li><span>18</span></li>
+                            <li><span>19</span></li>
+                            <li><span>20</span></li>
+                            <li><span>21</span></li>
+                            <li><span>22</span></li>
+                            <li><span>23</span></li>
+                            <li class="holiday"><span>24</span></li>
+                            <li><span>25</span></li>
+                            <li><span>26</span></li>
+                            <li><span>27</span></li>
+                            <li><span>28</span></li>
+                            <li><span>29</span></li>
+                            <li><span>30</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn white" onclick="popClose('dateSett')">취소</button>
+            <button type="button" class="popBtn blue" onclick="popClose('dateSett')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

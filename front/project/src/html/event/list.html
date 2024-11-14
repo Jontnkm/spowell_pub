@@ -1,0 +1,121 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h3>이벤트</h3> 
+            </div>
+            <div class="modTabWide">
+                <ul class="tabMenu">
+                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab2(0)">진행중인 이벤트</button></li> 
+                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab2(1)">종료된 이벤트</button></li>
+                </ul>
+                <div class="tabContainer">
+                    <div class="tabCont active">
+                        <div class="cptCardList">
+                            <div class="cardArea">
+                                <ul class="cardCont">
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="thumbnail"><img src="../../images/event_thumbnail.png" alt="4월 이벤트 사진"></div>
+                                            <ul class="thumbCont">
+                                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="thumbnail"><img src="../../images/event_thumbnail.png" alt="4월 이벤트 사진"></div>
+                                            <ul class="thumbCont">
+                                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="thumbnail"><img src="../../images/event_thumbnail.png" alt="4월 이벤트 사진"></div>
+                                            <ul class="thumbCont">
+                                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="thumbnail"><img src="../../images/event_thumbnail.png" alt="4월 이벤트 사진"></div>
+                                            <ul class="thumbCont">
+                                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="thumbnail"><img src="../../images/event_thumbnail.png" alt="4월 이벤트 사진"></div>
+                                            <ul class="thumbCont">
+                                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="tabCont">
+                        <div class="cptNoData">
+                            <div class="noImg">
+                                <img src="../../images/common/ico_warning.svg" alt="경고 아이콘">
+                            </div>
+                            <p class="noTxt">종료된 이벤트가 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

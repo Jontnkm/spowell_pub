@@ -1,0 +1,38 @@
+<%
+var depth2 = locals.depth2 ? locals.depth2 : 1;
+var depth3 = locals.depth3 ? locals.depth3 : 0;
+var url = locals.url ? locals.url : '../../';
+var depth2P = [];
+var depth3P = [];
+for(var i=1;i<=6;i++){
+    depth3P[i] = [];
+    if(depth2==i){
+        depth2P[i] = ' active';
+        for(var j=1;j<=4;j++){
+            if(depth3==j){
+                depth3P[i][j] = ' active';
+            }else{
+                depth3P[i][j] = '';
+            }
+        }
+    }else{ 
+        depth2P[i] = "";
+        for(var j=1;j<=6;j++){
+            depth3P[i][j] = '';
+        }
+    }
+}
+%>
+<div class="cptLnb">
+    <div class="lnbArea">
+        <h2 class="h2title">전자계약</h2>
+        <ul class="depth2Group">
+            <li class="depth2Menu<%= depth2P[1] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/online_contract/online_contract.html" class="depth2Link">전자계약 작성안내</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[2] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/online_contract/online_contract.html" class="depth2Link">전자계약 작성하기</a></h3>
+            </li>
+        </ul>
+    </div>
+</div>

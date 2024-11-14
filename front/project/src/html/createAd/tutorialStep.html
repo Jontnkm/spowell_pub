@@ -1,0 +1,194 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer tutorial" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+
+            <div class="modPopup type02 fullLayout popOpen" id="clause04">
+                <div class="popupBox">
+                    <!-- 팝업 타이틀 -->
+                    <div class="popTitArea tutorialTit">
+                        <div class="tit">튜토리얼</div>
+                        <!-- <button class="closeBtn" onclick="popClose('clause04')"><img src="../../images/common/ico_pop_close.svg" alt="팝업 닫기"></button> -->
+                    </div>
+                    
+                    <!-- 팝업 컨텐츠 -->
+                    <div class="popContArea">
+                        
+                        <!-- tab -->
+                        <div class="tutorialTabWrap tutorialTabWrap1">
+                            <div class="modTabWide tutorialTab">
+
+                                <!-- 윈도우 새창 탭메뉴 -->
+                                <div class="ttTabMenu1Wrap">
+                                    <ul class="tabMenu ttTabMenu1">
+                                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab4(0)">광고만들기</button></li> 
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(1)">메뉴2</button></li>
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(2)">메뉴3</button></li>
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(3)">메뉴4</button></li>
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(4)">메뉴5</button></li>
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(5)">메뉴6</button></li>
+                                    </ul>
+                                </div>
+                
+                                <div class="clickWrap">
+                                    <div class="prevClick"><img src="../../images/common/ico_arr03.svg" alt=""></div>
+                                    <div class="nextClick"><img src="../../images/common/ico_arr03.svg" alt=""></div>
+                                </div>
+                
+                                <div class="tabContainer ttContainer">
+                
+                                    <!-- AI로 광고 만들기 -->
+                                    <div class="tabCont active">
+                                        <!-- tab2 -->
+                                        <div class="modTab ttTabDepth2">
+                                            <div class="tabInner">
+                                                <ul class="tabMenu ttTabMenu2">
+                                                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab5(0)">AI로 광고 만들기</button></li> 
+                                                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab5(1)">템플릿으로 광고 만들기</button></li>
+                                                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab5(2)">내 파일로 광고 만들기</button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="tabContainer">
+                                                <!-- AI로 광고 만들기 -->
+                                                <div class="tabCont active">
+                                                    <div class="tutorialList">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="thumb">
+                                                                    <img src="../../images/sub/tutorial_img01.png" alt="">
+                                                                </div>
+                                                                <div class="stepBox">
+                                                                    <span class="flag">Step 1</span>
+                                                                    <p class="tit">AI 영상 만들기 선택</p>
+                                                                    <p class="desc">
+                                                                        1. AI영상, 템플릿 영상, 내 컴퓨터(파일 불러오기)를 선택합니다.<br>
+                                                                        2. 버튼을 누릅니다. 
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="thumb">
+                                                                    <img src="../../images/sub/tutorial_img02.png" alt="">
+                                                                </div>
+                                                                <div class="stepBox">
+                                                                    <span class="flag">Step 2</span>
+                                                                    <p class="tit">우리 가게 정보 입력</p>
+                                                                    <p class="desc">
+                                                                        AI영상, 템플릿 영상, 내 컴퓨터(파일 불러오기)를 선택합니다.  
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="thumb">
+                                                                    <img src="../../images/sub/tutorial_img03.png" alt="">
+                                                                </div>
+                                                                <div class="stepBox">
+                                                                    <span class="flag">Step 3</span>
+                                                                    <p class="tit">우리 가게 특징 찾기</p>
+                                                                    <p class="desc">
+                                                                        우리 가게 장점과 홍보할 대상을 선택합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="thumb">
+                                                                    <img src="../../images/sub/tutorial_img04.png" alt="">
+                                                                </div>
+                                                                <div class="stepBox">
+                                                                    <span class="flag">Step 4</span>
+                                                                    <p class="tit">우리 가게 정보 입력</p>
+                                                                    <p class="desc">
+                                                                        우리 가게 장점과 홍보할 대상을 선택합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div> 
+                                                <!-- 템플릿으로 광고 만들기 -->
+                                                <div class="tabCont">
+                                                    탭내용2
+                                                </div>
+                                                <!-- 내 파일로 광고 만들기 -->
+                                                <div class="tabCont">
+                                                    탭내용3
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div> 
+                
+                                    <!-- 메뉴2 -->
+                                    <div class="tabCont">
+                                        탭내용2
+                                    </div>
+
+                                    <!-- 메뉴3 -->
+                                    <div class="tabCont">
+                                        탭내용3
+                                    </div>
+
+                                    <!-- 메뉴4 -->
+                                    <div class="tabCont">
+                                        탭내용4
+                                    </div>
+
+                                    <!-- 메뉴5 -->
+                                    <div class="tabCont">
+                                        탭내용5
+                                    </div>
+
+                                    <!-- 메뉴6 -->
+                                    <div class="tabCont">
+                                        탭내용6
+                                    </div>
+                
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+            
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

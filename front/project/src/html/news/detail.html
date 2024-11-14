@@ -1,0 +1,95 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="experienceBox">
+                <div class="comSubTitle">
+                    <h3>소상공인 소식</h3>
+                </div>
+
+                <!-- boardView -->
+                <div class="cptBoardView">
+                    <div class="boardArea">
+                        <div class="boardTop">
+                            <h2 class="boardTitle newsTitle"><span class="type">정책</span>추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광</h2>
+                            <ul class="boardState">
+                                <li class="date">2024.08.30</li>
+                            </ul>
+                        </div>
+                        <div class="boardCont">
+                            <div class="boardContArea">
+                                <div class="boardContInner">
+                                    <p class="newsImg">
+                                        <img src="../../images/temp/news_img03.jfif" alt="소상공인 소식 이미지">
+                                    </p>
+                                    <div class="txtBox">
+                                        <p>
+                                            <span>· 서비스명 : 우리가게 위치 등록 서비스</span>
+                                            <span>· 설명 : Tmap, T전화, 아이나비 3개의 지도 서비스에 우리가게 위치 등록 서비스 제공</span>
+                                            <span>· 이용 요금 : '24년 12/31까지 무료 제공</span>
+                                            <span>· 신청 방법 : 광고 청약 결제 시 '우리가게 위치 등록 서비스(무료)' 선택</span>
+                                            <span>· 시행일 : 2024년 6월 5일</span>
+                                        </p>
+                                    </div>
+                                    <div class="txtBox">
+                                        <p>
+                                            <span>소상공인 사장님 여러분의 많은 관심과 이용 바랍니다.</span>
+                                            <span>감사합니다.</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="cptBtnForm d-flex center excpBtn">
+                                    <!--default-->
+                                    <button type="button" class="btn prmy">목록</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+
+<%- include('../ejs/moBar.ejs', { }) %>

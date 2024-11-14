@@ -1,0 +1,85 @@
+<!-- Guide : s -->
+<div class="g-area">
+    <strong class="g-area-tit">tab</strong>  
+    <xmp>
+        <div class="cptEventList">
+            <div class="eventArea">
+                <ul class="eventCont">
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="../../images/event_thumbnail.png.png" alt="4월 이벤트 사진"></div>
+                            <ul class="thumbCont">
+                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="../../images/event_thumbnail.png.png" alt="4월 이벤트 사진"></div>
+                            <ul class="thumbCont">
+                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="../../images/event_thumbnail.png.png" alt="4월 이벤트 사진"></div>
+                            <ul class="thumbCont">
+                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="../../images/event_thumbnail.png.png" alt="4월 이벤트 사진"></div>
+                            <ul class="thumbCont">
+                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail"><img src="../../images/event_thumbnail.png.png" alt="4월 이벤트 사진"></div>
+                            <ul class="thumbCont">
+                                <li class="title">이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명이벤트명</li>
+                                <li class="date">2024.09.05 ~ 2024.09.30</li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </xmp>
+</div>
+
+
+<script>
+
+    // 가이드 공통
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+
+</script>

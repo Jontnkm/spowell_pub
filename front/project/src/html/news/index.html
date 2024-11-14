@@ -1,0 +1,138 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+        <div class="layoutContainer" id="container">
+                <div class="comSubTitle">
+                    <h3>소상공인 소식</h3>
+                </div>
+
+                <!-- KB 2024.10.24 수정 -->
+                <!-- 탭메뉴 -->
+                <div class="modTab newsTab">
+                    <div class="tabInner">
+                        <ul class="tabMenu">
+                            <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">#전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">#정책</button></li>
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">#뉴스</button></li>
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">#지원</button></li>
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">#메뉴1</button></li>
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(5)">#메뉴2</button></li>
+                            <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(6)">#메뉴3</button></li>
+                        </ul>
+                    </div>
+                    <!--샘플 컨텐츠 필요시 대체 가능하며 tabCont 클래스는 가져가야함-->
+                    <div class="tabContainer">
+                        <div class="tabCont active">
+                            <div class="cptNews">
+                                <div class="newsList">
+                                    <div class="listImg"><img src="../../images/sub/news_img02.png" alt="뉴스 이미지"></div>
+                                    <div class="listTxt">
+                                        <p class="txtBox"><span class="type">정책</span> <span class="title">추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광</span> <span class="date">2024.08.30</span></p>
+                                        <p class="subTxt">소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식</p>
+                                    </div>
+                                </div>
+                                <div class="newsList">
+                                    <div class="listImg"><img src="../../images/sub/news_img02.png" alt="뉴스 이미지"></div>
+                                    <div class="listTxt">
+                                        <p class="txtBox"><span class="type">정책</span> <span class="title">추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광</span> <span class="date">2024.08.30</span></p>
+                                        <p class="subTxt">소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식 전기요금소상공인 지원사업 소식 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식 전기요금소상공인 지원사업 소식 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식 전기요금</p>
+                                    </div>
+                                </div>
+                                <div class="newsList">
+                                    <div class="listImg"><img src="../../images/sub/news_img02.png" alt="뉴스 이미지"></div>
+                                    <div class="listTxt">
+                                        <p class="txtBox"><span class="type">정책</span> <span class="title">추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광</span> <span class="date">2024.08.30</span></p>
+                                        <p class="subTxt">소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식</p>
+                                    </div>
+                                </div>
+                                <div class="newsList">
+                                    <div class="listImg"><img src="../../images/sub/news_img02.png" alt="뉴스 이미지"></div>
+                                    <div class="listTxt">
+                                        <p class="txtBox"><span class="type">정책</span> <span class="title">추락하는 제주관광, 만족보다 심각한 가심비 추락하는 제주관광</span> <span class="date">2024.08.30</span></p>
+                                        <p class="subTxt">소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 소상공인 지원사업 소식 전기요금소상공인 지원사업 소식 전기요금 지원사업 소식</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pagination -->
+                            <div class="comPagination">
+                                <a href="#" class="start"></a>
+                                <a href="#" class="prev"></a>
+                                <ul class="numList">
+                                    <li><a href="#" class="active">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                </ul>
+                                <a href="#" class="next">
+                                    <img src="../../images/common/ico_pagArrRight.svg" alt="오른쪽 방향 아이콘">
+                                </a>
+                                <a href="#" class="end"></a>
+                            </div>
+                        </div> 
+                        <div class="tabCont">
+                            탭내용2
+                        </div>
+                        <div class="tabCont">
+                            탭내용3
+                        </div>
+                        <div class="tabCont">
+                            탭내용4
+                        </div>
+                        <div class="tabCont">
+                            탭내용5
+                        </div>
+                        <div class="tabCont">
+                            탭내용6
+                        </div>
+                        <div class="tabCont">
+                            탭내용7
+                        </div>
+                    </div>
+                </div>
+                <!--// 탭메뉴 -->
+                <!--// KB 2024.10.24 수정 -->
+        </div>
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+
+<%- include('../ejs/moBar.ejs', { }) %>

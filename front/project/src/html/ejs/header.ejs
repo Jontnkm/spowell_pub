@@ -1,0 +1,190 @@
+<%
+var url = locals.url ? locals.url : '../../';
+%>
+<div class="cptHeader">
+	<div class="headerInner">
+		<div class="gnbArea">
+			<div class="leftArea">
+				<div class="logo">
+					<a href="#none">
+						<img src="<%= url %>images/common/btv_logo.svg" alt="" class="pcLogo">
+						<img src="<%= url %>images/common/btv_mo_logo.svg" alt="" class="moLogo">
+					</a>
+				</div>
+				<!--2024.09.04 pc menu-->
+				<div class="menu pcHeader">
+					<div class="headerMenu">
+						<!--2024.09.04 로그인 전 후-->
+						<dl>
+							<dt><a href="#none" class="item">광고만들기</a></dt>
+							<dd class="head2depth">
+								<a href="../createAd/createTemplate.html">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#none" class="item">서비스 소개</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#none" class="item">갤러리</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#none" class="item">고객센터</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+						<!-- 이슈로 인해 당분간 사용 안함 2024.10.29 kb -->
+						<!-- <dl>
+							<dt><a href="#none" class="item">소상공인 소식</a></dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl> -->
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<dl>
+							<dt>
+								<a href="#none" class="item">
+									<span class="ico"><span class="hidden">티비아이콘</span></span>
+									<span class="txt">나의광고</span>
+								</a>
+							</dt>
+							<dd class="head2depth">
+								<a href="#none">2depth</a>
+								<a href="#none">2depth</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="rightArea pcMenu">
+				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
+					<!--2024.09.04 로그인 전-->
+					<button type="button" class="btn scnd login">로그인</button>
+					<button type="button" class="btn scnd register">회원가입</button>
+					<!--2024.09.04 로그인 후-->
+					<div class="mypageCover">
+						<button type="button" class="btn scnd mypage">
+							<span class="userNm">홍길동</span>님 
+						</button>
+
+						<div class="dropDown">
+							<div class="status">
+								<ul class="statList">
+									<li><span>제작</span><span>000</span></li>
+									<li><span>심사</span><span>000</span></li>
+									<li><span>집행</span><span>000</span></li>
+								</ul>
+							</div>
+							<div class="loginOption">
+								<ul>
+									<li><a href="#none">나의정보</a></li>
+									<li><a href="#none">나의혜택/광고관리</a></li>
+									<li><a href="#none">결제정보</a></li>
+									<li><a href="#none">광고 효과 보기</a></li>
+									<li><a href="#none">로그아웃</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="moMenuBtn">
+					<div class="menuWrap">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+				</div>
+			</div>
+
+			<!--2024.09.05 mobile area-->
+			<!--2024.09.04 mobile menu-->
+			<div class="menu moHeader">
+				<div class="mobileMenuBox">
+					<div class="moQuick">
+						<ul>
+							<li class="item01">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">영상제작<br>체험관</span>
+								</a>
+							</li>
+							<li class="item02">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고비<br>알아보기</span>
+								</a>
+							</li>
+							<li class="item03">
+								<a href="#none">
+									<span class="icon"></span>
+									<span class="txt">광고 상담<br>신청</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="headerMenu">
+						<!--2024.09.04 로그인 전 후-->
+						<li>
+							<a href="#none">광고만들기</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">서비스 소개</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">갤러리</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">고객센터</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#none">이벤트</a>
+							<ul class="head2depth">
+								<li><a href="#none">2depth</a></li>
+								<li><a href="#none">2depth</a></li>
+							</ul>
+						</li>
+						<!-- 2024.09.04 로그인 후 only !!!! -->
+						<li class="afterLoginMenu">
+							<a href="#none">나의광고</a>
+						</li>
+					</ul>
+					<div class="cptBtnForm loginArea">
+						<!--2024.09.04 로그인 전-->
+						<button type="button" class="btn prmy">로그인</button>
+						<button type="button" class="btn scnd">회원가입</button>
+						<!--2024.09.04 로그인 후-->
+						<button type="button" class="btn scnd" style="display:none;">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

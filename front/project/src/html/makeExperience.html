@@ -1,0 +1,341 @@
+ <!-- Header -->
+<%- include('./ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('./ejs/header.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+        <div class="layoutContainer experience" id="container">
+            <div class="experienceBox">
+
+                <!-- KB 2024.10.24 수정 -->
+                <div class="comSubTitle">
+                    <h3>광고영상 제작 체험관</h3>
+                </div>
+                <div class="cptSubTop">
+                    <div class="subTopTxt">
+                        <p class="subTitle">TV 광고 제작을 체험해 보세요!</p>
+                    </div>
+                </div>
+                <!--// KB 2024.10.24 수정 -->
+
+                <p class="desc">
+                    보다 쉽고 빠르게 광고 제작을 경험할 수 있는 기회를 제공합니다.<br>광고 제작 과정을 체험해보면서 자신만의 창의적인 광고를 만들어보세요!
+                </p>
+
+                <!-- 탭메뉴 -->
+                <div class="modTabWide aiTab">
+                    <ul class="tabMenu">
+                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab2(0)">광고영상 AI 제작 체험관</button></li> <!-- addClass - on : 메뉴 선택됨 -->
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab2(1)">광고영상 템플릿 제작 체험관</button></li>
+                    </ul>
+                    <div class="tabContainer">
+                        <div class="tabCont active">
+                            <!-- 광고영상 AI 제작 체험관 -->
+                            <div class="stepList">
+                                <ul>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img05.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 1</span>
+                                            <p class="tit">매장정보 입력</p>
+                                            <p class="desc">
+                                                마음에 드시는 템플릿을 선택하여 편집실로 이동합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img06.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 2</span>
+                                            <p class="tit">매장특징</p>
+                                            <p class="desc">
+                                                편집실에서 광고 이미지 및 문구를 입력합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img07.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 3</span>
+                                            <p class="tit">AI 시나리오</p>
+                                            <p class="desc">
+                                                우측 상단 완료하기 버튼을 클릭하여 영상 제작을 진행합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cptBtnForm makeExBtn">
+                                <button type="button" class="btn prmy">AI 제작 체험관 바로가기</button>
+                            </div>
+                        </div> 
+                        <div class="tabCont">
+                            <!-- 광고영상 템플릿 제작 체험관 -->
+                            <div class="stepList">
+                                <ul>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img01.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 1</span>
+                                            <p class="tit">템플릿 선택</p>
+                                            <p class="desc">
+                                                마음에 드시는 템플릿을 선택하여 편집실로 이동합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img02.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 2</span>
+                                            <p class="tit">영상 편집</p>
+                                            <p class="desc">
+                                                편집실에서 광고 이미지 및 문구를 입력합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img03.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 3</span>
+                                            <p class="tit">영상제작</p>
+                                            <p class="desc">
+                                                우측 상단 완료하기 버튼을 클릭하여 영상 제작을 진행합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../images/sub/step_img04.png" alt="">
+                                        </div>
+                                        <div class="stepBox">
+                                            <span class="flag">Step 4</span>
+                                            <p class="tit">성우 음성 입력</p>
+                                            <p class="desc">
+                                                성우 음성을 입히고 광고 제작을 완료합니다.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="expTemplate">
+                                <div class="expTemplateTit">
+                                    <p class="title">
+                                        마음에 드시는 템플릿을 선택해주세요.<br>로그인하시면 더 많은 업종별 템플릿을 보실 수 있습니다.
+                                    </p>
+                
+                                    <div class="swiper-button">
+                                        <a href="#none" class="swiper-button-prev05"></a>
+                                        <a href="#none" class="swiper-button-next05"></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="cover">
+                                            <img src="../images/temp/tmp_thumbnail.png" alt="" />
+                                            <span class="hoverBg" onclick="popOpen('showAd')">
+                                                <span class="hidden">마우스오버 효과</span>
+                                            </span>
+                                        </div>
+                                        <div class="adInfo">
+                                            <p class="title">광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트 / 광고 제목 테스트</p>
+                                            <p class="typeInfo">
+                                                <span class="type">외식업</span>
+                                                <span class="duration">15초</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!--// 탭메뉴 -->
+
+            </div>
+        </div>
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('./ejs/footer.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('./ejs/quick.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('./ejs/bottom.ejs', { }) %>
+
+<%- include('./ejs/moBar.ejs', { }) %>
