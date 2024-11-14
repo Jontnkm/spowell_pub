@@ -1,0 +1,186 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>문의게시판(Q&A)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">게시물관리</li>
+                                    <li class="item">문의게시판(Q&A)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">문의내용</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목</th>
+                                        <td class="left" colspan="5">
+                                            <div class="frmGroup">
+                                                글 등록 시 작성한 제목 노출
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">구분</th>
+                                        <td class="left">
+                                            구분1
+                                        </td>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            홍길동
+                                        </td>
+                                        <th class="left">등록일시</th>
+                                        <td class="left">
+                                            2024-05-06 10:00:46
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">내용</th>
+                                        <td class="left" colspan="5">
+                                            글 등록 시 작성한 내용 노출
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일</th>
+                                        <td class="left" colspan="5">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileAfter" style="display: block;">
+                                                        <div class="textBox">첨부파일테스트.png</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">답변내용</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">구분</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">구분1</label></div>
+                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">구분2</label></div>
+                                            </div>
+                                        </td>
+                                        <th class="left">답변자</th>
+                                        <td class="left">
+                                            관리자
+                                        </td>
+                                        <th class="left">등록일시</th>
+                                        <td class="left">
+                                            2024-05-06 10:00:46
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">내용<span class="required">*</span></th>
+                                        <td class="left">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일 1</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 최대 500MB까지 첨부가능</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일 2</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn2" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 최대 500MB까지 첨부가능</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">답변삭제</button>
+                                    <button type="button" class="crudBtn dkBlue">답변수정</button>
+                                    <button type="button" class="crudBtn dkBlue">답변등록</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

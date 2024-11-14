@@ -1,0 +1,296 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>가이드 (Group)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">가이드</li>
+                                    <li class="item">Group</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <style>
+                    @font-face {
+                        font-family: 'D2Coding';
+                        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    .guideBox {margin-top:40px;}
+                    .guideTitle {font-size:18px; font-weight:500;}
+                    .guideCont {margin-top:10px;}
+                    .gGroup {margin-top:20px;}
+                    .gText {font-size:14px;}
+                    .gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+                    </style>
+                        <div class="cptPubGuide">
+                            <div class="guideArea">
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">Component Group(div class : grpComponent)</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            클래스가 cpt로 시작되는 콤포넌트나 cpt+com을 묶을 때 사용합니다.<br/>
+                                            콤포넌트를 묶어 관리할 때 유용합니다.<br/>
+                                            기본은 margin-top:40px이며, 가장 상단일때는 margin-top:0px가 됩니다.<br/>
+                                            #addClass<br/>
+                                            .mgT10 - margin-top:10px<br/>
+                                            .mgT20 - margin-top:20px<br/>
+                                            .mgT30 - margin-top:30px<br/>
+                                            .mgT40 - margin-top:40px<br/>
+                                            .mgT50 - margin-top:50px
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <!-- 기본 -->
+    <div class="grpComponent"></div>
+
+    <!-- 사용 예 -->
+    <div class="grpComponent">
+        <div class="cptGroupTop">
+            <div class="alignL">
+                <div class="title" style="font-size:24px;">담당자 지정</div>
+                <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+            </div>
+            <div class="alignR">
+                <div class="comSideOpt">
+                    <ul class="opList">
+                        <li class="item">
+                            <button class="viewBtn on">10건</button>
+                            <button class="viewBtn">20건</button>
+                            <button class="viewBtn">50건</button>
+                            <button class="viewBtn">100건</button>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="srhBtn dkBlue">등록,목록</button>
+                            <button type="button" class="srhBtn purple">추가</button>
+                            <button type="button" class="srhBtn red">취소,삭제</button>
+                            <button type="button" class="srhBtn gLine">기타1</button>
+                            <button type="button" class="srhBtn bLine">기타2</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cptGrid">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:50px">
+                    <col style="width:50px;">
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                    <col style="width:200px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="frmChoBox only">
+                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                            </div>
+                        </th>
+                        <th>NO</th>
+                        <th>담당자명</th>
+                        <th>전화번호</th>
+                        <th>핸드폰</th>
+                        <th>FAX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td>031-0000-0000</td>
+                        <td>010-0000-0000</td>
+                        <td>031-0000-0000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">In Table Group(div class : grpInBox)</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            테이블 등 콤포넌트 내 어떤 요소를 묶어 관리하기위해 사용합니다.<br/>
+                                            아래 샘플은 카테고리 개수와 카테고리 테이블을 그룹으로 묶어 관리하기 위해 사용합니다<br/>
+                                            기본은 margin-top:10px이며, 가장 상단일때는 margin-top:0px가 됩니다.<br/>
+                                            #addClass<br/>
+                                            .mgT10 - margin-top:10px<br/>
+                                            .mgT20 - margin-top:20px<br/>
+                                            .mgT30 - margin-top:30px<br/>
+                                            .mgT40 - margin-top:40px<br/>
+                                            .mgT50 - margin-top:50px
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <!-- 기본 -->
+    <div class="grpInBox"></div>
+
+    <!-- 사용 예 -->
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:120px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">카테고리(분류)</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl">사용</label></div>
+                            <div class="frmChoBox"><input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl">사용안함</label></div>
+                        </div>
+
+                        <div class="grpInBox">
+                            <div class="frmGroup">
+                                <div class="textBox">카테고리 개수 : </div>
+                                <select name="" id="" class="iptSlt frmSm">
+                                    <option value="">1개</option>
+                                    <option value="">2개</option>
+                                    <option value="">3개</option>
+                                    <option value="">4개</option>
+                                    <option value="">5개</option>
+                                </select>
+                            </div>
+                            <div class="inTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:auto;">
+                                        <col style="width:45%;">
+                                        <col style="width:75px;">
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="center" colspan="3"><input type="text" class="iptText" placeholder="카테고리 명"></th>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                </div>
+                                            </td>
+                                            <td class="center">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                </div>
+                                            </td>
+                                            <td class="center">
+                                                <button type="button" class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                </div>
+                                            </td>
+                                            <td class="center">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                </div>
+                                            </td>
+                                            <td class="center">
+                                                <button type="button" class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center" colspan="3">
+                                                <button type="button" class="gridBtn purple">추가</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/xml.min.js"></script>
+<script>
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function run(){
+        const codeGuides = document.querySelectorAll('.cptPubGuide .codeGuide');
+        const codes = document.querySelectorAll('.cptPubGuide code.xml');
+        const viewers = document.querySelectorAll('.cptPubGuide .gView');
+        codes.forEach(function(code,idx){
+            code.innerHTML = escapeHtml(codeGuides[idx].value);
+        });
+        viewers.forEach(function(viewer,idx){
+            viewer.innerHTML = codeGuides[idx].value;
+        });
+        hljs.highlightAll();
+    }
+    window.onload = function(){
+        run();
+    }
+</script>
+
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

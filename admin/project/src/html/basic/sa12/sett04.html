@@ -1,0 +1,67 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="sample02" class="modPopup md on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">푸터내용</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:100%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목 <span class="required">*</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="expPad">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText" placeholder="제목입력">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>고시내용 <span class="required">*</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="expPad">
+                                            <!--에디터 영역-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn dkBlue">저장</button>
+                        <button class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

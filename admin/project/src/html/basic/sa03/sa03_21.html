@@ -1,0 +1,234 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">출장체력측정 대상자등록</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">ㅇㅇㅇ</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">0000-00-00(양력)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">성별</th>
+                                        <td class="left">남자</td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">성인</td>
+                                        <th class="left">측정일자</th>
+                                        <td class="left">0000-00-00 00:00~00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">출장지명</th>
+                                        <td class="left" colspan="5">출장지명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">PAR-Q (체력측정 사전 신체상태 질문지)</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:70px;" />
+                                    <col style="width:70px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>사전신체상태</th>
+                                        <th>예</th>
+                                        <th>아니오</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">의사가 당신의 심장 상태에 대해 말한 적이 있습니까? 그리고 의사가 지시한대로만 신체활동을 해야 합니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="left">신체활동 시 가슴의 통증을 느낍니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="left">최근 운동을 하지 않을 때도 가슴에 통증을 느낀 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="left">어지러워서 비틀거리거나 의식을 잃은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">5</td>
+                                        <td class="left">과거 운동시 뼈나 관절(허리, 무릎, 엉덩이)에 손상을 입은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo401" type="radio" class="iptRdo" name="rdo401"><label for="rdo401" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo402" type="radio" class="iptRdo" name="rdo401"><label for="rdo402" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">6</td>
+                                        <td class="left">혈압 또는 심혈관 질환 때문에 최근 의사에게 약 처방을 받은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">7</td>
+                                        <td class="left">이 외 운동을 하면 안되는 다른 이유가 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo601" type="radio" class="iptRdo" name="rdo601"><label for="rdo601" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo602" type="radio" class="iptRdo" name="rdo601"><label for="rdo602" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="textBox clar">※ 체력측정당일 혈압이 수축기 160mmHg, 이완기 100mmHg 이상인 경우 체력측정이 제한될 수 있습니다.</div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">PAR-Q 특이사항</div>
+                            </div>
+                        </div>
+
+                        <textarea class="textArea"></textarea>
+
+                        <div class="chkArea">
+                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">체력측정 후 인증서 발급을 신청합니다.</label></div>
+                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">본인임을 확인했습니다.</label></div>
+                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">서면 작성한 신청/동의서는 측정결과 등록 후 자료 파기(파기대장 작성)</label></div><!--20230125 체크항목 추가-->
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button class="btn gLine">취소</button>
+                            <button class="btn purple">대상자 등록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

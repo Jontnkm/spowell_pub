@@ -1,0 +1,268 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup lg on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">담당자정보 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 1 : 1분할 -->
+                        <div class="modDivision half"> <!-- 20230407 클래스 half 추가 -->
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">담당자현황</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- 테이블 -->
+                                <div class="cptTable complexView">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col width="10%" />
+                                            <col width="20%" />
+                                            <col width="auto" />
+                                            <col width="10%" />
+                                            <col width="15%" />
+                                            <col width="15%" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>선택</th>
+                                                <th>이름</th>
+                                                <th>담당업무</th>
+                                                <th>선임</th>
+                                                <th>상태</th>
+                                                <th>기능</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">
+                                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl ftZero">선택</label></div>
+                                                </td>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">체력측정사</td>
+                                                <td class="center">●</td>
+                                                <td class="center"><span class="txtBlue">정상</span></td>
+                                                <td class="center">
+                                                    <button class="gridBtn dkbLine">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">
+                                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl ftZero">선택</label></div>
+                                                </td>
+                                                <td class="center">홍길순</td>
+                                                <td class="center">체력측정사</td>
+                                                <td class="center"></td>
+                                                <td class="center"><span class="txtRed">정지</span></td>
+                                                <td class="center">
+                                                    <button class="gridBtn dkbLine">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">
+                                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl ftZero">선택</label></div>
+                                                </td>
+                                                <td class="center">홍길돈</td>
+                                                <td class="center">체력측정사</td>
+                                                <td class="center"></td>
+                                                <td class="center">승인대기</td>
+                                                <td class="center">
+                                                    <button class="gridBtn dkbLine">상세보기</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignL">
+                                    <div class="comSideOpt">
+                                        <button class="srhBtn purple">선임등록</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">사용자정보</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">이름</th>
+                                                <td class="left">홍길동</td>
+                                                <th class="left">아이디</th>
+                                                <td class="left">member_id</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">생년월일</th>
+                                                <td class="left">2022-12-31(양력)</td>
+                                                <th class="left">성별</th>
+                                                <td class="left">남자</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">휴대전화</th>
+                                                <td class="left">010-0000-0000</td>
+                                                <th class="left">이메일</th>
+                                                <td class="left">text@domain.co.kr</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">사무실전화</th>
+                                                <td class="left">00-0000-0000</td>
+                                                <th class="left">팩스</th>
+                                                <td class="left">00-0000-0000</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">담당업무</th>
+                                                <td class="left">체력측정사</td>
+                                                <th class="left">직책(세부업무)</th>
+                                                <td class="left">대장(청소)</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">전문분야</th>
+                                                <td class="left">체력관리</td>
+                                                <th class="left">등록/수정일자</th>
+                                                <td class="left">0000-00-00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">자격취득현황</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:25%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:25%;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>자격종류</th>
+                                                <th>동목</th>
+                                                <th>취득일자</th>
+                                                <th>자격증</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">건강운동관리사</td>
+                                                <td class="center"></td>
+                                                <td class="center">0000-00-00</td>
+                                                <td class="center">첨부파일명.hwp</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">건강운동관리사</td>
+                                                <td class="center"></td>
+                                                <td class="center">0000-00-00</td>
+                                                <td class="center">첨부파일명.hwp</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">건강운동관리사</td>
+                                                <td class="center"></td>
+                                                <td class="center">0000-00-00</td>
+                                                <td class="center">첨부파일명.hwp</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">학력 및 전공</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">고등학교</th>
+                                                <td class="left">올림픽고등학교</td>
+                                                <th class="left">전공</th>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">대학(교)</th>
+                                                <td class="left">올림픽대학교</td>
+                                                <th class="left">전공</th>
+                                                <td class="left">올림픽학과</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">대학원</th>
+                                                <td class="left">올림픽대학원</td>
+                                                <th class="left">전공(학위)</th>
+                                                <td class="left">올림픽마스터</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

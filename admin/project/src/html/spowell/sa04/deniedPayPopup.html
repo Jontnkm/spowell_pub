@@ -1,0 +1,97 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <button type="button" onclick="openPopup('sample01')">지급보류내역 열기</button>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">지급보류내역</div>
+                    <div class="popCont">
+                        <p class="popMsg mB20">
+                            · 아래의 기간동안 월정금 지급을 보류합니다.<br>
+                            · 지급보류를 해제하려면 종료일자를 해제일자로 수정반영해 주세요.
+                        </p>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>보류사유구분 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">범죄사실확인</label></div>
+                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">사망</label></div>
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">국적상실</label></div>
+                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">기타사유</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>보류기간 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"></div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker3"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사유상세 <span class="required">*</span></th>
+                                        <td>
+                                            <textarea class="textArea areaMd"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn gLine" onclick="closePopup('sample01');">취소</button>
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //탭메뉴 스크립트
+        $(".modTab li.item a").on("click",function(e){
+            if($(this).parents(".modTab").hasClass("in")){
+                e.preventDefault();
+                let _idx = $(this).parent().index();
+                $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+            }
+        });
+    });
+</script>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

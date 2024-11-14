@@ -1,0 +1,168 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>메인이미지관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">홈페이지관리</li>
+                                    <li class="item">메인이미지관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001" checked><label for="rdo001" class="iptLbl">게시</label></div>
+                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">중지</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">노출순서<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmXs">
+                                                <div class="textBox clar">숫자만 입력 가능하며, 낮은 번호가 먼저 노출됩니다.</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">PC 이미지<br/>(#### X ####)</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                                            </div>
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/width.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                                            <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                                        </div>
+                                                        <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">MO 이미지<br/>(### X ###)</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                                            </div>
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/height.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                                            <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                                        </div>
+                                                        <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">링크없음</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">링크적용</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크URL<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmHalf">
+                                                <div class="frmChoBox mL10"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">링크 새 창 이동</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대체 텍스트</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                                <button type="button" class="gridBtn dkbLine">입력 가이드</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            홍길동 2024-05-05
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn red">취소</button>
+                                <button type="button" class="crudBtn purple">저장</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

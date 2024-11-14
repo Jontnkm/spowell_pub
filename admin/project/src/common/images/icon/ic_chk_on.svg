@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path style="fill:none" d="M0 0h20v20H0z"/>
+    <rect data-name="ic" width="16" height="16" rx="4" transform="translate(2 2)" style="fill:#5a7eff"/>
+    <path data-name="ic" d="m-310.965 526.214-3.838-3.988a.833.833 0 0 1 .023-1.178.833.833 0 0 1 1.178.023l2.637 2.74 5.133-5.333a.833.833 0 0 1 1.178-.023.833.833 0 0 1 .023 1.178z" transform="translate(320.036 -512.221)" style="fill:#fff"/>
+</svg>

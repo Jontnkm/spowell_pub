@@ -1,0 +1,244 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+<strong class="g-area-tit">Search :: Basic</strong>
+<xmp>
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>date + btn</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                            <button class="srhBtn dkbLine">당해년도</button>
+                        </div>
+                    </td>
+                    <th>date</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ipt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>slt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">센터 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>input, select + text</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2023</option>
+                                <option value=""></option>
+                            </select>
+                            <div class="textBox">년도</div>
+                        </div>
+                    </td>
+                    <th>slt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">제목</option>
+                                <option value=""></option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>input, select + text(clarifaication)</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmMd" />
+                            <div class="textBox clar">*’-’를 제외한 숫자만 입력 예: 19901211</div>
+                        </div>
+                    </td>
+                    <th>phone</th>
+                    <td>
+                        <select name="" id="" class="iptSlt frmXs">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>radio</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">승인대기</label></div>
+                        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">승인완료</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">미승인</label></div>
+                    </td>
+                    <th>checkbox</th>
+                    <td>
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">체크1</label></div>
+                        <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">체크2</label></div>
+                        <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">체크3</label></div>
+                        <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">체크4</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>radio + input</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">선택1</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">선택2</label></div>
+                        <div class="frmChoBox">
+                            <input id="rdo103" type="radio" class="iptRdo" name="rdo101">
+                            <label for="rdo103" class="iptLbl">기타</label>
+                            <input type="text" class="iptText frmXs" />
+                        </div>
+                    </td>
+                    <th>checkbox + input</th>
+                    <td>
+                        <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">체크1</label></div>
+                        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">체크2</label></div>
+                        <div class="frmChoBox">
+                            <input id="chk103" type="checkbox" class="iptChk">
+                            <label for="chk103" class="iptLbl">기타</label>
+                            <input type="text" class="iptText frmXs" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ipt</th>
+                    <td><input type="text" class="iptText"></td>
+                    <td colspan="2" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                        <button class="btnDetail">상세검색</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                        <button class="btnDetail">상세검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</xmp>
+
+<style>
+/**/
+.classInfo * {letter-spacing:0;}
+.classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+.classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+.classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+</style>
+<div class="classInfo">
+    <div class="infoTitle">추가 조작</div>
+    <table style="width:100%;">
+        <caption></caption>
+        <colgroup>
+            <col style="width:30%;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>경로</th>
+                <th>.cptSearchArea table tr .className</th>
+            </tr>
+            <tr>
+                <th>className</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>left</td>
+                <td>오브젝트 좌로 정렬</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>오브젝트 가로 가운데로 정렬</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>오브젝트 우로 정렬</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>오브젝트 위로 정렬</td>
+            </tr>
+            <tr>
+                <td>middle</td>
+                <td>오브젝트 세로 가운데로 정렬</td>
+            </tr>
+            <tr>
+                <td>bottom</td>
+                <td>오브젝트 아래로 정렬</td>
+            </tr>
+            <tr>
+                <td>bold</td>
+                <td>텍스트를 두껍게</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+</div>
+<!-- Guide : e -->
+
+<script type="text/javascript">
+$(".g-area-tit, .g-area-tit01").each(function(){
+    var obj = $(this).next("xmp");
+    if(!obj.length) return;
+    var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+    var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+    $(this).append(btn);
+    $(this).after(code);
+    $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+});
+$(".g-btn-source a").click(function(){
+    var me = $(this).parent().parent().parent();
+    var obj = $(this).parent().parent().next();
+    if(obj.is(":hidden")){
+        obj.show();
+        me.addClass("on");
+    }else{
+        obj.hide();
+        me.removeClass("on");
+    }
+    return false;
+});
+</script>

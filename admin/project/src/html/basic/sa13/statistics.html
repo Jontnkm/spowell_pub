@@ -1,0 +1,964 @@
+<!--#include virtual="/contents/layout/basic_orange/layout.html" --> <!-- 퍼블리싱용 ( 개발에서 사용 X ) -->
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>인적성 검사 통계</h2>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:30%;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>기간검색</th>
+                    <td colspan="3">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">1주일</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">1개월</label></div>
+                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">4개월</label></div>
+                            <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">6개월</label></div>
+                            <div class="frmChoBox"><input id="rdo005" type="radio" class="iptRdo" name="rdo001"><label for="rdo005" class="iptLbl">12개월</label></div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>검사환경</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo006" type="radio" class="iptRdo" name="rdo002"><label for="rdo006" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo007" type="radio" class="iptRdo" name="rdo002"><label for="rdo007" class="iptLbl">PC</label></div>
+                        <div class="frmChoBox"><input id="rdo008" type="radio" class="iptRdo" name="rdo002"><label for="rdo008" class="iptLbl">테블릿</label></div>
+                    </td>
+                    <th>성별</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo009" type="radio" class="iptRdo" name="rdo003"><label for="rdo009" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo010" type="radio" class="iptRdo" name="rdo003"><label for="rdo010" class="iptLbl">남</label></div>
+                        <div class="frmChoBox"><input id="rdo011" type="radio" class="iptRdo" name="rdo003"><label for="rdo011" class="iptLbl">여</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>연령별</th>
+                    <td colspan="3">
+                        <div class="frmChoBox"><input id="rdo012" type="radio" class="iptRdo" name="rdo004"><label for="rdo012" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo013" type="radio" class="iptRdo" name="rdo004"><label for="rdo013" class="iptLbl">20대</label></div>
+                        <div class="frmChoBox"><input id="rdo014" type="radio" class="iptRdo" name="rdo004"><label for="rdo014" class="iptLbl">30대</label></div>
+                        <div class="frmChoBox"><input id="rdo015" type="radio" class="iptRdo" name="rdo004"><label for="rdo015" class="iptLbl">40대</label></div>
+                        <div class="frmChoBox"><input id="rdo016" type="radio" class="iptRdo" name="rdo004"><label for="rdo016" class="iptLbl">50대</label></div>
+                        <div class="frmChoBox"><input id="rdo017" type="radio" class="iptRdo" name="rdo004"><label for="rdo017" class="iptLbl">60대</label></div>
+                        <div class="frmChoBox"><input id="rdo018" type="radio" class="iptRdo" name="rdo004"><label for="rdo018" class="iptLbl">70대</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>지역별</th>
+                    <td colspan="3">
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">서울</label></div>
+                        <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">부산</label></div>
+                        <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl">대구</label></div>
+                        <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">인천</label></div>
+                        <div class="frmChoBox"><input id="chk007" type="checkbox" class="iptChk"><label for="chk007" class="iptLbl">광주</label></div>
+                        <div class="frmChoBox"><input id="chk008" type="checkbox" class="iptChk"><label for="chk008" class="iptLbl">대전</label></div>
+                        <div class="frmChoBox"><input id="chk009" type="checkbox" class="iptChk"><label for="chk009" class="iptLbl">세종</label></div>
+                        <div class="frmChoBox"><input id="chk010" type="checkbox" class="iptChk"><label for="chk010" class="iptLbl">울산</label></div>
+                        <div class="frmChoBox"><input id="chk011" type="checkbox" class="iptChk"><label for="chk011" class="iptLbl">경기</label></div>
+                        <div class="frmChoBox"><input id="chk012" type="checkbox" class="iptChk"><label for="chk012" class="iptLbl">강원</label></div>
+                        <div class="frmChoBox"><input id="chk013" type="checkbox" class="iptChk"><label for="chk013" class="iptLbl">충북</label></div>
+                        <div class="frmChoBox"><input id="chk014" type="checkbox" class="iptChk"><label for="chk014" class="iptLbl">충남</label></div>
+                        <div class="frmChoBox"><input id="chk015" type="checkbox" class="iptChk"><label for="chk015" class="iptLbl">전북</label></div>
+                        <div class="frmChoBox"><input id="chk016" type="checkbox" class="iptChk"><label for="chk016" class="iptLbl">전남</label></div>
+                        <div class="frmChoBox"><input id="chk017" type="checkbox" class="iptChk"><label for="chk017" class="iptLbl">경북</label></div>
+                        <div class="frmChoBox"><input id="chk018" type="checkbox" class="iptChk"><label for="chk018" class="iptLbl">경남</label></div>
+                        <div class="frmChoBox"><input id="chk019" type="checkbox" class="iptChk"><label for="chk019" class="iptLbl">제주</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>등급별</th>
+                    <td colspan="3">
+                        <div class="frmChoBox"><input id="rdo019" type="radio" class="iptRdo" name="rdo005"><label for="rdo019" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo020" type="radio" class="iptRdo" name="rdo005"><label for="rdo020" class="iptLbl">매우양호(S)</label></div>
+                        <div class="frmChoBox"><input id="rdo021" type="radio" class="iptRdo" name="rdo005"><label for="rdo021" class="iptLbl">양호(A)</label></div>
+                        <div class="frmChoBox"><input id="rdo022" type="radio" class="iptRdo" name="rdo005"><label for="rdo022" class="iptLbl">보통(B)</label></div>
+                        <div class="frmChoBox"><input id="rdo023" type="radio" class="iptRdo" name="rdo005"><label for="rdo023" class="iptLbl">주의관찰(C)</label></div>
+                        <div class="frmChoBox"><input id="rdo024" type="radio" class="iptRdo" name="rdo005"><label for="rdo024" class="iptLbl">재검사필요(I)</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>상태</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo025" type="radio" class="iptRdo" name="rdo006"><label for="rdo025" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo026" type="radio" class="iptRdo" name="rdo006"><label for="rdo026" class="iptLbl">진행중</label></div>
+                        <div class="frmChoBox"><input id="rdo027" type="radio" class="iptRdo" name="rdo006"><label for="rdo027" class="iptLbl">검사완료</label></div>
+                    </td>
+                    <th>검사차수</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo028" type="radio" class="iptRdo" name="rdo007"><label for="rdo028" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo029" type="radio" class="iptRdo" name="rdo007"><label for="rdo029" class="iptLbl">1차</label></div>
+                        <div class="frmChoBox"><input id="rdo030" type="radio" class="iptRdo" name="rdo007"><label for="rdo030" class="iptLbl">2차</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>키워드</th>
+                    <td colspan="3">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">전체</option>
+                                <option value="">아이디</option>
+                                <option value="">회원명</option>
+                                <option value="">연락처</option>
+                                <option value="">이메일</option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">총 <span class="total">100</span>개의 정보가 등록되어 있습니다.</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button class="viewBtn on">30건</button>
+                        <button class="viewBtn">60건</button>
+                        <button class="viewBtn">100건</button>
+                        <button class="viewBtn">300건</button>
+                    </li>
+                    <!-- <li class="item">
+                        <button class="srhBtn bLine">엑셀다운로드</button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--테이블 가로 스크롤 적용-->
+    <div class="cptVertScr lthndiType">
+        <!--대상구분 데이터 영역-->
+        <div class="lftHead">
+            <table>
+                <colgroup>
+                    <col style="width:auto" />
+                    <col style="width:8%" />
+                    <col style="width:18%" />
+                    <col style="width:10%" />
+                    <col style="width:8%" />
+                    <col style="width:8%" />
+                    <col style="width:15%" />
+                    <col style="width:10%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>기간</th>
+                        <th>검사환경</th>
+                        <th>아이디</th>
+                        <th>회원명</th>
+                        <th>성별</th>
+                        <th>연령대</th>
+                        <th>시/도</th>
+                        <th>시/군/구</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>PC</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>60대</td>
+                        <td>서울특별시</td>
+                        <td>서초구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>여</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>강남구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                    <tr>
+                        <td>20240000 ~ 20240000</td>
+                        <td>테블릿</td>
+                        <td><span title="honggildong">honggildong</span></td>
+                        <td><span title="홍길동">홍길동</span></td>
+                        <td>남</td>
+                        <td>50대</td>
+                        <td>서울특별시</td>
+                        <td>동대문구</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--치수 데이터 영역-->
+        <div class="rytBody">
+            <table>
+                <colgroup>
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                    <col style="width:12.5;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>등급</th>
+                        <th>상태</th>
+                        <th>진행율</th>
+                        <th>위험조항</th>
+                        <th>응답일관성</th>
+                        <th>위험조항</th>
+                        <th>검사차수</th>
+                        <th>검사시간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>진행중</td>
+                        <td>20%</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>30분</td>
+                    </tr>
+                    <tr>
+                        <td>매우양호(S)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>과잉긍정</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>42분</td>
+                    </tr>
+                    <tr>
+                        <td>재검사필요(I)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>62분</td>
+                    </tr>
+                    <tr>
+                        <td>주의관찰(C)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>비일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>61분</td>
+                    </tr>
+                    <tr>
+                        <td>매우양호(S)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>66분</td>
+                    </tr>
+                    <tr>
+                        <td>매우양호(S)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>과잉긍정</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>42분</td>
+                    </tr>
+                    <tr>
+                        <td>재검사필요(I)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>62분</td>
+                    </tr>
+                    <tr>
+                        <td>주의관찰(C)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>비일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>61분</td>
+                    </tr>
+                    <tr>
+                        <td>매우양호(S)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>66분</td>
+                    </tr>
+                    <tr>
+                        <td>매우양호(S)</td>
+                        <td>완료</td>
+                        <td>100%</td>
+                        <td>일관적</td>
+                        <td>응답신뢰</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>66분</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 페이징 -->
+    <div class="comPaging dolbom">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+
+    <!-------------------------------------------------------------------------------------->
+    <!--------------------------------코멘트 보기 팝업--------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    <!-- 팝업 영역 -->
+    <div id="checkCommentPop" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('checkCommentPop');">닫기</button>
+                        <div class="popTitle">코멘트</div>
+                        <div class="popCont">
+                            
+                            <!-- 팝업 컨텐츠 영역 -->
+                            <div class="textareaCover">
+                                <div class="textareaBox">
+                                    <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                                </div>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn gLine">취소</button>
+                            <button class="btn red">삭제</button><!--기존 내용이 있을 경우에만 표기됨.-->
+                            <button class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 영역 -->
+
+    <!-------------------------------------------------------------------------------------->
+    <!--------------------------------결과지 보기 팝업--------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    <!-- 팝업 영역 -->
+    <div id="checkResultPop" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('checkResultPop');">닫기</button>
+                        <div class="popTitle">결과지 보기</div>
+                        <div class="popCont">
+                            
+                            <!-- 팝업 컨텐츠 영역 -->
+                        
+                            <!-- tab in page -->
+                            <div class="modTab in dolbom" style="padding-top:0; margin-top:0;"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+                                <ul class="tabMenu">
+                                    <li class="item on"><a href="#">1회차</a></li>
+                                    <li class="item"><a href="#">2회차</a></li>
+                                </ul>
+                                <!-- modTab in 영역 -->
+                                <div class="tabContGroup">
+                                    <div class="tabCont on">
+                                        <div class="testInformation">
+                                            <div class="testInfo">
+                                                <span class="date">검사날짜 : <span>2024-03-02</span></span>
+                                                <span class="proceed">진행율 : <span>60%</span></span>
+                                                <span class="remain">남은시간 : <span>00:53:00</span></span>
+                                            </div>
+                                            <div class="remainInfo">
+                                                <button type="button" class="printBtn">프린트하기</button>
+                                            </div>
+                                        </div>
+                                        <div class="viewerArea">
+                                            <!--viewer활용 데이터 표기 영역-->
+
+                                            <span class="sampleCover"><!--개발시 삭제 바람-->
+                                                <span>뷰어 형태로 노출 예정</span><!--개발시 삭제 바람-->
+                                            </span><!--개발시 삭제 바람-->
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="testInformation">
+                                            <div class="testInfo">
+                                                <span class="date">검사날짜 : <span>2024-03-02</span></span>
+                                                <span class="proceed">진행율 : <span>60%</span></span>
+                                                <span class="remain">남은시간 : <span>00:53:00</span></span>
+                                            </div>
+                                            <div class="remainInfo">
+                                                <button type="button" class="printBtn">프린트하기</button>
+                                            </div>
+                                        </div>
+                                        <div class="viewerArea">
+                                            <!--viewer활용 데이터 표기 영역-->
+                                            
+                                            <span class="sampleCover"><!--개발시 삭제 바람-->
+                                                <span>뷰어 형태로 노출 예정</span><!--개발시 삭제 바람-->
+                                            </span><!--개발시 삭제 바람-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                $(document).ready(function(){
+                                    //탭메뉴 스크립트
+                                    $(".modTab li.item a").on("click",function(e){
+                                        if($(this).parents(".modTab").hasClass("in")){
+                                            e.preventDefault();
+                                            let _idx = $(this).parent().index();
+                                            $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                                            $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                                        }
+                                    });
+                                });
+                                </script>
+                            </div>
+
+                            <!-- //팝업 컨텐츠 영역 -->
+
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn dkBlue">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 영역 -->
+
+    <!-------------------------------------------------------------------------------------->
+    <!---------------------------------문항 보기 팝업---------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    <!-- 팝업 영역 -->
+    <div id="checkQuePop" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('checkQuePop');">닫기</button>
+                        <div class="popTitle">문항 보기</div>
+                        <div class="popCont">
+                            
+                            <!-- 팝업 컨텐츠 영역 -->
+                        
+                            <!-- tab in page -->
+                            <div class="modTab in dolbom" style="padding-top:0; margin-top:0;"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+                                <ul class="tabMenu">
+                                    <li class="item on"><a href="#">1회차</a></li>
+                                    <li class="item"><a href="#">2회차</a></li>
+                                </ul>
+                                <!-- modTab in 영역 -->
+                                <div class="tabContGroup">
+                                    <div class="tabCont on">
+                                        <div class="testInformation">
+                                            <div class="testInfo">
+                                                <span class="date">검사날짜 : <span>2024-03-02</span></span>
+                                                <span class="proceed">진행율 : <span>60%</span></span>
+                                                <span class="remain">남은시간 : <span>00:53:00</span></span>
+                                            </div>
+                                            <div class="remainInfo">
+                                                <button type="button" class="printBtn">프린트하기</button>
+                                            </div>
+                                        </div>
+                                        <!-- 테이블 -->
+                                        <div class="cptTable">
+                                            <table class="tbView">
+                                                <colgroup>
+                                                    <col style="width:10%;" />
+                                                    <col style="width:auto;" />
+                                                    <col style="width:20%" />
+                                                </colgroup>
+                                                <caption></caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>순번</th>
+                                                        <th>문제</th>
+                                                        <th>척도</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="center">1</td>
+                                                        <td>주변으로부터 꾸준하고 열심히 일하는 사람이라는 말을 듣는다.</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">2</td>
+                                                        <td>상대방의 기분이 상하지 않도록 말과 행동을 가려 하는 편이다.</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont">
+                                        <div class="testInformation">
+                                            <div class="testInfo">
+                                                <span class="date">검사날짜 : <span>2024-03-02</span></span>
+                                                <span class="proceed">진행율 : <span>60%</span></span>
+                                                <span class="remain">남은시간 : <span>00:53:00</span></span>
+                                            </div>
+                                            <div class="remainInfo">
+                                                <button type="button" class="printBtn">프린트하기</button>
+                                            </div>
+                                        </div>
+                                        <!-- 테이블 -->
+                                        <div class="cptTable">
+                                            <table class="tbView">
+                                                <colgroup>
+                                                    <col style="width:10%;" />
+                                                    <col style="width:auto;" />
+                                                    <col style="width:20%" />
+                                                </colgroup>
+                                                <caption></caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>순번</th>
+                                                        <th>문제</th>
+                                                        <th>척도</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="center">1</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">2</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">3</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">4</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">5</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">6</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">7</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">8</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">9</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">10</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">11</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">12</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">13</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">14</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="center">15</td>
+                                                        <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                                        <td class="center">매우 그렇다</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                $(document).ready(function(){
+                                    //탭메뉴 스크립트
+                                    $(".modTab li.item a").on("click",function(e){
+                                        if($(this).parents(".modTab").hasClass("in")){
+                                            e.preventDefault();
+                                            let _idx = $(this).parent().index();
+                                            $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                                            $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                                        }
+                                    });
+                                });
+                                </script>
+                            </div>
+
+                            <!-- //팝업 컨텐츠 영역 -->
+
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn dkBlue">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 영역 -->
+
+    <!-------------------------------------------------------------------------------------->
+    <!--------------------------------재검사 사유 팝업--------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    <!-- 팝업 영역 -->
+    <div id="reTakeReasonPop" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('reTakeReasonPop');">닫기</button>
+                        <div class="popTitle">재검사 사유</div>
+                        <div class="popCont">
+                            
+                            <!-- 팝업 컨텐츠 영역 -->
+                            <div class="textareaCover">
+                                <div class="textareaBox">
+                                    <textarea name="" id="" placeholder="재검사 사유를 입력해주세요."></textarea>
+                                </div>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn gLine">취소</button>
+                            <button class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 영역 -->
+
+    <!-------------------------------------------------------------------------------------->
+    <!--------------------------------위험조항 확인 팝업-------------------------------------->
+    <!-------------------------------------------------------------------------------------->
+    <!-- 팝업 영역 -->
+    <div id="warnQueListPop" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('warnQueListPop');">닫기</button>
+                        <div class="popTitle">위험조항</div>
+                        <div class="popCont">
+                            
+                            <!-- 팝업 컨텐츠 영역 -->
+                        
+                            <div class="cptGroupTop" style="margin-top:0;">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">총 <span class="total">100</span>건의 위험조항이 조회되었습니다.</span></div>
+                                </div>
+                            </div>
+
+                            <!-- 테이블 -->
+                            <div class="cptTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:10%;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:20%" />
+                                    </colgroup>
+                                    <caption></caption>
+                                    <thead>
+                                        <tr>
+                                            <th>순번</th>
+                                            <th>문제</th>
+                                            <th>척도</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center">1</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">2</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">3</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">4</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">5</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">6</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">7</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">8</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">9</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">10</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">11</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">12</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">13</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">14</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">15</td>
+                                            <td>문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시문제 제목 예시</td>
+                                            <td class="center">매우 그렇다</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn dkBlue">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<!-- //컨텐츠 내용 -->
+<script>
+    // script for grid (data table) right side possible to scroll in vertical
+    // 테이블 구역 표시
+    $("document").ready(function(){
+        $(".cptVertScr table tr td").hover(function(ev){
+            $(".cptVertScr .rytBody table tr td").css("color","#bbbbbb;");
+            $(".cptVertScr .rytBody table tr td a").css("color","#bbbbbb;");
+            var row = $(this).parents("table").find("tr").length - 1;
+            var idx_tr = $(this).parent("tr").index()+1;
+            var idx_td = $(this).index()+1;
+            var area = $(this).parents("div");
+            
+            $(this).parent("tr").find("td").addClass("mEnt");
+
+            $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+
+            //if($(area).hasClass("lftHead")){
+            //}else if($(area).hasClass("rytBody")){
+            //    $(".rytBody table tr td").removeClass("mEnt");
+            //    $(".rytBody table tr td:nth-of-type("+ idx_td +")").addClass("mEnt");
+            //   $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            //    $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            //}
+        }, function(ev){
+            $(".cptVertScr .lftHead table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").css("color","#333;");
+            $(".cptVertScr .rytBody table tr td a").css("color","#333;");
+            $(this).parent("tr").removeClass("mEnt");  
+        })
+    })
+</script>

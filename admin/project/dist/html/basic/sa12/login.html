@@ -1,0 +1,163 @@
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>IWorks Sysyem</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script> <!--toast ui-->
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/baro.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<style>
+   html,body,.wrap {width:100%; height:100%;}
+</style>
+<div class="lytLogin">
+    <div class="cptLogin">
+        <div class="lgInner">
+            <div class="titBox">
+                <div class="kspologo"><img src="../../../images/common/barobaro_logo_adm.png" /></div>
+                <div class="mainTit">
+                    <p>바로바로론<br/>관리시스템</p>
+                </div>
+                <div class="btTit">
+                    <p>처음부터 끝까지,<br/>당신과 함께하는 든든한 동행 <span>바로바로론</span></p>
+                </div>
+            </div>
+            <div class="fnBox">
+                <p class="mainTit">Login</p>
+                <div class="iptBox">
+                    <input type="text" placeholder="아이디"/>
+                </div>
+                <div class="iptBox">
+                    <input type="password" placeholder="비밀번호"/>
+                </div>
+                <div  class="lgBtn">
+                    <a href="#none" onclick="openAlert('splAlt01');">로그인</a>
+                </div>
+                <div class="lgFunc">
+                    <!-- <div>
+                        <a href="#none" onclick="openPopup('sample01')">아이디조회</a>
+                        <span>·</span>
+                        <a href="#none" onclick="openPopup('sample03')">비밀번호 조회</a>
+                    </div>
+                    <div>
+                        <img src="/common/images/common/icon_join.png" />
+                        <a href="#none" onclick="openPopup('sample05')">센터담당자 계정신청</a>
+                    </div> -->
+                </div>
+                <div class="lgWarn">
+                    <img src="/common/images/common/icon_warn.png" />
+                    <span>비밀번호를 잃어버리신 경우 관리자에게 문의하세요.</span> <!--20230216 문구 수정-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertTit">
+            <img src="/common/images/common/icon_lgAlert.png" />
+            <span>로그인 실패</span>
+        </div>
+        <div class="alertMsg lgAlertTy">아이디 또는 비밀번호 <span>오류 1회</span> 입니다.<br/>총 5회 로그인 실패시 5분동안 접속이 차단됩니다.</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<!--비밀번호 재설정-->
+<div id="sample04" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample04');">닫기</button>
+                    <div class="popTitle">비밀번호 재설정</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 테이블 -->
+                        <!-- 작은 타이틀 + 설명글 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title" style="font-size:14px;">
+                                    비밀번호가 초기화되었습니다.<br>
+                                    비밀번호 재설정 후 로그인 가능하오니, 새로운 비밀번호를 등록해주세요.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">신규 비밀번호</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="password" class="iptText frmLg" style="width:100%;"/>
+                                            </div>
+                                            <p style="color:red; font-size:14px; font-weight:500;">※ 비밀번호는 10자리 이상이어야 하며, 영문과 숫자를 반드시 포함해야 합니다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">비밀번호 재확인</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="password" class="iptText frmLg"  style="width:100%;"/>
+                                            </div>
+                                            <p style="color:red; font-size:14px; font-weight:500;">※ 비밀번호가 일치하지 않습니다.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn dkBlue" onclick="closePopup('sample04');">비밀번호 저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

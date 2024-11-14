@@ -1,0 +1,530 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+    <strong class="g-area-tit">grid (data table)</strong>
+    <xmp>
+        <!-- 그리드 -->
+        <div class="cptGrid">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:40px;">
+                    <col style="width:8%;">
+                    <col style="width:17%;">
+                    <col style="width:13%;">
+                    <col style="width:auto;">
+                    <col style="width:13%;">
+                    <col style="width:400px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="frmChoBox only">
+                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                            </div>
+                        </th>
+                        <th>번호</th>
+                        <th>상태</th>
+                        <th>항목2</th>
+                        <th>항목3</th>
+                        <th>항목4</th>
+                        <th>기능</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td><span class="txtBlue">승인대기</span></td>
+                        <td class="bold">홍길동</td>
+                        <td class="left">예시 제목입니다. 최대 길이 확인하세요.</td>
+                        <td>0000-00-00</td>
+                        <td class="left">
+                            <button class="gridBtn gLine">건강체력평가</button>
+                            <button class="gridBtn gLine">상세내역</button>
+                            <button class="gridBtn purple">참여등록</button>
+                            <button class="gridBtn red">종료처리</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td><span class="">승인완료</span></td>
+                        <td class="bold">홍길동</td>
+                        <td class="left">예시 제목입니다. 최대 길이 확인하세요.</td>
+                        <td>0000-00-00</td>
+                        <td class="left">
+                            <button class="gridBtn gLine">상세내역</button>
+                            <button class="gridBtn red">고정해제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>3</td>
+                        <td><span class="txtRed">미승인</span></td>
+                        <td class="bold">홍길동</td>
+                        <td class="left">예시 제목입니다. 최대 길이 확인하세요.</td>
+                        <td>0000-00-00</td>
+                        <td class="left">
+                            <button class="gridBtn gLine">상세내역</button>
+                            <button class="gridBtn gLine">조회</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>4</td>
+                        <td><span class="">승인대기</span></td>
+                        <td class="bold">홍길동</td>
+                        <td class="left">예시 제목입니다. 최대 길이 확인하세요.</td>
+                        <td>0000-00-00</td>
+                        <td class="left">
+                            <button class="gridBtn gLine">PAR-Q</button>
+                            <button class="gridBtn gLine">신청/동의서</button>
+                            <button class="gridBtn purple">예약변경</button>
+                            <button class="gridBtn red">예약취소</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>5</td>
+                        <td><span class="">승인대기</span></td>
+                        <td class="bold">홍길동</td>
+                        <td class="left">예시 제목입니다. 최대 길이 확인하세요.</td>
+                        <td>0000-00-00</td>
+                        <td class="left">
+                            <button class="gridBtn dkBlue">PAR-Q</button>
+                            <button class="gridBtn gLine">신청/동의서</button>
+                            <button class="gridBtn purple">예약변경</button>
+                            <button class="gridBtn red">예약취소</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //그리드 -->
+    </xmp>
+    
+    <strong class="g-area-tit">grid (data table) right side possible to scroll in vertical</strong>
+    <xmp>
+        <!--테이블 가로 스크롤 적용-->
+        <div class="cptVertScr">
+            <!--대상구분 데이터 영역-->
+            <div class="lftHead">
+                <table>
+                    <colgroup>
+                        <col style="width:10%" />
+                        <col style="width:10%" />
+                        <col style="width:20%" />
+                        <col style="width:20%" />
+                        <col style="width:10%" />
+                        <col style="width:10%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>대상구분</th>
+                            <th>성별</th>
+                            <th>측정구분</th>
+                            <th>항목명</th>
+                            <th>나이(저)</th>
+                            <th>나이(고)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>2분제자리걷기</td>
+                            <td>65</td>
+                            <td>69</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>2분제자리걷기</td>
+                            <td>70</td>
+                            <td>74</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>2분제자리걷기</td>
+                            <td>75</td>
+                            <td>79</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>2분제자리걷기</td>
+                            <td>80</td>
+                            <td>84</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>2분제자리걷기</td>
+                            <td>85</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>6분걷기</td>
+                            <td>65</td>
+                            <td>69</td>
+                        </tr>
+                        <tr>
+                            <td>노인</td>
+                            <td>남자</td>
+                            <td>심폐지구력</td>
+                            <td>6분걷기</td>
+                            <td>70</td>
+                            <td>74</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--치수 데이터 영역-->
+            <div class="rytBody">
+                <table>
+                    <colgroup>
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                        <col style="width:5.26%;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>95</th>
+                            <th>90</th>
+                            <th>85</th>
+                            <th>80</th>
+                            <th>75</th>
+                            <th>70</th>
+                            <th>65</th>
+                            <th>60</th>
+                            <th>55</th>
+                            <th>50</th>
+                            <th>45</th>
+                            <th>40</th>
+                            <th>35</th>
+                            <th>30</th>
+                            <th>25</th>
+                            <th>20</th>
+                            <th>15</th>
+                            <th>10</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>148</td>
+                            <td>139</td>
+                            <td>133</td>
+                            <td>129</td>
+                            <td>125</td>
+                            <td>122</td>
+                            <td>118</td>
+                            <td>115</td>
+                            <td>112</td>
+                            <td>109</td>
+                            <td>106</td>
+                            <td>103</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>94</td>
+                            <td>91</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>71</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </xmp>
+<style>
+/**/
+.classInfo * {letter-spacing:0;}
+.classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+.classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+.classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+.classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+.classInfo table + table {margin-top:-1px;}
+</style>
+<div class="classInfo">
+    <div class="infoTitle">추가 조작</div>
+    <table style="width:100%;">
+        <caption></caption>
+        <colgroup>
+            <col style="width:30%;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>경로</th>
+                <th>.cptGrid .gridTb tr .className</th>
+            </tr>
+            <tr>
+                <th>className</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>left</td>
+                <td>오브젝트 좌로 정렬</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>오브젝트 가로 가운데로 정렬</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>오브젝트 우로 정렬</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>오브젝트 위로 정렬</td>
+            </tr>
+            <tr>
+                <td>middle</td>
+                <td>오브젝트 세로 가운데로 정렬</td>
+            </tr>
+            <tr>
+                <td>bottom</td>
+                <td>오브젝트 아래로 정렬</td>
+            </tr>
+            <tr>
+                <td>bold</td>
+                <td>텍스트를 두껍게</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+    
+    
+    
+    </div>
+    <!-- Guide : e -->
+    
+    <script type="text/javascript">
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+    </script>
+
+<script>
+    // script for grid (data table) right side possible to scroll in vertical
+    // 테이블 구역 표시
+    $("document").ready(function(){
+        $(".cptVertScr table tr td").hover(function(ev){
+            $(".cptVertScr .rytBody table tr td").css("color","#bbbbbb;");
+            var row = $(this).parents("table").find("tr").length - 1;
+            var idx_tr = $(this).parent("tr").index()+1;
+            var idx_td = $(this).index()+1;
+            var area = $(this).parents("div");
+            
+            $(this).parent("tr").find("td").addClass("mEnt");
+
+            if($(area).hasClass("lftHead")){
+                $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+                $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            }else if($(area).hasClass("rytBody")){
+                $(".rytBody table tr td").removeClass("mEnt");
+                $(".rytBody table tr td:nth-of-type("+ idx_td +")").addClass("mEnt");
+                $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+                $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            }
+        }, function(ev){
+            $(".cptVertScr .lftHead table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").css("color","#333;");
+            $(this).parent("tr").removeClass("mEnt");  
+        })
+    })
+</script>

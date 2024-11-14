@@ -1,0 +1,479 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>사업년도</th>
+                    <td>2025년</td>
+                    <th>연번</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>등록일자</th>
+                    <td>YYYY-MM-DD</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">신청자 기본정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="홍길동" disabled>
+                        </div>
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>성별 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">남자</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">여자</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">장애</label></div>
+                    </td>
+                    <th>연락처 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">010</option>
+                            </select>
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>은행계좌 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">기업</option>
+                            </select>
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">확인</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>종목 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">수영</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>추천단체 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>지역 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">010</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>재학기관 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">초등</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">중등</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">고등</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전문학사</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">학사</label></div>
+                    </td>
+                    <th>학년 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>학교 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>보호자성명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>보호자연락처</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">010</option>
+                            </select>
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">대회실적 (<span class="txtBlue">3</span>)건</div>
+        </div>
+        <div class="alignR">
+            <button type="button" class="soloBtn bLine">추가</button>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:200px">
+                <col style="width:250px">
+                <col style="width:auto">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>대표대회</th>
+                    <th>종목</th>
+                    <th>개최년도</th>
+                    <th>대회구분</th>
+                    <th>입상대회</th>
+                    <th>순위</th>
+                    <th>장애여부</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl"></label></div>
+                    </td>
+                    <td class="center">수영</td>
+                    <td class="center">2025년</td>
+                    <td class="center">전국소년체전</td>
+                    <td>제 54회 전국소년체육대회 혼계영 200M</td>
+                    <td class="center">1</td>
+                    <td class="center">비장애</td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl"></label></div>
+                    </td>
+                    <td class="center">수영</td>
+                    <td class="center">2025년</td>
+                    <td class="center">전국소년체전</td>
+                    <td>제 54회 전국소년체육대회 혼계영 200M</td>
+                    <td class="center">1</td>
+                    <td class="center">비장애</td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl"></label></div>
+                    </td>
+                    <td class="center">수영</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2025년</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">전국소년체전</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="제 54회 전국소년체육대회 혼계영 200M">
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="1">
+                        </div>
+                    </td>
+                    <td class="center">비장애</td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">제출서류 (<span class="txtBlue">00</span>)건</div>
+        </div>
+        <div class="alignR">
+            <button type="button" class="soloBtn bLine">추가</button>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100px">
+                <col style="width:500px">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제출서류구분</th>
+                    <th>파일</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td>개인정보수집이용동의서</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">파일명.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td>개인정보수집이용동의서</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">파일명.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">개인정보수집이용동의서</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox">파일명.pdf</div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <button type="button" class="soloBtn gLine">삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">적격심사 및 대상자 선정</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:16.6666%">
+                <col style="width:16.6666%">
+                <col style="width:16.6666%">
+                <col style="width:16.6666%">
+                <col style="width:16.6666%">
+                <col style="width:16.6666%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">1. 적격심사</th>
+                    <th colspan="2">2. 대상자 선정</th>
+                    <th colspan="2">3. 공단 승인</th>
+                </tr>
+                <tr>
+                    <th>상태</th>
+                    <th>심사일</th>
+                    <th>상태</th>
+                    <th>선정일</th>
+                    <th>상태</th>
+                    <th>승인일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">적격</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">선정</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">승인완료</td>
+                    <td class="center">YYYY-MM-DD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">지급계획</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:33.3333%">
+                <col style="width:33.3333%">
+                <col style="width:33.3333%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>재학기관</th>
+                    <th>장학금액</th>
+                    <th>지급예정일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">초등 5</td>
+                    <td class="center">300,000</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">비고</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmGroup">
+                            <textarea name="" id="" class="textArea areaMd">test text area</textarea>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">수정</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

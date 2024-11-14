@@ -1,0 +1,281 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+
+<!-- 회원가입확인 팝업 -->
+<div id="sample02" class="modPopup md on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">출장체력측정 대상자등록</div>
+                    <div class="popCont">
+                        <!-- 팝업 컨텐츠 영역 -->
+                            <!-- 작은 타이틀 -->
+                            <div class="comSmTit">
+                                <div>
+                                    <div class="title">출장체력측정 정보</div>
+                                </div>
+                            </div>
+
+                            <!-- 테이블 -->
+                            <div class="cptTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:120px;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:120px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="left">체력인증센터</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">시 / 도 선택</option>
+                                                    </select>
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">시 / 군 / 구 선택</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <th class="left">측정일자</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <div class="iptDate"><input type="text" class="iptText" id="datepicker1"><button class="dateBtn">날짜검색</button></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">출장지명</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">시 / 도 선택</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <th class="left">참가경로</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">시 / 도 선택</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 작은 타이틀 + 설명글 -->
+                            <div class="comSmTit">
+                                <div class="alignL">
+                                    <div class="title">측정대상자 검색</div>
+                                    <div class="unit"><span class="desc">*아이디 또는 개인정보를 입력 후 <b>'회원검색'</b> 버튼을 클릭해 주세요.</span></div>
+                                </div>
+                            </div>
+                            <style>
+                                
+                            </style>
+                            <!-- tab in page -->
+                            <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+                                <ul class="tabMenu">
+                                    <li class="item"><a href="#">아이디조회</a></li>
+                                    <li class="item on"><a href="#">직접조회</a></li>
+                                </ul>
+                                <!-- modTab in 영역 -->
+                                <div class="tabContGroup">
+                                    <div class="tabCont">
+                                        <div class="srchBox">
+                                            <div class="cptSearchArea">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:150px;" />
+                                                        <col style="width:auto;" />
+                                                        <col style="width:150px;" />
+                                                        <col style="width:auto;" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>회원아이디</th>
+                                                            <td><input type="text" class="iptText"></td>
+                                                            <td colspan="2" class="right">
+                                                                <button class="btnSearch">회원검색</button>                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabCont on">
+                                        <div class="srchBox">
+                                            <div class="cptSearchArea">
+                                                <table>
+                                                    <caption></caption>
+                                                    <colgroup>
+                                                        <col style="width:150px;" />
+                                                        <col style="width:auto;" />
+                                                        <col style="width:150px;" />
+                                                        <col style="width:auto;" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>이름<span class="required">*</span></th><!--20230125 필수항목 체크표시 추가-->
+                                                            <td><input type="text" class="iptText"></td>
+                                                            <th>성별<span class="required">*</span></th>><!--20230125 필수항목 체크표시 추가-->
+                                                            <td>
+                                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남성</label></div>
+                                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여성</label></div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>생년월일<span class="required">*</span></th>><!--20230125 필수항목 체크표시 추가-->
+                                                            <td colspan="3">
+                                                                <div class="frmGroup">
+                                                                    <div class="iptDate frmMd"><input type="text" class="iptText" id="datepicker1"><button class="dateBtn">날짜검색</button></div>
+                                                                    <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">양력</label></div>
+                                                                    <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">음력</label></div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>연락처<span class="required">*</span></th>><!--20230125 필수항목 체크표시 추가-->
+                                                            <td colspan="3">
+                                                                <select name="" id="" class="iptSlt frmXs">
+                                                                    <option value="">선택</option>
+                                                                </select>
+                                                                <div class="textBox deco">-</div>
+                                                                <input type="text" class="iptText frmXs" />
+                                                                <div class="textBox deco">-</div>
+                                                                <input type="text" class="iptText frmXs" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="4" class="right">
+                                                                <button class="btnSearch">회원검색</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 작은 타이틀 + 설명글 -->
+                            <div class="comSmTit">
+                                <div class="alignL">
+                                    <div class="title">회원검색결과</div>
+                                </div>
+                            </div>
+                            <!--검색결과 있는 경우-->
+                            <!-- 테이블 -->
+                            <div class="cptTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col width="10%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                        <col width="10%" />
+                                        <col width="20%" />
+                                        <col width="15%" />
+                                        <col width="15%" />
+                                    </colgroup>
+                                    <caption></caption>
+                                    <thead>
+                                        <tr>
+                                            <th>이름</th>
+                                            <th>아이디</th>
+                                            <th>생년월일</th>
+                                            <th>성별</th>
+                                            <th>연락처</th>
+                                            <th>가입일자</th>
+                                            <th>기능</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center">홍길동</td>
+                                            <td class="center">member_id</td>
+                                            <td class="center">2023-12-31</td>
+                                            <td class="center">남자</td>
+                                            <td class="center">010-1234-1234</td>
+                                            <td class="center">2023-12-31</td>
+                                            <td class="center">
+                                                <button class="btn purple">대상자 등록</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 검색결과 있는 경우-->
+
+                            <!--검색결과 없는 경우-->
+                            <div class="cptNoResult">
+                                <div class="txtArea">
+                                    <p>회원정보가 존재하지 않습니다.</p>
+                                    <p>비회원으로 체력측정 하시려면 아래 <b>'대상자등록'</b> 버튼을 클릭하세요.</p>
+                                </div>
+                                <div class="btnArea">
+                                    <button class="btn purple">대상자 등록</button>
+                                </div>
+                            </div>
+                            <!-- // 검색결과 없는 경우-->
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine" onclick="openAlert('splAlt02');">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+         
+<!-- 회원가입확인 > 선택 알럿 -->
+<div id="splAlt02" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">선택한 회원으로 정보를<br/> 변경 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<script>
+    $(document).ready(function(){
+        //탭메뉴 스크립트
+        $(".modTab li.item a").on("click",function(e){
+            if($(this).parents(".modTab").hasClass("in")){
+                e.preventDefault();
+                let _idx = $(this).parent().index();
+                $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+            }
+        });
+    });
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

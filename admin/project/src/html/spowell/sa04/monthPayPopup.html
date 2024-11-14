@@ -1,0 +1,101 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <button type="button" onclick="openPopup('sample01')">월정금 소급지급내역 열기</button>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">월정금 소급지급내역</div>
+                    <div class="popCont">
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:20%;">
+                                    <col style="width:25%;">
+                                    <col style="width:40%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>소급월 <span class="required">*</span></th>
+                                        <th>금액 <span class="required">*</span></th>
+                                        <th>지급일자 <span class="required">*</span></th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">YYYY-MM</td>
+                                        <td class="right">150,000</td>
+                                        <td rowspan="3" class="center">
+                                            YYYY-MM-DD
+                                        </td>
+                                        <td rowspan="3">
+                                            <textarea class="textArea areaMd"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM</td>
+                                        <td class="right">300,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM</td>
+                                        <td class="right">300,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="center">계</th>
+                                        <th class="right">750,000</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn gLine" onclick="closePopup('sample01');">취소</button>
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //탭메뉴 스크립트
+        $(".modTab li.item a").on("click",function(e){
+            if($(this).parents(".modTab").hasClass("in")){
+                e.preventDefault();
+                let _idx = $(this).parent().index();
+                $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+            }
+        });
+    });
+</script>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

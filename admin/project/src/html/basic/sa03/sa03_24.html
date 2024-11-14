@@ -1,0 +1,476 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup lg on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체력측정결과 상세내역</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 1 : 1분할 -->
+                        <div class="modDivision">
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">체력측정내역</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- 테이블 -->
+                                <div class="cptTable complexView">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:170px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:80px;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">측정항목</th><!--20230125 표 레이아웃 변경-->
+                                                <th>측정값</th>
+                                                <th>백분위(%)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left" rowspan="2">순환기</th>
+                                                <td class="left">수축기 혈압(최고치)</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">mmhg</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">이완기 혈압(최저치)</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">mmhg</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="5">신체조성</th>
+                                                <td class="left">신장</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">cm</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">체중</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">kg</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">BMI</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">체지방율</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">허리둘레</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">cm</span>
+                                                    </div>
+                                                </td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="2">근력</th>
+                                                <td class="left">악력(좌)
+                                                    <!--툴팁 필요시 붙임 부분-->
+                                                    <span class="glbTooltip scaleS"> 
+                                                        <button class="icon">history</button>
+                                                        <span class="tooltipCont">
+                                                            <span class="tooltipTit">이력조회</span>
+                                                            <ul class="tooltipList">
+                                                                <li class="item">2023-00-00 홍길동 50을 55로 수정</li>
+                                                                <li class="item">2023-00-00 홍길동 50을 55로 수정</li>
+                                                                <li class="item">2023-00-00 홍길동 50을 55로 수정</li>
+                                                            </ul>
+                                                            <button class="close">닫기</button>
+                                                        </span>
+                                                    </span>
+                                                    <!-- // 툴팁 필요시 붙임 부분-->
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">kg</span> <!--20230125 악력 단위 추가-->
+                                                    </div>
+                                                </td>
+                                                <td class="center" rowspan="2">
+                                                    <span class="fitPercent">30%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">악력(우)</td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">kg</span> <!--20230125 악력 단위 추가-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="2">근지구력</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">윗몸말아올리기</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">회</span>
+                                                    </div>
+                                                </td>
+                                                <td class="center" rowspan="2">
+                                                    <span class="fitPercent">60%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">반복점프</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">회</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="3">심폐지구력</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo102"><label for="rdo101" class="iptLbl">왕복 오래달리기</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">회</span>
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">VO₂max</span>
+                                                    </div>
+                                                </td>
+                                                <td class="center" rowspan="3">
+                                                    <span class="fitPercent">60%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo102"><label for="rdo102" class="iptLbl">트레드밀</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <span class="textBoxFnt">안정시 : </span>
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">bpm</span>
+                                                    </div>
+                                                    <div class="frmGroup">
+                                                        <span class="textBoxFnt">3분 : </span>
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">bpm</span>
+                                                    </div>
+                                                    <div class="frmGroup">
+                                                        <span class="textBoxFnt">6분 : </span>
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">bpm</span>
+                                                    </div>
+                                                    <div class="frmGroup">
+                                                        <span class="textBoxFnt">9분 :</span>
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">bpm =</span>
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">VO₂max</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">스텝검사</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <span class="textBoxFnt">회복시 심박수 :</span>
+                                                        <input type="text" class="iptText frmXs">
+                                                        <span class="textBox">bpm =</span>
+                                                        <input type="text" class="iptText frmXs" disabled>
+                                                        <span class="textBox">VO₂max</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">유연성</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo103"><label for="rdo104" class="iptLbl">앉아윗몸앞으로굽히기</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm">
+                                                        <span class="textBox">cm</span>
+                                                    </div>
+                                                </td>
+                                                <td class="center">
+                                                    <span class="fitPercent">60%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="2">민첩성</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo104"><label for="rdo105" class="iptLbl">10m 4회 왕복달리기</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">초</span>
+                                                    </div>
+                                                </td>
+                                                <td class="center" rowspan="2">
+                                                    <span class="fitPercent">70%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo106" type="radio" class="iptRdo" name="rdo104"><label for="rdo106" class="iptLbl">전신반응</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">초</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left" rowspan="2">순발력</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo107" type="radio" class="iptRdo" name="rdo105"><label for="rdo107" class="iptLbl">체공시간</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">초</span>
+                                                    </div>
+                                                </td>
+                                                <td class="center" rowspan="2">
+                                                    <span class="fitPercent">45%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo108" type="radio" class="iptRdo" name="rdo105"><label for="rdo108" class="iptLbl">제자리 멀리뛰기</label></div>
+                                                </td>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText frmSm" disabled>
+                                                        <span class="textBox">cm</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="textBox clar">*&lt;인증서발급&gt;을 해야 체력측정결과조회·처방에서 조회할 수 있습니다.</div>
+                            </div>
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">기본정보</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">이름</th>
+                                                <td class="left">ㅇㅇㅇ</td>
+                                                <th class="left">아이디</th>
+                                                <td class="left">member_id</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">생년월일</th>
+                                                <td class="left">2022-12-31(양력)</td>
+                                                <th class="left">성별</th>
+                                                <td class="left">남자</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">연락처</th>
+                                                <td class="left">010-0000-0000</td>
+                                                <th class="left">회원번호</th>
+                                                <td class="left">0000000000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">체력측정</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">체력인증센터</th>
+                                                <td class="left">송파</td>
+                                                <th class="left">측정대상</th>
+                                                <td class="left">성인</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">측정일자</th>
+                                                <td class="left">2023-00-00</td>
+                                                <th class="left">측정구분</th>
+                                                <td class="left">출장측정</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">측정회차</th>
+                                                <td class="left">3회차</td>
+                                                <th class="left">체력등급</th>
+                                                <td class="left">
+                                                    <span class="gradeTxt">3등급</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">기타</th>
+                                                <td class="left" colspan="3">출장지명 & 기관명</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">데이터 수정이력</div>
+                                    </div>
+                                </div>
+                                <div class="cptDataInsert">
+                                    <p class="dataDtLog">2022-12-31</p>
+                                    <textarea placeholder="변경사유 내용입력중 입니다."></textarea>
+                                    <div class="dataBtn">
+                                        <button class="btn dkBlue">등록</button>
+                                    </div>
+                                </div>
+                                <div class="cptDataHistory">
+                                    <dl class="historyList">
+                                        <dt>2022-12-31 홍길동</dt>
+                                        <dd>변경사유 내용입니다.</dd>
+                                    </dl>
+                                    <dl class="historyList">
+                                        <dt>2022-12-31 홍길동</dt>
+                                        <dd>변경사유 내용입니다.</dd>
+                                    </dl>
+                                    <dl class="historyList">
+                                        <dt>2022-12-31 홍길동</dt>
+                                        <dd>변경사유 내용입니다.</dd>
+                                    </dl>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn purple">수정</button> <!-- 20230125 수정 버튼 클래스 변경 -->
+                        <button class="btn red" onclick="openAlert('splAlt02')">삭제</button>
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert on"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">
+            해당정보를 삭제하시겠습니까?
+        </div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<script>
+    $(document).ready(function(){
+        $(".glbTooltip .icon").on("click",function(e){
+            e.preventDefault();
+            $(this).next().toggleClass("on");
+        })
+        $(".glbTooltip .close").on("click",function(e){
+            e.preventDefault();
+            $(this).parent().toggleClass("on");
+        })
+    });
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

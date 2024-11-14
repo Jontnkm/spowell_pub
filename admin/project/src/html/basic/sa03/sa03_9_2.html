@@ -1,0 +1,149 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+
+<!-- 회원가입확인 팝업 -->
+
+
+<!-- 예약변경처리 팝업 -->
+<div id="sample03" class="modPopup md on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample03');">닫기</button>
+                    <div class="popTitle">예약변경처리</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">예약정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:105px;" />
+                                    <col style="width:70px;" />
+                                    <col style="width:85px;" />
+                                    <col style="width:105px;" />
+                                    <col style="width:50px;" />
+                                    <col style="width:100px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>예약일자</th>
+                                        <th>이름</th>
+                                        <th>아이디</th>
+                                        <th>생년월일</th>
+                                        <th>성별</th>
+                                        <th>연락처</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">ㅇㅇㅇ</td>
+                                        <td class="center">member_id</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">남성</td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">예약변경</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:40%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:30%;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>체력인증센터</th>
+                                        <th>예약일자</th>
+                                        <th>예약시간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <select name="" id="" class="iptSlt">
+                                                <option value="">영주체력인증센터</option>
+                                            </select>
+                                        </td>
+                                        <td class="center">
+                                            <div class="iptDate"><input type="text" class="iptText"><button class="dateBtn">날짜검색</button></div>
+                                        </td>
+                                        <td class="center">
+                                            <select name="" id="" class="iptSlt">
+                                                <option value="">00:00~00:00(2명)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="frmChoList vertical">
+                                <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">체력측정 후 인증서 발급을 신청합니다.</label></div>
+                                <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">본인임을 확인했습니다.</label></div>
+                            </div>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn dkBlue" onclick="openAlert('splAlt03')">예약변경완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+         
+
+<!-- 예약변경처리 > 완료 알럿 -->
+<div id="splAlt03" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">선택한 일자로 체력측정 예약을<br/> 변경 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt03');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,1127 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>가입기간</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmLg">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modTab out"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">연간집계현황</a></li>
+            <li class="item"><a href="#">월별집행실적</a></li>
+        </ul>
+    </div>
+    <br>
+
+    <div class="cptTable withScroll">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="3" rowspan="2">사업구분</th>
+                    <th colspan="2">합계</th>
+                    <th colspan="2">01월</th>
+                    <th colspan="2">02월</th>
+                    <th colspan="2">03월</th>
+                    <th colspan="2">~</th>
+                    <th colspan="2">11월</th>
+                    <th colspan="2">12월</th>
+                </tr>
+                <tr>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                    <th>금액</th>
+                    <th>인원</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="11" class="center">복지후생금</td>
+                    <td rowspan="5">경기력<br>성과포상금(선수)</td>
+                    <td>월정금</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>일시금</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>일시장려금</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>특별장려금</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <th>계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+                <tr>
+                    <td>경기력<br>성과포상금(지도자)</td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>생활지원금</td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">교육지원금</td>
+                    <td>국내대학원</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>국외유학</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <th>계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2">소계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+
+                <tr>
+                    <td rowspan="5" class="center">장학사업</td>
+                    <td>체육장학금</td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">스포츠꿈나무<br>특기장려금</td>
+                    <td>장학금</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>운영비</td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <th>계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2">소계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+
+                <tr>
+                    <td rowspan="3" class="center">체육유공자</td>
+                    <td>연금</td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <td>기타지원</td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">소계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+
+                <tr>
+                    <td class="center">원로인체육지원금</td>
+                    <td></td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>%
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="center">국가대표<br>보험지원금</td>
+                    <td></td>
+                    <td></td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                    <td class="right">
+                        <span></span>원
+                    </td>
+                    <td class="right">
+                        <span></span>명
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="3">합계</th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>%
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                    <th class="right">
+                        <span></span>원
+                    </th>
+                    <th class="right">
+                        <span></span>명
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="txtBox clar">사업별 &lt;경영정보통합정보시스템&gt;으로 전송처리 한 집행실적 데이터 &lt;실지급액&gt;을 기준으로 집계합니다.</div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

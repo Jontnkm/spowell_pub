@@ -1,0 +1,263 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>권한관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">시스템관리</li>
+                                    <li class="item">권한관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>등록일</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                    <input id="startpicker-input" type="text" aria-label="Date">
+                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                    <input id="endpicker-input" type="text" aria-label="Date">
+                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+
+                                                <script>
+                                                    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                                                </script>
+                                                
+                                            </div>
+                                        </td>
+                                        <th>상태</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo001"><label for="rdo101" class="iptLbl">전체</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo001"><label for="rdo102" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo001"><label for="rdo103" class="iptLbl">미사용</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>키워드</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmSm">
+                                                    <option value="">사용자구분</option>
+                                                    <option value="">내용</option>
+                                                    <option value="">작성자</option>
+                                                </select>
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                        <td colspan="2" class="right">
+                                            <button class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="grpComponent">
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <div class="comSideOpt">
+                                        <ul class="opList">
+                                            <li class="item">
+                                                <button class="viewBtn on">10개씩</button>
+                                                <button class="viewBtn">20개씩</button>
+                                                <button class="viewBtn">30개씩</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cptGrid">
+                                <table class="gridTb">
+                                    <colgroup>
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:13%;">
+                                        <col style="width:13%;">
+                                        <col style="width:13%;">
+                                        <col style="width:13%;">
+                                        <col style="width:13%;">
+                                        <col style="width:13%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>사용자구분</th>
+                                            <th>관리그룹</th>
+                                            <th>등록자</th>
+                                            <th>등록일</th>
+                                            <th>사용계정</th>
+                                            <th>상태</th>
+                                            <th>관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>업무담당자</td>
+                                            <td>일반관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>100</td>
+                                            <td>미사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>시스템관리자</td>
+                                            <td>전체관리자</td>
+                                            <td>홍길동</td>
+                                            <td>0000-00-00</td>
+                                            <td>10</td>
+                                            <td>사용</td>
+                                            <td><button class="gridBtn dkBlue">수정</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <!-- 페이징 -->
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">등록</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

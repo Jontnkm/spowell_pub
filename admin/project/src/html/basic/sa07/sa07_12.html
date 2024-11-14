@@ -1,0 +1,270 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체력인증센터정보 조회</div>
+                    <div class="popCont">
+                        <p class="popMsg mB20 center">등록한 내용은 국민체력100 홈페이지에서 체력인증센터 안내정보에 반영됩니다.</p>
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:130px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:130px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">체력인증센터명</th>
+                                        <td class="left">KSPO송파</td>
+                                        <th class="left">지정기간</th>
+                                        <td class="left">2022-00-00 ~ 2022-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">전화</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                </select>
+                                                <div class="textBox deco">-</div>
+                                                <input type="text" class="iptText" />
+                                                <div class="textBox deco">-</div>
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                        <th class="left">팩스</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                </select>
+                                                <div class="textBox deco">-</div>
+                                                <input type="text" class="iptText" />
+                                                <div class="textBox deco">-</div>
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영요일</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">전체</label></div>
+                                            <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">월</label></div>
+                                            <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">화</label></div>
+                                            <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">수</label></div>
+                                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">목</label></div>
+                                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">금</label></div>
+                                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">토</label></div>
+                                            <div class="frmChoBox"><input id="chk108" type="checkbox" class="iptChk"><label for="chk108" class="iptLbl">일</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영시간</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <div class="textBox deco">~</div>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">주소</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <button class="gridBtn dkbLine">주소검색</button>
+                                                <input type="text" class="iptText" />
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">보험가입(내부)</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">미가입</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">가입</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <span class="mR10">[ 가입기간 :</span>
+                                                <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker2"></div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker3"></div>
+                                                <span class="mR10 mL10">/ 보험증서 :</span>
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn2" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox limit200"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <span class="mL10"> ]</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">보험가입(외부)</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">미가입</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">가입</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <span class="mR10">[ 가입기간 :</span>
+                                                <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker2"></div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker3"></div>
+                                                <span class="mR10 mL10">/ 보험증서 :</span>
+                                                <div class="fileBox">
+                                                    <div class="fileBox"><!--20220222 수정용 영역 수정-->
+                                                        <div class="textBox limit200">파일명 노출 영역.hwp</div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <span class="mL10"> ]</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">자동심장충격기</th>
+                                        <td class="left" colspan="3">
+                                            <input type="text" class="iptText frmTini" />
+                                            <span class="mL5">대 보유</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">소속지자체</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">지자체 담당자명</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영주관</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">운영주관 담당자명</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">교통정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:130px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:130px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">버스 <span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">지하철 <span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">자가용 <span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">특이사항 및 이용안내</div>
+                            </div>
+                        </div>
+
+                        <textarea></textarea>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

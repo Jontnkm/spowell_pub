@@ -1,0 +1,322 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>관리자계정관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">시스템관리</li>
+                                    <li class="item">관리자계정관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본정보</div>
+                            </div>
+                            <div class="alignR">
+                                <div class="comSideOpt">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <button type="button" class="srhBtn gLine">비밀번호 초기화</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">홍길동</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">사용자구분</th>
+                                        <td class="left">일반관리자</td>
+                                        <th class="left">권한그룹</th>
+                                        <td class="left">권한그룹1</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">휴대폰번호</th>
+                                        <td class="left">010-0000-0000</td>
+                                        <th class="left">이메일</th>
+                                        <td class="left">test@naver.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">소속(부서)</th>
+                                        <td class="left">0000</td>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">2024-05-05</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">계정정보</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">계정상태</th>
+                                        <td class="left">계정정지 2024-05-07</td>
+                                        <th class="left">사유</th>
+                                        <td class="left">비밀번호 5회 오류</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">삭제</button>
+                                    <button type="button" class="crudBtn dkBlue">수정</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 아코디언 -->
+                        <div class="modAccordion">
+                            <div class="accoArea">
+                                <div class="accoTop">
+                                    <div class="accoTitle">계정이력</div>
+                                </div>
+                                <div class="accoBody">
+
+                                    <div class="cptGrid">
+                                        <table class="gridTb">
+                                            <colgroup>
+                                                <col style="width:16%;">
+                                                <col style="width:16%;">
+                                                <col style="width:16%;">
+                                                <col style="width:16%;">
+                                                <col style="width:16%;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>이름</th>
+                                                    <th>신청일자</th>
+                                                    <th>계정상태</th>
+                                                    <th>처리자</th>
+                                                    <th>처리일자</th>
+                                                    <th>사유</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>승인요청</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>승인반려</td>
+                                                    <td>관리자</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>승인반려 시 입력한 사유내용 노출</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>승인요청</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>승인완료</td>
+                                                    <td>관리자</td>
+                                                    <td>0000-00-00</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>계정정지</td>
+                                                    <td>관리자</td>
+                                                    <td>0000-00-00</td>
+                                                    <td>계정정지 시 입력한 사유내용 노출</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+            
+                                    <!-- 페이징 -->
+                                    <div class="comPaging">
+                                        <a class="start" href="#"></a>
+                                        <a class="prev" href="#"></a>
+                                        <ul class="numList">
+                                            <li><a href="#">1</a></li>
+                                            <li class="on"><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                        </ul>
+                                        <a class="next" href="#"></a>
+                                        <a class="end" href="#"></a>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 아코디언 -->
+                        <div class="modAccordion">
+                            <div class="accoArea">
+                                <div class="accoTop">
+                                    <div class="accoTitle">접속로그</div>
+                                </div>
+                                <div class="accoBody">
+
+                                    <div class="cptGrid">
+                                        <table class="gridTb">
+                                            <colgroup>
+                                                <col style="width:14%;">
+                                                <col style="width:14%;">
+                                                <col style="width:14%;">
+                                                <col style="width:auto;">
+                                                <col style="width:14%;">
+                                                <col style="width:14%;">
+                                                <col style="width:14%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>아이디</th>
+                                                    <th>이름</th>
+                                                    <th>접속일시</th>
+                                                    <th>접속URL</th>
+                                                    <th>접속IP</th>
+                                                    <th>메뉴명</th>
+                                                    <th>수행업무</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>member_id</td>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00 00:00:00</td>
+                                                    <td></td>
+                                                    <td>123.456.78.9</td>
+                                                    <td>메인</td>
+                                                    <td>로그인</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>member_id</td>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00 00:00:00</td>
+                                                    <td></td>
+                                                    <td>123.456.78.9</td>
+                                                    <td>메뉴명</td>
+                                                    <td>조회</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>member_id</td>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00 00:00:00</td>
+                                                    <td></td>
+                                                    <td>123.456.78.9</td>
+                                                    <td>메뉴명</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>member_id</td>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00 00:00:00</td>
+                                                    <td></td>
+                                                    <td>123.456.78.9</td>
+                                                    <td>메뉴명</td>
+                                                    <td>삭제</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>member_id</td>
+                                                    <td>홍길동</td>
+                                                    <td>0000-00-00 00:00:00</td>
+                                                    <td></td>
+                                                    <td>123.456.78.9</td>
+                                                    <td>메뉴명</td>
+                                                    <td>등록</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+            
+                                    <!-- 페이징 -->
+                                    <div class="comPaging">
+                                        <a class="start" href="#"></a>
+                                        <a class="prev" href="#"></a>
+                                        <ul class="numList">
+                                            <li><a href="#">1</a></li>
+                                            <li class="on"><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                        </ul>
+                                        <a class="next" href="#"></a>
+                                        <a class="end" href="#"></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

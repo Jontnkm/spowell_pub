@@ -1,0 +1,138 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">공지사항</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">제목</th>
+                    <td class="left">공지사항 게시물 제목</td>
+                </tr>
+                <tr>
+                    <th class="left">구분</th>
+                    <td class="left">회원가입</td>
+                </tr>
+                <tr>
+                    <th class="left">상단고정</th>
+                    <td class="left">예</td>
+                </tr>
+                <tr>
+                    <th class="left">등록자</th>
+                    <td class="left">홍길동</td>
+                </tr>
+                <tr>
+                    <th class="left">노출 등록일</th>
+                    <td class="left">2024-01-01</td>
+                </tr>
+                <tr>
+                    <th class="left">내용</th>
+                    <td class="left">
+                        <!--web editor area-->
+                        text test <br>text test <br>text test <br>text test <br>text test <br>text test <br><br>text test <br>text test <br>text test <br>text test <br><br>text test <br><br>text test <br>text test <br>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">첨부파일1</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <!-- <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div> -->
+                                <div class="fileAfter">
+                                    <div class="textBox">첨부파일 예시.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">첨부파일2</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <!-- <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div> -->
+                                <div class="fileAfter">
+                                    <div class="textBox">첨부파일 예시.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">첨부파일3</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <!-- <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div> -->
+                                <div class="fileAfter">
+                                    <div class="textBox">첨부파일 예시.pdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">등록 / 수정일시</th>
+                    <td class="left">
+                        YYYY-MM-DD HH:MM:SS / YYYY-MM-DD HH:MM:SS
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">목록</button>
+                <button type="button" class="crudBtn gray">수정</button>
+                <button type="button" class="crudBtn blue">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="splAlt02" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

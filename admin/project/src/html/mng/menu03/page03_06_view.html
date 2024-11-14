@@ -1,0 +1,208 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>커뮤니티게시판(댓글형)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">게시물관리</li>
+                                    <li class="item">커뮤니티게시판(댓글형)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                글 등록 시 작성한 제목 노출
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            관리자
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">
+                                            2024-05-05
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th class="left">자내용</th>
+                                        <td class="left">
+                                            글 등록 시 작성한 내용 노출
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 댓글영역 -->
+                        <div class="grpComponent">
+                                
+                            <div class="comSmTit">
+                                <div class="alignL">
+                                    <div class="title">댓글(6)</div>
+                                </div>
+                            </div>
+
+                            <div class="cptDataSelect">
+                                <p class="dataLog">
+                                    <span class="dataDt">2022-12-31</span>
+                                    <span class="dataAuthor">홍길동</span> / 
+                                    <span class="dataCenter">부서명</span>
+                                </p>
+                                <a href="#none" class="delComment modify">수정</a>      <!-- 20240627 수정 -->
+                                <a href="#none" class="delComment del">삭제</a>         <!-- 20240627 수정 -->
+                                <a href="#none" class="delComment reply">답글달기</a>   <!-- 20240627 수정 -->
+                                <div class="descBox">
+                                    댓글내용 입니다.
+                                </div>
+                            </div>
+
+                            <div class="cptDataSelect">
+                                <div class="reBox">
+                                    <p class="dataLog">
+                                        <span class="dataDt">2022-12-31</span>
+                                        <span class="dataAuthor">홍길동</span> / 
+                                        <span class="dataCenter">부서명</span>
+                                    </p>
+                                    <a href="#none" class="delComment modify">수정</a>
+                                    <a href="#none" class="delComment del">삭제</a>
+                                    <a href="#none" class="delComment reply">답글달기</a>
+                                    <div class="descBox">
+                                        댓글내용 입니다.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cptDataSelect">
+                                <div class="reBox">
+                                    <div class="reBox">
+                                        <p class="dataLog">
+                                            <span class="dataDt">2022-12-31</span>
+                                            <span class="dataAuthor">홍길동</span> / 
+                                            <span class="dataCenter">부서명</span>
+                                        </p>
+                                        <a href="#none" class="delComment modify">수정</a>
+                                        <a href="#none" class="delComment del">삭제</a>
+                                        <a href="#none" class="delComment reply">답글달기</a>
+                                        <div class="descBox">
+                                            댓글내용 입니다.
+                                        </div>
+                            
+                                        <div class="cptDataInsert mT20">
+                                            <textarea>댓글 입력 중입니다.</textarea>
+                                            <div class="dataBtn">
+                                                <div class="frmGroup">
+                                                    <div class="frmGroup">
+                                                        <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">익명</label></div>
+                                                        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">비공개</label></div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn dkBlue">등록</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cptDataSelect">
+                                <p class="dataLog">
+                                    <span class="dataDt">2022-12-31</span>
+                                    <span class="dataAuthor">익명</span> / 
+                                    <span class="dataCenter">부서명</span>
+                                </p>
+                                <a href="#none" class="delComment modify">수정</a>
+                                <a href="#none" class="delComment del">삭제</a>
+                                <a href="#none" class="delComment reply">답글달기</a>
+                                <a href="#none" class="delComment writer">작성자</a>   <!-- 20240627 수정 -->
+                                <div class="descBox">
+                                    댓글내용 입니다.
+                                </div>
+                            </div>
+
+                            <div class="cptDataSelect private">
+                                <p class="dataLog">
+                                    <span class="dataDt">2022-12-31</span>
+                                    <span class="delComment private">비공개</span>    <!-- 20240627 수정 -->
+                                    <div class="descBox">
+                                        비공개 댓글입니다.
+                                    </div>
+                                </p>
+                            </div>
+
+                            <div class="cptDataSelect">
+                                <p class="dataLog">
+                                    <span class="dataDt">2022-12-31</span>
+                                    <span class="dataAuthor">익명</span> / 
+                                    <span class="dataCenter">부서명</span>
+                                </p>
+                                <a href="#none" class="delComment modify">수정</a>
+                                <a href="#none" class="delComment del">삭제</a>
+                                <a href="#none" class="delComment reply">답글달기</a>
+                                <div class="descBox">
+                                    댓글내용 입니다.
+                                </div>
+                            </div>
+
+                            <div class="cptDataInsert mT40">
+                                <textarea>댓글 입력 중입니다.</textarea>
+                                <div class="dataBtn">
+                                    <div class="frmGroup">
+                                        <div class="frmGroup">
+                                            <div class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl">익명</label></div>
+                                            <div class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl">비공개</label></div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn dkBlue">등록</button>
+                                </div>
+                            </div>
+
+                            <div class="cptDataInsert mT40">
+                                <div class="stateLogout">
+                                    댓글을 작성하려면 <a href="#">로그인</a> 해주세요.
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- //댓글영역 -->
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

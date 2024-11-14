@@ -1,0 +1,711 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:auto">
+                <!-- <col style="width:200px;"> -->
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <span>홍길동</span>
+                        (
+                        <span>서울</span>,
+                        <span>선발</span>,
+                        <span>적격</span>
+                        )
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="modTab out"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+        <ul class="tabMenu">
+            <li class="item"><a href="#">기본정보</a></li>
+            <li class="item"><a href="#">자격조회</a></li>
+            <li class="item on"><a href="#">장학금 현황</a></li>
+        </ul>
+    </div>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">장학금 사용현황</div>
+            &nbsp;&nbsp;
+            <div class="frmGroup">
+                <select name="" id="" class="iptSlt frmLg">
+                    <option value="">2024년</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:33.3333%">
+                <col style="width:33.3333%">
+                <col style="width:33.3333%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="dataCase">
+                            총 한도액<br>
+                            <span>4,000,000</span>원
+                        </p>
+                    </td>
+                    <td>
+                        <p class="dataCase">
+                            총 사용금액<br>
+                            <span class="txtRed">2,682,900</span>원
+                        </p>
+                    </td>
+                    <td>
+                        <p class="dataCase">
+                            미사용금액<br>
+                            <span class="txtBlue">1,317,100</span>원
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">카드정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>고객번호</th>
+                    <td>202204270015716</td>
+                    <th>고객명</th>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <th>주민번호</th>
+                    <td>000000-0000000</td>
+                    <th>장학생명</th>
+                    <td>홍길동</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">월별사용현황</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:20%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>사용월</th>
+                    <th>월한도액</th>
+                    <th>사용건수</th>
+                    <th>사용액</th>
+                    <th>미사용액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <span>2024</span>년 
+                        <span>01</span>월
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>4</span>건
+                    </td>
+                    <td class="center">
+                        <span>400,000</span>원
+                    </td>
+                    <td class="center">
+                        <span>0</span>원
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">상세 이용내역</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:100px;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>접수일자</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker3"></div>
+                        </div>
+                    </td>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">선택</option>
+                            </select>
+                            <input type="text" class="iptText" />
+                            <button type="button" class="soloBtn bLine">조회</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:auto">
+                <col style="width:150px">
+                <col style="width:300px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th>승인일자</th>
+                    <th>승인금액</th>
+                    <th>승인번호</th>
+                    <th>가맹점번호</th>
+                    <th>가맹점명</th>
+                    <th>부적정 사용</th>
+                    <th>소명자료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">400,000</td>
+                    <td class="center">30647007</td>
+                    <td class="center">00970279519</td>
+                    <td class="center">(주)에이비씨마트 코리아</td>
+                    <td class="center">정상</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">포트폴리오URL.txt</div>
+                                    <!-- <button type="button" class="fileDel">삭제</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue" onclick="openAlert('splAlt01')">부적정 사용 의심</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+
+
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">부적정 사용 의심건으로 등록 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

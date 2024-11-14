@@ -1,0 +1,444 @@
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>IWorks Sysyem</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script> <!--toast ui-->
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/baro.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+
+<div class="cptHeader">
+    <div class="headerArea">
+        <div class="headerLogo"><h1><a href="#"><img src="../../..//images/layout/type01/ci.png" alt="" /></a></h1></div>
+        <div class="headerGroup">
+            <div class="headerProfile">
+                <dl class="headerDate">
+                    <dt>최종 로그인 날짜 : </dt>
+                    <dd>2022-12-30 AM 09:30:00</dd>
+                </dl>
+                <div class="headerUser"><b>홍길동</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                <a href="#" class="headerBtn">로그아웃</a>
+                <a href="#" class="headerBtn">정보수정</a>
+            </div>
+            <div class="headerNav">
+                <ul class="menuList">
+                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                        <a href="#">회원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">체력측정</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">자가체력측정</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">운동상담</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">체력증진교실</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">센터운영관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">스포츠마일리지</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">홈페이지관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">통계관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">시스템관리</a>
+                    </li>
+                </ul>
+                <div class="allMenuGroup">
+                    <button class="allMenu">전체메뉴</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMenuArea">
+        <ul class="menuList">
+            <li class="menuItem">
+                <a href="#">회원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">스포츠활동인증 종목관리</a></li>
+                    <li><a href="#">휴면회원조회</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">체력측정</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력측정예약현황</a></li>
+                    <li><a href="#">체력측정결과등록</a></li>
+                    <li><a href="#">측정결과조회-처방</a></li>
+                    <li><a href="#">출장측정 승인관</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">자가체력측정</a>
+                <ul class="subMenu">
+                    <li><a href="#">자가체력측정내역</a></li>
+                    <li><a href="#">자가체력측정상담</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">운동상담</a>
+                <ul class="subMenu">
+                    <li><a href="#">온라인 운동상담</a></li>
+                    <li><a href="#">정부24 운동상담</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">체력증진교실</a>
+                <ul class="subMenu">
+                    <li><a href="#">증진교실 운영관리</a></li>
+                    <li><a href="#">증진교실 참여자관리</a></li>
+                    <li><a href="#">증진교실 프로그램관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">센터운영관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력100 사업공지</a></li>
+                    <li><a href="#">현장의 소리</a></li>
+                    <li><a href="#">체력인증센터정보관리</a></li>
+                    <li><a href="#">아카데미교육 이수현황</a></li>
+                    <li><a href="#">운영실적 보고관리</a></li>
+                    <li><a href="#">운영실적 현황조회</a></li>
+                    <li><a href="#">메시지 발송관리</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">스포츠마일리지</a>
+                <ul class="subMenu">
+                    <li><a href="#">마일리지현황관리</a></li>
+                    <li><a href="#">마일리지 수동지급</a></li>
+                    <li><a href="#">상품권 신청관리</a></li>
+                    <li><a href="#">상품권 등록관리</a></li>
+                    <li><a href="#">마일리지 지급기준설정</a></li>
+                    <li><a href="#">스포츠클럽관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">홈페이지관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">체력센터소식</a></li>
+                    <li><a href="#">체력센터 채용공고</a></li>
+                    <li><a href="#">동영상관리</a></li>
+                    <li><a href="#">팝업관리</a></li>
+                    <li><a href="#">배너관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">통계관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력측정통계</a></li>
+                    <li><a href="#">자가체력측정통계</a></li>
+                    <li><a href="#">체력증진교실통계</a></li>
+                    <li><a href="#">스포츠활동인증통계</a></li>
+                    <li><a href="#">스포츠마일리지통계</a></li>
+                    <li><a href="#">홈페이지 접속통계</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer ">
+
+            <!-- 좌측 메뉴 영역 -->
+            <div class="layoutNav">
+                <!-- Left Menu -->
+				
+<div class="cptSnav type02">
+    <div class="snavArea">
+        <div class="snavMenu">
+            <div class="snavTitle">약관 및 정책관리</div>
+            <ul class="menuList">
+                <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                    <a href="#"><span>서비스 이용약관</span></a>
+                </li>
+                <li class="menuItem"> <!--2 depth 경우 dropDown 클래스 추가-->
+                    <a href="#"><span>대출거래 표준약관</span></a>
+                </li>
+                <li class="menuItem dropDown">
+                    <a href="#"><span>금융상품 약관 및 상품설명서</span></a>
+                    <ul class="subMenu">
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>제3자제공현황 및 업무위탁현황</span></a>
+                </li>
+                <li class="menuItem dropDown">
+                    <a href="#"><span>신용정보활용체제 및 고객권리안내</span></a>
+                    <ul class="subMenu">
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                        <li><a href="#"><span>test</span></a></li>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>책임의 한계와 법적고지</span></a>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>채권추심업무처리절차</span></a>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>불법채권추심대응요령</span></a>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>소멸시효완성채권추심 관련안내</span></a>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>대출신청동의서</span></a>
+                </li>
+                <li class="menuItem">
+                    <a href="#"><span>대출신청확인사항</span></a>
+                </li>
+            </ul>
+            <div class="snavBtm">
+                <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="sideSlide">
+                    <button class="btnSlide">메뉴 열기/닫기</button>
+                </div>
+
+            </div>
+            <!-- //좌측 메뉴 영역 -->
+
+            <!-- 콘텐츠 영역 -->
+            <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">게시글 등록/조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">공지사항</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td class="left"><input type="text" class="iptText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상단고정</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101" checked><label for="rdo101" class="iptLbl">일반공지</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">상단고정</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일1</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <!-- <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div> -->
+                                                    <div class="fileAfter" style="display: block;">
+                                                        <div class="textBox">첨부파일테스트.png</div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="textBox clar"> * 최대 100MB까지 첨부가능</div> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일2</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 최대 100MB까지 첨부가능</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일3</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 최대 100MB까지 첨부가능</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">내용<span class="required">*</span></th>
+                                        <td class="left">
+                                            <!--web editor area-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록자</th>
+                                        <td class="left">
+                                            김태형 0000-00-00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button class="btn red" onclick="openAlert('splAlt01');">삭제</button>
+                            <button class="btn gLine">취소</button>
+                            <button class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+
+
+            </div>
+            <!-- //콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+        <!-- Footer -->
+        
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+
+</div>
+</body>
+</html>

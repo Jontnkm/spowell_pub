@@ -1,0 +1,260 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">공지사항</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">제목<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">게시상태<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo201" type="radio" class="iptRdo" name="rdo201" checked=""><label for="rdo201" class="iptLbl">게시</label></div>
+                            <div class="frmChoBox"><input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl">중지</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">게시시간<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">팝업크기<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="textBox">가로 : </div>
+                            <input type="text" class="iptText frmXs">
+                            <div class="textBox">px</div>
+                            <div class="textBox" style="margin-left:20px;">세로 : </div>
+                            <input type="text" class="iptText frmXs">
+                            <div class="textBox">px</div>
+                            <div class="textBox clar">※팝업 크기는 PC에서만 적용가능합니다.</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">팝업위치<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="posPop">
+                            <ul>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo110" type="radio" class="iptRdo" name="rdo110"><label for="rdo110" class="iptLbl">좌측</label></div></div>
+                                    <div class="window left">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo111" type="radio" class="iptRdo" name="rdo110"><label for="rdo111" class="iptLbl">중앙</label></div></div>
+                                    <div class="window center">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo112" type="radio" class="iptRdo" name="rdo110"><label for="rdo112" class="iptLbl">우측</label></div></div>
+                                    <div class="window right">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="left">PC 이미지<br>(#### X ####)</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                        </div>
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/width.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">MO 이미지<br>(### X ###)</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                        </div>
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/height.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">
+                        대체 텍스트 <span class="required">*</span>
+                        <!-- 툴팁 -->
+                        <span class="glbTooltip scaleS"> 
+                            <button class="icon">history</button>
+                            <span class="tooltipCont">
+                                <!-- <span class="tooltipTit"></span> -->
+                                <ul class="tooltipList">
+                                    <li class="item">웹접근성 준수를 위해<br>이미지에 대한 설명을 입력해주세요.</li>
+                                </ul>
+                                <button class="close">닫기</button>
+                            </span>
+                        </span>
+                    </th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">링크<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl">링크없음</label></div>
+                            <div class="frmChoBox"><input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl">링크적용</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">링크URL<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">링크 새 창 이동</label></div>
+                            <input type="text" class="iptText frmHalf">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">모바일 링크URL<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">링크 새 창 이동</label></div>
+                            <input type="text" class="iptText frmHalf">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">권장사이즈 외 크기는 화면에서 일부 깨질 수 있습니다. 되도록 권장사이즈에 맞게 등록해주세요.</div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">목록</button>
+                <button type="button" class="crudBtn gray">취소</button>
+                <button type="button" class="crudBtn blue">저장</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>
+<script>
+    $(document).ready(function(){
+        $(".glbTooltip .icon").on("click",function(e){
+            e.preventDefault();
+            $(this).next().toggleClass("on");
+        })
+        $(".glbTooltip .close").on("click",function(e){
+            e.preventDefault();
+            $(this).parent().toggleClass("on");
+        })
+    });
+</script>

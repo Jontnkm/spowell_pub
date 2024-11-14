@@ -1,0 +1,489 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
+                        </div>
+                    </td>
+                    <th>대상구분 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">선수</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">지도자</label></div>
+                        </div>
+                    </td>
+                    <th>등록번호</th>
+                    <td>
+                        000000
+                    </td>
+                </tr>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" />
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                            <button type="button" class="gridBtn dkbLine">확인</button>
+                        </div>
+                    </td>
+                    <th>종목 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대전화 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                        </div>
+                    </td>
+                    <th>은행계좌 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                            <button type="button" class="gridBtn dkbLine">확인</button>
+                        </div>
+                    </td>
+                    <th>소속 <span class="required">*</span></th>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3">
+                        서울특별시 송파구 000-0000 올림픽공원
+                    </td>
+                    <th>포털ID</th>
+                    <td>
+                        member_id
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">체육인 기본정보를 수정하면, 수정된 내용이 [체육인정보관리]에 자동 반영됩니다.</div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">대회실적 등록현황 [<span class="textBlue">선수</span> <!--<span class="textBlue">지도자</span>-->]</div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:120px;">
+
+                <col style="width:150px;">
+                <col style="width:70px;">
+                <col style="width:200px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:200px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+                <col style="width:70px;">
+                <col style="width:150px;">
+
+                <col style="width:70px;">
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan=2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th rowspan="2">등록일자</th>
+
+                    <th colspan="7">실적대회정보</th>
+                    <th colspan="9">대회실적정보</th>
+
+                    <th rowspan="2">평점</th>
+                    <th rowspan="2">비고</th>
+                </tr>
+                <tr>
+                    <th>대회구분</th>
+                    <th>개최년도</th>
+                    <th>대회명</th>
+                    <th>개최주기</th>
+                    <th>출전국 수</th>
+                    <th>개최일</th>
+                    <th>종료일</th>
+
+                    <th>장애여부</th>
+                    <th>장애유형</th>
+                    <th>종목</th>
+                    <th>세부종목</th>
+                    <th>실적구분</th>
+                    <th>순위</th>
+                    <th>입상일</th>
+                    <th>지도자인원</th>
+                    <th>지도선수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>아시안게임</td>
+                    <td>2022년</td>
+                    <td>2022 항저우아시안게임</td>
+                    <td>4</td>
+                    <td>9</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>비장애</td>
+                    <td>-</td>
+                    <td>롤러</td>
+                    <td>롤러스테이트 EP10000M</td>
+                    <td>개인</td>
+                    <td>1</td>
+                    <td>2003-12-19</td>
+                    <td>2</td>
+                    <td>홍길동, 임꺽정</td>
+                    
+                    <td>30</td>
+                    <td>업무메모 내용</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>아시안게임</td>
+                    <td>2022년</td>
+                    <td>2022 항저우아시안게임</td>
+                    <td>4</td>
+                    <td>9</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>비장애</td>
+                    <td>-</td>
+                    <td>롤러</td>
+                    <td>롤러스테이트 EP10000M</td>
+                    <td>개인</td>
+                    <td>1</td>
+                    <td>2003-12-19</td>
+                    <td>2</td>
+                    <td>홍길동, 임꺽정</td>
+                    
+                    <td>30</td>
+                    <td>업무메모 내용</td>
+                </tr>
+                <tr>
+                    <td colspan="23">시스템에 등록되어 있는 경기력 성과포상금 대회실적이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">경기력 성과포상금 지급신청 건으로 시스템에 등록되어 있는 체육인의 대회실적 현황입니다.</div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">대회실적 신규등록 [<span class="textBlue">선수</span> <!--<span class="textBlue">지도자</span>-->]</div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+
+                <col style="width:150px;">
+                <col style="width:100px;">
+                <col style="width:200px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:200px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:120px;">
+                
+                <col style="width:100px;">
+                <col style="width:150px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan=2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+
+                    <th colspan="7">실적대회정보</th>
+                    <th colspan="7">실적입상정보</th>
+
+                    <th colspan="2">추가정보</th>
+                    <th colspan="2">신청정보</th>
+                </tr>
+                <tr>
+                    <th>대회구분</th>
+                    <th>개최년도</th>
+                    <th>대회명</th>
+                    <th>개최주기</th>
+                    <th>출전국 수</th>
+                    <th>개최일</th>
+                    <th>종료일</th>
+
+                    <th>장애여부</th>
+                    <th>장애유형</th>
+                    <th>종목</th>
+                    <th>세부종목</th>
+                    <th>실적구분</th>
+                    <th>순위</th>
+                    <th>입상일</th>
+
+                    <th>지도자인원</th>
+                    <th>지도선수</th>
+
+                    <th>포상금구분</th>
+                    <th>신청점수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+
+                    <td>아시안게임</td>
+                    <td>2022년</td>
+                    <td>2022 항저우아시안게임</td>
+                    <td>4</td>
+                    <td>9</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>비장애</td>
+                    <td>-</td>
+                    <td>롤러</td>
+                    <td>롤러스테이트 EP10000M</td>
+                    <td>개인</td>
+                    <td>1</td>
+                    <td>2003-12-19</td>
+
+                    <td>2</td>
+                    <td>홍길동, 임꺽정</td>
+                    
+                    <td>월정금</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>장앤</td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 --> 
+    <div class="textBox clar">각 대회실적관련 제출서류는 등록처리 후 [지원신청관리]에서 등록/관리 할 수 있습니다.</div>
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue">추가</button>
+                <button type="button" class="srhBtn dkBlue">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p class="title">업무월 : </p>
+            <div class="frmGroup">
+                <select name="" id="" class="iptSlt">
+                    <option value="">2024년</option>
+                </select>
+            </div>
+            <div class="frmGroup">
+                <select name="" id="" class="iptSlt">
+                    <option value="">09월</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 --> 
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn gLine">취소</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

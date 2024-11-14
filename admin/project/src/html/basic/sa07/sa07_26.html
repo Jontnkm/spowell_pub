@@ -1,0 +1,339 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>교육이수정보관리</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">체력센터운영관리</li>
+                <li class="item">마이페이지</li>
+                <li class="item">교육이수정보관리</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">개인정보</div>
+        </div>
+    </div>
+
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">사업년도</th>
+                    <td class="left">2023</td>
+                    <th class="left">체력인증센터</th>
+                    <td class="left">송파센터</td>
+                    <th class="left">이름</th>
+                    <td class="left">홍길동</td>
+                </tr>
+                <tr>
+                    <th class="left">업무구분</th>
+                    <td class="left">처방사</td>
+                    <th class="left">이수학점</th>
+                    <td class="left">35학점</td>
+                    <th class="left">완료학점</th>
+                    <td class="left"><span class="txtBlue bold">00학점</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox">* 신규 입사자의 경우 입사일자(계정신청일자)를 기준으로 '이수학점'이 달라질 수 있습니다.</div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">K스포에듀교육</div>
+        </div>
+    </div>
+    
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:8%;" />
+                <col style="width:10%;" />
+                <col style="width:auto;" />
+                <col style="width:10%;" />
+                <col style="width:10%;" />
+                <col style="width:10%;" />
+                <col style="width:20%;" />
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>구분</th>
+                    <th>교육명</th>
+                    <th>구분</th>
+                    <th>학점</th>
+                    <th>수료상태</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">온라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">필수</td>
+                    <td class="center">00</td>
+                    <td class="center">수료</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">온라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">필수</td>
+                    <td class="center">00</td>
+                    <td class="center">수료</td>
+                    <td class="center"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox">* K스포에듀교육의 수료상태 결과는 자동으로 반영됩니다.</div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">외부교육</div>
+        </div>
+    </div>
+    
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:6%;" />
+                <col style="width:8%;" />
+                <col style="width:18%;" />
+                <col style="width:6%;" />
+                <col style="width:6%;" />
+                <col style="width:8%;" />
+                <col style="width:20%;" />
+                <col style="width:6%;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>구분</th>
+                    <th>교육명</th>
+                    <th>구분</th>
+                    <th>학점</th>
+                    <th>수료상태</th>
+                    <th>증빙자료제출</th>
+                    <th>제출상태</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">온라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">필수</td>
+                    <td class="center">00</td>
+                    <td class="center">-</td>
+                    <td class="center">
+                        <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample01')">제출하기</button>
+                    </td>
+                    <td class="center">-</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">오프라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">필수</td>
+                    <td class="center">00</td>
+                    <td class="center">수료</td>
+                    <td class="center">
+                        <a href=""><img src="/common/images/common/icon_file.png" alt="다운로드 디스켓 이미지"></a>
+                    </td>
+                    <td class="center"><span class="txtBlue">승인</span></td>
+                    <td class="center"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">내부교육</div>
+        </div>
+    </div>
+    
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:6%;" />
+                <col style="width:8%;" />
+                <col style="width:18%;" />
+                <col style="width:6%;" />
+                <col style="width:6%;" />
+                <col style="width:8%;" />
+                <col style="width:20%;" />
+                <col style="width:6%;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>구분</th>
+                    <th>교육명</th>
+                    <th>구분</th>
+                    <th>학점</th>
+                    <th>수료상태</th>
+                    <th>증빙자료제출</th>
+                    <th>제출상태</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">오프라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">필수</td>
+                    <td class="center">00</td>
+                    <td class="center">-</td>
+                    <td class="center">
+                        <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample01')">제출하기</button>
+                    </td>
+                    <td class="center"><span class="txtRed">미승인</span></td>
+                    <td class="center">미승인 사유 예시</td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td class="center">오프라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">선택</td>
+                    <td class="center">00</td>
+                    <td class="center">수료</td>
+                    <td class="center">
+                        <a href=""><img src="/common/images/common/icon_file.png" alt="다운로드 디스켓 이미지"></a>
+                    </td>
+                    <td class="center">승인대기</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">오프라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">선택</td>
+                    <td class="center">00</td>
+                    <td class="center">-</td>
+                    <td class="center">
+                        <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample01')">제출하기</button>
+                    </td>
+                    <td class="center">-</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">1</td>
+                    <td class="center">오프라인</td>
+                    <td class="left">교육명 예시 입니다.</td>
+                    <td class="center">선택</td>
+                    <td class="center">00</td>
+                    <td class="center">-</td>
+                    <td class="center">
+                        <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample01')">제출하기</button>
+                    </td>
+                    <td class="center">-</td>
+                    <td class="center"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox">* &lt;미승인&gt; 상태는 미승인 사유를 확인 후 증빙파일을 다시 제출하시기 바랍니다.</div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">교육이수 증빙파일 제출</div>
+                    <div class="popCont">    
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">증빙자료</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn2" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="textBox">* 증빙자료파일이 1개 이상일 경우 압축파일로 제출하세요.</div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">취소</button>
+                        <button type="button" class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

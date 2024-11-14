@@ -1,0 +1,390 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">사용내역</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>카드 소유자번호</th>
+                    <th>카드 소유자명</th>
+                    <th>승인일자</th>
+                    <th>승인금액</th>
+                    <th>승인번호</th>
+                    <th>가맹점번호</th>
+                    <th>가맹점명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">202204270015716</td>
+                    <td class="center">홍길동</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">165,000</td>
+                    <td class="center">30648007</td>
+                    <td class="center">00970270519</td>
+                    <td class="center">빅스포츠</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">상태 & 소명자료</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto">
+                <col style="width:150px">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>상태</th>
+                    <td>
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk" checked><label for="chk001" class="iptLbl">정상</label></div>
+                        <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">의심</label></div>
+                        <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">확정</label></div>
+                    </td>
+                    <th>소명자료</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn2" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">메모</div>
+        </div>
+    </div>
+
+    <div class="cptDataInsert">
+        <!-- <p class="dataDtLog">2022-12-31</p> -->
+        <textarea placeholder="변경사유 내용입력중 입니다."></textarea>
+        <div class="dataBtn">
+            <button class="btn dkBlue">저장</button>
+        </div>
+    </div>
+    <div class="cptDataHistory">
+        <dl class="historyList">
+            <dt>2022-12-31 홍길동</dt>
+            <dd>변경사유 내용입니다.</dd>
+        </dl>
+        <dl class="historyList">
+            <dt>2022-12-31 홍길동</dt>
+            <dd>변경사유 내용입니다.</dd>
+        </dl>
+        <dl class="historyList">
+            <dt>2022-12-31 홍길동</dt>
+            <dd>변경사유 내용입니다.</dd>
+        </dl>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn blue">저장</button>
+                <button type="button" class="srhBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+ 
+<div id="sample01" class="modPopup lg"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">카드발급정보 등록</div>
+                    <div class="popCont">
+                        
+                        <div class="listDescription">
+                            <div class="horizonLyt spb">
+                                <p class="dotCase">
+                                    <span>엑셀 샘플 다운로드 버튼을 눌러 샘플을 참고하시기 바랍니다.</span>
+                                    <span>엑셀파일 외 파일 등은 지원이 되지 않습니다.</span>
+                                    <span>이미 등록한 명단은 중복으로 등록하실 수 없습니다.</span>
+                                </p>
+                                <button type="button" class="soloBtn bLine">엑셀 샘플 다운로드</button>
+                            </div>
+                        </div>
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">엑셀 등록</div>
+                            </div>
+                        </div>
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:8%" />
+                                    <col style="width:auto" />
+                                    <col style="width:8%" />
+                                    <col style="width:auto" />
+                                    <col style="width:8%" />
+                                    <col style="width:auto" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th>기준년도</th>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">2024년</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>기준월</th>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">2024년</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>파일첨부</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn2" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 그리드/테이블 하단 버튼 양측 -->  
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn blue">등록</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">엑셀 등록 이력</div>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:16%">
+                                    <col style="width:16%">
+                                    <col style="width:16%">
+                                    <col style="width:16%">
+                                    <col style="width:auto">
+                                    <col style="width:16%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>등록일자</th>
+                                        <th>기준년월</th>
+                                        <th>처리상태</th>
+                                        <th>처리건</th>
+                                        <th>파일명</th>
+                                        <th>등록자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">YYYY-MM-DD</td>
+                                        <td class="center"><span>YYYY</span>년 <span>MM</span>월</td>
+                                        <td class="center">정상</td>
+                                        <td class="center"><span>00</span>건</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <div class="fileBox on">
+                                                    <div class="fileAfter">
+                                                        <div class="textBox">파일명.xlsx</div>
+                                                        <!-- <button class="fileDel">삭제</button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="center">담당자</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 페이징 -->
+                        <div class="comPaging">
+                            <a class="start" href="#"></a>
+                            <a class="prev" href="#"></a>
+                            <ul class="numList">
+                                <li><a href="#">1</a></li>
+                                <li class="on"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                            </ul>
+                            <a class="next" href="#"></a>
+                            <a class="end" href="#"></a>
+                        </div>
+
+
+                        <!-- //팝업 컨텐츠 영역 -->
+                        
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,276 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>페이지 타이틀 영역</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth2</li>
+                <li class="item">Depth3</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+     <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Date</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"><button class="dateBtn">날짜검색</button></div>
+                        </div>
+                    </td>
+                    <th>Date~Date</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>date + btn</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                            <button class="srhBtn dkbLine">당해년도</button>
+                        </div>
+                    </td>
+                    <td colspan="2" class="right">
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--20230119 그리드 일괄 변경-->
+    <div class="cptCalendarOpt">
+        <div class="yymmArea">
+            <a href="#none"><img src="../../../common/images/common/btn_prev.png"/></a>
+            <div>
+                <span>2023</span>
+                <span>년</span>
+                <span>01</span>
+                <span>월</span>
+            </div>
+            <a href="#none"><img src="../../../common/images/common/btn_next.png"/></a>
+        </div>
+    </div>
+
+    <!--목록형식-->
+    <div class="cptCalViewType calListTy">
+        <!-- 그리드 -->
+        <div class="cptGrid listTypeCal">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:200px;">
+                    <col style="width:12%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>예약시간</th>
+                        <th>기능</th>
+                        <th>인원</th>
+                        <th>유아</th>
+                        <th>유소년</th>
+                        <th>청소년</th>
+                        <th>성인</th>
+                        <th>어르신</th>
+                        <th>예약구분</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <span>마감</span>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <span>마감</span>
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <span>마감</span>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <button class="gridBtn purple">예약등록</button>
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

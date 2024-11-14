@@ -1,0 +1,420 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup lg on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">운동상담 조회 및 처방</div><!--20230125 타이틀 수정-->
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 1 : 1분할 -->
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보</div><!--20230125 타이틀 수정-->
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">ㅇㅇㅇ</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">2022-12-31(양력)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">성별</th>
+                                        <td class="left">남자</td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">성인</td>
+                                        <th class="left">체력등급</th>
+                                        <td class="left">
+                                            <span class="txtBlue">3등급</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modDivision">
+                            <div class="dvsItem">
+                                
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">자가체력측정결과</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- 테이블 -->
+                                <div class="cptTable complexView">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:170px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:80px;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>측정구분</th>
+                                                <th>측정항목</th>
+                                                <th>측정결과</th>
+                                                <th>백분위(%)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left" rowspan="4">신체정보</th>
+                                                <td class="left">신장</td>
+                                                <td class="left">000 cm</td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">체중</td>
+                                                <td class="left">00 kg</td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">BMI</td>
+                                                <td class="left">00 kg/㎡</td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left">허리둘레</td>
+                                                <td class="left">00 cm</td>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">근지구력</th>
+                                                <td class="left">교차윗몸일으키기</td>
+                                                <td class="left">00 회</td>
+                                                <td class="center">
+                                                    <span class="fitPercent">70%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">심폐지구력</th>
+                                                <td class="left">YMCA스텝검사</td>
+                                                <td class="left">00 회</td>
+                                                <td class="center">
+                                                    <span class="fitPercent">50%</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">유연성</th>
+                                                <td class="left">앉아윗몸앞으로굽히기</td>
+                                                <td class="left">00 cm</td> <!--20230203 단위 변경-->
+                                                <td class="center">
+                                                    <span class="fitPercent">60%</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">운동상담 문의내용</div>
+                                    </div>
+                                </div>
+
+                                <div class="cptTxtAreaBox">
+                                    <div class="contBox">살을 왕창 빼고 싶어요</div>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">운동상담 답변내용</div>
+                                        <span class="subTitle">(필수입력)</span>
+                                    </div>
+                                </div>
+
+                                <textarea placeholder="상담결과 내용입니다."></textarea>
+
+                                <div class="textBox clar">삼척체력인증센터 / 김처방 / 2020-02-07</div>
+                            </div>
+
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">운동처방</div>
+                                    </div>
+                                    <div class="alignR">
+                                        <div class="comSideOpt">
+                                            <ul class="opList">
+                                                <li class="item"><button type="button" class="srhBtn purple">처방운동 등록</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type03">
+                                    <div class="alignL">
+                                        <div class="title">준비운동</div>
+                                    </div>
+                                </div>
+
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:18%;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:18%;" />
+                                            <col style="width:32%;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>처방종목</th>
+                                                <th>운동명</th>
+                                                <th>운동부위</th>
+                                                <th>운동가이드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">유연성</td>
+                                                <td class="left">목 스트레칭</td>
+                                                <td class="center">상체</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine">가이드</button>
+                                                    <button type="button" class="gridBtn blLine">동영상</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">유연성</td>
+                                                <td class="left">몸통 비틀기</td>
+                                                <td class="center">몸통</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine">가이드</button>
+                                                    <button type="button" class="gridBtn blLine">동영상</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type03">
+                                    <div class="alignL">
+                                        <div class="title">본운동</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:18%;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:18%;" />
+                                            <col style="width:32%;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>처방종목</th>
+                                                <th>운동명</th>
+                                                <th>운동부위</th>
+                                                <th>운동가이드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">유연성</td>
+                                                <td class="left">목 스트레칭</td>
+                                                <td class="center">상체</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine">가이드</button>
+                                                    <button type="button" class="gridBtn blLine">동영상</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">유연성</td>
+                                                <td class="left">몸통 비틀기</td>
+                                                <td class="center">몸통</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine">가이드</button>
+                                                    <button type="button" class="gridBtn blLine">동영상</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type03">
+                                    <div class="alignL">
+                                        <div class="title">정리운동</div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:18%;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:18%;" />
+                                            <col style="width:32%;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>처방종목</th>
+                                                <th>운동명</th>
+                                                <th>운동부위</th>
+                                                <th>운동가이드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="4" class="center">등록된 항목이 없습니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">추천운동시설</div>
+                                    </div>
+                                    <div class="alignR">
+                                        <div class="comSideOpt">
+                                            <ul class="opList">
+                                                <li class="item"><button type="button" class="srhBtn purple">운동시설 등록</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:10%;" />
+                                            <col style="width:20%" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <!--항목등록시 노출-->
+                                        <!--
+                                        <thead>
+                                            <tr>
+                                                <th>선택</th>
+                                                <th>처방종목</th>
+                                                <th>운동명</th>
+                                                <th>운동부위</th>
+                                                <th>운동가이드</th>
+                                            </tr>
+                                        </thead>
+                                        -->
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="5" class="center noList">등록된 항목이 없습니다.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <!--항목 등록시 노출-->
+                                <!--
+                                <div class="cptGroupBtm alignL">
+                                    <div class="comSideOpt">
+                                        <button type="button" class="srhBtn blLine">선택삭제</button>
+                                    </div>
+                                </div>-->
+                                <!--항목 등록시 노출-->
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit type02">
+                                    <div class="alignL">
+                                        <div class="title">운동시 유의사항</div>
+                                    </div>
+                                </div>
+
+                                <div class="cptDataInsert">
+                                    <textarea placeholder="유의사항 내용입니다."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">취소</button>
+                        <button type="button" class="btn dkBlue" onclick="openAlert('splAlt02')">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert "> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">
+            상담결과를 고객에게 전송합니다.<br/>
+            전송 후에는 수정이 불가합니다.<br/>
+            전송하시겠습니까?
+        </div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<script>
+    $(document).ready(function(){
+        $(".glbTooltip .icon").on("click",function(e){
+            e.preventDefault();
+            $(this).next().toggleClass("on");
+        })
+        $(".glbTooltip .close").on("click",function(e){
+            e.preventDefault();
+            $(this).parent().toggleClass("on");
+        })
+    });
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

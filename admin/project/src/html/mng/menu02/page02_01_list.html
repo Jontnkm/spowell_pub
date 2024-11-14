@@ -1,0 +1,269 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>게시판관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">운영관리</li>
+                                    <li class="item">게시판관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>게시판 유형</th>
+                                        <td colspan="3">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">일반형</label></div>
+                                                <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">리스트형</label></div>
+                                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">갤러리형</label></div>
+                                                <div class="frmChoBox"><input id="rdo005" type="radio" class="iptRdo" name="rdo001"><label for="rdo005" class="iptLbl">Q&A</label></div>
+                                                <div class="frmChoBox"><input id="rdo006" type="radio" class="iptRdo" name="rdo001"><label for="rdo006" class="iptLbl">FAQ</label></div>
+                                                <div class="frmChoBox"><input id="rdo007" type="radio" class="iptRdo" name="rdo001"><label for="rdo007" class="iptLbl">댓글형</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사용여부</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">미사용</label></div>
+                                            </div>
+                                        </td>
+                                        <th>게시판명</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="grpComponent">  <!-- cpt그룹화 -->
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <div class="comSideOpt">
+                                        <ul class="opList">
+                                            <li class="item">
+                                                <button class="viewBtn on">10개씩</button>
+                                                <button class="viewBtn">20개씩</button>
+                                                <button class="viewBtn">30개씩</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="cptGrid">
+                                <table class="gridTb">
+                                    <colgroup>
+                                        <col style="width:70px;">
+                                        <col style="width:100px;">
+                                        <col style="width:150px;">
+                                        <col style="width:100px;">
+                                        <col style="width:150px;">
+                                        <col style="width:auto;">
+                                        <col style="width:250px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>게시판 유형</th>
+                                            <th>게시판 명</th>
+                                            <th>사용여부</th>
+                                            <th>생성일자</th>
+                                            <th>메뉴위치(Depth)</th>
+                                            <th>기능</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>일반형</td>
+                                            <td>공지사항</td>
+                                            <td>사용</td>
+                                            <td>0000-00-00</td>
+                                            <td>고객센터 > 공지사항</td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">설정</button>
+                                                <button class="gridBtn gLine">게시물관리</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+                        </div>
+
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn dkBlue">게시판 생성</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

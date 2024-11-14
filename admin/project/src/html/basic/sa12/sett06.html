@@ -1,0 +1,137 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">메인배너 관리</div>
+                    <div class="popCont">
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td class="left"><input type="text" class="iptText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상태구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">게시</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">중지</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">노출등록자<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText frmSm" />
+                                            <div class="textBox clar"> 숫자만 입력 가능하며, 낮은 번호가 먼저 노출됩니다.</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">배너이미지 <span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="imageTray banner">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="" alt=""><!--이미지 경로 기입하여 노출-->
+                                                            <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                                        </div>
+                                                        <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">배너링크<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101-1" type="radio" class="iptRdo" name="rdo101-1"><label for="rdo101-1" class="iptLbl">링크없음</label></div>
+                                                <div class="frmChoBox"><input id="rdo102-1" type="radio" class="iptRdo" name="rdo101-1"><label for="rdo102-1" class="iptLbl">링크적용</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크URL<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="dFlex">
+                                                <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">링크 새창 이동</label></div>
+                                                <div><input type="text" class="iptText" /></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="textBox clar">* PC배너 이미지 규격 : 가로 **픽셀, 세로 **픽셀의 jpg 또는 png 파일</div><br>
+                            <div class="textBox clar">* Mobile 배너 이미지 규격 : 가로 **픽셀, 세로 **픽셀의 jpg 또는 png 파일</div>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button class="btn red" onclick="openAlert('splAlt01');">삭제</button>
+                            <button class="btn gLine">취소</button>
+                            <button class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

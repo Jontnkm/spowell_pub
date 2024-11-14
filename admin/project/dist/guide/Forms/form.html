@@ -1,0 +1,122 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+    <strong class="g-area-tit">체크박스 - 버튼타입 (단일사용)</strong>
+    <xmp>
+        <div class="frmChoBtn">
+            <input id="chk401" type="checkbox" class="iptChk"><label for="chk401" class="iptLbl">체크박스마다</label>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">체크박스 - 버튼타입 (2개이상 나열)</strong>
+    <xmp>
+        <div class="frmChoBtn fullWidth">
+            <input id="chk402" type="checkbox" class="iptChk"><label for="chk402" class="iptLbl">체크박스마다</label>
+            <input id="chk403" type="checkbox" class="iptChk"><label for="chk403" class="iptLbl">체크박스마다</label>
+            <!-- <input id="chk402" type="checkbox" class="iptChk"><label for="chk402" class="iptLbl">체크박스마다</label> -->
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">체크박스</strong>
+    <xmp>
+        <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">체크박스마다</label></div>
+        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">길이가 같아요</label></div>
+    </xmp>
+
+    <strong class="g-area-tit">체크박스(List)</strong>
+    <xmp>
+        <ul class="frmChoList">
+            <li class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl">체크박스의</label></li>
+            <li class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl">너비가 글자수랑 상관없이</label></li>
+            <li class="frmChoBox"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLbl">모두 같아요</label></li>
+        </ul>
+    </xmp>
+
+    <strong class="g-area-tit">라디오</strong>
+    <xmp>
+        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo001"><label for="rdo101" class="iptLbl">라디오마다</label></div>
+        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo001"><label for="rdo102" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo001"><label for="rdo103" class="iptLbl">길이가 같아요</label></div>
+    </xmp>
+
+    <strong class="g-area-tit">라디오(List)</strong>
+    <xmp>
+        <ul class="frmChoList">
+            <li class="frmChoBox"><input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLbl">라디오의</label></li>
+            <li class="frmChoBox"><input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl">너비가 글자수랑 상관없이</label></li>
+            <li class="frmChoBox"><input id="rdo203" type="radio" class="iptRdo" name="rdo201"><label for="rdo203" class="iptLbl">모두 같아요</label></li>
+        </ul>
+    </xmp>
+    
+    
+<style>
+/**/
+.classInfo * {letter-spacing:0;}
+.classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+.classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+.classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+.classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+.classInfo table + table {margin-top:-1px;}
+</style>
+<div class="classInfo">
+    <div class="infoTitle">설명</div>
+    <div class="infoMasage">
+        그리드(데이터 테이블) 혹은 입력테이블의 상단에 사용되는 공통 요소
+    </div>
+
+    <div class="infoTitle">추가 조작</div>
+    <table style="width:100%;">
+        <caption></caption>
+        <colgroup>
+            <col style="width:30%;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>경로</th>
+                <th>.cptGroupTop .className</th>
+            </tr>
+            <tr>
+                <th>className</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>className</td>
+                <td>설명</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+    
+    
+    
+    </div>
+    <!-- Guide : e -->
+    
+    <script type="text/javascript">
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+    </script>

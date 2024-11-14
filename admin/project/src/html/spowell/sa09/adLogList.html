@@ -1,0 +1,193 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>접속일자</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                <input id="startpicker-input" type="text" aria-label="Date">
+                                <div id="startpicker-container" style="margin-left: -1px;"></div>
+                            </div>
+                            <div class="textBox deco">~</div>
+                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                <input id="endpicker-input" type="text" aria-label="Date">
+                                <div id="endpicker-container" style="margin-left: -1px;"></div>
+                            </div>
+
+                            <script>
+                                datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                            </script>
+                            
+                        </div>
+                    </td>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">사용자구분</option>
+                                <option value="">내용</option>
+                                <option value="">작성자</option>
+                            </select>
+                            <input type="text" class="iptText" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnSearch">조회</button>
+                        <button class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="grpComponent">
+        <div class="cptGroupTop">
+            <div class="alignL">
+                <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+            </div>
+            <div class="alignR">
+                <div class="comSideOpt">
+                    <ul class="opList">
+                        <li class="item">
+                            <button type="button" class="viewBtn on">10건</button>
+                            <button type="button" class="viewBtn">20건</button>
+                            <button type="button" class="viewBtn">50건</button>
+                            <button type="button" class="viewBtn">100건</button>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cptGrid">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:auto;">
+                    <col style="width:15%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>접속일자</th>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>접속URL</th>
+                        <th>접속IP</th>
+                        <th>메뉴명</th>
+                        <th>수행업무</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                    <tr>
+                        <td>2024-00-00</td>
+                        <td>member_id</td>
+                        <td>홍길동</td>
+                        <td></td>
+                        <td>000.000.000.000</td>
+                        <td></td>
+                        <td>조회</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 페이징 -->
+        <div class="comPaging">
+            <a class="start" href="#"></a>
+            <a class="prev" href="#"></a>
+            <ul class="numList">
+                <li><a href="#">1</a></li>
+                <li class="on"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+            </ul>
+            <a class="next" href="#"></a>
+            <a class="end" href="#"></a>
+        </div>
+
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,225 @@
+<!-- Header -->
+<%- include('../../layout/type01/head.ejs', {
+    url: "../../../"
+}) %>
+ 
+    <style>
+        html,body,.wrap {width:100%; height:100%;}
+    </style>
+    <div class="lytLogin">
+        <div class="cptLogin signUp">
+            <div class="lgInner">
+                <div class="fnBox">
+                    <div class="comSmTit">
+                        <div class="alignL">
+                            <div class="title">계정신청</div>
+                        </div>
+                    </div>
+                    <div class="cptTable">
+                        <table class="tbView">
+                            <colgroup>
+                                <col style="width:120px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <caption></caption>
+                            <tbody>
+                                <tr>
+                                    <th class="left">이름<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup">
+                                            <input type="text" class="iptText" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">아이디<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup">
+                                            <input type="text" class="iptText" />
+                                            <button type="button" class="gridBtn dkbLine">중복확인</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">비밀번호<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup multiLine">
+                                            <input type="password" class="iptText" />
+                                            <div class="outText"><span class="desc">※ 영문, 숫자, 특수기호를 조합하여 8~12자로 설정해주세요.</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">비밀번호 확인<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup multiLine">
+                                            <input type="password" class="iptText" />
+                                            <div class="outText"><span class="desc red">비밀번호가 일치 하지 않습니다.</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">소속<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup">
+                                            <input type="text" class="iptText" placeholder="소속(부서)입력" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">휴대폰번호<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup">
+                                            <select name="" id="" class="iptSlt frmXs" title="휴대폰 앞자리">
+                                                <option value="">선택</option>
+                                            </select>
+                                            <div class="textBox deco">-</div>
+                                            <input type="text" class="iptText" title="휴대폰 중간자리" />
+                                            <div class="textBox deco">-</div>
+                                            <input type="text" class="iptText" title="휴대폰 뒷자리" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="left">이메일<span class="required">*</span></th>
+                                    <td class="left">
+                                        <div class="frmGroup">
+                                            <input type="text" class="iptText" />
+                                            <div class="textBox deco">@</div>
+                                            <input type="text" class="iptText" />
+                                            <select name="" id="" class="iptSlt">
+                                                <option value="">선택</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cptGroupBtnCov">
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn red">취소</button>
+                                <button type="button" class="crudBtn purple">계정신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 팝업 영역 -->
+    
+    
+    <!-- 계정 신청 01-->
+    <div id="sample05" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+        <div class="popupDim">딤영역</div>
+        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+            <div class="popupInMotion">
+                <div class="popupContainer">
+                    <div class="popupContArea">
+                        <button class="btnPopClose" onclick="closePopup('sample05');">닫기</button>
+                        <div class="popTitle">계정신청</div>
+                        <div class="popCont">
+                            <!-- 팝업 컨텐츠 영역 -->
+                            <div class="cptTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:120px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="left">이름</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">아이디</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" />
+                                                    <button type="button" class="gridBtn dkbLine">중복확인</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">소속(부서) / 사용자구분</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="소속(부서)입력" />
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">사용자구분명</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">휴대폰번호</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt frmXs" title="휴대폰 앞자리">
+                                                        <option value="">선택</option>
+                                                    </select>
+                                                    <div class="textBox deco">-</div>
+                                                    <input type="text" class="iptText" title="휴대폰 중간자리" />
+                                                    <div class="textBox deco">-</div>
+                                                    <input type="text" class="iptText" title="휴대폰 뒷자리" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">이메일</th>
+                                            <td class="left">
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" />
+                                                    <div class="textBox deco">@</div>
+                                                    <input type="text" class="iptText" />
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">선택</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">비밀번호</th>
+                                            <td class="left">
+                                                <div class="frmGroup multiLine">
+                                                    <input type="password" class="iptText" />
+                                                    <div class="outText"><span class="desc">*영문, 숫자, 특수기호를 조합하여 8~12자로 설정해주세요.</span></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">비밀번호 확인</th>
+                                            <td class="left">
+                                                <div class="frmGroup multiLine">
+                                                    <input type="password" class="iptText" />
+                                                    <div class="outText"><span class="desc red">비밀번호가 일치 하지 않습니다.</span></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //팝업 컨텐츠 영역 -->
+                        </div>
+                        <div class="popBtm">
+                            <button class="btn gLine"  onclick="openPopup('sample06');">취소</button>
+                            <button class="btn dkBlue"  onclick="openPopup('sample06');">계정신청</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <!-- Footer -->
+ <%- include('../../layout/type01/footer.ejs', {
+ }) %>

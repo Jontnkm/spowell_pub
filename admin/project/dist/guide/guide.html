@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="퍼블리싱가이드">
+	<meta property="og:description" content="퍼블리싱가이드">	 
+
+	<title>시스템 플랫폼 퍼블리싱 가이드</title>
+	
+	<link rel="stylesheet" href="../common/css/swiper.css" />
+	<link rel="stylesheet" href="../common/css/style.css" />
+
+	<script src="../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/swiper.js"></script>
+	<script src="../common/js/basic.js"></script>
+	<script src="../common/js/fontfaceonload.js"></script>
+<style type="text/css">
+/* Guide Layout */
+* {box-sizing:border-box;}
+html,body {height:100%; margin:0; padding:0;}
+body {background:#ebedef;}
+
+.g-nav .g-menu::-webkit-scrollbar {width:6px; background:rgba(255,255,255,0.5);}
+.g-nav .g-menu::-webkit-scrollbar-thumb {background: rgba(0,0,0,0.5);;}
+
+.g-wrap {width:100%; height:100%;}
+.g-nav {width:256px; height:100%; background:#3c4b64; position:fixed; left:0; top:0; z-index: 1000;}
+.g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+.g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+.g-nav .g-menu {height:calc(100% - 56px); padding-bottom:50px; overflow:auto;}
+.g-nav .g-depth1-group {}
+.g-nav .g-depth1-list {}
+.g-nav .g-depth1-name {padding:10px 10px 10px 20px; margin-top:10px; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; }
+.g-nav .g-depth1-name h2 {letter-spacing:0px;}
+.g-nav .g-depth2-group {}
+.g-nav .g-depth2-list {}
+.g-nav .g-depth2-name {}
+.g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+.g-nav .g-depth2-list.on a {font-weight:bold; color:rgba(255,255,255,1);}
+.g-nav .g-depth2-list a:hover {color:rgba(255,255,255,1);}
+.g-nav .g-depth2-name button {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; text-align:left; border:0; background:none; display:block; }
+.g-nav .g-depth2-list.on button {font-weight:bold; color:rgba(255,255,255,1);}
+.g-nav .g-depth2-list button:hover {color:rgba(255,255,255,1);}
+
+.g-cont {width:calc(100% - 256px); height:100%; margin-left:256px;}
+.g-cont .g-top {width:calc(100% - 256px); height:56px; background:#fff; position:fixed; left:256px; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+.g-cont .g-top:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-top-menu {width:calc(100% - 300px); float:left;}
+.g-cont .g-top .g-menu-group {width:100%; padding-left:20px; }
+.g-cont .g-top .g-menu-group:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-menu-list { float:left;}
+.g-cont .g-top .g-menu-list a {padding:0 20px; font-size:13px; font-weight:400; line-height:54px; color:#999; display:block; letter-spacing:0px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;}
+.g-cont .g-top .g-menu-list.on a {color:#333;}
+.g-cont .g-top .g-menu-list a:hover {color:#333;}
+.g-cont .g-top .g-top-text {width:300px; padding-right:30px; font-size:11px; letter-spacing:0px; font-weight:300; color:#aaa; line-height:54px; text-align:right; float:right;}
+
+.g-cont .g-body {padding:66px 30px 30px;}
+.g-cont .g-body .g-in-body {}
+
+
+/* In Guide */
+.g-area-tit {width:auto; height:46px; padding-left:20px; font-size:14px; line-height:44px; border:1px solid #d8dbe0; border-radius:5px; font-weight:400; display:block; color:#434343; letter-spacing:0; margin:20px 0 0; background:#fff;}
+.g-area.on .g-area-tit {border-radius:5px 5px 0 0;}
+.g-btn-source {float:right; padding-right:20px;}
+.g-code {width:100%; max-height:348px; margin:0; padding-bottom:20px; font-size:12px; color:#607d8b; font-weight:400; border:1px solid #d8dbe0; border-top:0; border-radius:0 0 5px 5px; background:#fff; overflow:auto; display:none;}
+.g-view {width:100%; margin-top:5px; padding:20px; border:1px solid #d8dbe0; border-radius:3px; box-sizing:border-box; background:#f7f7f7;}
+.g-true-area { background:#fff;}
+xmp{display:none;}
+
+</style>
+</head>
+<body>
+<div class="g-wrap">
+	<div class="g-nav">
+		<div class="g-logo">
+			<h1>PUBLISH GUIDE</h1>
+		</div>
+		<div class="g-menu">
+			<ul class="g-depth1-group">
+				<!-- 뎁스1 레이아웃 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Layout</h2></div>
+					<ul class="g-depth2-group">
+						<!--
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="/contents/basic/sample/sample001.html" target="_blank" class="out">Layout 1 (_blank)</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="/contents/basic/sample/sample002.html" target="_blank" class="out">Layout 2 (_blank)</a></h3></div>
+						</li>
+						-->
+					</ul>
+				</li>
+				<!-- //뎁스1 레이아웃 -->
+
+				<!-- 뎁스1 콤포넌트 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Component</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="search">Search</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="grid">Grid</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="table">Table</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="data_history">Data History</a></h3></div>
+						</li>
+						<!--
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="board">Board</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="board-thum">Board (image)</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="table">Table</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="table">Table</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="paging">Paging</a></h3></div>
+						</li>
+					-->
+					</ul>
+				</li>
+				<!-- //뎁스1 콤포넌트 -->
+
+				<!-- 뎁스1 콤포넌트 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Module</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="tab">Tab</a></h3></div>
+						</li>
+						<!--
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="accordion">Accordion</a></h3></div>
+						</li>
+						-->
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="popup">Popup</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="alert">Alert</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="division">Division</a></h3></div>
+						</li>
+					</ul>
+				</li>
+				<!-- //뎁스1 콤포넌트 -->
+
+				<!-- 뎁스1 공통 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Common</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="headline">HeadLine</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="group_top">Group Top</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="group_bottom">Group Bottom</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="paging">Paging</a></h3></div>
+						</li>
+						<!--
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="contents-title">Contents Title</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="button">Button</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="buttonarea">Button Area</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="button-popup">Button Popup</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="forms">Forms</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="alert">Alert</a></h3></div>
+						</li>
+						-->
+					</ul>
+				</li>
+				<!-- //뎁스1 공통 -->
+				
+				<!-- 뎁스1 클로벌 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Global</h2></div>
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="tooltip">Tooltip</a></h3></div>
+						</li>
+						<!--
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="/contents/basic/sample/sample002.html" target="_blank" class="out">Layout 2 (_blank)</a></h3></div>
+						</li>
+						-->
+					</ul>
+				</li>
+
+				<!-- 뎁스1 모듈 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Forms</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a href="form">form</a></h3></div>
+						</li>
+					</ul>
+				</li>
+				<!-- //뎁스1 모듈 -->
+
+				<!-- 뎁스1 테마 -->
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Thema</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><button>basic</button></h3></div>
+							<div class="g-depth2-name"><h3><button>basic-orange</button></h3></div>
+						</li>
+					</ul>
+				</li>
+				<!-- //뎁스1 테마 -->
+			</ul>
+		</div>
+	</div>
+	<div class="g-cont">
+		<div class="g-top">
+			<div class="g-top-menu">
+				<ul class="g-menu-group">
+					<li class="g-menu-list"><a href="filelist.html">FILELIST</a></li>
+					<li class="g-menu-list on"><a href="guide.html">GUIDE</a></li>
+				</ul>
+				
+			</div>
+			<div class="g-top-text">System Platform Web Publishing Guide</div>
+		</div>
+		<div class="g-body">
+			<div class="g-in-body lytLayout">
+				<!-- 가이드 불러오는 영역 -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="themaArea"></div>
+<script>
+/* guide page load */
+$(document).ready(function(){
+	var dep1Loc;
+	$(".g-depth2-name a").on("click",function(e){
+		if(!$(this).hasClass("out")){
+			e.preventDefault();
+			dep1Loc= $(this).parents(".g-depth1-list").find("h2").html();
+			console.log(dep1Loc);
+			$(".g-nav .g-depth2-list").removeClass("on");
+			$(this).parents(".g-depth2-list").addClass("on");
+			$(".g-in-body").load("./"+dep1Loc+"/"+$(this).attr("href")+".html");
+			console.log("./"+dep1Loc+"/"+$(this).attr("href")+".html");
+		}
+	});
+	$(".g-depth2-name button").on("click",function(e){
+		if($(this).html()=="basic"){
+			$(".themaArea").html("");
+		}else{
+			$(".themaArea").load("./thema/" + $(this).html() + ".html");
+		}
+	});
+	/*
+	
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>Thema</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><button>basic</button></h3></div>
+							<div class="g-depth2-name"><h3><button>basic-orange</button></h3></div>
+						</li>
+					</ul>
+				</li>
+	*/
+	
+	$(".g-in-body").load("./Component/search.html");
+});
+</script>
+</body>
+</html>
