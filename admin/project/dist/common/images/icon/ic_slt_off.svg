@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <path style="fill:none" d="M0 0h20v20H0z"/>
+    <g data-name="타원 581" transform="translate(2 2)" style="fill:#fff;stroke:#9fa0a0">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.5" style="fill:none"/>
+    </g>
+</svg>

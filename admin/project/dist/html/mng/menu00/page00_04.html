@@ -1,0 +1,849 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>IWorks Sysyem</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<link rel="stylesheet" href="../../../common/css/tui-time-picker.css" /><!--20240531 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<!-- <script src="../../../common/js/tui-date-picker.js"></script>  -->
+	<script src="../../../common/js/tui-time-picker.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/mng.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+    <!-- 레이아웃 -->
+    <div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+        <div class="layoutArea">
+
+            <!-- 상단영역 -->
+            <div class="layoutTop">
+
+                <!-- Top -->
+                
+                <div class="cptHeader">
+                    <div class="headerArea">
+                        <div class="headerLogo"><h1><a href="#"><img src="/common/images/layout/type01/ci.png" alt="" /></a></h1></div>
+                        <div class="headerGroup">
+                            <div class="headerProfile">
+                                <dl class="headerDate">
+                                    <dt>최종 로그인 날짜 : </dt>
+                                    <dd>2022-12-30 AM 09:30:00</dd>
+                                </dl>
+                                <div class="headerUser"><b>아이웍스 전체관리자</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                                <a href="#" class="headerBtn">로그아웃</a>
+                            </div>
+                            <div class="headerNav">
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">회원관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">운영관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">게시물관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">홈페이지관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">시스템관리</a>
+                                    </li>
+                                </ul>
+                                <div class="allMenuGroup">
+                                    <button class="allMenu">전체메뉴</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="allMenuArea">
+                        <ul class="menuList">
+                            <li class="menuItem">
+                                <a href="#">사이트관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">공통코드관리</a></li>
+                                    <li><a href="#">메뉴관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">업무관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">자료실</a></li>
+                                    <li><a href="#">일일업무현황보고</a></li>
+                                    <li><a href="#">분기실적보고서</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">운영관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력인증센터 현황</a></li>
+                                    <li><a href="#">체력인증센터 정보</a></li>
+                                    <li><a href="#">팝업 관리</a></li>
+                                    <li><a href="#">배너관리</a></li>
+                                    <li><a href="#">관리자관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">예약관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">일정관리</a></li>
+                                    <li><a href="#">예약현황</a></li>
+                                    <li><a href="#">예약등록</a></li>
+                                    <li><a href="#">예약시스템설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">체력측정</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력층정내역</a></li>
+                                    <li><a href="#">체력측정입력</a></li>
+                                    <li><a href="#">출장 체력측정입력</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">체력증진교실</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력증진교실</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">회원관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">회원현황</a></li>
+                                    <li><a href="#">회원등록</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">게시물관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">자주하는 질문</a></li>
+                                    <li><a href="#">온라인 운동상담</a></li>
+                                    <li><a href="#">홍보/보도자료</a></li>
+                                    <li><a href="#">홍보영상관</a></li>
+                                    <li><a href="#">포토갤러리</a></li>
+                                    <li><a href="#">센터별 공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">통계</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력측정통계</a></li>
+                                    <li><a href="#">증진교실 운영현황</a></li>
+                                    <li><a href="#">증진교실 측정집계</a></li>
+                                    <li><a href="#">증진교실사전사후조회</a></li>
+                                    <li><a href="#">예약현황 통계</a></li>
+                                    <li><a href="#">통계관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //상단영역 -->
+
+            <!-- 중단영역 -->
+            <div class="layoutContainer ">
+
+                <!-- 좌측 메뉴 영역 -->
+                <div class="layoutNav">
+                    
+                    <!-- Left Menu -->
+                    
+                    <div class="cptSnav">
+                        <div class="snavArea">
+                            <div class="snavMenu">
+                                <div class="snavTitle">사이트관리</div>
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">공통코드관리</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                                            <li><a href="#" class="on">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">메뉴관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">2뎁스메뉴</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                                            <li><a href="#" class="on">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="snavBtm">
+                                    <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sideSlide">
+                        <button class="btnSlide">메뉴 열기/닫기</button>
+                    </div>
+
+                </div>
+                <!-- //좌측 메뉴 영역 -->
+
+                <!-- 콘텐츠 영역 -->
+                <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>가이드 (Table)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">가이드</li>
+                                    <li class="item">Table</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <style>
+                    @font-face {
+                        font-family: 'D2Coding';
+                        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    .guideBox {margin-top:40px;}
+                    .guideTitle {font-size:18px; font-weight:500;}
+                    .guideCont {margin-top:10px;}
+                    .gGroup {margin-top:20px;}
+                    .gText {font-size:14px;}
+                    .gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+                    </style>
+                        <div class="cptPubGuide">
+                            <div class="guideArea">
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">Table</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            테이블 내부에 무엇이 들어갈 수 있는지를 정의합니다.<br/>
+                                            input, select 버튼 등 각종 Form은 Form가이드에 있는 그대로 들어갑니다.<br/>
+                                            *테이블 th, td에 사용하는 정렬 클래스<br/>
+                                            left : 좌측정렬<br/>
+                                            center : 가운데정렬<br/>
+                                            right : 우측정렬
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:120px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">이름</th>
+                    <td class="left">홍길동</td>
+                    <th class="left">아이디</th>
+                    <td class="left">
+                        member_id
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">게시판명</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th class="left">게시판유형<br></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">일반형</label></div>
+                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">리스트형</label></div>
+                            <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">갤러리형</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">페이지당 목록 수</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">10개씩 보기</option>
+                                <option value="">20개씩 보기</option>
+                                <option value="">30개씩 보기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th class="left">댓글</th>
+                    <td class="left bdl">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">실명</label></div>
+                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">비공개</label></div>
+                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">익명</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">카테고리</th>
+                    <td class="left" colspan="3">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl">사용</label></div>
+                            <div class="frmChoBox"><input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl">사용안함</label></div>
+                        </div>
+                        <div class="grpInBox">
+
+                            <div class="inTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:100%;">
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="카테고리 명">
+                                                    <button type="button" class="gridBtn purple">행추가</button>
+                                                    <button type="button" class="gridBtn red">삭제</button>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                    <button type="button" class="gridBtn red">행삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                    <button type="button" class="gridBtn red">행삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="inTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:100%;">
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="카테고리 명">
+                                                    <button type="button" class="gridBtn purple">행추가</button>
+                                                    <button type="button" class="gridBtn red">삭제</button>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                    <button type="button" class="gridBtn red">행삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" placeholder="이름">
+                                                    <input type="text" class="iptText" placeholder="코드">
+                                                    <button type="button" class="gridBtn red">행삭제</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="cptGroupBtm alignR" style="margin-bottom:10px;">
+                                <div class="comSideOpt">
+                                    <button class="srhBtn purple">카테고리 추가</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">CCL</th>
+                    <td class="left" colspan="3">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo151" type="radio" class="iptRdo" name="rdo151"><label for="rdo151" class="iptLbl">사용</label></div>
+                            <div class="frmChoBox"><input id="rdo152" type="radio" class="iptRdo" name="rdo151"><label for="rdo152" class="iptLbl">사용안함</label></div>
+                        </div>
+                        <div class="frmGroup">
+                            <div class="frmChoList col2">
+                                <div class="frmChoBox"><input id="rdo161" type="radio" class="iptRdo" name="rdo161"><label for="rdo161" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by.png" alt="저작자 표시 (CC BY)" style="width:140px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo162" type="radio" class="iptRdo" name="rdo161"><label for="rdo162" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by-nc.png" alt="저작자표시-비영리(CC BY-NC)" style="width:140px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo163" type="radio" class="iptRdo" name="rdo161"><label for="rdo163" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by-nd.png" alt="저작자표시-변경금지 (CC BY-ND)" style="width:140px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo164" type="radio" class="iptRdo" name="rdo161"><label for="rdo164" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by-sa.png" alt="저작자표시-동일조건변경허락 (CC BY-SA)" style="width:140px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo165" type="radio" class="iptRdo" name="rdo161"><label for="rdo165" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by-nc-sa.png" alt="저작자표시-비영리-동일조건 변경 허락 (BY-NC-SA)" style="width:140px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo166" type="radio" class="iptRdo" name="rdo161"><label for="rdo166" class="iptLbl">
+                                    <img src="../../../common/images/mng/200_by-nc-nd.png" alt="저작자표시-비영리-변경금지 (BY-NC-ND)" style="width:140px;">
+                                </label></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">공공누리</th>
+                    <td class="left" colspan="3">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo131" type="radio" class="iptRdo" name="rdo131"><label for="rdo131" class="iptLbl">사용</label></div>
+                            <div class="frmChoBox"><input id="rdo132" type="radio" class="iptRdo" name="rdo131"><label for="rdo132" class="iptLbl">사용안함</label></div>
+                        </div>
+                        <div class="frmGroup">
+                            <div class="frmChoList col2">
+                                <div class="frmChoBox"><input id="rdo171" type="radio" class="iptRdo" name="rdo171"><label for="rdo171" class="iptLbl">
+                                    <img src="../../../common/images/mng/open1.jpg" alt="출처표시" style="height:40px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo172" type="radio" class="iptRdo" name="rdo171"><label for="rdo172" class="iptLbl">
+                                    <img src="../../../common/images/mng/open2.jpg" alt="출처표시 + 상업적 이용금지" style="height:40px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo173" type="radio" class="iptRdo" name="rdo171"><label for="rdo173" class="iptLbl">
+                                    <img src="../../../common/images/mng/open3.jpg" alt="출처표시 + 변경금지" style="height:40px;">
+                                </label></div>
+                                <div class="frmChoBox"><input id="rdo174" type="radio" class="iptRdo" name="rdo171"><label for="rdo174" class="iptLbl">
+                                    <img src="../../../common/images/mng/open4.jpg" alt="출처표시 + 상업적 이용금지 + 변경금지" style="height:40px;">
+                                </label></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">내용<span class="required">*</span></th>
+                    <td class="left" colspan="3">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">노출 등록일<span class="required">*</span></th>
+                    <td class="left">
+                        
+                        <div class="frmGroup">
+                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                <input type="text" id="datepicker-input" aria-label="Date-Time">
+                                <div id="datepicker-container" style="margin-top: -1px;"></div>
+                            </div>
+                        </div>
+                        <script>
+                            datePicker("datepicker-input","datepicker-container");
+                        </script>
+                    </td>
+                    <th>사용기간 설정</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">기간설정 안함</label></div>
+                            
+                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmFrth">
+                                <input id="startpicker-input" type="text" aria-label="Date">
+                                <div id="startpicker-container" style="margin-left: -1px;"></div>
+                            </div>
+                            <div class="textBox deco">~</div>
+                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmFrth">
+                                <input id="endpicker-input" type="text" aria-label="Date">
+                                <div id="endpicker-container" style="margin-left: -1px;"></div>
+                            </div>
+
+                            <script>
+                                datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                            </script>
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">썸네일</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                        </div>
+                        <div class="imageTray">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                    <th class="left">등록된 썸네일</th>
+                    <td class="left">
+                        <div class="imageTray">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">첨부파일</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 최대 500MB까지 첨부가능</div>
+                        </div>
+                    </td>
+                    <th class="left">등록된 첨부파일</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileAfter" style="display: block;">
+                                    <div class="textBox">첨부파일테스트.png</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">Table</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            테이블 내용이 길어 나누어 올립니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <!-- 기본 -->
+    <div class="grpInBox"></div>
+
+    <!-- 사용 예 -->
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:130px;">
+                <col style="width:auto;">
+                <col style="width:130px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">팝업크기<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="textBox">가로 : </div>
+                            <input type="text" class="iptText frmXs">
+                            <div class="textBox">px</div>
+                            <div class="textBox" style="margin-left:20px;">세로 : </div>
+                            <input type="text" class="iptText frmXs">
+                            <div class="textBox">px</div>
+                            <div class="textBox clar">※팝업 크기는 PC에서만 적용가능합니다.</div>
+                        </div>
+                    </td>
+                    <th class="left">팝업위치<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="posPop">
+                            <ul>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo110" type="radio" class="iptRdo" name="rdo110"><label for="rdo110" class="iptLbl">좌측</label></div></div>
+                                    <div class="window left">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo111" type="radio" class="iptRdo" name="rdo110"><label for="rdo111" class="iptLbl">중앙</label></div></div>
+                                    <div class="window center">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="frmGroup"><div class="frmChoBox"><input id="rdo112" type="radio" class="iptRdo" name="rdo110"><label for="rdo112" class="iptLbl">우측</label></div></div>
+                                    <div class="window right">
+                                        <div class="popBx"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">PC 이미지<br>(#### X ####)</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                        </div>
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/width.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                    <th class="left">MO 이미지<br>(### X ###)</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지 파일형식(jpg, png)만 첨부 가능하며, 최대 ###MB까지 첨부 가능</div>
+                        </div>
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/height.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                        <button type="button" class="imgDelBtn"></button><!--이미지 삭제 버튼-->
+                                    </div>
+                                    <p class="imgTit">첨부파일명.jpg</p><!--이미지 파일명과 확장자-->
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">PC 이미지<br>(#### X ####)</th>
+                    <td class="left">
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/width.jpg" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                    <th class="left">MO 이미지<br>(### X ###)</th>
+                    <td class="left">
+                        <div class="imageTray ratio">
+                            <ul>
+                                <li>
+                                    <div class="frame">
+                                        <img src="../../../common/images/mng/height.jpg" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">링크URL<span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmHalf">
+                            <div class="frmChoBox mL10"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">링크 새 창 이동</label></div>
+                        </div>
+                    </td>
+                    <th class="left">대체 텍스트</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <button type="button" class="gridBtn dkbLine">입력 가이드</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/xml.min.js"></script>
+<script>
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function run(){
+        const codeGuides = document.querySelectorAll('.cptPubGuide .codeGuide');
+        const codes = document.querySelectorAll('.cptPubGuide code.xml');
+        const viewers = document.querySelectorAll('.cptPubGuide .gView');
+        codes.forEach(function(code,idx){
+            code.innerHTML = escapeHtml(codeGuides[idx].value);
+        });
+        viewers.forEach(function(viewer,idx){
+            viewer.innerHTML = codeGuides[idx].value;
+        });
+        hljs.highlightAll();
+    }
+    window.onload = function(){
+        run();
+    }
+</script>
+
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+
+
+                </div>
+                <!-- //콘텐츠 영역 -->
+
+            </div>
+            <!-- //중단영역 -->
+
+
+            <!-- 하단영역 -->
+            <div class="layoutFooter">
+            <!-- Footer -->
+            
+            </div>
+            <!-- //하단영역 -->
+
+        </div>
+    </div>
+
+    <!-- 팝업이 들어오는 영역 -->
+
+</div>
+</body>
+</html>

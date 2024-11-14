@@ -1,0 +1,83 @@
+<%
+var depth2 = locals.depth2 ? locals.depth2 : 1;
+var depth3 = locals.depth3 ? locals.depth3 : 0;
+var url = locals.url ? locals.url : '../../';
+var depth2P = [];
+var depth3P = [];
+for(var i=1;i<=6;i++){
+    depth3P[i] = [];
+    if(depth2==i){
+        depth2P[i] = ' active';
+        for(var j=1;j<=4;j++){
+            if(depth3==j){
+                depth3P[i][j] = ' active';
+            }else{
+                depth3P[i][j] = '';
+            }
+        }
+    }else{ 
+        depth2P[i] = "";
+        for(var j=1;j<=6;j++){
+            depth3P[i][j] = '';
+        }
+    }
+}
+%>
+<div class="cptLnb">
+    <div class="lnbArea">
+        <h2 class="h2title">회사소개</h2>
+        <ul class="depth2Group">
+            <li class="depth2Menu<%= depth2P[1] %> add" data-height="0">
+                <h3 class="depth2Name"><a href="<%= url %>html/company/info/overview.html" class="depth2Link">기업정보</a></h3>
+                <ul class="depth3Group">
+                    <li class="depth3Menu<%= depth3P[5][1] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/info/overview.html" class="depth3Link">기업개요</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][2] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/info/history.html" class="depth3Link">연혁</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][3] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/info/organization.html" class="depth3Link">조직도</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][4] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/info/ethics.html" class="depth3Link">윤리강령</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][5] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/info/employee_conduct.html" class="depth3Link">임직원 행동강령</a></h4>
+                    </li>
+                </ul>
+            </li>
+            <li class="depth2Menu<%= depth2P[2] %> add" data-height="0">
+                <h3 class="depth2Name"><a href="<%= url %>html/company/philosophy/philosophy.html" class="depth2Link">경영이념</a></h3>
+                <ul class="depth3Group">
+                    <li class="depth3Menu<%= depth3P[5][1] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/philosophy/philosophy.html" class="depth3Link">경영이념</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][2] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/philosophy/ceo_message.html" class="depth3Link">CEO 인사말</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][3] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/philosophy/ceo_career.html" class="depth3Link">CEO 주요경력</a></h4>
+                    </li>
+                </ul>
+            </li>
+            <li class="depth2Menu<%= depth2P[3] %> add" data-height="0">
+                <h3 class="depth2Name"><a href="<%= url %>html/company/settle/settle.html" class="depth2Link">결산공고</a></h3>
+                <ul class="depth3Group">
+                    <li class="depth3Menu<%= depth3P[5][1] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/settle/settle.html" class="depth3Link">결산공고</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][2] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/company/settle/ir.html" class="depth3Link">IR정보</a></h4>
+                    </li>
+                </ul>
+            </li>
+            <li class="depth2Menu<%= depth2P[4] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/company/ci_bi/ci_bi.html" class="depth2Link">CI/BI</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[5] %>" >
+                <h3 class="depth2Name"><a href="<%= url %>html/company/map/map.html" class="depth2Link">오시는 길</a></h3>
+            </li>
+        </ul>
+    </div>
+</div>

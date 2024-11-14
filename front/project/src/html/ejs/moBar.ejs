@@ -1,0 +1,45 @@
+<%
+var url = locals.url ? locals.url : '../../';
+%>
+<!--모바일전용 메뉴바 2024년 10월 30일-->
+<div class="moBarCov">
+    <div class="inner">
+        <img src="../images/common/moBar.svg" alt="" />
+        <a href="#none" class="barMenu">
+            <span class="midBtn">나의<br>광고</span>
+        </a>
+        <ul>
+            <li class="active"> <!--해당페이지 활성화시 메뉴 클래스추가-->
+                <a href="#none" class="barMenu">
+                    <span class="ico home"></span>
+                    <span class="txt">홈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#none" class="barMenu">
+                    <span class="ico adcreate"></span>
+                    <span class="txt">광고만들기</span>
+                </a>
+            </li>
+            <li class="fakeBox"><span class="hidden">spaceArea</span></li>
+            <li>
+                <a href="#none" class="barMenu">
+                    <span class="ico exp"></span>
+                    <span class="txt">체험관</span>
+                </a>
+            </li>
+            <li>
+                <!--2024.10.30 로그인 후-->
+                <a href="#none" class="barMenu">
+                    <span class="ico mypage"></span>
+                    <span class="txt">마이페이지</span>
+                    <!--2024.10.30 로그인 전-->
+                    <!-- <span class="txt">로그인</span> -->
+                    <!-- //2024.10.30 로그인 전-->
+                </a>
+                <!-- //2024.10.30 로그인 후-->
+            </li>
+        </ul>
+    </div>
+</div>
+

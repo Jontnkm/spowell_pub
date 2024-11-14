@@ -1,0 +1,139 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+
+            <!-- 메인 콘텐츠 영역 -->
+            
+            <div class="myAdCover">
+                <!-- KB 2024.10.24 수정 -->
+                <div class="comSubTitle">
+                    <h3>광고 만들기</h5>
+                </div>
+                <!--// KB 2024.10.24 수정 -->
+                <div class="cptSubTop">
+                    <div class="subTopTxt">
+                        <p class="subTitle">내 컴퓨터에서 불러오기</p>
+                    </div>
+                    <div class="cptBtnForm d-flex gap10 excpBtn">
+                        <button type="button" class="btn scnd">다른 방법으로 영상 만들기</button>
+                        <button type="button" class="btn scnd"><span></span>영상 제작 튜토리얼</button>
+                    </div>
+                </div>
+
+                <div class="uploadRule">
+                    <p class="ruleTitle">영상파일을 올리기 전 확인해 주세요!</p>
+                    <ul class="ruleList">
+                        <li class="item codec">
+                            <span class="ico"></span>
+                            <span class="tit">코덱</span>
+                            <span class="desc">영상 코덱이 'H.264'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item length">
+                            <span class="ico fin"></span> <!--2024.09.25 완료 아이콘 클래스 fin-->
+                            <span class="tit">길이</span>
+                            <span class="desc">영상의 길이가 '15초'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item resolution">
+                            <span class="ico"></span>
+                            <span class="tit">해상도</span>
+                            <span class="desc">영상 해상도가 '1920 x 1080'인 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item audio">
+                            <span class="ico err"></span> <!--2024.09.25 오류 아이콘 클래스 err-->
+                            <span class="tit">오디오</span>
+                            <span class="desc">영상의 오디오 평준화 -24 lkfs에 근접한 것을 확인하였습니다.</span>
+                        </li>
+                        <li class="item frame">
+                            <span class="ico"></span>
+                            <span class="tit">프레임</span>
+                            <span class="desc">영상의 프레임이 '449(15초)' 또는 '899(30초)'인 것을 확인하였습니다.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="uploadProgressArea">
+                    <!--2024.09.24 파일등록-->
+                    <!-- <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">영상등록</button>
+                    </div> -->
+                    <!--// 2024.09.24 파일등록-->
+
+                    <!--2024.09.24 진행 중-->
+                    <div class="progressArea">
+                        <div class="bar"></div>
+                        <span class="balloon">업로드 중</span>
+                    </div>
+                    <!--// 2024.09.24 진행 중-->
+
+                    <!--2024.09.24 파일등록 오류-->
+                    <!-- <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">다시올리기</button>
+                        <p class="infoTxt warining">
+                        <p class="infoTxt warning">
+                            영상의 옵션을 다시 한 번 확인하신 후 올려주세요!
+                        </p>
+                    </div> -->
+                    <!--// 2024.09.24 파일등록 오류-->
+
+                    <!--2024.09.24 파일등록 완료-->
+                    <!-- <div class="cptBtnForm">
+                        <button type="button" class="btn prmy">나의 영상 확인하러 가기</button>
+                        <p class="infoTxt">
+                            영상 업로드를 완료하였습니다.
+                        </p>
+                    </div> -->
+                    <!--// 2024.09.24 파일등록 완료-->
+                </div>
+            </div>
+
+            <!-- //메인 콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+
+<%- include('../ejs/moBar.ejs', { }) %>

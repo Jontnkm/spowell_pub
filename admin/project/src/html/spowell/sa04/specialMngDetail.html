@@ -1,0 +1,320 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="listDescription">
+        <p>
+            아래 버튼을 클릭해서 체육인을 조회하고 지원신청을 등록하실 수 있습니다.
+        </p>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignC">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn bLine" onclick="openPopup('sample01')">체육인조회</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:120px;" />
+                <col style="width:auto;" />
+                <col style="width:120px;" />
+                <col style="width:auto;" />
+                <col style="width:120px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td class="center">홍길동</td>
+                    <th>등록번호</th>
+                    <td class="center">00000</td>
+                    <th>주민등록번호</th>
+                    <td class="center">000000-1000000</td>
+                </tr>
+                <tr>   
+                    <th>장애여부</th>
+                    <td class="center">비장애</td>
+                    <th>종목</th>
+                    <td class="center"></td>
+                    <th>체육인(선수)번호</th>
+                    <td class="center">00000-00-0-0-0</td>
+                </tr>
+                <tr>
+                    <th>특별장려금</th>
+                    <td class="center">0000 &lt;YYYY-MM-DD&gt;</td>
+                    <th>월정금</th>
+                    <td class="center">000,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">특별장려금 공제내역</div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn bLine">추가</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:200px">
+                <col style="width:50px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:150px">
+                <col style="width:80px">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>전체금액 <span class="required">*</span></th>
+                    <th>번호</th>
+                    <th>월 공제금액 <span class="required">*</span></th>
+                    <th>공제시작월 <span class="required">*</span></th>
+                    <th>공제종료월 <span class="required">*</span></th>
+                    <th>공제금액 계</th>
+                    <th>횟수</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <div class="frmGroup">
+                            <input type="text">
+                        </div>
+                    </td>
+                    <td class="center">1</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+                    <td class="center">1,500,000</td>
+                    <td class="center">5</td>
+                    <td rowspan="2">
+                        <textarea class="textarea"></textarea>
+                    </td>
+                </tr>
+                <tr class="scndLine">
+                    <td class="center">2</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+                    <td class="center">3,000,000</td>
+                    <td class="center">6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="txtBox clar">특별장려금의 월공제금액이 바뀌는 경우 위 &lt;추가&gt; 버튼을 클릭해서 새로운 조건을 등록해주세요.</div>
+
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button type="button" class="crudBtn blue">저장</button>
+            <button type="button" class="crudBtn dkBlue">목록</button>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체육인 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <p class="popMsg mB20">
+                            · 아래 검색 항목으로 체육인을 조회하세요.
+                        </p>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">장애여부</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                                        </td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">선수</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">지도자</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">종목구분</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">시도 전체</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">키워드 <span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmSm">
+                                                    <option value="">제목</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button type="button" class="btnSearch">조회</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                           <!-- 그리드/테이블 상단 -->
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                            </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>장애여부</th>
+                                        <th>종목</th>
+                                        <th>성명</th>
+                                        <th>등록번호</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5" class="center">시스템에 등록된 체육인 정보가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">비장애</td>
+                                        <td class="center">태권도</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">비장애</td>
+                                        <td class="center">수영</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">장애</td>
+                                        <td class="center">수영</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

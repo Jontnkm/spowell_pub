@@ -1,0 +1,372 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>개인정보관리</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">체력센터운영관리</li>
+                <li class="item">마이페이지</li>
+                <li class="item">개인정보관리</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">사용자정보</div>
+        </div>
+    </div>
+
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">이름</th>
+                    <td class="left">홍길동</td>
+                    <th class="left">아이디</th>
+                    <td class="left">
+                        <span class="mR20">member_id</span>
+                        <button class="gridBtn purple" onclick="openPopup('sample01')">비밀번호변경</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">생년월일</th>
+                    <td class="left">0000-00-00</td>
+                    <th class="left">성별</th>
+                    <td class="left">남자</td>
+                </tr>
+                <tr>
+                    <th class="left">휴대전화 <span class="required">*</span></th>
+                    <td class="left">
+                        <select name="" id="" class="iptSlt frmXs">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                    </td>
+                    <th class="left">이메일 <span class="required">*</span></th>
+                    <td class="left">
+                        <input type="text" class="iptText frmXs" />
+                        <div class="textBox deco">@</div>
+                        <input type="text" class="iptText frmSm" />
+                        <select name="" id="" class="iptSlt frmSm">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">사무실전화</th>
+                    <td class="left">
+                        <select name="" id="" class="iptSlt frmXs">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                    </td>
+                    <th class="left">팩스</th>
+                    <td class="left">
+                        <select name="" id="" class="iptSlt frmXs">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">담당업무 <span class="required">*</span></th>
+                    <td class="left">
+                        <select name="" id="" class="iptSlt frmHalf">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                    <th class="left">직책(세부업무)</th>
+                    <td class="left">
+                        <input type="text" class="iptText frmHalf" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">전문분야 <span class="required">*</span></th>
+                    <td class="left">
+                        <select name="" id="" class="iptSlt frmHalf">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                    <th class="left">등록/수정일자</th>
+                    <td class="left">
+                        2023-00-00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="cptGroupBtm alignL">
+            <div class="title">자격취득현황</div>
+        </div>
+        <!-- 그리드/테이블 하단 버튼 -->
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button class="srhBtn red">선택삭제</button>
+                <button class="srhBtn dkBlue">추가</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:4%;" />
+                <col style="width:24%;" />
+                <col style="width:24%;" />
+                <col style="width:24%;" />
+                <col style="width:24%;" />
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>선택</th>
+                    <th>자격종류</th>
+                    <th>종목</th>
+                    <th>취득일자</th>
+                    <th>자격증첨부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl ftZero">선택</label></div>
+                    </td>
+                    <td class="center">
+                        <select name="" id="" class="iptSlt">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                    <td class="center">
+                        <input type="text" class="iptText " />
+                    </td>
+                    <td class="center">
+                        <div class="iptDate "><input type="text" class="iptText" id="datepicker1"></div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl ftZero">선택</label></div>
+                    </td>
+                    <td class="center">
+                        <select name="" id="" class="iptSlt">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                    <td class="center">
+                        <input type="text" class="iptText " />
+                    </td>
+                    <td class="center">
+                        <div class="iptDate "><input type="text" class="iptText" id="datepicker1"></div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">학력 및 전공</div>
+        </div>
+    </div>
+
+    <!-- 테이블 -->
+    <div class="cptTable forOut">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">고등학교</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                    <th class="left">전공</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">대학(교)</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                    <th class="left">전공</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="left">대학원</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                    <th class="left">전공(학위)</th>
+                    <td class="left">
+                        <input type="text" class="iptText " />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button class="srhBtn dkbLine">초기화</button>
+            <button class="srhBtn dkBlue" onclick="openAlert('splAlt03')">저장</button>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">비밀번호 변경</div>
+                    <div class="popCont">    
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">비밀번호</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText " />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">비밀번호 확인</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText " />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="textBox">영문, 숫자, 특수문자 조합으로 9~16자</div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue"  onclick="openAlert('splAlt01');">저장</button>
+                        <button class="btn dkBlue"  onclick="openAlert('splAlt02');">저장</button> <!--기능구현시 하나 삭제-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">입력하신 비밀번호가 등록규칙에 맞지 않습니다.</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">입력하신 비밀번호가 일치하지 않습니다.</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt03" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">사용자정보를 저장하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt03');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

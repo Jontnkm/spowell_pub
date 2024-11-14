@@ -1,0 +1,578 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>체력증진교실통계</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">홈페이지관리</li>
+                <li class="item">체력증진교실통계</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>사업년도</th>
+                    <td>
+                        <select name="" id="" class="iptSlt ">
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>거주지역</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">센터 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>조회기간</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate frmMd"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate frmMd"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <th>대상구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt ">
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>인센티브구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt ">
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>통계내용</th>
+                    <td colspan="3">
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월별 인센티브 지급통계</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">인센티브구분별 지급통계</label></div>
+                        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">월별 인센티브 사용통계</label></div>
+                        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">연령별 인센티브 지급통계</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">대상별 인센티브 지급통계</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button type="button" class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--월별 인센티브 지급통계-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">월별 인센티브 지급통계</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:8%;">
+                <col style="width:auto;">
+                <col style="width:8%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>1월</th>
+                    <th>2월</th>
+                    <th>3월</th>
+                    <th>4월</th>
+                    <th>5월</th>
+                    <th>6월</th>
+                    <th>7월</th>
+                    <th>8월</th>
+                    <th>9월</th>
+                    <th>10월</th>
+                    <th>11월</th>
+                    <th>12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!--인센티브구분별 지급통계-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">인센티브구분별 지급통계</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:10%;">
+                <col style="width:auto;">
+                <col style="width:10%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>회원가입</th>
+                    <th>체력측정</th>
+                    <th>헬스업</th>
+                    <th>스포츠활동</th>
+                    <th>기타</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!--월별 인센티브 사용통계-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">월별 인센티브 사용통계</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:8%;">
+                <col style="width:auto;">
+                <col style="width:8%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+                <col style="width:6%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>1월</th>
+                    <th>2월</th>
+                    <th>3월</th>
+                    <th>4월</th>
+                    <th>5월</th>
+                    <th>6월</th>
+                    <th>7월</th>
+                    <th>8월</th>
+                    <th>9월</th>
+                    <th>10월</th>
+                    <th>11월</th>
+                    <th>12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!--연령별 인센티브 지급통계-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">연령별 인센티브 지급통계</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:10%;">
+                <col style="width:auto;">
+                <col style="width:10%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+                <col style="width:7.6%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>10대</th>
+                    <th>20대</th>
+                    <th>30대</th>
+                    <th>40대</th>
+                    <th>50대</th>
+                    <th>60대</th>
+                    <th>70대</th>
+                    <th>80대</th>
+                    <th>기타(탈퇴)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>142353</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!--대상별 인센티브 지급통계-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">대상별 인센티브 지급통계</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:10%;">
+                <col style="width:auto;">
+                <col style="width:10%;">
+                <col style="width:11%;">
+                <col style="width:11%;">
+                <col style="width:11%;">
+                <col style="width:11%;">
+                <col style="width:11%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>유아</th>
+                    <th>유소년</th>
+                    <th>청소년</th>
+                    <th>성인</th>
+                    <th>어르신</th>
+                    <th>기타(탈퇴)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>142353</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                    <td>000,000<br/>(00건)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

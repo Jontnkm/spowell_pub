@@ -1,0 +1,1674 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>체육인복지지원 통합관리시스템</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	<link rel="stylesheet" href="../../../common/css/spowell.css" />
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script> <!--toast ui-->
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/type01.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+<div class="cptHeader">
+    <div class="headerArea">
+        <div class="headerLogo"><h1><a href="#"><img src="../../../common/images/layout/type01/spowell_logo.png" alt="" /></a></h1></div>
+        <div class="headerGroup">
+            <div class="headerProfile">
+                <dl class="headerDate">
+                    <dt>최종 로그인 날짜 : </dt>
+                    <dd>2022-12-30 AM 09:30:00</dd>
+                </dl>
+                <div class="headerUser"><b>홍길동</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                <a href="#" class="headerBtn">로그아웃</a>
+                <a href="#" class="headerBtn">정보수정</a>
+            </div>
+            <div class="headerNav">
+                <ul class="menuList">
+                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                        <a href="#">회원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지지원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지사업관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">직업안정지원</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">홈페이지관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">통계관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">시스템관리</a>
+                    </li>
+                </ul>
+                <div class="allMenuGroup">
+                    <button class="allMenu">전체메뉴</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMenuArea">
+        <ul class="menuList">
+            <li class="menuItem">
+                <a href="#">회원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지지원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지사업관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">직업안정지원</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">홈페이지관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">통계관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">시스템관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer ">
+
+            <!-- 좌측 메뉴 영역 -->
+            <div class="layoutNav">
+                <!-- Left Menu -->
+				
+
+<div class="cptSnav">
+    <div class="snavArea">
+        <div class="snavMenu">
+            <div class="snavTitle">1Depth Menu</div>
+            <ul class="menuList">
+                <li class="menuItem"> <!-- class : on : 1depth 메뉴 활성화 -->
+                    <a href="#">2Depth Menu</a>
+                </li>
+                <li class="menuItem dropdown on"> <!--2 depth 경우 dropdown 클래스 추가-->
+                    <a href="#">2Depth Menu 2Depth Menu 2Depth Menu 2Depth Menu</a>
+                    <ul class="subMenu">
+                        <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                        <li><a href="#" class="on">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <a href="#">2Depth Menu</a>
+                </li>
+            </ul>
+            <div class="snavBtm">
+                <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="sideSlide">
+                    <button class="btnSlide">메뉴 열기/닫기</button>
+                </div>
+
+            </div>
+            <!-- //좌측 메뉴 영역 -->
+
+            <!-- 콘텐츠 영역 -->
+            <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    
+
+<div class="comH2Group">
+    <div class="alignL">
+        <h2>Current page Name (title area)</h2>
+    </div>
+    <div class="alignR">
+        <ul class="locaGroup">
+            <li class="item">HOME</li>
+            <li class="item">2depth Category Name</li>
+            <li class="item">Current Page Name</li>
+        </ul>
+    </div>
+</div>
+    
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>사업년도</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>확정일자</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText">
+                            </div>
+                            <div class="textBox Deco">-</div>
+                            <div class="iptDate">
+                                <input type="text" class="iptText">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>장애여부</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
+                        </div>
+                    </td>
+                    <th>지역</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>재학기관</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">초등</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">중등</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">고등</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전문학사</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">학사</label></div>
+                        </div>
+                    </td>
+                    <th>종목</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>대표대회</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">성명</option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li>
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+
+                <col style="width:70px;">
+                <col style="width:200px;">
+                <col style="width:70px;">
+
+                <col style="width:250px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:120px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th rowspan="2">사업년도</th>
+                    <th rowspan="2">확정일자</th>
+                    <th rowspan="2">연번</th>
+                    <th rowspan="2">장애여부</th>
+
+                    <th colspan="5">신청자정보</th>
+                    
+                    <th colspan="3">학교정보</th>
+
+                    <th colspan="3">대회참가정보</th>
+
+                    <th colspan="2">지급계획</th>
+
+                    <th rowspan="2">기능</th>
+                </tr>
+                <tr class="scndLine">
+
+                    <th>추천단체</th>
+                    <th>지역</th>
+                    <th>종목</th>
+                    <th>성명</th>
+                    <th>성별</th>
+                    <th>주민등록번호</th>
+                    <th>휴대전화번호</th>
+
+                    <th>재학기관</th>
+                    <th>학교명</th>
+                    <th>학년</th>
+
+                    <th>대표대회</th>
+                    <th>순위</th>
+                    <th>입상횟수</th>
+
+                    <th>장학금액</th>
+                    <th>지급일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>2025</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>1</td>
+                    <td>비장애</td>
+
+                    <td>대한체육회</td>
+                    <td>서울</td>
+                    <td>근대5종</td>
+                    <td>홍길동</td>
+                    <td>남</td>
+                    
+                    <td>초등</td>
+                    <td>풍납초등학교</td>
+                    <td>6</td>
+
+                    <td>체육회 주관 전국대회</td>
+                    <td>1</td>
+                    <td>10</td>
+
+                    <td>300,000</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">대상자 정보</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>2025</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>1</td>
+                    <td>비장애</td>
+
+                    <td>대한체육회</td>
+                    <td>서울</td>
+                    <td>근대5종</td>
+                    <td>홍길동</td>
+                    <td>남</td>
+                    
+                    <td>초등</td>
+                    <td>풍납초등학교</td>
+                    <td>6</td>
+
+                    <td>체육회 주관 전국대회</td>
+                    <td>1</td>
+                    <td>10</td>
+
+                    <td>300,000</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">대상자 정보</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+ 
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체육인 정보조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th>성명</th>
+                                        <td class="center">홍길동</td>
+                                        <th>주민등록번호</th>
+                                        <td class="center">000000-1000000</td>
+                                        <th>등록번호</th>
+                                        <td class="center">00000</td>
+                                        <th>회원ID</th>
+                                        <td class="center">member_id</td>
+                                    </tr>
+                                    <tr>
+                                        <th>대상구분</th>
+                                        <td colspan="7">
+                                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">국가대표 선수</label></div>
+                                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">국가대표 지도자</label></div>
+                                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">학생선수</label></div>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">원로체육인</label></div>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">기타</label></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- tab in page -->
+                        <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+                            <ul class="tabMenu">
+                                <li class="item on"><a href="#">기본정보</a></li>
+                                <li class="item "><a href="#">대회실적조회</a></li>
+                                <li class="item"><a href="#">지원내역조회</a></li>
+                                <li class="item"><a href="#">기타정보관리</a></li>
+                            </ul>
+                            <br>
+                            <!-- modTab in 영역 -->
+                            <div class="tabContGroup">
+                                <!--2024.11.07 기본정보-->
+                                <div class="tabCont on">
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">체육인 기본정보</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:110px;" />
+                                                <col style="width:auto;" />
+                                                <col style="width:110px;" />
+                                                <col style="width:auto;" />
+                                                <col style="width:110px;" />
+                                                <col style="width:auto;" />
+                                            </colgroup>
+                                            <caption></caption>
+                                            <tbody>
+                                                <tr>
+                                                    <th>장애여부</th>
+                                                    <td class="center">비장애</td>
+                                                    <th>종목</th>
+                                                    <td class="center">롤러</td>
+                                                    <th>소속</th>
+                                                    <td class="center">국민체육진흥공단</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>휴대전화</th>
+                                                    <td class="center">010-0000-0000</td>
+                                                    <th>이메일</th>
+                                                    <td class="center">test@kspo.or.kr</td>
+                                                    <th>체육인(선수)<br>번호</th>
+                                                    <td class="center">0000</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>주소</th>
+                                                    <td class="center" colspan="3">서울특별시 송파구 올림픽공원 핸드볼경기장</td>
+                                                    <th>장애인번호</th>
+                                                    <td class="center">02-0000-0000-0000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">지급은행계좌정보</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:20%" />
+                                                <col style="width:12%" />
+                                                <col style="width:20%" />
+                                                <col style="width:12%" />
+                                                <col style="width:16%" />
+                                                <col style="width:20%" />
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지원사업</th>
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>예금주</th>
+                                                    <th>등록일자</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">경기력 성과포상금</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">생활지원금</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">교육지원금-국내대학원</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">교육지원금-국외유학</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">원로체육인지원</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">체육유공자지원</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">체육장학금</td>
+                                                    <td class="center">00은행</td>
+                                                    <td class="center">0000-00-000000</td>
+                                                    <td class="center">홍길순</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">체육인 자격정보</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:10%;" />
+                                                <col style="width:23%;" />
+                                                <col style="width:23%;" />
+                                                <col style="width:23%;" />
+                                                <col style="width:23%;" />
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <th>번호</th>
+                                                <th>구분</th>
+                                                <th>확정일자</th>
+                                                <th>확인자료</th>
+                                                <th>등록일자</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">4</td>
+                                                    <td class="center">사망</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">주민전산연계</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">3</td>
+                                                    <td class="center">국적상실</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">주민전산연계</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">2</td>
+                                                    <td class="center">체육단체 징계</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">
+                                                        <a href="#none">증빙파일.pdf</a>
+                                                    </td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">범죄경력사실확인</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">
+                                                        <a href="#none">증빙파일.pdf</a>
+                                                    </td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <!--2024.11.07 대회실적조회-->
+                                <div class="tabCont">
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">국가대표 선수실적현황</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:40px">
+                                                <col style="width:120px">
+                                                <col style="width:100px">
+                                                <col style="width:80px">
+                                                <col style="width:200px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:90px">
+                                                <col style="width:200px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:120px">
+                                                <col style="width:70px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:300px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="2">번호</th>
+                                                    <th rowspan="2">등록일자</th>
+                                                    <th colspan="7">실적대회정보</th>
+                                                    <th colspan="9">대회실적정보</th>
+                                                    <th rowspan="2">평점</th>
+                                                    <th rowspan="2">비고</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>대회구분</th>
+                                                    <th>개최년도</th>
+                                                    <th>대회명</th>
+                                                    <th>개최주기</th>
+                                                    <th>출전국 수</th>
+                                                    <th>개최일</th>
+                                                    <th>종료일</th>
+                                                    <th>장애여부</th>
+                                                    <th>장애유형</th>
+                                                    <th>종목</th>
+                                                    <th>세부종목</th>
+                                                    <th>실적구분</th>
+                                                    <th>순위</th>
+                                                    <th>입상일</th>
+                                                    <th>지도자인원</th>
+                                                    <th>지도선수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">국가대표 지도자실적현황</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:40px">
+                                                <col style="width:120px">
+                                                <col style="width:100px">
+                                                <col style="width:80px">
+                                                <col style="width:200px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:90px">
+                                                <col style="width:200px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:120px">
+                                                <col style="width:70px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:300px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="2">번호</th>
+                                                    <th rowspan="2">등록일자</th>
+                                                    <th colspan="7">실적대회정보</th>
+                                                    <th colspan="9">대회실적정보</th>
+                                                    <th rowspan="2">평점</th>
+                                                    <th rowspan="2">비고</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>대회구분</th>
+                                                    <th>개최년도</th>
+                                                    <th>대회명</th>
+                                                    <th>개최주기</th>
+                                                    <th>출전국 수</th>
+                                                    <th>개최일</th>
+                                                    <th>종료일</th>
+                                                    <th>장애여부</th>
+                                                    <th>장애유형</th>
+                                                    <th>종목</th>
+                                                    <th>세부종목</th>
+                                                    <th>실적구분</th>
+                                                    <th>순위</th>
+                                                    <th>입상일</th>
+                                                    <th>지도자인원</th>
+                                                    <th>지도선수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">4</td>
+                                                    <td class="center">8</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">---</td>
+                                                    <td class="center">00</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">학생선수 입상실적현황</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:40px">
+                                                <col style="width:120px">
+                                                <col style="width:100px">
+                                                <col style="width:80px">
+                                                <col style="width:200px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:250px">
+                                                <col style="width:60px">
+                                                <col style="width:60px">
+                                                <col style="width:120px">
+                                                <col style="width:200px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>번호</th>
+                                                    <th>등록일자</th>
+                                                    <th>대회구분</th>
+                                                    <th>개최년도</th>
+                                                    <th>대회명</th>
+                                                    <th>장애여부</th>
+                                                    <th>장애유형</th>
+                                                    <th>종목</th>
+                                                    <th>세부종목</th>
+                                                    <th>실적구분</th>
+                                                    <th>순위</th>
+                                                    <th>입상일</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">아시안게임</td>
+                                                    <td class="center">2022년</td>
+                                                    <td class="center">2022 항저우아시안 게임</td>
+                                                    <td class="center">장애</td>
+                                                    <td class="center">시각</td>
+                                                    <td class="center">롤러</td>
+                                                    <td class="center">롤러스케이트 EP1000m</td>
+                                                    <td class="center">개인</td>
+                                                    <td class="center">5</td>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">업무메모내용</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!--2024.11.07 지원내역조회-->
+                                <div class="tabCont">
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">경기력 성과포상금-선수</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:150px">
+                                                <col style="width:150px">
+                                                <col style="width:150px">
+                                                <col style="width:150px">
+                                                <col style="width:120px">
+                                                <col style="width:250px">
+                                                <col style="width:250px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지급일자</th>
+                                                    <th>지급항목</th>
+                                                    <th>지급액</th>
+                                                    <th>소급금액</th>
+                                                    <th>공제금액</th>
+                                                    <th>실지급액</th>
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right"></td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right">0</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right"></td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right">0</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">일시장려금</td>
+                                                    <td class="right">600,000</td>
+                                                    <td class="right"></td>
+                                                    <td class="right">600,000</td>
+                                                    <td class="right">0</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right">600,000</td>
+                                                    <td class="right">900,000</td>
+                                                    <td class="right">0</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right"></td>
+                                                    <td class="right">300,000</td>
+                                                    <td class="right">0</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <!--합산구역-->
+                                                <tr>
+                                                    <th colspan="2">합계</th>
+                                                    <th class="right">1,591,025,000</th>
+                                                    <th class="right">600,000</th>
+                                                    <th class="right">300,000</th>
+                                                    <th class="right">1,591,025,000</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">경기력 성과포상금-지도자</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:120px">
+                                                <col style="width:250px">
+                                                <col style="width:250px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지급일자</th>
+                                                    <th>지급항목</th>
+                                                    <th colspan="4">지급액</th>
+                                                    <!-- <th>소급금액</th>
+                                                    <th>공제금액</th>
+                                                    <th>실지급액</th> -->
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">일시장려금</td>
+                                                    <td class="right" colspan="4">600,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <!--합산구역-->
+                                                <tr>
+                                                    <th colspan="2">합계</th>
+                                                    <th class="right" colspan="4">1,591,025,000</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">생활지원금</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:120px">
+                                                <col style="width:250px">
+                                                <col style="width:250px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지급일자</th>
+                                                    <th>지급항목</th>
+                                                    <th colspan="4">지급액</th>
+                                                    <!-- <th>소급금액</th>
+                                                    <th>공제금액</th>
+                                                    <th>실지급액</th> -->
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">일시장려금</td>
+                                                    <td class="right" colspan="4">600,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <!--합산구역-->
+                                                <tr>
+                                                    <th colspan="2">합계</th>
+                                                    <th class="right" colspan="4">1,591,025,000</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">교육지원금-국내대학원</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:120px">
+                                                <col style="width:250px">
+                                                <col style="width:250px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지급일자</th>
+                                                    <th>지급항목</th>
+                                                    <th colspan="4">지급액</th>
+                                                    <!-- <th>소급금액</th>
+                                                    <th>공제금액</th>
+                                                    <th>실지급액</th> -->
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">일시장려금</td>
+                                                    <td class="right" colspan="4">600,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <!--합산구역-->
+                                                <tr>
+                                                    <th colspan="2">합계</th>
+                                                    <th class="right" colspan="4">1,591,025,000</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">교육지원금-국외유학</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable withScroll">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:30px">
+                                                <col style="width:120px">
+                                                <col style="width:250px">
+                                                <col style="width:250px">
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>지급일자</th>
+                                                    <th>지급항목</th>
+                                                    <th colspan="4">지급액</th>
+                                                    <!-- <th>소급금액</th>
+                                                    <th>공제금액</th>
+                                                    <th>실지급액</th> -->
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                    <th>비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">일시장려금</td>
+                                                    <td class="right" colspan="4">600,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">YYYY-MM-DD</td>
+                                                    <td class="center">월정금</td>
+                                                    <td class="right" colspan="4">300,000</td>
+                                                    <td class="center">국민</td>
+                                                    <td class="center"></td>
+                                                    <td class="center"></td>
+                                                </tr>
+                                                <!--합산구역-->
+                                                <tr>
+                                                    <th colspan="2">합계</th>
+                                                    <th class="right" colspan="4">1,591,025,000</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!--2024.11.07 기타정보관리-->
+                                <div class="tabCont">
+                                    <div class="comSmTit">
+                                        <div class="alignL">
+                                            <div class="title">체육인정보 이력</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="cptTable">
+                                        <table class="tbView">
+                                            <colgroup>
+                                                <col style="width:110px;" />
+                                                <col style="width:auto;" />
+                                            </colgroup>
+                                            <caption></caption>
+                                            <thead>
+                                                <th class="center">번호</th>
+                                                <th class="center">내용</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="center">3</td>
+                                                    <td>
+                                                        <div class="cptDataHistory">
+                                                            <dl class="historyList">
+                                                                <dt class="cptGroupBtm custom">
+                                                                    YYYY-MM-DD 홍길동
+                                                                </dt>
+                                                                <dd>체육인관련 업무이력 메모영역</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">2</td>
+                                                    <td>
+                                                        <div class="cptDataHistory">
+                                                            <dl class="historyList">
+                                                                <dt class="cptGroupBtm custom">
+                                                                    YYYY-MM-DD 홍길동
+                                                                </dt>
+                                                                <dd>체육인관련 업무이력 메모영역</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="center">1</td>
+                                                    <td>
+                                                        <div class="cptDataHistory">
+                                                            <dl class="historyList">
+                                                                <dt class="cptGroupBtm custom">
+                                                                    YYYY-MM-DD 홍길동
+                                                                </dt>
+                                                                <dd>체육인관련 업무이력 메모영역</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //탭메뉴 스크립트
+        $(".modTab li.item a").on("click",function(e){
+            if($(this).parents(".modTab").hasClass("in")){
+                e.preventDefault();
+                let _idx = $(this).parent().index();
+                $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+            }
+        });
+    });
+</script>
+
+
+
+
+            </div>
+            <!-- //콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+        <!-- Footer -->
+        
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+
+</div>
+</body>
+</html>

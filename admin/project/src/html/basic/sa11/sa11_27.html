@@ -1,0 +1,115 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>아카데미교육설정</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">홈페이지관리</li>
+                <li class="item">아카데미교육설정</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:12%;">
+                <col style="width:20%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:12%;">
+                <col style="width:10%;">
+                <col style="width:10%;">
+                <col style="width:12%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>년도</th>
+                    <th>적용기간</th>
+                    <th>이수학점-처방사</th>
+                    <th>이수학점-측정사</th>
+                    <th>이수학점-신규입사자</th>
+                    <th>필수과목</th>
+                    <th>선택과목</th>
+                    <th>기능</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023</td>
+                    <td>0000-00-00 ~ 0000-00-00</td>
+                    <td>35</td>
+                    <td>30</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td class="center">
+                        <button  type="button" class="gridBtn gLine">상세내역</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>0000-00-00 ~ 0000-00-00</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>00</td>
+                    <td class="center">
+                        <button  type="button" class="gridBtn gLine">상세내역</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button  type="button" class="srhBtn  dkBlue">등록</button>
+        </div>
+    </div>
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

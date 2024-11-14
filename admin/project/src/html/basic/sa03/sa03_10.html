@@ -1,0 +1,324 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>체력측정 예약등록</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">체력측정관리</li>
+                <li class="item">체력측정 예약등록</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+     <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>체력인증센터</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">센터 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>예약일자</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"><button class="dateBtn">날짜검색</button></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--20230119 그리드 일괄 변경-->
+    <div class="cptCalendarOpt">
+        <div class="yymmArea">
+            <a href="#none"><img src="../../../images/common/btn_prev.png"/></a>
+            <div>
+                <span>2023</span>
+                <span>년</span>
+                <span>01</span>
+                <span>월</span>
+            </div>
+            <a href="#none"><img src="../../../images/common/btn_next.png"/></a>
+        </div>
+    </div>
+
+    <!--20230202 참고사항 
+        그리드에서 기능의 위치가 두번째로 바뀜 thead tbody 일괄 수정 참고 바람
+    -->
+    <!--목록형식-->
+    <div class="cptCalViewType calListTy">
+        <!-- 그리드 -->
+        <div class="cptGrid listTypeCal">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:200px;">
+                    <col style="width:12%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:8%;">
+                    <col style="width:15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>예약시간</th>
+                        <th>기능</th>
+                        <th>인원</th>
+                        <th>유아</th>
+                        <th>유소년</th>
+                        <th>청소년</th>
+                        <th>성인</th>
+                        <th>어르신</th>
+                        <th>예약구분</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <span>마감</span> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <!-- <button class="gridBtn purple">예약등록</button> --><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <span>마감</span> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <!-- <button class="gridBtn purple">예약등록</button> --><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <span>마감</span> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <!-- <button class="gridBtn purple">예약등록</button> --><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center"></td>
+                    </tr>
+                    <tr>
+                        <td>00:00 ~ 00:00</td>
+                        <td>
+                            <!--마감일경우-->
+                            <!-- <span>마감</span> --> <!--20230125 마감일 경우 일반텍스트로 변경-->
+                            <!--등록 가능 할 경우-->
+                            <button class="gridBtn purple">예약등록</button><!--20230125 예약등록버튼 클래스 변경-->
+                        </td>
+                        <td>30</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="center">관리자만 예약 가능</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- // 20230119 그리드 일괄 변경-->
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

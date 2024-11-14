@@ -1,0 +1,276 @@
+ <!-- Header -->
+ <%- include('../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+             <!-- KB 2024.10.24 수정 -->
+            <div class="comSubTitle mobileTop">
+                <h3>나의 광고 <p class="mobileClick"><span class="img"></span>제작 중 <span class="count">00</span> <span class="arrow"><img src="../../images/common/ico_infoDown.svg" alt=""></span></p></h3>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+
+            <!-- KB 2024.10.24 수정 -->
+            <!--스탭 영역-->
+            <%- include('../ejs/stepBar.ejs', {
+                depth2: 1,
+                url: "../../"
+            }) %>
+            <!--//스탭 영역-->
+            <!-- KB 2024.10.24 수정 -->
+
+            <!-- KB 2024.10.24 수정 -->
+            <div class="cptSubTop">
+                <div class="subTopTxt">
+                    <p class="subTitle">타이틀 영역</p>
+                </div>
+                <div class="cptBtnForm d-flex gap10">
+                    <!-- kb 2024-10-29 -->
+                    <button type="button" class="btn scnd"><span></span>영상 제작 튜토리얼</button>
+                </div>
+            </div>
+            <!--// KB 2024.10.24 수정 -->
+
+            <div class="cptAdList">
+                <div class="sortingArea">
+                    <div class="sortInner">
+                        <ul>
+                            <li class="active"><button type="button" class="btnSort creDt">생성일 순</button></li>
+                            <li><button type="button" class="btnSort insDt">수정일 순</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerBox">
+                    <ul>
+                        <li>
+                            <div class="cardCover">
+                                <div class="thumbArea">
+                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                </div>
+                                <div class="infoBox">
+                                    <div class="topArea">
+                                        <span class="flag">제작 중</span>
+                                        <div class="rytOpt">
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="midArea">
+                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
+                                        <div class="dateInfo">
+                                            <ul>
+                                                <li>
+                                                    <span>마지막 수정일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                                <li>
+                                                    <span>최초 생성일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="botArea">
+                                        <div class="cptBtnForm d-flex gap10">
+                                            <button type="button" class="btn scnd">성우 추가하기</button>
+                                            <button type="button" class="btn prmy">소재 완성하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingCover">
+                                <div class="setInner">
+                                    <div class="buttonArea">
+                                        <ul>
+                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
+                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
+                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clsBtn">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                    </div>
+                                </div>
+                           </div>
+                        </li>
+                        <li>
+                            <div class="cardCover">
+                                <div class="thumbArea">
+                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                </div>
+                                <div class="infoBox">
+                                    <div class="topArea">
+                                        <span class="flag">제작 중</span>
+                                        <div class="rytOpt">
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="midArea">
+                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
+                                        <div class="dateInfo">
+                                            <ul>
+                                                <li>
+                                                    <span>마지막 수정일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                                <li>
+                                                    <span>최초 생성일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="botArea">
+                                        <div class="cptBtnForm d-flex gap10">
+                                            <button type="button" class="btn scnd">성우 추가하기</button>
+                                            <button type="button" class="btn prmy">소재 완성하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingCover">
+                                <div class="setInner">
+                                    <div class="buttonArea">
+                                        <ul>
+                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
+                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
+                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clsBtn">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                    </div>
+                                </div>
+                           </div>
+                        </li>
+                        <li>
+                            <div class="cardCover">
+                                <div class="thumbArea">
+                                    <img src="../../images/temp/tmp_thumbnail.png" alt="" />
+                                </div>
+                                <div class="infoBox">
+                                    <div class="topArea">
+                                        <span class="flag">제작 중</span>
+                                        <div class="rytOpt">
+                                            <button type="button" class="insertVideoBtn" onclick="popOpen('clause03')"><span class="hidden">광고수정하기</span></button>
+                                            <button type="button" class="settingBtn"><span class="hidden">설정</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="midArea">
+                                        <p class="adTitle">광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트, 광고명 노출 영역 말줄임 테스트</p>
+                                        <div class="dateInfo">
+                                            <ul>
+                                                <li>
+                                                    <span>마지막 수정일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                                <li>
+                                                    <span>최초 생성일</span>
+                                                    <span>2024.09.30</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="botArea">
+                                        <div class="cptBtnForm d-flex gap10">
+                                            <button type="button" class="btn scnd">성우 추가하기</button>
+                                            <button type="button" class="btn prmy">소재 완성하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settingCover">
+                                <div class="setInner">
+                                    <div class="buttonArea">
+                                        <ul>
+                                            <li class="videoTitSet"><a href="#none">영상 제목 변경하기</a></li>
+                                            <li class="videoCopy"><a href="#none">영상 복사하기</a></li>
+                                            <li class="videoErase"><a href="#none">영상 삭제하기</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clsBtn">
+                                        <a href="#none"><span class="hidden">닫기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../ejs/quick.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<div class="modPopup type02 popOpen" id="clause03">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <button class="closeBtn" onclick="popClose('clause03')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="comClause">
+                <p class="basicTxt">
+                    <p class="title">광고명을 입력해주세요!</p>
+                    <p class="desc">
+                        최대 00자 이내로 입력해주세요.
+                    </p>
+                    <div class="cptForm">
+                        <div class="frmIpt">
+                            <input type="text" placeholder="예) 우리동네광고 광고영상"/>
+                        </div>
+                    </div>
+                </p>                        
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn white" onclick="popClose('clause03')">취소</button> -->
+            <button type="button" class="popBtn blue" onclick="popClose('clause03')">등록</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+<%- include('../ejs/moBar.ejs', { }) %>

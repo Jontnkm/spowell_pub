@@ -1,0 +1,485 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!--===============================================================체력측정 참가신청서===================================================================-->
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">팝업 타이틀</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <p class="appFrmTit">팝업 내 타이틀</p>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">관리번호</th>
+                                        <td class="left">2203000000</td>
+                                        <th class="left">접수일자</th>
+                                        <td class="left">2023년 00월 00일</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">신청구분</th>
+                                        <td class="left" colspan="3">개인 or 기관-기관명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">신청인 정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">1080년 12월 31일</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">전화번호</th>
+                                        <td class="left">02-123-4567</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">휴대전화  </th>
+                                        <td class="left">010-0999-9345</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">주소</th>
+                                        <td class="left">[12345] 서울시 송파구 방이대로 987 뿡뿡아파트 2동 2호</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p class="appFrmInfo">
+                            「국민체육진흥법 시행규칙」 제27조의제1항에 따라 위와 같이 체력인증을 신청합니다.
+                        </p>
+
+                        <div class="cptSigMkArea">
+                            <p class="sigDt">2023년 00월 00일</p>
+                            <div class="sigMk">
+                                <span class="mnTxt">신청인</span>
+                                <span class="mxTxt">홍길동</span>
+                                <div class="sigPsArea">
+                                    <span class="tempTxt">서명</span>
+                                    <div class="sigObj">
+                                        <!--서명 이미지 위치-->
+                                        <img src="../../../common/images/common/login_signin.png" />
+                                        <!-- // 서명 이미지 위치-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="appFrmEnd">국민체력100 체력인증기관 귀중</p>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<!--===============================================================//체력측정 참가신청서===================================================================-->
+
+
+<!--===============================================================체력측정 참가동의서===================================================================-->
+<!-- 팝업 영역 -->
+<div id="sample02" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">체력측정 참가동의서</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <p class="appFrmTit">사전신체상태 설문지 및 체력측정 참가동의서</p>
+
+                        <div class="appFrmDesc">
+                            <p>사전신체상태 질문지(PAR-Q)</p>
+                            <p>신체활동/운동을 증가시키기 전 또는 체력 평가를 받기 전 확인 사항입니다. 질문을 잘 읽고 정직하게 대답하십시오.</p>
+                            <p>(7개 문항 중 한항목이라도 '예'로 응답한 경우 체력측정이 불가함을 알려드립니다.)</p>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable mT10">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:70px;" />
+                                    <col style="width:70px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>사전신체상태</th>
+                                        <th>예</th>
+                                        <th>아니오</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">의사가 당신의 심장 상태에 대해 말한 적이 있습니까? 그리고 의사가 지시한대로만 신체활동을 해야 합니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="left">신체활동 시 가슴의 통증을 느낍니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="left">최근 운동을 하지 않을 때도 가슴에 통증을 느낀 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="left">어지러워서 비틀거리거나 의식을 잃은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">5</td>
+                                        <td class="left">과거 운동시 뼈나 관절(허리, 무릎, 엉덩이)에 손상을 입은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo401" type="radio" class="iptRdo" name="rdo401"><label for="rdo401" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo402" type="radio" class="iptRdo" name="rdo401"><label for="rdo402" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">6</td>
+                                        <td class="left">혈압 또는 심혈관 질환 때문에 최근 의사에게 약 처방을 받은 적이 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">7</td>
+                                        <td class="left">이 외 운동을 하면 안되는 다른 이유가 있습니까?</td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo601" type="radio" class="iptRdo" name="rdo601"><label for="rdo601" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="rdo602" type="radio" class="iptRdo" name="rdo601"><label for="rdo602" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="textBox clar">※ 체력측정당일 혈압이 수축기 160mmHg, 이완기 100mmHg 이상인 경우 체력측정이 제한될 수 있습니다.</div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">국민체력100 체력측정 참가 동의</div>
+                            </div>
+                        </div>
+                        <div class="appFrmAgmtDesc ty01">
+                            <div class="desc">
+                                <span>·</span>
+                                <p>체력측정은 본인의 자발적 의사에 따라 참여하게 되었습니다.</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>본인은 체력측정 전 병력(가족병력 포함)과 관련하여 운영요원에게 알리겠습니다.</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>체력측정에 따른 부상방지를 위하여 복장(운동복, 운동화)을 준수하겠습니다.</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>체력측정 중 신체적 이상증상이 있을 시 체력측정을 중지하겠습니다.</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>귀중품 및 개인소지품은 운영요원의 안내에 따라 별도 보관하겠습니다. 개인 소지로 인한분실 시 그 책임은 본인에게 있으며, 센터에는 책임이 없습니다.</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>1일 1회 측정, 일부 측정항목의 재측정은 불가합니다.</p>
+                            </div>
+                            <p class="info">본인은 국민체력100 사업의 체력측정 및 운동처방을 받는 과정에서 체력인증센터 운영요원으로부터 체력측정 전반에 관한 충분한 설명을 듣고 숙지하였으며 체력측정 참가 동의합니다.</p>
+                        </div>
+                        <div class="appFrmAgmt">
+                            <div class="alignR">
+                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">동의합니다.</label></div>
+                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">동의하지 않습니다.</label></div>
+                            </div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보 수집 · 이용 동의</div>
+                            </div>
+                        </div>
+
+                        <div class="appFrmAgmtDesc ty02">
+                            <div class="desc">
+                                <span>·</span>
+                                <p>개인정보 수집목적 : 홈페이지 서비스 이용제공 및 체력인증, 체력증진 프로그램 제공</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <div>
+                                    <p class="impact01">개인정보 수집항목</p>
+                                    <ul>
+                                        <li>
+                                            <span>- 필수정보 :</span>
+                                            <p>성명, 생년월일, 성별, 휴대전화번호, 혈압, 신장, 체중, 체지방율, 허리둘레, 근력, 근지구력, 심폐지구력, 유연성, 민첩성, 순발력,<br/>협응력</p>
+                                        </li>
+                                        <li>
+                                            <span>- 선택정보 :</span>
+                                            <p>전화번호, 주소</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>개인정보 보유 및 이용기간 :  <span class="impact02">2년 또는 회원탈퇴 시까지</span><br/><span class="expl">※ 단, 체력측정정보(혈압, 신장, 체중, 체지방율, 허리둘레, 근력, 근지구력, 심폐지구력, 유연성, 민첩성, 순발력, 협응력)는 보유 및 이용기간 도래 시 익명처리됩니다.</span></p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>신청인은 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만 필수동의 항목 수집 및 이용에 동의하지 않을 경우 체력측정이 불가능하며 선택동의 항목에 동의하지 않을 경우 불이익은 없습니다.</p>
+                            </div>
+                        </div>
+                        <div class="appFrmAgmt">
+                            <div class="alignR">
+                                <p>필수정보 : </p>
+                                <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">동의합니다.</label></div>
+                                <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">동의하지 않습니다.</label></div>
+                            </div>
+                            <div class="alignR">
+                                <p>선택정보 : </p>
+                                <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo103"><label for="rdo105" class="iptLbl">동의합니다.</label></div>
+                                <div class="frmChoBox"><input id="rdo106" type="radio" class="iptRdo" name="rdo103"><label for="rdo106" class="iptLbl">동의하지 않습니다.</label></div>
+                            </div>
+                        </div>
+                        
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">민감정보 수집 · 이용 동의</div>
+                            </div>
+                        </div>
+
+                        <div class="appFrmAgmtDesc ty03">
+                            <div class="desc">
+                                <span>·</span>
+                                <p>민감정보 수집목적 : 체력인증, 체력증진 프로그램 제공</p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>민감정보 수집 항목 : <span class="impact02">병력</span></p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>민감정보 보유 및 이용기간 : <span class="impact02">2년 또는 회원탈퇴 시까지</span><br/><span class="expl">※ 단, 보유 및 이용기간 도래 시 익명처리됩니다.</span></p>
+                            </div>
+                            <div class="desc">
+                                <span>·</span>
+                                <p>신청인은 민감정보의 수집 및 이용을 거부할 수 있습니다. 다만 이러한 민감정보 수집 및 이용에 동의하지 않을 경우 체력측정이 불가능합니다.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="appFrmAgmt">
+                            <div class="alignR">
+                                <div class="frmChoBox"><input id="rdo107" type="radio" class="iptRdo" name="rdo104"><label for="rdo107" class="iptLbl">동의합니다.</label></div>
+                                <div class="frmChoBox"><input id="rdo108" type="radio" class="iptRdo" name="rdo104"><label for="rdo108" class="iptLbl">동의하지 않습니다.</label></div>
+                            </div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">법정대리인정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">연락처</th>
+                                        <td class="left">011-1123-4567</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">신청인과의 관계</th>
+                                        <td class="left">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptSigMkArea mT60">
+                            <p class="sigDt">2023년 00월 00일</p>
+                            <div class="sigMk">
+                                <span class="mnTxt">신청인</span>
+                                <span class="mxTxt">홍길동</span>
+                                <div class="sigPsArea">
+                                    <span class="tempTxt">서명</span>
+                                    <div class="sigObj">
+                                        <!--서명 이미지 위치-->
+                                        <img src="../../../common/images/common/login_signin.png" />
+                                        <!-- // 서명 이미지 위치-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sigMk">
+                                <span class="mnTxt">법정대리인</span>
+                                <span class="mxTxt">홍길동</span>
+                                <div class="sigPsArea">
+                                    <span class="tempTxt">서명</span>
+                                    <div class="sigObj">
+                                        <!--서명 이미지 위치-->
+                                        <img src="../../../common/images/common/login_signin.png" />
+                                        <!-- // 서명 이미지 위치-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="appFrmEnd ty02">
+                            <p>※ 체력측정 시 갑작스러운 부상(상해) 및 신체의 이상신호에 대하여 본 체력인증 센터에는 책임을 묻지 않겠으며, 모든 책임은 본인에게 있습니다.</p>
+                            <p>※ 본 체력 인증센터에서는 체력측정 시 보상(상해)에 대하여 상해보험에 가입되어 있으며, 보험가입 범위 내에서 보험처리를 할 수 있음을 알려드립니다.</p>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<!--===============================================================//체력측정 참가동의서===================================================================-->
+
+
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

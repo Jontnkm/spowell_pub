@@ -1,0 +1,487 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup lg on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">메세지 발송하기</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 1 : 1분할 -->
+                        <div class="modDivision">
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">수신대상자 조회등록</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- 검색조건 -->
+                                <div class="cptSearchArea">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:150px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:150px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>이름</th>
+                                                <td>
+                                                    <input type="text" class="iptText">
+                                                </td>
+                                                <th>아이디</th>
+                                                <td>
+                                                    <input type="text" class="iptText">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4" class="right">
+                                                    <button type="button" type="button" class="btnSearch">검색</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- 그리드/테이블 상단 -->
+                                <div class="cptGroupTop">
+                                    <div class="alignL">
+                                        <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="cptTable" style="height:307px; overflow-y:scroll;">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:18%;">
+                                            <col style="width:23%;">
+                                            <col style="width:18%;">
+                                            <col style="width:23%;">
+                                            <col style="width:18%;">
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>이름</th>
+                                                <th>아이디</th>
+                                                <th>생년월일</th>
+                                                <th>연락처</th>
+                                                <th>기능</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="center">홍길동</td>
+                                                <td class="center">member_id</td>
+                                                <td class="center">2023-12-31</td>
+                                                <td class="center">010-1234-1234</td>
+                                                <td class="center">
+                                                    <button type="button" class="gridBtn blLine" onclick="openAlert('splAlt01')">추가</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">수신대상자 직접등록</div>
+                                    </div>
+                                </div>
+                        
+                                <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+                                    <ul class="tabMenu">
+                                        <li class="item on"><a href="#">개별등록</a></li>
+                                        <li class="item"><a href="#">일괄등록</a></li>
+                                    </ul>
+                                    <!-- modTab in 영역 -->
+                                    <div class="tabContGroup">
+                                        <div class="tabCont on">
+                                            <div class="srchBox">
+                                                <div class="cptSearchArea">
+                                                    <table>
+                                                        <caption></caption>
+                                                        <colgroup>
+                                                            <col style="width:150px;">
+                                                            <col style="width:auto;">
+                                                            <col style="width:150px;">
+                                                            <col style="width:auto;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>이름 <span class="required">*</span></th>
+                                                                <td>
+                                                                    <input type="text" class="iptText">
+                                                                </td>
+                                                                <th>휴대전화 <span class="required">*</span></th>
+                                                                <td>
+                                                                    <input type="text" class="iptText">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="right" colspan="4">
+                                                                    <button type="button" class="btnSearch" onclick="openAlert('splAlt01')">추가</button>                                                                
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabCont">
+                                            <div class="srchBox">
+                                                <div class="cptSearchArea">
+                                                    <table>
+                                                        <caption></caption>
+                                                        <colgroup>
+                                                            <col style="width:150px;">
+                                                            <col style="width:auto;">
+                                                            <col style="width:150px;">
+                                                            <col style="width:auto;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>파일선택</th>
+                                                                <td colspan="3">
+                                                                    <div class="frmGroup">
+                                                                        <div class="fileBox">
+                                                                            <div class="fileBefore">
+                                                                                <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                                                <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                                            </div>
+                                                                            <div class="fileAfter">
+                                                                                <div class="textBox"></div>
+                                                                                <button type="button" class="fileDel">삭제</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="textBox clar dl"> * 반드시 샘플파일을 이용해서 등록하세요.</div>
+                                                                        <div class="sampleDl">
+                                                                            <a href="#none">샘플파일 다운로드</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="4" class="right">
+                                                                    <button type="button" class="btnSearch">확인</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dvsItem">
+                                <!-- 그리드/테이블 상단 -->
+                                <div class="cptGroupTop mTzero"> <!--20230214 클래스 추가-->
+                                    <div class="alignL">
+                                        <div class="title">수신자 목록</div>
+                                        <div class="unit"><span class="text">수신대상 <span class="total">12</span>건</span></div>
+                                    </div>
+                                </div>
+                                
+                                <!--메세지발송 수신자목록-->
+                                <div class="cptMsgList">
+                                    <ul>
+                                        <li><a href="#none"><span class="mR10">홍길가</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길나</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길다</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길라</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길마</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길바</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길사</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길아</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길자</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길차</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길카</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길타</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길파</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길하</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길가가</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길나나</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길다다</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길라라</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길마마</span><span>010-1234-5678</span></a></li>
+                                        <li><a href="#none"><span class="mR10">홍길바바</span><span>010-1234-5678</span></a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignL">
+                                    <div class="comSideOpt">
+                                        <button type="button" class="srhBtn dkBlue">선택삭제</button>
+                                        <button type="button" class="srhBtn red">전체삭제</button>
+                                    </div>
+                                </div>
+
+                                <div class="cptTable mT20">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">메세지 내용 <span class="required">*</span></th>
+                                                <td class="left">
+                                                    <textarea></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">송신번호 <span class="required">*</span></th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText" />
+                                                        <div class="textBox deco">-</div>
+                                                        <input type="text" class="iptText" />
+                                                        <div class="textBox deco">-</div>
+                                                        <input type="text" class="iptText" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">발송일자</th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">즉시발송</label></div>
+                                                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">예약발송</label></div>
+                                                    </div>
+                                                    <div class="frmGroup">
+                                                        <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"></div>
+                                                        <select name="" id="" class="iptSlt frmSm">
+                                                            <option value="">00시</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignR">
+                                    <div class="comSideOpt">
+                                        <button type="button" class="srhBtn purple" onclick="openAlert('splAlt02')">메시지 발송</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">총 00건을 메시지 수신자로 등록하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">메시지를 발송하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        //탭메뉴 스크립트
+        $(".modTab li.item a").on("click",function(e){
+            if($(this).parents(".modTab").hasClass("in")){
+                e.preventDefault();
+                let _idx = $(this).parent().index();
+                $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+            }
+        });
+
+        //수신자목록 선택 스크립트
+        $(".cptMsgList ul li a").click(function(){
+            if($(this).hasClass("selected")){
+                $(this).removeClass("selected");
+            }else{
+                $(this).addClass("selected");
+            }  
+        })
+    })
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

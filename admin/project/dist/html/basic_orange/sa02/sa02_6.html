@@ -1,0 +1,291 @@
+<!--#include virtual="/contents/layout/type01/layout.html" --> <!-- 퍼블리싱용 ( 개발에서 사용 X ) -->
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup lg on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">상세내역</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!--20230407 위치변경-->
+                        <div class="dvsItem">
+                            <!-- 작은 타이틀 -->
+                            <div class="comSmTit">
+                                <div class="alignL">
+                                    <div class="title">기본정보</div>
+                                </div>
+                            </div>
+                    
+                            <!-- 테이블 -->
+                            <div class="cptTable">
+                                <table class="tbView">
+                                    <colgroup>
+                                        <col style="width:120px;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:120px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <caption></caption>
+                                    <tbody>
+                                        <tr>
+                                            <th class="left">이름</th>
+                                            <td class="left">ㅇㅇㅇ</td>
+                                            <th class="left">아이디</th>
+                                            <td class="left">member_id</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">생년월일</th>
+                                            <td class="left">2022-12-31(양력)</td>
+                                            <th class="left">성별</th>
+                                            <td class="left">남자</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="left">연락처</th>
+                                            <td class="left">010-0000-0000</td>
+                                            <th class="left">회원가입 / 로그인</th>
+                                            <td class="left">2022-12-31 / 0000-00-00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- // 20230407 위치변경-->
+
+                        <!-- 1 : 1분할 -->
+                        <div class="modDivision half"> <!--20230407 클래스 half 추가-->
+                            <!-- 20230407 div.dvsItem 추가 -->
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">추가정보</div>
+                                    </div>
+                                </div>
+
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:110px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>내용</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">우편번호</th>
+                                                <td class="left">00000</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">주소</th>
+                                                <td class="left">서울시 송파구 올림픽로 80</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">상세주소</th>
+                                                <td class="left">ㅇㅇㅇㅇ</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">거주지역</th>
+                                                <td class="left">서울시 송파구</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">보호자 이름</th>
+                                                <td class="left">ㅇㅇㅇ</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">보호자 연락처</th>
+                                                <td class="left">010-0000-0000</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">결혼여부<span class="optTxt">(선택)</span></th>
+                                                <td class="left">기혼</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">가족수<span class="optTxt">(선택)</span></th>
+                                                <td class="left">3명</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">최종학력<span class="optTxt">(선택)</span></th>
+                                                <td class="left">대학교(4년제 이상) 졸업</td>
+                                            </tr>
+                                            <!-- <tr>
+                                                <th class="left">가입경로<span class="optTxt">(선택)</span></th>
+                                                <td class="left">방송</td>
+                                            </tr> -->
+                                            <!--20230209 가입경로 행 삭제-->
+                                            <!-- // 20230209 가입경로 행 삭제-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="dvsItem">
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">기타정보</div>
+                                    </div>
+                                </div>
+
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:160px;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>회원구분</th>
+                                                <th>회원번호</th>
+                                                <th>보유 마일리지</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="center">정회원(<span class="txtBlue">청소년</span>)</td>
+                                                <td class="center">90000000646856</td>
+                                                <td class="center"><span class="txtBlue">3,350</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignR">
+                                    <div class="comSideOpt">
+                                        <button class="srhBtn dkbLine">상세조회</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">최근 체력측정내역</div>
+                                    </div>
+                                </div>
+
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">체력인증센터</th>
+                                                <td class="left">송파</td>
+                                                <th class="left">체력등급</th>
+                                                <td class="left"><span class="txtBlue">1등급</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">측정대상</th>
+                                                <td class="left">청소년</td>
+                                                <th class="left">측정구분</th>
+                                                <td class="left">일반측정</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">측정일자</th>
+                                                <td class="left">2023-12-31</td>
+                                                <th class="left">회차구분</th>
+                                                <td class="left">3회</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignR">
+                                    <div class="comSideOpt">
+                                        <button class="srhBtn dkbLine">상세조회</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- 작은 타이틀 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">참여중인 증진교실</div>
+                                    </div>
+                                </div>
+
+                                <!-- 테이블 -->
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                            <col style="width:120px;" />
+                                            <col style="width:auto;" />
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">체력인증센터</th>
+                                                <td class="left">송파</td>
+                                                <th class="left">프로그램</th>
+                                                <td class="left">프로그램명입니다</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">시작일자</th>
+                                                <td class="left">2023-12-31</td>
+                                                <th class="left">종료일자</th>
+                                                <td class="left">2023-12-31</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">출석률</th>
+                                                <td class="left">70%</td>
+                                                <th class="left">진행상태</th>
+                                                <td class="left"><span class="txtBlue">진행중</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- 그리드/테이블 하단 버튼 -->
+                                <div class="cptGroupBtm alignR">
+                                    <div class="comSideOpt">
+                                        <button class="srhBtn dkbLine">상세조회</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->

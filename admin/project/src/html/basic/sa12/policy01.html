@@ -1,0 +1,207 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>서비스이용약관</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth 01</li>
+                <li class="item">Depth 02</li>
+                <li class="item">Depth 03</li><!--필요시-->
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:auto;">
+                <col style="width:20%;">
+                <col style="width:20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>등록일시</th>
+                    <th>작성자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <a href="#none" class="listTit" onclick="openPopup('sample02')">서비스이용약관</a>
+                        <!-- <span class="newBtn"><img src="/common/images/common/icon_new.png"/></span> -->
+                    </td>
+                    <td>2024-02-05 11:25:46</td>
+                    <td>홍길동</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button class="srhBtn dkBlue" onclick="openPopup('sample03')">등록</button>
+        </div>
+    </div>
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample02" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">약관 상세</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div style="width:100%; height:500px; background:red; opacity:0.2"></div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<!-- 팝업 영역 -->
+<div id="sample03" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample03');">닫기</button>
+                    <div class="popTitle">약관 등록</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td class="left"><input type="text" class="iptText"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">파일첨부<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

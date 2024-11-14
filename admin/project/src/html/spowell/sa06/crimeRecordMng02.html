@@ -1,0 +1,193 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:110px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>이름 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmLg">
+                        </div>
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmLg">
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText frmLg">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">조회</button>
+                <button type="button" class="crudBtn blue">개별등록</button>
+                <button type="button" class="crudBtn blue">일괄등록</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:110px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>장애여부</th>
+                    <td>비장애</td>
+                    <th>대상구분</th>
+                    <td>선수</td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>성명</th>
+                    <td>000000-0000000</td>
+                    <th>주민등록번호</th>
+                    <td>000000-0000000</td>
+                    <th>종목</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>휴대전화</th>
+                    <td>010-0000-0000</td>
+                    <th>소속</th>
+                    <td></td>
+                    <th>포털ID</th>
+                    <td>member_Id</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">범죄사실확인내용</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:200px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:150px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>확정일자 <span class="required">*</span></th>
+                    <th>범죄사실확인내용 <span class="required">*</span></th>
+                    <th>증빙자료</th>
+                    <th>등록일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>YYYY-MM-DD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">발급문서조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="ContBox" style="width:100%; height:800px; background:#e5e5e5;">
+                            <!--개발 작업 시 style 제거 요청 - 컨텐츠 높이값 사용 예정-->
+                            발급문서별 구성내용 표기 
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn dkBlue">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

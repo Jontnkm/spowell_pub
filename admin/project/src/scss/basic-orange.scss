@@ -1,0 +1,9 @@
+:root {
+    --basic-color: #fe794d;
+    --basic-red : #b01f1f;
+    --basic-dkBlue: #2a2d3e;
+    --basic-purple: #263688;
+}
+.lytLogin .cptLogin .lgInner > div.titBox {background:#41403e;}
+.frmChoBox .iptChk:checked + .iptLbl {background:url(../images/basic_orange/ic_chk_on.png) left center no-repeat;}
+.frmChoBox .iptRdo:checked + .iptLbl {background:url(../images/basic_orange/ic_slt_on.png) left center no-repeat;}

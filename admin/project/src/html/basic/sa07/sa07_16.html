@@ -1,0 +1,174 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">아카데미교육 이수현황 - 상세조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">년도</th>
+                                        <td class="left">2023년도</td>
+                                        <th class="left">적용기간</th>
+                                        <td class="left">0000-00-00 ~ 0000-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">김태형</td>
+                                        <th class="left">체력인증센터</th>
+                                        <td class="left">KSPO송파</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">업무구분</th>
+                                        <td class="left">운동처방사</td>
+                                        <th class="left">학점현황</th>
+                                        <td class="left">8 / 30 (00%)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">아카데미교육 이수내역</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:8%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:8%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:8%;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>교육구분</th>
+                                        <th>교육명</th>
+                                        <th>학점</th>
+                                        <th>구분</th>
+                                        <th>구분</th>
+                                        <th>수료상태</th>
+                                        <th>이수학점</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">00</td>
+                                        <td class="center">K-스포에듀</td>
+                                        <td class="left">교육과정명</td>
+                                        <td class="center">5</td>
+                                        <td class="center">필수</td>
+                                        <td class="center">온라인</td>
+                                        <td class="center">수료</td>
+                                        <td class="center">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">00</td>
+                                        <td class="center">K-스포에듀</td>
+                                        <td class="left">교육과정명</td>
+                                        <td class="center">5</td>
+                                        <td class="center">필수</td>
+                                        <td class="center">온라인</td>
+                                        <td class="center">-</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">00</td>
+                                        <td class="center">외부교육</td>
+                                        <td class="left">교육과정명</td>
+                                        <td class="center">3</td>
+                                        <td class="center">선택</td>
+                                        <td class="center">오프라인</td>
+                                        <td class="center">수료</td>
+                                        <td class="center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">00</td>
+                                        <td class="center">기타교육</td>
+                                        <td class="left">교육과정명</td>
+                                        <td class="center">2</td>
+                                        <td class="center">선택</td>
+                                        <td class="center">온라인</td>
+                                        <td class="center">-</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

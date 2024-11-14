@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="퍼블리싱가이드">
+	<meta property="og:description" content="퍼블리싱가이드">	 
+
+	<title>IWI - 관리시스템 파일리스트</title>
+<!--
+	<link rel="stylesheet" href="/common/css/default.css" />
+	<link rel="stylesheet" href="/common/css/common.css" />
+	<link rel="stylesheet" href="/common/css/layout.css" />
+	<link rel="stylesheet" href="/common/css/component.css" />
+	<link rel="stylesheet" href="/common/css/main.css" />
+-->
+	<script type="text/javascript" src="/common/js/jquery-3.4.1.min.js"></script>
+
+<style type="text/css">
+* {box-sizing:border-box;}
+html,body {height:100%; margin:0; padding:0; background:#ebedef}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/common/webfont/Rubik-Regular.woff") format('woff'),
+  url("/common/webfont/Rubik-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url("/common/webfont/Rubik-Medium.woff") format('woff'),
+  url("/common/webfont/Rubik-Medium.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/common/webfont/Rubik-Bold.woff") format('woff'),
+  url("/common/webfont/Rubik-Bold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/common/webfont/Spartan-Bold.woff2") format('woff2');
+}
+
+
+
+/* 본고딕 Light */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/common/webfont/NotoSansKR-Light.woff") format("woff"),
+    url("/common/webfont/NotoSansKR-Light.woff2") format("woff2"),
+    url("/common/webfont/NotoSansKR-Light.otf") format("opentype");
+    
+}
+/* 본고딕 Regular */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/common/webfont/NotoSansKR-Regular.woff") format("woff"),
+    url("/common/webfont/NotoSansKR-Regular.woff2") format("woff2"),
+    url("/common/webfont/NotoSansKR-Regular.otf") format("opentype");
+}
+/* 본고딕 Medium */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/common/webfont/NotoSansKR-Medium.woff") format("woff"),
+    url("/common/webfont/NotoSansKR-Medium.woff2") format("woff2"),
+    url("/common/webfont/NotoSansKR-Medium.otf") format("opentype");
+}
+/* 본고딕 Bold */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/common/webfont/NotoSansKR-Bold.woff") format("woff"),
+    url("/common/webfont/NotoSansKR-Bold.woff2") format("woff2"),
+    url("/common/webfont/NotoSansKR-Bold.otf") format("opentype");
+}
+
+* {box-sizing: border-box; font-family: 'NotoSansCJKkr', sans-serif; letter-spacing: -1px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input, textarea {-webkit-border-radius:0; -webkit-appearance:none;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5; font-family: 'NotoSansCJKkr', sans-serif; color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+caption {font-size: 0;}
+
+input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+
+select {-moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../images/icon_select.png) calc(100% - 9px) center no-repeat;}
+select::-ms-expand {display:none}
+label {font-size: 0;}
+
+.skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
+.skip .quickBtn:focus {height:auto;}
+
+.hide {font-size:0 !important; position:fixed; left:-5000px; top:0;}
+
+.g-wrap {width:100%; height:100%;}
+.g-nav {width:256px; height:100%; background:#3c4b64; position:fixed; left:0; top:0;}
+.g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+.g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+.g-nav .g-menu {}
+.g-nav .g-depth1-group {}
+.g-nav .g-depth1-list {}
+.g-nav .g-depth1-name {padding:10px 10px 10px 20px; margin-top:10px; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; }
+.g-nav .g-depth1-name h2 {letter-spacing:0px;}
+.g-nav .g-depth2-group {}
+.g-nav .g-depth2-list {}
+.g-nav .g-depth2-name {}
+.g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+.g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+.g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+.g-nav .g-menu .close-menu {display:none;}
+
+.g-cont {width:calc(100% - 256px); height:100%; margin-left:256px;}
+.g-cont .g-top {width:calc(100% - 256px); height:56px; background:#fff; position:fixed; left:256px; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+.g-cont .g-top:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-top-menu {width:calc(100% - 300px); float:left;}
+.g-cont .g-top .g-top-menu .open-menu {display:none;}
+.g-cont .g-top .g-menu-group {width:100%; padding-left:20px; }
+.g-cont .g-top .g-menu-group:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-menu-list { float:left;}
+.g-cont .g-top .g-menu-list a {padding:0 20px; font-size:13px; font-weight:400; line-height:54px; color:#999; display:block; letter-spacing:0px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;}
+.g-cont .g-top .g-menu-list.on a {color:#333;}
+.g-cont .g-top .g-menu-list a:hover {color:#333;}
+.g-cont .g-top .g-top-text {width:300px; padding-right:30px; font-size:11px; letter-spacing:0px; font-weight:300; color:#aaa; line-height:54px; text-align:right; float:right;}
+
+.g-cont .g-body {padding:66px 30px 30px;}
+.g-cont .g-body .g-in-body {}
+
+
+.g-chart {}
+.g-chart:after {content:""; display:block; clear:both;}
+.g-chart dl {width:25%; padding-left:20px; letter-spacing:0px; border-left:4px solid #d8dbe0; border-radius:5px; float:left;}
+.g-chart dl.total {border-left-color:#2eb85c;}
+.g-chart dl.complete {border-left-color:#39f;}
+.g-chart dl.uncomplete {border-left-color:#e55353;}
+.g-chart dl.etc {border-left-color:#d8dbe0;}
+.g-chart dt {font-size:12px;}
+.g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+.g-file {}
+.g-file .g-file-title {width:auto; height:46px; padding-left:20px; font-size:14px; line-height:44px; border:1px solid #d8dbe0; border-radius:5px 5px 0 0; font-weight:400; display:block; color:#434343; margin:20px 0 0; background:#fff;}
+.g-file .g-file-cont {width:100%; margin:0; padding:20px; font-size:12px; color:#607d8b; font-weight:400; border:1px solid #d8dbe0; border-top:0; border-radius:0 0 5px 5px; background:#fff; overflow:auto;}
+.g-file .g-table { width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .col1 {width:13%;}
+.g-file .g-table .col2 {width:13%;}
+.g-file .g-table .col3 {width:13%;}
+.g-file .g-table .col4 {width:13%;}
+.g-file .g-table .col5 {}
+.g-file .g-table .col6 {width:60px;}
+.g-file .g-table .col7 {width:150px;}
+.g-file .g-table .col8 {width:10%;}
+.g-file .g-table th {padding:13px; background:#d8dbe0; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500;}
+.g-file .g-table td {padding:8px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px;}
+.g-file .g-table td.link {text-align:left;}
+.g-file .g-table td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table td .btn_worked {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#16d826; display:inline-block;}
+.g-file .g-table td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table td a {font-size:12px; color:#3580db;}
+.g-file .g-table .page .more button {width:50px; padding:1px 5px 2px; font-size:10px; border-radius:3px; background:#3580db;}
+.g-file .g-table .page .more button:after {content:"OPEN"; color:#fff;}
+.g-file .g-table .page.on .more button:after {content:"CLOSE"; color:#fff;}
+.g-file .g-table .page-add {display:none;}
+.g-file .g-table .page-add.on {display:table-row;}
+.g-file .g-table .page-add > td {background:#666;}
+
+.g-file .g-table .g-table-add {width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .g-table-add .col1 {width:30%;}
+.g-file .g-table .g-table-add .col2 {width:30%;}
+.g-file .g-table .g-table-add .col3 {width:auto;}
+.g-file .g-table .g-table-add  th {padding:5px; text-align:center; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500; background:#edeff3;}
+.g-file .g-table .g-table-add  td {padding:5px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px; background:#fff;}
+.g-file .g-table .g-table-add  td:nth-child(2) {text-align:left;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table .g-table-add  td a {font-size:12px; color:#3580db;}
+
+@media screen and (min-width: 100px) and (max-width: 1023px) {
+    .g-nav {width:100%; height:auto; padding-top:56px; background:#3c4b64; position:static;}
+    .g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+    .g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+    .g-nav .g-menu {height:100vh; padding-bottom:30px; background:#3c4b64; position:fixed; left:0; top:0; z-index:1000; display:none;}
+    .g-nav .g-menu.on {display:block;}
+    .g-nav .g-depth1-name {padding:10px; margin-top:0; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; text-align:center;}
+    .g-nav .g-depth1-name h2 {letter-spacing:0px;}
+    .g-nav .g-depth2-group {font-size:0;}
+    .g-nav .g-depth2-list {width:50%; display:inline-block; }
+
+    .g-nav .g-menu .close-menu {width:25px; height:25px; font-size:0; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-nav .g-menu .close-menu:before {content:""; width:21px; height:2px; background:#333; transform: rotate(45deg); position:absolute; left:2px; top:12px;}
+    .g-nav .g-menu .close-menu:after {content:""; width:21px; height:2px; background:#333; transform: rotate(-45deg); position:absolute; left:2px; top:12px;}
+    
+    /*
+    .g-nav .g-depth2-list {width:33.333%; display:inline-block; }
+    .g-nav .g-depth2-name {}
+    .g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+    .g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+    .g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+    */
+    .g-cont {width:100%; height:auto; margin-left:0;}
+    .g-cont .g-top {width:100%; height:56px; background:#fff; position:fixed; left:0; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+    .g-cont .g-top .g-top-menu {width:100%; float:left; position:relative;}
+    .g-cont .g-top .g-menu-list { float:left;}
+    .g-cont .g-top .g-top-menu .open-menu {width:25px; height:25px; font-size:0; border:1px solid #333; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-cont .g-top .g-top-menu .open-menu:before {content:""; width:17px; height:17px; border-radius:50%; background:#333; position:absolute; left:3px; top:3px;}
+    .g-cont .g-top .g-top-menu .open-menu:after {content:""; width:13px; height:13px; border-radius:50%; background:#fff; position:absolute; left:5px; top:5px;}
+
+    .g-cont .g-top .g-top-text {display:none;}
+
+    .g-cont .g-body {padding:20px 20px;}
+    
+    .g-chart dl {width:50%; margin-bottom:10px;}
+    .g-chart dt {font-size:12px;}
+    .g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+    .g-file .g-file-title {background:rgba(48,60,84,0.8); color:#fff;}
+    .g-file .g-file-cont {padding:15px 15px 5px;}
+
+    .g-file .g-table { width:100%; display:block; border:0;}
+    .g-file .g-table thead {display:none;}
+    .g-file .g-table tbody {display:block;}
+    .g-file .g-table tr {width:100%; display:block; margin-bottom:10px; border: 1px solid #d8dbe0;}
+    .g-file .g-table td {display:block; text-align:left;}
+    .g-file .g-table td:last-child {border-bottom:0;}
+    .g-file .g-table td.dep2:before {content:"2차 메뉴명 : ";}
+    .g-file .g-table td.dep3:before {content:"3차 메뉴명 : ";}
+    .g-file .g-table td.dep4:before {content:"4차 메뉴명 : ";}
+    .g-file .g-table td.type:before {content:"Type : ";}
+    .g-file .g-table td.link:before {content:"URL : ";}
+    .g-file .g-table td.cmpt:before {content:"완료여부 : ";}
+    .g-file .g-table td.cmpt span {width:50px; height:20px; margin-left:5px; font-size:13px; line-height:20px; border-radius:3px; text-align:center; vertical-align: middle; display:inline-block;}
+    .g-file .g-table td.modify:before {content:"수정내역 : ";}
+    .g-file .g-table td.more {padding:0;}
+    .g-file .g-table .page .more button {width:100%; height:25px; font-size:13px; border-radius:0;}
+
+
+    .g-file .g-table .page-add {display:none;}
+    .g-file .g-table .page-add.on {display:block;}
+    .g-file .g-table .page-add > td {background:#666; padding-bottom:1px;}
+
+    .g-file .g-table .g-table-add {width:100%; display:block; border:0;}
+    .g-file .g-table .g-table-add tr {border:1px solid #d8dbe0;}
+}
+</style>
+</head>
+<body>
+<div class="g-wrap">
+	<div class="g-nav">
+		<div class="g-logo">
+			<h1>FILELIST</h1>
+		</div>
+		<div class="g-menu">
+			<ul class="g-depth1-group">
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>관리자</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('0')" href="#">로그인/대시보드</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('2')" href="#">02 회원관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('3')" href="#">03 체력측정관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('4')" href="#">04 자가체력측정관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('5')" href="#">05 운동상담관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('6')" href="#">06 체력증진교실관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('7')" href="#">07 체력센터운영관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('8')" href="#">08 스포츠마일리지 관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('9')" href="#">09 홈페이지관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('10')" href="#">10 통계관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('11')" href="#">11 시스템관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('12')" href="#">12 바로크레디트 관리자</a></h3></div>
+						</li>
+						<!--20240319 추가-->
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('13')" href="#">13 인적성검사 관리자</a></h3></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+            <button class="close-menu">바로가기 메뉴 닫기</button>
+		</div>
+	</div>
+	<div class="g-cont">
+		<div class="g-top">
+			<div class="g-top-menu">
+				<ul class="g-menu-group">
+					<li class="g-menu-list on"><a href="filelist.html">FILELIST</a></li>
+					<li class="g-menu-list"><a href="guide.html">GUIDE</a></li>
+				</ul>
+				<button class="open-menu">바로가기 메뉴 열기</button>
+			</div>
+			<div class="g-top-text">국민체력100 관리자 Web Publishing Guide</div>
+		</div>
+		<div class="g-body">
+			<div class="g-in-body">
+				<div class="g-file">
+					<div class="g-file-title">국민체력100 관리자 PAGE</div>
+					<div class="g-file-cont">
+						<div class="g-chart">
+							<dl class="total">
+								<dt>TOTAL</dt>
+								<dd>30</dd>
+							</dl>
+							<dl class="complete">
+								<dt>COMPLETE</dt>
+								<dd>20</dd>
+							</dl>
+							<dl class="uncomplete">
+								<dt>UNCOMPLETE</dt>
+								<dd>10</dd>
+							</dl>
+							<dl class="etc">
+								<dt>ETC</dt>
+								<dd>0</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_0">로그인/대시보드</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">로딩바</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/loading/loading01.html" target="_blank" title="새창">/html/basic_sam/loading/loading01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">로딩 html 소스 제일 하단 주석영역 사용 바람</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">로그인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/login/login.html" target="_blank" title="새창">/html/basic_sam/login/login.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">알럿 1ea, 팝업 6ea<br/>(아이디조회, 비번조회, 신규등록)</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드1</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/dashboard/dashBoard1.html" target="_blank" title="새창">/html/basic_sam/dashboard/dashBoard1.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드2</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/dashboard/dashBoard2.html" target="_blank" title="새창">/html/basic_sam/dashboard/dashBoard2.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드3</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/dashboard/dashBoard3.html" target="_blank" title="새창">/html/basic_sam/dashboard/dashBoard3.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_2">기본 리스트</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">기본 리스트 01</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/sam01/page01.html" target="_blank" title="새창">/html/basic_sam/sam01/page01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">기본 리스트 02</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/sam01/page02.html" target="_blank" title="새창">/html/basic_sam/sam01/page02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">기본 리스트 03</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/sam01/page03.html" target="_blank" title="새창">/html/basic_sam/sam01/page03.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">달력 페이지</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="/html/basic_sam/sam01/page04.html" target="_blank" title="새창">/html/basic_sam/sam01/page04.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">팝업 Large</td>
+									<td class="dep3">좌우 분할, 테이블 폼 입력</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="/html/basic_sam/sam01/page01_pop01.html" target="_blank" title="새창">/html/basic_sam/sam01/page01_pop01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">팝업 Large</td>
+									<td class="dep3">좌우 분할, 테이블 텍스트</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="/html/basic_sam/sam01/page01_pop02.html" target="_blank" title="새창">/html/basic_sam/sam01/page01_pop02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">팝업 Medium</td>
+									<td class="dep3">설문, 개인정보 동의 박스</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="/html/basic_sam/sam01/page01_pop03.html" target="_blank" title="새창">/html/basic_sam/sam01/page01_pop03.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$ (document).ready(function(){
+	var menu = $('#nav');
+	var con = $('.scroll');
+	var mlink = $('#nav a');
+	$(document).scroll(function(){
+		if ( $(document).scrollTop() > $('#nav').scrollTop() ){
+			$('.pg-top').css('display','block');
+		}
+		else{
+			$('.pg-top').css('display','none');
+		}
+	});
+	$(".g-chart .total dd").html($(".page").length);
+	$(".g-chart .complete dd").html($(".btn_finish").length);
+	$(".g-chart .uncomplete dd").html($(".btn_working").length + $(".btn_worked").length);
+	$(".g-chart .etc dd").html($(".page").length - $(".btn_finish").length - $(".btn_working").length - $(".btn_worked").length);
+
+	$(".more").on("click",function(){
+		$(this).parent().next().toggleClass("on");
+		$(this).parent().toggleClass("on");
+	});
+
+    $(".open-menu").on("click",function(){
+		$(".g-menu").addClass("on");
+	});
+    $(".close-menu").on("click",function(){
+		$(".g-menu").removeClass("on");
+	});
+});
+function fnMove(seq) {
+	event.preventDefault();
+	var offset = $("#PCSV_" + seq ).offset();
+	$('html, body').animate({scrollTop : (offset.top - 60)}, 400);
+    $(".g-menu").removeClass("on");
+}
+</script>
+</body>
+</html>

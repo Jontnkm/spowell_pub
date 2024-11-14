@@ -1,0 +1,113 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+
+<!-- 회원가입확인 팝업 -->
+<div id="sample02" class="modPopup md on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">회원가입확인</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="pText">* 일치하는 정보로 0명의 회원이 검색되었습니다.</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:105px;" />
+                                    <col style="width:70px;" />
+                                    <col style="width:85px;" />
+                                    <col style="width:105px;" />
+                                    <col style="width:50px;" />
+                                    <col style="width:100px;" />
+                                    <col style="width:75px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>가입일자</th>
+                                        <th>이름</th>
+                                        <th>아이디</th>
+                                        <th>생년월일</th>
+                                        <th>성별</th>
+                                        <th>휴대전화</th>
+                                        <th>기능</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">ㅇㅇㅇ</td>
+                                        <td class="center">member_id</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">남성</td>
+                                        <td class="center">000-0000-0000</td>
+                                        <td class="center"><button class="gridBtn dkBlue" onclick="openAlert('splAlt02')">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">ㅇㅇㅇ</td>
+                                        <td class="center">member_id</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">남성</td>
+                                        <td class="center">000-0000-0000</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7" class="center">일치하는 회원가입자가 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+         
+<!-- 회원가입확인 > 선택 알럿 -->
+<div id="splAlt02" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">선택한 회원으로 정보를<br/> 변경 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

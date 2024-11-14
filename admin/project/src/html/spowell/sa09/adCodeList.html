@@ -1,0 +1,311 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <!-- 좌우 분할 영역 -->
+    <div class="modDivision free">
+        <div class="dvsItem">
+            
+            <!-- 트리영역 -->
+            <div class="cptTree sticky">
+                <div class="treeArea">
+                    <div class="items">
+                        <p class="treeTit">코드목록</p>
+                        <div class="treeBtn">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="srhBtn purple">상위분류추가</button>
+                                    <button type="button" class="srhBtn purple">하위코드추가</button>
+                                    <button type="button" class="srhBtn red">삭제</button>
+                                    <button type="button" class="srhBtn gLine">열기/숨기기</button>
+                                    <button type="button" class="srhBtn gLine">새로고침</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="treeBox">
+                            
+                            <div class="comTreeArea">
+                                <div id="tree" class="tui-tree-wrap"></div>
+                                <link rel="stylesheet" href="/common/css/tui-tree.css">
+                                <script src="/common/js/tui-tree.js"></script>
+                                <script class="code-js">
+
+                                    var util = {
+                                        addEventListener: function(element, eventName, handler) {
+                                            if (element.addEventListener) {
+                                                element.addEventListener(eventName, handler, false);
+                                            } else {
+                                                element.attachEvent('on' + eventName, handler);
+                                            }
+                                        }
+                                    };
+
+                                    var data = [
+                                        {text: 'rootA', children: [
+                                            {text: 'sub-A1'},
+                                            {text: 'sub-A2'},
+                                            {text: 'sub-A3'},
+                                            {text: 'sub-A4'},
+                                            {text: 'sub-A5', state: 'closed', children: [
+                                                {text:'sub-A5A', children:[
+                                                    {text:'sub-A5A1'}
+                                                ]},
+                                                {text:'sub_A5B'}
+                                            ]},
+                                            {text: 'sub-A6'},
+                                            {text: 'sub-A7'},
+                                            {text: 'sub-A8'},
+                                            {text: 'sub-A9', state: 'closed', children: [
+                                                {text:'sub-A9A'},
+                                                {text:'sub-A9B'}
+                                            ]},
+                                            {text: 'sub-A10'},
+                                            {text: 'sub-A11'},
+                                            {text: 'sub-A12'}
+                                        ]},
+                                        {text: 'rootB', state:'closed', children: [
+                                            {text:'sub-B1'},
+                                            {text:'sub-B2'},
+                                            {text:'sub-B3'}
+                                        ]}
+                                    ];
+
+                                    var tree = new tui.Tree('#tree', {
+                                        data: data,
+                                        nodeDefaultState: 'opened'
+                                    }).enableFeature('Selectable', {
+                                        selectedClassName: 'tui-tree-selected',
+                                    });
+
+                                    var selectedBtn = document.getElementById('selectedBtn');
+                                    var deselectedBtn = document.getElementById('deselectedBtn');
+                                    var rootNodeId = tree.getRootNodeId();
+                                    var firstChildId = tree.getChildIds(rootNodeId)[0];
+                                    var selectedValue = document.getElementById('selectedValue');
+
+                                    tree.on('select', function(eventData) {
+                                        var nodeData = tree.getNodeData(eventData.nodeId);
+                                        selectedValue.value = 'selected : ' + nodeData.text;
+                                    });
+
+                                    tree.on('deselect', function(eventData) {
+                                        var nodeData = tree.getNodeData(eventData.nodeId);
+                                        selectedValue.value = 'deselected : ' + nodeData.text;
+                                    });
+
+                                    util.addEventListener(selectedBtn, 'click', function() {
+                                        tree.select(firstChildId);
+                                    });
+
+                                    util.addEventListener(deselectedBtn, 'click', function() {
+                                        tree.deselect();
+                                    });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //트리영역 -->
+
+        </div>
+        <div class="dvsItem">
+            
+            <!-- 메뉴설정 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">코드설정</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <caption></caption>
+                    <tbody>
+                        <tr>
+                            <th class="left">상위분류코드</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">상위분류명</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">하위코드</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">하위코드명</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">정렬순서</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">사용여부</th>
+                            <td class="left">
+                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">사용</label></div>
+                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">미사용</label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //메뉴설정 -->
+
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <caption></caption>
+                    <tbody>
+                        <tr>
+                            <th class="left">등록일자</th>
+                            <td class="left">&관리자명$ 2024-05-05</td>
+                            <th class="left">수정일시</th>
+                            <td class="left">$관리자명$ YYYY-MM-DD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- //선택옵션 -->
+        </div>
+    </div>
+    <!-- //좌우 분할 영역 -->
+
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">등록</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">접속허용IP 등록</div>
+                    <div class="popCont">
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>접속허용명</th>
+                                        <td>
+                                            <!--2024.11.13 view case area-->
+                                            <span>접속허용명</span>
+                                            <!--2024.11.13 view case area-->
+
+                                            <!--2024.11.13 create case area-->
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                            <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>승인IP</th>
+                                        <td>
+                                            <!--2024.11.13 view case area-->
+                                            <span>000.000.000.000</span>
+                                            <!--2024.11.13 view case area-->
+
+                                            <!--2024.11.13 create case area-->
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                            <div class="textBox">입력방식 : 개별 IP 또는 IP대역(000.000.000.000)</div>
+                                            <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>허용기간</th>
+                                        <td>
+                                             <!--2024.11.13 view case area-->
+                                             <span>2024-00-00</span>~<span>2024-00-00</span>
+                                             <!--2024.11.13 view case area-->
+ 
+                                             <!--2024.11.13 create case area-->
+                                             <div class="frmGroup">
+                                                <div class="iptDate">
+                                                    <input type="text" class="iptText" id="datepicker3">
+                                                </div>
+                                                <div class="textBox Deco">~</div>
+                                                <div class="iptDate">
+                                                    <input type="text" class="iptText" id="datepicker3">
+                                                </div>
+                                            </div>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">기한설정 안함</label></div>
+                                             <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="popBtm">
+                        <!--2024.11.13 view case button actiavtion-->
+                        <button class="btn gLine">삭제</button>
+                        <!--2024.11.13 view case button actiavtion-->
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>
+

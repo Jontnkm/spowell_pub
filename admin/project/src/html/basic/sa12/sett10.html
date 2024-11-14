@@ -1,0 +1,182 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>페이지 관리</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth 01</li>
+                <li class="item">Depth 02</li>
+                <li class="item">Depth 03</li><!--필요시-->
+            </ul>
+        </div>
+    </div>
+    <!-- tab in page -->
+    <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">PC</a></li>
+            <li class="item"><a href="#">Mobile Web</a></li>
+        </ul>
+        <!-- modTab in 영역 -->
+        <div class="tabContGroup">
+            <div class="tabCont on">
+                <div class="manageCov pgMng">
+                    <div class="ltMenu">
+                        <ul class="ltMenuListGrp">
+                            <li class="item"><a href="#none">대출</a></li>
+                            <li class="item"><a href="#none">전자계약</a></li>
+                            <li class="item"><a href="#none">고객센터</a></li>
+                            <li class="item"><a href="#none">나의대출조회</a></li>
+                            <li class="item"><a href="#none">회사소개</a></li>
+                            <li class="item"><a href="#none">사랑나눔</a></li>
+                            <li class="item"><a href="#none">인재영입</a></li>
+                        </ul>
+                    </div>
+                    <div class="rtCont">
+                        <!--좌측메뉴를 선택하지 않았을 경우-->
+                        <div class="defaultOpt">
+                            <p>메뉴를 선택 해야 해당 메뉴 및 페이지에 대한 스크립트 관리가 가능합니다.</p>
+                        </div>
+
+                        <!--좌측메뉴를 선택한 경우-->
+                        <div class="selectCov">
+                            <div class="topCont">
+                                <div class="dFlex">
+                                    <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001" checked><label for="rdo001" class="iptLbl">메뉴로 선택</label></div>
+                                    <div class="frmGroup">
+                                        <select name="" id="" class="iptSlt">
+                                            <option value="">약관 및 정책</option>
+                                            <option value=""></option>
+                                        </select>
+                                        <select name="" id="" class="iptSlt">
+                                            <option value="">서비스 이용약관</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="dFlex">
+                                    <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">URL 직접 입력</label></div>
+                                    <div class="frmGroup">
+                                        <input type="text" class="iptText" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="ctaBox">
+                                    <button type="button" class="check script">스크립트 조회</button>
+                                </div>
+                            </div>
+                            <div class="botCont">
+                                <div class="srcBox">
+                                    <textarea>test pc</textarea>
+                                </div>
+                                <div class="ctaBox">
+                                    <button type="button" class="cancel">이전으로 되돌리기</button>
+                                    <button type="button" class="check">문법 오류 확인</button>
+                                    <button type="button" class="active">적용</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabCont">
+                <div class="manageCov pgMng">
+                    <div class="ltMenu">
+                        <ul class="ltMenuListGrp">
+                            <li class="item"><a href="#none">대출</a></li>
+                            <li class="item"><a href="#none">전자계약</a></li>
+                            <li class="item"><a href="#none">고객센터</a></li>
+                            <li class="item"><a href="#none">나의대출조회</a></li>
+                            <li class="item"><a href="#none">회사소개</a></li>
+                            <li class="item"><a href="#none">사랑나눔</a></li>
+                            <li class="item"><a href="#none">인재영입</a></li>
+                        </ul>
+                    </div>
+                    <div class="rtCont">
+                        <!--좌측메뉴를 선택하지 않았을 경우-->
+                        <div class="defaultOpt">
+                            <p>메뉴를 선택 해야 해당 메뉴 및 페이지에 대한 스크립트 관리가 가능합니다.</p>
+                        </div>
+
+                        <!--좌측메뉴를 선택한 경우-->
+                        <div class="selectCov">
+                            <div class="topCont">
+                                <div class="dFlex">
+                                    <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001" checked><label for="rdo001" class="iptLbl">메뉴로 선택</label></div>
+                                    <div class="frmGroup">
+                                        <select name="" id="" class="iptSlt">
+                                            <option value="">약관 및 정책</option>
+                                            <option value=""></option>
+                                        </select>
+                                        <select name="" id="" class="iptSlt">
+                                            <option value="">서비스 이용약관</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="dFlex">
+                                    <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">URL 직접 입력</label></div>
+                                    <div class="frmGroup">
+                                        <input type="text" class="iptText" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="ctaBox">
+                                    <button type="button" class="check script">스크립트 조회</button>
+                                </div>
+                            </div>
+                            <div class="botCont">
+                                <div class="srcBox">
+                                    <textarea>test mobile web</textarea>
+                                </div>
+                                <div class="ctaBox">
+                                    <button type="button" class="cancel">이전으로 되돌리기</button>
+                                    <button type="button" class="check">문법 오류 확인</button>
+                                    <button type="button" class="active">적용</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            //탭메뉴 스크립트
+            $(".modTab li.item a").on("click",function(e){
+                if($(this).parents(".modTab").hasClass("in")){
+                    e.preventDefault();
+                    let _idx = $(this).parent().index();
+                    $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                    $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                }
+            });
+
+            //페이지관리 좌측 메뉴 선택 시
+            $(".ltMenuListGrp li a").click(function(){
+                $(".ltMenuListGrp li").removeClass("on");
+                $(this).parent("li").addClass("on");
+                $(this).parents(".ltMenu").next(".rtCont").find(".defaultOpt").hide();
+                $(this).parents(".ltMenu").next(".rtCont").find(".selectCov").show();
+            })
+
+            //스크립트 조회 버튼 클릭시
+            $(".script").click(function(){
+                $(this).parents(".topCont").next(".botCont").show();
+            })
+        });
+        </script>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

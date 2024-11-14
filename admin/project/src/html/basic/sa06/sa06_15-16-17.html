@@ -1,0 +1,861 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">증진교실 프로그램 등록/조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">프로그램 내용</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <!--20230113체력인증센터 항목 추가-->
+                                    <tr>
+                                        <th class="left">체력인증센터<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">서울송파</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">프로그램명<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">프로그램 분류선택</option>
+                                                </select>
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대상구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전체</label></div>
+                                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">유아</label></div>
+                                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">유소년</label></div>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">청소년</label></div>
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl">성인</label></div>
+                                            <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">어르신</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">대면</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">비대면</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">모집인원<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText frmXs" /><span class="textBox">명</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">담당강사(정)<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText frmLg" />
+                                            <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample02');">강사선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">담당강사(부)</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText frmLg" />
+                                            <button type="button" class="gridBtn dkbLine" onclick="openPopup('sample02');">강사선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">장소</th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영시간<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <div class="textBox deco">~</div>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="">00시</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영기간<!--20230113 필수항목 표시 추가 --><span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"><button type="button" class="dateBtn">날짜검색</button></div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"><button type="button" class="dateBtn">날짜검색</button></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">모집기간<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker3"><button type="button" class="dateBtn">날짜검색</button></div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker4"><button type="button" class="dateBtn">날짜검색</button></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영빈도<span class="required">*</span></th>
+                                        <td class="left">
+                                            <!-- 미사용시 삭제 바람 <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">월</label></div>
+                                                <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">화</label></div>
+                                                <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">수</label></div>
+                                                <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">목</label></div>
+                                                <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">금</label></div>
+                                                <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">토</label></div>
+                                                <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">일</label></div>
+                                            </div> -->
+                                            <div class="frmGroup">
+                                                <div class="textBox">총</div>
+                                                <input type="text" class="iptText frmTini">
+                                                <div class="textBox">회 운영</div>
+                                                <button type="button" class="gridBtn purple" onclick="openPopup('sample05');">수업일정등록</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">프로그램 내용<span class="required">*</span></th>
+                                        <td class="left">
+                                            <!-- 에디터 영역 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">준비사항</th>
+                                        <td class="left">
+                                            <textarea class="textArea areaMd"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">기타</th>
+                                        <td class="left">
+                                            <textarea class="textArea areaMd"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn2" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button type="button" class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 최대 500MB까지 첨부가능</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상태구분</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">진행</label></div>
+                                            <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">종료</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록자</th>
+                                        <td class="left">홍길동 2023-00-00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">대상 주간보호센터</div>
+                            </div>
+                            <div class="alignR">
+                                <div class="comSideOpt">
+                                    <ul class="opList">
+                                        <li class="item"><button type="button" class="srhBtn purple" onclick="openPopup('sample03');">추가</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:10%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:20%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:20%;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>지역</th>
+                                        <th>기관명</th>
+                                        <th>담당자</th>
+                                        <th>연락처</th>
+                                        <th>참가인원</th>
+                                        <th>기능</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="center">지역 테스트</td>
+                                        <td class="center">기관명 테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                        <td class="center">00</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn purple" onclick="openPopup('sample04');">참가대상자</button>
+                                            <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="center">지역 테스트</td>
+                                        <td class="center">기관명 테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                        <td class="center">00</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn purple" onclick="openPopup('sample04');">참가대상자</button>
+                                            <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="center">지역 테스트</td>
+                                        <td class="center">기관명 테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                        <td class="center">00</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn purple" onclick="openPopup('sample04');">참가대상자</button>
+                                            <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">삭제</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="center">지역 테스트</td>
+                                        <td class="center">기관명 테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                        <td class="center">00</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn purple" onclick="openPopup('sample04');">참가대상자</button>
+                                            <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">삭제</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn red">삭제</button>
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sample02" class="modPopup sm"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">담당강사선택</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="pText">* 운영프로그램 담당강사를 선택하세요.</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:100px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:157px;" />
+                                    <col style="width:120px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>체력인증센터</th>
+                                        <th>전문분야</th>
+                                        <th>기능</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">신안인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">청주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">KSPO송파</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">강동센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                
+<!--주간보호센터 팝업 (화면설계서 16번슬라이드 참고)-->
+<div id="sample03" class="modPopup sm"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample03');">닫기</button>
+                    <div class="popTitle">주간보호센터 조회/등록</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 검색조건 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>지역구분</th>
+                                        <td colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">시도 전체</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기관명</th>
+                                        <td colspan="3"><input type="text" class="iptText"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button type="button" class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 그리드/테이블 상단 -->
+                        <div class="cptGroupTop">
+                            <div class="alignL">
+                                <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:7%;" />
+                                    <col style="width:16%;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:25%;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="frmChoBox only">
+                                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                                            </div>
+                                        </th>
+                                        <th>지역</th>
+                                        <th>기관명</th>
+                                        <th>담당자</th>
+                                        <th>연락처</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">지역테스트</td>
+                                        <td class="left">기관명테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">지역테스트</td>
+                                        <td class="left">기관명테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">지역테스트</td>
+                                        <td class="left">기관명테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">지역테스트</td>
+                                        <td class="left">기관명테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">지역테스트</td>
+                                        <td class="left">기관명테스트</td>
+                                        <td class="center">김태형</td>
+                                        <td class="center">00-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="center">조회결과 데이터가 없습니다.</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 그리드/테이블 하단 버튼 -->
+                        <div class="cptGroupBtm alignL">
+                            <div class="comSideOpt">
+                                <button type="button" class="srhBtn purple">선택등록</button>
+                            </div>
+                        </div>
+                        <!-- 페이징 -->
+                        <div class="comPaging">
+                            <a class="start" href="#"></a>
+                            <a class="prev" href="#"></a>
+                            <ul class="numList">
+                                <li><a href="#">1</a></li>
+                                <li class="on"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                            </ul>
+                            <a class="next" href="#"></a>
+                            <a class="end" href="#"></a>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--참가대상자 팝업 (화면설계서 16번슬라이드 참고)-->
+<div id="sample04" class="modPopup sm"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample04');">닫기</button>
+                    <div class="popTitle">참가대상자 등록관리</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">* 000 기관명</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:10%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:30%;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="frmChoBox only">
+                                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                                            </div>
+                                        </th>
+                                        <th>이름</th>
+                                        <th>생년월일</th>
+                                        <th>성별</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <input type="text" class="iptText">
+                                        </td>
+                                        <td class="center">
+                                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남성</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여성</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <input type="text" class="iptText">
+                                        </td>
+                                        <td class="center">
+                                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo002"><label for="rdo002" class="iptLbl">남성</label></div>
+                                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo002"><label for="rdo003" class="iptLbl">여성</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <input type="text" class="iptText">
+                                        </td>
+                                        <td class="center">
+                                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남성</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여성</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">
+                                            <input type="text" class="iptText">
+                                        </td>
+                                        <td class="center">
+                                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남성</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여성</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="center">조회결과 데이터가 없습니다.</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 그리드/테이블 하단 버튼 양측 -->  
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="srhBtn red">선택삭제</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="srhBtn purple">엑셀파일 일괄등록</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 그리드/테이블 상단 -->
+                        <div class="cptGroupTop" style="margin-top:20px;">
+                            <div class="alignL">
+                                <div class="unit"><span class="text">* 일괄등록을 위한 엑셀파일은 이름, 생년월일, 성별 항목으로 작성하세요.<br/>예) 홍길동 / 2023-01-01 / 남자</span></div>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--수업일정등록 팝업 (화면설계서 17번슬라이드 참고)-->
+<div id="sample05" class="modPopup sm on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample05');">닫기</button>
+                    <div class="popTitle">참가대상자 등록관리</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="pText">* 증진교실 수업일을 선택하세요. 변경사항은 월단위로 저장해야 합니다.</div>
+                            </div>
+                        </div>
+                        <!--달력영역-->
+                        <div class="cptAttCalCov">
+                            <div class="attCal">
+                                <div class="attCalOpt">
+                                    <a href="#none" class="prevMon"><img src="/common/images/common/btn_prev.png"/></a>
+                                    <p>2023년 01월</p>
+                                    <a href="#none" class="nextMon"><img src="/common/images/common/btn_next.png"/></a>
+                                </div>
+                                <div class="weekBar">
+                                    <ul>
+                                        <li class="sun">일</li>
+                                        <li>월</li>
+                                        <li>화</li>
+                                        <li>수</li>
+                                        <li>목</li>
+                                        <li>금</li>
+                                        <li class="sat">토</li>
+                                    </ul>
+                                </div>
+                                <div class="dateBox">
+                                    <ul>
+                                        <!--1week-->
+                                        <li class="sun"><a href="#none">01</a></li>
+                                        <li><a href="#none">02</a></li>
+                                        <li><a href="#none">03</a></li>
+                                        <li><a href="#none">04</a></li>
+                                        <li><a href="#none">05</a></li>
+                                        <li><a href="#none">06</a></li>
+                                        <li class="sat"><a href="#none">07</a></li>
+                                        <!--2week-->
+                                        <li class="sun"><a href="#none">08</a></li>
+                                        <li><a href="#none">09</a></li>
+                                        <li><a href="#none">10</a></li>
+                                        <li><a href="#none">11</a></li>
+                                        <li><a href="#none">12</a></li>
+                                        <li><a href="#none">13</a></li>
+                                        <li class="sat"><a href="#none">14</a></li>
+                                        <!--3week-->
+                                        <li class="sun"><a href="#none">15</a></li>
+                                        <li><a href="#none">16</a></li>
+                                        <li><a href="#none">17</a></li>
+                                        <li><a href="#none">18</a></li>
+                                        <li><a href="#none">19</a></li>
+                                        <li><a href="#none">20</a></li>
+                                        <li class="sat"><a href="#none">21</a></li>
+                                        <!--4week-->
+                                        <li class="sun"><a href="#none">22</a></li>
+                                        <li><a href="#none">23</a></li>
+                                        <li><a href="#none">24</a></li>
+                                        <li><a href="#none">25</a></li>
+                                        <li><a href="#none">26</a></li>
+                                        <li><a href="#none">27</a></li>
+                                        <li class="sat"><a href="#none">28</a></li>
+                                        <!--5week (마지막 주간에 일자별로 클래스 추가 noMb)-->
+                                        <li class="sun noMb"><a href="#none">29</a></li>
+                                        <li class="noMb"><a href="#none">30</a></li>
+                                        <li class="noMb"><a href="#none">31</a></li>
+                                        <li class="notThisMon noMb"><a href="#none">01</a></li>
+                                        <li class="notThisMon noMb"><a href="#none">02</a></li>
+                                        <li class="notThisMon noMb"><a href="#none">03</a></li>
+                                        <li class="notThisMon sat noMb"><a href="#none">04</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">취소</button>
+                        <button type="button" class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">주간보호센터를 제거 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+<script>
+    $(document).ready(function(){
+        $(".dateBox ul li a").click(function(){
+            $(this).addClass("dtSel");
+        })
+    })
+</script>
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,70 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="sample02" class="modPopup sm on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">헤더내용</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:100%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>앞 문구 <span class="required">*</span> <span class="expTxt">입력 예 = [주] 바로크레디트대부</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="expPad">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>뒷 문구 <span class="required">*</span> <span class="expTxt">입력 예 = 2016-금감원-0006[대부업] 2016-금감원-0006[대부중개업]</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="expPad">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                            <div class="textBox clar">* PC에서는 앞 문구 + 뒷 문구, Mobile에서는 줄바꿈으로 표출됩니다.</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn dkBlue">저장</button>
+                        <button class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

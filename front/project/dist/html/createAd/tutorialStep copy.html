@@ -1,0 +1,273 @@
+ <!-- Header -->
+ 
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>sk우리동네광고</title>
+
+	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/style.css" />
+	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
+	
+	<script src="../../common/js/jquery-3.4.1.min.js"></script>
+	<script src="../../common/js/jquery-ui.min.js"></script>
+	<script src="../../common/js/tui-date-picker.js"></script>
+	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/common.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+		new WOW().init(); // wow 활성화
+	</script>
+	
+
+	<!--
+    <script src="../common/js/basic.js"></script>
+    -->
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer tutorial" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="tutorialTop">
+                <p class="tutorialTitle">튜토리얼</p>
+            </div>
+            <!-- tab -->
+            <div class="tutorialTabWrap">
+                <div class="modTabWide tutorialTab">
+
+                    <ul class="tabMenu ttTabMenu1">
+                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab4(0)">광고만들기</button></li> 
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(1)">메뉴2</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(2)">메뉴3</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(3)">메뉴4</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(4)">메뉴5</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab4(5)">메뉴6</button></li>
+                    </ul>
+    
+                    <div class="clickWrap">
+                        <div class="prevClick"><img src="../../images/common/ico_arr03.svg" alt=""></div>
+                        <div class="nextClick"><img src="../../images/common/ico_arr03.svg" alt=""></div>
+                    </div>
+    
+                    <div class="tabContainer ttContainer">
+    
+                        <!-- AI로 광고 만들기 -->
+                        <div class="tabCont active">
+                            <!-- tab2 -->
+                            <div class="modTab ttTabDepth2">
+                                <div class="tabInner">
+                                    <ul class="tabMenu ttTabMenu2">
+                                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab5(0)">AI로 광고 만들기</button></li> 
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab5(1)">템플릿으로 광고 만들기</button></li>
+                                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab5(2)">내 파일로 광고 만들기</button></li>
+                                    </ul>
+                                </div>
+                                <div class="tabContainer">
+                                    <!-- AI로 광고 만들기 -->
+                                    <div class="tabCont active">
+                                        <div class="tutorialList">
+                                            <ul>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="../../images/sub/tutorial_img01.png" alt="">
+                                                    </div>
+                                                    <div class="stepBox">
+                                                        <span class="flag">Step 1</span>
+                                                        <p class="tit">AI 영상 만들기 선택</p>
+                                                        <p class="desc">
+                                                            1. AI영상, 템플릿 영상, 내 컴퓨터(파일 불러오기)를 선택합니다.<br>
+                                                            2. 버튼을 누릅니다. 
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="../../images/sub/tutorial_img02.png" alt="">
+                                                    </div>
+                                                    <div class="stepBox">
+                                                        <span class="flag">Step 2</span>
+                                                        <p class="tit">우리 가게 정보 입력</p>
+                                                        <p class="desc">
+                                                            AI영상, 템플릿 영상, 내 컴퓨터(파일 불러오기)를 선택합니다.  
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="../../images/sub/tutorial_img03.png" alt="">
+                                                    </div>
+                                                    <div class="stepBox">
+                                                        <span class="flag">Step 3</span>
+                                                        <p class="tit">우리 가게 특징 찾기</p>
+                                                        <p class="desc">
+                                                            우리 가게 장점과 홍보할 대상을 선택합니다.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="thumb">
+                                                        <img src="../../images/sub/tutorial_img04.png" alt="">
+                                                    </div>
+                                                    <div class="stepBox">
+                                                        <span class="flag">Step 4</span>
+                                                        <p class="tit">우리 가게 정보 입력</p>
+                                                        <p class="desc">
+                                                            우리 가게 장점과 홍보할 대상을 선택합니다.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <!-- 템플릿으로 광고 만들기 -->
+                                    <div class="tabCont">
+                                        탭내용2
+                                    </div>
+                                    <!-- 내 파일로 광고 만들기 -->
+                                    <div class="tabCont">
+                                        탭내용3
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div> 
+    
+                        <!-- 메뉴2 -->
+                        <div class="tabCont">
+                            탭내용2
+                        </div>
+
+                        <!-- 메뉴3 -->
+                        <div class="tabCont">
+                            탭내용3
+                        </div>
+
+                        <!-- 메뉴4 -->
+                        <div class="tabCont">
+                            탭내용4
+                        </div>
+
+                        <!-- 메뉴5 -->
+                        <div class="tabCont">
+                            탭내용5
+                        </div>
+
+                        <!-- 메뉴6 -->
+                        <div class="tabCont">
+                            탭내용6
+                        </div>
+    
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+            
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            
+<div class="cptFooter">
+    <div class="footerArea">
+        <div class="footTop">
+            <div class="topArea">
+                <ul>
+                    <li><a href="#none">회원 이용약관</a></li>
+                    <li><a href="#none">서비스 이용약관</a></li>
+                    <li><a href="#none" class="hglt">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footBtm">
+            <div class="btmArea">
+                <ul>
+                    <li>SK브로드밴드(주) 대표이사 사장 박진효</li>
+                    <li>서울시 중구 퇴계로 24 SK남산그린빌딩</li>
+                    <li>사업자등록번호 214-86-18758</li>
+                    <li>통신판매신고번호 서울 중구 제 2008-1608호</li>
+                </ul>
+                <p>COPYRIGHT ⓒ 2020 BY SK broadband CO.LTD.ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            
+<!--quick menus structure-->
+<div class="quickMenu">
+	<div class="qmInner">
+		<ul>
+			<li>
+				<span class="qmIcon tutorial">quickIcon</span>
+				<span class="qmTxt">영상제작<br>체험관</span>
+			</li>
+			<li>
+				<span class="qmIcon amount">quickIcon</span>
+				<span class="qmTxt">광고비<br>알아보기</span>
+			</li>
+			<li>
+				<span class="qmIcon consult">quickIcon</span>
+				<span class="qmTxt">광고 상담<br>신청</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--floating menu structure-->
+<div class="quickFloat">
+	<ul>
+		<li class="chatbot">
+			<a href="#none">
+				<span class="hidden">챗봇연결</span>
+			</a>
+		</li>
+		<li class="topBtn">
+			<a href="#none">
+				<span>TOP</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+
+</div>
+</body>
+
+
+</html>

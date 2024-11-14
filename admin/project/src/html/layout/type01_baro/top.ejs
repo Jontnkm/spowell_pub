@@ -1,0 +1,147 @@
+<%
+var url = locals.url ? locals.url : '../../';
+%>
+
+<div class="cptHeader">
+    <div class="headerArea">
+        <div class="headerLogo"><h1><a href="#"><img src="<%= url %>/images/layout/type01/ci.png" alt="" /></a></h1></div>
+        <div class="headerGroup">
+            <div class="headerProfile">
+                <dl class="headerDate">
+                    <dt>최종 로그인 날짜 : </dt>
+                    <dd>2022-12-30 AM 09:30:00</dd>
+                </dl>
+                <div class="headerUser"><b>홍길동</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                <a href="#" class="headerBtn">로그아웃</a>
+                <a href="#" class="headerBtn">정보수정</a>
+            </div>
+            <div class="headerNav">
+                <ul class="menuList">
+                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                        <a href="#">회원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">체력측정</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">자가체력측정</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">운동상담</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">체력증진교실</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">센터운영관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">스포츠마일리지</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">홈페이지관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">통계관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">시스템관리</a>
+                    </li>
+                </ul>
+                <div class="allMenuGroup">
+                    <button class="allMenu">전체메뉴</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMenuArea">
+        <ul class="menuList">
+            <li class="menuItem">
+                <a href="#">회원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">스포츠활동인증 종목관리</a></li>
+                    <li><a href="#">휴면회원조회</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">체력측정</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력측정예약현황</a></li>
+                    <li><a href="#">체력측정결과등록</a></li>
+                    <li><a href="#">측정결과조회-처방</a></li>
+                    <li><a href="#">출장측정 승인관</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">자가체력측정</a>
+                <ul class="subMenu">
+                    <li><a href="#">자가체력측정내역</a></li>
+                    <li><a href="#">자가체력측정상담</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">운동상담</a>
+                <ul class="subMenu">
+                    <li><a href="#">온라인 운동상담</a></li>
+                    <li><a href="#">정부24 운동상담</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">체력증진교실</a>
+                <ul class="subMenu">
+                    <li><a href="#">증진교실 운영관리</a></li>
+                    <li><a href="#">증진교실 참여자관리</a></li>
+                    <li><a href="#">증진교실 프로그램관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">센터운영관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력100 사업공지</a></li>
+                    <li><a href="#">현장의 소리</a></li>
+                    <li><a href="#">체력인증센터정보관리</a></li>
+                    <li><a href="#">아카데미교육 이수현황</a></li>
+                    <li><a href="#">운영실적 보고관리</a></li>
+                    <li><a href="#">운영실적 현황조회</a></li>
+                    <li><a href="#">메시지 발송관리</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">스포츠마일리지</a>
+                <ul class="subMenu">
+                    <li><a href="#">마일리지현황관리</a></li>
+                    <li><a href="#">마일리지 수동지급</a></li>
+                    <li><a href="#">상품권 신청관리</a></li>
+                    <li><a href="#">상품권 등록관리</a></li>
+                    <li><a href="#">마일리지 지급기준설정</a></li>
+                    <li><a href="#">스포츠클럽관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">홈페이지관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">체력센터소식</a></li>
+                    <li><a href="#">체력센터 채용공고</a></li>
+                    <li><a href="#">동영상관리</a></li>
+                    <li><a href="#">팝업관리</a></li>
+                    <li><a href="#">배너관리</a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">통계관리</a>
+                <ul class="subMenu">
+                    <li><a href="#">체력측정통계</a></li>
+                    <li><a href="#">자가체력측정통계</a></li>
+                    <li><a href="#">체력증진교실통계</a></li>
+                    <li><a href="#">스포츠활동인증통계</a></li>
+                    <li><a href="#">스포츠마일리지통계</a></li>
+                    <li><a href="#">홈페이지 접속통계</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

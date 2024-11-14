@@ -1,0 +1,174 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">게시글 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">게시글 내용</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목</th>
+                                        <td class="left" colspan="3">
+                                            제목 예시 입니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록자</th>
+                                        <td class="left">김태형</td>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">0000-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">구분</th>
+                                        <td class="left">일반공지</td>
+                                        <th class="left">조회</th>
+                                        <td class="left">00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">내용</th>
+                                        <td class="left" colspan="3">
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.<br/>
+                                            게시글 내용입니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일 1</th>
+                                        <td class="left" colspan="3">
+                                            첨부파일명.hwp
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 그리드/테이블 하단 버튼 -->
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="srhBtn purple">수정</button>
+                                <button type="button" class="srhBtn red" onclick="openAlert('splAlt01');">삭제</button>
+                            </div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">댓글내용</div>
+                            </div>
+                        </div>
+
+                        <!--textarea-->
+                        <div class="cptDataInsert">
+                            <textarea>댓글 입력 중입니다.</textarea>
+                            <div class="dataBtn">
+                                <button type="button" class="btn dkBlue">등록</button>
+                            </div>
+                        </div>
+                        
+                        <!--comment area-->
+                        <div class="cptDataSelect">
+                            <p class="dataLog">
+                                <span class="dataDt">2022-12-31</span>
+                                <span class="dataAuthor">홍길동</span> / 
+                                <span class="dataCenter">송파센터</span>
+                            </p>
+                            <a href="#none" class="delComment" onclick="openAlert('splAlt02')"><img src="/common/images/common/btn_del.png" /></a> <!--20230405 위치변경-->
+                            <div class="descBox">
+                                댓글내용 입니다.
+                                <!--댓글 내용 삽입 위치-->
+                            </div>
+                        </div>
+                        <div class="cptDataSelect">
+                            <p class="dataLog">
+                                <span class="dataDt">2022-12-31</span>
+                                <span class="dataAuthor">홍길동</span> /
+                                <span class="dataCenter">송파센터</span>
+                            </p>
+                            <a href="#none" class="delComment" onclick="openAlert('splAlt02')"><img src="/common/images/common/btn_del.png" /></a> <!--20230405 위치변경-->
+                            <div class="descBox">
+                                댓글내용 입니다.
+                                <!--댓글 내용 삽입 위치-->
+                            </div>
+                        </div>          
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">댓글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

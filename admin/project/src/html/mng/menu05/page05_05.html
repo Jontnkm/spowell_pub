@@ -1,0 +1,451 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>접속IP관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">시스템관리</li>
+                                    <li class="item">접속IP관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th>사용자</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                        <th>접속 허용 IP</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사용기간 설정</th>
+                                        <td colspan="3">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">기간설정 안함</label></div>
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmFrth">
+                                                    <input id="startpicker-input" type="text" aria-label="Date">
+                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmFrth">
+                                                    <input id="endpicker-input" type="text" aria-label="Date">
+                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                                <script>
+                                                    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                                                </script>
+                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button class="srhBtn purple">등록</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grpComponent">
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <div class="comSideOpt">
+                                        <ul class="opList">
+                                            <li class="item">
+                                                <button class="viewBtn on">10개씩</button>
+                                                <button class="viewBtn">20개씩</button>
+                                                <button class="viewBtn">30개씩</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cptGrid">
+                                <table class="gridTb">
+                                    <colgroup>
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:14%;">
+                                        <col style="width:16%;">
+                                        <col style="width:14%;">
+                                        <col style="width:14%;">
+                                        <col style="width:14%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>사용자</th>
+                                            <th>승인IP</th>
+                                            <th>등록일/수정일</th>
+                                            <th>시작일</th>
+                                            <th>종료일</th>
+                                            <th>기능</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center">10</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">9</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" >
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" >
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" >
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" >
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">취소</button>
+                                                <button class="gridBtn purple">저장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">8</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">7</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">6</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">5</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">4</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">3</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">2</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">1</td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="사용자명" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="123.456.78.9" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                2024-05-05 / 2024-05-06
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-05-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <div class="frmGroup">
+                                                    <input type="text" class="iptText" value="2024-06-05" readonly>
+                                                </div>
+                                            </td>
+                                            <td class="center" >
+                                                <button class="gridBtn red">삭제</button>
+                                                <button class="gridBtn purple">수정</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <!-- 페이징 -->
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

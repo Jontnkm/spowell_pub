@@ -1,0 +1,714 @@
+ <!-- Header -->
+ <%- include('../../ejs/top.ejs', {
+    title: "sk우리동네광고",
+    url: "../../../" 
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../../ejs/header.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <!-- 메인 콘텐츠 영역 -->
+            <div class="comSubTitle">
+                <h3>자주 하는 질문</h3>
+            </div>
+            <div class="cptForm searchBar">
+                <div class="frmIpt">
+                    <input type="text" placeholder="궁금하신 내용을 입력해 주세요"/>
+                    <button type="button" class="srchBtn"><span class="hidden">검색</span></button>
+                </div>
+            </div>
+            <div class="modTab questionTab">
+                <div class="tabInner">
+                    <ul class="tabMenu">
+                        <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">질문 BEST</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">계정</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">광고제작 및 심의</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">광고 서비스</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">결제</button></li>
+                        <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(5)">광고효과 및 리포팅</button></li>
+                    </ul>
+                </div>
+                <div class="tabContainer">
+                    <div class="tabCont active">
+                        <!-- 질문 BEST -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(질문 BEST) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                    <div class="tabCont">
+                        <!-- 계정 -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(계정) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabCont">
+                        <!-- 광고제작 및 심의 -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(광고제작 및 심의) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabCont">
+                        <!-- 광고 서비스 -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(광고 서비스) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabCont">
+                        <!-- 결제 -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(결제) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabCont">
+                        <!-- 광고효과 및 리포팅 -->
+                        <div class="modAccordion">
+                            <ul class="accoList">
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">(광고효과 및 리포팅) 내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">
+                                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li class="accoItem">
+                                    <dl class="accoArea">
+                                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                                <span class="arrowImg">
+                                                    <img src="../../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                                </span>
+                                            </p>
+                                        </dt>
+                                        <dd class="accoCont">
+                                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //메인 콘텐츠 영역 -->
+        </div>
+        <!-- //중단영역 -->
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../../ejs/footer.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('../../ejs/quick.ejs', {
+                url: "../../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../../ejs/bottom.ejs', { }) %>
+<%- include('../../ejs/moBar.ejs', { }) %>

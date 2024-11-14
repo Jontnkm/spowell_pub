@@ -1,0 +1,44 @@
+<%
+var url = locals.url ? locals.url : '../../';
+var color = locals.color ? locals.color : '';
+var theme = locals.theme ? locals.theme : '';
+var navContain = locals.navContain ? locals.navContain : '';    //좌네비 여부 : noNav : 좌메뉴 없음 
+%>
+
+<%- include('./head.ejs', {
+    url: url
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout <%= theme %> <%= color %>"> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('./top.ejs', {
+				url: url
+			}) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer <%= navContain %>">
+
+            <!-- 좌측 메뉴 영역 -->
+            <div class="layoutNav">
+                <!-- Left Menu -->
+				<%- include('./nav.ejs', {
+					url: url
+				}) %>
+
+                <div class="sideSlide">
+                    <button class="btnSlide">메뉴 열기/닫기</button>
+                </div>
+
+            </div>
+            <!-- //좌측 메뉴 영역 -->
+
+            <!-- 콘텐츠 영역 -->
+            <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				

@@ -1,0 +1,278 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">게시글 등록/조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">게시글 내용</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목(운동명)<span class="required">*</span></th>
+                                        <!--20230202 구분 국문영문 구분 추가-->
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="textBox mR5">국문 : </div>
+                                                <input type="text" class="iptText frmLg mR20" />
+                                                <div class="textBox mR5">영문 : </div>
+                                                <input type="text" class="iptText frmLg" />
+                                            </div>
+                                        </td>
+                                        <!--20230202 구분 국문영문 구분 추가-->
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대상구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type02"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">전체</label></div>
+                                            <div class="frmChoBox type02"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">유아기</label></div>
+                                            <div class="frmChoBox type02"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">유소년</label></div>
+                                            <div class="frmChoBox type02"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">청소년</label></div>
+                                            <div class="frmChoBox type02"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">성인</label></div>
+                                            <div class="frmChoBox type02"><input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">어르신</label></div>
+                                            <div class="frmChoBox type02"><input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">기타</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">노출 등록일<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker3"><button class="dateBtn">날짜검색</button></div>
+                                                <div class="textBox clar"> * 홈페이지에서 '등록일자'로 노출됩니다.</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">동영상 URL<span class="required">*</span></th>
+                                        <td class="left"><input type="text" class="iptText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" rowspan="2">운동가이드<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                목록이미지 : 
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <div class="textBox clar"> * 이미지 규격 : 가로 380픽셀 * 세로 250픽셀</div> <!--20230209 첨부파일 관련 설명 문구 수정-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                상세이미지 : 
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="textBox clar"> * 최대 500MB까지 첨부가능</div> --> <!-- 20230209 관련 설명 제거 -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">파일번호<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmSm" />
+                                                <div class="textBox clar"> * 동영상 및 운동가이드 콘텐츠의 파일명 번호입니다.</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">체력항목<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type02"><input id="chk108" type="checkbox" class="iptChk"><label for="chk108" class="iptLbl">근력</label></div>
+                                            <div class="frmChoBox type02"><input id="chk109" type="checkbox" class="iptChk"><label for="chk109" class="iptLbl">근지구력</label></div>
+                                            <div class="frmChoBox type02"><input id="chk110" type="checkbox" class="iptChk"><label for="chk110" class="iptLbl">심폐지구력</label></div>
+                                            <div class="frmChoBox type02"><input id="chk111" type="checkbox" class="iptChk"><label for="chk111" class="iptLbl">민첩성</label></div>
+                                            <div class="frmChoBox type02"><input id="chk112" type="checkbox" class="iptChk"><label for="chk112" class="iptLbl">순발력</label></div>
+                                            <div class="frmChoBox type02"><input id="chk113" type="checkbox" class="iptChk"><label for="chk113" class="iptLbl">유연성</label></div>
+                                            <div class="frmChoBox type02"><input id="chk114" type="checkbox" class="iptChk"><label for="chk114" class="iptLbl">평형성</label></div>
+                                            <div class="frmChoBox type02"><input id="chk115" type="checkbox" class="iptChk"><label for="chk115" class="iptLbl">협응력</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운동부위(大)<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type02"><input id="chk116" type="checkbox" class="iptChk"><label for="chk116" class="iptLbl">전신</label></div>
+                                            <div class="frmChoBox type02"><input id="chk117" type="checkbox" class="iptChk"><label for="chk117" class="iptLbl">몸통</label></div>
+                                            <div class="frmChoBox type02"><input id="chk118" type="checkbox" class="iptChk"><label for="chk118" class="iptLbl">상체</label></div>
+                                            <div class="frmChoBox type02"><input id="chk119" type="checkbox" class="iptChk"><label for="chk119" class="iptLbl">하체</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운동부위(小)<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type03"><input id="chk120" type="checkbox" class="iptChk"><label for="chk120" class="iptLbl">가슴</label></div>
+                                            <div class="frmChoBox type03"><input id="chk121" type="checkbox" class="iptChk"><label for="chk121" class="iptLbl">복부</label></div>
+                                            <div class="frmChoBox type03"><input id="chk122" type="checkbox" class="iptChk"><label for="chk122" class="iptLbl">아랫복근</label></div>
+                                            <div class="frmChoBox type03"><input id="chk123" type="checkbox" class="iptChk"><label for="chk123" class="iptLbl">옆구리</label></div>
+                                            <div class="frmChoBox type03"><input id="chk124" type="checkbox" class="iptChk"><label for="chk124" class="iptLbl">전신</label></div>
+                                            <div class="frmChoBox type03"><input id="chk125" type="checkbox" class="iptChk"><label for="chk125" class="iptLbl">허리</label></div>
+                                            <div class="frmChoBox type03"><input id="chk126" type="checkbox" class="iptChk"><label for="chk126" class="iptLbl">허벅지외측</label></div>
+                                            <div class="frmChoBox type03"><input id="chk127" type="checkbox" class="iptChk"><label for="chk127" class="iptLbl">둔부</label></div>
+                                            <div class="frmChoBox type03"><input id="chk128" type="checkbox" class="iptChk"><label for="chk128" class="iptLbl">상체</label></div>
+                                            <div class="frmChoBox type03"><input id="chk129" type="checkbox" class="iptChk"><label for="chk129" class="iptLbl">어깨</label></div>
+                                            <div class="frmChoBox type03"><input id="chk130" type="checkbox" class="iptChk"><label for="chk130" class="iptLbl">위팔</label></div>
+                                            <div class="frmChoBox type03"><input id="chk131" type="checkbox" class="iptChk"><label for="chk131" class="iptLbl">종아리</label></div>
+                                            <div class="frmChoBox type03"><input id="chk132" type="checkbox" class="iptChk"><label for="chk132" class="iptLbl">허벅지</label></div>
+                                            <div class="frmChoBox type03"><input id="chk133" type="checkbox" class="iptChk"><label for="chk133" class="iptLbl">등</label></div>
+                                            <div class="frmChoBox type03"><input id="chk134" type="checkbox" class="iptChk"><label for="chk134" class="iptLbl">아래팔</label></div>
+                                            <div class="frmChoBox type03"><input id="chk135" type="checkbox" class="iptChk"><label for="chk135" class="iptLbl">어깨뒤족</label></div>
+                                            <div class="frmChoBox type03"><input id="chk136" type="checkbox" class="iptChk"><label for="chk136" class="iptLbl">위팔뒤쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk137" type="checkbox" class="iptChk"><label for="chk137" class="iptLbl">종아리뒤쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk138" type="checkbox" class="iptChk"><label for="chk138" class="iptLbl">허벅지내측</label></div>
+                                            <div class="frmChoBox type03"><input id="chk139" type="checkbox" class="iptChk"><label for="chk139" class="iptLbl">목</label></div>
+                                            <div class="frmChoBox type03"><input id="chk140" type="checkbox" class="iptChk"><label for="chk140" class="iptLbl">아래팔뒤쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk141" type="checkbox" class="iptChk"><label for="chk141" class="iptLbl">어깨앞쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk142" type="checkbox" class="iptChk"><label for="chk142" class="iptLbl">위팔앞쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk143" type="checkbox" class="iptChk"><label for="chk143" class="iptLbl">종아리앞쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk144" type="checkbox" class="iptChk"><label for="chk144" class="iptLbl">허벅지뒤쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk145" type="checkbox" class="iptChk"><label for="chk145" class="iptLbl">몸통</label></div>
+                                            <div class="frmChoBox type03"><input id="chk146" type="checkbox" class="iptChk"><label for="chk146" class="iptLbl">아래팔앞쪽</label></div>
+                                            <div class="frmChoBox type03"><input id="chk147" type="checkbox" class="iptChk"><label for="chk147" class="iptLbl">어깨측면</label></div>
+                                            <div class="frmChoBox type03"><input id="chk148" type="checkbox" class="iptChk"><label for="chk148" class="iptLbl">윗복근</label></div>
+                                            <div class="frmChoBox type03"><input id="chk149" type="checkbox" class="iptChk"><label for="chk149" class="iptLbl">하체</label></div>
+                                            <div class="frmChoBox type03"><input id="chk150" type="checkbox" class="iptChk"><label for="chk150" class="iptLbl">허벅지앞쪽</label></div>
+                                        </td>
+                                    </tr>
+                                    <th class="left">운동도구<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type03"><input id="chk151" type="checkbox" class="iptChk"><label for="chk151" class="iptLbl">공</label></div>
+                                            <div class="frmChoBox type03"><input id="chk152" type="checkbox" class="iptChk"><label for="chk152" class="iptLbl">목봉</label></div>
+                                            <div class="frmChoBox type03"><input id="chk153" type="checkbox" class="iptChk"><label for="chk153" class="iptLbl">수건</label></div>
+                                            <div class="frmChoBox type03"><input id="chk154" type="checkbox" class="iptChk"><label for="chk154" class="iptLbl">써클휠</label></div>
+                                            <div class="frmChoBox type03"><input id="chk155" type="checkbox" class="iptChk"><label for="chk155" class="iptLbl">줄넘기</label></div>
+                                            <div class="frmChoBox type03"><input id="chk156" type="checkbox" class="iptChk"><label for="chk156" class="iptLbl">풍선</label></div>
+                                            <div class="frmChoBox type03"><input id="chk157" type="checkbox" class="iptChk"><label for="chk157" class="iptLbl">라바콘</label></div>
+                                            <div class="frmChoBox type03"><input id="chk158" type="checkbox" class="iptChk"><label for="chk158" class="iptLbl">물병</label></div>
+                                            <div class="frmChoBox type03"><input id="chk159" type="checkbox" class="iptChk"><label for="chk159" class="iptLbl">수중운동</label></div>
+                                            <div class="frmChoBox type03"><input id="chk160" type="checkbox" class="iptChk"><label for="chk160" class="iptLbl">웨이트기계</label></div>
+                                            <div class="frmChoBox type03"><input id="chk161" type="checkbox" class="iptChk"><label for="chk161" class="iptLbl">짐볼</label></div>
+                                            <div class="frmChoBox type03"><input id="chk162" type="checkbox" class="iptChk"><label for="chk162" class="iptLbl">프리웨이트</label></div>
+                                            <div class="frmChoBox type03"><input id="chk163" type="checkbox" class="iptChk"><label for="chk163" class="iptLbl">라켓</label></div>
+                                            <div class="frmChoBox type03"><input id="chk164" type="checkbox" class="iptChk"><label for="chk164" class="iptLbl">밴드</label></div>
+                                            <div class="frmChoBox type03"><input id="chk165" type="checkbox" class="iptChk"><label for="chk165" class="iptLbl">스카프</label></div>
+                                            <div class="frmChoBox type03"><input id="chk166" type="checkbox" class="iptChk"><label for="chk166" class="iptLbl">의자</label></div>
+                                            <div class="frmChoBox type03"><input id="chk167" type="checkbox" class="iptChk"><label for="chk167" class="iptLbl">탄력밴드</label></div>
+                                            <div class="frmChoBox type03"><input id="chk168" type="checkbox" class="iptChk"><label for="chk168" class="iptLbl">하프콘</label></div>
+                                            <div class="frmChoBox type03"><input id="chk169" type="checkbox" class="iptChk"><label for="chk169" class="iptLbl">막대</label></div>
+                                            <div class="frmChoBox type03"><input id="chk170" type="checkbox" class="iptChk"><label for="chk170" class="iptLbl">베개</label></div>
+                                            <div class="frmChoBox type03"><input id="chk171" type="checkbox" class="iptChk"><label for="chk171" class="iptLbl">스텝박스</label></div>
+                                            <div class="frmChoBox type03"><input id="chk172" type="checkbox" class="iptChk"><label for="chk172" class="iptLbl">자전거</label></div>
+                                            <div class="frmChoBox type03"><input id="chk173" type="checkbox" class="iptChk"><label for="chk173" class="iptLbl">테이블</label></div>
+                                            <div class="frmChoBox type03"><input id="chk174" type="checkbox" class="iptChk"><label for="chk174" class="iptLbl">훌라후프</label></div>
+                                            <div class="frmChoBox type03"><input id="chk175" type="checkbox" class="iptChk"><label for="chk175" class="iptLbl">맨몸</label></div>
+                                            <div class="frmChoBox type03"><input id="chk176" type="checkbox" class="iptChk"><label for="chk176" class="iptLbl">보슈볼</label></div>
+                                            <div class="frmChoBox type03"><input id="chk177" type="checkbox" class="iptChk"><label for="chk177" class="iptLbl">스텝퍼</label></div>
+                                            <div class="frmChoBox type03"><input id="chk178" type="checkbox" class="iptChk"><label for="chk178" class="iptLbl">제기</label></div>
+                                            <div class="frmChoBox type03"><input id="chk179" type="checkbox" class="iptChk"><label for="chk179" class="iptLbl">폼롤</label></div>
+                                            <div class="frmChoBox type03"><input id="chk180" type="checkbox" class="iptChk"><label for="chk180" class="iptLbl">머신</label></div>
+                                            <div class="frmChoBox type03"><input id="chk181" type="checkbox" class="iptChk"><label for="chk181" class="iptLbl">사다리</label></div>
+                                            <div class="frmChoBox type03"><input id="chk182" type="checkbox" class="iptChk"><label for="chk182" class="iptLbl">써클링</label></div>
+                                            <div class="frmChoBox type03"><input id="chk183" type="checkbox" class="iptChk"><label for="chk183" class="iptLbl">줄</label></div>
+                                            <div class="frmChoBox type03"><input id="chk184" type="checkbox" class="iptChk"><label for="chk184" class="iptLbl">폼롤러</label></div>
+                                        </td>
+                                    </tr>
+                                    <!--20230202 신규 추가-->
+                                    <tr>
+                                        <th class="left">질환<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox type03"><input id="chk185" type="checkbox" class="iptChk"><label for="chk185" class="iptLbl">고혈압</label></div>
+                                            <div class="frmChoBox type03"><input id="chk186" type="checkbox" class="iptChk"><label for="chk186" class="iptLbl">요통</label></div>
+                                            <div class="frmChoBox type03"><input id="chk187" type="checkbox" class="iptChk"><label for="chk187" class="iptLbl">골다공증</label></div>
+                                            <div class="frmChoBox type03"><input id="chk188" type="checkbox" class="iptChk"><label for="chk188" class="iptLbl">관절염</label></div>
+                                            <div class="frmChoBox type03"><input id="chk189" type="checkbox" class="iptChk"><label for="chk189" class="iptLbl">우울증</label></div>
+                                            <div class="frmChoBox type03"><input id="chk190" type="checkbox" class="iptChk"><label for="chk190" class="iptLbl">치매</label></div>
+                                            <div class="frmChoBox type03"><input id="chk191" type="checkbox" class="iptChk"><label for="chk191" class="iptLbl">기타</label></div>
+                                        </td>
+                                    </tr>
+                                    <!--20230202 신규 추가-->
+                                    <tr>
+                                        <th class="left">등록자</th>
+                                        <td class="left">
+                                            김태형 0000-00-00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button class="btn red" onclick="openAlert('splAlt01');">삭제</button>
+                            <button class="btn gLine">취소</button>
+                            <button class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">게시글을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

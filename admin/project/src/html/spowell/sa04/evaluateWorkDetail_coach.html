@@ -1,0 +1,552 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="modTab out">
+        <ul class="tabMenu">
+            <li class="item "><a href="#">대회실적관리</a></li>
+            <li class="item on"><a href="#">실적평가 및 지급등록</a></li>
+        </ul>
+    </div>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+                <col style="width:110px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>비장애</td>
+                    <th>대상구분 <span class="required">*</span></th>
+                    <td>선수</td>
+                    <th>등록번호</th>
+                    <td>000000</td>
+                </tr>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>홍길동</td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>000000 - 0000000</td>
+                    <th>종목 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대전화 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                        </div>
+                    </td>
+                    <th>은행계좌 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선택</option>
+                            </select>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText" />
+                            <button type="button" class="gridBtn dkbLine">확인</button>
+                        </div>
+                    </td>
+                    <th>소속 <span class="required">*</span></th>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3">
+                        서울특별시 송파구 000-0000 올림픽공원
+                    </td>
+                    <th>포털ID</th>
+                    <td>
+                        member_id
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">체육인 기본정보를 수정하면, 수정된 내용이 [체육인정보관리]에 자동 반영됩니다.</div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 대회실적 평가</div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:120px;">
+
+                <col style="width:120px;">
+                <col style="width:200px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan=2">번호</th>
+                    <th rowspan="2">등록일자</th>
+
+                    <th colspan="10">실적대회정보</th>
+                    <th colspan="3">평가점수</th>
+                    <th colspan="4">성과포상금 신청</th>
+
+                    <th rowspan="3">비고</th>
+                </tr>
+                <tr>
+                    <th>대회구분</th>
+                    <th>대회명</th>
+                    <th>개최주기</th>
+                    <th>출전국수</th>
+                    <th>장애여부</th>
+                    <th>장애유형</th>
+                    <th>종목</th>
+                    <th>실적구분</th>
+                    <th>순위</th>
+                    <th>입상일</th>
+
+                    <th>추가</th>
+                    <th>가산</th>
+                    <th>누적</th>
+
+                    <th>월정금</th>
+                    <th>일시금</th>
+                    <th>일시장려금</th>
+                    <th>특별장려금</th>
+                </tr>
+                <tr class="line">
+                    <th colspan="12">펑점 기존</th>
+                    <th></th>
+                    <th></th>
+                    <th>261</th>
+
+                    <th>800</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>아시안게임</td>
+                    <td>2022 항저우아시안게임</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>장애</td>
+                    <td>시각</td>
+                    <td>롤러</td>
+                    <td>개인</td>
+                    <td>5</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>
+                        <input type="text" value="90">
+                    </td>
+                    <td>
+                        <input type="text" value="45">
+                    </td>
+                    <td>396</td>
+
+                    <td>
+                        <input type="text" value="1,000">
+                    </td>
+                    <td></td>
+                    <td>
+                        <input type="text" value="15,000">
+                    </td>
+                    <td></td>
+                    
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="12">평점 최종</td>
+                    <td>180</td>
+                    <td>108</td>
+                    <td>549</td>
+
+                    <td>1,000</td>
+                    <td></td>
+                    <td>32,500</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">적격여부 검토결과가 &lt;적격&gt;으로 처리된 체육인이 신청한 대회실적 현황입니다.</div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">위 대회실적에 대한 평가점수를 등록하고 아래 버튼을 클릭해서 &lt;지급계획등록&gt; 및 &lt;소급지급등록&gt;을 등록하세요.</div>
+        </div>
+    </div>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>지급시작일자 : </p>
+            <div class="frmGroup">
+                <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+            </div>
+            <div class="cptGroupBtm">
+                <div class="comSideOpt">
+                    <button type="button" class="srhBtn bLine" onclick="openPopup('sample01')">지급계획등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 지급이력 조회 및 지급계획 등록</div>&nbsp;&nbsp;
+            <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">월정금 소급지급 대상자 체크</label></div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:70px;">
+
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+
+                <col style="width:150px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan=2">번호</th>
+                    <th rowspan=2">확정일자</th>
+                    <th rowspan=2">등록번호</th>
+                    <th rowspan=2">성명</th>
+                    <th rowspan=2">신규여부</th>
+                    <th rowspan=2">기존누적</th>
+                    <th rowspan=2">실적</th>
+                    <th rowspan=2">평가점수</th>
+                    <th rowspan=2">변경누적</th>
+
+                    <th colspan="6">지급계획</th>
+                    <th colspan="3">월정금 소급지급</th>
+
+                    <th rowspan=2">비고</th>
+                </tr>
+                <tr>
+                    <th>지급기준</th>
+                    <th>지급항목</th>
+                    <th>지급금액</th>
+                    <th>지급시작</th>
+                    <th>지급종료</th>
+                    <th>증감</th>
+
+                    <th>소급개월</th>
+                    <th>금액</th>
+                    <th>지급일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>예</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10</td>
+
+                    <td>일회성지급</td>
+                    <td>특별장려금</td>
+                    <td class="right">4,500</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right"></td>
+
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>아니오</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>100</td>
+                    <td>110</td>
+
+                    <td>히스토리성지급</td>
+                    <td>월정금</td>
+                    <td class="right">500</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right"></td>
+
+                    <td>3</td>
+                    <td class="right">1,500</td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>아니오</td>
+                    <td>110</td>
+                    <td>1</td>
+                    <td>90</td>
+                    <td>261</td>
+
+                    <td>히스토리성지급</td>
+                    <td>월정금</td>
+                    <td class="right">800</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right">300</td>
+
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td rowspan="2">공단 승인 전</td>
+                    <td rowspan="2">00000</td>
+                    <td rowspan="2">홍길동</td>
+                    <td rowspan="2">아니오</td>
+                    <td rowspan="2">261</td>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2">549</td>
+
+                    <td>현재지급기준</td>
+                    <td>월정금</td>
+                    <td class="right">1,000</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td class="right">200</td>
+
+                    <td>5</td>
+                    <td class="right">12,000</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr class="scndLine">
+                    <td>일회성지급</td>
+                    <td>일시장려금</td>
+                    <td class="right">32,500</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="excp">
+                        <input type="text">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">월정금 소급지급</div>
+            <div class="titText">월정금 소급지급 대상자인 경우 관련 정보를 등록하세요.</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:40px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+            </colgroup>
+            <thead>
+                <th>
+                    <div class="frmChoBox only">
+                        <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                    </div>
+                </th>
+                <th>소급월</th>
+                <th>소급금액</th>
+                <th>지급일자</th>
+                <th>비고</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM</td>
+                    <td class="right">150,000</td>
+                    <td rowspan="3">
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td rowspan="3">
+                        <textarea class="textArea areaMd"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td class="center">YYYY-MM</td>
+                    <td class="right">300,000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2"  class="center">합계</td>
+                    <th class="right">750,000</td>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 --> 
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue">추가</button>
+                <button type="button" class="srhBtn dkBlue">삭제</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn gLine">목록</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,491 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">권한그룹정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:120px;">
+                <col style="width:auto;">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="left">사용자구분 <span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">공단사용자</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">일반사용자</label></div>
+                        </div>
+                    </td>
+                    <th class="left">권한그룹명</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" />
+                        </div>
+                        <div class="textBox">*12자 이내로 기입</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">권환관리 설정</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:auto;">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+                <col style="width:8%">
+            </colgroup>
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th class="center">1depth</th>
+                    <th class="center">2depth</th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl">전체권한</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll201" type="checkbox" class="iptChk"><label for="chkAll201" class="iptLbl">읽기</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll301" type="checkbox" class="iptChk"><label for="chkAll301" class="iptLbl">등록/수정</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll401" type="checkbox" class="iptChk"><label for="chkAll401" class="iptLbl">삭제</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll501" type="checkbox" class="iptChk"><label for="chkAll501" class="iptLbl">개인정보</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll601" type="checkbox" class="iptChk"><label for="chkAll601" class="iptLbl">파일저장</label></div>
+                        </div>
+                    </th>
+                    <th class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chkAll701" type="checkbox" class="iptChk"><label for="chkAll701" class="iptLbl">승인</label></div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="top" rowspan="3">
+                        <div class="hideBox"><button class="hideBtn plus">View/hide</button>1depth명</div>
+                    </td>
+                    <td class="top" rowspan="2">
+                        <div class="hideBox"><button class="hideBtn minus">View/hide</button>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk204" type="checkbox" class="iptChk"><label for="chk204" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk301" type="checkbox" class="iptChk"><label for="chk301" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk302" type="checkbox" class="iptChk"><label for="chk302" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk303" type="checkbox" class="iptChk"><label for="chk303" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk304" type="checkbox" class="iptChk"><label for="chk304" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>1depth명</div>
+                    </td>
+                    <td class="center"> </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk"><label for="chk401" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk402" type="checkbox" class="iptChk"><label for="chk402" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk403" type="checkbox" class="iptChk"><label for="chk403" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk404" type="checkbox" class="iptChk"><label for="chk404" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top" rowspan="3">
+                        <div class="hideBox"><button class="hideBtn minus">View/hide</button>1depth명</div>
+                    </td>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk501" type="checkbox" class="iptChk"><label for="chk501" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk502" type="checkbox" class="iptChk"><label for="chk502" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk503" type="checkbox" class="iptChk"><label for="chk503" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk504" type="checkbox" class="iptChk"><label for="chk504" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk601" type="checkbox" class="iptChk"><label for="chk601" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk602" type="checkbox" class="iptChk"><label for="chk602" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk603" type="checkbox" class="iptChk"><label for="chk603" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk604" type="checkbox" class="iptChk"><label for="chk604" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk701" type="checkbox" class="iptChk"><label for="chk701" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk702" type="checkbox" class="iptChk"><label for="chk702" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk703" type="checkbox" class="iptChk"><label for="chk703" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk704" type="checkbox" class="iptChk"><label for="chk704" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top" rowspan="2">
+                        <div class="hideBox"><button class="hideBtn minus">View/hide</button>1depth명</div>
+                    </td>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk801" type="checkbox" class="iptChk"><label for="chk801" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk802" type="checkbox" class="iptChk"><label for="chk802" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk803" type="checkbox" class="iptChk"><label for="chk803" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk804" type="checkbox" class="iptChk"><label for="chk804" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="top">
+                        <div class="hideBox"><span class="empty"></span>2depth명</div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk901" type="checkbox" class="iptChk"><label for="chk901" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk902" type="checkbox" class="iptChk"><label for="chk902" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk903" type="checkbox" class="iptChk"><label for="chk903" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk904" type="checkbox" class="iptChk"><label for="chk904" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl"> </label></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

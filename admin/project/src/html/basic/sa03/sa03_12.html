@@ -1,0 +1,236 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체력측정 예약등록</div><!--20230125 수정-->
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <!--20230125 표 내용 수정 (팝업 내용 대부분 수정 됨)-->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>                                    
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">ㅇㅇㅇ</td>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">0000-00-00(양력)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">성별</th>
+                                        <td class="left">남자</td>
+                                        <th class="left">연락처</th>
+                                        <td class="left">010-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">회원아이디</th>
+                                        <td class="left" colspan="3">member_id</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">체력측정 예약정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>                                    
+                                    <tr>
+                                        <th class="left">예약일자</th>
+                                        <td class="left">0000-00-00</td>
+                                        <th class="left">예약시간</th>
+                                        <td class="left">00:00 ~ 00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">성인</td>
+                                        <th class="left">예약경로</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전화</label></div>
+                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">방문</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">예약구분</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">개인</label></div>
+                                            <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">기관/단체</label></div>
+                                            <select name="" id="" class="iptSlt frmMd">
+                                                <option value="">기관 선택</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         
+                        <div class="chkArea" style="margin:20px 0;">
+                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">체력측정 후 인증서 발급을 신청합니다.</label></div>
+                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">본인임을 확인했습니다.</label></div>
+                        </div> 
+
+                        <div style="width:100%; padding: 20px 0 ;box-sizing:border-box; background:#f1f7fa;">
+                            <p style="font-size:14px; color:#000; text-align:center;">
+                                관리자 예약 건은 회원이 직접 홈페이지에 접속해서<br/><b>참가신청서</b> 및 <b>참가동의서</b>를 작성하고 서명해야 합니다.
+                            </p>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+                        
+                        <!-- // 20230125 표 내용 수정 (팝업 내용 대부분 수정 됨)-->
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button class="btn gLine">취소</button>
+                            <!--20230125 버튼 텍스트 수정-->
+                            <button class="btn dkBlue">예약완료</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sample02" class="modPopup sm"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">담당강사선택</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="pText">* 운영프로그램 담당강사를 선택하세요.</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:100px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:157px;" />
+                                    <col style="width:120px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>체력인증센터</th>
+                                        <th>전문분야</th>
+                                        <th>기능</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">신안인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">청주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">KSPO송파</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">강동센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+         
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

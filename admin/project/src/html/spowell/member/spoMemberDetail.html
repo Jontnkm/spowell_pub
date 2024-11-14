@@ -1,0 +1,210 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">회원 기본정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>회원ID</th>
+                    <td>member_id</td>
+                    <th>성명</th>
+                    <td>홍길동</td>
+                    <th>주민등록번호</th>
+                    <td>000000-0******</td>
+                    <th>회원구분</th>
+                    <td>14세 미만</td>
+                </tr>
+                <tr>
+                    <th>휴대전화</th>
+                    <td>010-0000-0000</td>
+                    <th>이메일</th>
+                    <td>id@domain.co.kr</td>
+                    <th>주소</th>
+                    <td colspan="3">
+                        [우편번호] 기본주소 + 상세주소
+                    </td>
+                </tr>
+                <tr>
+                    <th>네이버 로그인</th>
+                    <td>naver_id &lt;YYYY-MM-DD&gt;</td>
+                    <th>카카오로그인</th>
+                    <td>kakao_id &lt;YYYY-MM-DD&gt;</td>
+                    <th>대리인명</th>
+                    <td>홍길동</td>
+                    <th>대리인<br>휴대전화</th>
+                    <td>010-9009-0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">
+                체육인 현황정보
+            </div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+                <col style="width:110px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>인증상태</th>
+                    <td><span>인증요청</span>&lt;<span>YYYY-MM-DD</span>&gt;</td>
+                    <th>장애여부</th>
+                    <td>비장애</td>
+                    <th>종목</th>
+                    <td></td>
+                    <th>소속</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">
+                위 회원가입자가 종목단체에 등록되어 있는 체육인인가요?
+            </div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:50%;">
+                <col style="width:50%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>체육인인증 확인</th>
+                    <th>체육인인증 거부</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>체육인(선수)번호 <span class="required">*</span></th>
+                                        <td>
+                                            <input type="text" class="frmMd">
+                                            <span class="textBox clar">· 선수등록시스템에 등록된 고유번호</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>장애인번호</th>
+                                        <td>
+                                            <input type="text" class="frmMd">
+                                            <span class="textBox clar">· 장애체육인의 경우 등록</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>체육인구분 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">국가대표 선수</label></div>
+                                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">국가대표 지도자</label></div>
+                                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">기타</label></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cptGroupBtm alignC">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn bLine" onclick="openAlert('splAlt01')">예, 종목단체에 등록된 체육인이 맞습니다.</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cptGroupBtm alignC">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn bLine" onclick="openAlert('splAlt02')">아니요, 종목단체에 등록된 체육인이 아닙니다.</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button type="button" class="crudBtn dkBlue">목록</button>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 알럿 -->
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">체육인으로 인증처리를 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<!-- 알럿 -->
+<div id="splAlt02" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">체육인으로 인증거부 처리를 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

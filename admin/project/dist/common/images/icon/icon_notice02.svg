@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <clipPath id="zgxznd41ua">
+            <path data-name="사각형 51" transform="translate(-.106 -.021)" style="fill:none" d="M0 0h22v26H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(14.106 12.476)">
+        <circle data-name="타원 6" cx="25" cy="25" r="25" transform="translate(-14.106 -12.476)" style="fill:#e2efff"/>
+        <g data-name="그룹 78" style="clip-path:url(#zgxznd41ua)" transform="translate(0 -.455)">
+            <path data-name="패스 49" d="M16.708 17.6h-.144v-5.75a6.55 6.55 0 1 0-13.1 0v5.75h-.146a2.317 2.317 0 1 0 0 4.635h13.39a2.317 2.317 0 1 0 0-4.635z" transform="translate(1.17 -3.126)" style="stroke:#000;stroke-width:2px;fill:none"/>
+            <path data-name="패스 50" d="M5.426 2.5v2.17A2.713 2.713 0 0 1 0 4.67V2.5" transform="translate(8.681 15.522)" style="stroke:#000;stroke-width:2px;fill:none"/>
+            <path data-name="패스 51" d="M10.5 16.633h4.381" transform="translate(1.979 -2.16)" style="stroke:#000;stroke-width:2px;fill:none"/>
+        </g>
+        <g transform="translate(9.766 -1.54)">
+            <circle data-name="타원 4" cx="6.5" cy="6.5" r="6.5" transform="translate(.128 .064)" style="fill:#e2efff"/>
+            <circle data-name="타원 5" cx="4.5" cy="4.5" r="4.5" transform="translate(2.128 2.064)" style="fill:#2784ff"/>
+        </g>
+    </g>
+</svg>

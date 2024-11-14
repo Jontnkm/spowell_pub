@@ -1,0 +1,160 @@
+<!-- Guide : s -->
+<div class="g-area">
+    <strong class="g-area-tit">accordion</strong>  
+    <xmp>
+        <!-- accordion -->
+        <div class="modAccordion">
+            <ul class="accoList">
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">내 광고가 시청자에게 몇번씩 노출되나요 ? 
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">
+                                내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변 내 광고가 시청자에게 몇번씩 노출되나요 ? 에 대한 답변
+                            </div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">SK브로드밴드의 IPTV와 케이블TV 모두에서 광고가 노출되나요 ?
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">B tv 우리동네 광고는 동 단위로 광고를 송출할 수 있는 SK브로드밴드의 IPTV에서 우선 송출됩니다.  케이블TV에서도 송출될 수 있도록 준비하고 있습니다. </div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">광고비를 현금으로 결제하고, 세금계산서를 받을 수 있나요? 에 대한 답변</div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">큐톤 광고가 무엇인가요?                                
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">큐톤 광고가 무엇인가요? 에 대한 답변</div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">광고 영상을 SNS에 올리거나 매장 TV에서 틀 수 있나요 ? 에 대한 답변</div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">광고가 불가능하거나 제한 업종이있나요?
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">광고가 불가능하거나 제한 업종이있나요? 에 대한 답변</div>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="accoItem">
+                    <dl class="accoArea">
+                        <dt class="accoTop" onclick="toggleAccordion(this)">
+                            <p class="accoTitle">휴대전화 본인 확인 인증은 왜 해야 하나요?
+                                <span class="arrowImg">
+                                    <img src="../../images/common/ico_arrDown.svg" alt="아래방향 아이콘">
+                                </span>
+                            </p>
+                        </dt>
+                        <dd class="accoCont">
+                            <div class="accoTxt">휴대전화 본인 확인 인증은 왜 해야 하나요? 에 대한 답변</div>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </xmp>
+</div>
+
+<script>
+
+    // accordion
+    function toggleAccordion(element) {
+        const accoCont = element.nextElementSibling;
+
+        element.classList.toggle("active");
+
+        if (accoCont.style.height && accoCont.style.height !== "0px") {
+            accoCont.style.height = accoCont.scrollHeight + "px"; 
+            setTimeout(() => {
+                accoCont.style.height = "0px"; 
+            }, 10); 
+        } else {
+            accoCont.style.height = accoCont.scrollHeight + "px"; 
+
+            accoCont.addEventListener('transitionend', function onTransitionEnd() {
+                accoCont.style.height = 'auto'; // 애니메이션 끝난 후 height를 auto로 전환해서 컨텐츠의 유연성에 맞춤(모바일 대응)
+                accoCont.removeEventListener('transitionend', onTransitionEnd);
+            });
+        }
+    }
+
+
+    // 가이드 공통
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+
+</script>
