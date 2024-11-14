@@ -1,0 +1,237 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>가이드 (Top Search)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">가이드</li>
+                                    <li class="item">Top Search</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <style>
+                    @font-face {
+                        font-family: 'D2Coding';
+                        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    .guideBox {margin-top:40px;}
+                    .guideTitle {font-size:18px; font-weight:500;}
+                    .guideCont {margin-top:10px;}
+                    .gGroup {margin-top:20px;}
+                    .gText {font-size:14px;}
+                    .gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+                    </style>
+                        <div class="cptPubGuide">
+                            <div class="guideArea">
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">Top Search</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            검색 상단 내부에 무엇이 들어갈 수 있는지를 정의합니다.<br/>
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    
+<div class="cptSearchArea">
+    <table>
+        <caption></caption>
+        <colgroup>
+            <col style="width:150px;">
+            <col style="width:auto;">
+            <col style="width:150px;">
+            <col style="width:auto;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>라디오</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">아이디</label></div>
+                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">네이버</label></div>
+                        <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo101"><label for="rdo104" class="iptLbl">카카오</label></div>
+                    </div>
+                </td>
+                <th>체크박스</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">아이디</label></div>
+                        <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">네이버</label></div>
+                        <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">카카오</label></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>라디오(버튼형)</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="frmChoBtn start"><input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLblBtn">전체</label></div>
+                        <div class="frmChoBtn"><input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLblBtn">아이디</label></div>
+                        <div class="frmChoBtn"><input id="rdo203" type="radio" class="iptRdo" name="rdo201"><label for="rdo203" class="iptLblBtn">네이버</label></div>
+                        <div class="frmChoBtn end"><input id="rdo204" type="radio" class="iptRdo" name="rdo201"><label for="rdo204" class="iptLblBtn">카카오</label></div>
+                    </div>
+                </td>
+                <th>체크박스(버튼형)</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="frmChoBtn start"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLblBtn">전체</label></div>
+                        <div class="frmChoBtn"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLblBtn">아이디</label></div>
+                        <div class="frmChoBtn"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLblBtn">네이버</label></div>
+                        <div class="frmChoBtn end"><input id="chk204" type="checkbox" class="iptChk"><label for="chk204" class="iptLblBtn">카카오</label></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>날짜 + 라디오(버튼형)</th>
+                <td colspan="3">
+                    <div class="frmGroup">
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+                            <input id="startpicker-input2" type="text" aria-label="Date">
+                            <div id="startpicker-container2" style="margin-left: -1px;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden">Prev month</button>      <em class="tui-calendar-title tui-calendar-title-month">August 2024</em>      <button class="tui-calendar-btn tui-calendar-btn-next-month">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">Today: Saturday, August 31, 2024</p>  </div></div>    <div class="tui-calendar-body"><table class="tui-calendar-body-inner" cellspacing="0" cellpadding="0">  <caption><span>Dates</span></caption>  <thead class="tui-calendar-body-header">    <tr>      <th class="tui-sun" scope="col">Sun</th>      <th scope="col">Mon</th>      <th scope="col">Tue</th>      <th scope="col">Wed</th>      <th scope="col">Thu</th>      <th scope="col">Fri</th>      <th class="tui-sat" scope="col">Sat</th>    </tr>  </thead>  <tbody>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1722092400000">28</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722178800000">29</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722265200000">30</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722351600000">31</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722438000000">1</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722524400000">2</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1722610800000">3</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1722697200000">4</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722783600000">5</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722870000000">6</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722956400000">7</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723042800000">8</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723129200000">9</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723215600000">10</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723302000000">11</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723388400000">12</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723474800000">13</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723561200000">14</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723647600000">15</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723734000000">16</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723820400000">17</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723906800000">18</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723993200000">19</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724079600000">20</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724166000000">21</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724252400000">22</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724338800000">23</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1724425200000">24</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1724511600000">25</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724598000000">26</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724684400000">27</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724770800000">28</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724857200000">29</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724943600000">30</td>            <td class="tui-calendar-date tui-calendar-sat tui-calendar-today tui-is-selectable tui-is-selected" data-timestamp="1725030000000">31</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1725116400000">1</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725202800000">2</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725289200000">3</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725375600000">4</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725462000000">5</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725548400000">6</td>            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1725634800000">7</td>          </tr>      </tbody></table></div></div></div>    </div>  </div></div>
+                        </div>
+                        <div class="textBox deco">~</div>
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+                            <input id="endpicker-input2" type="text" aria-label="Date">
+                            <div id="endpicker-container2" style="margin-left: -1px;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden">Prev month</button>      <em class="tui-calendar-title tui-calendar-title-month">August 2024</em>      <button class="tui-calendar-btn tui-calendar-btn-next-month">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">Today: Saturday, August 31, 2024</p>  </div></div>    <div class="tui-calendar-body"><table class="tui-calendar-body-inner" cellspacing="0" cellpadding="0">  <caption><span>Dates</span></caption>  <thead class="tui-calendar-body-header">    <tr>      <th class="tui-sun" scope="col">Sun</th>      <th scope="col">Mon</th>      <th scope="col">Tue</th>      <th scope="col">Wed</th>      <th scope="col">Thu</th>      <th scope="col">Fri</th>      <th class="tui-sat" scope="col">Sat</th>    </tr>  </thead>  <tbody>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1722092400000">28</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722178800000">29</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722265200000">30</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722351600000">31</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722438000000">1</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722524400000">2</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1722610800000">3</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1722697200000">4</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722783600000">5</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722870000000">6</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722956400000">7</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723042800000">8</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723129200000">9</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723215600000">10</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723302000000">11</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723388400000">12</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723474800000">13</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723561200000">14</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723647600000">15</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723734000000">16</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723820400000">17</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723906800000">18</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723993200000">19</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724079600000">20</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724166000000">21</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724252400000">22</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724338800000">23</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1724425200000">24</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1724511600000">25</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724598000000">26</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724684400000">27</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724770800000">28</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724857200000">29</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724943600000">30</td>            <td class="tui-calendar-date tui-calendar-sat tui-calendar-today tui-is-selectable tui-is-selected tui-is-selected-range" data-timestamp="1725030000000">31</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1725116400000">1</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725202800000">2</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725289200000">3</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725375600000">4</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725462000000">5</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725548400000">6</td>            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1725634800000">7</td>          </tr>      </tbody></table></div></div></div>    </div>  </div></div>
+                        </div>
+                        <div class="frmChoBtn start"><input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLblBtn">전체</label></div>
+                        <div class="frmChoBtn"><input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLblBtn">1개월</label></div>
+                        <div class="frmChoBtn"><input id="rdo303" type="radio" class="iptRdo" name="rdo301"><label for="rdo303" class="iptLblBtn">3개월</label></div>
+                        <div class="frmChoBtn end"><input id="rdo304" type="radio" class="iptRdo" name="rdo301"><label for="rdo304" class="iptLblBtn">6개월</label></div>
+                    </div>
+
+                    <script>
+                        datePickerTo("startpicker-input2", "startpicker-container2", "endpicker-input2", "endpicker-container2");
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <th>라디오(버튼형)</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo001"><label for="rdo101" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo001"><label for="rdo102" class="iptLbl">아이디</label></div>
+                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo001"><label for="rdo103" class="iptLbl">네이버</label></div>
+                        <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo001"><label for="rdo104" class="iptLbl">카카오</label></div>
+                    </div>
+                </td>
+                <th>가입일자</th>
+                <td>
+                    <div class="frmGroup">
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                            <input id="startpicker-input" type="text" aria-label="Date">
+                            <div id="startpicker-container" style="margin-left: -1px;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden">Prev month</button>      <em class="tui-calendar-title tui-calendar-title-month">August 2024</em>      <button class="tui-calendar-btn tui-calendar-btn-next-month">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">Today: Saturday, August 31, 2024</p>  </div></div>    <div class="tui-calendar-body"><table class="tui-calendar-body-inner" cellspacing="0" cellpadding="0">  <caption><span>Dates</span></caption>  <thead class="tui-calendar-body-header">    <tr>      <th class="tui-sun" scope="col">Sun</th>      <th scope="col">Mon</th>      <th scope="col">Tue</th>      <th scope="col">Wed</th>      <th scope="col">Thu</th>      <th scope="col">Fri</th>      <th class="tui-sat" scope="col">Sat</th>    </tr>  </thead>  <tbody>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1722092400000">28</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722178800000">29</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722265200000">30</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722351600000">31</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722438000000">1</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722524400000">2</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1722610800000">3</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1722697200000">4</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722783600000">5</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722870000000">6</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722956400000">7</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723042800000">8</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723129200000">9</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723215600000">10</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723302000000">11</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723388400000">12</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723474800000">13</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723561200000">14</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723647600000">15</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723734000000">16</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723820400000">17</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723906800000">18</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723993200000">19</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724079600000">20</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724166000000">21</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724252400000">22</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724338800000">23</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1724425200000">24</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1724511600000">25</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724598000000">26</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724684400000">27</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724770800000">28</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724857200000">29</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724943600000">30</td>            <td class="tui-calendar-date tui-calendar-sat tui-calendar-today tui-is-selectable tui-is-selected" data-timestamp="1725030000000">31</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1725116400000">1</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725202800000">2</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725289200000">3</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725375600000">4</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725462000000">5</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725548400000">6</td>            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1725634800000">7</td>          </tr>      </tbody></table></div></div></div>    </div>  </div></div>
+                        </div>
+                        <div class="textBox deco">~</div>
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                            <input id="endpicker-input" type="text" aria-label="Date">
+                            <div id="endpicker-container" style="margin-left: -1px;"><div class="tui-datepicker tui-hidden tui-rangepicker">      <div class="tui-datepicker-body tui-datepicker-type-date">      <div class="tui-calendar-container"><div class="tui-calendar">    <div class="tui-calendar-header"><div class="tui-calendar-header-inner">      <button class="tui-calendar-btn tui-calendar-btn-prev-month tui-hidden">Prev month</button>      <em class="tui-calendar-title tui-calendar-title-month">August 2024</em>      <button class="tui-calendar-btn tui-calendar-btn-next-month">Next month</button>    </div>    <div class="tui-calendar-header-info">    <p class="tui-calendar-title-today">Today: Saturday, August 31, 2024</p>  </div></div>    <div class="tui-calendar-body"><table class="tui-calendar-body-inner" cellspacing="0" cellpadding="0">  <caption><span>Dates</span></caption>  <thead class="tui-calendar-body-header">    <tr>      <th class="tui-sun" scope="col">Sun</th>      <th scope="col">Mon</th>      <th scope="col">Tue</th>      <th scope="col">Wed</th>      <th scope="col">Thu</th>      <th scope="col">Fri</th>      <th class="tui-sat" scope="col">Sat</th>    </tr>  </thead>  <tbody>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-blocked" data-timestamp="1722092400000">28</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722178800000">29</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722265200000">30</td>            <td class="tui-calendar-date tui-calendar-prev-month tui-is-blocked" data-timestamp="1722351600000">31</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722438000000">1</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722524400000">2</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1722610800000">3</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1722697200000">4</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722783600000">5</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722870000000">6</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1722956400000">7</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723042800000">8</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723129200000">9</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723215600000">10</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723302000000">11</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723388400000">12</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723474800000">13</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723561200000">14</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723647600000">15</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723734000000">16</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1723820400000">17</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1723906800000">18</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1723993200000">19</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724079600000">20</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724166000000">21</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724252400000">22</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724338800000">23</td>            <td class="tui-calendar-date tui-calendar-sat tui-is-blocked" data-timestamp="1724425200000">24</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-sun tui-is-blocked" data-timestamp="1724511600000">25</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724598000000">26</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724684400000">27</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724770800000">28</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724857200000">29</td>            <td class="tui-calendar-date tui-is-blocked" data-timestamp="1724943600000">30</td>            <td class="tui-calendar-date tui-calendar-sat tui-calendar-today tui-is-selectable tui-is-selected tui-is-selected-range" data-timestamp="1725030000000">31</td>          </tr>        <tr class="tui-calendar-week">            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable" data-timestamp="1725116400000">1</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725202800000">2</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725289200000">3</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725375600000">4</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725462000000">5</td>            <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable" data-timestamp="1725548400000">6</td>            <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable" data-timestamp="1725634800000">7</td>          </tr>      </tbody></table></div></div></div>    </div>  </div></div>
+                        </div>
+
+                        <script>
+                            datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                        </script>
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>키워드</th>
+                <td>
+                    <div class="frmGroup">
+                        <select name="" id="" class="iptSlt frmSm">
+                            <option value="">이름</option>
+                            <option value="">아이디</option>
+                            <option value="">연락처</option>
+                            <option value="">이메일</option>
+                        </select>
+                        <input type="text" class="iptText">
+                    </div>
+                </td>
+                <td colspan="2" class="right">
+                    <button class="btnSearch">검색</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</textarea>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function(){
+            datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+            datePickerTo("startpicker-input2", "startpicker-container2", "endpicker-input2", "endpicker-container2");
+        },1000);
+
+    });
+</script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/xml.min.js"></script>
+<script>
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function run(){
+        const codeGuides = document.querySelectorAll('.cptPubGuide .codeGuide');
+        const codes = document.querySelectorAll('.cptPubGuide code.xml');
+        const viewers = document.querySelectorAll('.cptPubGuide .gView');
+        codes.forEach(function(code,idx){
+            code.innerHTML = escapeHtml(codeGuides[idx].value);
+        });
+        viewers.forEach(function(viewer,idx){
+            viewer.innerHTML = codeGuides[idx].value;
+        });
+        hljs.highlightAll();
+    }
+    window.onload = function(){
+        run();
+    }
+</script>
+
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

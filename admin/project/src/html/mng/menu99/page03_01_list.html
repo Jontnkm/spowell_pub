@@ -1,0 +1,311 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>관리자설정</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">관리자관리</li>
+                                    <li class="item">관리자설정</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                        <th>아이디</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>가입기간</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                    <input id="startpicker-input" type="text" aria-label="Date">
+                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                                <div class="textBox deco">~</div>
+                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                    <input id="endpicker-input" type="text" aria-label="Date">
+                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+
+                                                <script>
+                                                    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                                                </script>
+                                                
+                                            </div>
+                                        </td>
+                                        <th>관리자구분</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmMd">
+                                                    <option value="">전체</option>
+                                                    <option value="2">사업관리자</option>
+                                                    <option value="3">센터관리자</option>
+                                                    <option value="14">연구관리자</option>
+                                                    <option value="15">홈페이지관리자</option>
+                                                    <option value="16">민간센터관리자</option>
+                                                    option value="18">미지정관리자</option>
+                                                    <option value="19">게시물관리자</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>시도</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmMd">
+                                                    <option value="">전체</option>
+                                                    <option value="11">서울</option>
+                                                    <option value="26">부산</option>
+                                                    <option value="27">대구</option>
+                                                    <option value="28">인천</option>
+                                                    <option value="29">광주</option>
+                                                    <option value="30">대전</option>
+                                                    <option value="31">울산</option>
+                                                    <option value="41">경기</option>
+                                                    <option value="42">강원</option>
+                                                    <option value="43">충북</option>
+                                                    <option value="44">충남</option>
+                                                    <option value="45">전북</option>
+                                                    <option value="46">전남</option>
+                                                    <option value="47">경북</option>
+                                                    <option value="48">경남</option>
+                                                    <option value="50">제주</option>
+                                                    <option value="60">세종</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>체력인증센터</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmMd">
+                                                    <option value="">전체</option>
+                                                    <option value="11">서울</option>
+                                                    <option value="26">부산</option>
+                                                    <option value="27">대구</option>
+                                                    <option value="28">인천</option>
+                                                    <option value="29">광주</option>
+                                                    <option value="30">대전</option>
+                                                    <option value="31">울산</option>
+                                                    <option value="41">경기</option>
+                                                    <option value="42">강원</option>
+                                                    <option value="43">충북</option>
+                                                    <option value="44">충남</option>
+                                                    <option value="45">전북</option>
+                                                    <option value="46">전남</option>
+                                                    <option value="47">경북</option>
+                                                    <option value="48">경남</option>
+                                                    <option value="50">제주</option>
+                                                    <option value="60">세종</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="grpComponent">
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                                <div class="alignR">
+                                    <div class="comSideOpt">
+                                        <ul class="opList">
+                                            <li class="item">
+                                                <button class="viewBtn on">10건</button>
+                                                <button class="viewBtn">20건</button>
+                                                <button class="viewBtn">50건</button>
+                                                <button class="viewBtn">100건</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cptGrid">
+                                <table class="gridTb">
+                                    <colgroup>
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:50px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:80px;">
+                                        <col style="width:100px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>가입일</th>
+                                            <th>이름</th>
+                                            <th>아이디</th>
+                                            <th>연락처</th>
+                                            <th>시도</th>
+                                            <th>인증센터</th>
+                                            <th>관리자설정</th>
+                                            <th>접속로그</th>
+                                            <th>관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0000-00-00</td>
+                                            <td>홍길동</td>
+                                            <td>honggildong</td>
+                                            <td>010-0000-0000</td>
+                                            <td>경기</td>
+                                            <td>경기(포천)</td>
+                                            <td>센터관리자</td>
+                                            <td>
+                                                <button class="gridBtn gLine">로그확인</button>
+                                            </td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">수정</button>
+                                                <button class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00</td>
+                                            <td>홍길동</td>
+                                            <td>honggildong</td>
+                                            <td>010-0000-0000</td>
+                                            <td>경기</td>
+                                            <td>경기(포천)</td>
+                                            <td>센터관리자</td>
+                                            <td>
+                                                <button class="gridBtn gLine">로그확인</button>
+                                            </td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">수정</button>
+                                                <button class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00</td>
+                                            <td>홍길동</td>
+                                            <td>honggildong</td>
+                                            <td>010-0000-0000</td>
+                                            <td>경기</td>
+                                            <td>경기(포천)</td>
+                                            <td>센터관리자</td>
+                                            <td>
+                                                <button class="gridBtn gLine">로그확인</button>
+                                            </td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">수정</button>
+                                                <button class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00</td>
+                                            <td>홍길동</td>
+                                            <td>honggildong</td>
+                                            <td>010-0000-0000</td>
+                                            <td>경기</td>
+                                            <td>경기(포천)</td>
+                                            <td>센터관리자</td>
+                                            <td>
+                                                <button class="gridBtn gLine">로그확인</button>
+                                            </td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">수정</button>
+                                                <button class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00</td>
+                                            <td>홍길동</td>
+                                            <td>honggildong</td>
+                                            <td>010-0000-0000</td>
+                                            <td>경기</td>
+                                            <td>경기(포천)</td>
+                                            <td>센터관리자</td>
+                                            <td>
+                                                <button class="gridBtn gLine">로그확인</button>
+                                            </td>
+                                            <td>
+                                                <button class="gridBtn dkBlue">수정</button>
+                                                <button class="gridBtn red">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="9">
+                                                검색 결과가 없습니다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <!-- 페이징 -->
+                            <div class="comPaging">
+                                <a class="start" href="#"></a>
+                                <a class="prev" href="#"></a>
+                                <ul class="numList">
+                                    <li><a href="#">1</a></li>
+                                    <li class="on"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                </ul>
+                                <a class="next" href="#"></a>
+                                <a class="end" href="#"></a>
+                            </div>
+
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn dkBlue">등록</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

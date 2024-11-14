@@ -1,0 +1,186 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>체력측정예약통계</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">홈페이지관리</li>
+                <li class="item">체력측정예약통계</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>사업년도</th>
+                    <td>
+                        <select name="" id="" class="iptSlt ">
+                            <option value="">2023</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>체력인증센터</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt ">
+                                <option value="">센터 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>운영구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt ">
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--월별 측정건수-->
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">월별 예약현황</div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:10%;">
+                <col style="width:auto;">
+                <col style="width:10%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+                <col style="width:5.5%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>시도</th>
+                    <th>체력인증센터</th>
+                    <th>누계</th>
+                    <th>1월</th>
+                    <th>2월</th>
+                    <th>3월</th>
+                    <th>4월</th>
+                    <th>5월</th>
+                    <th>6월</th>
+                    <th>7월</th>
+                    <th>8월</th>
+                    <th>9월</th>
+                    <th>10월</th>
+                    <th>11월</th>
+                    <th>12월</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>서울</td>
+                    <td>KSPO송파</td>
+                    <td>124388</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td colspan="2">합계</td>
+                    <td>142353</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

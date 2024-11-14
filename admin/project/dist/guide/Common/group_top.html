@@ -1,0 +1,192 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+    <strong class="g-area-tit">그리드/테이블 상단 :: 복합적으로 있는 경우</strong>
+    <xmp>
+        <!-- 그리드/테이블 상단 -->
+        <div class="cptGroupTop">
+            <div class="alignL">
+                <div class="groupTitle">Grid Title</div>
+                <div class="unit"><span class="text">타이틀에 대한 설명입니다</span></div>
+            </div>
+            <div class="alignR">
+                <div class="comSideOpt">
+                    <ul class="opList">
+                        <li class="item">
+                            <select class="iptSlt" name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                        </li>
+                        <li class="item">
+                            <select class="iptSlt" name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">그리드/테이블 상단 :: 타이틀이 없는 경우</strong>
+    <xmp>
+        <!-- 그리드/테이블 상단 -->
+        <div class="cptGroupTop">
+            <div class="alignL">
+                <div class="unit"><span class="text">(총 <span class="total">100</span>건)</span></div>
+            </div>
+            <div class="alignR">
+                <div class="comSideOpt">
+                    <ul class="opList">
+                        <li class="item">
+                            <select class="iptSlt" name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                        </li>
+                        <li class="item">
+                            <select class="iptSlt" name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">그리드/테이블 상단 :: 타이틀이 없는 경우</strong>
+    <xmp>
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li>
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </xmp>
+
+    <strong class="g-area-tit">그리드/테이블 상단 :: 타이틀만 있는 경우 (우측이 없는 경우)</strong>
+    <xmp>
+        <!-- 그리드/테이블 상단 -->
+        <div class="cptGroupTop">
+            <div class="alignL">
+                <div class="groupTitle">Grid Title</div>
+                <div class="unit"><span class="text">타이틀에 대한 설명입니다</span></div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">그리드/테이블 상단 :: 작은 타이틀</strong>
+    <xmp>
+        <!-- 작은 타이틀 -->
+        <div class="comSmTit">
+            <div class="alignL">
+                <div class="title">Small Title</div>
+            </div>
+            <div class="alignR">
+                <span class="titText">최근수정 : 2022-12-31</span>
+                <span class="titText">수정자 : 홍길동</span>
+                <div class="comSideOpt">
+                    <ul class="opList">
+                        <li class="item"><button type="button" class="srhBtn dkbLine">PAR-Q 출력</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </xmp>
+    
+    <strong class="g-area-tit">그리드/테이블 상단 :: 작은 타이틀 + 설명글</strong>
+    <xmp>
+        <!-- 작은 타이틀 + 설명글 -->
+        <div class="comSmTit">
+            <div class="alignL">
+                <div class="title">측정대상자 검색</div>
+                <div class="unit"><span class="desc">*아이디 또는 개인정보를 입력 후 '회원검색' 버튼을 클릭해 주세요.</span></div>
+            </div>
+        </div>
+    </xmp>
+    
+<style>
+/**/
+.classInfo * {letter-spacing:0;}
+.classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+.classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+.classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+.classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+.classInfo table + table {margin-top:-1px;}
+</style>
+<div class="classInfo">
+    <div class="infoTitle">설명</div>
+    <div class="infoMasage">
+        그리드(데이터 테이블) 혹은 입력테이블의 상단에 사용되는 공통 요소
+    </div>
+
+    <div class="infoTitle">추가 조작</div>
+    <table style="width:100%;">
+        <caption></caption>
+        <colgroup>
+            <col style="width:30%;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>경로</th>
+                <th>.cptGroupTop .className</th>
+            </tr>
+            <tr>
+                <th>className</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>className</td>
+                <td>설명</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+    
+    
+    
+    </div>
+    <!-- Guide : e -->
+    
+    <script type="text/javascript">
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+    </script>

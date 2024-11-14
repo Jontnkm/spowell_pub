@@ -1,0 +1,348 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>체육인복지지원 통합관리시스템</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	<link rel="stylesheet" href="../../../common/css/spowell.css" />
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script> <!--toast ui-->
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/type01.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+<div class="cptHeader">
+    <div class="headerArea">
+        <div class="headerLogo"><h1><a href="#"><img src="../../../common/images/layout/type01/spowell_logo.png" alt="" /></a></h1></div>
+        <div class="headerGroup">
+            <div class="headerProfile">
+                <dl class="headerDate">
+                    <dt>최종 로그인 날짜 : </dt>
+                    <dd>2022-12-30 AM 09:30:00</dd>
+                </dl>
+                <div class="headerUser"><b>홍길동</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                <a href="#" class="headerBtn">로그아웃</a>
+                <a href="#" class="headerBtn">정보수정</a>
+            </div>
+            <div class="headerNav">
+                <ul class="menuList">
+                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                        <a href="#">회원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지지원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지사업관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">직업안정지원</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">홈페이지관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">통계관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">시스템관리</a>
+                    </li>
+                </ul>
+                <div class="allMenuGroup">
+                    <button class="allMenu">전체메뉴</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMenuArea">
+        <ul class="menuList">
+            <li class="menuItem">
+                <a href="#">회원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지지원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지사업관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">직업안정지원</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">홈페이지관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">통계관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">시스템관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer ">
+
+            <!-- 좌측 메뉴 영역 -->
+            <div class="layoutNav">
+                <!-- Left Menu -->
+				
+
+<div class="cptSnav">
+    <div class="snavArea">
+        <div class="snavMenu">
+            <div class="snavTitle">1Depth Menu</div>
+            <ul class="menuList">
+                <li class="menuItem"> <!-- class : on : 1depth 메뉴 활성화 -->
+                    <a href="#">2Depth Menu</a>
+                </li>
+                <li class="menuItem dropdown on"> <!--2 depth 경우 dropdown 클래스 추가-->
+                    <a href="#">2Depth Menu 2Depth Menu 2Depth Menu 2Depth Menu</a>
+                    <ul class="subMenu">
+                        <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                        <li><a href="#" class="on">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <a href="#">2Depth Menu</a>
+                </li>
+            </ul>
+            <div class="snavBtm">
+                <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="sideSlide">
+                    <button class="btnSlide">메뉴 열기/닫기</button>
+                </div>
+
+            </div>
+            <!-- //좌측 메뉴 영역 -->
+
+            <!-- 콘텐츠 영역 -->
+            <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    
+
+<div class="comH2Group">
+    <div class="alignL">
+        <h2>Current page Name (title area)</h2>
+    </div>
+    <div class="alignR">
+        <ul class="locaGroup">
+            <li class="item">HOME</li>
+            <li class="item">2depth Category Name</li>
+            <li class="item">Current Page Name</li>
+        </ul>
+    </div>
+</div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:110px;">
+                <col style="width:auto;">
+                <col style="width:110px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>이름 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmLg">
+                        </div>
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmLg">
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText frmLg">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">조회</button>
+                <button type="button" class="crudBtn blue">개별등록</button>
+                <button type="button" class="crudBtn blue">일괄등록</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">범죄사실확인 일괄등록</div>
+        </div>
+    </div>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>일괄등록 엑셀형식 : 등록번호, 이름, 주민등록번호, 범죄사실 확인내용</p>
+            <button type="button" class="soloBtn bLine">파일선택</button>
+            <button type="button" class="soloBtn dkBlue">확인</button>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:33.3333%;">
+                <col style="width:33.3333%;">
+                <col style="width:33.3333%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>데이터건수</th>
+                    <th>체육인확인</th>
+                    <th>체육인 미확인</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">총 <span>00</span>건</td>
+                    <td class="center"><span>00</span>건</td>
+                    <td class="center"><span>00</span>건</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn gray">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">발급문서조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="ContBox" style="width:100%; height:800px; background:#e5e5e5;">
+                            <!--개발 작업 시 style 제거 요청 - 컨텐츠 높이값 사용 예정-->
+                            발급문서별 구성내용 표기 
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <div class="popBtm">
+                        <button class="btn dkBlue">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+            </div>
+            <!-- //콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+        <!-- Footer -->
+        
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+
+</div>
+</body>
+</html>

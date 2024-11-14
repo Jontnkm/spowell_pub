@@ -1,0 +1,134 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>배너관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">홈페이지관리</li>
+                                    <li class="item">배너관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목</th>
+                                        <td class="left">
+                                            글 등록 시 작성한 제목 노출
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">유형</th>
+                                        <td class="left">
+                                            롤링배너
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">구분</th>
+                                        <td class="left">
+                                            게시
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">노출순서</th>
+                                        <td class="left">
+                                            1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">PC 이미지<br/>(#### X ####)</th>
+                                        <td class="left">
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/width.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">MO 이미지<br/>(### X ###)</th>
+                                        <td class="left">
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/height.jpg" alt="">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크</th>
+                                        <td class="left">
+                                            링크적용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크URL</th>
+                                        <td class="left">
+                                            www.naver.com
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대체 텍스트</th>
+                                        <td class="left">
+                                            마일리지 적립2배 이벤트 2024년 5월 1일부터 2024년 5월 31일까지
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            홍길동 2024-05-05
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">삭제</button>
+                                    <button type="button" class="crudBtn dkBlue">수정</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

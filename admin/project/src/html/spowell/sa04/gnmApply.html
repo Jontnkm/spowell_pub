@@ -1,0 +1,393 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="modTab out">
+        <ul class="tabMenu">
+            <li class="item "><a href="#">엑셀파일 일괄등록</a></li>
+            <li class="item on"><a href="#">일괄등록 데이터관리</a></li>
+        </ul>
+    </div>
+    <!-- <div class="appFrmDesc">
+        <p> </p>
+        <p>지원신청 데이터의 일괄등록은 규격에 맞는 엑셀파일로 등록해야합니다. &lt;일괄등록 양식다운로드 : <a href="#none">일괄등록-경기력성과포상금.xlsx</a>&gt;</p>
+        <p>일괄등록 데이터는 장애 또는 비장애를 구분해서 각각 등록하세요.</p>
+        <p> </p>
+    </div> -->
+    <br>
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>기준년월</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>지역</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>구분</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">초등학교</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">중학교</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">고등학교</label></div>
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">특수학교</label></div>
+                        </div>
+                    </td>
+                    <th>수급자격</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">적격</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">부적격</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>스포츠강좌이용권</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">선정</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">미선정</label></div>
+                        </div>
+                    </td>
+                    <th>장애인<br>스포츠강좌이용권</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">선정</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">미선정</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선발결과</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">선발</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">미선발</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">추가선발</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">지원중단</label></div>
+                        </div>
+                    </td>
+                    <th>선발구분</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">신규</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">계속</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선수구분</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">비장애</label></div>
+                        </div>
+                    </td>
+                    <th>키워드</th>
+                    <td>
+                        <input type="text" class="iptText">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                        <button class="btnDetail">상세검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span><span class="text"> / 중복제외 (총 <span class="total">100</span>건)</span></div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px">
+                <col style="width:100px">
+                <col style="width:90px">
+                <col style="width:90px">
+                <col style="width:100px">
+                <col style="width:120px">
+                <col style="width:80px">
+                <col style="width:80px">
+                <col style="width:80px">
+                <col style="width:120px">
+                <col style="width:130px">
+                <col style="width:120px">
+                <col style="width:80px">
+                <col style="width:120px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th rowspan="2">기준년월</th>
+                    <th rowspan="2">지역</th>
+                    <th rowspan="2">구분</th>
+                    <th rowspan="2">이름</th>
+                    <th rowspan="2">주민등록번호</th>
+                    <th rowspan="2">선수구분</th>
+                    <th rowspan="2">선발구분</th>
+
+                    <th colspan="4">자격조회결과</th>
+                    
+                    <th rowspan="2">선발결과</th>
+                    <th rowspan="2">기능</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>수급자격</th>
+                    <th>스포츠강좌이용권</th>
+                    <th>장애인스포츠강좌이용권</th>
+                    <th>조회일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <span>2024</span>년
+                        <span>04</span>월
+                    </td>
+                    <td>서울</td>
+                    <td>고등학교</td>
+                    <td>홍길동</td>
+                    <td>000000 - 0100010</td>
+                    <td>비장애</td>
+                    <td>신규</td>
+                    
+                    <td>적격</td>
+                    <td>미선정</td>
+                    <td>미선정</td>
+                    <td>
+                        <span>2024-10-07</span><br>
+                        <button type="button" class="soloBtn gLine"  onclick="openPopup('sample01')">이력조회</button>
+                    </td>
+
+                    <td>선발</td>
+                    <td>
+                        <button type="button" class="soloBtn gLine">상세관리</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue" onclick="openAlert('')">재검증</button>
+                <button type="button" class="srhBtn dkBlue" onclick="openAlert('splAlt02')">자격조회</button>
+                <button type="button" class="srhBtn dkBlue" onclick="openAlert('splAlt03')">선발</button>
+                <button type="button" class="srhBtn dkBlue" onclick="openAlert('splAlt04')">미선발</button>
+
+                <button type="button" class="srhBtn dkBlue" onclick="openAlert('splAlt06')">삭제</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue" onclick="openAlert('splAlt05')">장학생 선발 확정</button>
+            </div>
+        </div>
+    </div>
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">선발된 항목이 없습니다.</div>
+        <div class="alertBtm">
+            <!-- <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button> -->
+            <button class="btn dkBlue" onclick="closeAlert('splAlt01');">확인</button>
+        </div>
+    </div>
+</div>
+<div id="splAlt02" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">자격조회를 완료했습니다.</div>
+        <div class="alertBtm">
+            <!-- <button class="btn gLine" onclick="closeAlert('splAlt02');">취소</button> -->
+            <button class="btn dkBlue" onclick="closeAlert('splAlt02');">확인</button>
+        </div>
+    </div>
+</div>
+<div id="splAlt03" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">00명이 선발되었습니다.</div>
+        <div class="alertBtm">
+            <!-- <button class="btn gLine" onclick="closeAlert('splAlt03');">취소</button> -->
+            <button class="btn dkBlue" onclick="closeAlert('splAlt03');">확인</button>
+        </div>
+    </div>
+</div>
+<div id="splAlt04" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">00명이 미선발되었습니다.</div>
+        <div class="alertBtm">
+            <!-- <button class="btn gLine" onclick="closeAlert('splAlt04');">취소</button> -->
+            <button class="btn dkBlue" onclick="closeAlert('splAlt04');">확인</button>
+        </div>
+    </div>
+</div>
+<div id="splAlt05" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">장학생 선발을 확정하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt05');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<div id="splAlt06" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">선택한 항목을 삭제하시겠습니까?</div>
+        <div class="alertBtm">
+            <button class="btn gLine" onclick="closeAlert('splAlt06');">취소</button>
+            <button class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="sample01" class="modPopup sm"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">자격조회 이력</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:25%" />
+                                    <col style="width:25%" />
+                                    <col style="width:25%" />
+                                    <col style="width:25%" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th class="center" rowspan="2">조회일자</th>
+                                        <th class="center" colspan="3">조회결과</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="center">수급자격</th>
+                                        <th class="center">스포츠강좌이용권</th>
+                                        <th class="center">장애인스포츠<br>강좌이용권</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">2024-05-02</td>
+                                        <td class="center">적격</td>
+                                        <td class="center">선정</td>
+                                        <td class="center">미선정</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024-09-02</td>
+                                        <td class="center">부적격</td>
+                                        <td class="center">미선정</td>
+                                        <td class="center">미선정</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

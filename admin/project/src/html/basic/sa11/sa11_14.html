@@ -1,0 +1,347 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">관리권한 등록/조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">관리권한그룹정보</div>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">사용자 구분<span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">공단사용자</label></div>
+                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">센터담당자</label></div>
+                                            <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">일반사용자</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">권한그룹명<span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <input type="text" class="iptText frmMd" /><div class="textBox clar">*12자 이내</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">사용계정</th>
+                                        <td class="left">120개</td>
+                                        <th class="left">상태</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">정상</label></div>
+                                            <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo102"><label for="rdo105" class="iptLbl">정지</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록자</th>
+                                        <td class="left">홍길동</td>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">0000-00-00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">관리권한 설정</div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:15%" />
+                                    <col style="width:auto" />
+                                    <col style="width:10%" />
+                                    <col style="width:10%" />
+                                    <col style="width:10%" />
+                                    <col style="width:10%" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>대메뉴</th>
+                                        <th>중메뉴</th>
+                                        <th>
+                                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전체</label></div>
+                                        </th>
+                                        <th>
+                                            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">읽기</label></div>
+                                        </th>
+                                        <th>
+                                            <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">등록/수정</label></div>
+                                        </th>
+                                        <th>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">삭제</label></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center" rowspan="2">회원관리</td>
+                                        <td class="left">회원현황조회</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">휴면회원조회</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center" rowspan="7">체력측정관리</td>
+                                        <td class="left">체력측정예약현황 - 체력측정예약현황</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">체력측정예약현황 - 예약자 수기등록</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">체력측정예약현황 - 체력측정 예약설정</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">체력측정예약현황 - 측정결과등록 - 일반</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">체력측정예약현황 - 측정결과등록 - 출장</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">측정결과조회/처방</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">출장측정 승인관리</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center" rowspan="2">자가체력측정관리</td>
+                                        <td class="left">자가체력측정내역</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">자가체력측정상담</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center" rowspan="2">운동상담관리</td>
+                                        <td class="left">온라인 운동상담</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left exceptLine">정부24 운동상담</td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">전체</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">읽기</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">등록/수정</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                        <td class="center">
+                                            <div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl ftZero">삭제</label></div><!--20230203 인라인css 제거 후 클래스 추가 ftZero-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <!--상세보기 버튼으로 접근했을 시 -->
+                            <button type="button" class="btn red" onclick="openAlert('splAlt01');">삭제</button>
+                            <!--상세보기 버튼으로 접근했을 시 -->
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">관리권한그룹을 삭제 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

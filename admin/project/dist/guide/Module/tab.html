@@ -1,0 +1,174 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+    <strong class="g-area-tit">Tab :: Out</strong>
+    <xmp>
+        <!-- tab out page -->
+        <div class="modTab out"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+            <ul class="tabMenu">
+                <li class="item"><a href="#">메뉴1</a></li>
+                <li class="item on"><a href="#">메뉴2</a></li>
+                <li class="item"><a href="#">메뉴3</a></li>
+                <li class="item"><a href="#">메뉴4</a></li>
+                <li class="item"><a href="#">메뉴5</a></li>
+            </ul>
+            <!-- modTab in 영역
+            <div class="tabContGroup">
+                <div class="tabCont on">탭 내 컨텐츠 영역 1</div>
+                <div class="tabCont">탭 내 컨텐츠 영역 2</div>
+            </div>
+             -->
+            <script>
+            $(document).ready(function(){
+                //탭메뉴 스크립트
+                $(".modTab li.item a").on("click",function(e){
+                    if($(this).parents(".modTab").hasClass("in")){
+                        e.preventDefault();
+                        let _idx = $(this).parent().index();
+                        $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                        $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                    }
+                });
+            });
+            </script>
+        </div>
+    </xmp>
+    
+    <strong class="g-area-tit">Tab :: In</strong>
+    <xmp>
+        <!-- tab in page -->
+        <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+            <ul class="tabMenu">
+                <li class="item"><a href="#">메뉴1</a></li>
+                <li class="item on"><a href="#">메뉴2</a></li>
+                <li class="item"><a href="#">메뉴3</a></li>
+                <li class="item"><a href="#">메뉴4</a></li>
+            </ul>
+            <!-- modTab in 영역 -->
+            <div class="tabContGroup">
+                <div class="tabCont on">탭 내 컨텐츠 영역 1</div>
+                <div class="tabCont">탭 내 컨텐츠 영역 2</div>
+                <div class="tabCont">탭 내 컨텐츠 영역 3</div>
+            </div>
+            <script>
+            $(document).ready(function(){
+                //탭메뉴 스크립트
+                $(".modTab li.item a").on("click",function(e){
+                    if($(this).parents(".modTab").hasClass("in")){
+                        e.preventDefault();
+                        let _idx = $(this).parent().index();
+                        $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                        $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                    }
+                });
+            });
+            </script>
+        </div>
+    </xmp>
+    
+    <style>
+    /**/
+    .classInfo * {letter-spacing:0;}
+    .classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+    .classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+    .classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+    .classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+    .classInfo table + table {margin-top:-1px;}
+    </style>
+    <div class="classInfo">
+        <div class="infoTitle">설명</div>
+        <div class="infoMasage">
+            .tabMenu 내에 li.item 갯수에 따라 메뉴 수가 결정되고 자동으로 가로 길이가 조절된다.
+        </div>
+
+        <div class="infoTitle">추가 조작</div>
+        <table style="width:100%;">
+            <caption></caption>
+            <colgroup>
+                <col style="width:30%;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>경로</th>
+                    <th>.modTab.className</th>
+                </tr>
+                <tr>
+                    <th>className</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>out</td>
+                    <td>메뉴 클릭 시 화면 전환이 일어남 (링크)</td>
+                </tr>
+                <tr>
+                    <td>in</td>
+                    <td>메뉴 클릭 시 화면 내에서 컨텐츠가 바뀜</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>경로</th>
+                    <th>.modTab .tabMenu .item.className</th>
+                </tr>
+                <tr>
+                    <th>className</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>on</td>
+                    <td>해당 메뉴 선택 된 효과</td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>경로</th>
+                    <th>.modTab .tabContGroup .tabCont.className</th>
+                </tr>
+                <tr>
+                    <th>className</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>on</td>
+                    <td>해당 컨텐츠가 보임 (display:block)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    
+    
+    </div>
+    <!-- Guide : e -->
+    
+    <script type="text/javascript">
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+    </script>

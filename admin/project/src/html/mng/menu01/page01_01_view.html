@@ -1,0 +1,104 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>회원조회</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">회원관리</li>
+                                    <li class="item">회원조회</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본정보</div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">
+                                            홍길동
+                                        </td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">
+                                            member_id
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">
+                                            0000-00-00
+                                        </td>
+                                        <th class="left">성별<br/></th>
+                                        <td class="left">
+                                            남자
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">연락처</th>
+                                        <td class="left">
+                                            000-0000-0000
+                                        </td>
+                                        <th class="left">이메일</th>
+                                        <td class="left">
+                                            email@domain.com
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">주소</th>
+                                        <td class="left">
+                                            서울특별시 강남구 서초동
+                                        </td>
+                                        <th class="left">수신동의</th>
+                                        <td class="left">
+                                            동의
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">가입일자</th>
+                                        <td class="left">
+                                            0000-00-00
+                                        </td>
+                                        <th class="left">최종 로그인 일시</th>
+                                        <td class="left">
+                                            0000-00-00 00:00:00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn gLine">목록</button>
+                                <button type="button" class="crudBtn dkBlue">수정</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

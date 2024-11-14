@@ -1,0 +1,434 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>등록일자</th>
+                    <td>
+                        <div class="frmGroup">    
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전체기간</label></div>
+                        </div>
+                    </td>
+                    <th>공제대상월</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>장애여부</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                    </td>
+                    <th>공제상태</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">진행</label></div>
+                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">완료</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">성명</option>
+                                <option value="">등록번호</option>
+                                <option value="">선수번호</option>
+                                <option value="">회원ID</option>
+                                <option value="">소속</option>
+
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li>
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:40px;">
+                <col style="width:120px;">
+                <col style="width:70px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">번호</th>
+                    <th rowspan="2">등록일자</th>
+                    <th rowspan="2">장애여부</th>
+                    <th rowspan="2">성명</th>
+                    <th rowspan="2">월정금</th>
+
+                    <th colspan="4">공제금액</th>
+
+                    <th colspan="2">전월누적공제</th>
+
+                    <th colspan="2">잔여공제</th>
+                    
+                    <th rowspan="2">공제상태</th>
+                    <th rowspan="2">기능</th>
+                </tr>
+                <tr>
+                    <th>전체금액</th>
+                    <th>월공제금액</th>
+                    <th>공제시작월</th>
+                    <th>공제종료월</th>
+                    
+                    <th>금액</th>
+                    <th>횟수</th>
+
+                    <th>금액</th>
+                    <th>횟수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">2024-01-01</td>
+                    <td rowspan="2"><span>비장애</span></td>
+                    <td rowspan="2">
+                        <span>00000</span><br>
+                        <span>홍길동</span>
+                    </td>
+                    <td class="right" rowspan="2">
+                        <span>500,000</span>원
+                    </td>
+
+                    <td class="right" rowspan="2">
+                        <span>4,500,000</span>원
+                    </td>
+                    <td class="right">
+                        <span>300,000</span>원
+                    </td>
+                    <td>2024-06</td>
+                    <td>2024-10</td>
+
+                    <td class="right">
+                        <span>1,500,000</span>원
+                    </td>
+                    <td>5</td>
+
+                    <td class="right">
+                        <span>0</span>원
+                    </td>
+                    <td>0</td>
+
+                    <td rowspan="2"><span class="txtBlue">진행</span></td>
+
+                    <td rowspan="2">
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">상세관리</button>
+                    </td>
+                </tr>
+                <tr class="scndLine">
+                    <td class="right">
+                        <span>300,000</span>원
+                    </td>
+                    <td>2024-06</td>
+                    <td>2024-10</td>
+
+                    <td class="right">
+                        <span>1,500,000</span>원
+                    </td>
+                    <td>5</td>
+
+                    <td class="right">
+                        <span>0</span>원
+                    </td>
+                    <td>0</td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">2024-01-01</td>
+                    <td rowspan="2"><span>비장애</span></td>
+                    <td rowspan="2">
+                        <span>00000</span><br>
+                        <span>홍길동</span>
+                    </td>
+                    <td class="right" rowspan="2">
+                        <span>500,000</span>원
+                    </td>
+
+                    <td class="right" rowspan="2">
+                        <span>4,500,000</span>원
+                    </td>
+                    <td class="right">
+                        <span>300,000</span>원
+                    </td>
+                    <td>2024-06</td>
+                    <td>2024-10</td>
+
+                    <td class="right">
+                        <span>1,500,000</span>원
+                    </td>
+                    <td>5</td>
+
+                    <td class="right">
+                        <span>0</span>원
+                    </td>
+                    <td>0</td>
+
+                    <td rowspan="2"><span class="txtRed">종료</span></td>
+
+                    <td rowspan="2">
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">상세관리</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button type="button" class="crudBtn blue">등록</button>
+        </div>
+    </div>
+
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체육인 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <p class="popMsg mB20">
+                            · 아래 검색 항목으로 체육인을 조회하세요.
+                        </p>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">장애여부</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                                        </td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">선수</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">지도자</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">종목구분</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">시도 전체</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">키워드 <span class="required">*</span></th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmSm">
+                                                    <option value="">제목</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button type="button" class="btnSearch">조회</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                           <!-- 그리드/테이블 상단 -->
+                            <div class="cptGroupTop">
+                                <div class="alignL">
+                                    <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                                </div>
+                            </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                    <col style="width:20%" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>장애여부</th>
+                                        <th>종목</th>
+                                        <th>성명</th>
+                                        <th>등록번호</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5" class="center">시스템에 등록된 체육인 정보가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">비장애</td>
+                                        <td class="center">태권도</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">비장애</td>
+                                        <td class="center">수영</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">장애</td>
+                                        <td class="center">수영</td>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">0000</td>
+                                        <td class="center">
+                                            <button type="button" class="gridBtn blue">선택</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

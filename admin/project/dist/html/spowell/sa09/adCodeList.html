@@ -1,0 +1,527 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>체육인복지지원 통합관리시스템</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	<link rel="stylesheet" href="../../../common/css/spowell.css" />
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script> <!--toast ui-->
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/type01.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+<!-- 레이아웃 -->
+<div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            
+<div class="cptHeader">
+    <div class="headerArea">
+        <div class="headerLogo"><h1><a href="#"><img src="../../../common/images/layout/type01/spowell_logo.png" alt="" /></a></h1></div>
+        <div class="headerGroup">
+            <div class="headerProfile">
+                <dl class="headerDate">
+                    <dt>최종 로그인 날짜 : </dt>
+                    <dd>2022-12-30 AM 09:30:00</dd>
+                </dl>
+                <div class="headerUser"><b>홍길동</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                <a href="#" class="headerBtn">로그아웃</a>
+                <a href="#" class="headerBtn">정보수정</a>
+            </div>
+            <div class="headerNav">
+                <ul class="menuList">
+                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                        <a href="#">회원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지지원관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">복지사업관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">직업안정지원</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">홈페이지관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">통계관리</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#">시스템관리</a>
+                    </li>
+                </ul>
+                <div class="allMenuGroup">
+                    <button class="allMenu">전체메뉴</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allMenuArea">
+        <ul class="menuList">
+            <li class="menuItem">
+                <a href="#">회원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지지원관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">복지사업관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">직업안정지원</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">홈페이지관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">통계관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="menuItem">
+                <a href="#">시스템관리</a>
+                <ul class="subMenu">
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer ">
+
+            <!-- 좌측 메뉴 영역 -->
+            <div class="layoutNav">
+                <!-- Left Menu -->
+				
+
+<div class="cptSnav">
+    <div class="snavArea">
+        <div class="snavMenu">
+            <div class="snavTitle">1Depth Menu</div>
+            <ul class="menuList">
+                <li class="menuItem"> <!-- class : on : 1depth 메뉴 활성화 -->
+                    <a href="#">2Depth Menu</a>
+                </li>
+                <li class="menuItem dropdown on"> <!--2 depth 경우 dropdown 클래스 추가-->
+                    <a href="#">2Depth Menu 2Depth Menu 2Depth Menu 2Depth Menu</a>
+                    <ul class="subMenu">
+                        <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                        <li><a href="#" class="on">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                        <li><a href="#">3Depth Menu</a></li>
+                    </ul>
+                </li>
+                <li class="menuItem">
+                    <a href="#">2Depth Menu</a>
+                </li>
+            </ul>
+            <div class="snavBtm">
+                <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="sideSlide">
+                    <button class="btnSlide">메뉴 열기/닫기</button>
+                </div>
+
+            </div>
+            <!-- //좌측 메뉴 영역 -->
+
+            <!-- 콘텐츠 영역 -->
+            <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    
+
+<div class="comH2Group">
+    <div class="alignL">
+        <h2>Current page Name (title area)</h2>
+    </div>
+    <div class="alignR">
+        <ul class="locaGroup">
+            <li class="item">HOME</li>
+            <li class="item">2depth Category Name</li>
+            <li class="item">Current Page Name</li>
+        </ul>
+    </div>
+</div>
+    <!-- 좌우 분할 영역 -->
+    <div class="modDivision free">
+        <div class="dvsItem">
+            
+            <!-- 트리영역 -->
+            <div class="cptTree sticky">
+                <div class="treeArea">
+                    <div class="items">
+                        <p class="treeTit">코드목록</p>
+                        <div class="treeBtn">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="srhBtn purple">상위분류추가</button>
+                                    <button type="button" class="srhBtn purple">하위코드추가</button>
+                                    <button type="button" class="srhBtn red">삭제</button>
+                                    <button type="button" class="srhBtn gLine">열기/숨기기</button>
+                                    <button type="button" class="srhBtn gLine">새로고침</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="treeBox">
+                            
+                            <div class="comTreeArea">
+                                <div id="tree" class="tui-tree-wrap"></div>
+                                <link rel="stylesheet" href="/common/css/tui-tree.css">
+                                <script src="/common/js/tui-tree.js"></script>
+                                <script class="code-js">
+
+                                    var util = {
+                                        addEventListener: function(element, eventName, handler) {
+                                            if (element.addEventListener) {
+                                                element.addEventListener(eventName, handler, false);
+                                            } else {
+                                                element.attachEvent('on' + eventName, handler);
+                                            }
+                                        }
+                                    };
+
+                                    var data = [
+                                        {text: 'rootA', children: [
+                                            {text: 'sub-A1'},
+                                            {text: 'sub-A2'},
+                                            {text: 'sub-A3'},
+                                            {text: 'sub-A4'},
+                                            {text: 'sub-A5', state: 'closed', children: [
+                                                {text:'sub-A5A', children:[
+                                                    {text:'sub-A5A1'}
+                                                ]},
+                                                {text:'sub_A5B'}
+                                            ]},
+                                            {text: 'sub-A6'},
+                                            {text: 'sub-A7'},
+                                            {text: 'sub-A8'},
+                                            {text: 'sub-A9', state: 'closed', children: [
+                                                {text:'sub-A9A'},
+                                                {text:'sub-A9B'}
+                                            ]},
+                                            {text: 'sub-A10'},
+                                            {text: 'sub-A11'},
+                                            {text: 'sub-A12'}
+                                        ]},
+                                        {text: 'rootB', state:'closed', children: [
+                                            {text:'sub-B1'},
+                                            {text:'sub-B2'},
+                                            {text:'sub-B3'}
+                                        ]}
+                                    ];
+
+                                    var tree = new tui.Tree('#tree', {
+                                        data: data,
+                                        nodeDefaultState: 'opened'
+                                    }).enableFeature('Selectable', {
+                                        selectedClassName: 'tui-tree-selected',
+                                    });
+
+                                    var selectedBtn = document.getElementById('selectedBtn');
+                                    var deselectedBtn = document.getElementById('deselectedBtn');
+                                    var rootNodeId = tree.getRootNodeId();
+                                    var firstChildId = tree.getChildIds(rootNodeId)[0];
+                                    var selectedValue = document.getElementById('selectedValue');
+
+                                    tree.on('select', function(eventData) {
+                                        var nodeData = tree.getNodeData(eventData.nodeId);
+                                        selectedValue.value = 'selected : ' + nodeData.text;
+                                    });
+
+                                    tree.on('deselect', function(eventData) {
+                                        var nodeData = tree.getNodeData(eventData.nodeId);
+                                        selectedValue.value = 'deselected : ' + nodeData.text;
+                                    });
+
+                                    util.addEventListener(selectedBtn, 'click', function() {
+                                        tree.select(firstChildId);
+                                    });
+
+                                    util.addEventListener(deselectedBtn, 'click', function() {
+                                        tree.deselect();
+                                    });
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //트리영역 -->
+
+        </div>
+        <div class="dvsItem">
+            
+            <!-- 메뉴설정 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">코드설정</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <caption></caption>
+                    <tbody>
+                        <tr>
+                            <th class="left">상위분류코드</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">상위분류명</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">하위코드</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">하위코드명</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">정렬순서</th>
+                            <td class="left">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="left">사용여부</th>
+                            <td class="left">
+                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">사용</label></div>
+                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">미사용</label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //메뉴설정 -->
+
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <caption></caption>
+                    <tbody>
+                        <tr>
+                            <th class="left">등록일자</th>
+                            <td class="left">&관리자명$ 2024-05-05</td>
+                            <th class="left">수정일시</th>
+                            <td class="left">$관리자명$ YYYY-MM-DD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- //선택옵션 -->
+        </div>
+    </div>
+    <!-- //좌우 분할 영역 -->
+
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">등록</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">접속허용IP 등록</div>
+                    <div class="popCont">
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>접속허용명</th>
+                                        <td>
+                                            <!--2024.11.13 view case area-->
+                                            <span>접속허용명</span>
+                                            <!--2024.11.13 view case area-->
+
+                                            <!--2024.11.13 create case area-->
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                            <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>승인IP</th>
+                                        <td>
+                                            <!--2024.11.13 view case area-->
+                                            <span>000.000.000.000</span>
+                                            <!--2024.11.13 view case area-->
+
+                                            <!--2024.11.13 create case area-->
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                            <div class="textBox">입력방식 : 개별 IP 또는 IP대역(000.000.000.000)</div>
+                                            <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>허용기간</th>
+                                        <td>
+                                             <!--2024.11.13 view case area-->
+                                             <span>2024-00-00</span>~<span>2024-00-00</span>
+                                             <!--2024.11.13 view case area-->
+ 
+                                             <!--2024.11.13 create case area-->
+                                             <div class="frmGroup">
+                                                <div class="iptDate">
+                                                    <input type="text" class="iptText" id="datepicker3">
+                                                </div>
+                                                <div class="textBox Deco">~</div>
+                                                <div class="iptDate">
+                                                    <input type="text" class="iptText" id="datepicker3">
+                                                </div>
+                                            </div>
+                                            <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">기한설정 안함</label></div>
+                                             <!--2024.11.13 create case area-->
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="popBtm">
+                        <!--2024.11.13 view case button actiavtion-->
+                        <button class="btn gLine">삭제</button>
+                        <!--2024.11.13 view case button actiavtion-->
+                        <button class="btn gLine">취소</button>
+                        <button class="btn dkBlue">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+            </div>
+            <!-- //콘텐츠 영역 -->
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+        <!-- Footer -->
+        
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>페이지 타이틀 영역</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth2</li>
+                <li class="item">Depth3</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+     <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>radio</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">승인대기</label></div>
+                        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">승인완료</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">미승인</label></div>
+                    </td>
+                    <th>checkbox</th>
+                    <td>
+                        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">체크1</label></div>
+                        <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">체크2</label></div>
+                        <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">체크3</label></div>
+                        <div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">체크4</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>input(s) + text</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm">
+                            <div class="textBox">년도</div>
+                        </div>
+                    </td>
+                    <th>input(m) + clar</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmMd">
+                            <div class="textBox clar">*’-’를 제외한 숫자만 입력 예: 19901211</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>select(s) + text</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2023</option>
+                                <option value=""></option>
+                            </select>
+                            <div class="textBox">년도</div>
+                        </div>
+                    </td>
+                    <th>select(m) + clar</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value="">2023</option>
+                                <option value=""></option>
+                            </select>
+                            <div class="textBox clar">*’-’를 제외한 숫자만 입력 예: 19901211</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ipt</th>
+                    <td><input type="text" class="iptText"></td>
+                    <td colspan="2" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                        <button class="btnDetail">상세검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="cptCalendarOpt">
+        <div class="chkAllArea">
+            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">토요일</label></div>
+            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">일요일</label></div>
+        </div>
+        <div class="yymmArea">
+            <a href="#none"><img src="../../../common/images/common/btn_prev.png"/></a>
+            <div>
+                <span>2023</span>
+                <span>년</span>
+                <span>01</span>
+                <span>월</span>
+            </div>
+            <a href="#none"><img src="../../../common/images/common/btn_next.png"/></a>
+        </div>
+        <div class="btnArea">
+            <button class="btn purple"><span class="clT01">목록형식 보기</span></button>
+        </div>
+    </div>
+
+    <!--달력형식-->
+    <div class="cptCalViewType calTy">
+        <div class="cptCalView">
+            <div class="calCover">
+                <div class="calTxt">
+                    <ul>
+                        <li class="sun">일</li>
+                        <li>월</li>
+                        <li>화</li>
+                        <li>수</li>
+                        <li>목</li>
+                        <li>금</li>
+                        <li class="sat">토</li>
+                    </ul>
+                </div>
+                <div class="calBox">
+                    <ul>
+                        <li class="sun">
+                            <span class="dtTxt">01</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">02</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">03</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">04</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">05</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">06</span>
+                        </li>
+                        <li class="sat">
+                            <span class="dtTxt">07</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">08</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">09</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">10</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명출장지명출장지명출장지명출장지명출장지명</p>
+                                <p><span>[기관]</span> 기관명기관명기관명기관명기관명기관명기관명기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">11</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li><span class="dtTxt">12</span></li>
+                        <li><span class="dtTxt">13</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">14</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">15</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li><span class="dtTxt">16</span></li>
+                        <li><span class="dtTxt">17</span></li>
+                        <li>
+                            <span class="dtTxt">18</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li><span class="dtTxt">19</span></li>
+                        <li><span class="dtTxt">20</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">21</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">22</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li><span class="dtTxt">23</span></li>
+                        <li>
+                            <span class="dtTxt">24</span>
+                            <span class="dayOff">공휴일</span>
+                        </li>
+                        <li><span class="dtTxt">25</span></li>
+                        <li><span class="dtTxt">26</span></li>
+                        <li><span class="dtTxt">27</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">28</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <!--마지막주 항목에는 noL 클래스 필수-->
+                        <li class="sun noL">
+                            <span class="dtTxt">29</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="noL"><span class="dtTxt">30</span></li>
+                        <li class="noL"><span class="dtTxt">31</span></li>
+                        <li class="noL"></li>
+                        <li class="noL"></li>
+                        <li class="noL"></li>
+                        <li class="sat noL"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 그리드/테이블 하단 버튼 -->
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button class="srhBtn dkBlue">일정등록/수정</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 달력형식-->
+</div>
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

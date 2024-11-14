@@ -1,0 +1,128 @@
+
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------- Basic ----------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+.wrap {min-width:1600px;}
+
+/* 레이아웃 : type 01 */
+.lytLayout {width:100%; min-width:1600px;}
+.lytLayout .layoutArea {width:100%;}
+.lytLayout .layoutTop {width:100%; position: relative;}
+.lytLayout .layoutContainer {width:100%; display:flex;}
+.lytLayout .layoutContainer.noNav .layoutNav {display:none;}
+.lytLayout .layoutContainer.noNav .layoutCont {width:100%;}
+.lytLayout .layoutContainer .layoutNav {width:260px; vertical-align: top; border-right:1px solid #ebebec; display:block; position:relative; z-index:1; transition:all 0.3s;}
+.lytLayout .layoutArea .layoutContainer.on .layoutNav {width:0 ;}
+.lytLayout .layoutContainer .layoutNav .sideSlide {position:absolute; right:-16px; top:23px;}
+.lytLayout .layoutContainer .layoutNav .btnSlide {width: 16px; height:50px; border:0; font-size:0; background:url(../images/layout/type01/btn_lnbFold.svg) left top no-repeat;}
+.lytLayout .layoutContainer.on .layoutNav .btnSlide {background:url(../images/layout/type01/btn_lnbFold_on.svg) left top no-repeat;}
+
+.lytLayout .layoutContainer .layoutCont {width:calc(100% - 260px); transition:all 0.3s;}
+/* .lytLayout .layoutContainer .layoutCont form {height:100%;} 20230407 폼태그 추가로 무너지는 레이아웃 재구축 *//*팝업 가운데정렬 이슈로 우선 삭제*/
+.lytLayout .layoutContainer.on .layoutCont {width:100%;}
+.lytLayout .layoutContainer .layoutCont .layoutContArea {width:100%; min-height:100%; padding:30px 40px 100px 40px; vertical-align:top; background:#f5f6fa;}
+.lytLayout .layoutMultiGroup {width:100%; display:flex;}
+.lytLayout .layoutMultiGroup .multiCont {width:calc(50% - 10px); margin-left:20px;}
+.lytLayout .layoutMultiGroup .multiCont:first-child {margin-left:0;}
+.lytLayout .layoutFooter {width:100%;}
+
+/* ------------------------------ 헤더 : type 01 ------------------------------ */
+.cptHeader {width:100%; height:110px; position:relative;}
+.cptHeader .headerArea {width:100%; height:110px; display:flex; background:#fff; position:relative; box-shadow:0 5px 13px 0 rgba(0, 0, 0, 0.07); z-index:100;}
+.cptHeader .headerLogo {width:260px; height:110px; padding:24px 30px 16px; display:flex; align-items:center;}
+.cptHeader .headerGroup {width:calc(100% - 260px); display:flex; flex-wrap:wrap; align-content:start;}
+.cptHeader .headerGroup .headerProfile {width:100%; padding-top:22px; padding-right:40px; display:flex; justify-content:end;}
+.cptHeader .headerGroup .headerDate {height:24px; padding-left:20px; background:url(../images/layout/type01/icon_logindate.svg) left center no-repeat; display:block;}
+.cptHeader .headerGroup .headerDate dt {font-size:14px; font-weight:400; color:#333; line-height:24px; display:inline-block;}
+.cptHeader .headerGroup .headerDate dd {font-size:14px; font-weight:400; color:#757575; line-height:24px; display:inline-block;}
+.cptHeader .headerGroup .headerUser {height:24px; padding-left:24px; margin-left:10px; font-size:16px; font-weight:400; color:#000; line-height:24px; background:url(../images/layout/type01/icon_name.svg) left center no-repeat; display:inline-block;}
+.cptHeader .headerGroup .headerUser b {font-weight:500;}
+.cptHeader .headerGroup .headerBtn {height:24px; padding:0 10px; margin-left:10px; font-size:13px; font-weight:500; color:#333; border:1px solid #333; border-radius:12px; }
+.cptHeader .headerGroup .headerNav {width:100%; padding-top:14px; padding-right:40px; display:flex; justify-content:end;}
+.cptHeader .headerGroup .headerNav .menuList {width:calc(100% - 80px); display:flex; justify-content:flex-end;}
+.cptHeader .headerGroup .headerNav .menuItem {margin-right:25px;}
+.cptHeader .headerGroup .headerNav .menuItem a {height:36px; font-size:17px; font-weight:500; color:#000; line-height:33px; text-align:center; display:inline-block; position:relative;}
+.cptHeader .headerGroup .headerNav .menuItem.on {}
+.cptHeader .headerGroup .headerNav .menuItem a:hover,
+.cptHeader .headerGroup .headerNav .menuItem.on a {color:var(--basic-color);}
+.cptHeader .headerGroup .headerNav .menuItem a:hover:after,
+.cptHeader .headerGroup .headerNav .menuItem.on a:after {content:""; width:100%; height:3px; background:var(--basic-color); display:block; position:absolute; left:0; bottom:0;}
+.cptHeader .headerGroup .headerNav .allMenuGroup {width:36px; height:36px;}
+.cptHeader .headerGroup .headerNav .allMenuGroup .allMenu {width:100%; height:100%; font-size:0; border:0; border-radius:4px; background:#2a2d3e url(../images/layout/type01/icon_menu.svg) center no-repeat;}
+.cptHeader .headerGroup .headerNav .allMenuGroup .allMenu.on {background:#2a2d3e url(../images/layout/type01/icon_menuclose.svg) center no-repeat;}
+
+.cptHeader .allMenuArea {width:100%; padding:10px 100px 82px 80px; background:#fff; display:none; position:absolute; left:0; top:110px; z-index:10;}
+.cptHeader .allMenuArea.on {display:block;}
+.cptHeader .allMenuArea .menuList {width:100%; display:flex; flex-wrap:wrap;}
+.cptHeader .allMenuArea .menuItem {width:20%; padding-left:20px; padding-top:50px; display:block;}
+.cptHeader .allMenuArea .menuItem > a {width:100%; height:26px; font-size:18px; font-weight:500; color:#000; line-height:26px; display:block;}
+.cptHeader .allMenuArea .menuItem:hover > a {color:var(--basic-color);}
+.cptHeader .allMenuArea .menuItem .subMenu {padding-top:5px;}
+.cptHeader .allMenuArea .menuItem .subMenu li {padding-top:5px;}
+.cptHeader .allMenuArea .menuItem .subMenu a {width:100%; height:24px; font-size:16px; font-weight:400; color:#757575; line-height:24px; display:block;}
+.cptHeader .allMenuArea .menuItem .subMenu a:hover {color:var(--basic-color);}
+
+
+/* ------------------------------ 좌메뉴 : type 01 ------------------------------ */
+.cptSnav {width:100%; height:100%; background:#2a2d3e; overflow:hidden;}
+.cptSnav .snavArea {width:260px; height:100%;}
+.cptSnav .snavMenu {width:100%; height:100%; position:relative;}
+.cptSnav .snavMenu .snavTitle {width:100%; padding:30px 20px 10px; font-size:22px; font-weight:400; color:#fff; line-height:32px; position:relative;}
+.cptSnav .snavMenu .snavTitle:after {content:""; width:calc(100% - 40px); height:1px; background:rgba(255,255,255,0.2); position:absolute; left:20px; bottom:0; display:block;}
+.cptSnav .snavMenu .menuList {width:100%; min-height:calc(100vh - 300px); padding-top:20px;}
+.cptSnav .snavMenu .menuItem {height: auto; margin-top:10px;}
+.cptSnav .snavMenu .menuItem:first-child {margin-top:0;}
+.cptSnav .snavMenu .menuItem.dropDown {background: url(../images/layout/type01/icon_menu_arr.svg) calc(100% - 20px) 13px no-repeat;}
+.cptSnav .snavMenu .menuItem.dropDown.on {background: url(../images/layout/type01/icon_menu_arr_on.svg) calc(100% - 20px) 13px no-repeat;}
+.cptSnav .snavMenu .menuItem a {display:block; width: 100%;} 
+.cptSnav .snavMenu .menuItem > a {min-height:50px; padding:13px 20px 13px 20px; font-size:16px; color: #999; line-height: 24px; font-weight: 400;}
+.cptSnav .snavMenu .menuItem:hover > a {color:var(--basic-color); background:rgba(0,0,0,0.2);}
+.cptSnav .snavMenu .subMenu {display:none; overflow:hidden;}
+.cptSnav .snavMenu .subMenu li {min-height:40px; position:relative;}
+.cptSnav .snavMenu .subMenu li a {display: block; width: 100%; height: 100%; padding:10px 20px 10px 40px; color:#999; line-height: 20px; font-size: 14px;}
+.cptSnav .snavMenu .subMenu li a:hover {color: var(--basic-color);}
+.cptSnav .snavMenu .subMenu li a.on {color: var(--basic-color);}
+.cptSnav .snavMenu .menuItem.on > a { color :var(--basic-color); background:rgba(0,0,0,0.2);}
+/* .cptSnav .snavMenu .menuItem.on .subMenu {padding-bottom:10px;} */ /*20230407 불필요여백 제거*/
+.cptSnav .snavMenu .snavBtm {width:100%; padding:40px 20px; min-height:118px;}
+.cptSnav .snavMenu .snavBtm button {width:100%; height:38px; font-size:16px; color:#596edb; border:1px solid #596edb; border-radius:4px; background:none; display:flex; justify-content:center; align-items:center;}
+.cptSnav .snavMenu .snavBtm button.iconDownload:after {content:""; width:24px; height:24px; background:url(../images/layout/type01/ic_download.svg) center no-repeat; display:inline-block;}
+
+/* ------------------------------ 좌메뉴 : type 02 ------------------------------ */
+.cptSnav.type02 {width:100%; height:100%; background:#2a2d3e; overflow:hidden;}
+.cptSnav.type02 .snavArea {width:260px; height:100%;}
+.cptSnav.type02 .snavMenu {width:100%; height:100%; position:relative;}
+.cptSnav.type02 .snavMenu .snavTitle {width:100%; padding:30px 20px 10px; font-size:22px; font-weight:400; color:#fff; line-height:32px; position:relative;}
+.cptSnav.type02 .snavMenu .snavTitle:after {content:""; width:calc(100% - 40px); height:1px; background:rgba(255,255,255,0.2); position:absolute; left:20px; bottom:0; display:block;}
+.cptSnav.type02 .snavMenu .menuList {width:100%; min-height:calc(100vh - 300px); padding-top:20px;}
+.cptSnav.type02 .snavMenu .menuItem {height: auto; margin-top:10px;}
+.cptSnav.type02 .snavMenu .menuItem:first-child {margin-top:0;}
+.cptSnav.type02 .snavMenu .menuItem.dropDown {background: url(../images/layout/type01/icon_menu_arr.svg) calc(100% - 20px) 13px no-repeat;}
+.cptSnav.type02 .snavMenu .menuItem.dropDown.on {background: url(../images/layout/type01/icon_menu_arr_on.svg) calc(100% - 20px) 13px no-repeat;}
+.cptSnav.type02 .snavMenu .menuItem a {display:block; width: 100%; height:100%;} 
+.cptSnav.type02 .snavMenu .menuItem > a {padding-left:20px; display:flex; flex-flow:row; align-items: center; justify-content:flex-start;}
+.cptSnav.type02 .snavMenu .menuItem > a > span {display:flex; flex-flow:row; align-items: center; justify-content:flex-start; width:190px; height:50px; word-break:keep-all; line-height:24px; color: #999; font-size: 16px; font-weight: 400;}
+.cptSnav.type02 .snavMenu .menuItem:hover > a {color:var(--basic-color); background:rgba(0,0,0,0.2);}
+.cptSnav.type02 .snavMenu .subMenu {display:none;}
+.cptSnav.type02 .snavMenu .subMenu li {height:40px; position:relative;}
+.cptSnav.type02 .snavMenu .subMenu li a span {display: block; width: 100%; height: 100%; padding-left:40px; color:#999; line-height: 40px; font-size: 14px;}
+.cptSnav.type02 .snavMenu .subMenu li a:hover span {color: var(--basic-color);}
+.cptSnav.type02 .snavMenu .subMenu li a.on span {color: var(--basic-color);}
+.cptSnav.type02 .snavMenu .menuItem.on > a { background:rgba(0,0,0,0.2);}
+.cptSnav.type02 .snavMenu .menuItem.on > a span { color :var(--basic-color);}
+/* .cptSnav.type02 .snavMenu .menuItem.on .subMenu {padding-bottom:10px;} */ /*20230407 불필요여백 제거*/
+.cptSnav.type02 .snavMenu .snavBtm {width:100%; padding:40px 20px; min-height:118px;}
+.cptSnav.type02 .snavMenu .snavBtm button {width:100%; height:38px; font-size:16px; color:#596edb; border:1px solid #596edb; border-radius:4px; background:none; display:flex; justify-content:center; align-items:center;}
+.cptSnav.type02 .snavMenu .snavBtm button.iconDownload:after {content:""; width:24px; height:24px; background:url(../images/layout/type01/ic_download.svg) center no-repeat; display:inline-block;}
+
+
+/*돌봄 인적성*/
+/* .cptHeader.dolbom .headerGroup .headerNav .menuItem a:hover,
+.cptHeader.dolbom .headerGroup .headerNav .menuItem.on a {color:#fe794d;}
+.cptHeader.dolbom .headerGroup .headerNav .menuItem.on a:after {background:#fe794d;}
+.cptSnav.dolbom {background: #41403e;}
+.cptSnav.dolbom .snavMenu .menuItem:hover > a {color:#fe794d; background:rgba(0,0,0,0.2);}
+.cptSnav.dolbom .snavMenu .menuItem.on > a { color :#fe794d; background:rgba(0,0,0,0.2);} */

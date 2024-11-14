@@ -1,0 +1,87 @@
+<%- include('../../layout/type01_baro/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>공통관리</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth 01</li>
+                <li class="item">Depth 02</li>
+                <li class="item">Depth 03</li><!--필요시-->
+            </ul>
+        </div>
+    </div>
+    <!-- tab in page -->
+    <div class="modTab in"> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">PC</a></li>
+            <li class="item"><a href="#">Mobile Web</a></li>
+        </ul>
+        <!-- modTab in 영역 -->
+        <div class="tabContGroup">
+            <div class="tabCont on">
+                <div class="manageCov">
+                    <div class="optBox">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101" checked><label for="rdo101" class="iptLbl">Head 태그</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">Body 태그</label></div>
+                        </div>
+                    </div>
+                    <div class="srcBox">
+                        <textarea>test pc</textarea>
+                    </div>
+                    <div class="ctaBox">
+                        <button type="button" class="cancel">이전으로 되돌리기</button>
+                        <button type="button" class="check">문법 오류 확인</button>
+                        <button type="button" class="active">적용</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabCont">
+                <div class="manageCov">
+                    <div class="optBox">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102" checked><label for="rdo103" class="iptLbl">Head 태그</label></div>
+                            <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">Body 태그</label></div>
+                        </div>
+                    </div>
+                    <div class="srcBox">
+                        <textarea>test mobile web</textarea>
+                    </div>
+                    <div class="ctaBox">
+                        <button type="button" class="cancel">이전으로 되돌리기</button>
+                        <button type="button" class="check">문법 오류 확인</button>
+                        <button type="button" class="active">적용</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            //탭메뉴 스크립트
+            $(".modTab li.item a").on("click",function(e){
+                if($(this).parents(".modTab").hasClass("in")){
+                    e.preventDefault();
+                    let _idx = $(this).parent().index();
+                    $(this).parents(".tabMenu").find(".item").eq(_idx).addClass("on").siblings().removeClass("on");
+                    $(this).parents(".modTab").find(".tabCont").eq(_idx).addClass("on").siblings().removeClass("on");
+                }
+            });
+        });
+        </script>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type01_baro/bottom.ejs', {
+    url: "../../../"
+}) %>

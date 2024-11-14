@@ -1,0 +1,390 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>메뉴 관리 (Tree는 샘플입니다)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">사이트관리</li>
+                                    <li class="item">메뉴 관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>셀렉트 이름</th>
+                                        <td colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">포털</option>
+                                                    <option value="">관리자</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 좌우 분할 영역 -->
+                        <div class="modDivision free">
+                            <div class="dvsItem">
+                                
+                                <!-- 트리영역 -->
+                                <div class="cptTree">
+                                    <div class="treeArea">
+                                        <div class="items">
+                                            <p class="treeTit">Tree Name</p>
+                                            <div class="treeBtn">
+                                                <div class="cptGroupBtm alignL">
+                                                    <div class="comSideOpt">
+                                                        <button type="button" class="srhBtn purple">메뉴추가</button>
+                                                        <button type="button" class="srhBtn red">삭제</button>
+                                                        <button type="button" class="srhBtn gLine">열기/숨기기</button>
+                                                        <button type="button" class="srhBtn gLine">새로고침</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="treeBox">
+                                                
+                                                <div class="comTreeArea">
+                                                    <div id="tree" class="tui-tree-wrap"></div>
+                                                    <link rel="stylesheet" href="/common/css/tui-tree.css">
+                                                    <script src="/common/js/tui-tree.js"></script>
+                                                    <script class="code-js">
+
+                                                        var util = {
+                                                            addEventListener: function(element, eventName, handler) {
+                                                                if (element.addEventListener) {
+                                                                    element.addEventListener(eventName, handler, false);
+                                                                } else {
+                                                                    element.attachEvent('on' + eventName, handler);
+                                                                }
+                                                            }
+                                                        };
+
+                                                        var data = [
+                                                            {text: 'rootA', children: [
+                                                                {text: 'sub-A1'},
+                                                                {text: 'sub-A2'},
+                                                                {text: 'sub-A3'},
+                                                                {text: 'sub-A4'},
+                                                                {text: 'sub-A5', state: 'closed', children: [
+                                                                    {text:'sub-A5A', children:[
+                                                                        {text:'sub-A5A1'}
+                                                                    ]},
+                                                                    {text:'sub_A5B'}
+                                                                ]},
+                                                                {text: 'sub-A6'},
+                                                                {text: 'sub-A7'},
+                                                                {text: 'sub-A8'},
+                                                                {text: 'sub-A9', state: 'closed', children: [
+                                                                    {text:'sub-A9A'},
+                                                                    {text:'sub-A9B'}
+                                                                ]},
+                                                                {text: 'sub-A10'},
+                                                                {text: 'sub-A11'},
+                                                                {text: 'sub-A12'}
+                                                            ]},
+                                                            {text: 'rootB', state:'closed', children: [
+                                                                {text:'sub-B1'},
+                                                                {text:'sub-B2'},
+                                                                {text:'sub-B3'}
+                                                            ]}
+                                                        ];
+
+                                                        var tree = new tui.Tree('#tree', {
+                                                            data: data,
+                                                            nodeDefaultState: 'opened'
+                                                        }).enableFeature('Selectable', {
+                                                            selectedClassName: 'tui-tree-selected',
+                                                        });
+
+                                                        var selectedBtn = document.getElementById('selectedBtn');
+                                                        var deselectedBtn = document.getElementById('deselectedBtn');
+                                                        var rootNodeId = tree.getRootNodeId();
+                                                        var firstChildId = tree.getChildIds(rootNodeId)[0];
+                                                        var selectedValue = document.getElementById('selectedValue');
+
+                                                        tree.on('select', function(eventData) {
+                                                            var nodeData = tree.getNodeData(eventData.nodeId);
+                                                            selectedValue.value = 'selected : ' + nodeData.text;
+                                                        });
+
+                                                        tree.on('deselect', function(eventData) {
+                                                            var nodeData = tree.getNodeData(eventData.nodeId);
+                                                            selectedValue.value = 'deselected : ' + nodeData.text;
+                                                        });
+
+                                                        util.addEventListener(selectedBtn, 'click', function() {
+                                                            tree.select(firstChildId);
+                                                        });
+
+                                                        util.addEventListener(deselectedBtn, 'click', function() {
+                                                            tree.deselect();
+                                                        });
+
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //트리영역 -->
+
+                            </div>
+                            <div class="dvsItem">
+                                
+                                <!-- 메뉴설정 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">메뉴설정</div>
+                                    </div>
+                                </div>
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">메뉴명</th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText" value="체력증진교실">
+                                                        <div class="textBox">(886)</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">공개설정</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">사용</label></div>
+                                                    <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">숨김</label></div>
+                                                    <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">적용안함</label></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">레이아웃</th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <select name="" id="" class="iptSlt frmMd">
+                                                            <option value="">관리자 서브 01</option>
+                                                            <option value="">관리자 서브 02</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">메뉴속성</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">링크</label></div>
+                                                    <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">Content</label></div>
+                                                    <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">(Tab)contents</label></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //메뉴설정 -->
+                                
+                                <!-- 선택옵션 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">선택옵션</div>
+                                    </div>
+                                </div>
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">Link</th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <input type="text" class="iptText" value="/mng/classroom/classroomList.do">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">Target</th>
+                                                <td class="left">
+                                                    <div class="frmGroup">
+                                                        <select name="" id="" class="iptSlt frmMd">
+                                                            <option value="">_top</option>
+                                                            <option value="">_blank</option>
+                                                            <option value="">_self</option>
+                                                            <option value="">_parent</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //선택옵션 -->
+                            </div>
+                        </div>
+                        <!-- //좌우 분할 영역 -->
+
+                        <div class="cptGroupTop">
+                            <div class="alignL">
+                                <div class="title" style="font-size:24px;">담당자 지정</div>
+                                <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                            </div>
+                            <div class="alignR">
+                                <div class="comSideOpt">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <button class="viewBtn on">10건</button>
+                                            <button class="viewBtn">20건</button>
+                                            <button class="viewBtn">50건</button>
+                                            <button class="viewBtn">100건</button>
+                                        </li>
+                                        <li class="item">
+                                            <button class="srhBtn purple">담당자추가</button>
+                                            <button class="srhBtn red">선택삭제</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cptGrid">
+                            <table class="gridTb">
+                                <colgroup>
+                                    <col style="width:50px">
+                                    <col style="width:50px;">
+                                    <col style="width:200px;">
+                                    <col style="width:200px;">
+                                    <col style="width:200px;">
+                                    <col style="width:200px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="frmChoBox only">
+                                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                                            </div>
+                                        </th>
+                                        <th>NO</th>
+                                        <th>담당자명</th>
+                                        <th>전화번호</th>
+                                        <th>핸드폰</th>
+                                        <th>FAX</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>031-0000-0000</td>
+                                        <td>010-0000-0000</td>
+                                        <td>031-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>031-0000-0000</td>
+                                        <td>010-0000-0000</td>
+                                        <td>031-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>031-0000-0000</td>
+                                        <td>010-0000-0000</td>
+                                        <td>031-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>031-0000-0000</td>
+                                        <td>010-0000-0000</td>
+                                        <td>031-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6">
+                                            담당자 이/가 없습니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 페이징 -->
+                        <div class="comPaging">
+                            <a class="start" href="#"></a>
+                            <a class="prev" href="#"></a>
+                            <ul class="numList">
+                                <li><a href="#">1</a></li>
+                                <li class="on"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                            </ul>
+                            <a class="next" href="#"></a>
+                            <a class="end" href="#"></a>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn dkBlue">등록</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

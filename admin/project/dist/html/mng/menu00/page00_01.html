@@ -1,0 +1,659 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>IWorks Sysyem</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<link rel="stylesheet" href="../../../common/css/tui-time-picker.css" /><!--20240531 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<!-- <script src="../../../common/js/tui-date-picker.js"></script>  -->
+	<script src="../../../common/js/tui-time-picker.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/mng.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+    <!-- 레이아웃 -->
+    <div class="lytLayout  "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+        <div class="layoutArea">
+
+            <!-- 상단영역 -->
+            <div class="layoutTop">
+
+                <!-- Top -->
+                
+                <div class="cptHeader">
+                    <div class="headerArea">
+                        <div class="headerLogo"><h1><a href="#"><img src="/common/images/layout/type01/ci.png" alt="" /></a></h1></div>
+                        <div class="headerGroup">
+                            <div class="headerProfile">
+                                <dl class="headerDate">
+                                    <dt>최종 로그인 날짜 : </dt>
+                                    <dd>2022-12-30 AM 09:30:00</dd>
+                                </dl>
+                                <div class="headerUser"><b>아이웍스 전체관리자</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                                <a href="#" class="headerBtn">로그아웃</a>
+                            </div>
+                            <div class="headerNav">
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">회원관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">운영관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">게시물관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">홈페이지관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">시스템관리</a>
+                                    </li>
+                                </ul>
+                                <div class="allMenuGroup">
+                                    <button class="allMenu">전체메뉴</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="allMenuArea">
+                        <ul class="menuList">
+                            <li class="menuItem">
+                                <a href="#">사이트관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">공통코드관리</a></li>
+                                    <li><a href="#">메뉴관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">업무관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">자료실</a></li>
+                                    <li><a href="#">일일업무현황보고</a></li>
+                                    <li><a href="#">분기실적보고서</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">운영관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력인증센터 현황</a></li>
+                                    <li><a href="#">체력인증센터 정보</a></li>
+                                    <li><a href="#">팝업 관리</a></li>
+                                    <li><a href="#">배너관리</a></li>
+                                    <li><a href="#">관리자관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">예약관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">일정관리</a></li>
+                                    <li><a href="#">예약현황</a></li>
+                                    <li><a href="#">예약등록</a></li>
+                                    <li><a href="#">예약시스템설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">체력측정</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력층정내역</a></li>
+                                    <li><a href="#">체력측정입력</a></li>
+                                    <li><a href="#">출장 체력측정입력</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">체력증진교실</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력증진교실</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">회원관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">회원현황</a></li>
+                                    <li><a href="#">회원등록</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">게시물관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">자주하는 질문</a></li>
+                                    <li><a href="#">온라인 운동상담</a></li>
+                                    <li><a href="#">홍보/보도자료</a></li>
+                                    <li><a href="#">홍보영상관</a></li>
+                                    <li><a href="#">포토갤러리</a></li>
+                                    <li><a href="#">센터별 공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">통계</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">체력측정통계</a></li>
+                                    <li><a href="#">증진교실 운영현황</a></li>
+                                    <li><a href="#">증진교실 측정집계</a></li>
+                                    <li><a href="#">증진교실사전사후조회</a></li>
+                                    <li><a href="#">예약현황 통계</a></li>
+                                    <li><a href="#">통계관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //상단영역 -->
+
+            <!-- 중단영역 -->
+            <div class="layoutContainer ">
+
+                <!-- 좌측 메뉴 영역 -->
+                <div class="layoutNav">
+                    
+                    <!-- Left Menu -->
+                    
+                    <div class="cptSnav">
+                        <div class="snavArea">
+                            <div class="snavMenu">
+                                <div class="snavTitle">사이트관리</div>
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">공통코드관리</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                                            <li><a href="#" class="on">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">메뉴관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">2뎁스메뉴</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">3Depth Menu 3Depth Menu 3Depth Menu</a></li>
+                                            <li><a href="#" class="on">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                            <li><a href="#">3Depth Menu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="snavBtm">
+                                    <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sideSlide">
+                        <button class="btnSlide">메뉴 열기/닫기</button>
+                    </div>
+
+                </div>
+                <!-- //좌측 메뉴 영역 -->
+
+                <!-- 콘텐츠 영역 -->
+                <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>가이드 (Form)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">가이드</li>
+                                    <li class="item">Form</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <style>
+                    @font-face {
+                        font-family: 'D2Coding';
+                        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    .guideBox {margin-top:40px;}
+                    .guideTitle {font-size:18px; font-weight:500;}
+                    .guideCont {margin-top:10px;}
+                    .gGroup {margin-top:20px;}
+                    .gText {font-size:14px;}
+                    .gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+                    </style>
+                        <div class="cptPubGuide">
+                            <div class="guideArea">
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">input, form</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            기본 폼이며 검색, 그리드, 테이블에 동일한 폼을 사용합니다<br/>
+                                            해당 input,select는 가능한 class "frmGroup" 내부에서 사용합니다.<br/>
+                                            input의 text와 password는 class "iptText"를 사용합니다.<br/>
+                                            select는 class "iptSlt"를 사용합니다.<br/>
+                                            addClass로 크기를 조절 할 수 있으며 이를 이용해서 input,select 등을 조합 할 수도 있습니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="frmGroup">
+        <input type="text" class="iptText frmTini" placeholder="가장 작은" />
+        <input type="text" class="iptText frmXs" placeholder="많이 작은" />
+        <input type="text" class="iptText frmSm" placeholder="작은" />
+        <input type="text" class="iptText frmMd" placeholder="보통" />
+        <input type="text" class="iptText frmLg" placeholder="큰" />
+    </div>
+    <div class="frmGroup">
+        <input type="text" class="iptText frmHalf" placeholder="1/2" />
+    </div>
+    <div class="frmGroup">
+        <input type="text" class="iptText frmThrd" placeholder="1/3" />
+        <input type="text" class="iptText frmFrth" placeholder="1/4" />
+    </div>
+    <div class="frmGroup">
+        <input type="text" class="iptText" placeholder="100%" />
+    </div>
+    <div class="frmGroup">
+        <select name="" id="" class="iptSlt frmSm">
+            <option value="">작은</option>
+            <option value=""></option>
+        </select>
+        <select name="" id="" class="iptSlt frmHalf">
+            <option value="">1/2</option>
+            <option value=""></option>
+        </select>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">date</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            date input은 toast ui를 사용하며 아래와 같이 사용합니다.<br/>
+                                            input 크기는 class"tui-datepicker-input"에 추가합니다.<br/>
+                                            크기 class name은 다른 input과 동일합니다.<br/>
+                                            기본 실행은 아래 script처럼 사용합니다<br/>
+                                            다른 datepicker을 사용할경우 말씀주시면 바꿔 적용하겠습니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input type="text" id="datepicker-input" aria-label="Date-Time">
+            <div id="datepicker-container" style="margin-top: -1px;"></div>
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmSm">
+            <input type="text" id="datepicker-input01" aria-label="Date-Time">
+            <div id="datepicker-container01" style="margin-top: -1px;"></div>
+        </div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmMd">
+            <input type="text" id="datepicker-input02" aria-label="Date-Time">
+            <div id="datepicker-container02" style="margin-top: -1px;"></div>
+        </div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input type="text" id="datepicker-input03" aria-label="Date-Time">
+            <div id="datepicker-container03" style="margin-top: -1px;"></div>
+        </div>
+    </div>
+    
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input id="startpicker-input" type="text" aria-label="Date">
+            <div id="startpicker-container" style="margin-left: -1px;"></div>
+        </div>
+        <div class="textBox deco">~</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input id="endpicker-input" type="text" aria-label="Date">
+            <div id="endpicker-container" style="margin-left: -1px;"></div>
+        </div>
+    </div>
+
+    <div class="frmGroup">
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input id="startpicker-input02" type="text" aria-label="Date">
+            <div id="startpicker-container02" style="margin-left: -1px;"></div>
+        </div>
+        <div class="textBox deco">~</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
+            <input id="endpicker-input02" type="text" aria-label="Date">
+            <div id="endpicker-container02" style="margin-left: -1px;"></div>
+        </div>
+    </div>
+    <div class="frmGroup">
+        <div class="textBox">달력이 위로 뜹니다</div>
+        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+            <input type="text" id="datepicker-input04" aria-label="Date-Time">
+            <div id="datepicker-container04" style="margin-top: -1px;" class="tui-reverse"></div><!-- addClass - tui-reverse : 달력이 상단으로 나타남 -->
+        </div>
+    </div>
+    <script>
+        //단일
+        datePicker("datepicker-input","datepicker-container");
+        datePicker("datepicker-input01","datepicker-container01");
+        datePicker("datepicker-input02","datepicker-container02");
+        datePicker("datepicker-input03","datepicker-container03");
+        datePicker("datepicker-input04","datepicker-container04");
+
+        //기간
+        datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+        datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
+    </script>
+</textarea>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function(){
+            datePicker("datepicker-input","datepicker-container");
+            datePicker("datepicker-input01","datepicker-container01");
+            datePicker("datepicker-input02","datepicker-container02");
+            datePicker("datepicker-input03","datepicker-container03");
+            datePicker("datepicker-input04","datepicker-container04");
+            datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+            datePickerTo("startpicker-input02", "startpicker-container02", "endpicker-input02", "endpicker-container02");
+        },1000);
+
+    });
+</script>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">textBox</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            폼과 조합 할 때 사용하며 class는 "textBox"를 사용합니다.<br/>
+                                            addClass "deco"를 사용하여 "~" 혹은 "-" 같이 짧은 텍스트를 최소한의 길이로 사용할 수 있습니다.(15px)
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="frmGroup">
+        <select name="" id="" class="iptSlt frmSm">
+            <option value="">2023</option>
+            <option value=""></option>
+        </select>
+        <div class="textBox">년도</div>
+    </div>
+    <div class="frmGroup">
+        <select name="" id="" class="iptSlt frmXs">
+            <option value="">010</option>
+            <option value=""></option>
+        </select>
+        <div class="textBox deco">-</div>
+        <input type="text" class="iptText frmXs" placeholder="많이 작은" />
+        <div class="textBox deco">-</div>
+        <input type="text" class="iptText frmXs" placeholder="많이 작은" />
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">checkbox, radio</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            checkbox는 "iptChk", radio는 "iptRdo"를 사용합니다.<br/>
+                                            체크박스나 라디오의 너비가 같은경우는 ul "frmChoList", li "frmChoBox"조합을 사용합니다.<br/>
+                                            이것 역시 다른 input,select와 조합이 가능합니다.<br/>
+                                            class "frmChoBox" 내부에 input을 넣을 수 있지만 이경우 frmTini~frmLg까지만 가능합니다.<br/>
+                                            수가 많아 여러줄이 될 가능성이 있는 경우 "frmGroup" class에 "multiLine"을 추가합니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk" disabled><label for="chk001" class="iptLbl">체크박스마다</label></div>
+        <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk" disabled><label for="chk002" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk" disabled checked><label for="chk003" class="iptLbl">길이가 같아요</label></div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">체크박스마다</label></div>
+        <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">길이가 같아요</label></div>
+    </div>
+    <div class="frmGroup">
+        <ul class="frmChoList">
+            <li class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl">체크박스의</label></li>
+            <li class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl">너비가 글자수랑 상관없이</label></li>
+            <li class="frmChoBox"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLbl">모두 같아요</label></li>
+        </ul>
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001" disabled><label for="rdo001" class="iptLbl">라디오마다</label></div>
+        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001" disabled><label for="rdo002" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001" disabled checked><label for="rdo003" class="iptLbl">길이가 같아요</label></div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">라디오마다</label></div>
+        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">길이가 같아요</label></div>
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">라디오마다</label></div>
+        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">떨어진</label></div>
+        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">길이가 같아요</label></div>
+    </div>
+    <div class="frmGroup">
+        <ul class="frmChoList">
+            <li class="frmChoBox"><input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLbl">라디오의</label></li>
+            <li class="frmChoBox"><input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl">너비가 글자수랑 상관없이</label></li>
+            <li class="frmChoBox"><input id="rdo203" type="radio" class="iptRdo" name="rdo201"><label for="rdo203" class="iptLbl">모두 같아요</label></li>
+        </ul>
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl">좋아합니다</label></div>
+        <div class="frmChoBox"><input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl">싫어합니다</label></div>
+        <div class="frmChoBox"><input id="rdo303" type="radio" class="iptRdo" name="rdo301"><label for="rdo303" class="iptLbl">기타의견</label></div>
+        <input type="text" class="iptText" disabled value="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." placeholder="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." />
+        <input type="text" class="iptText" placeholder="'frmChoBox' 외부에서 조합하면 100%짜리도 가능합니다." />
+    </div>
+    <div class="frmGroup">
+        <div class="frmChoBox"><input id="rdo401" type="radio" class="iptRdo" name="rdo401"><label for="rdo401" class="iptLbl">좋아합니다</label></div>
+        <div class="frmChoBox"><input id="rdo402" type="radio" class="iptRdo" name="rdo401"><label for="rdo402" class="iptLbl">싫어합니다</label></div>
+        <div class="frmChoBox">
+            <input id="rdo403" type="radio" class="iptRdo" name="rdo401"><label for="rdo403" class="iptLbl">기타의견</label>
+            <input type="text" class="iptText frmLg" placeholder="내부조합은 frmLg까지만" />
+        </div>
+    </div>
+    <div class="frmGroup multiLine">
+        <div class="frmChoBox"><input id="chk301" type="checkbox" class="iptChk"><label for="chk301" class="iptLbl">여러줄은</label></div>
+        <div class="frmChoBox"><input id="chk302" type="checkbox" class="iptChk"><label for="chk302" class="iptLbl">frmGroup class에</label></div>
+        <div class="frmChoBox"><input id="chk303" type="checkbox" class="iptChk"><label for="chk303" class="iptLbl">multiLine class를</label></div>
+        <div class="frmChoBox"><input id="chk304" type="checkbox" class="iptChk"><label for="chk304" class="iptLbl">추가하세요</label></div>
+        <div class="frmChoBox"><input id="chk305" type="checkbox" class="iptChk"><label for="chk305" class="iptLbl">여러줄은</label></div>
+        <div class="frmChoBox"><input id="chk306" type="checkbox" class="iptChk"><label for="chk306" class="iptLbl">frmGroup class에</label></div>
+        <div class="frmChoBox"><input id="chk307" type="checkbox" class="iptChk"><label for="chk307" class="iptLbl">multiLine class를</label></div>
+        <div class="frmChoBox"><input id="chk308" type="checkbox" class="iptChk"><label for="chk308" class="iptLbl">추가하세요</label></div>
+        <div class="frmChoBox"><input id="chk309" type="checkbox" class="iptChk"><label for="chk309" class="iptLbl">여러줄은</label></div>
+        <div class="frmChoBox"><input id="chk310" type="checkbox" class="iptChk"><label for="chk310" class="iptLbl">frmGroup class에</label></div>
+        <div class="frmChoBox"><input id="chk311" type="checkbox" class="iptChk"><label for="chk311" class="iptLbl">multiLine class를</label></div>
+        <div class="frmChoBox"><input id="chk312" type="checkbox" class="iptChk"><label for="chk312" class="iptLbl">추가하세요</label></div>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">input, form 조합</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            input, select등을 조합할 때는 하나의 "frmGroup" 안에 조합할 폼을 넣습니다.<br/>
+                                            정해진크기 + 100%짜리가 들어가면 100%짜리가 자동으로 화면 너비에 맞추어집니다.<br/>
+                                            100% + 100% 조합이 들어가면 자동으로 크기가 나누어집니다.<br/>
+                                            텍스트 박스(textBox)를 이용하여 조합 할 수도 있습니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="frmGroup">
+        <input type="text" class="iptText frmTini" placeholder="가장 작은" />
+        <select name="" id="" class="iptSlt frmSm">
+            <option value="">2023</option>
+            <option value=""></option>
+        </select>
+        <input type="text" class="iptText frmSm" placeholder="작은" />
+        <input type="text" class="iptText frmMd" placeholder="보통" />
+        <select name="" id="" class="iptSlt frmLg">
+            <option value="">2023</option>
+            <option value=""></option>
+        </select>
+        <input type="text" class="iptText" placeholder="100%" />
+    </div>
+    <div class="frmGroup">
+        <input type="text" class="iptText" placeholder="100%" />
+        <input type="text" class="iptText" placeholder="100%" />
+    </div>
+    <div class="frmGroup">
+        <input type="text" class="iptText" placeholder="100%" />
+        <div class="textBox">텍스트를</div>
+        <input type="text" class="iptText" placeholder="100%" />
+        <div class="textBox">넣어도</div>
+        <input type="text" class="iptText" placeholder="100%" />
+        <div class="textBox">됨</div>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/xml.min.js"></script>
+<script>
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function run(){
+        const codeGuides = document.querySelectorAll('.cptPubGuide .codeGuide');
+        const codes = document.querySelectorAll('.cptPubGuide code.xml');
+        const viewers = document.querySelectorAll('.cptPubGuide .gView');
+        codes.forEach(function(code,idx){
+            code.innerHTML = escapeHtml(codeGuides[idx].value);
+        });
+        viewers.forEach(function(viewer,idx){
+            viewer.innerHTML = codeGuides[idx].value;
+        });
+        hljs.highlightAll();
+    }
+    window.onload = function(){
+        run();
+    }
+</script>
+
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+
+
+                </div>
+                <!-- //콘텐츠 영역 -->
+
+            </div>
+            <!-- //중단영역 -->
+
+
+            <!-- 하단영역 -->
+            <div class="layoutFooter">
+            <!-- Footer -->
+            
+            </div>
+            <!-- //하단영역 -->
+
+        </div>
+    </div>
+
+    <!-- 팝업이 들어오는 영역 -->
+
+</div>
+</body>
+</html>

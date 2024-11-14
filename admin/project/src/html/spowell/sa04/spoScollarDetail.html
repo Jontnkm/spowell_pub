@@ -1,0 +1,217 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="modTab out">
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">엑셀파일 일괄등록</a></li>
+            <li class="item "><a href="#">일괄등록 데이터관리</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>사업년도</th>
+                    <td>2025</td>
+                    <th>장애구분</th>
+                    <td>비장애</td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td>2025년 체육장학금 지원대상자 추천(비장애)</td>
+                    <th>엑셀파일</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox on">
+                                <div class="fileAfter">
+                                    <div class="textBox">2025년 체육장학금 추천(비장애).xlsx</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>항목수</th>
+                    <td colspan="3">
+                        전체 : <span>100</span>건 / 중복 : <span>10</span>건 / 등록 : <span>90</span>건
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+                <col style="width:150px;">
+                <col style="width:150px;">
+
+                <col style="width:100px;">
+                <col style="width:150px;">
+
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:70px;">
+                
+                <col style="width:250px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:150px;">
+
+                <col style="width:250px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">번호</th>
+                    <th rowspan="2">중복제외</th>
+                    <th rowspan="2">장애구분</th>
+
+                    <th colspan="7">체육인정보</th>
+                    <th colspan="2">보호자정보</th>
+                    <th colspan="3">학교정보</th>
+                    <th colspan="3">대회참가정보</th>
+                    
+                    <th rowspan="2">은행계좌</th>
+                    
+                    <th rowspan="2">비고</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>추천단체</th>
+                    <th>지역</th>
+                    <th>종목</th>
+                    <th>성명</th>
+                    <th>성별</th>
+                    <th>주민등록번호</th>
+                    <th>휴대전화번호</th>
+
+                    <th>보호자 성명</th>
+                    <th>보호자 연락처</th>
+
+                    <th>학교</th>
+                    <th>학교명</th>
+                    <th>학년</th>
+
+                    <th>대표대회</th>
+                    <th>순위</th>
+                    <th>입상횟수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="txtRed">삭제</span></td>
+                    <td>
+                        <span>비장애</span><br>
+                        <span>시각</span>
+                    </td>
+
+                    <td>대한체육회</td>
+                    <td>서울</td>
+                    <td>근대5종</td>
+                    <td>홍길동</td>
+                    <td>남</td>
+                    <td>000000-0000000</td>
+                    <td>010-0000-0000</td>
+                    
+                    <td>홍길동</td>
+                    <td>010-0000-0000</td>
+
+                    <td>초등</td>
+                    <td>은석초등학교</td>
+                    <td>4</td>
+                    
+                    <td>체육회 주관 전국대회</td>
+                    <td>1</td>
+                    <td>10</td>
+
+                    <td>
+                        <span>국민은행</span><br>
+                        <span>000000-00-000000</span>
+                    </td>
+                    
+                    <td>비고내용 영역</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><span class="txtBlue">중복</span></td>
+                    <td>
+                        <span>비장애</span><br>
+                        <span>시각</span>
+                    </td>
+
+                    <td>대한체육회</td>
+                    <td>서울</td>
+                    <td>근대5종</td>
+                    <td>홍길동</td>
+                    <td>남</td>
+                    <td>000000-0000000</td>
+                    <td>010-0000-0000</td>
+                    
+                    <td>홍길동</td>
+                    <td>010-0000-0000</td>
+
+                    <td>초등</td>
+                    <td>풍납초등학교</td>
+                    <td>6</td>
+                    
+                    <td>전국체육대회</td>
+                    <td>1</td>
+                    <td>10</td>
+
+                    <td>
+                        <span>국민은행</span><br>
+                        <span>000000-00-000000</span>
+                    </td>
+                    
+                    <td>비고내용 영역</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+    <div class="appFrmDesc">
+        <p> </p>
+        <p>중복확인의 중복 건은 일괄등록에서 제외하고 &lt;일괄등록 데이터관리&gt;에 등록처리 됩니다.</p>
+        <p> </p>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <!-- <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

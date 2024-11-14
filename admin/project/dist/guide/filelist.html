@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="퍼블리싱가이드">
+	<meta property="og:description" content="퍼블리싱가이드">	 
+
+	<title>IWI - 관리시스템 파일리스트</title>
+<!--
+	<link rel="stylesheet" href="/common/css/default.css" />
+	<link rel="stylesheet" href="/common/css/common.css" />
+	<link rel="stylesheet" href="/common/css/layout.css" />
+	<link rel="stylesheet" href="/common/css/component.css" />
+	<link rel="stylesheet" href="/common/css/main.css" />
+-->
+	<script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
+
+<style type="text/css">
+* {box-sizing:border-box;}
+html,body {height:100%; margin:0; padding:0; background:#ebedef}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../common/webfont/Rubik-Regular.woff") format('woff'),
+  url("../common/webfont/Rubik-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../common/webfont/Rubik-Medium.woff") format('woff'),
+  url("../common/webfont/Rubik-Medium.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../common/webfont/Rubik-Bold.woff") format('woff'),
+  url("../common/webfont/Rubik-Bold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../common/webfont/Spartan-Bold.woff2") format('woff2');
+}
+
+
+
+/* 본고딕 Light */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../common/webfont/NotoSansKR-Light.woff") format("woff"),
+    url("../common/webfont/NotoSansKR-Light.woff2") format("woff2"),
+    url("../common/webfont/NotoSansKR-Light.otf") format("opentype");
+    
+}
+/* 본고딕 Regular */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../common/webfont/NotoSansKR-Regular.woff") format("woff"),
+    url("../common/webfont/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../common/webfont/NotoSansKR-Regular.otf") format("opentype");
+}
+/* 본고딕 Medium */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../common/webfont/NotoSansKR-Medium.woff") format("woff"),
+    url("../common/webfont/NotoSansKR-Medium.woff2") format("woff2"),
+    url("../common/webfont/NotoSansKR-Medium.otf") format("opentype");
+}
+/* 본고딕 Bold */
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../common/webfont/NotoSansKR-Bold.woff") format("woff"),
+    url("../common/webfont/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../common/webfont/NotoSansKR-Bold.otf") format("opentype");
+}
+
+* {box-sizing: border-box; font-family: 'NotoSansCJKkr', sans-serif; letter-spacing: -1px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+input, textarea {-webkit-border-radius:0; -webkit-appearance:none;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5; font-family: 'NotoSansCJKkr', sans-serif; color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+caption {font-size: 0;}
+
+input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
+
+select {-moz-appearance:none; -webkit-appearance:none; appearance:none; -moz-border-radius:0; -webkit-border-radius: 0;border-radius: 0;  background:#fff url(../../images/icon_select.png) calc(100% - 9px) center no-repeat;}
+select::-ms-expand {display:none}
+label {font-size: 0;}
+
+.skip .quickBtn {display: block; width: 100%; height: 0px;background: #092473; font-size: 15px; color: #fff; overflow: hidden; text-align: center;}
+.skip .quickBtn:focus {height:auto;}
+
+.hide {font-size:0 !important; position:fixed; left:-5000px; top:0;}
+
+.g-wrap {width:100%; height:100%;}
+.g-nav {width:256px; height:100%; background:#3c4b64; position:fixed; left:0; top:0;}
+.g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+.g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+.g-nav .g-menu {}
+.g-nav .g-depth1-group {}
+.g-nav .g-depth1-list {}
+.g-nav .g-depth1-name {padding:10px 10px 10px 20px; margin-top:10px; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; }
+.g-nav .g-depth1-name h2 {letter-spacing:0px;}
+.g-nav .g-depth2-group {}
+.g-nav .g-depth2-list {}
+.g-nav .g-depth2-name {}
+.g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+.g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+.g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+.g-nav .g-menu .close-menu {display:none;}
+
+.g-cont {width:calc(100% - 256px); height:100%; margin-left:256px;}
+.g-cont .g-top {width:calc(100% - 256px); height:56px; background:#fff; position:fixed; left:256px; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+.g-cont .g-top:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-top-menu {width:calc(100% - 300px); float:left;}
+.g-cont .g-top .g-top-menu .open-menu {display:none;}
+.g-cont .g-top .g-menu-group {width:100%; padding-left:20px; }
+.g-cont .g-top .g-menu-group:after {content:""; display:block; clear:both;}
+.g-cont .g-top .g-menu-list { float:left;}
+.g-cont .g-top .g-menu-list a {padding:0 20px; font-size:13px; font-weight:400; line-height:54px; color:#999; display:block; letter-spacing:0px; font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;}
+.g-cont .g-top .g-menu-list.on a {color:#333;}
+.g-cont .g-top .g-menu-list a:hover {color:#333;}
+.g-cont .g-top .g-top-text {width:300px; padding-right:30px; font-size:11px; letter-spacing:0px; font-weight:300; color:#aaa; line-height:54px; text-align:right; float:right;}
+
+.g-cont .g-body {padding:66px 30px 30px;}
+.g-cont .g-body .g-in-body {}
+
+
+.g-chart {}
+.g-chart:after {content:""; display:block; clear:both;}
+.g-chart dl {width:25%; padding-left:20px; letter-spacing:0px; border-left:4px solid #d8dbe0; border-radius:5px; float:left;}
+.g-chart dl.total {border-left-color:#2eb85c;}
+.g-chart dl.complete {border-left-color:#39f;}
+.g-chart dl.uncomplete {border-left-color:#e55353;}
+.g-chart dl.etc {border-left-color:#d8dbe0;}
+.g-chart dt {font-size:12px;}
+.g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+.g-file {}
+.g-file .g-file-title {width:auto; height:46px; padding-left:20px; font-size:14px; line-height:44px; border:1px solid #d8dbe0; border-radius:5px 5px 0 0; font-weight:400; display:block; color:#434343; margin:20px 0 0; background:#fff;}
+.g-file .g-file-cont {width:100%; margin:0; padding:20px; font-size:12px; color:#607d8b; font-weight:400; border:1px solid #d8dbe0; border-top:0; border-radius:0 0 5px 5px; background:#fff; overflow:auto;}
+.g-file .g-table { width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .col1 {width:13%;}
+.g-file .g-table .col2 {width:13%;}
+.g-file .g-table .col3 {width:13%;}
+.g-file .g-table .col4 {width:13%;}
+.g-file .g-table .col5 {}
+.g-file .g-table .col6 {width:60px;}
+.g-file .g-table .col7 {width:150px;}
+.g-file .g-table .col8 {width:10%;}
+.g-file .g-table th {padding:13px; background:#d8dbe0; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500;}
+.g-file .g-table td {padding:8px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px;}
+.g-file .g-table td.link {text-align:left;}
+.g-file .g-table td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table td .btn_worked {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#16d826; display:inline-block;}
+.g-file .g-table td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table td a {font-size:12px; color:#3580db;}
+.g-file .g-table .page .more button {width:50px; padding:1px 5px 2px; font-size:10px; border-radius:3px; background:#3580db;}
+.g-file .g-table .page .more button:after {content:"OPEN"; color:#fff;}
+.g-file .g-table .page.on .more button:after {content:"CLOSE"; color:#fff;}
+.g-file .g-table .page-add {display:none;}
+.g-file .g-table .page-add.on {display:table-row;}
+.g-file .g-table .page-add > td {background:#666;}
+
+.g-file .g-table .g-table-add {width:100%; border-collapse:collapse; word-break:keep-all; border:1px solid #d8dbe0; table-layout:fixed;}
+.g-file .g-table .g-table-add .col1 {width:30%;}
+.g-file .g-table .g-table-add .col2 {width:30%;}
+.g-file .g-table .g-table-add .col3 {width:auto;}
+.g-file .g-table .g-table-add  th {padding:5px; text-align:center; color:#768192; font-size:14px; border-bottom:1px solid #d8dbe0; font-weight:500; background:#edeff3;}
+.g-file .g-table .g-table-add  td {padding:5px 10px; text-align:center; border-bottom:1px solid #d8dbe0; color:#4c4c4c; font-size:14px; background:#fff;}
+.g-file .g-table .g-table-add  td:nth-child(2) {text-align:left;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_finish {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#3580db; display:inline-block;}
+.g-file .g-table .g-table-add  td .btn_working {width:16px; height:16px; color:#fff; font-size:11px; line-height:15px; background:#d20909; display:inline-block;}
+.g-file .g-table .g-table-add  td a {font-size:12px; color:#3580db;}
+
+@media screen and (min-width: 100px) and (max-width: 1023px) {
+    .g-nav {width:100%; height:auto; padding-top:56px; background:#3c4b64; position:static;}
+    .g-nav .g-logo {width:100%; height:56px; background:rgb(48 60 84);}
+    .g-nav .g-logo h1 {width:100%; font-size:20px; color:#fff; text-align:center; line-height:55px;}
+    .g-nav .g-menu {height:100vh; padding-bottom:30px; background:#3c4b64; position:fixed; left:0; top:0; z-index:1000; display:none;}
+    .g-nav .g-menu.on {display:block;}
+    .g-nav .g-depth1-name {padding:10px; margin-top:0; color:rgba(255,255,255,0.8); font-size:14px; font-weight:700; text-align:center;}
+    .g-nav .g-depth1-name h2 {letter-spacing:0px;}
+    .g-nav .g-depth2-group {font-size:0;}
+    .g-nav .g-depth2-list {width:50%; display:inline-block; }
+
+    .g-nav .g-menu .close-menu {width:25px; height:25px; font-size:0; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-nav .g-menu .close-menu:before {content:""; width:21px; height:2px; background:#333; transform: rotate(45deg); position:absolute; left:2px; top:12px;}
+    .g-nav .g-menu .close-menu:after {content:""; width:21px; height:2px; background:#333; transform: rotate(-45deg); position:absolute; left:2px; top:12px;}
+    
+    /*
+    .g-nav .g-depth2-list {width:33.333%; display:inline-block; }
+    .g-nav .g-depth2-name {}
+    .g-nav .g-depth2-name a {width:100%; padding:10px 10px 10px 30px; color:rgba(255,255,255,0.5); font-size:13px; font-weight:500; letter-spacing:0px; display:block; }
+    .g-nav .g-depth2-list.on a { color:rgba(255,255,255,1);}
+    .g-nav .g-depth2-list a:hover { color:rgba(255,255,255,1);}
+    */
+    .g-cont {width:100%; height:auto; margin-left:0;}
+    .g-cont .g-top {width:100%; height:56px; background:#fff; position:fixed; left:0; top:0; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.20);}
+    .g-cont .g-top .g-top-menu {width:100%; float:left; position:relative;}
+    .g-cont .g-top .g-menu-list { float:left;}
+    .g-cont .g-top .g-top-menu .open-menu {width:25px; height:25px; font-size:0; border:1px solid #333; background:#fff; border-radius:3px; position:absolute; right:15px; top:15px; display:block;}
+    .g-cont .g-top .g-top-menu .open-menu:before {content:""; width:17px; height:17px; border-radius:50%; background:#333; position:absolute; left:3px; top:3px;}
+    .g-cont .g-top .g-top-menu .open-menu:after {content:""; width:13px; height:13px; border-radius:50%; background:#fff; position:absolute; left:5px; top:5px;}
+
+    .g-cont .g-top .g-top-text {display:none;}
+
+    .g-cont .g-body {padding:20px 20px;}
+    
+    .g-chart dl {width:50%; margin-bottom:10px;}
+    .g-chart dt {font-size:12px;}
+    .g-chart dd {font-size:20px; color:#333; letter-spacing:0px; font-weight:700;}
+
+    .g-file .g-file-title {background:rgba(48,60,84,0.8); color:#fff;}
+    .g-file .g-file-cont {padding:15px 15px 5px;}
+
+    .g-file .g-table { width:100%; display:block; border:0;}
+    .g-file .g-table thead {display:none;}
+    .g-file .g-table tbody {display:block;}
+    .g-file .g-table tr {width:100%; display:block; margin-bottom:10px; border: 1px solid #d8dbe0;}
+    .g-file .g-table td {display:block; text-align:left;}
+    .g-file .g-table td:last-child {border-bottom:0;}
+    .g-file .g-table td.dep2:before {content:"2차 메뉴명 : ";}
+    .g-file .g-table td.dep3:before {content:"3차 메뉴명 : ";}
+    .g-file .g-table td.dep4:before {content:"4차 메뉴명 : ";}
+    .g-file .g-table td.type:before {content:"Type : ";}
+    .g-file .g-table td.link:before {content:"URL : ";}
+    .g-file .g-table td.cmpt:before {content:"완료여부 : ";}
+    .g-file .g-table td.cmpt span {width:50px; height:20px; margin-left:5px; font-size:13px; line-height:20px; border-radius:3px; text-align:center; vertical-align: middle; display:inline-block;}
+    .g-file .g-table td.modify:before {content:"수정내역 : ";}
+    .g-file .g-table td.more {padding:0;}
+    .g-file .g-table .page .more button {width:100%; height:25px; font-size:13px; border-radius:0;}
+
+
+    .g-file .g-table .page-add {display:none;}
+    .g-file .g-table .page-add.on {display:block;}
+    .g-file .g-table .page-add > td {background:#666; padding-bottom:1px;}
+
+    .g-file .g-table .g-table-add {width:100%; display:block; border:0;}
+    .g-file .g-table .g-table-add tr {border:1px solid #d8dbe0;}
+}
+</style>
+</head>
+<body>
+<div class="g-wrap">
+	<div class="g-nav">
+		<div class="g-logo">
+			<h1>FILELIST</h1>
+		</div>
+		<div class="g-menu">
+			<ul class="g-depth1-group">
+				<li class="g-depth1-list">
+					<div class="g-depth1-name"><h2>관리자</h2></div>
+					
+					<ul class="g-depth2-group">
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('0')" href="#">로그인/대시보드</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('2')" href="#">02 회원관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('3')" href="#">03 체력측정관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('4')" href="#">04 자가체력측정관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('5')" href="#">05 운동상담관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('6')" href="#">06 체력증진교실관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('7')" href="#">07 체력센터운영관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('8')" href="#">08 스포츠마일리지 관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('9')" href="#">09 홈페이지관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('10')" href="#">10 통계관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('11')" href="#">11 시스템관리</a></h3></div>
+						</li>
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('12')" href="#">12 바로크레디트 관리자</a></h3></div>
+						</li>
+						<!--20240319 추가-->
+						<li class="g-depth2-list">
+							<div class="g-depth2-name"><h3><a onclick="fnMove('13')" href="#">13 인적성검사 관리자</a></h3></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+            <button class="close-menu">바로가기 메뉴 닫기</button>
+		</div>
+	</div>
+	<div class="g-cont">
+		<div class="g-top">
+			<div class="g-top-menu">
+				<ul class="g-menu-group">
+					<li class="g-menu-list on"><a href="filelist.html">FILELIST</a></li>
+					<li class="g-menu-list"><a href="guide.html">GUIDE</a></li>
+				</ul>
+				<button class="open-menu">바로가기 메뉴 열기</button>
+			</div>
+			<div class="g-top-text">국민체력100 관리자 Web Publishing Guide</div>
+		</div>
+		<div class="g-body">
+			<div class="g-in-body">
+				<div class="g-file">
+					<div class="g-file-title">국민체력100 관리자 PAGE</div>
+					<div class="g-file-cont">
+						<div class="g-chart">
+							<dl class="total">
+								<dt>TOTAL</dt>
+								<dd>30</dd>
+							</dl>
+							<dl class="complete">
+								<dt>COMPLETE</dt>
+								<dd>20</dd>
+							</dl>
+							<dl class="uncomplete">
+								<dt>UNCOMPLETE</dt>
+								<dd>10</dd>
+							</dl>
+							<dl class="etc">
+								<dt>ETC</dt>
+								<dd>0</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 메인 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_0">로그인/대시보드</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">로딩바</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_5.html" target="_blank" title="새창">../html/basic/sa03/sa03_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">로딩 html 소스 제일 하단 주석영역 사용 바람</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">로그인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/login/login.html" target="_blank" title="새창">../html/basic/login/login.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">알럿 1ea, 팝업 6ea<br/>(아이디조회, 비번조회, 신규등록)</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드1</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/main/dashBoard1.html" target="_blank" title="새창">../html/basic/main/dashBoard1.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드2</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/main/dashBoard2.html" target="_blank" title="새창">../html/basic/main/dashBoard2.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">대시보드3</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/main/dashBoard3.html" target="_blank" title="새창">../html/basic/main/dashBoard3.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span></td>-->
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_2">02 회원관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">회원현황조회</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa02/sa02_5.html" target="_blank" title="새창">../html/basic/sa02/sa02_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">회원현황조회</td>
+									<td class="dep3">상세내역</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa02/sa02_6.html" target="_blank" title="새창">../html/basic/sa02/sa02_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209</td>
+									<td class="more">가입경로 행 삭제</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">준회원조회</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa02/sa02_7.html" target="_blank" title="새창">../html/basic/sa02/sa02_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">준회원조회</td>
+									<td class="dep3">상세내역</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa02/sa02_8.html" target="_blank" title="새창">../html/basic/sa02/sa02_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209</td>
+									<td class="more">가입경로 행 삭제</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">휴먼회원조회</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa02/sa02_9.html" target="_blank" title="새창">../html/basic/sa02/sa02_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">휴먼회원조회</td>
+									<td class="dep3">상세내역</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa02/sa02_10.html" target="_blank" title="새창">../html/basic/sa02/sa02_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209</td>
+									<td class="more">가입경로 행 삭제</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_3">03 체력측정관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_5.html" target="_blank" title="새창">../html/basic/sa03/sa03_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">예약취소 첫번째 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정참가신청서 & 체력측정참가동의서</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_6.html" target="_blank" title="새창">../html/basic/sa03/sa03_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230206 추가작업</td>
+									<td class="more">참가신청서 & 참가동의서</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">회원가입확인</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_9_1.html" target="_blank" title="새창">../html/basic/sa03/sa03_9_1.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">첫번째 선택 버튼 => 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">예약변경처리</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_9_2.html" target="_blank" title="새창">../html/basic/sa03/sa03_9_2.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">예약변경완료 버튼 => 알럿</td>
+								</tr>
+								<!--20230111-->
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약등록 [스케쥴조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_10.html" target="_blank" title="새창">../html/basic/sa03/sa03_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">음영처리영역 선택 가능</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약등록 [회원조회 및 정보등록]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_11.html" target="_blank" title="새창">../html/basic/sa03/sa03_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">조회 탭 처리 <br/>취소 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약등록 [회원조회 및 정보등록(계속)]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_12.html" target="_blank" title="새창">../html/basic/sa03/sa03_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약설정 [목록조회(월단위- 목록형식 & 달력형식 보기)]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_13-14.html" target="_blank" title="새창">../html/basic/sa03/sa03_13-14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">우측 상단 00형식보기 버튼 스크립트 처리</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약설정 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_15-16.html" target="_blank" title="새창">../html/basic/sa03/sa03_15-16.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-일반 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_17.html" target="_blank" title="새창">../html/basic/sa03/sa03_17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-일반 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_18.html" target="_blank" title="새창">../html/basic/sa03/sa03_18.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">확정 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-출장 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_19.html" target="_blank" title="새창">../html/basic/sa03/sa03_19.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-출장 [대상자등록]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_20.html" target="_blank" title="새창">../html/basic/sa03/sa03_20.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">취소 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-출장 [대상자등록]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_21.html" target="_blank" title="새창">../html/basic/sa03/sa03_21.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과등록-출장 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_22.html" target="_blank" title="새창">../html/basic/sa03/sa03_22.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">확정 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa03/sa03_23.html" target="_blank" title="새창">../html/basic/sa03/sa03_23.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [상세내역조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_24.html" target="_blank" title="새창">../html/basic/sa03/sa03_24.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [운동처방 등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_25.html" target="_blank" title="새창">../html/basic/sa03/sa03_25.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [운동처방 –운동처방 조회/선택]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_26.html" target="_blank" title="새창">../html/basic/sa03/sa03_26.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230208 수정</td>
+									<td class="more">가이드 이미지 팝업 추가 </td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [운동처방 –운동시설 조회/선택]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_27.html" target="_blank" title="새창">../html/basic/sa03/sa03_27.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">저장 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">측정결과조회·처방 [운동처방 –운동처방전 조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_28.html" target="_blank" title="새창">../html/basic/sa03/sa03_28.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력측정 예약관리</td>
+									<td class="dep3">체력측정 예약현황 [메시지 보내기]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa03/sa03_29.html" target="_blank" title="새창">../html/basic/sa03/sa03_29.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230214 수정</td>
+									<td class="more">클래스명 추가</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_4">04 자가체력측정관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa04/sa04_5.html" target="_blank" title="새창">../html/basic/sa04/sa04_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정내역 측정결과 조회</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_6.html" target="_blank" title="새창">../html/basic/sa04/sa04_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정내역 [상세내역 – 추천 운동처방전 조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_7.html" target="_blank" title="새창">../html/basic/sa04/sa04_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정내역 [상세내역 – PAR-Q 조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_8.html" target="_blank" title="새창">../html/basic/sa04/sa04_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정상담 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa04/sa04_9.html" target="_blank" title="새창">../html/basic/sa04/sa04_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정상담 [조회/처방]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_10.html" target="_blank" title="새창">../html/basic/sa04/sa04_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more">저장 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">자가체력측정상담 [조회/처방 - 운동처방]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_11.html" target="_blank" title="새창">../html/basic/sa04/sa04_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">저장 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자가체력측정내역</td>
+									<td class="dep3">> 자가체력측정상담 [조회/처방 - 운동시설 조회/선택]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa04/sa04_12.html" target="_blank" title="새창">../html/basic/sa04/sa04_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_5">05 운동상담관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">운동상담관리</td>
+									<td class="dep3">온라인 운동상담 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa05/sa05_5.html" target="_blank" title="새창">../html/basic/sa05/sa05_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">운동상담관리</td>
+									<td class="dep3">온라인 운동상담 [조회/답변]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa05/sa05_6-7.html" target="_blank" title="새창">../html/basic/sa05/sa05_6-7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">운동상담관리</td>
+									<td class="dep3">정부24 운동상담 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa05/sa05_8.html" target="_blank" title="새창">../html/basic/sa05/sa05_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">운동상담관리</td>
+									<td class="dep3">정부24 운동상담 [조회/답변]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa05/sa05_9-10.html" target="_blank" title="새창">../html/basic/sa05/sa05_9-10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_6">06 체력증진교실관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 프로그램관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa06/sa06_5.html" target="_blank" title="새창">../html/basic/sa06/sa06_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 프로그램관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_6.html" target="_blank" title="새창">../html/basic/sa06/sa06_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209 수정</td>
+									<td class="more">프로그램분류 제거 및 체력요인항목 추가</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 참여자관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa06/sa06_7.html" target="_blank" title="새창">../html/basic/sa06/sa06_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 참여자관리 [조회 - 승인처리]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_8.html" target="_blank" title="새창">../html/basic/sa06/sa06_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">승인처리 버튼=> 알럿1, 승인취소 버튼=> 알럿2</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 참여자관리 [참여자 등록]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_9.html" target="_blank" title="새창">../html/basic/sa06/sa06_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">선택 첫번째 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 운영관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa06/sa06_10.html" target="_blank" title="새창">../html/basic/sa06/sa06_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">종료처리 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 운영관리 [상세-출석관리]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_11-12.html" target="_blank" title="새창">../html/basic/sa06/sa06_11-12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more">일정등록 달력 추가(팝업)</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 이수내역 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa06/sa06_13.html" target="_blank" title="새창">../html/basic/sa06/sa06_13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">주간보호센터 증진교실관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa06/sa06_14.html" target="_blank" title="새창">../html/basic/sa06/sa06_14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">주간보호센터 증진교실관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_15-16-17.html" target="_blank" title="새창">../html/basic/sa06/sa06_15-16-17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more" rowspan="2">
+										증진교실 관리 등록 조회에서 주간보호센터 조회/등록 및 참가대상 등록관리 포함 됨
+									</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">주간보호센터 증진교실관리 [주간보호센터 조회/등록 & 참가대상자 등록관리]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_15-16-17.html" target="_blank" title="새창">../html/basic/sa06/sa06_15-16-17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">주간보호센터 증진교실관리 [출석관리]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_18.html" target="_blank" title="새창">../html/basic/sa06/sa06_18.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 이수내역 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_19.html" target="_blank" title="새창">../html/basic/sa06/sa06_19.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">2023.01.18 [추가]<br/>PPT p.14</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">증진교실관리</td>
+									<td class="dep3">증진교실 참여자관리 [메시지 보내기]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa06/sa06_20.html" target="_blank" title="새창">../html/basic/sa06/sa06_20.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230214 수정</td>
+									<td class="more">클래스명 추가</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_7">07 체력센터운영관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력100 사업공지 [목록]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_5.html" target="_blank" title="새창">../html/basic/sa07/sa07_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력100 사업공지 [조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_6.html" target="_blank" title="새창">../html/basic/sa07/sa07_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">게시물 삭제 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력100 사업공지 [등록/수정]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_7.html" target="_blank" title="새창">../html/basic/sa07/sa07_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">현장의 소리 [목록]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_8.html" target="_blank" title="새창">../html/basic/sa07/sa07_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">현장의 소리 [조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_9.html" target="_blank" title="새창">../html/basic/sa07/sa07_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">게시물 삭제 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">현장의 소리 [등록/수정]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_10.html" target="_blank" title="새창">../html/basic/sa07/sa07_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력인증센터정보 [목록]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_11.html" target="_blank" title="새창">../html/basic/sa07/sa07_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력인증센터정보 [체력인증센터정보 조회/수정]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_12.html" target="_blank" title="새창">../html/basic/sa07/sa07_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">체력인증센터정보 [체력인증센터정보 담당자정보조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_13.html" target="_blank" title="새창">../html/basic/sa07/sa07_13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">아카데미 교육 이수현황</td>
+									<td class="dep4">교육 이수 승인관리 [목록]</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_14.html" target="_blank" title="새창">../html/basic/sa07/sa07_14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">미승인사유 입력 팝업 및 승인처리 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">아카데미 교육 이수현황</td>
+									<td class="dep4">교육 이수 현황조회 [목록]</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_15.html" target="_blank" title="새창">../html/basic/sa07/sa07_15.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">아카데미 교육 이수현황</td>
+									<td class="dep4">교육 이수 현황조회 [상세조회]</td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_16.html" target="_blank" title="새창">../html/basic/sa07/sa07_16.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">운영실적보고관리</td>
+									<td class="dep4">일일업무현황보고 [목록]</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_17.html" target="_blank" title="새창">../html/basic/sa07/sa07_17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">운영실적보고관리</td>
+									<td class="dep4">일일업무현황보고 [등록/조회]</td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_18.html" target="_blank" title="새창">../html/basic/sa07/sa07_18.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">첨부파일 삭제 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">운영실적보고관리</td>
+									<td class="dep4">연간업무실적조회 [목록]</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_19.html" target="_blank" title="새창">../html/basic/sa07/sa07_19.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">인증서발급대장</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_20.html" target="_blank" title="새창">../html/basic/sa07/sa07_20.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">출장 및 단체현황</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_21.html" target="_blank" title="새창">../html/basic/sa07/sa07_21.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">메세지발송관리</td>
+									<td class="dep4">발송내역조회 [목록]</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_22.html" target="_blank" title="새창">../html/basic/sa07/sa07_22.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">메시지내용 확인 팝업</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">메세지발송관리</td>
+									<td class="dep4">메세지발송하기 [목록]</td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_23.html" target="_blank" title="새창">../html/basic/sa07/sa07_23.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230214 수정</td>
+									<td class="more">클래스명 추가</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">마이페이지</td>
+									<td class="dep4">개인정보관리</td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa07/sa07_24-25.html" target="_blank" title="새창">../html/basic/sa07/sa07_24-25.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">비밀번호설정 팝업</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">체력센터운영관리</td>
+									<td class="dep3">마이페이지</td>
+									<td class="dep4">교육이수정보관리</td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa07/sa07_26.html" target="_blank" title="새창">../html/basic/sa07/sa07_26.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">자료제출 팝업</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_8">08 스포츠마일리지관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- <tr>
+									<td colspan="8">준비 중</td>
+								</tr> -->
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">마일리지 현황 조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_5.html" target="_blank" title="새창">../html/basic/sa08/sa08_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">마일리지 금액 우측정렬 처리</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">마일리지 개별지급 /<br/>마일리지 일괄지급</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_6-7.html" target="_blank" title="새창">../html/basic/sa08/sa08_6-7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">탭 처리</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">상품권 신청관리</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_8.html" target="_blank" title="새창">../html/basic/sa08/sa08_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">처리중, 처리완료 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">상품권 신청내역</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa08/sa08_9.html" target="_blank" title="새창">../html/basic/sa08/sa08_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">상품권 등록관리</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_10.html" target="_blank" title="새창">../html/basic/sa08/sa08_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">상품등록/조회</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa08/sa08_11.html" target="_blank" title="새창">../html/basic/sa08/sa08_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">마일리지 지급설정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_12.html" target="_blank" title="새창">../html/basic/sa08/sa08_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">누적마일리지초기화버튼, 저장 버튼 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">스포츠클럽 등록관리</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_13.html" target="_blank" title="새창">../html/basic/sa08/sa08_13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">인증시설일괄 업로드버튼=팝업, <br/>팝업내 등록버튼 1, 2 상황별 알럿창</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">스포츠클럽 정보</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa08/sa08_14.html" target="_blank" title="새창">../html/basic/sa08/sa08_14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209 수정</td>
+									<td class="more">연락처 선택 항목 option 수정</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">스포츠마일리지 관리</td>
+									<td class="dep3">스포츠활동현황조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa08/sa08_15.html" target="_blank" title="새창">../html/basic/sa08/sa08_15.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more">취소처리 알럿</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_9">09 홈페이지관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- <tr>
+									<td colspan="8">준비 중</td>
+								</tr> -->
+
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">공지사항 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_5.html" target="_blank" title="새창">../html/basic/sa09/sa09_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">공지사항 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_6.html" target="_blank" title="새창">../html/basic/sa09/sa09_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">자주하는 질문 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_7.html" target="_blank" title="새창">../html/basic/sa09/sa09_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">자주하는 질문 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_8.html" target="_blank" title="새창">../html/basic/sa09/sa09_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">운동상담 사례 [목록조회] </td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_9.html" target="_blank" title="새창">../html/basic/sa09/sa09_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">운동상담 사례 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_10.html" target="_blank" title="새창">../html/basic/sa09/sa09_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">체력센터소식 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_11.html" target="_blank" title="새창">../html/basic/sa09/sa09_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">체력센터소식 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_12.html" target="_blank" title="새창">../html/basic/sa09/sa09_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">체력센터 채용공고 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_13.html" target="_blank" title="새창">../html/basic/sa09/sa09_13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">체력센터 채용공고 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_14.html" target="_blank" title="새창">../html/basic/sa09/sa09_14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">운동처방 동영상 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_15.html" target="_blank" title="새창">../html/basic/sa09/sa09_15.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">운동처방 동영상 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_16.html" target="_blank" title="새창">../html/basic/sa09/sa09_16.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230209 수정</td>
+									<td class="more">목록이미지 첨부관련 설명 문구 수정</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">팝업관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_17.html" target="_blank" title="새창">../html/basic/sa09/sa09_17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">팝업관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_18.html" target="_blank" title="새창">../html/basic/sa09/sa09_18.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">메인이미지관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa09/sa09_19.html" target="_blank" title="새창">../html/basic/sa09/sa09_19.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">홈페이지관리</td>
+									<td class="dep3">메인이미지관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa09/sa09_20.html" target="_blank" title="새창">../html/basic/sa09/sa09_20.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 버튼=> 알럿</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_10">10 통계관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">체력측정결과통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_5-6.html" target="_blank" title="새창">../html/basic/sa10/sa10_5-6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">체력측정예약통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_7.html" target="_blank" title="새창">../html/basic/sa10/sa10_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">자가체력측정통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_8-9.html" target="_blank" title="새창">../html/basic/sa10/sa10_8-9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">체력증진교실통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_10-11.html" target="_blank" title="새창">../html/basic/sa10/sa10_10-11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">간소화모델통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_12-13.html" target="_blank" title="새창">../html/basic/sa10/sa10_12-13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">스포츠인센티브통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_14-15.html" target="_blank" title="새창">../html/basic/sa10/sa10_14-15.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">통계관리</td>
+									<td class="dep3">홈페이지 접속통계</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa10/sa10_16.html" target="_blank" title="새창">../html/basic/sa10/sa10_16.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_11">11 시스템관리</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">공단사용자관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_5.html" target="_blank" title="새창">../html/basic/sa11/sa11_5.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">공단사용자관리 [사용자등록]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_6.html" target="_blank" title="새창">../html/basic/sa11/sa11_6.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">공단사용자관리 [상세내역]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_7.html" target="_blank" title="새창">../html/basic/sa11/sa11_7.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">저장 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">공단사용자관리 [접속이력조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_8.html" target="_blank" title="새창">../html/basic/sa11/sa11_8.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">센터담당자관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_9.html" target="_blank" title="새창">../html/basic/sa11/sa11_9.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">센터담당자관리 [상세조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_10.html" target="_blank" title="새창">../html/basic/sa11/sa11_10.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230202 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page" style="background:#ff9a9a">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">일반사용자관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_11.html" target="_blank" title="새창">../html/basic/sa11/sa11_11.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 미사용 처리</td>
+									<td class="more">미사용</td>
+								</tr>
+								<tr class="page" style="background:#ff9a9a">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">일반사용자관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_12.html" target="_blank" title="새창">../html/basic/sa11/sa11_12.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 미사용 처리</td>
+									<td class="more">미사용</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">관리그룹권한설정 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_13.html" target="_blank" title="새창">../html/basic/sa11/sa11_13.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">관리그룹권한설정 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_14.html" target="_blank" title="새창">../html/basic/sa11/sa11_14.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230203 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">체력인증센터 등록현황 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_15.html" target="_blank" title="새창">../html/basic/sa11/sa11_15.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">체력인증센터 등록현황 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_16.html" target="_blank" title="새창">../html/basic/sa11/sa11_16.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">체력인증센터 등록현황 [사업년도 연장처리]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_17.html" target="_blank" title="새창">../html/basic/sa11/sa11_17.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page" style="background:#ff9a9a;">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">센터별 수신데이터 설정 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_18.html" target="_blank" title="새창">../html/basic/sa11/sa11_18.html</a></td>
+									<td class="cmpt"><!--<span class="btn_finish">완</span>--><!--<span class="btn_worked">미</span>--><span class="btn_working">미</span></td>
+									<td class="modify"></td>
+									<td class="more">화면설계서 구성내용 협의 필요로 미완성</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">체력인증기준조회 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_19.html" target="_blank" title="새창">../html/basic/sa11/sa11_19.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"> 영역별 강조 기능 추가</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">기관체력측정관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_20.html" target="_blank" title="새창">../html/basic/sa11/sa11_20.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">기관체력측정관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_21.html" target="_blank" title="새창">../html/basic/sa11/sa11_21.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">주간보호센터관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_22.html" target="_blank" title="새창">../html/basic/sa11/sa11_22.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">주간보호센터관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa11/sa11_23.html" target="_blank" title="새창">../html/basic/sa11/sa11_23.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more">삭제 = 알럿</td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">공통코드관리 [목록조회],<br/>공통코드관리 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_24-25.html" target="_blank" title="새창">../html/basic/sa11/sa11_24-25.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">접속로그관리 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_26.html" target="_blank" title="새창">../html/basic/sa11/sa11_26.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">아카데미교육설정 [목록조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_27.html" target="_blank" title="새창">../html/basic/sa11/sa11_27.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">아카데미교육설정 [등록/조회]</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_28.html" target="_blank" title="새창">../html/basic/sa11/sa11_28.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230125 수정</td>
+									<td class="more"></td>
+								</tr>
+
+								<!--20230220 신규 추가-->
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">간소화측정시설관리(목록조회)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_29.html" target="_blank" title="새창">../html/basic/sa11/sa11_29.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 신규추가</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">시스템관리</td>
+									<td class="dep3">간소화측정시설관리(등록/조회)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa11/sa11_30.html" target="_blank" title="새창">../html/basic/sa11/sa11_30.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify">20230220 신규추가</td>
+									<td class="more"></td>
+								</tr>
+								<!-- // 20230220 신규 추가-->
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name 2024.03.06 바로관리자 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_12">12 바로크레디트 관리자</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">로그인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/login.html" target="_blank" title="새창">../html/basic/sa12/login.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">전자계약관리</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/contract.html" target="_blank" title="새창">../html/basic/sa12/contract.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">약관</td>
+									<td class="dep3">약관 목록 (공통)<br>(등록 및 상세팝업 포함)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/policy01.html" target="_blank" title="새창">../html/basic/sa12/policy01.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!--<span class="btn_working">미</span>-->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">약관</td>
+									<td class="dep3">약관 목록<br>(개인정보처리방침)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/policy02.html" target="_blank" title="새창">../html/basic/sa12/policy02.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!--<span class="btn_working">미</span>-->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify">20240417 버튼 제거 및 추가</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">신용대출</td>
+									<td class="dep3">목록 및 조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/loan01.html" target="_blank" title="새창">../html/basic/sa12/loan01.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!--<span class="btn_working">미</span>-->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify">20240417 버튼 제거 및 추가</td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">신용대출</td>
+									<td class="dep3">수정페이지</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/loan02.html" target="_blank" title="새창">../html/basic/sa12/loan02.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!--<span class="btn_working">미</span>-->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자주하는 질문</td>
+									<td class="dep3">목록/조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/qna01.html" target="_blank" title="새창">../html/basic/sa12/qna01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">자주하는 질문</td>
+									<td class="dep3">등록/수정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/qna02.html" target="_blank" title="새창">../html/basic/sa12/qna02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사랑나눔</td>
+									<td class="dep3">목록/조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/love01.html" target="_blank" title="새창">../html/basic/sa12/love01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사랑나눔</td>
+									<td class="dep3">등록/수정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/love02.html" target="_blank" title="새창">../html/basic/sa12/love02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">공지사항</td>
+									<td class="dep3">목록/조회</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/notice01.html" target="_blank" title="새창">../html/basic/sa12/notice01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">공지사항</td>
+									<td class="dep3">등록/수정</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/notice02.html" target="_blank" title="새창">../html/basic/sa12/notice02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">헤더관리(목록)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett01.html" target="_blank" title="새창">../html/basic/sa12/sett01.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">헤더관리(등록/수정)</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa12/sett02.html" target="_blank" title="새창">../html/basic/sa12/sett02.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">푸터관리(목록)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett03.html" target="_blank" title="새창">../html/basic/sa12/sett03.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">푸터관리(등록/수정)</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa12/sett04.html" target="_blank" title="새창">../html/basic/sa12/sett04.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">메인배너관리(목록)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett05.html" target="_blank" title="새창">../html/basic/sa12/sett05.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">메인배너관리(등록/수정)</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa12/sett06.html" target="_blank" title="새창">../html/basic/sa12/sett06.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">팝업관리(목록)</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett07.html" target="_blank" title="새창">../html/basic/sa12/sett07.html</a></td>
+									<td class="cmpt"><span class="btn_finish">완</span><!--<span class="btn_worked">미</span>--><!--<span class="btn_working">미</span>--></td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">팝업관리(등록/수정)</td>
+									<td class="dep4"></td>
+									<td class="type">Popup</td>
+									<td class="link"><a href="../html/basic/sa12/sett08.html" target="_blank" title="새창">../html/basic/sa12/sett08.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_working">미</span> -->
+										<span class="btn_finish">완</span>
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">공통관리</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett09.html" target="_blank" title="새창">../html/basic/sa12/sett09.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_working">미</span> -->
+										<span class="btn_finish">완</span>
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">사이트관리</td>
+									<td class="dep3">페이지관리</td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic/sa12/sett10.html" target="_blank" title="새창">../html/basic/sa12/sett10.html</a></td>
+									<td class="cmpt">
+										<!-- <span class="btn_working">미</span> -->
+										<span class="btn_finish">완</span>
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 1Depth Name 2024.03.06 바로관리자 -->
+				<div class="g-file">
+					<div class="g-file-title" id="PCSV_13">13 인적성 검사 관리자</div>
+					<div class="g-file-cont">
+						<table class="g-table">
+							<colgroup>
+								<col class="col1">
+								<col class="col2">
+								<col class="col3">
+								<col class="col4">
+								<col class="col5">
+								<col class="col6">
+								<col class="col7">
+								<col class="col8">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>2차 메뉴명</th>
+									<th>3차 메뉴명</th>
+									<th>4차 메뉴명</th>
+									<th>유형/타입</th>
+									<th>파일경로</th>
+									<th>완료</th>
+									<th>수정 날짜</th>
+									<th>하위정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="page">
+									<td class="dep2">로그인</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic_orange/dolbom/login.html" target="_blank" title="새창">../html/basic_orange/dolbom/login.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!-- <span class="btn_worked">미</span> -->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+								
+								<tr class="page">
+									<td class="dep2">인적성 검사 조회</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic_orange/dolbom/result.html" target="_blank" title="새창">../html/basic_orange/dolbom/result.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!-- <span class="btn_worked">미</span> -->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more"></td>
+								</tr>
+
+								<tr class="page">
+									<td class="dep2">인적성 검사 통계</td>
+									<td class="dep3"></td>
+									<td class="dep4"></td>
+									<td class="type"></td>
+									<td class="link"><a href="../html/basic_orange/dolbom/statistics.html" target="_blank" title="새창">../html/basic_orange/dolbom/statistics.html</a></td>
+									<td class="cmpt">
+										<span class="btn_finish">완</span>
+										<!--<span class="btn_worked">미</span>-->
+										<!-- <span class="btn_working">미</span> -->
+									</td>
+									<td class="modify"></td>
+									<td class="more">기획서 공유 대기 중</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$ (document).ready(function(){
+	var menu = $('#nav');
+	var con = $('.scroll');
+	var mlink = $('#nav a');
+	$(document).scroll(function(){
+		if ( $(document).scrollTop() > $('#nav').scrollTop() ){
+			$('.pg-top').css('display','block');
+		}
+		else{
+			$('.pg-top').css('display','none');
+		}
+	});
+	$(".g-chart .total dd").html($(".page").length);
+	$(".g-chart .complete dd").html($(".btn_finish").length);
+	$(".g-chart .uncomplete dd").html($(".btn_working").length + $(".btn_worked").length);
+	$(".g-chart .etc dd").html($(".page").length - $(".btn_finish").length - $(".btn_working").length - $(".btn_worked").length);
+
+	$(".more").on("click",function(){
+		$(this).parent().next().toggleClass("on");
+		$(this).parent().toggleClass("on");
+	});
+
+    $(".open-menu").on("click",function(){
+		$(".g-menu").addClass("on");
+	});
+    $(".close-menu").on("click",function(){
+		$(".g-menu").removeClass("on");
+	});
+});
+function fnMove(seq) {
+	event.preventDefault();
+	var offset = $("#PCSV_" + seq ).offset();
+	$('html, body').animate({scrollTop : (offset.top - 60)}, 400);
+    $(".g-menu").removeClass("on");
+}
+</script>
+</body>
+</html>

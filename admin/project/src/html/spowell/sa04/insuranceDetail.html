@@ -1,0 +1,243 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">보험지원내용</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>사업년도 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" > 년도
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="divGrid">
+        <div class="gLeft">
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">분야별 지원금액</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:80px">
+                        <col style="width:150px">
+                        <col style="width:200px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>지원기관</th>
+                            <th>지원금액</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">3</td>
+                            <td class="center">대한체육회</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">2</td>
+                            <td class="center">장애인체육회</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">1</td>
+                            <td class="center">기타 기관</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="center" colspan="2">합계</td>
+                            <td class="right">
+                                <span>00</span> 원
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="textBox clar">모든 신청내용에 대한 적격어부 검토가 완료된 후 지급계획을 등록하세요.</div>
+        </div>
+        <div class="gRight">
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">제출서류</div>
+                </div>
+                <div class="alignR">
+                    <button type="button" class="soloBtn bLine">추가</button>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:50px;">
+                        <col style="width:300px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제출서류구분</th>
+                            <th>첨부파일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">1</td>
+                            <td class="center">지급신청서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">2</td>
+                            <td class="center">국가대표확인서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">국가대표확인서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">3</td>
+                            <td class="center">통합</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">통합.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">4</td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value="">선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

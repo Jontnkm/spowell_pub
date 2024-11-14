@@ -1,0 +1,316 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">장학생 정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto;">
+                <col style="width:150px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>장학생명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>주민등록번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대폰번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>학년반 정보</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>종목</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">축구</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>선수 시작년도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선수유형</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>주요이력</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">학교 정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto;">
+                <col style="width:150px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>시도명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">서울</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>시군구명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">서울</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>학교구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">초등학교</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>학교명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt frmSm">
+                                <option value="">선택</option>
+                            </select>
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">추가</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>학교연락처</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>학교연락처보조정보</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>학교주소</th>
+                    <td colspan="3">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">보호자 정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto;">
+                <col style="width:150px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>보호자명</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>보호자 주민등록번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>보호자 관계</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>보호자 휴대폰번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>보호자 휴대폰번호 보조정보</th>
+                    <td colspan="3">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">선발 정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto;">
+                <col style="width:150px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>선발번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>지역추천번호</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선수구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">비장애</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>선발구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">계속</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선발결과</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name=""  id="" class="iptSlt">
+                                <option value="">선발</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>증빙서류</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선발 변경사유</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>보완요구사항</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- //그리드 -->
+</div>
+<!-- //컨텐츠 내용 -->
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,441 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>게시판관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">운영관리</li>
+                                    <li class="item">게시판관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">게시판명</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">게시판유형</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">일반형</label></div>
+                                                <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">리스트형</label></div>
+                                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">갤러리형</label></div>
+                                                <div class="frmChoBox"><input id="rdo005" type="radio" class="iptRdo" name="rdo001"><label for="rdo005" class="iptLbl">Q&A</label></div>
+                                                <div class="frmChoBox"><input id="rdo006" type="radio" class="iptRdo" name="rdo001"><label for="rdo006" class="iptLbl">FAQ</label></div>
+                                                <div class="frmChoBox"><input id="rdo007" type="radio" class="iptRdo" name="rdo001"><label for="rdo007" class="iptLbl">댓글형</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">사용여부</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">페이지당 목록 수</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmSm">
+                                                    <option value="">10개씩 보기</option>
+                                                    <option value="">20개씩 보기</option>
+                                                    <option value="">30개씩 보기</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상단고정(공지글)</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo201" type="radio" class="iptRdo" name="rdo201"><label for="rdo201" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo202" type="radio" class="iptRdo" name="rdo201"><label for="rdo202" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">비밀글</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo301" type="radio" class="iptRdo" name="rdo301"><label for="rdo301" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo302" type="radio" class="iptRdo" name="rdo301"><label for="rdo302" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" rowspan="2">댓글</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo401" type="radio" class="iptRdo" name="rdo401"><label for="rdo401" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo402" type="radio" class="iptRdo" name="rdo401"><label for="rdo402" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left bdl">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">실명</label></div>
+                                                <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">비공개</label></div>
+                                                <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">익명</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">카테고리(분류)</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="grpInBox">
+                                                <!-- <div class="frmGroup">
+                                                    <div class="textBox">카테고리 개수 : </div>
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">1개</option>
+                                                        <option value="">2개</option>
+                                                        <option value="">3개</option>
+                                                        <option value="">4개</option>
+                                                        <option value="">5개</option>
+                                                    </select>
+                                                </div> -->
+
+                                                <div class="inTable">
+                                                    <table class="tbView">
+                                                        <colgroup>
+                                                            <col style="width:100%;">
+                                                        </colgroup>
+                                                        <caption></caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="카테고리 명">
+                                                                        <button type="button" class="gridBtn purple">행추가</button>
+                                                                        <button type="button" class="gridBtn red">삭제</button>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="이름">
+                                                                        <input type="text" class="iptText" placeholder="코드">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="이름">
+                                                                        <input type="text" class="iptText" placeholder="코드">
+                                                                        <button type="button" class="gridBtn red">행삭제</button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="inTable">
+                                                    <table class="tbView">
+                                                        <colgroup>
+                                                            <col style="width:100%;">
+                                                        </colgroup>
+                                                        <caption></caption>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="카테고리 명">
+                                                                        <button type="button" class="gridBtn purple">행추가</button>
+                                                                        <button type="button" class="gridBtn red">삭제</button>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="이름">
+                                                                        <input type="text" class="iptText" placeholder="코드">
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="이름">
+                                                                        <input type="text" class="iptText" placeholder="코드">
+                                                                        <button type="button" class="gridBtn red">행삭제</button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="frmGroup">
+                                                                        <input type="text" class="iptText" placeholder="이름">
+                                                                        <input type="text" class="iptText" placeholder="코드">
+                                                                        <button type="button" class="gridBtn red">행삭제</button>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <div class="cptGroupBtm alignR" style="margin-bottom:10px;">
+                                                    <div class="comSideOpt">
+                                                        <button class="srhBtn purple">카테고리 추가</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" rowspan="3">첨부파일</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo501" type="radio" class="iptRdo" name="rdo501"><label for="rdo501" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo502" type="radio" class="iptRdo" name="rdo501"><label for="rdo502" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <div class="textBox">개수제한 : </div>
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">없음</option>
+                                                        <option value="">1개</option>
+                                                        <option value="">2개</option>
+                                                        <option value="">3개</option>
+                                                        <option value="">4개</option>
+                                                        <option value="">5개</option>
+                                                    </select>
+                                                </div>
+                                                <div class="frmChoBox">
+                                                    <div class="textBox">용량제한 : </div>
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">1MB</option>
+                                                        <option value="">2MB</option>
+                                                        <option value="">3MB</option>
+                                                        <option value="">5MB</option>
+                                                        <option value="">10MB</option>
+                                                        <option value="">50MB</option>
+                                                        <option value="">100MB</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="center bdl">허용 확장자 선택</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="left bdl">
+                                            <div class="frmGroup">
+                                                <ul class="frmChoList w100">
+                                                    <li class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">JPG</label></li>
+                                                    <li class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">GIF</label></li>
+                                                    <li class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">JPEG</label></li>
+                                                    <li class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">JPEG</label></li>
+                                                    <li class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk"><label for="chk105" class="iptLbl">DOC</label></li>
+                                                    <li class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk"><label for="chk106" class="iptLbl">DOCX</label></li>
+                                                    <li class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk"><label for="chk107" class="iptLbl">PDF</label></li>
+                                                    <li class="frmChoBox"><input id="chk108" type="checkbox" class="iptChk"><label for="chk108" class="iptLbl">HWP</label></li>
+                                                    <li class="frmChoBox"><input id="chk109" type="checkbox" class="iptChk"><label for="chk109" class="iptLbl">XLST</label></li>
+                                                    <li class="frmChoBox"><input id="chk110" type="checkbox" class="iptChk"><label for="chk110" class="iptLbl">TXT</label></li>
+                                                    <li class="frmChoBox"><input id="chk111" type="checkbox" class="iptChk"><label for="chk111" class="iptLbl">ZIP</label></li>
+                                                    <li class="frmChoBox"><input id="chk112" type="checkbox" class="iptChk"><label for="chk112" class="iptLbl">ALZ</label></li>
+                                                    <li class="frmChoBox"><input id="chk113" type="checkbox" class="iptChk"><label for="chk113" class="iptLbl">TAR</label></li>
+                                                    <li class="frmChoBox"><input id="chk114" type="checkbox" class="iptChk"><label for="chk114" class="iptLbl">XLSX</label></li>
+                                                    <li class="frmChoBox"><input id="chk115" type="checkbox" class="iptChk"><label for="chk115" class="iptLbl">PPTX</label></li>
+                                                    <li class="frmChoBox"><input id="chk116" type="checkbox" class="iptChk"><label for="chk116" class="iptLbl">MP4</label></li>
+                                                    <li class="frmChoBox"><input id="chk117" type="checkbox" class="iptChk"><label for="chk117" class="iptLbl">AVI</label></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th class="left">조회수</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo601" type="radio" class="iptRdo" name="rdo601"><label for="rdo601" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo602" type="radio" class="iptRdo" name="rdo601"><label for="rdo602" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록일</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo701" type="radio" class="iptRdo" name="rdo701"><label for="rdo701" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo702" type="radio" class="iptRdo" name="rdo701"><label for="rdo702" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">기간</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo801" type="radio" class="iptRdo" name="rdo801"><label for="rdo801" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo802" type="radio" class="iptRdo" name="rdo801"><label for="rdo802" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">이전글/다음글</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo901" type="radio" class="iptRdo" name="rdo901"><label for="rdo901" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo902" type="radio" class="iptRdo" name="rdo901"><label for="rdo902" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">신규 게시물 표시</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo111" type="radio" class="iptRdo" name="rdo111"><label for="rdo111" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo112" type="radio" class="iptRdo" name="rdo111"><label for="rdo112" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">인기 게시물 표시</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo121" type="radio" class="iptRdo" name="rdo121"><label for="rdo121" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo122" type="radio" class="iptRdo" name="rdo121"><label for="rdo122" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">CCL</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo151" type="radio" class="iptRdo" name="rdo151"><label for="rdo151" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo152" type="radio" class="iptRdo" name="rdo151"><label for="rdo152" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <div class="frmChoList col2">
+                                                    <div class="frmChoBox"><input id="rdo161" type="radio" class="iptRdo" name="rdo161"><label for="rdo161" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by.png" alt="저작자 표시 (CC BY)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo162" type="radio" class="iptRdo" name="rdo161"><label for="rdo162" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc.png" alt="저작자표시-비영리(CC BY-NC)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo163" type="radio" class="iptRdo" name="rdo161"><label for="rdo163" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nd.png" alt="저작자표시-변경금지 (CC BY-ND)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo164" type="radio" class="iptRdo" name="rdo161"><label for="rdo164" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-sa.png" alt="저작자표시-동일조건변경허락 (CC BY-SA)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo165" type="radio" class="iptRdo" name="rdo161"><label for="rdo165" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc-sa.png" alt="저작자표시-비영리-동일조건 변경 허락 (BY-NC-SA)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo166" type="radio" class="iptRdo" name="rdo161"><label for="rdo166" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc-nd.png" alt="저작자표시-비영리-변경금지 (BY-NC-ND)" style="width:140px;" />
+                                                    </label></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">공공누리</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo131" type="radio" class="iptRdo" name="rdo131"><label for="rdo131" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo132" type="radio" class="iptRdo" name="rdo131"><label for="rdo132" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <div class="frmChoList col2">
+                                                    <div class="frmChoBox"><input id="rdo171" type="radio" class="iptRdo" name="rdo171"><label for="rdo171" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open1.jpg" alt="출처표시" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo172" type="radio" class="iptRdo" name="rdo171"><label for="rdo172" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open2.jpg" alt="출처표시 + 상업적 이용금지" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo173" type="radio" class="iptRdo" name="rdo171"><label for="rdo173" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open3.jpg" alt="출처표시 + 변경금지" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo174" type="radio" class="iptRdo" name="rdo171"><label for="rdo174" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open4.jpg" alt="출처표시 + 상업적 이용금지 + 변경금지" style="height:40px;" />
+                                                    </label></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">검색수집허용</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo141" type="radio" class="iptRdo" name="rdo141"><label for="rdo141" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo142" type="radio" class="iptRdo" name="rdo141"><label for="rdo142" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">생성일시</th>
+                                        <td class="left">관리자 2024-05-05 10:24:15</td>
+                                        <th class="left">수정일시</th>
+                                        <td class="left">관리자 2024-05-06 10:24:15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn red">취소</button>
+                                <button type="button" class="crudBtn purple">저장</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,160 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>팝업관리_이미지 case</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">홈페이지관리</li>
+                                    <li class="item">팝업관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목</th>
+                                        <td class="left">
+                                            글 등록 시 작성한 제목 노출
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">팝업유형</th>
+                                        <td class="left">
+                                            이미지
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">팝업종류</th>
+                                        <td class="left">
+                                            레이어팝업
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상태구분</th>
+                                        <td class="left">
+                                            게시
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">게시시간</th>
+                                        <td class="left">
+                                            2024-05-24 00:00 ~ 2024-05-31 23:59
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">팝업크기</th>
+                                        <td class="left">
+                                            가로 : 500px, 세로 : 500px
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">팝업위치</th>
+                                        <td class="left">
+                                            중앙
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="left">PC 이미지<br/>(#### X ####)</th>
+                                        <td class="left">
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/width.jpg" alt=""><!--이미지 경로 기입하여 노출-->
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">MO 이미지<br/>(### X ###)</th>
+                                        <td class="left">
+                                            <div class="imageTray ratio">
+                                                <ul>
+                                                    <li>
+                                                        <div class="frame">
+                                                            <img src="../../../common/images/mng/height.jpg" alt="">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th class="left">링크</th>
+                                        <td class="left">
+                                            링크적용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">링크URL</th>
+                                        <td class="left">
+                                            www.naver.com
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">대체 텍스트</th>
+                                        <td class="left">
+                                            당첨자 발표 공지 안내 : 이벤트 당첨자 발표는 2024년 5월 31일 홈페이지에서 확인 가능합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">그만보기 사용</th>
+                                        <td class="left">
+                                            사용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            홍길동 2024-05-05
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">삭제</button>
+                                    <button type="button" class="crudBtn dkBlue">수정</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -1,0 +1,377 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+<style>
+    /*대시보드 화면에서는 좌측 메뉴 영역이 없어져야함 */
+    /*꼭 html 페이지에 추가시켜줄것*/
+    .lytLayout .layoutContainer .layoutNav {display:none;}
+</style>
+
+<div class="lytDashBoard">
+    <div class="infoStaticCov">
+        <div class="infoArea">
+            <div class="pInfo">
+                <p>안녕하세요, <span><b>홍길동</b>님!</span></p>
+                <p>부서 : <span>서울시 송파체력센터</span></p>
+                <p>최종 로그인 날짜 : <span>2022-12-30 AM 09:30:32</span></p>
+            </div>
+            <div class="taskCov">
+                <p class="staticTit">처리할 업무현황</p>
+                <div>
+                    <!--공단사용자 전용 (시스템관리자, 홈페이지 관리자)-->
+                    <div class="staticArea cntUserCov">
+                        <div class="grp01">
+                            <ul>
+                                <li>
+                                    <p class="minTit">측정예약</p>
+                                    <p class="bigTit">회원가입 확인</p>
+                                    <a href="#none" class="grp01Cnt">689</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">측정예약</p>
+                                    <p class="bigTit">신청서 미작성</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grp02">
+                            <ul>
+                                <li>
+                                    <p class="minTit">체력측정</p>
+                                    <p class="bigTit">측정결과 확정</p>
+                                    <a href="#none" class="grp02Cnt">46</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">체력측정</p>
+                                    <p class="bigTit">운동처방 등록</p>
+                                    <a href="#none" class="grp02Cnt">9999</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grp03">
+                            <ul>
+                                <li>
+                                    <p class="minTit">운동상담</p>
+                                    <p class="bigTit">온라인상담</p>
+                                    <a href="#none" class="grp03Cnt">364</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">운동상담</p>
+                                    <p class="bigTit">정부24상담</p>
+                                    <a href="#none" class="grp03Cnt">1</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">운동상담</p>
+                                    <p class="bigTit">자가체력측정</p>
+                                    <a href="#none" class="grp03Cnt">3</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grp04">
+                            <ul>
+                                <li>
+                                    <p class="minTit">체력증진교실</p>
+                                    <p class="bigTit">참여자승인</p>
+                                    <a href="#none" class="grp04Cnt">20</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">체력증진교실</p>
+                                    <p class="bigTit">출석등록</p>
+                                    <a href="#none" class="grp04Cnt">75</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contArea">
+        <div class="contCov kspoUserContArea">
+            <div class="leftCont">
+                <div class="boardBox">
+                    <div class="bType01Area">
+                        <div class="bTit">
+                            <p>국민체력100 사업공지</p>
+                            <a href="bMore">더보기</a>
+                        </div>
+                        <div class="bList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 사업공지입니다.국민체력100 사업공지입니다.국민체력100 사업공지입니다.국민체력100 사업공지입니다.국민체력100 사업공지입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 사업공지입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 사업공지입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 사업공지입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 사업공지입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bType02Area">
+                        <div class="bTit">
+                            <p>국민체력100 현장의소리</p>
+                            <a href="bMore">더보기</a>
+                        </div>
+                        <div class="bList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 현장의소리입니다.국민체력100 현장의소리입니다.국민체력100 현장의소리입니다.국민체력100 현장의소리입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 현장의소리입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 현장의소리입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 현장의소리입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#none" class="bListTit">국민체력100 현장의소리입니다.</a>
+                                        <span><img src="/common/images/common/icon_new.png" /></span>
+                                    </div>
+                                    <p class="bListDt">2023-12-31</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--20230228 센터담당자 - 업무담당자,측정사,처방사 주간일정표-->
+                <div class="weeklyCal">
+                    <div class="calTit">
+                        <div class="lftCov">
+                            <p>주간일정표</p>
+                            <span>2023년 03월 05일 ~ 03월 11일</span>
+                        </div>
+                        <div class="rytCov">
+                            <a href="bMore">더보기</a>
+                        </div>
+                    </div>
+                    <div class="wkCalList">
+                        <ul>
+                            <li>
+                                <p class="wkDt">일요일</p>
+                                <p class="wkNdt">5</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place dOff">휴일<span class="placeDot"></span></p><!--클래스 : dOff - 휴일-->
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="today"><!--클래스 : today - sysdate 기준 오늘-->
+                                <p class="wkDt">월요일</p>
+                                <p class="wkNdt">6</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place toolOn">단체<span class="placeDot"></span></p> <!-- 클래스 : toolOn - 보여줄 말풍선 박스가 있을 경우에 추가 -->
+                                        <span class="tooltipCont">
+                                            <span>한국대학교</span>
+                                            <button class="close">닫기</button>
+                                        </span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="wkDt">화요일</p>
+                                <p class="wkNdt">7</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place">센터</p>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="wkDt">수요일</p>
+                                <p class="wkNdt">8</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place toolOn">출장<span class="placeDot"></span></p>
+                                        <span class="tooltipCont">
+                                            <span>한국대학교</span>
+                                            <button class="close">닫기</button>
+                                        </span>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="wkDt">목요일</p>
+                                <p class="wkNdt">9</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place">센터</p>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="wkDt">금요일</p>
+                                <p class="wkNdt">10</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place">센터</p>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="wkDt">토요일</p>
+                                <p class="wkNdt">11</p>
+                                <div class="wkPlc">
+                                    <span class="glbTooltip scaleMini"> 
+                                        <p class="place dOff">휴일</p>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--20230228 센터담당자 - 업무담당자,측정사,처방사 주간일정표-->
+            </div>
+            
+            <div class="rightCont">
+                <div class="resvStat">
+                    <div class="resvTitCov">
+                        <div class="lftCov">
+                            <p>체력측정 예약현황</p>
+                            <span>2023년 03월 05일(월)</span>
+                        </div>
+                        <div class="rytCov">
+                            <a href="bMore">더보기</a>
+                        </div>
+                    </div>
+                    <div class="statCov">
+                        <ul>
+                            <li>
+                                <span>유아</span>
+                                <p>2</p>
+                            </li>
+                            <li>
+                                <span>유소년</span>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <span>청소년</span>
+                                <p>-</p>
+                            </li>
+                            <li>
+                                <span>성인</span>
+                                <p>39</p>
+                            </li>
+                            <li>
+                                <span>어르신</span>
+                                <p>10</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tdayWork">
+                        <p>출장 : <span>출장지명 1</span><span>, 출장지명 2</span><span>, 출장지명 3</span></p>
+                        <p>단체 : <span>단체 1</span><span>, 단체 2</span><span>, 단체 3</span></p>
+                    </div>
+                </div>
+
+                <div class="rytQk">
+                    <ul>
+                        <li>
+                            <a href="#none" class="ryQk01">
+                                <span class="iconBx"></span>
+                                <p>체력측정<br/>예약현황</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="ryQk02">
+                                <span class="iconBx"></span>
+                                <p>체력측정<br/>결과등록</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="ryQk03">
+                                <span class="iconBx"></span>
+                                <p>체력측정<br/>운동처방</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="ryQk04">
+                                <span class="iconBx"></span>
+                                <p>온라인<br/>운동상담</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="ryQk05">
+                                <span class="iconBx"></span>
+                                <p>증진교실<br/>승인관리</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class="ryQk06">
+                                <span class="iconBx"></span>
+                                <p>증진교실<br/>출석관리</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $(".glbTooltip .place").on("mouseenter",function(e){
+            e.preventDefault();
+            $(this).next().toggleClass("on");
+        })
+        $(".glbTooltip .place").on("mouseleave",function(e){
+            e.preventDefault();
+            $(this).next().toggleClass("on");
+        })
+        $(".glbTooltip .close").on("click",function(e){
+            e.preventDefault();
+            $(this).parent().toggleClass("on");
+        })
+    });
+</script>

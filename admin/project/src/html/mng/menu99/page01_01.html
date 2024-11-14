@@ -1,0 +1,182 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>공통코드 관리 (Tree는 샘플입니다)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">사이트관리</li>
+                                    <li class="item">공통코드 관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 트리 상단 -->
+
+                        <!-- 트리영역 -->
+                        <div class="modDivision free">
+                            <div class="dvsItem">
+                                <div class="cptTree">
+                                    <div class="treeArea">
+                                        <div class="items">
+                                            <p class="treeTit">Tree Name</p>
+                                            <div class="treeBtn">
+                                                <div class="cptGroupBtm alignL">
+                                                    <div class="comSideOpt">
+                                                        <button type="button" class="srhBtn purple">코드추가</button>
+                                                        <button type="button" class="srhBtn red">삭제</button>
+                                                        <button type="button" class="srhBtn gLine">열기/숨기기</button>
+                                                        <button type="button" class="srhBtn gLine">새로고침</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="treeBox">
+                                                
+                                                <div class="comTreeArea">
+                                                    <div id="tree" class="tui-tree-wrap"></div>
+                                                    <link rel="stylesheet" href="/common/css/tui-tree.css">
+                                                    <script src="/common/js/tui-tree.js"></script>
+                                                    <script class="code-js">
+
+                                                        var util = {
+                                                            addEventListener: function(element, eventName, handler) {
+                                                                if (element.addEventListener) {
+                                                                    element.addEventListener(eventName, handler, false);
+                                                                } else {
+                                                                    element.attachEvent('on' + eventName, handler);
+                                                                }
+                                                            }
+                                                        };
+
+                                                        var data = [
+                                                            {text: 'rootA', children: [
+                                                                {text: 'sub-A1'},
+                                                                {text: 'sub-A2'},
+                                                                {text: 'sub-A3'},
+                                                                {text: 'sub-A4'},
+                                                                {text: 'sub-A5', state: 'closed', children: [
+                                                                    {text:'sub-A5A', children:[
+                                                                        {text:'sub-A5A1'}
+                                                                    ]},
+                                                                    {text:'sub_A5B'}
+                                                                ]},
+                                                                {text: 'sub-A6'},
+                                                                {text: 'sub-A7'},
+                                                                {text: 'sub-A8'},
+                                                                {text: 'sub-A9', state: 'closed', children: [
+                                                                    {text:'sub-A9A'},
+                                                                    {text:'sub-A9B'}
+                                                                ]},
+                                                                {text: 'sub-A10'},
+                                                                {text: 'sub-A11'},
+                                                                {text: 'sub-A12'}
+                                                            ]},
+                                                            {text: 'rootB', state:'closed', children: [
+                                                                {text:'sub-B1'},
+                                                                {text:'sub-B2'},
+                                                                {text:'sub-B3'}
+                                                            ]}
+                                                        ];
+
+                                                        var tree = new tui.Tree('#tree', {
+                                                            data: data,
+                                                            nodeDefaultState: 'opened'
+                                                        }).enableFeature('Selectable', {
+                                                            selectedClassName: 'tui-tree-selected',
+                                                        });
+
+                                                        var selectedBtn = document.getElementById('selectedBtn');
+                                                        var deselectedBtn = document.getElementById('deselectedBtn');
+                                                        var rootNodeId = tree.getRootNodeId();
+                                                        var firstChildId = tree.getChildIds(rootNodeId)[0];
+                                                        var selectedValue = document.getElementById('selectedValue');
+
+                                                        tree.on('select', function(eventData) {
+                                                            var nodeData = tree.getNodeData(eventData.nodeId);
+                                                            selectedValue.value = 'selected : ' + nodeData.text;
+                                                        });
+
+                                                        tree.on('deselect', function(eventData) {
+                                                            var nodeData = tree.getNodeData(eventData.nodeId);
+                                                            selectedValue.value = 'deselected : ' + nodeData.text;
+                                                        });
+
+                                                        util.addEventListener(selectedBtn, 'click', function() {
+                                                            tree.select(firstChildId);
+                                                        });
+
+                                                        util.addEventListener(deselectedBtn, 'click', function() {
+                                                            tree.deselect();
+                                                        });
+
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dvsItem">
+                                
+                                <!-- 공통코드설정 -->
+                                <div class="comSmTit">
+                                    <div class="alignL">
+                                        <div class="title">공통코드설정</div>
+                                    </div>
+                                </div>
+                                <div class="cptTable">
+                                    <table class="tbView">
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <caption></caption>
+                                        <tbody>
+                                            <tr>
+                                                <th class="left">코드</th>
+                                                <td class="left"><input type="text" class="iptText" value="SD_SUB"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">코드명</th>
+                                                <td class="left"><input type="text" class="iptText" value="척수장애 세부코드"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">상위코드명</th>
+                                                <td class="left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="left">사용유무</th>
+                                                <td class="left">
+                                                    <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">사용</label></div>
+                                                    <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">사용안함</label></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //공통코드설정 -->
+                            </div>
+                        </div>
+                        <!-- //트리영역 -->
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn dkBlue">등록</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

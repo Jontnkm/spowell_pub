@@ -1,0 +1,133 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>관리자설정</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">관리자관리</li>
+                                    <li class="item">관리자설정</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">아이디</th>
+                                        <td class="left" colspan="3">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmLg">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">관리자구분</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">센터관리자</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th class="left">선터구분<br/></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">경기</option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">경기(광주)</option>
+                                                </select>
+                                            </div>
+                                            <div class="comTextGroup">
+                                                <p class="tRed">센터관리자, 민간센터관리자만 선택</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">비밀번호</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="password" class="iptText frmLg">
+                                            </div>
+                                        </td>
+                                        <th class="left">비밀번호 확인</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="password" class="iptText frmLg">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmLg">
+                                            </div>
+                                        </td>
+                                        <th class="left">사무실전화</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmXs">
+                                                    <option value="02" selected="">02</option>
+                                                    <option value="051">051</option>
+                                                    <option value="053">053</option>
+                                                    <option value="032">032</option>
+                                                    <option value="062">062</option>
+                                                    <option value="042">042</option>
+                                                    <option value="052">052</option>
+                                                    <option value="044">044</option>
+                                                    <option value="031">031</option>
+                                                    <option value="032">032</option>
+                                                    <option value="033">033</option>
+                                                    <option value="043">043</option>
+                                                    <option value="041">041</option>
+                                                    <option value="063">063</option>
+                                                    <option value="061">061</option>
+                                                    <option value="054">054</option>
+                                                    <option value="055">055</option>
+                                                    <option value="064">064</option>
+                                                    <option value="070">070</option>
+                                            </select>
+                                            <div class="textBox deco">-</div>
+                                            <input type="text" class="iptText frmXs">
+                                            <div class="textBox deco">-</div>
+                                            <input type="text" class="iptText frmXs">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn red">취소</button>
+                                <button type="button" class="crudBtn purple">저장</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

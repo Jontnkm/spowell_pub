@@ -1,0 +1,121 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">체력인증센터 연장처리</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">체력인증센터 정보</div>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <colgroup>
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">시도</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th class="left">시군구</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상태구분</th>
+                                        <td class="left">정상</td>
+                                        <th class="left">지정기간<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker1"></div>
+                                                <div class="textBox">일 이전 종료</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cptDelayBox">
+                            <p>체력인증센터 <span class="cdbCnt">총 55건</span>이 조회되었으며</p>
+                            <div>
+                                <span>지정기간 및 데이터 입력기간을</span>
+                                <div>
+                                    <div class="iptDate frmSm"><input type="text" class="iptText" id="datepicker2"></div>
+                                </div>
+                                <span>까지 연장처리 합니다.</span><!--20230125 텍스트 수정-->
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">닫기</button>
+                            <button type="button" class="btn purple" onclick="openAlert('splAlt01');">연장확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">체력인증센터의 지정기간을 연장처리 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

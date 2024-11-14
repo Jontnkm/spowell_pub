@@ -1,0 +1,187 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>접수일시</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월단위</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">기간단위</label></div>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>승인일시</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월단위</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">기간단위</label></div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>부적정 사용</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">정상</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">부정사용의심</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">부정사용확정</label></div>
+                        </div>
+                    </td>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">전체</option>
+                                <option value=""></option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button class="btnReset">초기화</button>
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li>
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <p class="totalAmount">
+        지원금액 총 합계 : 2,405,831,104
+    </p>
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:120px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:80px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>카드소유자번호</th>
+                    <th>카드소유자명</th>
+                    <th>하나카드고객번호</th>
+                    <th>승인일자</th>
+                    <th>승인금액</th>
+                    <th>승인번호</th>
+                    <th>접수일자</th>
+                    <th>지원금액</th>
+                    <th>매입금액</th>
+                    <th>가맹점번호</th>
+                    <th>가맹점명</th>
+                    <th>가맹업종명</th>
+                    <th>부적정<br>사용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>202204270015716</td>
+                    <td>홍길동</td>
+                    <td>10066127807</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>400,000</td>
+                    <td>30658007</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>400,000</td>
+                    <td>400,000</td>
+                    <td>00970279519</td>
+                    <td>(주)에이비씨마트코리아</td>
+                    <td>기타레저, 스포츠용품</td>
+                    <td>정상</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+ 
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

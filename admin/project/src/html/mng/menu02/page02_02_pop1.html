@@ -1,0 +1,340 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>페이지관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">운영관리</li>
+                                    <li class="item">페이지관리</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">페이지명</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">메뉴명</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmXl">
+                                                    <option value="">1Depth 명</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt frmXl">
+                                                    <option value="">2Depth 명</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">메뉴경로</th>
+                                        <td class="left">
+                                            홈 > 회사소개 > 회사개요
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상태</th>
+                                        <td class="left">
+                                            저장
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">컨텐츠 제목</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left" rowspan="2">컨텐츠 내용</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <button type="button" class="gridBtn gLine" onclick="openPopup('sample01');">변경이력</button>
+                                                <button type="button" class="gridBtn gLine" onclick="openPopup('sample02');">미리보기</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left" style="height:300px;">
+                                            에디터 적용
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">CCL</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo151" type="radio" class="iptRdo" name="rdo151"><label for="rdo151" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo152" type="radio" class="iptRdo" name="rdo151"><label for="rdo152" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <div class="frmChoList col2">
+                                                    <div class="frmChoBox"><input id="rdo161" type="radio" class="iptRdo" name="rdo161"><label for="rdo161" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by.png" alt="저작자 표시 (CC BY)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo162" type="radio" class="iptRdo" name="rdo161"><label for="rdo162" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc.png" alt="저작자표시-비영리(CC BY-NC)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo163" type="radio" class="iptRdo" name="rdo161"><label for="rdo163" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nd.png" alt="저작자표시-변경금지 (CC BY-ND)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo164" type="radio" class="iptRdo" name="rdo161"><label for="rdo164" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-sa.png" alt="저작자표시-동일조건변경허락 (CC BY-SA)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo165" type="radio" class="iptRdo" name="rdo161"><label for="rdo165" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc-sa.png" alt="저작자표시-비영리-동일조건 변경 허락 (BY-NC-SA)" style="width:140px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo166" type="radio" class="iptRdo" name="rdo161"><label for="rdo166" class="iptLbl">
+                                                        <img src="../../../common/images/mng/200_by-nc-nd.png" alt="저작자표시-비영리-변경금지 (BY-NC-ND)" style="width:140px;" />
+                                                    </label></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">공공누리</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo131" type="radio" class="iptRdo" name="rdo131"><label for="rdo131" class="iptLbl">사용</label></div>
+                                                <div class="frmChoBox"><input id="rdo132" type="radio" class="iptRdo" name="rdo131"><label for="rdo132" class="iptLbl">사용안함</label></div>
+                                            </div>
+                                            <div class="frmGroup">
+                                                <div class="frmChoList col2">
+                                                    <div class="frmChoBox"><input id="rdo171" type="radio" class="iptRdo" name="rdo171"><label for="rdo171" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open1.jpg" alt="출처표시" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo172" type="radio" class="iptRdo" name="rdo171"><label for="rdo172" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open2.jpg" alt="출처표시 + 상업적 이용금지" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo173" type="radio" class="iptRdo" name="rdo171"><label for="rdo173" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open3.jpg" alt="출처표시 + 변경금지" style="height:40px;" />
+                                                    </label></div>
+                                                    <div class="frmChoBox"><input id="rdo174" type="radio" class="iptRdo" name="rdo171"><label for="rdo174" class="iptLbl">
+                                                        <img src="../../../common/images/mng/open4.jpg" alt="출처표시 + 상업적 이용금지 + 변경금지" style="height:40px;" />
+                                                    </label></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">태그</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn red">취소</button>
+                                <button type="button" class="crudBtn purple">저장</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+                    <!-- 팝업 영역 -->
+                    <!-- 변경이력 -->
+                    <div id="sample01" class="modPopup md on"> <!-- class - on : 팝업오픈 -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                                        <div class="popTitle">변경이력</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+                                            <div class="cptTable">
+                                                <table class="tbView">
+                                                    <colgroup>
+                                                        <col style="width:120px;" />
+                                                        <col style="width:auto;" />
+                                                        <col style="width:120px;" />
+                                                        <col style="width:auto;" />
+                                                    </colgroup>
+                                                    <caption></caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="left">페이지명</th>
+                                                            <td class="left">회사소개</td>
+                                                            <th class="left">메뉴명</th>
+                                                            <td class="left">회사소개 > 회사소개</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            
+                                            <div class="cptGrid">
+                                                <table class="gridTb">
+                                                    <colgroup>
+                                                        <col style="width:70px;">
+                                                        <col style="width:200px;">
+                                                        <col style="width:100px;">
+                                                        <col style="width:100px;">
+                                                        <col style="width:200px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>번호</th>
+                                                            <th>변경일시</th>
+                                                            <th>수정자</th>
+                                                            <th>상태</th>
+                                                            <th>기능</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>2024-05-05 14:25:14</td>
+                                                            <td>홍길동</td>
+                                                            <td>발행</td>
+                                                            <td>
+                                                                <button class="gridBtn gLine">미리보기</button>
+                                                                <button class="gridBtn purple">적용</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>2024-05-05 14:25:14</td>
+                                                            <td>홍길동</td>
+                                                            <td>발행</td>
+                                                            <td>
+                                                                <button class="gridBtn gLine">미리보기</button>
+                                                                <button class="gridBtn purple">적용</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>2024-05-05 14:25:14</td>
+                                                            <td>홍길동</td>
+                                                            <td>발행</td>
+                                                            <td>
+                                                                <button class="gridBtn gLine">미리보기</button>
+                                                                <button class="gridBtn purple">적용</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>2024-05-05 14:25:14</td>
+                                                            <td>홍길동</td>
+                                                            <td>발행</td>
+                                                            <td>
+                                                                <button class="gridBtn gLine">미리보기</button>
+                                                                <button class="gridBtn purple">적용</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>2024-05-05 14:25:14</td>
+                                                            <td>홍길동</td>
+                                                            <td>발행</td>
+                                                            <td>
+                                                                <button class="gridBtn gLine">미리보기</button>
+                                                                <button class="gridBtn purple">적용</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="5">
+                                                                리스트가 없습니다.
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!-- 페이징 -->
+                                            <div class="comPaging">
+                                                <a class="start" href="#"></a>
+                                                <a class="prev" href="#"></a>
+                                                <ul class="numList">
+                                                    <li><a href="#">1</a></li>
+                                                    <li class="on"><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                </ul>
+                                                <a class="next" href="#"></a>
+                                                <a class="end" href="#"></a>
+                                            </div>
+
+                                            <div class="comPreview">
+                                                <!-- 아래는 샘플영역 입니다 -->
+                                                <span style="width:100%; height:600px; text-align:center; background:rgba(0,0,0,0.1); display:block;">선택한 내용 미리보기 영역</span>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                        <!-- <div class="popBtm">
+                                            <button class="btn gLine"  onclick="openPopup('sample06');">취소</button>
+                                            <button class="btn dkBlue"  onclick="openPopup('sample06');">계정신청</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //변경이력 -->
+                    
+                    <!-- 변경이력 -->
+                    <div id="sample02" class="modPopup md"> <!-- class - on : 팝업오픈 -->
+                        <div class="popupDim">딤영역</div>
+                        <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+                            <div class="popupInMotion">
+                                <div class="popupContainer">
+                                    <div class="popupContArea">
+                                        <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                                        <div class="popTitle">미리보기</div>
+                                        <div class="popCont">
+                                            <!-- 팝업 컨텐츠 영역 -->
+                                            <div class="comPreview">
+                                                <!-- 아래는 샘플영역 입니다 -->
+                                                <span style="width:100%; height:800px; text-align:center; background:rgba(0,0,0,0.1); display:block;">선택한 내용 미리보기 영역</span>
+                                            </div>
+                                            <!-- //팝업 컨텐츠 영역 -->
+                                        </div>
+                                        <!-- <div class="popBtm">
+                                            <button class="btn gLine"  onclick="openPopup('sample06');">취소</button>
+                                            <button class="btn dkBlue"  onclick="openPopup('sample06');">계정신청</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //미리보기 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

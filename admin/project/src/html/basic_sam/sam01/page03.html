@@ -1,0 +1,573 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>페이지 타이틀 영역</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">Depth2</li>
+                <li class="item">Depth3</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+     <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>ipt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>slt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">제목</option>
+                                <option value=""></option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>slt130 + @</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">센터 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>phone</th>
+                    <td>
+                        <select name="" id="" class="iptSlt frmXs">
+                            <option value="">선택</option>
+                        </select>
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs">
+                        <div class="textBox deco">-</div>
+                        <input type="text" class="iptText frmXs">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <!--20230125 초기화 버튼 삭제-->
+                        <button class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="cptCalendarOpt">
+        <div class="chkAllArea">
+            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">토요일</label></div>
+            <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">일요일</label></div>
+        </div>
+        <div class="yymmArea">
+            <a href="#none"><img src="../../../common/images/common/btn_prev.png"/></a>
+            <div>
+                <span>2023</span>
+                <span>년</span>
+                <span>01</span>
+                <span>월</span>
+            </div>
+            <a href="#none"><img src="../../../common/images/common/btn_next.png"/></a>
+        </div>
+        <div class="btnArea">
+            <button class="btn purple"><span class="clT01">달력형식 보기</span></button>
+        </div>
+    </div>
+
+    <!--목록형식-->
+    <div class="cptCalViewType calListTy">
+        <!-- 그리드 -->
+        <div class="cptGrid listTypeCal">
+            <table class="gridTb">
+                <colgroup>
+                    <col style="width:40px;">
+                    <col style="width:40px;">
+                    <col style="width:40px;">
+                    <col style="width:10%;">
+                    <col style="width:40px;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:7%;">
+                    <col style="width:auto;">
+                    <col style="width:100px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="frmChoBox only">
+                                <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                            </div>
+                        </th>
+                        <th>일자</th>
+                        <th>요일</th>
+                        <th>업무구분</th>
+                        <th>인원</th>
+                        <th>유아</th>
+                        <th>유소년</th>
+                        <th>청소년</th>
+                        <th>성인</th>
+                        <th>어르신</th>
+                        <th>비고</th>
+                        <th>기능</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>01</td>
+                        <td>금</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">체력측정예역관리>체력측정예약설정 [출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr class="sat">
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>02</td>
+                        <td>토</td>
+                        <td>휴무</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">체력측정예역관리>체력측정예약설정 [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr class="sun">
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>03</td>
+                        <td>일</td>
+                        <td>휴무</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">체력측정예역관리>체력측정예약설정 [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>04</td>
+                        <td>월</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>05</td>
+                        <td>화</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>06</td>
+                        <td>수</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>07</td>
+                        <td>목</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>08</td>
+                        <td>금</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr class="sat">
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>09</td>
+                        <td>토</td>
+                        <td>휴무</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">체력측정예역관리>체력측정예약설정 [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr class="sun">
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>10</td>
+                        <td>일</td>
+                        <td>휴무</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <td>-</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">체력측정예역관리>체력측정예약설정 [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>~</td>
+                        <td>~</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="frmChoBox only">
+                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                            </div>
+                        </td>
+                        <td>31</td>
+                        <td>금</td>
+                        <td>출장-예약가능</td>
+                        <td>30</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <td>●</td>
+                        <!--230113비고영역 좌측정렬 처리-->
+                        <td class="left">[출장] 출장지명 / [기관] 기관명</td>
+
+                        <td><button class="gridBtn gLine">상세내역</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //그리드 -->
+        <!-- 그리드/테이블 하단 버튼 -->
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button class="srhBtn dkBlue">휴무일 설정</button>
+                <button class="srhBtn dkBlue">예약스케쥴 일괄설정</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 목록형식-->
+
+    <!--달력형식-->
+    <div class="cptCalViewType calTy">
+        <div class="cptCalView">
+            <div class="calCover">
+                <div class="calTxt">
+                    <ul>
+                        <li class="sun">일</li>
+                        <li>월</li>
+                        <li>화</li>
+                        <li>수</li>
+                        <li>목</li>
+                        <li>금</li>
+                        <li class="sat">토</li>
+                    </ul>
+                </div>
+                <div class="calBox">
+                    <ul>
+                        <li class="sun">
+                            <span class="dtTxt">01</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">02</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">03</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">04</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">05</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">06</span>
+                        </li>
+                        <li class="sat">
+                            <span class="dtTxt">07</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">08</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li>
+                            <span class="dtTxt">09</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                                <p><span>[기관]</span> 기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">10</span>
+                            <span class="resvT">출장-예약가능</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명출장지명출장지명출장지명출장지명출장지명</p>
+                                <p><span>[기관]</span> 기관명기관명기관명기관명기관명기관명기관명기관명</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="dtTxt">11</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li><span class="dtTxt">12</span></li>
+                        <li><span class="dtTxt">13</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">14</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">15</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li><span class="dtTxt">16</span></li>
+                        <li><span class="dtTxt">17</span></li>
+                        <li>
+                            <span class="dtTxt">18</span>
+                            <span class="resvF">출장-예약불가</span>
+                            <div class="outInfo">
+                                <p><span>[출장]</span> 출장지명</p>
+                            </div>
+                        </li>
+                        <li><span class="dtTxt">19</span></li>
+                        <li><span class="dtTxt">20</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">21</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="sun">
+                            <span class="dtTxt">22</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li><span class="dtTxt">23</span></li>
+                        <li>
+                            <span class="dtTxt">24</span>
+                            <span class="dayOff">공휴일</span>
+                        </li>
+                        <li><span class="dtTxt">25</span></li>
+                        <li><span class="dtTxt">26</span></li>
+                        <li><span class="dtTxt">27</span></li>
+                        <li class="sat">
+                            <span class="dtTxt">28</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <!--마지막주 항목에는 noL 클래스 필수-->
+                        <li class="sun noL">
+                            <span class="dtTxt">29</span>
+                            <span class="dayOff">휴무</span>
+                        </li>
+                        <li class="noL"><span class="dtTxt">30</span></li>
+                        <li class="noL"><span class="dtTxt">31</span></li>
+                        <li class="noL"></li>
+                        <li class="noL"></li>
+                        <li class="noL"></li>
+                        <li class="sat noL"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 그리드/테이블 하단 버튼 -->
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button class="srhBtn dkBlue">일정등록/수정</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 달력형식-->
+</div>
+<!-- //컨텐츠 내용 -->
+<script>
+$(document).ready(function(){
+    // 달력 타입 전환 버튼
+    $(".cptCalViewType").hide();
+    $(".cptCalViewType.calListTy").show();
+    $(".cptCalendarOpt > .btnArea > button").click(function(){
+        var btnAction = $(this).find("span").attr("class");
+        if(btnAction == "clT01"){
+            $(".cptCalViewType").hide();
+            $(".cptCalViewType.calTy").show();
+            $(this).find("span").text("목록형식 보기");
+            $(this).find("span").removeClass("clT01");
+            $(this).find("span").addClass("clT02");
+        }else if(btnAction == "clT02"){
+            $(".cptCalViewType").hide();
+            $(".cptCalViewType.calListTy").show();
+            $(this).find("span").text("달력형식 보기");
+            $(this).find("span").removeClass("clT02");
+            $(this).find("span").addClass("clT01");
+        }
+    });
+});
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

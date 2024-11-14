@@ -1,0 +1,183 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - lg : 큰 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">자가체력측정내역 측정결과 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보</div>
+                            </div>
+                        </div>
+                
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">ㅇㅇㅇ</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">2022-12-31(양력)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">성별</th>
+                                        <td class="left">남자</td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">성인</td>
+                                        <th class="left">측정일자</th>
+                                        <td class="left">0000-00-00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">자가 체력측정결과</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:auto;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>측정구분</th>
+                                        <th>측정항목</th>
+                                        <th>측정결과</th>
+                                        <th>평가결과</th>
+                                        <th>체력등급</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4" class="center">신체정보</td>
+                                        <td class="center">신장</td>
+                                        <td class="right">000cm</td>
+                                        <td class="center">-</td>
+                                        <td rowspan="7" class="center"><span class="txtBlue">2등급</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center bdl">체중</td>
+                                        <td class="right">00kg</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center bdl">신체질량지수(BMI)</td>
+                                        <td class="right">00 kg/㎡</td>
+                                        <td class="center"><span class="txtBlue">권장</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center bdl">허리둘레</td>
+                                        <td class="right">00 cm</td>
+                                        <td class="center"><span class="txtBlue">권장</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">근지구력</td>
+                                        <td class="center">교차 윗목 일의키기</td>
+                                        <td class="right">00 회</td>
+                                        <td class="center"><span class="txtBlue">권장</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">심폐지구력</td>
+                                        <td class="center">YMCA 스텝검사</td>
+                                        <td class="right">00 회</td>
+                                        <td class="center"><span class="txtBlue">권장</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">유연성</td>
+                                        <td class="center">앉아 윗몸 앞으로 굽히기</td>
+                                        <td class="right">00 cm</td> <!--20230203 단위 변경-->
+                                        <td class="center"><span class="txtBlue">권장</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">추천 운동처방전</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="center">체력요소</th>
+                                        <td class="center"><span class="txtBlue">유연성</span></td>
+                                        <th class="center">운동처방전</th>
+                                        <td class="center"><button type="button" class="gridBtn blLine"><!--20230113 클래스명 수정-->조회</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

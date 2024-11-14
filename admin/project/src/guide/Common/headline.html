@@ -1,0 +1,91 @@
+<!-- Guide : s -->
+<div class="g-area">
+
+    <strong class="g-area-tit">페이지 타이틀 + 로케이션 :: H2</strong>
+    <xmp>
+        <!-- h2 타이틀 -->
+        <div class="comH2Group">
+            <div class="alignL">
+                <h2>Page Title</h2>
+            </div>
+            <div class="alignR">
+                <ul class="locaGroup">
+                    <li class="item">1depth</li>
+                    <li class="item">2depth</li>
+                    <li class="item">3depth</li>
+                </ul>
+            </div>
+        </div>
+    </xmp>
+    
+    
+<style>
+/**/
+.classInfo * {letter-spacing:0;}
+.classInfo .infoTitle {margin:20px 0 10px; font-size:16px; font-weight:700;}
+.classInfo .infoMasage {margin:10px 0 10px; font-size:15px; font-weight:400;}
+.classInfo th {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#dfdfdf;}
+.classInfo td {padding:10px 20px; text-align:left; border:1px solid #cfcfcf; background:#fff;}
+.classInfo table + table {margin-top:-1px;}
+</style>
+<div class="classInfo">
+    <div class="infoTitle">설명</div>
+    <div class="infoMasage">
+        그리드(데이터 테이블) 혹은 입력테이블의 상단에 사용되는 공통 요소
+    </div>
+
+    <div class="infoTitle">추가 조작</div>
+    <table style="width:100%;">
+        <caption></caption>
+        <colgroup>
+            <col style="width:30%;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>경로</th>
+                <th>.cptGroupTop .className</th>
+            </tr>
+            <tr>
+                <th>className</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>className</td>
+                <td>설명</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+    
+    
+    
+    </div>
+    <!-- Guide : e -->
+    
+    <script type="text/javascript">
+    $(".g-area-tit, .g-area-tit01").each(function(){
+        var obj = $(this).next("xmp");
+        if(!obj.length) return;
+        var btn = '<p class="g-btn-source"><a href="#" style="font-size: 13px; color: #434343;">소스보기</a></p>';
+        var code = '<xmp class="g-code">'+obj.html()+'</xmp>';
+        $(this).append(btn);
+        $(this).after(code);
+        $(this).next().after('<div class="g-view"><div class="g-true-area">'+obj.html()+'</div></div>');
+    });
+    $(".g-btn-source a").click(function(){
+        var me = $(this).parent().parent().parent();
+        var obj = $(this).parent().parent().next();
+        if(obj.is(":hidden")){
+            obj.show();
+            me.addClass("on");
+        }else{
+            obj.hide();
+            me.removeClass("on");
+        }
+        return false;
+    });
+    </script>

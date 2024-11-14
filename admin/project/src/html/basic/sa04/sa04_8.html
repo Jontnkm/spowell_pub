@@ -1,0 +1,306 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">자가체력측정내역 PAR-Q설문 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">개인정보</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">ㅇㅇㅇ</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                        <th class="left">생년월일</th>
+                                        <td class="left">0000-00-00(양력)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">성별</th>
+                                        <td class="left">남자</td>
+                                        <th class="left">대상구분</th>
+                                        <td class="left">성인</td>
+                                        <th class="left">측정일자</th>
+                                        <td class="left">0000-00-00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">국제 신체활동설문 (PAR-Q)</div>
+                            </div>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit type05">
+                            <div class="alignL">
+                                <div class="title"><span class="sqDot"></span>사전설문</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:140px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>사전신체상태</th>
+                                        <th>답변</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">의사에게 심장질환 진단을 받앗거나, 신체활동/운동 삼가에 대한 말을 들은 적이 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="left">운동을 할 때 가슴에 통증이 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="left">지난달 휴식 시에도 가슴에 통증을 느낀적이 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="left">어지러워서 쓰러졌거나 의식을 잃은 적이 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">5</td>
+                                        <td class="left">운동할 때 심해질 수 있는 관절이나 뼈의 문제(예:허리, 무릎 또는 고관절)가 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">6</td>
+                                        <td class="left">심장질환 등으로 의사에게 처방 받아 복용하는 약이 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">7</td>
+                                        <td class="left">신체활동/운동을 해서는 안되는 다른 이유가 있습니까?</td>
+                                        <td class="center">아니요</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit type04">
+                            <div class="alignL">
+                                <div class="title"><span class="sqDot"></span>추가설문</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:140px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>운동동기</th>
+                                        <th>답변</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">운동상담을 받는 목적이 무엇입니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="left">과거에 운동이나 스포츠에 참여 한 경험이 있습니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="left">본인이 생각하기에 운동을 시작하거나 지속하는데 있어서 어려운 점은 무엇입니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable" style="margin-top:20px;">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:140px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>신체활동</th>
+                                        <th>답변</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">본인의 직업 특성은 어떻습니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2-1</td>
+                                        <td class="left">지난 일주일 동안, 무거운 물건 나르기, 달리기, 에어로빅, 빠른 속도로 자전거 타기 등과 같은 격렬한 신체 활동을 며칠간 하셨습니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2-2</td>
+                                        <td class="left">위 운동의 평균 시간은 어떻게 되십니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3-1</td>
+                                        <td class="left">지난 일주일 동안 가벼운 물건 나르기, 보통 속도로 자전거 타기, 복식 테니스 등과 같은 중간정도 신체활동을 며칠간 하셨습니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3-2</td>
+                                        <td class="left">위 운동의 평균 시간은 어떻게 되십니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4-1</td>
+                                        <td class="left">지난 7일간, 한번에 적어도 10분 이상 걸은 날은 며칠입니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4-2</td>
+                                        <td class="left">위 운동의 평균 시간은 어떻게 되십니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">5</td>
+                                        <td class="left">지난 7일간, 주중에 앉아서 보낸 시간이 보통 얼마나 됩니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">6</td>
+                                        <td class="left">주로 운동하는 장소는 어디입니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable" style="margin-top:20px;">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:70px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:140px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>문항</th>
+                                        <th>노쇠분야</th>
+                                        <th>답변</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="left">지난 한 달 동안 피곤하다고 느낀 적이 있습니까? (항상 또는 거의 대부분 피곤한 경우)</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="left">도움 없이 혼자서 쉬지 않고 10개의 계단을 오르는데 힘이 듭니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="left">도움 없이 300미터를 혼자서 이동하는데 힘이 듭니까?</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="left">1년 전과 비교해 체중이 5% 이상 감소했다 (예를들어 1년전에 체중이 60kg 이었으나 1년동안 3kg이상 체중이 감소한 경우)</td>
+                                        <td class="center"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

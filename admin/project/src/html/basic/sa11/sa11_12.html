@@ -1,0 +1,150 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">사용자 등록/조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">사용자정보</div>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">아이디<span class="required">*</span></th>
+                                        <td class="left">
+                                            <!--20230209 아이디 입력란 옆에 중복확인 버튼 추가-->
+                                            <div class="frmGroup"> 
+                                                <input type="text" class="iptText" />
+                                                <button type="button" class="gridBtn purple">중복확인</button>
+                                            </div>
+                                            <!-- // 20230209 아이디 입력란 옆에 중복확인 버튼 추가-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">비밀번호<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">비밀번호 확인<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">생년월일<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">성별<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">남자</label></div>
+                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">여자</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">연락처<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">권한그룹<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">소속<span class="required">*</span></th>
+                                        <td class="left">
+                                            <input type="text" class="iptText" />
+                                        </td>
+                                        <th class="left">계정상태</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">정상</label></div>
+                                            <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">정지</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">
+                                            0000-00-00 00:00
+                                            <!--20230209 등록일자 입력란 삭제 후 sysdate 추가-->
+                                        </td>
+                                        <th class="left">최근 로그인</th>
+                                        <td class="left">
+                                            0000-00-00 00:00
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="textBox clar">* 아이디 : 영문, 숫자 조합으로 6 ~ 16자 <br/>* 비밀번호 : 영문, 숫자, 특수문자 조합으로 6 ~ 16자</div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue" onclick="openAlert('splAlt01');">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">필수 항목을 등록해야 합니다.</div>
+        <div class="alertBtm">
+            <button type="button" class="btn dkBlue">확인</button>
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

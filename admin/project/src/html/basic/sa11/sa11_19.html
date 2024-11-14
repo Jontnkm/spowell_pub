@@ -1,0 +1,394 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>체력인증기준조회</h2>
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">홈페이지관리</li>
+                <li class="item">체력인증기준조회</li>
+            </ul>
+        </div>
+    </div>
+     <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>대상구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt">
+                            <option value="">이름</option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>성별</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo005" type="radio" class="iptRdo" name="rdo002"><label for="rdo005" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo006" type="radio" class="iptRdo" name="rdo002"><label for="rdo006" class="iptLbl">남자</label></div>
+                        <div class="frmChoBox"><input id="rdo007" type="radio" class="iptRdo" name="rdo002"><label for="rdo007" class="iptLbl">여자</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>측정구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">시도 전체</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" type="button" class="btnSearch">검색</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop" style="height:30px;">
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!--테이블 가로 스크롤 적용-->
+    <div class="cptVertScr">
+        <!--대상구분 데이터 영역-->
+        <div class="lftHead">
+            <table>
+                <colgroup>
+                    <col style="width:10%" />
+                    <col style="width:10%" />
+                    <col style="width:20%" />
+                    <col style="width:20%" />
+                    <col style="width:10%" />
+                    <col style="width:10%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>대상구분</th>
+                        <th>성별</th>
+                        <th>측정구분</th>
+                        <th>항목명</th>
+                        <th>나이(저)</th>
+                        <th>나이(고)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>2분제자리걷기</td>
+                        <td>65</td>
+                        <td>69</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>2분제자리걷기</td>
+                        <td>70</td>
+                        <td>74</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>2분제자리걷기</td>
+                        <td>75</td>
+                        <td>79</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>2분제자리걷기</td>
+                        <td>80</td>
+                        <td>84</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>2분제자리걷기</td>
+                        <td>85</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>6분걷기</td>
+                        <td>65</td>
+                        <td>69</td>
+                    </tr>
+                    <tr>
+                        <td>노인</td>
+                        <td>남자</td>
+                        <td>심폐지구력</td>
+                        <td>6분걷기</td>
+                        <td>70</td>
+                        <td>74</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--치수 데이터 영역-->
+        <div class="rytBody">
+            <table>
+                <colgroup>
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                    <col style="width:5.26%;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>95</th>
+                        <th>90</th>
+                        <th>85</th>
+                        <th>80</th>
+                        <th>75</th>
+                        <th>70</th>
+                        <th>65</th>
+                        <th>60</th>
+                        <th>55</th>
+                        <th>50</th>
+                        <th>45</th>
+                        <th>40</th>
+                        <th>35</th>
+                        <th>30</th>
+                        <th>25</th>
+                        <th>20</th>
+                        <th>15</th>
+                        <th>10</th>
+                        <th>5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                    <tr>
+                        <td>148</td>
+                        <td>139</td>
+                        <td>133</td>
+                        <td>129</td>
+                        <td>125</td>
+                        <td>122</td>
+                        <td>118</td>
+                        <td>115</td>
+                        <td>112</td>
+                        <td>109</td>
+                        <td>106</td>
+                        <td>103</td>
+                        <td>100</td>
+                        <td>97</td>
+                        <td>94</td>
+                        <td>91</td>
+                        <td>95</td>
+                        <td>80</td>
+                        <td>71</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+<script>
+    // 테이블 구역 표시
+    $("document").ready(function(){
+        $(".cptVertScr table tr td").hover(function(ev){
+            $(".cptVertScr .rytBody table tr td").css("color","#bbbbbb;");
+            var row = $(this).parents("table").find("tr").length - 1;
+            var idx_tr = $(this).parent("tr").index()+1;
+            var idx_td = $(this).index()+1;
+            var area = $(this).parents("div");
+            
+            $(this).parent("tr").find("td").addClass("mEnt");
+
+            if($(area).hasClass("lftHead")){
+                $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+                $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            }else if($(area).hasClass("rytBody")){
+                $(".rytBody table tr td").removeClass("mEnt");
+                $(".rytBody table tr td:nth-of-type("+ idx_td +")").addClass("mEnt");
+                $(".cptVertScr .rytBody table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+                $(".cptVertScr .lftHead table tr:nth-of-type("+ idx_tr +") > td").addClass("mEnt");
+            }
+        }, function(ev){
+            $(".cptVertScr .lftHead table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").removeClass("mEnt");
+            $(".cptVertScr .rytBody table tr td").css("color","#333;");
+            $(this).parent("tr").removeClass("mEnt");  
+        })
+    })
+</script>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

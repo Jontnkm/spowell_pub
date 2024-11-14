@@ -1,0 +1,344 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    <!-- h2 타이틀 -->
+    <div class="comH2Group">
+        <div class="alignL">
+            <h2>인센티브 지급설정</h2><!--20230202 텍스트수정-->
+        </div>
+        <div class="alignR">
+            <ul class="locaGroup">
+                <li class="item">HOME</li>
+                <li class="item">홈페이지관리</li>
+                <li class="item">인센티브 지급설정</li><!--20230202 텍스트수정-->
+            </ul>
+        </div>
+    </div>
+
+    
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="groupTitle">인센티브 지급 및 사용 설정</div><!--20230202 텍스트수정-->
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid mileageGrid type02">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:20%;">
+                <col style="width:35%;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>설정 값</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td class="mileFrstGrid">사업년도</td><!--20230202 항목 변경-->
+                    <td class="right milescndGrid"><!--20230202 항목 변경-->
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmLg">
+                                <option value="">2023년</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="left">
+                        <!--20230202 텍스트삭제-->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mileFrstGrid">최대 보유 인센티브</td><!--20230202 텍스트수정-->
+                    <td class="right milescndGrid">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm"  placeholder="50,000"/>
+                            <div class="textBox">인센티브</div> 
+                        </div>
+                    </td>
+                    <td class="left">
+                        회원 1인이 최대로 보유 할 수 있는 인센티브 한도(사용한 인센티브 제외)<!--20230202 텍스트수정-->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mileFrstGrid">인센티브 지급기간</td><!--20230202 텍스트수정-->
+                    <td class="milescndGrid">
+                        <div class="frmGroup">
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td class="left">
+                        시스템에서 인센티브를 지급하는 기간을 설정<!--20230202 텍스트수정-->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mileFrstGrid">인센티브 사용기간</td><!--20230202 텍스트수정-->
+                    <td class="milescndGrid">
+                        <div class="frmGroup">
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                    <td class="left">
+                        회원이 홈페이지에서 보유한 인센티브로 교환을 신청할 수 있는 기간을 설정<!--20230202 텍스트수정-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="groupTitle">인센티브 지급구분 및 내용</div><!--20230202 텍스트수정-->
+        </div>
+    </div>
+    <!-- 그리드 -->
+    <div class="cptGrid mileageGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:10%;">
+                <col style="width:30%;">
+                <col style="width:25%;">
+                <col style="width:11%;">
+                <col style="width:9%;">
+                <col style="width:15%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">인센티브 구분 </th><!--20230202 텍스트수정-->
+                    <th>인센티브 내용 <span class="required">*</span></th><!--20230202 텍스트수정 및 필수입력 표기 추가-->
+                    <th>지급 인센티브 <span class="required">*</span></th><!--20230202 텍스트수정 및 필수입력 표기 추가-->
+                    <th>지급횟수 <span class="required">*</span></th><!--20230202 필수입력 표기 추가-->
+                    <th>적용유무</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="mileFrstGrid">회원가입</td>
+                    <td class="left milescndGrid">신규 회원가입</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="회원가입 축하 인센티브"/><!--20230202 텍스트수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="mileFrstGrid">체력측정<br/>(인증서 발급시점)</td>
+                    <td class="left milescndGrid">체력측정 1회 참여</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="체력측정 1회 참여 인센티브"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo102"><label for="rdo103" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo104" type="radio" class="iptRdo" name="rdo102"><label for="rdo104" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left milescndGrid">체력측정 2회 참여</td>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="체력측정 2회 참여 인센티브"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo105" type="radio" class="iptRdo" name="rdo103"><label for="rdo105" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo106" type="radio" class="iptRdo" name="rdo103"><label for="rdo106" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mileFrstGrid"><span class="txtBlue">헬스업</span></td>
+                    <td class="left milescndGrid"><span class="txtBlue">간소화 체력측정</span></td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="건강체력기준 측정"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo107" type="radio" class="iptRdo" name="rdo104"><label for="rdo107" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo108" type="radio" class="iptRdo" name="rdo104"><label for="rdo108" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="mileFrstGrid">스포츠활동</td>
+                    <td class="left milescndGrid">스포츠활동 10회 달성</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="스포츠활동 10회 달성 축하 인센티브"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo109" type="radio" class="iptRdo" name="rdo105"><label for="rdo109" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo110" type="radio" class="iptRdo" name="rdo105"><label for="rdo110" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left milescndGrid">스포츠활동 20회 달성</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="스포츠활동 20회 달성 축하 인센티브"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo111" type="radio" class="iptRdo" name="rdo106"><label for="rdo111" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo112" type="radio" class="iptRdo" name="rdo106"><label for="rdo112" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left milescndGrid">스포츠활동 30회 달성</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmFrth" placeholder="스포츠활동 30회 달성 축하 인센티브"/><!--20230202 placeholder 수정-->
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmSm" placeholder="1,000"/>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="frmGroup">
+                            <input type="text" class="iptText frmTini" placeholder="1"/>
+                            <div class="textBox">회</div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo113" type="radio" class="iptRdo" name="rdo107"><label for="rdo113" class="iptLbl">적용</label></div>
+                        <div class="frmChoBox"><input id="rdo114" type="radio" class="iptRdo" name="rdo107"><label for="rdo114" class="iptLbl">미적용</label></div>
+                    </td>
+                </tr>
+                <!--20230202 기타 항목 추가-->
+                <tr>
+                    <td class="mileFrstGrid">기타</td>
+                    <td class="left milescndGrid">수동지급</td>
+                    <td colspan="4" class="left">
+                        <div class="textBox">※ 개별 또는 엑셀 업로드로 수동지급 인센티브 건</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="unit"><span class="desc">*스포츠활동 : 국민체력인증센터, 공공스포츠클럽, 지정민간체육시설 운동강좌 수강 &lt;1주일에 1회만 인정&gt;</span></div>
+    <div class="unit"><span class="desc txtRed">*건강체력기준 : 건강체력기준(근력, 심폐지구력)을 기준으로 간소화된 체력측정 실시</span></div>
+    <!--20230202 최종수정 항목 위치 변경-->
+    <div class="unit"><span class="desc">*최종수정 : 홍길동 &lt;2023-00-00&gt;</span></div>
+    <!-- //그리드 -->
+    
+    <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button type="button" class="srhBtn gLine" onclick="openAlert('splAlt01')">누적 인센티브 초기화</button><!--20230202 텍스트수정-->
+            <button type="button" class="srhBtn purple" onclick="openAlert('splAlt02')">저장</button>
+        </div>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">초기화를 하면 회원이 보유한 모든<br/>인센티브가 소멸처리 됩니다.<br/>초기화 하시겠습니까?</div><!--20230202 텍스트수정-->
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<div id="splAlt02" class="modAlert"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertMsg">스포츠인센티브 지급기준을 국민체력100<br/>시스템에 반영합니다.<br/>저장하시겠습니까?</div><!--20230202 텍스트수정-->
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt02');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

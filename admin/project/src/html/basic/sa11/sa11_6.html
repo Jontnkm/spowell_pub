@@ -1,0 +1,174 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup md on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">사용자 등록</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">사용자 조회</div>
+                                <div class="unit"><span class="desc">*KSPO 인사시스템에 등록된 사원의 정보를 조회합니다.</span></div><!--20230125 문구 추가-->
+                            </div>
+                        </div>
+                        
+                        <!-- 검색조건 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>KSPO사번</th>
+                                        <td><input type="text" class="iptText"></td>
+                                        <td colspan="2" class="right">
+                                            <button type="button" class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">사용자정보</div>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">홍길동</td>
+                                        <th class="left">KSPO사번</th>
+                                        <td class="left">b00528</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">전화번호</th>
+                                        <td class="left">02-0000-0000</td>
+                                        <th class="left">휴대전화</th>
+                                        <td class="left">010-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">부서</th>
+                                        <td class="left">디지털서비스팀</td>
+                                        <th class="left">직급</th>
+                                        <td class="left">대리</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">권한그룹</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th class="left">계정상태</th>
+                                        <td class="left">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">정상</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">중지</label></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">거점관리권역설정</div>
+                            </div>
+                        </div>
+
+                        <div class="cptChkLoc">
+                            <ul>
+                                <li><div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">서울</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">경기</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">인천</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk004" type="checkbox" class="iptChk"><label for="chk004" class="iptLbl">부산</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk005" type="checkbox" class="iptChk"><label for="chk005" class="iptLbl">대구</label></div></li>
+
+                                <li><div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">광주</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk007" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">대전</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk008" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">울산</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk009" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">경기</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk010" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">강원</label></div></li>
+
+                                <li><div class="frmChoBox"><input id="chk011" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">충북</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk012" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">충남</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk013" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">경북</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk014" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">경남</label></div></li>
+                                <li><div class="frmChoBox"><input id="chk015" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전북</label></div></li>
+
+                                <li class="noBb"><div class="frmChoBox"><input id="chk016" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전남</label></div></li>
+                                <li class="noBb"><div class="frmChoBox"><input id="chk017" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">제주</label></div></li>
+                                <li class="noBb"><div class="frmChoBox"><input id="chk018" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">세종</label></div></li>
+                            </ul>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue" onclick="openAlert('splAlt01');">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">공단사용자로 등록 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

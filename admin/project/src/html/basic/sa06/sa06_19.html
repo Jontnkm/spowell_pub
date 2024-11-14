@@ -1,0 +1,268 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup sm on"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">증진교실 이수내역 조회</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">증진교실 프로그램</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">체력인증센터</th>
+                                        <td class="left">영주인증센터</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">프로그램명</th>
+                                        <td class="left">프로그램 제목입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">담당강사</th>
+                                        <td class="left">000</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">운영기간</th>
+                                        <td class="left">0000-00-00  ~ 0000-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">출석/강좌</th>
+                                        <td class="left">00회 / 00회 (50%)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">날짜별 출석현황</div>
+                            </div>
+                        </div>
+                        
+                        <div class="unit" style="margin-bottom:5px;"><span class="desc">*<b>증진교실 참가확인서</b>는 마지막 수업일자의 출석확인이 종료된 시점부터 <b>7일간</b> 홈페이지에서 조회 할 수 있습니다.</span></div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:20%" />
+                                    <col style="width:auto" />
+                                    <col style="width:20%" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>회차</th>
+                                        <th>날짜</th>
+                                        <th>출석확인</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">4</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">5</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">6</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">7</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">8</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">9</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">10</td>
+                                        <td class="center">0000-00-00</td>
+                                        <td class="center">출석</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">
+                            <button type="button" class="btn red">삭제</button>
+                            <button type="button" class="btn gLine">취소</button>
+                            <button type="button" class="btn dkBlue">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sample02" class="modPopup sm"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">담당강사선택</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="pText">* 운영프로그램 담당강사를 선택하세요.</div>
+                            </div>
+                        </div>
+
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:100px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:157px;" />
+                                    <col style="width:120px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>이름</th>
+                                        <th>체력인증센터</th>
+                                        <th>전문분야</th>
+                                        <th>기능</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">신안인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">청주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">KSPO송파</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">강동센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">홍길동</td>
+                                        <td class="center">영주인증센터</td>
+                                        <td class="center">전문분야</td>
+                                        <td class="center"><button type="button" class="gridBtn dkBlue">선택</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button type="button" class="btn gLine">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                        
+<div id="splAlt01" class="modAlert">
+    <div class="alertArea">
+        <div class="alertMsg">'미승인사유'를 등록하셔야 합니다.</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

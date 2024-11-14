@@ -1,0 +1,186 @@
+<%- include('../../layout/type01/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+</div>
+<!-- //컨텐츠 내용 -->
+
+<div id="sample02" class="modPopup md on"> <!-- class - sm : 작은 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button class="btnPopClose" onclick="closePopup('sample02');">닫기</button>
+                    <div class="popTitle">운동시설 조회/선택</div>
+                    <div class="popCont">
+
+                        <!-- 팝업 컨텐츠 영역 -->
+                        <div class="cptSearchArea">
+                            <table>
+                                <caption></caption>
+                                <colgroup>
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>조회기준</th>
+                                        <td colspan="3">
+                                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">체력인증센터</label></div>
+                                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">거주지</label></div>
+                                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">직접조회</label></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3">
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmSm">
+                                                    <option value="">시도 선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <select name="" id="" class="iptSlt">
+                                                    <option value="">시 / 군 / 구 선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td colspan="3"><input type="text" class="iptText"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="right">
+                                            <button class="btnSearch">검색</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <!-- 그리드/테이블 상단 -->
+                        <div class="cptGroupTop">
+                            <div class="alignL">
+                                <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+                            </div>
+                            <div class="alignR">
+                                <div class="comSideOpt">
+                                    <ul class="opList">
+                                        <li class="item">
+                                            <button class="srhBtn purple">추가</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 테이블 -->
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:60px;" />
+                                    <col style="width:110px;" />
+                                    <col style="width:150px;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:150px;" />
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>종목구분</th>
+                                        <th>시설명</th>
+                                        <th>소재지</th>
+                                        <th>전화번호</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">역도</td>
+                                        <td class="center">우리금융아트홀</td>
+                                        <td class="left">서울시 송파구 올림픽로 424 올림픽공원 </td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">역도</td>
+                                        <td class="center">우리금융아트홀</td>
+                                        <td class="left">서울시 송파구 올림픽로 424 올림픽공원 </td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">역도</td>
+                                        <td class="center">우리금융아트홀</td>
+                                        <td class="left">서울시 송파구 올림픽로 424 올림픽공원 </td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">역도</td>
+                                        <td class="center">우리금융아트홀</td>
+                                        <td class="left">서울시 송파구 올림픽로 424 올림픽공원 </td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <div class="frmChoBox only">
+                                                <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center">역도</td>
+                                        <td class="center">우리금융아트홀</td>
+                                        <td class="left">서울시 송파구 올림픽로 424 올림픽공원 </td>
+                                        <td class="center">000-0000-0000</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 그리드/테이블 하단 버튼 -->
+                        <div class="cptGroupBtm alignR">
+                            <div class="comSideOpt">
+                                <button class="srhBtn purple">추가</button>
+                            </div>
+                        </div>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <button class="btn gLine">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 영역 -->
+
+<%- include('../../layout/type01/bottom.ejs', {
+    url: "../../../"
+}) %>

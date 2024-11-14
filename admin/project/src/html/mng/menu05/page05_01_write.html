@@ -1,0 +1,133 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>관리자계정관리</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">시스템관리</li>
+                                    <li class="item">관리자계정관리</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본정보</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">이름</th>
+                                        <td class="left">홍길동</td>
+                                        <th class="left">아이디</th>
+                                        <td class="left">member_id</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">사용자구분</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">일반관리자</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th class="left">권한그룹</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox">
+                                                    <select name="" id="" class="iptSlt frmSm">
+                                                        <option value="">권한그룹1</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">휴대폰번호</th>
+                                        <td class="left">010-0000-0000</td>
+                                        <th class="left">이메일</th>
+                                        <td class="left">test@naver.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">소속(부서)</th>
+                                        <td class="left">0000</td>
+                                        <th class="left">등록일자</th>
+                                        <td class="left">2024-05-05</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">계정정보</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                    <col style="width:120px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">계정상태</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">승인처리</label></div>
+                                                <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">반려처리</label></div>
+                                                <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">정지처리</label></div>
+                                            </div>
+                                        </td>
+                                        <th class="left">사유</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">취소</button>
+                                    <button type="button" class="crudBtn purple">저장</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

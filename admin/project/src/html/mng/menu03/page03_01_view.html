@@ -1,0 +1,118 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>공지사항(일반형)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">게시물관리</li>
+                                    <li class="item">공지사항(일반형)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                글 등록 시 작성한 제목 노출
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">구분<span class="required">*</span></th>
+                                        <td class="left">
+                                            공지사항
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">상단고정<span class="required">*</span></th>
+                                        <td class="left">
+                                            예
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">작성자</th>
+                                        <td class="left">
+                                            관리자
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">노출 등록일<span class="required">*</span></th>
+                                        <td class="left">
+                                            2024-05-05
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <th class="left">내용<span class="required">*</span></th>
+                                        <td class="left">
+                                            글 등록 시 작성한 내용 노출
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일 1</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileAfter" style="display: block;">
+                                                        <div class="textBox">첨부파일테스트.png</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">첨부파일 2</th>
+                                        <td class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileAfter" style="display: block;">
+                                                        <div class="textBox">첨부파일테스트.확장자</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtnCov">
+                            <div class="cptGroupBtm alignL">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn dkBlue">목록</button>
+                                </div>
+                            </div>
+                            <div class="cptGroupBtm alignR">
+                                <div class="comSideOpt">
+                                    <button type="button" class="crudBtn red">삭제</button>
+                                    <button type="button" class="crudBtn dkBlue">수정</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>

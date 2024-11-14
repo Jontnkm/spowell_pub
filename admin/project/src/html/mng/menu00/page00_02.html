@@ -1,0 +1,427 @@
+<%- include('../../layout/mng/header.ejs', {
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+                        
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>가이드 (Button)</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">가이드</li>
+                                    <li class="item">Button</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    <style>
+                    @font-face {
+                        font-family: 'D2Coding';
+                        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    .guideBox {margin-top:40px;}
+                    .guideTitle {font-size:18px; font-weight:500;}
+                    .guideCont {margin-top:10px;}
+                    .gGroup {margin-top:20px;}
+                    .gText {font-size:14px;}
+                    .gView {padding:10px; border:1px solid #bbbbbb; background:#fff;}
+                    </style>
+                        <div class="cptPubGuide">
+                            <div class="guideArea">
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">Color</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            버튼은 크게 사용 용도와 위치로 구분합니다.<br/>
+                                            먼저는 색깔 구분에 대해 설명합니다.<br/>
+                                            검정 (dkBlue) : 등록, 목록가기 등으로 해당 페이지가 전환되는 버튼입니다.<br/>
+                                            남색 (purple) : 페이지 내에서 요소가 추가 되거나, 그리드 및 테이블 등에서 바로 요소가 추가되는 경우 사용합니다.<br/>
+                                            빨강 (red) : 삭제하거나 취소등 부정적인 내용으로 사용자가 인지해하고 주의를 해야 할 때 사용합니다.<br/>
+                                            라인 (gLine) : 페이지 자체에 영향을 미치지 않는 요소에 사용합니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="comSideOpt">
+        <button type="button" class="crudBtn dkBlue">등록,목록</button>
+        <button type="button" class="crudBtn purple">추가</button>
+        <button type="button" class="crudBtn red">취소,삭제</button>
+        <button type="button" class="crudBtn gLine">기타1</button>
+        <button type="button" class="crudBtn bLine">기타2</button>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">사용 위치 (그리드, 테이블 위)</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            - 그리드나 테이블 위에 사용<br/>
+                                            - 우측에 사용<br/>
+                                            - 버튼의 Class는 "srhBtn"를 사용합니다.<br/>
+                                            - 건수보기 등 조합으로 사용하므로 class "opList+item"를 사용합니다.
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="title" style="font-size:24px;">담당자 지정</div>
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <li class="item">
+                        <button class="viewBtn on">10건</button>
+                        <button class="viewBtn">20건</button>
+                        <button class="viewBtn">50건</button>
+                        <button class="viewBtn">100건</button>
+                    </li>
+                    <li class="item">
+                        <button type="button" class="srhBtn dkBlue">등록,목록</button>
+                        <button type="button" class="srhBtn purple">추가</button>
+                        <button type="button" class="srhBtn red">취소,삭제</button>
+                        <button type="button" class="srhBtn gLine">기타1</button>
+                        <button type="button" class="srhBtn bLine">기타2</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px">
+                <col style="width:50px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th>NO</th>
+                    <th>담당자명</th>
+                    <th>전화번호</th>
+                    <th>핸드폰</th>
+                    <th>FAX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>031-0000-0000</td>
+                    <td>010-0000-0000</td>
+                    <td>031-0000-0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">사용 위치 (그리드, 테이블 아래)</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            - 그리드나 테이블 아래 사용<br/>
+                                            - 좌측, 우측, 좌우측에 사용<br/>
+                                            - 버튼의 Class는 "srhBtn"를 사용합니다.<br/>
+                                            - 다른 조합으로 사용하지 않으며 "comSideOpt"안에 바로 버튼을 사용합니다
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px">
+                <col style="width:50px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th>NO</th>
+                    <th>담당자명</th>
+                    <th>전화번호</th>
+                    <th>핸드폰</th>
+                    <th>FAX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>031-0000-0000</td>
+                    <td>010-0000-0000</td>
+                    <td>031-0000-0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 (우측) -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button class="srhBtn red">상세조회</button>
+            <button class="srhBtn purple">상세조회</button>
+            <button class="srhBtn gLine">상세조회</button>
+            <button class="srhBtn dkBlue">상세조회</button>
+            <button class="srhBtn dkbLine">상세조회</button>
+            <button class="srhBtn bLine">상세조회</button>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 (좌측) -->
+    <div class="cptGroupBtm alignL">
+        <div class="comSideOpt">
+            <button class="srhBtn red">상세조회</button>
+            <button class="srhBtn purple">상세조회</button>
+            <button class="srhBtn gLine">상세조회</button>
+            <button class="srhBtn dkBlue">상세조회</button>
+            <button class="srhBtn dkbLine">상세조회</button>
+            <button class="srhBtn bLine">상세조회</button>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button class="srhBtn red">상세조회</button>
+                <button class="srhBtn purple">상세조회</button>
+                <button class="srhBtn gLine">상세조회</button>
+                <button class="srhBtn dkBlue">상세조회</button>
+                <button class="srhBtn dkbLine">상세조회</button>
+                <button class="srhBtn bLine">상세조회</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button class="srhBtn red">상세조회</button>
+                <button class="srhBtn purple">상세조회</button>
+                <button class="srhBtn gLine">상세조회</button>
+                <button class="srhBtn dkBlue">상세조회</button>
+                <button class="srhBtn dkbLine">상세조회</button>
+                <button class="srhBtn bLine">상세조회</button>
+            </div>
+        </div>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="guideBox">
+                                    <div class="guideTitle">CRUD 사용 위치 (그리드, 테이블 아래)</div>
+                                    <div class="guideCont">
+                                        <div class="gText">
+                                            - 기본은 페이지 최하단에 사용<br/>
+                                            - 좌측, 우측, 좌우측에 사용 가능<br/>
+                                            - 버튼의 Class는 "crudBtn"를 사용합니다.<br/>
+                                            - 다른 조합으로 사용하지 않으며 "comSideOpt"안에 바로 버튼을 사용합니다
+                                        </div>
+                                        <div class="gGroup">
+                                            <div class="gView"></div>
+                                            <div class="gCode">
+<!-- input -->
+<pre><code class="xml" style="font-size:14px; letter-spacing:1.5px; font-family: 'D2Coding'"></code></pre>
+<textarea class="codeGuide" style="display:none;">
+    
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px">
+                <col style="width:50px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th>NO</th>
+                    <th>담당자명</th>
+                    <th>전화번호</th>
+                    <th>핸드폰</th>
+                    <th>FAX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>홍길동</td>
+                    <td>031-0000-0000</td>
+                    <td>010-0000-0000</td>
+                    <td>031-0000-0000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 (우측) -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <button class="crudBtn dkbLine">미리보기</button>
+            <button class="crudBtn bLine">미리보기</button>
+            <button class="crudBtn red">취소</button>
+            <button class="crudBtn purple">저장</button>
+            <button class="crudBtn dkBlue">등록</button>
+            <button class="crudBtn gLine">목록</button>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 (좌측) -->
+    <div class="cptGroupBtm alignL">
+        <div class="comSideOpt">
+            <button class="crudBtn dkbLine">미리보기</button>
+            <button class="crudBtn bLine">미리보기</button>
+            <button class="crudBtn red">취소</button>
+            <button class="crudBtn purple">저장</button>
+            <button class="crudBtn dkBlue">등록</button>
+            <button class="crudBtn gLine">목록</button>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button class="crudBtn dkbLine">미리보기</button>
+                <button class="crudBtn bLine">서명하기</button>
+                <button class="crudBtn red">취소</button>
+                <button class="crudBtn purple">저장</button>
+                <button class="crudBtn dkBlue">등록</button>
+                <button class="crudBtn gLine">목록</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button class="crudBtn dkbLine">승인하기</button>
+                <button class="crudBtn bLine">미리보기</button>
+                <button class="crudBtn red">취소</button>
+                <button class="crudBtn purple">저장</button>
+                <button class="crudBtn dkBlue">등록</button>
+                <button class="crudBtn gLine">목록</button>
+            </div>
+        </div>
+    </div>
+</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/xml.min.js"></script>
+<script>
+    function escapeHtml(html) {
+        return html
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function run(){
+        const codeGuides = document.querySelectorAll('.cptPubGuide .codeGuide');
+        const codes = document.querySelectorAll('.cptPubGuide code.xml');
+        const viewers = document.querySelectorAll('.cptPubGuide .gView');
+        codes.forEach(function(code,idx){
+            code.innerHTML = escapeHtml(codeGuides[idx].value);
+        });
+        viewers.forEach(function(viewer,idx){
+            viewer.innerHTML = codeGuides[idx].value;
+        });
+        hljs.highlightAll();
+    }
+    window.onload = function(){
+        run();
+    }
+</script>
+
+
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/mng/bottom.ejs', {
+    url: "../../../"
+}) %>
