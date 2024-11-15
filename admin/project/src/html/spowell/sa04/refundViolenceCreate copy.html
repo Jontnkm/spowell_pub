@@ -1,0 +1,153 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>
+                <span>아래 체육인을 조회하고 '체육단체 징계확인' 내역을 등록하실 수 있습니다.</span>
+            </p>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <div class="textBox Deco">-</div>
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">조회</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td>홍길동</td>
+                    <th>주민등록번호</th>
+                    <td>000000-0000000</td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>장애여부</th>
+                    <td>비장애</td>
+                    <th>대상구분</th>
+                    <td>선수</td>
+                    <th>종목</th>
+                    <td>종목명</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육단체 징계확인 내용</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>확정일자 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
+                        </div>
+                    </td>
+                    <th>증빙자료 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <th>범죄내용 <span class="required">*</span></th>
+                    <td>
+                        <textarea name="" id="" class="textArea"></textarea>
+                    </td>
+                    <th>비고</th>
+                    <td>
+                        <textarea name="" id="" class="textArea"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

@@ -174,3 +174,12 @@ span.required {color:var(--basic-red);}
 .frmGroup {
     > .cusLab {margin-right:10px;}
 }
+
+/*독립 정렬*/
+.soloAlign {
+    display:flex; flex-flow:row nowrap; align-items: center; margin-top:20px;
+
+    &.alignR {
+        justify-content: end;
+    }
+}

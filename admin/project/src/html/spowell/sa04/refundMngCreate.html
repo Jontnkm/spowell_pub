@@ -1,0 +1,436 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>
+                <span>지급계획 건에 대한 '지급보류' 처리 할 체육인을 조회하세요.</span>
+            </p>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">조회</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td>홍길동</td>
+                    <th>주민등록번호</th>
+                    <td>000000-0000000</td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>장애여부</th>
+                    <td>비장애</td>
+                    <th>대상구분</th>
+                    <td>선수</td>
+                    <th>종목</th>
+                    <td>종목명</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="divGrid">
+        <div class="gleft">
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">환수대상금액 내역</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">   
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>지급구분 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">정기지급</label></div>
+                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">일회성지급</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>지원사업 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>환수금액 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText frmLg">
+                                </div>
+                                <div class="textBox Deco">월 단위 정기지급은 월 지급 금액을 입력</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>처분확정일자 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText frmLg" id="datepicker3">
+                                    </div>
+                                </div>
+                                <div class="textBox Deco">환수금액 신청 시작일자</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>지급중지일자 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText frmLg" id="datepicker3">
+                                    </div>
+                                </div>
+                                <div class="textBox Deco">환수금액 신청 시작일자</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>일일신청금액</th>
+                            <td>
+                                <span>00,000</span>원<br>
+                                * &lt;일일금액 = 환수금액 - 해당월 일 수&gt;
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>환수대상기간</th>
+                            <td>
+                                <span>00</span>개월<span>00</span>일<br>
+                                * (지급중지월 - 처분확정월)개월 (처분확정월의 말일 - 처분확정일)일
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>환수대상금액</th>
+                            <td>
+                                <span>000,000,000</span>원<br>
+                                * (월 환수금액 x 개월) + (일일금액 x 일수)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td>
+                                <textarea name="" id="" class="textArea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>지급구분 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">정기지급</label></div>
+                                <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">일회성지급</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>지원사업 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>환수금액 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText frmLg">
+                                </div>
+                                <div class="textBox Deco">환수대상금액</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>지급일자 <span class="required">*</span></th>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText frmLg" id="datepicker3">
+                                    </div>
+                                </div>
+                                <div class="textBox Deco">일회성지급인 경우 지급일자</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td>
+                                <textarea name="" id="" class="textArea"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="gRight">
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">지급환수계획 및 결과</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:25%">   
+                        <col style="width:25%">   
+                        <col style="width:25%">   
+                        <col style="width:25%">   
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>환수대상금액</th>
+                            <th>환수회차</th>
+                            <th>환수완료금액</th>
+                            <th>환수잔여금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="right">
+                                <span>000,000</span>원
+                            </td>
+                            <td>
+                                <span>2</span> / <span>4</span>
+                            </td>
+                            <td class="right">
+                                <span>000,000</span>원
+                            </td>
+                            <td class="right">
+                                <span>000,000</span>원
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:auto">
+                        <col style="width:23%">
+                        <col style="width:23%">
+                        <col style="width:23%">
+                        <col style="width:23%">
+                    </colgroup>
+                
+                    <thead>
+                        <tr>
+                            <th rowspan="2">회차</th>
+                            <th colspan="2">환수계획</th>
+                            <th colspan="2">환수결과</th>
+                        </tr>
+                        <tr class="scndLine">
+                            <th>예정일자</th>
+                            <th>예정금액</th>
+                            <th>납부일자</th>
+                            <th>납부금액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">1</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">2</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">3</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">4</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText" id="datepicker3">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>원</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="soloAlign alignR">
+                <button type="button" class="soloBtn bLine">추가</button>
+                <button type="button" class="soloBtn gLine">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

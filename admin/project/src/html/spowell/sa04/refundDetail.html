@@ -1,0 +1,193 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>
+                <span>지급계획 건에 대한 '지급보류' 처리 할 체육인을 조회하세요.</span>
+            </p>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">조회</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 기본정보</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>성명</th>
+                    <td>홍길동</td>
+                    <th>주민등록번호</th>
+                    <td>000000-0000000</td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>장애여부</th>
+                    <td>비장애</td>
+                    <th>대상구분</th>
+                    <td>선수</td>
+                    <th>종목</th>
+                    <td>종목명</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">지급계획현황</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:100px">
+                <col style="width:auto">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+                <col style="width:200px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>지원사업구분</th>
+                    <th>확정일자</th>
+                    <th>지급항목</th>
+                    <th>지급금액</th>
+                    <th>지급시작</th>
+                    <th>지급종료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">3</td>
+                    <td class="center">경기력성과포상금</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="center"><span>1,000,000</span>원</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">YYYY-MM-DD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="textBox clar">체육인에 대한 지급이 계획된 정보입니다.</div>
+
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>
+                <span>위 지급계획에 대해 아래와 같이 지급을 보류처리 합니다.</span>
+            </p>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:auto;">
+                <col style="width:200px;">
+                <col style="width:200px;">
+                <col style="width:500px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>지급보류사유 <span class="required">*</span></th>
+                    <th>지급보류시작 <span class="required">*</span></th>
+                    <th>지급보류종료 <span class="required">*</span></th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">주민등록 말소</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">사망추정</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">1년 이상 행방불명</label></div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>
