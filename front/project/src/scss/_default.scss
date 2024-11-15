@@ -24,98 +24,70 @@
 
 /* 본고딕 Thin */
 @font-face {
-    font-family: "NotoSansCJKkr";
+    font-family: "Pretendard GOV";
     font-style: normal;
     font-weight: 200;
-    src: url("../../common/webfont/NotoSansKR-Thin.woff") format("font-woff"),
-      url("../../common/webfont/NotoSansKR-Thin.woff2") format("font-woff2"),
-      url("../../common/webfont/NotoSansKR-Thin.otf") format("opentype");   
+    src: url("../../common/webfont/PretendardGOV-Thin.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-Thin.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-Thin.otf") format("opentype");   
   }
   /* 본고딕 Light */
   @font-face {
-    font-family: "NotoSansCJKkr";
+    font-family: "Pretendard GOV";
     font-style: normal;
     font-weight: 300;
-    src: url("../../common/webfont/NotoSansKR-Light.woff") format("font-woff"),
-      url("../../common/webfont/NotoSansKR-Light.woff2") format("font-woff2"),
-      url("../../common/webfont/NotoSansKR-Light.otf") format("opentype");
+    src: url("../../common/webfont/PretendardGOV-Light.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-Light.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-Light.otf") format("opentype");
       
   }
   /* 본고딕 Regular */
   @font-face {
-    font-family: "NotoSansCJKkr";
+    font-family: "Pretendard GOV";
     font-style: normal;
     font-weight: 400;
-    src: url("../../common/webfont/NotoSansKR-Regular.woff") format("font-woff"),
-      url("../../common/webfont/NotoSansKR-Regular.woff2") format("font-woff2"),
-      url("../../common/webfont/NotoSansKR-Regular.otf") format("opentype");
+    src: url("../../common/webfont/PretendardGOV-Regular.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-Regular.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-Regular.otf") format("opentype");
   }
   /* 본고딕 Medium */
   @font-face {
-    font-family: "NotoSansCJKkr";
+    font-family: "Pretendard GOV";
     font-style: normal;
     font-weight: 500;
-    src: url("../../common/webfont/NotoSansKR-Medium.woff") format("font-woff"),
-      url("../../common/webfont/NotoSansKR-Medium.woff2") format("font-woff2"),
-      url("../../common/webfont/NotoSansKR-Medium.otf") format("opentype");
+    src: url("../../common/webfont/PretendardGOV-Medium.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-Medium.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-Medium.otf") format("opentype");
   }
   /* 본고딕 Bold */
   @font-face {
-    font-family: "NotoSansCJKkr";
+    font-family: "Pretendard GOV";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../common/webfont/PretendardGOV-SemiBold.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-SemiBold.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-SemiBold.otf") format("opentype");
+  }
+  /* 본고딕 Bold */
+  @font-face {
+    font-family: "Pretendard GOV";
     font-style: normal;
     font-weight: 700;
-    src: url("../../common/webfont/NotoSansKR-Bold.woff") format("font-woff"),
-      url("../../common/webfont/NotoSansKR-Bold.woff2") format("font-woff2"),
-      url("../../common/webfont/NotoSansKR-Bold.otf") format("opentype");
+    src: url("../../common/webfont/PretendardGOV-Bold.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-Bold.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-Bold.otf") format("opentype");
+  }
+  /* 본고딕 Bold */
+  @font-face {
+    font-family: "Pretendard GOV";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../../common/webfont/PretendardGOV-ExtraBold.woff") format("font-woff"),
+      url("../../common/webfont/PretendardGOV-ExtraBold.woff2") format("font-woff2"),
+      url("../../common/webfont/PretendardGOV-ExtraBold.otf") format("opentype");
   }
 
-  /*==========================================roboto==========================================*/
-  @font-face {
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 200;
-    src: url("../../common/webfont/Roboto-Thin.woff") format("font-woff"),
-      url("../../common/webfont/Roboto-Thin.woff2") format("font-woff2"),
-      url("../../common/webfont/Roboto-Thin.otf") format("opentype");   
-  }
-  /* 본고딕 Light */
-  @font-face {
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 300;
-    src: url("../../common/webfont/roboto-Light.woff") format("font-woff"),
-      url("../../common/webfont/roboto-Light.woff2") format("font-woff2"),
-      url("../../common/webfont/roboto-Light.otf") format("opentype");
-      
-  }
-  /* 본고딕 Regular */
-  @font-face {
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../../common/webfont/roboto-Regular.woff") format("font-woff"),
-      url("../../common/webfont/roboto-Regular.woff2") format("font-woff2"),
-      url("../../common/webfont/roboto-Regular.otf") format("opentype");
-  }
-  /* 본고딕 Medium */
-  @font-face {
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../../common/webfont/roboto-Medium.woff") format("font-woff"),
-      url("../../common/webfont/roboto-Medium.woff2") format("font-woff2"),
-      url("../../common/webfont/roboto-Medium.otf") format("opentype");
-  }
-  /* 본고딕 Bold */
-  @font-face {
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../../common/webfont/roboto-Bold.woff") format("font-woff"),
-      url("../../common/webfont/roboto-Bold.woff2") format("font-woff2"),
-      url("../../common/webfont/roboto-Bold.otf") format("opentype");
-  }
-* {box-sizing: border-box; font-family:'NotoSansCJKkr', sans-serif; letter-spacing: -0.4px;}
+* {box-sizing: border-box; font-family:'Pretendard GOV', sans-serif; letter-spacing: -0.4px;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
 fieldset,img {border:0 none; display:block;}
 dl,ul,ol,menu,li {list-style:none}
