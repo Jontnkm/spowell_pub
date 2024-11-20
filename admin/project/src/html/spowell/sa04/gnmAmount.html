@@ -22,31 +22,44 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>접수일시</th>
-                    <td class="left">
+                    <th>
+                        조회기간
+                    </th>
+                    <td class="left" colspan="3">
                         <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">접수일시</option>
+                                <option value="">승인일시</option>
+                            </select>
+                        
                             <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월단위</label></div>
                             <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">기간단위</label></div>
-                            <select name="" id="" class="iptSlt frmSm">
-                                <option value="">2024년</option>
-                                <option value=""></option>
-                            </select>
-                            <select name="" id="" class="iptSlt frmSm">
-                                <option value="">2024년</option>
-                                <option value=""></option>
-                            </select>
+
+                            <div>
+                                <select name="" id="" class="iptSlt frmSm">
+                                    <option value="">2024년</option>
+                                    <option value=""></option>
+                                </select>
+                                <select name="" id="" class="iptSlt frmSm">
+                                    <option value="">2024년</option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <div class="frmGroup">
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText">
+                                    </div>
+                                    <div class="textBox Deco">-</div>
+                                    <div class="iptDate">
+                                        <input type="text" class="iptText">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </td>
-                    <th>승인일시</th>
-                    <td class="left">
-                        <div class="frmGroup">
-                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월단위</label></div>
-                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">기간단위</label></div>
-                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
-                            <div class="textBox deco">~</div>
-                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
-                        </div>
-                    </td>
+                    
                 </tr>
                 <tr>
                     <th>부적정 사용</th>
@@ -105,12 +118,10 @@
         지원금액 총 합계 : 2,405,831,104
     </p>
     <!-- 그리드 -->
-    <div class="cptGrid withScroll">
+    <div class="cptGrid">
         <table class="gridTb">
             <colgroup>
-                <col style="width:150px;">
-                <col style="width:100px;">
-                <col style="width:150px;">
+                <col style="width:200px;">
                 <col style="width:120px;">
                 <col style="width:100px;">
                 <col style="width:100px;">
@@ -119,14 +130,16 @@
                 <col style="width:100px;">
                 <col style="width:120px;">
                 <col style="width:200px;">
-                <col style="width:200px;">
+                <col style="width:auto;">
                 <col style="width:80px;">
             </colgroup>
             <thead>
                 <tr>
-                    <th>카드소유자번호</th>
+                    <!-- 2024.11.18 통합 -->
+                    <!-- <th>카드소유자번호</th>
                     <th>카드소유자명</th>
-                    <th>하나카드고객번호</th>
+                    <th>하나카드고객번호</th> -->
+                    <th>카드정보</th>
                     <th>승인일자</th>
                     <th>승인금액</th>
                     <th>승인번호</th>
@@ -141,9 +154,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>202204270015716</td>
-                    <td>홍길동</td>
-                    <td>10066127807</td>
+                    <td class="left">
+                        <span>202204270015716</span><br>
+                        <span>홍길동</span><br>
+                        <span>10066127807</span>
+                    </td>
                     <td>YYYY-MM-DD</td>
                     <td>400,000</td>
                     <td>30658007</td>

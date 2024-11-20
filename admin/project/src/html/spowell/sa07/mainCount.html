@@ -1,0 +1,137 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th rowspan="2 ">타이틀</th>
+                    <td>
+                        <span>첫째줄</span>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="1970년대부터 지금까지 10,000여 명 이상의 체육인을 지원하고 있습니다.">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>둘째줄</span>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="1970년대부터 지금까지 10,000여 명 이상의 체육인을 지원하고 있습니다.">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class="textBox">첫째줄과 둘째줄을 나눠입력하시면 두줄로 표현되며, 첫째줄만 입력 시 한줄로 표현됩니다. </div> -->
+    <br>
+    <br>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:250px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>영역</th>
+                    <th>제목</th>
+                    <th>인원</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">현황1</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="2024년 국가대표선수 포상금 지원 인원">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="1,747">
+                        </div>
+                        <span>※ 숫자만 입력 가능합니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">현황2</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="2024년 교육지원금 지원 인원">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="145">
+                        </div>
+                        <span>※ 숫자만 입력 가능합니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">현황3</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="2024년 체육장학금 지원 인원">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="625">
+                        </div>
+                        <span>※ 숫자만 입력 가능합니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">현황4</td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="2024년 스포츠꿈나무 특기장려금 지원 인원">
+                        </div>
+                        <span>※ 최대 20자까지 입력 가능합니다.</span>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" value="1,515">
+                        </div>
+                        <span>※ 숫자만 입력 가능합니다.</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

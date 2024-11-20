@@ -1,34 +1,20 @@
 /* ---------------------------------------- 기본 레이아웃 ---------------------------------------- */
 
-html, body {
-    width:100%;
-    .wrap {
-        padding-bottom:0;
-    }
-    @include media ('mobile'){
-        .wrap {padding-bottom:23vw;}
-    }
-}
 .lytLayout{
     width:100%;
 
     .layoutArea {
         width:100%;
 
+        .mainLayout {
+            background:#F5F6F8;
+        }
         .layoutTop{
             width:100%;
         }
 
         .layoutContainer {
-            width:100%; max-width:1320px; margin:90px auto 0; min-height:calc(100vh - 474px);
-
-            @include media('tablet'){
-                padding: 0 15px;  margin:40px auto 0; min-height:auto;
-            }
-
-            &.galleryLayout, &.experience {
-                max-width:none;
-            }
+            width:100%;
 
             .layoutMainCont{
                 width:100%;
@@ -40,21 +26,20 @@ html, body {
                 width:100%;
             }
             .subContArea{
-                width:1440px; padding:0 20px; margin:0 auto; display:flex; flex-wrap: wrap;
+                width:100%; max-width:1280px; margin:0 auto;
             }
             .layoutNav{
-                width:360px; min-width:360px; padding-right:100px;
+                
             }
             .layoutCont{
-                width:calc(100% - 360px); margin-top: 80px;
+                
             }
-            .layoutFloat {width: 100%;}
+            .layoutFloat {
+
+            }
         }
         .layoutFooter{
-            width:100%; margin-top:120px;
-            &.main {
-                margin-top:0;
-            }
+            
         }
     }
 }

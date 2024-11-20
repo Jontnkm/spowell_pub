@@ -1,0 +1,455 @@
+ <!-- Header -->
+ <%- include('./ejs/top.ejs', {
+    title: "SPOWELL-체육인복지지원",
+    url: "../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('./ejs/header.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+        <div class="mainLayout" id="container">
+            <div class="mainCont01">
+
+                <div class="mainVisual">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" tabindex="0"><img src="../images/main/mainCont01_vs01.png" alt="국가대표 선수 및 지도자 - 국내대학원 교육지원금 대상자 모집 (국내대학원 진학 시 학기당 300만원 범위내의 입학금 및 등록금 지원) 2025년 03월 10일부터 2025년 03월 31일까지"></div>
+                        <div class="swiper-slide" tabindex="0"><img src="../images/main/mainCont01_vs01.png" alt="국가대표 선수 및 지도자 - 국내대학원 교육지원금 대상자 모집 (국내대학원 진학 시 학기당 300만원 범위내의 입학금 및 등록금 지원) 2025년 03월 10일부터 2025년 03월 31일까지"></div>
+                        <div class="swiper-slide" tabindex="0"><img src="../images/main/mainCont01_vs01.png" alt="국가대표 선수 및 지도자 - 국내대학원 교육지원금 대상자 모집 (국내대학원 진학 시 학기당 300만원 범위내의 입학금 및 등록금 지원) 2025년 03월 10일부터 2025년 03월 31일까지"></div>
+                    </div>
+                    
+                    <div class="pagination_container">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination2"></div>
+                    </div>
+
+                    <div class="mainControl">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-playStop" tabindex="0">
+                            <span class="hidden status">일시정지</span>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                
+                <div class="serviceArea">
+                    <div class="inner">
+                        <div class="title">
+                            <p>
+                                <span>주요 서비스</span><br>바로가기
+                            </p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#none" class="ico ico01"><span>신청기간<br>알림예약</span></a></li>
+                                <li><a href="#none" class="ico ico02"><span>체육인복지<br>공지</span></a></li>
+                                <li><a href="#none" class="ico ico03"><span>신청기간<br>알림예약</span></a></li>
+                                <li><a href="#none" class="ico ico04"><span>은퇴선수<br>직업안정</span></a></li>
+                                <li><a href="#none" class="ico ico05"><span>나의 체육인<br>지원금 조회</span></a></li>
+                                <li><a href="#none" class="ico ico06"><span>신청 서류<br>자료실</span></a></li>
+                                <li><a href="#none" class="ico ico07"><span>증명서<br>발급</span></a></li>
+                                <li><a href="#none" class="ico ico08"><span>경기력<br>성과포상금</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainCont02">
+                <p class="title">체육인 대상별 복지지원</p>
+                <div class="remote">
+                    <div class="leftArea">
+                        <ul>
+                            <li><a href="#none" class="tab01 active">공지사항</a></li>
+                            <li><a href="#none" class="tab02">체육인복지 소식</a></li>
+                            <li><a href="#none" class="tab03">보도자료</a></li>
+                            <li><a href="#none" class="tab04">원로체육인 체육유공자</a></li>
+                        </ul>
+                    </div>
+                    <div class="rightArea">
+                        <a href="#none" class="seeMore">
+                            <span class="hidden">더보기</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="supportSlide">
+                    <div class="slideInner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="flag type01">국가대표</span>
+                                <p class="title">경기력 성과포상금</p>
+                                <p class="desc">
+                                    주요 국제대회에 참가하여 포상금 평가점수 20점 이상 획득한 선수
+                                </p>
+                                <p class="ammount">
+                                    매달 최대 <span>100</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type02">은퇴(예정선수)</span>
+                                <p class="title">스포츠클럽 창업 지원</p>
+                                <p class="desc">
+                                    경력 전환을 희망하는 은퇴(예정) 선수
+                                </p>
+                                <p class="ammount">
+                                    <span>4,000</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type03">학생선수</span>
+                                <p class="title">체육장학금</p>
+                                <p class="desc">
+                                    전국 규모대회에서 3위 이상 상위 입상한 학생선수
+                                </p>
+                                <p class="ammount">
+                                    <span>30~200</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type04">원로체육인</span>
+                                <p class="title">원로체육인 지원</p>
+                                <p class="desc">
+                                    체육진흥의 공로가 있는 60세 이상의 원로체육인
+                                </p>
+                                <p class="ammount">
+                                    최대 <span>4,000</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type01">국가대표</span>
+                                <p class="title">경기력 성과포상금</p>
+                                <p class="desc">
+                                    주요 국제대회에 참가하여 포상금 평가점수 20점 이상 획득한 선수
+                                </p>
+                                <p class="ammount">
+                                    매달 최대 <span>100</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type02">은퇴(예정선수)</span>
+                                <p class="title">스포츠클럽 창업 지원</p>
+                                <p class="desc">
+                                    경력 전환을 희망하는 은퇴(예정) 선수
+                                </p>
+                                <p class="ammount">
+                                    <span>4,000</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type03">학생선수</span>
+                                <p class="title">체육장학금</p>
+                                <p class="desc">
+                                    전국 규모대회에서 3위 이상 상위 입상한 학생선수
+                                </p>
+                                <p class="ammount">
+                                    <span>30~200</span> 만원
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="flag type04">원로체육인</span>
+                                <p class="title">원로체육인 지원</p>
+                                <p class="desc">
+                                    체육진흥의 공로가 있는 60세 이상의 원로체육인
+                                </p>
+                                <p class="ammount">
+                                    최대 <span>4,000</span> 만원
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button prevBtn">
+                        <a href="#none" class="swiper-button-prev"></a>
+                    </div>
+                    <div class="swiper-button nextBtn">
+                        <a href="#none" class="swiper-button-next"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainCont03">
+                <div class="calendarInner">
+                    <div class="leftArea">
+                        <div class="cal-pagination"></div>
+                        <p class="title">2025년도<br>연간일정</p>
+                        <a href="#none" class="reservAlarm">신청 알림 예약</a>
+                    </div>
+                    <div class="rightArea">
+                        <div class="inner">
+                            <div class="calSlide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!--1월부터 6월-->
+                                        <div class="schedule">
+                                            <div class="jan">
+                                                <div class="month">
+                                                    <span>1월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post alltime type01 first">
+                                                        <span class="edge"></span>
+                                                        연간 상시접수 | 경기력 성과포상금(선수/지도자) · 체육유공자지원 · 국가대표 보험지원금
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="feb">
+                                                <div class="month">
+                                                    <span>2월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post type02 second mon3">
+                                                        <span class="edge"></span>
+                                                        생활지원금 공고
+                                                    </div>
+                                                    <div class="post type02 third">
+                                                        <span class="edge"></span>
+                                                        국내대학 교육지원금 1차
+                                                    </div>
+                                                    <div class="post type02 fourth">
+                                                        <span class="edge"></span>
+                                                        원로체육인 지원
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mar">
+                                                <div class="month">
+                                                    <span>3월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post type01 fifth">
+                                                        <span class="edge"></span>
+                                                        스포츠꿈나무 특기장려금
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apr">
+                                                <div class="month">
+                                                    <span>4월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="may">
+                                                <div class="month">
+                                                    <span>5월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="jun">
+                                                <div class="month">
+                                                    <span>6월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!--7월부터 12월-->
+                                        <div class="schedule">
+                                            <div class="jul">
+                                                <div class="month">
+                                                    <span>7월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post alltime type01 first">
+                                                        <span class="edge"></span>
+                                                        연간 상시접수 | 경기력 성과포상금(선수/지도자) · 체육유공자지원 · 국가대표 보험지원금 
+                                                    </div>
+                                                    <div class="post type02 second">
+                                                        <span class="edge"></span>
+                                                        국외대학 교육지원금
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="aug">
+                                                <div class="month">
+                                                    <span>8월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post type01 third">
+                                                        <span class="edge"></span>
+                                                        국내대학 교유지원금 2차
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sep">
+                                                <div class="month">
+                                                    <span>9월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="oct">
+                                                <div class="month">
+                                                    <span>10월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    <div class="post type02 fourth">
+                                                        <span class="edge"></span>
+                                                        체육장학금
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nov">
+                                                <div class="month">
+                                                    <span>11월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="dec">
+                                                <div class="month">
+                                                    <span>12월</span>
+                                                </div>
+                                                <div class="calBox">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainCont04">
+                <div class="inner">
+                    <p class="title line01">1970년대부터 지금까지</p>
+                    <p class="title line02">10,000여 명 이상의 체육인을 지원하고 있습니다.</p>
+
+                    <div class="countBox">
+                        <ul>
+                            <li class="col01">
+                                <p class="txt">2024년 국가대표선수 포상금 지원 인원</p>
+                                <p class="count">
+                                    <span>1,747</span> 명
+                                </p>
+                            </li>
+                            <li class="col02">
+                                <p class="txt">2024년 교육지원금 지원 인원</p>
+                                <p class="count">
+                                    <span>145</span> 명
+                                </p>
+                            </li>
+                            <li class="col03">
+                                <p class="txt">2024년 체육장학금 지원 인원</p>
+                                <p class="count">
+                                    <span>625</span> 명
+                                </p>
+                            </li>
+                            <li class="col04">
+                                <p class="txt">2024년 스포츠꿈나무 특기장려금 지원 인원</p>
+                                <p class="count">
+                                    <span>1,515</span> 명
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainCont05">
+                <div class="inner">
+                    <div class="leftArea">
+                        <p>
+                            <span>주요 복지사업</span><br>바로가기
+                        </p>
+                    </div>
+                    <div class="rightArea">
+                        <div class="businessSlide">
+                            <div class="slideInner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico01">
+                                            <span>스포츠클럽<br>창업지원금</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico02">
+                                            <span>경기력<br>성과포상금</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico03">
+                                            <span>생활<br>지원금</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico04">
+                                            <span>교육<br>지원금</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico05">
+                                            <span>체육<br>장학금</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico06">
+                                            <span>보험공제</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico07">
+                                            <span>원로<br>체육인</span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#none" class="ico ico08">
+                                            <span>대한민국<br>체육유공자</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button prevBtn">
+                                <a href="#none" class="swiper-button-prev02"></a>
+                            </div>
+                            <div class="swiper-button nextBtn">
+                                <a href="#none" class="swiper-button-next02"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainCont06">6</div>
+        </div>
+        <!-- 하단영역 -->
+        <div class="layoutFooter main">
+            <!-- Footer -->
+            <%- include('./ejs/footer.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+        <!-- 상단영역 -->
+        <div class="layoutQuick">
+            <!-- Top -->
+            <%- include('./ejs/quick.ejs', {
+                url: "../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('./ejs/bottom.ejs', { }) %>

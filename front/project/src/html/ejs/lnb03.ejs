@@ -1,0 +1,105 @@
+<%
+var depth2 = locals.depth2 ? locals.depth2 : 1;
+var depth3 = locals.depth3 ? locals.depth3 : 0;
+var url = locals.url ? locals.url : '../../';
+var depth2P = [];
+var depth3P = [];
+for(var i=1;i<=6;i++){
+    depth3P[i] = [];
+    if(depth2==i){
+        depth2P[i] = ' active';
+        for(var j=1;j<=6;j++){
+            if(depth3==j){
+                depth3P[i][j] = ' active';
+            }else{
+                depth3P[i][j] = '';
+            }
+        }
+    }else{ 
+        depth2P[i] = "";
+        for(var j=1;j<=6;j++){
+            depth3P[i][j] = '';
+        }
+    }
+}
+%>
+<div class="cptLnb">
+    <div class="lnbArea">
+        <h2 class="h2title">고객센터</h2>
+        <ul class="depth2Group">
+            <li class="depth2Menu<%= depth2P[1] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">공지사항</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[2] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/help/faq.html" class="depth2Link">자주하는 질문</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[3] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/help/search_loan_adviser.html" class="depth2Link">전화권유판매원 검색</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[4] %>">
+                <h3 class="depth2Name"><a href="<%= url %>html/help/promotion.html" class="depth2Link">광고자료</a></h3>
+            </li>
+            <li class="depth2Menu<%= depth2P[5] %> add" data-height="0"> <!-- addClass - add : 하위 메뉴가 있음 -->
+                <h3 class="depth2Name"><a href="<%= url %>html/help/terms-policy/terms_service.html" class="depth2Link">약관 및 정책</a></h3>
+                <ul class="depth3Group">
+                    <li class="depth3Menu<%= depth3P[5][1] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/terms_service.html" class="depth3Link">서비스 이용약관</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][2] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/terms_loan.html" class="depth3Link">대출거래 표준약관</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][3] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/terms_credit_loan.html" class="depth3Link">금융상품 약관 및 상품 설명서</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][4] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/policy_privacy.html" class="depth3Link">개인정보처리방침</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][5] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/policy_3rd.html" class="depth3Link">제3자 제공현황 및 업무위탁현황</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][6] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/policy_customer_rights.html" class="depth3Link">신용정보활용체계 및 고객권리 안내</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][7] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/disclaimer_disclaimer.html" class="depth3Link">책임의 한계와 법적 고지</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][8] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/process_debt.html" class="depth3Link">채권추심 업무처리 절차</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][9] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/response_tips.html" class="depth3Link">불법채권추심대응요령</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[5][10] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/terms-policy/statute_of_limitations.html" class="depth3Link">소멸시효완성채권추심관련안내</a></h4>
+                    </li>
+                </ul>
+            </li>
+            <li class="depth2Menu<%= depth2P[6] %> add" data-height="0"> <!-- addClass - add : 하위 메뉴가 있음 -->
+                <h3 class="depth2Name"><a href="<%= url %>html/help/consumer/protection_guide.html" class="depth2Link">금융소비자 안내</a></h3>
+                <ul class="depth3Group">
+                    <li class="depth3Menu<%= depth3P[6][1] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/protection_guide.html" class="depth3Link">금융소비자 보호 안내</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][2] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/cancellation_guide.html" class="depth3Link">대출계약철회안내</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][3] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/illegal_guide.html" class="depth3Link">위법계약해지권 안내</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][4] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/use_provision_guide_01.html" class="depth3Link">(마케팅목적) 이동제공 현황</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][5] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/credit_info_guide.html" class="depth3Link">신용정보 이용제공</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][6] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/view_deletion_request.html" class="depth3Link">개인정보 및 신용정보 열람 정정 삭제 청구</a></h4>
+                    </li>
+                    <li class="depth3Menu<%= depth3P[6][7] %>">
+                        <h4 class="depth3Name"><a href="<%= url %>html/help/consumer/correction_guide.html" class="depth3Link">개인신용평가 및 기초정보정정안내</a></h4>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

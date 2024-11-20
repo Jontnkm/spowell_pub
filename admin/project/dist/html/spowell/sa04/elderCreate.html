@@ -203,7 +203,17 @@
         </ul>
     </div>
 </div>
-    
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>사업년도 <span class="required">*</span></p>
+            <div class="frmGroup">
+                <select name="" id="" class="iptSlt frmMd">
+                    <option value="">2024년</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
     <!-- 작은 타이틀 -->
     <div class="comSmTit">
         <div class="alignL">
@@ -219,7 +229,7 @@
             </div>
         </div> -->
     </div>
-
+    
     <div class="cptTable">
         <table class="tbView">
             <colgroup>
@@ -231,20 +241,6 @@
                 <col style="width:auto;">
             </colgroup>
             <thead>
-                <tr>
-                    <th>장애여부 <span class="required">*</span></th>
-                    <td>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">장애</label></div>
-                    </td>
-                    <th>대상구분 <span class="required">*</span></th>
-                    <td>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">선수</label></div>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">지도자</label></div>
-                    </td>
-                    <th>등록번호</th>
-                    <td>00000</td>
-                </tr>
                 <tr>
                     <th>이름 <span class="required">*</span></th>
                     <td>
@@ -260,6 +256,22 @@
                             <input type="text" class="iptText">
                             <button type="button" class="soloBtn bLine">번호확인</button>
                         </div>
+                    </td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>대상구분 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">선수</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">지도자</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">심판</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">기타</label></div>
+                    </td>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">장애</label></div>
                     </td>
                     <th>종목 <span class="required">*</span></th>
                     <td>
@@ -283,30 +295,35 @@
                             <input type="text" class="iptText">
                         </div>
                     </td>
-                    <th>은행계좌 <span class="required">*</span></th>
+                    <th>이메일 <span class="required">*</span></th>
                     <td>
                         <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value="">선택</option>
-                            </select>
                             <input type="text" class="iptText">
-                            <button type="button" class="soloBtn bLine">계좌확인</button>
+                            <div class="textBox Deco">@</div>
+                            <input type="text" class="iptText">
                         </div>
                     </td>
-                    <th>종목 <span class="required">*</span></th>
+                    <th>국가대표 경력 <span class="required">*</span></th>
                     <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">예</label></div>
+                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">아니요</label></div>
                     </td>
                 </tr>
                 <tr>
                     <th>주소</th>
                     <td colspan="3">
-                        서울특별시 동대문구 사가정로 148 전농 sk 아파트 203동 1803호
+                        <div class="frmGroup">
+                            <button type="button" class="soloBtn bLine">주소검색</button>
+                            <input type="text" class="iptText">
+                            <input type="text" class="iptText">
+                        </div>
                     </td>
-                    <th>포털ID</th>
-                    <td>member_id</td>
+                    <th>소속</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
                 </tr>
             </thead>
         </table>
@@ -392,6 +409,18 @@
                             <td>비고</td>
                             <td>
                                 <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value=""></option>
+                                    </select>
+                                    <input type="text" class="iptText">
+                                    <button type="button" class="soloBtn bLine">확인</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>비고</td>
+                            <td>
+                                <div class="frmGroup">
                                     <textarea name="" id="" class="textArea areaMd"></textarea>
                                 </div>
                             </td>
@@ -399,12 +428,171 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">정량평가</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                        <col style="width:20%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>체육진흥의 공</th>
+                            <th>소득수준</th>
+                            <th>연간 의료비 수준</th>
+                            <th>투병기간</th>
+                            <th>합계</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>점</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>점</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>점</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <span>점</span>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <span>00</span>점
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div class="frmGroup">
+                    <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">원로체육인지원, 경기력 성과포상금 수혜 대상자</label></div>
+                </div>
+            </div>
         </div>
         <div class="gRight">
-            <!-- 작은 타이틀 -->
             <div class="comSmTit">
                 <div class="alignL">
                     <div class="title">제출서류</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                        <col style="width:150px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>제출서류명</th>
+                            <th>확인</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center" rowspan="5">
+                                공통
+                            </td>
+                            <td>지급신청서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>개인정보수집이용동의서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>공적입증자료</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>가족관계증명서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>예금통장사본</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="center" rowspan="3">선택 의료비</td>
+                            <td>진단서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>의료비 확인자료</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>장애인증명서 &lt;해당자&gt;</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="center" rowspan="3">선택 생계비</td>
+                            <td>기초생활 수급자 증명서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>차상위계층 증명서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>소득금액증명서</td>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl"></label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 작은 타이틀 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    
                 </div>
                 <div class="alignR">
                     <button type="button" class="soloBtn bLine">추가</button>
@@ -422,6 +610,7 @@
                             <th>번호</th>
                             <th>제출서류구분</th>
                             <th>첨부파일</th>
+                            <th>비고</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -442,6 +631,11 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="center">2</td>
@@ -460,6 +654,11 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="center">3</td>
@@ -476,6 +675,11 @@
                                             <button class="fileDel">삭제</button>
                                         </div>
                                     </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
                                 </div>
                             </td>
                         </tr>
@@ -502,21 +706,14 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
-    <br>
-    
-    <div class="listDescription">
-        <div class="horizonLyt">
-            <p>사업년도 <span class="required">*</span></p>
-            <div class="frmGroup">
-                <select name="" id="" class="iptSlt frmMd">
-                    <option value="">2024년</option>
-                </select>
             </div>
         </div>
     </div>
