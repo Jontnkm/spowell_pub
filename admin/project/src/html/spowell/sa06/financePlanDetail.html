@@ -35,7 +35,7 @@
                             <input type="text">
                         </div>
                     </td>
-                    <th>문체부승인</th>
+                    <!-- <th>문체부승인</th>
                     <td>
                         <div class="frmGroup">
                             <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker2"></div>
@@ -55,19 +55,21 @@
                                 </div>
                             </div>
                         </div>
-                    </td>
+                    </td> -->
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="txtBox clar">사업년도별 복지예산에 대한 기본정보 및 처리상태, 문체부 승인결과 자료를 등록하세요.</div>
-
-    <div class="comSmTit">
-        <div class="alignL">
-            <div class="title">사업별 예산계획</div>
-        </div>
+    <br>
+    <div class="modTab "> <!-- addClass - in : 페이지 내 컨텐츠가 교체, out : 페이지 링크 -->
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">사업별 예산계획</a></li>
+            <li class="item "><a href="#">사업기간 및 신청기간</a></li>
+        </ul>
     </div>
-
+    <br>
+    <div class="txtBox clar">복지사업별 연간 예산 및 인원 계획정보와, 문체부 승인 자료를 등록하세요.</div>
+    <br>
     <div class="cptTable">
         <table class="tbView">
             <colgroup>
@@ -400,7 +402,7 @@
                 </tr>
 
                 <tr>
-                    <td rowspan="5" class="center">장학사업</td>
+                    <td rowspan="3" class="center">장학사업</td>
                     <td>체육장학금</td>
                     <td></td>
                     <td>
@@ -431,8 +433,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td rowspan="3">스포츠꿈나무 특기장려금</td>
-                    <td>장학금</td>
+                    <td>스포츠꿈나무 특기장려금</td>
+                    <td></td>
                     <td>
                         <div class="frmGroup">
                             <input type="text">원
@@ -459,56 +461,6 @@
                     <td class="right">
                         <span></span>명
                     </td>
-                </tr>
-                <tr>
-                    <td>운영비</td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text">원
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text">명
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text">원
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text">명
-                        </div>
-                    </td>
-                    <td class="right">
-                        <span></span>원
-                    </td>
-                    <td class="right">
-                        <span></span>명
-                    </td>
-                </tr>
-                <tr>
-                    <th>계</th>
-                    <th class="right">
-                        <span></span>원
-                    </th>
-                    <th class="right">
-                        <span></span>명
-                    </th>
-                    <th class="right">
-                        <span></span>원
-                    </th>
-                    <th class="right">
-                        <span></span>명
-                    </th>
-                    <th class="right">
-                        <span></span>원
-                    </th>
-                    <th class="right">
-                        <span></span>명
-                    </th>
                 </tr>
                 <tr>
                     <th colspan="2">소계</th>
@@ -704,7 +656,48 @@
         </table>
     </div>
     
-
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto">
+                <col style="width:150px">
+                <col style="width:auto">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>
+                        문체부승인일자
+                    </th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText">
+                            </div>
+                        </div>
+                    </td>
+                    <th>
+                        증빙자료
+                    </th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                            <div class="textBox clar"> * 이미지크기: 가로 000 x 세로 000</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- 그리드/테이블 하단 버튼 -->
     <div class="cptGroupBtm alignR">
         <div class="comSideOpt">

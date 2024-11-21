@@ -3,7 +3,7 @@
     width:100%; max-width:1920px; margin:0 auto; position:relative; z-index:1;
 
     > .mainVisual {
-        width:100%; position:relative; border-radius: 0 0 0 250px; background:#fff; overflow:hidden;
+        width:100%; position:relative; border-radius: 0 0 0 250px; background:var(--bg3); overflow:hidden;
         .swiper-wrapper {
             .swiper-slide {
                 height:600px; 
@@ -14,14 +14,14 @@
             position:absolute; bottom:220px; left:50%; transform:translateX(-50%); display: flex; align-items: center; z-index:3; gap:12px; margin-left:-485px;
             > .swiper {
                 &-pagination {
-                    position: relative; width: 33px; bottom: auto; font-size:16px; color:#fff; font-weight:400;
+                    position: relative; width: 33px; bottom: auto; font-size:16px; color:var(--bg3); font-weight:400;
 
                     .swiper-pagination-current {font-weight:bold;}
                     
                 }
                 &-pagination2 {
                     position: relative; width: 145px; height: 2px; bottom : auto;
-                    .swiper-pagination-progressbar-fill { background: #fff; }
+                    .swiper-pagination-progressbar-fill { background: var(--bg3); }
                 }
             }
         }
@@ -50,13 +50,13 @@
     }
 
     > .serviceArea {
-        position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:100%; background:rgba(17,17,17,0.68); z-index:2; padding:21px 0 21px 80px; border-radius:80px 0 0 0 ;
+        position:absolute; bottom:0; right:0; width:calc(50% + 640px); background:rgba(17,17,17,0.68); z-index:2; padding:21px 0 21px 80px; border-radius:80px 0 0 0 ;
         .inner {
             width:100%; max-width:1280px; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:40px;
 
             > .title {
                 > p {
-                    font-size:26px; color:#fff; font-weight:400;
+                    font-size:26px; color:var(--bg3); font-weight:400;
                     span{font-weight:bold;}
                 }
             }
@@ -69,7 +69,7 @@
                         > a {
                             display:block; width:100%; height:100%; padding:72px 38px 12px; position:relative; border-radius: 0 20px; overflow:hidden; 
                             > span {
-                                font-size:16px; color:#fff; font-weight:500; z-index:2; display:block; position:relative; text-align:center;
+                                font-size:16px; color:var(--bg3); font-weight:500; z-index:2; display:block; position:relative; text-align:center;
                             }
                             &::before {
                                 content:''; position:absolute; top:0; left:0; width:0; height:0; background:linear-gradient(324deg, #FF8000 3.51%, #FFB348 92.03%); z-index:1; transition:all 0.2s;
@@ -136,7 +136,7 @@
     width:100%; max-width:1280px; margin:80px auto; position:relative;
 
     > .title {
-        font-size:36px; color:#252F3E; font-weight:800; line-height:1.2; text-align:center; margin-bottom:60px;
+        font-size:36px; color:var(--prm3); font-weight:800; line-height:1.2; text-align:center; margin-bottom:60px;
     }
 
     > .remote {
@@ -150,12 +150,19 @@
 
                 > li {
                     > a {
-                        display:inline-block; width:max-content; padding: 0 30px; line-height:50px; height:50px; font-size:20px; color:#252F3E; font-weight:500; background:#EAECEF; border-radius:90px;
+                        display:inline-block; width:max-content; padding: 0 30px; line-height:50px; height:50px; font-size:20px; color:var(--prm3); font-weight:500; background:#EAECEF; border-radius:90px;
                         &.active {
-                            background:#252F3E; color:#fff;
+                            background:var(--prm3); color:var(--bg3);
                         }
                     }
                 }
+            }
+        }
+        > .rightArea {
+            position:relative;
+            
+            > a {
+                display:block; width:50px; height:50px; position:relative; background:var(--bg3) url(../../images/main/mainMore.svg)50% 50% no-repeat; border-radius:50%;
             }
         }
     }
@@ -167,24 +174,24 @@
         }
         .swiper-wrapper {
             > .swiper-slide {
-                padding:40px; background:#fff; border-radius:30px 0; 
+                padding:40px; background:var(--bg3); border-radius:30px 0; 
 
                 .flag {
-                    display:inline-block; width:max-content; padding: 0 14px; height:26px; line-height:26px; text-align:center; font-size:14px; color:#fff; text-align:center; border-radius:90px;
-                    &.type01 { background:#21409A}
-                    &.type02 { background:#2C99F2}
-                    &.type03 { background:#D67D00}
-                    &.type04 { background:#008A4E}
+                    display:inline-block; width:max-content; padding: 0 14px; height:26px; line-height:26px; text-align:center; font-size:14px; color:var(--bg3); text-align:center; border-radius:90px;
+                    &.type01 { background:var(--prm1)}
+                    &.type02 { background:var(--prm2)}
+                    &.type03 { background:var(--snd2)}
+                    &.type04 { background:#008A4E;}
                 }
 
-                .title {font-size:24px; color:#000; font-weight:800; line-height:1.4; margin:14px 0 6px;}
+                .title {font-size:24px; color:var(--t1); font-weight:800; line-height:1.4; margin:14px 0 6px;}
 
                 .desc {
-                    font-size:16px; color:#6E7584; font-weight:400; line-height:1.5; word-break:keep-all; margin-bottom:30px;
+                    font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5; word-break:keep-all; margin-bottom:30px;
                 }
 
                 .ammount {
-                    font-size:16px; color:#000; font-weight:500; line-height:1.2; text-align:right;
+                    font-size:16px; color:var(--t1); font-weight:500; line-height:1.2; text-align:right;
                     > span {
                         font-size:36px; font-weight:700;
                     }
@@ -196,7 +203,7 @@
             &.prevBtn {
                 position:absolute; top:50%; left:-80px; transform:translateY(-50%); width:60px; height:60px;
                 > a {
-                    display:block; width:100%; height:100%; background:#fff; border-radius:50%;
+                    display:block; width:100%; height:100%; background:var(--bg3); border-radius:50%;
                     &::after {
                         content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../images/main/suppPrev.svg)50% 50% no-repeat; z-index:2;
                     }
@@ -206,7 +213,7 @@
             &.nextBtn {
                 position:absolute; top:50%; right:-80px; transform:translateY(-50%); width:60px; height:60px;
                 > a {
-                    display:block; width:100%; height:100%; background:#fff; border-radius:50%;
+                    display:block; width:100%; height:100%; background:var(--bg3); border-radius:50%;
                     &::after {
                         content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../images/main/suppNext.svg)50% 50% no-repeat; z-index:2;
                     }
@@ -223,25 +230,25 @@
         width:100%; position:relative; display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:24px;
 
         >.leftArea {
-            position:relative; padding:40px; background:#21409A; border-radius:30px 30px 0 30px; width:245px; min-height:382px;
+            position:relative; padding:40px; background:var(--prm1); border-radius:30px 30px 0 30px; width:245px; min-height:382px;
 
             > .cal-pagination {
                 display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:12px;
 
                 > .swiper-pagination-bullet {
-                    width:10px; height:10px; opacity:1; background:#B9BDC6; transition:all 0.2s;
+                    width:10px; height:10px; opacity:1; background:var(--tbg3); transition:all 0.2s;
                     &.swiper-pagination-bullet-active {
-                        background:#ffac11; width:30px; border-radius:90px;
+                        background:var(--snd1); width:30px; border-radius:90px;
                     }
                 }
             }
 
             > .title {
-                font-size:20px; color:#fff; font-weight:700; margin:20px 0;
+                font-size:20px; color:var(--bg3); font-weight:700; margin:20px 0;
             }
 
             > a {
-                position:relative; display:inline-block; width:max-content; padding:0 40px 0 18px; height:40px; line-height:36px; font-size:14px; color:#fff; font-weight:600; border:2px solid rgba(255,255,255,0.37); border-radius:30px;
+                position:relative; display:inline-block; width:max-content; padding:0 40px 0 18px; height:40px; line-height:36px; font-size:14px; color:var(--bg3); font-weight:600; border:2px solid rgba(255,255,255,0.37); border-radius:30px;
                 &::after {
                     content:''; position:absolute; top:50%; right:15px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/main/calArrow.svg)50% 50% no-repeat;
                 }
@@ -259,9 +266,9 @@
                 .swiper-slide {
 
                     .schedule {
-                        display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; padding: 0 60px; background:#fff;
+                        display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; padding: 0 60px; background:var(--bg3);
                         &::before {
-                            content:''; position:absolute; width:100%; height:54px; background:#252F3E; top:0; left:0;
+                            content:''; position:absolute; width:100%; height:54px; background:var(--prm3); top:0; left:0;
                         }
 
                         > div {
@@ -270,8 +277,8 @@
                                 background:#F9FAFD;
                             }
                             > .month {
-                                width:100%; background:#252F3E; height:54px;
-                                > span {display:inline-block; font-size:16px; color:#fff; line-height:54px; font-weight:600;}
+                                width:100%; background:var(--prm3); height:54px;
+                                > span {display:inline-block; font-size:16px; color:var(--bg3); line-height:54px; font-weight:600;}
                             }
 
                             > .calBox {
@@ -280,7 +287,7 @@
                                     position:absolute; width:max-content; left:-9px; z-index:3;
 
                                     &.type01 {
-                                        padding:10px 14px; border:1px solid #b16800; border-radius:12px 0; font-size:14px; color:#000; font-weight:600; text-align:left; background:#FFD992;
+                                        padding:10px 14px; border:1px solid #b16800; border-radius:12px 0; font-size:14px; color:var(--t1); font-weight:600; text-align:left; background:#FFD992;
                                         > span {
                                             width:54px; height:54px; position:relative;
                                             &::after {
@@ -290,7 +297,7 @@
                                     }
 
                                     &.type02 {
-                                        padding:10px 14px; border:1px solid #023177; border-radius:12px 0; font-size:14px; color:#000; font-weight:600; text-align:left; background:#D6E7FF;
+                                        padding:10px 14px; border:1px solid #023177; border-radius:12px 0; font-size:14px; color:var(--t1); font-weight:600; text-align:left; background:#D6E7FF;
                                         > span {
                                             width:54px; height:54px; position:relative;
                                             &::after {
@@ -325,7 +332,7 @@
         width:100%; min-height:562px;  padding: 90px 0; position:relative; background:url(../../images/main/maincont04_img01.png)100% 100% no-repeat;
 
         > p {
-            font-size:36px; color:#fff; font-weight:700; line-height:1; text-align:center;
+            font-size:36px; color:var(--bg3); font-weight:700; line-height:1; text-align:center;
             &.line02 {
                 margin-top:15px;
             }
@@ -338,14 +345,14 @@
                 > li {
                     background:rgba(22, 29, 40, 0.65); padding:44px 40px; width:302px;
                     > p {
-                        font-size: 20px; color:#fff;
+                        font-size: 20px; color:var(--bg3);
                         &.txt {
                             font-weight:700; word-break:keep-all; width:80%;
                         }
                         &.count {
                             font-weight:500; text-align:right; margin-top:30px;
                             > span {
-                                font-size:56px; color:#ffac11; font-weight:700; line-height:1;
+                                font-size:56px; color:var(--snd1); font-weight:700; line-height:1;
                             }
                         }
                     }
@@ -362,7 +369,7 @@
 }
 
 .mainCont05 {
-    width:100%; background:#fff; position:relative; 
+    width:100%; background:var(--bg3); position:relative; 
 
     > .inner {
         width:100%; max-width:1280px; margin:0 auto; padding:60px 0; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:40px;
@@ -370,7 +377,7 @@
         .leftArea {
             width:180px; 
             > p {
-                font-size:26px; color:#252F3E; font-weight:400;
+                font-size:26px; color:var(--prm3); font-weight:400;
                 > span {
                     font-weight:700;
                 }
@@ -386,7 +393,7 @@
                 }
                 .swiper-slide {
                     > a {
-                        position:relative; display:block; text-align:center; padding:57px 0 12px; font-size:16px; color:#252F3E;
+                        position:relative; display:block; text-align:center; padding:57px 0 12px; font-size:16px; color:var(--prm3);
                         &::after {content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:40px; height:40px;}
 
                         &.ico01 {

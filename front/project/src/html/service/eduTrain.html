@@ -1,0 +1,66 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb03.ejs', {
+                            depth2:1,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

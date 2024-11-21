@@ -1,0 +1,54 @@
+<%
+var url = locals.url ? locals.url : '../../';
+%>
+
+<div class="cptSubTop">
+    <div class="inner">
+        <div class="titleArea">
+            <p class="pageTitle">
+                ${Depth02PageName}
+            </p>
+            <div class="breadCrumb">
+                <ul>
+                    <li>
+                        <a href="#none" class="home">
+                            <span class="hidden">메인바로가기</span>
+                        </a>
+                    </li>
+                    <li class="nxtArr">
+                        <span>
+                            <span class="hidden">다음</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#none" class="depthTxt">
+                            <span class="dept01">${depth01.Nm}</span>
+                        </a>
+                    </li>
+                    <li class="nxtArr">
+                        <span>
+                            <span class="hidden">다음</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#none" class="depthTxt">
+                            <span class="dept02">${depth02.Nm}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        var pgTit = $(".cptLnb .depth2Menu.active > h3 > a").text();
+        var dep01 = $(".cptLnb .titleArea h2").text();
+        console.log(pgTit, dep01);
+
+        $(".cptSubTop .titleArea > p").text(pgTit);
+        $(".depthTxt > .dept01").text(dep01);
+        $(".depthTxt > .dept02").text(pgTit);
+    })
+</script>
