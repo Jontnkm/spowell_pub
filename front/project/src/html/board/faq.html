@@ -1,0 +1,364 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb04.ejs', {
+                            depth2:5,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+
+                        <div class="modTab calDiv2 grp">
+                            <div class="inner">
+                                <ul>
+                                    <li class="active"><a href="#none">전체</a></li>
+                                    <li><a href="#none">회원가입</a></li>
+                                    <li ><a href="#none">복지신청</a></li>
+                                    <li><a href="#none">체육인복지</a></li>
+                                    <li><a href="#none">원로체육인</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cptFormSearch">
+                            <div class="inner">
+                                <div class="leftArea">
+                                    <p class="stat">
+                                        총
+                                        <span>170</span>
+                                        건의 게시물이 등록되었습니다.
+                                    </p>
+                                </div>
+                                <div class="rightArea">
+                                    <div class="formCover">
+                                        <div class="dropDown">
+                                            <button type="button" class="" title="열기">내용</button>
+                                            <div class="dropDownBox">
+                                                <ul class="ddCont">
+                                                    <li><a href="#none">제목테스트</a></li>
+                                                    <li><a href="#none" class="selected">내용</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="iptArea">
+                                            <input type="text" title="검색어 입력 창" placeholder="검색어를 입력해주세요."/>
+                                            <a href="#none" class="search">
+                                                <span class="hidden">검색하기</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cptAccordion">
+                            <div class="inner">
+                                <ul>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <span class="q">Q</span>
+                                            <p class="question">회원가입은 어떻게 하나요?</p>
+                                        </button>
+                                        <div class="answerBox">
+                                            <div class="ansInner">
+                                                <span class="a">A</span>
+                                                <p class="answer">
+                                                    생활지원금 신청 시 제출해야할 서류는 다음과 같습니다.<br>
+                                                    신청서와 동의서 서식은 [알림·소식 > 서식 자료실]에서 다운받을 수 있습니다.<br>
+                                                    필수제출서류<br>
+                                                    1) 생활지원금 지급 신청서<br>
+                                                    2) 개인정보 수집·이용 및 제3자 정보제공 동의서<br>
+                                                    3) 국가대표경력 증명자료<br>
+                                                    4) 주민등록등본(세대원 표시)<br>
+                                                    5) 통장사본<br>
+                                                    6) 경제적 현황을 증빙할 수 있는 자료<br>
+                                                    &nbsp;&nbsp;&nbsp;- 소득금액증명원 / 수급자증명서 혹은 차상위계층확인서 / 건강보험 자격확인(통보)서, 자격득실확인서, 납부확인서
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                                <!-- pagination -->
+                        <div class="comPagination">
+                            <a href="#" class="prev">
+                                <img src="../../images/common/ico_pagArrLeft.svg" alt="왼쪽 방향 아이콘">
+                            </a>
+                            <ul class="numList">
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                            </ul>
+                            <a href="#" class="next">
+                                <img src="../../images/common/ico_pagArrRight.svg" alt="오른쪽 방향 아이콘">
+                            </a>
+                        </div>
+                    
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

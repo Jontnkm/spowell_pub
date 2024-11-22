@@ -1,28 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
     //메인 비주얼 슬라이드
-    var mainSlide = new Swiper(".mainVisual", {
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    });
-
-    var pagingSwiper = new Swiper(".mainVisual", {
-        pagination: {
-            el: ".swiper-pagination2",
-            type: "progressbar",
-        },
-    });
+    if(mainSlide){
+        var mainSlide = new Swiper(".mainVisual", {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
     
-    mainSlide.controller.control = pagingSwiper;
+        var pagingSwiper = new Swiper(".mainVisual", {
+            pagination: {
+                el: ".swiper-pagination2",
+                type: "progressbar",
+            },
+        });
+
+        mainSlide.controller.control = pagingSwiper;
+    }
 
     //복지지원 슬라이드
     var supportSlide = new Swiper(".supportSlide > .slideInner", {        
@@ -44,68 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    // 카은트 업
-    var cnt01= 1747;
-
-    $({ val : 0 }).animate({ val : cnt01 }, {
-        duration: 1500,
-        step: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col01 .count span").text(num);
-        },
-        complete: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col01 .count span").text(num);
-        }
-    });
-
-    var cnt02= 145;
-
-    $({ val : 0 }).animate({ val : cnt02 }, {
-        duration: 1800,
-        step: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col02 .count span").text(num);
-        },
-        complete: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col02 .count span").text(num);
-        }
-    });
-
-    var cnt03= 625;
-
-    $({ val : 0 }).animate({ val : cnt03 }, {
-        duration: 2000,
-        step: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col03 .count span").text(num);
-        },
-        complete: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col03 .count span").text(num);
-        }
-    });
-
-    var cnt04= 1515;
-
-    $({ val : 0 }).animate({ val : cnt04 }, {
-        duration: 2200,
-        step: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col04 .count span").text(num);
-        },
-        complete: function() {
-            var num = numberWithCommas(Math.floor(this.val));
-            $(".col04 .count span").text(num);
-        }
-    });
-
-    //3자리마다 , 찍기
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
     //사업 슬라이드
     var bsSlide = new Swiper(".businessSlide .slideInner", {        
         slidesPerView : 5,
@@ -114,5 +54,46 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: ".swiper-button-next02",
             prevEl: ".swiper-button-prev02"
         }
+    });
+
+    //탭메뉴
+    var list1 = document.querySelectorAll(".calDiv1 ul li");
+    var list2 = document.querySelectorAll(".calDiv2 ul li");
+    if(list1){
+        if (list1.length > 0) {
+            var listLength1 = list1.length;
+            console.log(listLength1);
+            list1.forEach(function(item1) {
+                item1.style.width = "calc(100% / " + listLength1 + ")";
+            });
+        }
+    }
+    if(list2) {
+        if (list2.length > 0){
+            var listLength2 = list2.length;
+            console.log(listLength2);
+            list2.forEach(function(item2) {
+                item2.style.width = "calc(100% / " + listLength2 + ")";
+            });
+        }
+    }
+
+    //accordion
+    var acc = document.querySelectorAll(".cptAccordion ul li button");
+    
+    acc.forEach(function(accor) {
+        accor.addEventListener("click", function() {            
+            var parent = this.parentElement;
+            var accAnswer = parent.querySelector(".answerBox");
+            if (this.classList.contains("on")) {
+                parent.classList.remove("on");
+                this.classList.remove("on");
+                accAnswer.classList.remove("on");
+            } else {
+                parent.classList.add("on");
+                this.classList.add("on");
+                accAnswer.classList.add("on");
+            }
+        });
     });
 });

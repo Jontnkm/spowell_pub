@@ -1,58 +1,102 @@
  <!-- Guide : s -->
 <div class="g-area">
-    <strong class="g-area-tit">tab</strong>  
+    <strong class="g-area-tit lt">Basic Tab Layout</strong>  
     <xmp>
         <!-- tab1 -->
         <div class="modTab">
-            <div class="tabInner">
-                <ul class="tabMenu">
-                    <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">전체</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">공지/이벤트</button></li>
-                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(2)">서비스</button></li>
-                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(3)">운영</button></li>
-                    <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(4)">기타</button></li>
+            <div class="inner">
+                <ul>
+                    <li class="active"><a href="#none">공지사항</a></li>
+                    <li><a href="#none">체육인복지 소식</a></li>
+                    <li><a href="#none">보도자료</a></li>
+                    <li><a href="#none">원로체육인 체육유공자</a></li>
                 </ul>
             </div>
-            <!--샘플 컨텐츠 필요시 대체 가능하며 tabCont 클래스는 가져가야함-->
-            <div class="tabContainer">
-                <div class="tabCont active">
+            
+            <div class="tabCont">
+                <div class="contBox">
                     탭내용1
                 </div> 
-                <div class="tabCont">
+                <div class="contBox">
                     탭내용2
                 </div>
-                <div class="tabCont">
+                <div class="contBox">
                     탭내용3
                 </div>
-                <div class="tabCont">
+                <div class="contBox">
                     탭내용4
                 </div>
-                <div class="tabCont">
+                <div class="contBox">
                     탭내용5
                 </div>
             </div>
         </div>
     </xmp>
 
-    <strong class="g-area-tit">tab 와이드 버전2</strong>  
+    <strong class="g-area-tit lt">Sub Tab Layout</strong>  
     <xmp>
-        <!-- tab 와이드 버전2 -->
-        <div class="modTabWide">
-            <ul class="tabMenu">
-                <li class="tabItem"><button class="tabName active" title="선택 된 탭메뉴" onclick="showTab(0)">진행중인 이벤트</button></li> <!-- addClass - on : 메뉴 선택됨 -->
-                <li class="tabItem"><button class="tabName" title="탭메뉴" onclick="showTab(1)">종료된 이벤트</button></li>
-            </ul>
-            <div class="tabContainer">
-                <div class="tabCont active">
-                    <div class="cptNoData">
-                        <div class="noImg">
-                            <img src="../../images/common/ico_warning.svg" alt="경고 아이콘">
-                        </div>
-                        <p class="noTxt">진행중인 이벤트가 없습니다.</p>
-                    </div>
+        <!-- tab1 -->
+        <div class="modTab calDiv1 stb">
+            <div class="inner">
+                <ul>
+                    <li class="active"><a href="#none">경기력 성과포상금(선수)</a></li>
+                    <li><a href="#none">경기력 성과포상금(지도자)</a></li>
+                    <li><a href="#none">국내대학원 교육지원금</a></li>
+                    <li><a href="#none">국외유학 교육지원금</a></li>
+                    <li><a href="#none">생활지원금</a></li>
+                </ul>
+            </div>
+            
+            <div class="tabCont">
+                <div class="contBox">
+                    탭내용1
                 </div> 
-                <div class="tabCont">
+                <div class="contBox">
                     탭내용2
+                </div>
+                <div class="contBox">
+                    탭내용3
+                </div>
+                <div class="contBox">
+                    탭내용4
+                </div>
+                <div class="contBox">
+                    탭내용5
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit lt">Sub-Grouping Tab Layout</strong>  
+    <xmp>
+        <!-- tab1 -->
+        <div class="modTab calDiv2 grp">
+            <div class="inner">
+                <ul>
+                    <li><a href="#none">전체</a></li>
+                    <li><a href="#none">국가대표 선수·지도자</a></li>
+                    <li class="active"><a href="#none">은퇴선수</a></li>
+                    <li><a href="#none">학생선수</a></li>
+                    <li><a href="#none">원로체육인</a></li>
+                    <li><a href="#none">체육유공자</a></li>
+                </ul>
+            </div>
+            
+            <div class="tabCont">
+                <div class="contBox">
+                    탭내용1
+                </div> 
+                <div class="contBox">
+                    탭내용2
+                </div>
+                <div class="contBox">
+                    탭내용3
+                </div>
+                <div class="contBox">
+                    탭내용4
+                </div>
+                <div class="contBox">
+                    탭내용5
                 </div>
             </div>
         </div>
@@ -60,24 +104,6 @@
 </div>
 
 <script>
-    //=====================================================================================//
-    //=================================공통 탭 타입1=======================================//
-    //=====================================================================================//
-    function showTab(index) {
-        var tabButtons = document.querySelectorAll('.tabName');
-        var tabContents = document.querySelectorAll('.tabCont');
-
-        for (var i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove('active');
-            tabContents[i].classList.remove('active');
-        }
-
-        tabButtons[index].classList.add('active');
-        tabContents[index].classList.add('active');
-    }
-
-
-
     // 가이드 공통
     $(".g-area-tit, .g-area-tit01").each(function(){
         var obj = $(this).next("xmp");
@@ -100,5 +126,24 @@
         }
         return false;
     });
+
+
+    //탭메뉴
+    var list1 = document.querySelectorAll(".calDiv1 ul li");
+    var listLength1 = list1.length;
+    var list2 = document.querySelectorAll(".calDiv2 ul li");
+    var listLength2 = list2.length;
+    
+    console.log(listLength1);
+    console.log(listLength2);
+
+    list1.forEach(function(item1) {
+        item1.style.width = "calc(100% / " + listLength1 + ")";
+    });
+
+    list2.forEach(function(item2) {
+        item2.style.width = "calc(100% / " + listLength2 + ")";
+    });
+
 
 </script>

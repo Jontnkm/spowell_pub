@@ -15,7 +15,7 @@
 	<title>체육인복지지원</title>
 
 	<link rel="stylesheet" href="../../common/css/swiper.css" />
-	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
@@ -256,12 +256,44 @@
         <div class="menuBox">
             <ul>
                 <li class="depth2Menu active">
-                    <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">체육인복지 사업</a></h3>
+                    <h3 class="depth2Name"><a href="../../html/.html" class="depth2Link">체육인복지 사업</a></h3>
                 </li>
                 <li class="depth2Menu">
-                    <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">체육인복지법</a></h3>
+                    <h3 class="depth2Name"><a href="../../html/.html" class="depth2Link">체육인복지법</a></h3>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="moInner">
+        <div class="depth01">
+            <button type="button"><h2>사업소개</h2></button>
+            <div class="depth01Drop">
+                <div class="inner">
+                    <ul>
+                        <li class="active"><a href="#none">사업소개</a></li>
+                        <li><a href="#none">신청·안내</a></li>
+                        <li><a href="#none">체육인서비스</a></li>
+                        <li><a href="#none">알림·소식</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="depth02">
+            <button type="button"></button>
+            <div class="depth01Drop">
+                <div class="inner">
+                    <ul>
+                        <li class="depth2Menu active">
+                            <h3 class="depth2Name"><a href="../../html/.html" class="depth2Link">체육인복지 사업</a></h3>
+                        </li>
+                        <li class="depth2Menu">
+                            <h3 class="depth2Name"><a href="../../html/.html" class="depth2Link">체육인복지법</a></h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -312,7 +344,7 @@
 
 <script>
     $(document).ready(function(){
-        var pgTit = $(".cptLnb .depth2Menu.active > h3 > a").text();
+        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
         var dep01 = $(".cptLnb .titleArea h2").text();
         console.log(pgTit, dep01);
 
@@ -537,6 +569,33 @@
 <!-- 팝업이 들어오는 영역 -->
 
 <!-- Bottom -->
+
+</div>
+<div class="layoutQuick">
+    <!-- Top -->
+    
+<div class="cptQuick">
+	<div class="apply">
+		<a href="#none">
+			<p>창업지원<br>신청하기</p>
+			<span>3/10~3/31</span>
+		</a>
+	</div>
+	<div class="quickMenu">
+		<ul>
+			<li><a href="#none" class="ico ico01">복지 신청</a></li>
+			<li><a href="#none" class="ico ico02">복지 공고</a></li>
+			<li><a href="#none" class="ico ico03">복지캘린더</a></li>
+			<li><a href="#none" class="ico ico04">지원금조회</a></li>
+			<li><a href="#none" class="ico ico05">증명서 발급</a></li>
+		</ul>
+	</div>
+	<div class="top">
+		<a href="#none" class="topBtn">
+			<p>TOP</p>
+		</a>
+	</div>
+</div> 
 
 </div>
 </body>

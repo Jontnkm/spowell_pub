@@ -1436,40 +1436,27 @@ module.exports = forEach;
 module.exports = {
   en: {
     titles: {
-      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      D: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-      MMM: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      MMMM: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-      ]
-    },
-    titleFormat: 'MMMM yyyy',
-    todayFormat: 'To\\d\\ay: DD, MMMM d, yyyy',
-    time: 'Time',
-    date: 'Date'
-  },
-  ko: {
-    titles: {
       DD: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
       D: ['일', '월', '화', '수', '목', '금', '토'],
       MMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
       MMMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
     },
+    titleFormat: 'yyyy년 MMMM',
+    todayFormat: '오늘은 yyyy년 MMMM d일  DD입니다 ',
+    time: 'Time',
+    date: 'Date'
+  },
+  ko: {
+    titles: {
+      DD: ['�쇱슂��', '�붿슂��', '�붿슂��', '�섏슂��', '紐⑹슂��', '湲덉슂��', '�좎슂��'],
+      D: ['��', '��', '��', '��', '紐�', '湲�', '��'],
+      MMM: ['1��', '2��', '3��', '4��', '5��', '6��', '7��', '8��', '9��', '10��', '11��', '12��'],
+      MMMM: ['1��', '2��', '3��', '4��', '5��', '6��', '7��', '8��', '9��', '10��', '11��', '12��']
+    },
     titleFormat: 'yyyy.MM',
-    todayFormat: '오늘: yyyy.MM.dd (D)',
-    date: '날짜',
-    time: '시간'
+    todayFormat: '�ㅻ뒛: yyyy.MM.dd (D)',
+    date: '�좎쭨',
+    time: '�쒓컙'
   }
 };
 
@@ -2478,7 +2465,7 @@ var mergeDefaultOption = function(option) {
  *     },
  *     input: {
  *         element: '#datepicker-input',
- *         format: 'yyyy년 MM월 dd일 hh:mm A'
+ *         format: 'yyyy�� MM�� dd�� hh:mm A'
  *     }
  *     type: 'date',
  *     date: new Date(2015, 0, 1)

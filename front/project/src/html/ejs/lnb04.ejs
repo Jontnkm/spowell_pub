@@ -35,18 +35,99 @@ for(var i=1;i<=6;i++){
                     <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">공지사항</a></h3>
                 </li>
                 <li class="depth2Menu<%= depth2P[2] %>">
-                    <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">체육인복지 소식</a></h3>
+                    <h3 class="depth2Name"><a href="<%= url %>html/help/welfareNewsList.html" class="depth2Link">체육인복지 소식</a></h3>
                 </li>
                 <li class="depth2Menu<%= depth2P[3] %>">
-                    <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">보도자료</a></h3>
+                    <h3 class="depth2Name"><a href="<%= url %>html/help/newsList.html" class="depth2Link">보도자료</a></h3>
                 </li>
                 <li class="depth2Menu<%= depth2P[4] %>">
-                    <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">서식자료실</a></h3>
+                    <h3 class="depth2Name"><a href="<%= url %>html/help/archiveList.html" class="depth2Link">서식자료실</a></h3>
                 </li>
                 <li class="depth2Menu<%= depth2P[5] %>">
-                    <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">자주찾는질문</a></h3>
+                    <h3 class="depth2Name"><a href="<%= url %>html/help/faq.html" class="depth2Link">자주찾는질문</a></h3>
                 </li>
             </ul>
         </div>
     </div>
+
+    <div class="moInner">
+        <div class="subMenuBox">
+            <div class="depth01">
+                <button type="button" title="열기"><h2>알림·소식</h2></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">사업소개</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">신청·안내</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">체육인서비스</a></h2>
+                            </li>
+                            <li class="active">
+                                <h2 class="depth1Menu"><a href="#none">알림·소식</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">마이페이지</a></h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="depth02">
+                <button type="button" title="열기"><h3></h3></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li class="depth2Menu<%= depth2P[1] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/help/notice.html" class="depth2Link">공지사항</a></h3>
+                            </li>
+                            <li class="depth2Menu<%= depth2P[2] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/help/welfareNewsList.html" class="depth2Link">체육인복지 소식</a></h3>
+                            </li>
+                            <li class="depth2Menu<%= depth2P[3] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/help/newsList.html" class="depth2Link">보도자료</a></h3>
+                            </li>
+                            <li class="depth2Menu<%= depth2P[4] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/help/archiveList.html" class="depth2Link">서식자료실</a></h3>
+                            </li>
+                            <li class="depth2Menu<%= depth2P[5] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/help/faq.html" class="depth2Link">자주찾는질문</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
+        $(".moInner .depth02 button h3").text(pgTit);
+    })
+
+    var buttons = document.querySelectorAll(".subMenuBox button");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {            
+            var parent = this.parentElement;
+            var drpdwBox = parent.querySelector(".depthDrop");
+
+            if (this.classList.contains("active")) {
+                parent.classList.remove("active");
+                this.setAttribute("title","열기");
+                this.classList.remove("active");
+                drpdwBox.style.display = "none";
+            } else {
+                parent.classList.add("active");
+                this.classList.add("active");
+                this.setAttribute("title","접기");
+                drpdwBox.style.display = "block";
+            }
+            
+        });
+    });
+</script>

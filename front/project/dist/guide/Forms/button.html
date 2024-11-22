@@ -3,23 +3,23 @@
 
     <strong class="g-area-tit">버튼 H-56px</strong>
     <xmp>
-        <p class="guideTitle">H:56 / Filled / DarkGray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:56 / Filled / DarkGray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h56 f-dg">로그인</button>
             <button type="button" class="btn h56 f-dg" disabled>로그인</button>
         </div>
-        <p class="guideTitle">H:56 / Filled / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:56 / Filled / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h56 f-g">로그인</button>
             <button type="button" class="btn h56 f-g" disabled>로그인</button>
         </div>
-        <p class="guideTitle">H:56 / Line / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:56 / Line / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h56 l-g">취소</button>
             <button type="button" class="btn h56 l-g" disabled>취소</button>
         </div>
-        <p class="guideTitle">H:56 / Line + Icon / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:56 / Line + Icon / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h56 l-g ico">
                 <span class="txt">더보기</span>
                 <span class="ico01"><span class="hidden">플러스 모양 아이콘 이미지</span></span>
@@ -34,8 +34,8 @@
 
     <strong class="g-area-tit">버튼 H-50px</strong>
     <xmp>
-        <p class="guideTitle">H:50 / Line / Blue</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:50 / Line / Blue</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h50 l-b">중복확인</button>
             <button type="button" class="btn h50 l-b" disabled>중복확인</button>
         </div>
@@ -43,19 +43,19 @@
 
     <strong class="g-area-tit">버튼 H-42px</strong>
     <xmp>
-        <p class="guideTitle">H:42 / Filled / DarkGray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:42 / Filled / DarkGray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h42 f-dg">확인</button>
             <button type="button" class="btn h42 f-dg" disabled>확인</button>
         </div>
-        <p class="guideTitle">H:42 / Line / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:42 / Line / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h42 l-g">계좌변경</button>
             <button type="button" class="btn h42 l-g" disabled>계좌변경</button>
         </div>
 
-        <p class="guideTitle">H:42 / Line / Gray / Different Space Type</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:42 / Line / Gray / Different Space Type</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h42 l-g st01">취소</button>
             <button type="button" class="btn h42 l-g st01" disabled>취소</button>
         </div>
@@ -63,12 +63,12 @@
 
     <strong class="g-area-tit">버튼 H-36px</strong>
     <xmp>
-        <p class="guideTitle">H:36 / Line / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:36 / Line / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h36 l-g">계좌번호 관리</button>
         </div>
-        <p class="guideTitle">H:36 / Line + Icon / Gray</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:36 / Line + Icon / Gray</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h36 l-g ico">
                 <span class="txt">엑셀다운로드</span>
                 <span class="ico02"><span class="hidden">다운로드 아이콘 이미지</span></span>
@@ -78,16 +78,16 @@
 
     <strong class="g-area-tit">버튼 H-32px</strong>
     <xmp>
-        <p class="guideTitle">H:32 / Filled / Blue</p>
-        <div class="comButton">
+        <p class="guideTitle lt">H:32 / Filled / Blue</p>
+        <div class="comButton alignL">
             <button type="button" class="btn h32 f-b">휴대폰 인증</button>
         </div>
     </xmp>
 
     <strong class="g-area-tit">버튼 Text Type</strong>
     <xmp>
-        <p class="guideTitle">Text Type Button</p>
-        <div class="comButton">
+        <p class="guideTitle lt">Text Type Button</p>
+        <div class="comButton alignL">
             <button type="button" class="btn txt">로그인 페이지 이동</button>
         </div>
     </xmp>
@@ -134,50 +134,5 @@
         });
     });
 
-    
-    // Popup Open
-    function popOpen(popId){
-        let thispop = document.querySelector("#" + popId);
-
-        thispop.classList.add("popOpen");
-    }
-
-    // Popup Close
-    function popClose(popId){
-        let thispop = document.querySelector("#" + popId);
-
-        thispop.classList.remove("popOpen");
-    }
-
-    //input focus & blur title effect & clear function
-    var inputs = document.querySelectorAll('.item input[type="text"]');
-    
-    inputs.forEach(function(inputElement) {
-        var parent = inputElement.closest('.item');
-        var optTit = parent.querySelector('.optTit');
-        var rsBtn = parent.querySelector('.resetBtn');
-        
-        inputElement.addEventListener('focusin', function() {
-            optTit.style.color = '#005ce6'; // 포커스 되었을 때 텍스트 색상 변경
-            if (rsBtn) {
-                rsBtn.style.display = 'block'; // 버튼 보이기
-            }
-        });
-
-        inputElement.addEventListener('focusout', function() {
-            optTit.style.color = ''; // 포커스가 해제되었을 때 텍스트 색상 원래대로 변경
-
-            if (event.relatedTarget === rsBtn) {
-                rsBtn.addEventListener('click', function() {
-                    inputElement.value = ''; // 버튼을 클릭하면 입력 내용 지우기
-
-                    if (rsBtn) {
-                        rsBtn.style.display = 'none'; // 버튼 숨기기
-                    }
-                
-                });
-            }
-        });
-    });
 
     </script>

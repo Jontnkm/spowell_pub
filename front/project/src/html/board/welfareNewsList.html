@@ -1,0 +1,336 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb04.ejs', {
+                            depth2:2,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+
+                        <div class="cptFormSearch">
+                            <div class="inner">
+                                <div class="leftArea">
+                                    <p class="stat">
+                                        총
+                                        <span>170</span>
+                                        건의 게시물이 등록되었습니다.
+                                    </p>
+                                </div>
+                                <div class="rightArea">
+                                    <div class="formCover">
+                                        <div class="dropDown">
+                                            <button type="button" class="" title="열기">내용</button>
+                                            <div class="dropDownBox">
+                                                <ul class="ddCont">
+                                                    <li><a href="#none">제목테스트</a></li>
+                                                    <li><a href="#none" class="selected">내용</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="iptArea">
+                                            <input type="text" title="검색어 입력 창" placeholder="검색어를 입력해주세요."/>
+                                            <a href="#none" class="search">
+                                                <span class="hidden">검색하기</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cptBoardList">
+                            <div class="inner">
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="fix">공지</span> <!-- 고정게시물 -->
+                                                    <!-- <span class="num">10</span> -->
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">체육인복지지원시스템 홈페이지 오픈 이벤트</p>
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="fix">공지</span> <!-- 고정게시물 -->
+                                                    <!-- <span class="num">9</span> -->
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년도 체육인복지 지원사업 일정 안내</p>
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">8</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title new">2024년 하반기 국내대학원 교육지원금 신청안내</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">7</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <!-- <span class="hidden">첨부파일 있음</span>--> <!-- 첨부파일없을 경우  -->
+                                                    <span class="hidden">첨부파일 없음</span> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">6</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">5</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">4</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title new">2024년 장애체육인 국외유학장애체육인 국외유학장애체육인 국외유학장애체육인 국외유학장애체육인 국외유학 교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">3</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">2</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="listCont">
+                                                <div class="number">
+                                                    <span class="num">1</span>
+                                                </div>
+                                                <div class="contInfo">
+                                                    <p class="title">2024년 장애체육인 국외유학 교육지원금 지원신청 공고</p><!--신규게시물의 경우 'new' 클래스 추가-->
+                                                    <p class="dtView">
+                                                        <span class="date">2024-01-01</span>
+                                                        <span class="view">3,715</span>
+                                                    </p>
+                                                </div>
+                                                <div class="file hvFile"><!--첨부파일 있을 경우 'hvFile' 클래스 추가-->
+                                                    <span class="hidden">첨부파일 있음</span> <!-- 첨부파일없을 경우  -->
+                                                    <!-- <span class="hidden">첨부파일 없음</span> --> <!-- 첨부파일없을 경우  -->
+                                                </div>
+                                                <a href="#none" class="goDetail">
+                                                    <span class="hidden">상세페이지 보러가기</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--2024.11.21 페이징-->
+                        <!-- pagination -->
+                        <div class="comPagination">
+                            <a href="#" class="prev">
+                                <img src="../../images/common/ico_pagArrLeft.svg" alt="왼쪽 방향 아이콘">
+                            </a>
+                            <ul class="numList">
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                            </ul>
+                            <a href="#" class="next">
+                                <img src="../../images/common/ico_pagArrRight.svg" alt="오른쪽 방향 아이콘">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

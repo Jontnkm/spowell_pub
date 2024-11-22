@@ -1,6 +1,39 @@
 <!-- Guide : s -->
 <div class="g-area">
 
+    <strong class="g-area-tit">CALENDAR</strong>
+    
+    <xmp>
+        <p class="guideTitle lt">CALENDAR - CUSTOMIZED</p>
+        <div class="cptForm" style="display:flex; gap:20px;">
+            <div class="frmGroup">
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="datepicker-input" aria-label="Date-Time" class="calendar">
+                </div>
+                <div id="wrapper" style="margin-top: 5px;"></div>
+            </div>
+            <!-- <div class="frmGroup">
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="tui-date-picker-target" aria-label="Date-Time" class="calendar" title="날짜선택">
+                </div>
+                <div class="deco">-</div>
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="tui-date-picker-target" aria-label="Date-Time" class="calendar" title="날짜선택">
+                </div>
+            </div>
+            <br><br>
+            <div class="frmGroup">
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="tui-date-picker-target" aria-label="Date-Time" class="calendar" title="날짜선택" disabled value="2024-12-20">
+                </div>
+                <div class="deco">-</div>
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="tui-date-picker-target" aria-label="Date-Time" class="calendar" title="날짜선택" disabled value="2024-12-20" >
+                </div>
+            </div> -->
+        </div>
+    </xmp>
+    
     <strong class="g-area-tit">검색창</strong>
     <xmp>
         <div class="cptFormSearch">
@@ -15,11 +48,13 @@
                 <div class="rightArea">
                     <div class="formCover">
                         <div class="dropDown">
-                            <button type="button" class="active" title="접기">내용</button>
-                            <ul class="ddCont">
-                                <li><a href="#none">제목테스트</a></li>
-                                <li><a href="#none" class="selected">내용</a></li>
-                            </ul>
+                            <button type="button" class="" title="열기">내용</button>
+                            <div class="dropDownBox">
+                                <ul class="ddCont">
+                                    <li><a href="#none">제목테스트</a></li>
+                                    <li><a href="#none" class="selected">내용</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="iptArea">
                             <input type="text" title="검색어 입력 창" placeholder="검색어를 입력해주세요."/>
@@ -39,19 +74,26 @@
         <div class="cptForm">
             <input type="text" title="000를위한 입력창" placeholder="텍스트" />
         </div>
+        
+        <br>
 
+        <div class="cptForm">
+            <input type="text" title="000를위한 입력창" placeholder="텍스트"/>
+            <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
+        </div>
+        
         <br>
 
         <div class="cptForm">
             <input type="text" title="000를위한 입력창" placeholder="텍스트" class="error"/>
-            <span>영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
+            <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
         </div>
 
         <br>
 
         <div class="cptForm">
             <input type="text" title="000를위한 입력창" placeholder="텍스트" class="success"/>
-            <span>비밀번호가 일치합니다.</span>
+            <span class="ico">비밀번호가 일치합니다.</span>
         </div>
         
         <br>
@@ -66,37 +108,138 @@
         <p class="guideTitle lt">BASIC TYPE</p>
         <div class="cptForm">
             <div class="dropDown">
-                <button type="button" class="active" title="접기">내용</button>
-                <ul class="ddCont">
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none" class="selected">내용</a></li>
-                </ul>
+                <button type="button" class="" title="열기">내용</button>
+                <div class="dropDownBox">
+                    <ul class="ddCont">
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none" class="selected">내용</a></li>
+                    </ul>
+                </div>
             </div>
 
             <br>
 
             <div class="dropDown disabled">
                 <button type="button" class="" title="비활성화">내용</button>
-                <ul class="ddCont">
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none">제목테스트</a></li>
-                    <li><a href="#none" class="selected">내용</a></li>
-                </ul>
+                <div class="dropDownBox">
+                    <ul class="ddCont">
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none" class="selected">내용</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="dropDown hlf">
+                <button type="button" class="" title="열기">국민은행</button>
+                <div class=" dropDownBox hlfddCont">
+                    <ul>
+                        <li><a href="#none" class="selected">내용</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="dropDown hlf">
+                <button type="button" class="" title="열기">종목</button>
+                <div class="dropDownBox hlfddCont ty01">
+                    <ul>
+                        <li><a href="#none" class="selected">내용</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                        <li><a href="#none">제목테스트</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </xmp>
 
     <strong class="g-area-tit">CHECKBOX & RADIO </strong>
     <xmp>
-        
+        <p class="guideTitle lt">CHECKBOX</p>
+        <div class="cptForm" style="display:flex; gap:20px;">
+            <div class="frmChk">
+                <input type="checkbox" id="chk01" checked />
+                <label for="chk01">텍스트</label>
+            </div>
+            <div class="frmChk">
+                <input type="checkbox" id="chk02" />
+                <label for="chk02">텍스트</label>
+            </div>
+            <div class="frmChk">
+                <input type="checkbox" id="chk03" disabled />
+                <label for="chk03">텍스트</label>
+            </div>
+        </div>
+
+        <br><br>
+
+        <p class="guideTitle lt">RADIO</p>
+        <div class="cptForm" style="display:flex; gap:20px;">
+            <div class="frmRdo">
+                <input type="radio" id="rdo01" name="rdo01" checked />
+                <label for="rdo01">6개월</label>
+            </div>
+            <div class="frmRdo">
+                <input type="radio" id="rdo02" name="rdo01" />
+                <label for="rdo02">1년</label>
+            </div>
+            <div class="frmRdo">
+                <input type="radio" id="rdo03" name="rdo01" disabled />
+                <label for="rdo03">3개월</label>
+            </div>
+        </div>
     </xmp>
+
 <style>
 /**/
 .classInfo * {letter-spacing:0;}
@@ -167,19 +310,32 @@
         return false;
     });
 
-    var buttons = document.querySelectorAll(".frmCombo button");
+    var datepicker = new tui.DatePicker('#wrapper', {
+        date: new Date(),
+        input: {
+            element: '#datepicker-input',
+            format: 'yyyy-MM-dd'
+        }
+    });
+    var buttons = document.querySelectorAll(".dropDown > button");
     buttons.forEach(function(button) {
         button.addEventListener("click", function() {            
             var parent = this.parentElement;
-            var drpdwBox = parent.querySelector(".listBox");
-            if (this.classList.contains("spread")) {
-                parent.classList.remove("spread");
-                this.classList.remove("spread");
-                drpdwBox.style.display = "none";
+            var drpdwBox = parent.querySelector(".dropDownBox");
+            if (parent.classList.contains("disabled")){
+                alert("비활성화된 항목입니다.");
             } else {
-                parent.classList.add("spread");
-                this.classList.add("spread");
-                drpdwBox.style.display = "block";
+                if (this.classList.contains("active")) {
+                    parent.classList.remove("active");
+                    this.setAttribute("title","열기");
+                    this.classList.remove("active");
+                    drpdwBox.style.display = "none";
+                } else {
+                    parent.classList.add("active");
+                    this.classList.add("active");
+                    this.setAttribute("title","접기");
+                    drpdwBox.style.display = "block";
+                }
             }
         });
     });
