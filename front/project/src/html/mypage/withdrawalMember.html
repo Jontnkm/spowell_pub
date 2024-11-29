@@ -1,0 +1,121 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:6,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                회원탈퇴
+
+                                <span class="innerDesc">
+                                    그동안 체육인복지지원 SPOWell을 이용해 주셔서 진심으로 감사드립니다.
+                                </span>
+                            </p>
+
+                            <div class="personalAuth">
+                                <div class="inner ty02">
+                                    <div class="cptForm">
+                                        <div class="rowType">
+                                            <p class="lbTxt">아이디</p>
+                                            <p class="data">
+                                                memberId123
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="cptForm">
+                                        <div class="rowType">
+                                            <p class="lbTxt">비밀번호</p>
+                                            <div class="frmGroup">
+                                                <div class="ipt">
+                                                    <input type="text" title="비밀번호 입력" placeholder="비밀번호를 입력하세요." />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cptForm">
+                                        <div class="rowType">
+                                            <p class="lbTxt">탈퇴사유</p>
+                                            <div class="dropDown">
+                                                <button type="button" class="" title="열기">회원탈퇴 사유</button>
+                                                <div class="dropDownBox">
+                                                    <ul class="ddCont">
+                                                        <li><a href="#none">제목테스트</a></li>
+                                                        <li><a href="#none">제목테스트</a></li>
+                                                        <li><a href="#none">제목테스트</a></li>
+                                                        <li><a href="#none">제목테스트</a></li>
+                                                        <li><a href="#none">제목테스트</a></li>
+                                                        <li><a href="#none" class="selected">내용</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">메인이동</button>
+                                <button type="button" class="btn h56 f-dg">탈퇴</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

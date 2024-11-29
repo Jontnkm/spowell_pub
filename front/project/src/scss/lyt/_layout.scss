@@ -161,6 +161,23 @@
                         text-align:left;
                     }
                 }
+
+                .frmGroup {
+                    gap:10px; align-items: flex-start; min-height:40px;
+                    .ipt {
+                        width:160px; height:40px;
+                        input {
+                            height:40px; line-height:40px;
+                        }
+                    }
+                    .simpleTxt {
+                        width: calc(100% - 170px); line-height:40px;
+                    }
+
+                    & + .frmGroup {
+                        margin-top:10px;
+                    }
+                }
             }
 
             .popBtnArea {

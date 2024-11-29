@@ -1,0 +1,244 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:6,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mptbTitle">
+                                기본정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>아이디</th>
+                                            <td class="left">memberId123</td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>비밀번호</th>
+                                            <td class="left">
+                                                <div class="comButton alignL">
+                                                    <button type="button" class="btn h36 l-g" onclick="popOpen('chgPw')">비밀번호 변경</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이름</th>
+                                            <td class="left">홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>성별</th>
+                                            <td class="left">남자</td>
+                                        </tr>
+                                        <tr>
+                                            <th>생년월일</th>
+                                            <td class="left">1990.05.05</td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>휴대전화</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <span>010-1234-1234</span>
+                                                        <div class="comButton alignL">
+                                                            <button type="button" class="btn h36 l-g">휴대전화 변경</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>주소</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="우편번호 입력창" />
+                                                        </div>
+                                                        <div class="comButton alignL">
+                                                            <button type="button" class="btn h36 l-g">우편번호</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt">
+                                                            <input type="text" title="주소 1 입력창" />
+                                                        </div>
+                                                        <p class="simpleTxt">
+                                                            기본주소
+                                                        </p>
+                                                    </div>
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt">
+                                                            <input type="text" title="상세주소 입력창" />
+                                                        </div>
+                                                        <p class="simpleTxt">
+                                                            상세주소
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                보호자(법정대리인)
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>이름</th>
+                                            <td class="left">홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>휴대전화</th>
+                                            <td class="left">
+                                                010-1234-1234
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                체육인복지 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>체육인 구분</th>
+                                            <td class="left">선수,지도자</td>
+                                        </tr>
+                                        <tr>
+                                            <th>종목</th>
+                                            <td class="left">
+                                                테권도
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">취소</button>
+                                <button type="button" class="btn h56 f-dg">수정</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01" id="chgPw">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">비밀번호 변경 안내</div>
+            <button class="closeBtn" onclick="popClose('chgPw')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="cptForm">
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title="현재비밀번호 입력란" placeholder="기존 비밀번호">
+                    </div>
+                    <p class="simpleTxt">현재 사용중인 비밀번호 입력</p>
+                </div>
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title=" 입력란" placeholder="신규 비밀번호">
+                    </div>
+                    <p class="simpleTxt">8~12자리 영문,숫자,특수기호 조합</p>
+                </div>
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title=" 입력란" placeholder="신규 비밀번호 확인">
+                    </div>
+                    <p class="simpleTxt">새 비밀번호 다시 한번 입력</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn sub" onclick="popClose('chgPw')">다음에 변경</button>
+            <button type="button" class="popBtn main" onclick="popClose('chgPw')">변경완료</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

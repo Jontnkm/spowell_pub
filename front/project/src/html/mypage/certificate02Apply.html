@@ -1,0 +1,170 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:5,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                체육장학증서 발급 신청
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>성명</th>
+                                            <td class="left">
+                                                홍길동
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>생년월일</th>
+                                            <td class="left">
+                                                1999.01.01
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>성별</th>
+                                            <td class="left">
+                                                남
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>휴대전화번호</th>
+                                            <td class="left">
+                                                010-****-1234
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>이메일</th>
+                                            <td class="left">
+                                                <div class="cptForm rdoFlex">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="이메일 아이디 입력 란" placeholder="이메일" />
+                                                        </div>
+                                                        <div class="Deco">@</div>
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="이메일 나머지 주소 입력 란"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">직접입력</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">직접입력</a></li>
+                                                                <li><a href="#none">naver.com</a></li>
+                                                                <li><a href="#none">daum.net</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>종목</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">태권도</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">태권도</a></li>
+                                                                <li><a href="#none">태권도</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>선정연도</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">선택</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">2024년</a></li>
+                                                                <li><a href="#none">2025년</a></li>
+                                                                <li><a href="#none">2026년</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">취소</button>
+                                <button type="button" class="btn h56 f-dg">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

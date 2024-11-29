@@ -52,6 +52,13 @@
             @include media ('mobile') {
                 width:100%;
             }
+
+            > .time {
+                font-size:16px; color:var(--prm2); font-weight:400; line-height:50px; min-width:120px; padding-left:4px;
+                &.disabled {
+                    color: var(--tbg3);
+                }
+            }
         }
 
         > .ipt {
@@ -76,6 +83,9 @@
             }
         }
 
+        .data {
+            height:50px; line-height:50px; font-size:16px; color:var(--t1); font-weight:400;
+        }
     }
     .ipt {width:100%;}
     .lbTxt {
@@ -109,7 +119,7 @@
         & + .ico {
             position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--tbg2); font-weight:400; margin-top:8px;
             &::before {
-                content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform: translateY(-50%); background: url(../../images/common/ico_ipt_info.svg)50% 50% no-repeat;
+                content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_ipt_info.svg)50% 50% no-repeat;
             }
         }
 
@@ -118,7 +128,7 @@
             & + .ico {
                 position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--snd3); font-weight:400; margin-top:8px;
                 &::before {
-                    content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform: translateY(-50%); background: url(../../images/common/ico_error.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_error.svg)50% 50% no-repeat;
                 }
             }
         }
@@ -128,7 +138,7 @@
             & + .ico {
                 position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--prm2); font-weight:400; margin-top:8px;
                 &::before {
-                    content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform: translateY(-50%); background: url(../../images/common/ico_success.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_success.svg)50% 50% no-repeat;
                 }
             }
         }
@@ -166,6 +176,10 @@
                     width:100%;
                 }
             }
+        }
+
+        > .simpleTxt {
+            font-size:14px; color:var(--tbg2); font-weight:400; white-space:nowrap;
         }
 
         &.gap30 {
@@ -539,7 +553,7 @@
         @include media ('mobile') {
             display:block;
         }
-    } 
+    }
 }
 
 /*==================================== 버튼 ====================================*/
@@ -1330,8 +1344,19 @@
                     }
                 }
 
+                .infoTxt {
+                    display:inline-block; font-size:14px; color:var(--tbg2); font-weight:400; margin-top:10px;
+                }
+
                 @include media ('mobile'){
                     display:block; text-align:left; border-right:0; border-bottom:0; padding:0; display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; margin-bottom:8px;
+                    &.flex-col {
+                        flex-flow:column; gap:10px; align-items: flex-start;
+                        .mTit {
+                            width:max-content; margin:0; text-align:left;
+                        }
+                        > span {text-align:left;}
+                    }
                     .mTit {
                         display:inline-block; width:70px; margin-right:16px; font-size:14px; color:var(--tbg1); font-weight:500; line-height:1.5;
                     }
@@ -1392,6 +1417,17 @@
 
                             td {
                                 display:block; width: calc(100% - 160px); padding:14px; border-bottom:1px solid var(--lbg1); margin-bottom:0;
+
+                                .frmGroup  {
+                                    min-height:auto;
+
+                                    & + .frmGroup {
+                                        margin-top:10px;
+                                    }
+                                }
+                                .comButton {
+                                    display:block; width:110px;
+                                }
                             }
                         }
                     }

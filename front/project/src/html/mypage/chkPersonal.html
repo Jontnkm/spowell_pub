@@ -1,0 +1,112 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:6,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                회원정보수정
+
+                                <span class="innerDesc">
+                                    회원님의 개인정보를 신중히 취급하며, 회원님의 동의 없이 기재하신 회원정보가 공개되지 않습니다.<br>
+                                    개인정보를 안전하게 보호하기 위해 휴대폰으로 전송된 인증번호를 입력해 주세요.
+                                </span>
+                            </p>
+
+                            <div class="personalAuth">
+                                <div class="inner">
+                                    <div class="cptForm">
+                                        <div class="rowType">
+                                            <p class="lbTxt">휴대폰번호</p>
+                                            <div class="frmGroup">
+                                                <div class="ipt">
+                                                    <input type="text" title="휴대폰번호 입력" placeholder="휴대폰 번호 ('-'없이 입력)" />
+                                                </div>
+                                                <div class="comButton">
+                                                    <button type="button" class="btn h50 l-b" disabled>인증번호 발송</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cptForm">
+                                        <div class="rowType">
+                                            <p class="lbTxt">인증번호</p>
+                                            <div class="frmGroup">
+                                                <div class="ipt">
+                                                    <input type="text" title="인증번호 입력" placeholder="인증번호 (6자리)"/> <!-- class="error" -->
+                                                    <!-- <span class="ico">인증번호 유효시간이 만료되었습니다.<br>다시 인증을 진행해 주시기 바랍니다.</span> -->
+                                                </div>
+                                                <p class="time disabled">
+                                                    유효시간 <span>3:00</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 f-dg" disabled>확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

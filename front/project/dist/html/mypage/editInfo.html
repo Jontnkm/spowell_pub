@@ -269,10 +269,10 @@
                 <li class="depth2Menu">
                     <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">대회참여현황</a></h3>
                 </li>
-                <li class="depth2Menu active">
+                <li class="depth2Menu">
                     <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">증명서발급</a></h3>
                 </li>
-                <li class="depth2Menu">
+                <li class="depth2Menu active">
                     <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">회원정보수정</a></h3>
                 </li>
             </ul>
@@ -322,10 +322,10 @@
                             <li class="depth2Menu">
                                 <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">대회참여현황</a></h3>
                             </li>
-                            <li class="depth2Menu active">
+                            <li class="depth2Menu">
                                 <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">증명서발급</a></h3>
                             </li>
-                            <li class="depth2Menu">
+                            <li class="depth2Menu active">
                                 <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">회원정보수정</a></h3>
                             </li>
                         </ul>
@@ -420,90 +420,85 @@
         $(".depthTxt > .dept02").text(pgTit);
     })
 </script>
-
-                        <div class="modTab calDiv1 stb pcType">
-                            <div class="inner">
-                                <ul>
-                                    <li class="active"><a href="#none">경기력 성과포상금 지급확인서</a></li>
-                                    <li><a href="#none">체육장학증서</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tabType ">
-                            <div class="cptForm">
-                                <div class="dropDown">
-                                    <button type="button" class="" title="열기">경기력 성과포상금 지급확인서</button>
-                                    <div class="dropDownBox">
-                                        <ul class="ddCont">
-                                            <li><a href="#none" class="selected">경기력 성과포상금 지급확인서</a></li>
-                                            <li><a href="#none">체육장학증서</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="cptMyPage">
-                            <div class="certInfo">
-                                <p class="title">경기력 성과포상금 지급확인서</p>
-                                <p class="desc">
-                                    경기력 성과포상금을 받으시는 분께서 온라인으로 직접 경기력 성과포상금 증서를 발급 받으실 수 있는 서비스입니다.<br>
-                                    온라인에서 발급되는 체육인 증명서는 자격확인용으로만 사용할 수 있으며, 법적인 효력을 갖는 문서발급을<br>
-                                    위해서는 직접 방문하여 증명서를 발급받으셔야 합니다.
-                                </p>
-                                <p class="caution">
-                                    ※ 증명서 발급이 안 되거나, 인증이 되지 않는 경우 체육인복지팀(02-410-1622)으로 문의하시기 바랍니다.
-                                </p>
-                                <div class="comButton">
-                                    <button type="button" class="btn h42 f-b">증명서 발급 신청</button>
-                                </div>
-                            </div>
 
                             <p class="mptbTitle">
-                                온라인 발급신청
+                                기본정보
                             </p>
 
                             <div class="cptTable">
-                                <table class="tbInfo">
+                                <table class="tbInfo type02">
                                     <colgroup>
-                                        <col style="width:300px">
-                                        <col style="width:100px">
-                                        <col style="width:100px">
-                                        <col style="width:100px">
+                                        <col style="width:160px">
                                         <col style="width:auto">
                                     </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>신청대상</th>
-                                            <th>신청자격</th>
-                                            <th>수수료</th>
-                                            <th>처리기간</th>
-                                            <th>
-                                                경기력 성과포상금 증서(지급내역 포함여부 선택)
-                                            </th>
-                                        </tr>
-                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                <span class="mTit">신청대상</span>
-                                                <span>경기력 성과포상금을 받고 있는 사람</span>
+                                            <th>아이디</th>
+                                            <td class="left">memberId123</td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>비밀번호</th>
+                                            <td class="left">
+                                                <div class="comButton alignL">
+                                                    <button type="button" class="btn h36 l-g" onclick="popOpen('chgPw')">비밀번호 변경</button>
+                                                </div>
                                             </td>
-                                            <td>
-                                                <span class="mTit">신청자격</span>
-                                                <span>본인</span>
+                                        </tr>
+                                        <tr>
+                                            <th>이름</th>
+                                            <td class="left">홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>성별</th>
+                                            <td class="left">남자</td>
+                                        </tr>
+                                        <tr>
+                                            <th>생년월일</th>
+                                            <td class="left">1990.05.05</td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>휴대전화</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <span>010-1234-1234</span>
+                                                        <div class="comButton alignL">
+                                                            <button type="button" class="btn h36 l-g">휴대전화 변경</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
-                                            <td>
-                                                <span class="mTit">수수료</span>
-                                                <span>무료</span>
-                                            </td>
-                                            <td>
-                                                <span class="mTit">처리기간</span>
-                                                <span>즉시</span>
-                                            </td>
-                                            <td class="flex-col">
-                                                <span class="mTit">경기력 성과포상금 증서(지급내역 포함여부 선택)</span>
-                                                <span>체육인 경기력 성과포상금 증명서,<br>체육인 경기력 성과포상금 지급내역 증명서</span>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>주소</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="우편번호 입력창" />
+                                                        </div>
+                                                        <div class="comButton alignL">
+                                                            <button type="button" class="btn h36 l-g">우편번호</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt">
+                                                            <input type="text" title="주소 1 입력창" />
+                                                        </div>
+                                                        <p class="simpleTxt">
+                                                            기본주소
+                                                        </p>
+                                                    </div>
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="ipt">
+                                                            <input type="text" title="상세주소 입력창" />
+                                                        </div>
+                                                        <p class="simpleTxt">
+                                                            상세주소
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -511,40 +506,58 @@
                             </div>
 
                             <p class="mptbTitle">
-                                경기력 성과포상금 증서 방문 신청 안내
+                                보호자(법정대리인)
                             </p>
 
                             <div class="cptTable">
-                                <table class="tbInfo">
+                                <table class="tbInfo type02">
                                     <colgroup>
-                                        <col style="width:50%">
-                                        <col style="width:50%">
+                                        <col style="width:160px">
+                                        <col style="width:auto">
                                     </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>방문안내</th>
-                                            <th>방문신청 시 구비서류</th>
-                                        </tr>
-                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="flex-col">
-                                                <span class="mTit">방문안내</span>
-                                                <span>
-                                                    주소 : 서울시 송파구 올림픽로424 올림픽회관 신관<br>
-                                                    문의 : 체육인 복지팀(02-410-1622)
-                                                </span>
-                                            </td>
-                                            <td class="flex-col">
-                                                <span class="mTit">방문신청 시 구비서류</span>
-                                                <span>
-                                                    본인 : 신분증 사본<br>
-                                                    대리인 : 신청대상자 신분증 사본, 위임장, 대리인 신분증 사본
-                                                </span>
+                                            <th>이름</th>
+                                            <td class="left">홍길동</td>
+                                        </tr>
+                                        <tr>
+                                            <th>휴대전화</th>
+                                            <td class="left">
+                                                010-1234-1234
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                체육인복지 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>체육인 구분</th>
+                                            <td class="left">선수,지도자</td>
+                                        </tr>
+                                        <tr>
+                                            <th>종목</th>
+                                            <td class="left">
+                                                테권도
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">취소</button>
+                                <button type="button" class="btn h56 f-dg">수정</button>
                             </div>
                         </div>
                     </div>
@@ -761,23 +774,46 @@
 </div>
 
 <!-- 팝업이 들어오는 영역 -->
-<script>
-    //datepicker
-    var datepicker = new tui.DatePicker('#wrapper1', {
-        date: new Date(),
-        input: {
-            element: '#datepicker-input1',
-            format: 'yyyy-MM-dd'
-        }
-    });
-    var datepicker = new tui.DatePicker('#wrapper2', {
-        date: new Date(),
-        input: {
-            element: '#datepicker-input2',
-            format: 'yyyy-MM-dd'
-        }
-    });
-</script>
+<div class="modPopup type01" id="chgPw">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">비밀번호 변경 안내</div>
+            <button class="closeBtn" onclick="popClose('chgPw')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="cptForm">
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title="현재비밀번호 입력란" placeholder="기존 비밀번호">
+                    </div>
+                    <p class="simpleTxt">현재 사용중인 비밀번호 입력</p>
+                </div>
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title=" 입력란" placeholder="신규 비밀번호">
+                    </div>
+                    <p class="simpleTxt">8~12자리 영문,숫자,특수기호 조합</p>
+                </div>
+                <div class="frmGroup alingMid">
+                    <div class="ipt">
+                        <input type="text" title=" 입력란" placeholder="신규 비밀번호 확인">
+                    </div>
+                    <p class="simpleTxt">새 비밀번호 다시 한번 입력</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn sub" onclick="popClose('chgPw')">다음에 변경</button>
+            <button type="button" class="popBtn main" onclick="popClose('chgPw')">변경완료</button>
+        </div>
+    </div>
+</div>
 <!-- Bottom -->
 
 </div>

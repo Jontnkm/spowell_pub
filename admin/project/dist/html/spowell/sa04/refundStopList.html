@@ -288,68 +288,71 @@
     </div>
 
     <!-- 그리드 -->
-    <div class="cptGrid">
+    <div class="cptGrid withScroll">
         <table class="gridTb">
             <colgroup>
+                <col style="width:50px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
                 <col style="width:120px;">
                 <col style="width:150px;">
-                <col style="width:150px;">
-
                 <col style="width:250px;">
-                <col style="width:100px;">
                 <col style="width:150px;">
-                <col style="width:120px;">
-                <col style="width:200px;">
-                <col style="width:auto;">
+                <col style="width:300px;">
             </colgroup>
             <thead>
                 <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
                     <th>등록일자</th>
-                    <th>대상</th>
+                    <th>등록번호</th>
                     <th>성명</th>
-                    <th>지원사업구분</th>
-                    <th>지급항목</th>
-                    <th>지급금액</th>
+                    <th>장애여부</th>
+                    <th>대상</th>
+                    <th>종목</th>
+                    <th>지급중지사유</th>
                     <th>중지사유 확정일자</th>
-                    <th>사유</th>
                     <th>비고</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>YYYY-MM-DD</td>
                     <td>
-                        <span>비장애</span><br>
-                        <span>선수</span><br>
-                        <span>종목명</span>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
                     </td>
-                    <td>
-                        <span>0000</span><br>
-                        <span>홍길동</span>
-                    </td>
-                    <td>경기력 성과 포상금</td>
-                    <td>월정금</td>
-                    <td class="right"><span>000,000</span>원</td>
                     <td>YYYY-MM-DD</td>
-                    <td>사망</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>비장애</td>
+                    <td>선수</td>
+                    <td>종목명</td>
+                    <td>주민등록말소</td>
+                    <td>YYYY-MM-DD</td>
                     <td>비고</td>
                 </tr>
                 <tr>
-                    <td>YYYY-MM-DD</td>
                     <td>
-                        <span>비장애</span><br>
-                        <span>선수</span><br>
-                        <span>종목명</span>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
                     </td>
-                    <td>
-                        <span>0000</span><br>
-                        <span>홍길동</span>
-                    </td>
-                    <td>경기력 성과 포상금</td>
-                    <td>월정금</td>
-                    <td class="right"><span>000,000</span>원</td>
                     <td>YYYY-MM-DD</td>
-                    <td>사망</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>비장애</td>
+                    <td>선수</td>
+                    <td>종목명</td>
+                    <td>주민등록말소</td>
+                    <td>
+                        YYYY-MM-DD ~<br>YYYY-MM-DD
+                    </td>
                     <td>비고</td>
                 </tr>
             </tbody>
@@ -359,6 +362,11 @@
 
     <!-- 그리드/테이블 하단 버튼 양측 -->  
     <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn dkBlue">지급보류 해제처리</button>
+            </div>
+        </div>
         <div class="cptGroupBtm alignR">
             <div class="comSideOpt">
                 <button type="button" class="crudBtn blue">등록</button>

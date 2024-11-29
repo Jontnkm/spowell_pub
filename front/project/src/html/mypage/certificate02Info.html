@@ -1,0 +1,135 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:5,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                경기력 성과포상금 지급확인서 발급 신청
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>성명</th>
+                                            <td class="left">
+                                                홍길동
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>생년월일</th>
+                                            <td class="left">
+                                                1999.01.01
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>성별</th>
+                                            <td class="left">
+                                                남
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>휴대전화번호</th>
+                                            <td class="left">
+                                                010-****-1234
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이메일</th>
+                                            <td class="left">
+                                                abc@abc.co.kr
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>종목</th>
+                                            <td class="left">
+                                                태권도
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>선정연도</th>
+                                            <td class="left">
+                                                2023년
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="qualResult">
+                                <div class="msgBox">
+                                    <p>입력하신 정보를 조회되는 자료가 없습니다.<br><span>압력정보를 확인</span>후 다시 신청해 주시기 바랍니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">이전</button>
+                                <!-- <button type="button" class="btn h56 f-dg">증명서 다운로드</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
