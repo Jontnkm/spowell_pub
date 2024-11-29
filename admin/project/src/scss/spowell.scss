@@ -27,6 +27,26 @@
             > span.marked {
                 display:inline-block; width:25px; height:25px; background:var(--basic-color); border-radius:50%;
             }
+
+            .fileList {
+                width:100%; position:relative; padding:20px;
+
+                ul {
+                    display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:20px;
+
+                    > li {
+                        width:100%; position:relative;
+
+                        > a{
+                            display:block; width:max-content; padding-right:25px; position:relative;
+
+                            &::after {
+                                content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:20px; height:20px; background:url(../images/common/btn_download.png)50% 50% no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -70,7 +90,10 @@
 
             .negative {color:var(--basic-red);}
             .positive {color:var(--basic-color);}
-                
+            
+            > a {
+                text-decoration:underline;
+            }
         }
 
         th {transition:all 0.4s; border:1px solid rgba(255,255,255,0.1);}
