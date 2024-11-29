@@ -1,0 +1,200 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember ty01">
+                            <div class="loginBox">
+                                <p class="title">로그인</p>
+                                <p class="desc">
+                                    SPOWell체육인복지지원시스템에<br>오신걸 환영합니다.
+                                </p>
+
+                                <div class="cptForm">
+                                    <p class="lbTxt">아이디</p>
+                                    <div class="ipt">
+                                        <input type="text" title="아이디를 입력해 주세요." placeholder="아이디를 입력해 주세요." />
+                                    </div>
+                                
+                                    <p class="lbTxt">비밀번호</p>
+                                    <div class="ipt">
+                                        <input type="text" title="비밀번호를 입력해 주세요." placeholder="비밀번호를 입력해 주세요." />
+                                    </div>
+                                </div>
+
+                                <div class="loginOption">
+                                    <div class="cptForm">
+                                        <div class="frmChk">
+                                            <input type="checkbox" id="chk01" checked />
+                                            <label for="chk01">아이디 저장</label>
+                                        </div>
+                                    </div>
+                                    <div class="options">
+                                        <a href="#none">아이디 찾기</a>
+                                        <a href="#none">비밀번호 찾기</a>
+                                    </div>
+                                </div>
+
+                                <div class="loginBtn">
+                                    <button type="button">로그인</button>
+
+                                    <p>간편로그인</p>
+                                    <div>
+                                        <a href="#none" class="naverLogin"><span class="hidden">네이버로그인</span></a>
+                                        <a href="#none" class="kakaoLogin"><span class="hidden">카카오로그인</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="goMember">
+                                    <p>아직회원이 아니신가요?</p>
+                                    <a href="#none">회원가입</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup typeAlert" id="alert01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                아이디 또는 비밀번호를 확인해주세요.<br>
+                5회 이상 실패 시 로그인이 제한됩니다.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert01')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert01')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup typeAlert" id="alert02">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert02')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                5회 이상 로그인에 실패하여<br>
+                로그인이 제한되었습니다.<br>
+                3분 뒤 다시 시도해주세요.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert02')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert02')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup typeAlert" id="alert03">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert03')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                SNS 계정연동이 되지 않아<br>
+                간편 로그인이 불가합니다.<br>
+                SNS 계정을 연동해주세요.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert03')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert03')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup typeAlert" id="alert04">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert04')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                승인되지 않은 계정입니다.<br>
+                관리자의 승인 후 이용할 수 있습니다.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert04')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert04')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

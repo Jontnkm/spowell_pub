@@ -2,7 +2,21 @@
 
 .lytLayout{
     width:100%;
+    /*로그인 및 회원가입 배경 설정*/
+    &.member {
+        background:var(--bg1);
 
+        .subContArea {
+            display:block !important; max-width:100% !important; margin:120px auto !important;
+            @include media ('mobile') {
+                margin:60px auto !important;
+            }
+        }
+
+        .layoutCont {
+            width:100% !important;
+        }
+    }
     .layoutArea {
         width:100%;
 
@@ -36,205 +50,13 @@
                 @include media ('tablet') {
                     width:100%;
                 }
-
-                .cptLnb {
-                    width:100%; position:relative; 
-                    > .inner {
-                        @include media ('tablet') {
-                            display:none;
-                        }
-                        > .titleArea {
-                            width:100%; padding:50px 0 84px; background:var(--prm1); border-radius:40px 0 0 0 ;
-                            > h2 {
-                                font-size:26px; color:var(--bg3); font-weight:700; line-height:1.4; text-align:center;
-                            }
-                        }
-
-                        >.menuBox {
-                            width:100%; position:relative; margin-top: -34px; background:var(--bg3); border-radius:34px 0 34px 34px ; padding:20px 30px; border:1px solid #DEE2EA; border-top:0;
-
-                            > ul {
-                                display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start;
-
-                                > li {
-                                    width:100%;
-                                    > h3 {
-                                        > a {
-                                            position:relative; width:100%; display:block; padding:14px 30px 14px 0; font-size:18px; color:#000; font-weight:700; border-bottom:1px solid #DEE2EA; transition:all 0.4s;
-
-                                            &::after {
-                                                content:''; position:absolute; top:50%; right:0; width:0px; height:20px; transform:translateY(-50%); background:url(../../images/common/ico_lnb_on.svg); transition:all 0.4s;
-                                            }
-
-                                            &:hover {
-                                                color:var(--prm1); border-bottom:1px solid var(--prm1);
-                                                &::after {
-                                                    width:20px; transform:translateY(-50%) rotate(360deg);
-                                                }
-                                            }
-                                        }
-                                    }
-                                    &.active {
-                                        > h3 {
-                                            > a {
-                                                color:var(--prm1); border-bottom:1px solid var(--prm1);
-                                                &::after {
-                                                    width:20px;
-                                                }
-                                                &:hover {
-                                                    &::after {
-                                                        width:20px; transform:translateY(-50%) rotate(0deg);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    &:last-of-type {
-                                        > h3 {
-                                            > a {
-                                                border-bottom:0 !important;
-                                            }
-                                        }
-                                    }
-                                    > .depth3Group {
-                                        padding:20px 8px; border-bottom:1px solid #DEE2EA;
-                                        > li {
-                                            width:100%; margin-bottom:12px;
-                                            > h4 {
-                                                > a {
-                                                    display:block; width:max-content; padding-left:9px; position:relative; font-size:16px; color:var(--prm3); font-weight:500; line-height:1.5;
-
-                                                    &::before {
-                                                        content:''; position:absolute; top:50%; left:0; width:4px; height:4px; border-radius:50%; background:#DEE2EA; transform:translateY(-50%); transition:all 0.2s;
-                                                    } 
-                                                    &::after {
-                                                        content:''; position:absolute; bottom:0; left:9px; width:0; height:2px; background:var(--prm1); transition:all 0.2s
-                                                    }
-
-                                                    &:hover {
-                                                        color:var(--prm1);
-                                                        &::before {
-                                                            background:var(--prm1);
-                                                        }
-                                                        &::after {
-                                                            width:calc(100% - 9px);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .moInner {
-                        display:none;
-                        @include media ('tablet') {
-                            display:block;
-                        }
-
-                        .subMenuBox {
-                            display:flex; flex-flow: row nowrap; align-items: flex-start ;justify-content: flex-start;
-
-                            > div {
-                                width:50%; position:relative;
-                                > button {
-                                    background:var(--bg1); padding: 11px 20px; width:100%; 
-                                    > h2,h3 {
-                                        font-size:16px; color:var(--prm3); font-weight:500; line-height:22px; text-align:left;
-                                    }
-
-                                    &::after {
-                                        content:''; position:absolute; top:50%; right:20px; transform:translateY(-50%); width:20px; height:20px; background:url(../../images/common/ico_sub_drop.svg)50% 50% no-repeat;
-                                    }
-
-                                    &.active {
-                                        &::after {
-                                            transform:translateY(-50%) rotate(180deg);
-                                        }
-                                    }
-                                }
-
-                                > div {
-                                    display:none; position:absolute; top:calc(100% + 6px); left:50%; width:calc(100% - 28px); transform:translateX(-50%); background:var(--bg3); border:1px solid var(--prm3); border-radius:6px; padding: 20px 14px; z-index:2;
-
-                                    .inner {
-                                        > ul {
-                                            display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:4px;
-                                            > li {
-                                                a {
-                                                    position:relative; display:inline-block; width:max-content; font-size:16px; color:var(--prm3); font-weight:400; line-height:22px;
-                                                    &:hover {
-                                                        color:var(--prm1); font-weight:600;
-                                                    }
-                                                }
-
-                                                &.active {
-                                                    a {
-                                                        color:var(--prm1); font-weight:600;
-                                                        &::after {
-                                                            content:''; position:absolute; bottom:2px; left:0; width:100%; height:2px; background:var(--prm1);
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
             .layoutCont{
                 width:calc(100% - 310px); position:relative;
                 @include media ('tablet') {
                     width:calc(100% - 40px); margin: 0 auto;
-                }
-                .cptSubTop {
-                    width:100%; position:relative;
 
-                    > .inner {
-                        width:100%;
-
-                        > .titleArea {
-                            width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; padding-bottom:24px; border-bottom:1px solid #DEE2EA;
-                            @include media ('tablet') {
-                                display:block; padding-bottom:0; border-bottom:0;
-                            }
-                            > p.pageTitle {
-                                font-size:32px; color:var(--prm3); font-weight:800; line-height:1.4; letter-spacing:-0.064px;
-                                @include media ('tablet') {
-                                    text-align:center; margin:30px 0; font-size:26px;
-                                }
-                            }
-
-                            > .breadCrumb {
-                                @include media ('tablet') {
-                                    display:none;
-                                }
-                                > ul {
-                                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:5px;
-
-                                    > li {
-                                        > .home {
-                                            display:block; width:20px; height:20px; background:url(../../images/common/ico_bread_home.svg)50% 50% no-repeat;
-                                        }
-                                        &.nxtArr {
-                                            > span {
-                                                display:block; width:20px; height:20px; background: url(../../images/common/ico_bread_arr.svg)50% 50% no-repeat;
-                                            }
-                                        }
-                                        > a.depthTxt {
-                                            display:block; width:max-content; font-size:14px; color:var(--prm3); font-weight:500; line-height:1.4;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    > div:nth-of-type(2) {margin-top:0;}
                 }
             }
             .layoutFloat {
@@ -252,7 +74,7 @@
     width: 100%; height: 100vh; position: fixed; top: 0;left: 0;right: 0;bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 999; display: none;
 
     // 팝업동작 기본설정
-    .popupDim {width: 100%; height: 100vh; font-size: 0; background: rgba(0,0,0,0.4); position: absolute; top: 0;left: 0;right: 0; bottom: 0; opacity: 0;}
+    .popupDim {width: 100%; height: 100vh; font-size: 0; background: rgba(0,0,0,0.75); position: absolute; top: 0;left: 0;right: 0; bottom: 0; opacity: 0;}
     .popupBox {
         width: 100%; margin: 0 auto; position: relative; display: flex; flex-flow: column; z-index: 1;
         @include media ('tablet'){
@@ -260,22 +82,6 @@
         }
         & > * {opacity: 0;}
         &::before {display: block; content: ""; width: 0; height: 0;background: var(--bg3); position: absolute; top: 50%; left: 50%; z-index: -1;}
-    }
-    /* kb 템플릿으로영상만들기 팝업 2024.10.17 */
-    .popContArea {
-        overflow-y: auto; overflow-x:hidden;
-        &::-webkit-scrollbar{
-            width:4px; background:rgba(0,0,0,0.1);
-        }
-        &::-webkit-scrollbar-thumb{
-            background:rgba(0,0,0,0.2);
-        }
-        .previewArea{
-            width: 100%; height: 100%;
-            img{
-                width: 100%; height: 100%;
-            }
-        }
     }
     
     // 팝업동작 기본설정 - 팝업 열림 동작
@@ -295,17 +101,49 @@
         from {opacity: 0;}
         to {opacity: 1;}
     }
-
-    // 타이틀 있는 팝업
-    &.type01 {
+    //알럿창
+    &.typeAlert {
         .popupBox {
-            max-height: 95%; border-radius: 24px; padding:24px 24px 30px 24px;
-            &::before {border-radius: 24px;} 
-                    
+            max-height: 95%; border-radius: 20px; padding:30px;
+            &::before {border-radius: 20px;} 
+                                
             .popTitArea {
-                width: 100%; padding-bottom:24px; margin-bottom:30px; border-bottom: 1px solid var(--txt-gray04); display: flex; justify-content: space-between; align-items: center;
+                width: 100%; margin-bottom:10px; display: flex; justify-content: space-between; align-items: center;
                 .tit {
                     font-size:20px; color:var(--t1);
+                    b {color: #005ce6;}
+                }
+                .closeBtn {margin-left: auto; width: 12px; height: 12px; font-size: 0; background: url(../../images/common/ico_pop_close.svg) center no-repeat;}
+
+                &.type02 {border-bottom:0;}
+            }
+            
+            .alertTxt {
+                font-size:16px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; word-break:keep-all;
+            }
+
+            .popBtnArea {
+                width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 8px;
+                .popBtn {
+                    display:inline-block; padding: 0 40px; height:42px; line-height:42px; border-radius: 76px; font-size: 16px; text-align: center;
+                    &.main { background:var(--prm3); color:var(--bg3);}
+                    &.sub { background:var(--bg3); color:var(--t1); border:1px solid var(--lbg2); padding: 0 26px;}
+                }
+
+            }
+            &.sm {max-width:340px;}
+        }
+    }
+    
+    &.type01 {
+        .popupBox {
+            max-height: 95%; border-radius: 20px; padding:30px 40px;
+            &::before {border-radius: 20px;} 
+
+            .popTitArea {
+                width: 100%; margin-bottom:20px; display: flex; justify-content: space-between; align-items: center;
+                .tit {
+                    font-size:20px; color:var(--t1); font-weight:700;
                     b {color: #005ce6;}
                 }
                 .closeBtn {margin-left: auto; width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ico_pop_close.svg) center no-repeat;}
@@ -313,68 +151,29 @@
                 &.type02 {border-bottom:0;}
             }
 
+            .popContArea {
+                > p {
+                    font-size:16px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; word-break:keep-all; padding:24px 0;
+                    @include media ('mobile') {
+                        padding:10px; font-size:14px;
+                    }
+                    &.lt {
+                        text-align:left;
+                    }
+                }
+            }
+
             .popBtnArea {
-                width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 10px;
+                width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 8px;
                 .popBtn {
-                    display:inline-block; min-width: 160px; height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
-                    &.blue { background:var(--prm1); color:var(--bg3);}
-                    &.white { background:var(--bg3); color:var(--t1); border:1px solid var(--txt-gray02);}
+                    display:inline-block; padding: 0 40px; height:42px; line-height:42px; border-radius: 76px; font-size: 16px; text-align: center;
+                    &.main { background:var(--prm3); color:var(--bg3);}
+                    &.sub { background:var(--bg3); color:var(--t1); border:1px solid var(--lbg2); padding: 0 26px;}
                 }
 
             }
             &.sm {max-width:440px;}
-            &.lg {max-width:960px;}
+            &.lg {max-width:710px;}
         }
     }
-    
-    // 타이틀 없음
-    &.type02 {
-        .popupBox {
-            max-width:440px; max-height: 85%; border-radius: 24px; padding:24px 24px 30px 24px;
-            &::before {border-radius: 24px;}                     
-            .popTitArea {
-                width: 100%; display: flex; justify-content: flex-end; align-items: center;
-                .closeBtn {margin-left: auto; width: 24px; height: 24px; font-size: 0; background: url(../../images/common/ico_pop_close.svg) center no-repeat;}
-            }
-
-            .popContArea {
-                .title {
-                    font-size:20px; font-weight:500; line-height:28px; letter-spacing:-0.4px; color: var(--t1);
-                }
-                .desc {
-                    width:100%; margin:30px 0 16px; font-size:16px; color:var(--txt-gray02); font-weight:400;
-                }
-            }
-
-            .popBtnArea {
-                width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 10px;
-                .popBtn {
-                    display:inline-block; min-width: 160px; height:56px; line-height:56px; padding: 0 40px; border-radius: 8px; font-size: 18px; text-align: center;
-                    &.blue { background:var(--prm1); color:var(--bg3);}
-                    &.white { background:var(--bg3); color:var(--t1); border:1px solid var(--txt-gray02);}
-                }
-            }
-        }
-    }
-
-    // 풀 레이아웃 팝업
-    &.fullLayout{
-        .popupBox{
-            width: 100%; height: 100%; background: var(--bg3); border-radius: 0; padding: 0; max-width: 100%; max-height: 100%; 
-            &::before{
-                animation: none;
-            }
-            > *{
-                animation: none; opacity: 1;
-            }
-        }
-        /*위치변경함.. -JK-*/
-        .popTitArea{
-            display: flex; justify-content: space-between; align-items: center; height: 55px; padding: 15px; border-bottom: 1px solid #f2f2f2;
-            .tit{
-                color: var(--t1); font-weight: 500; font-size: 20px; letter-spacing: -0.5px;
-            }
-        }
-    }
-
 }

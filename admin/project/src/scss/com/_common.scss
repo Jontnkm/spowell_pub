@@ -671,16 +671,14 @@
 /* ------------------------------------------------------------------------------------------------------ */
 input[type=text] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
 input[type=text]:disabled,
-input[type=text]:read-only {color:#777; background:#efefef;}
+input[type=text].readonly {color:#777 !important;}
 input[type=password] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px;}
 input[type=password]:disabled {color:#777; background:#efefef;}
-input[type=checkbox] {}
-input[type=radio] {}
-input[type=checkbox]:read-only,
-input[type=radio] {color:#777; background:#efefef;}
+input[type=checkbox].readonly + label,
+input[type=radio].readonly + label {color:#777 !important;}
 input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;}
 select {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff url(../images/icon/icon_slt.svg) calc(100% - 10px) center no-repeat;}
-select[read-only] {color:#777; background:#efefef;}
+select.readonly {color:#777 !important; border:1px solid #eaeaea !important; background:#f5f5f5 url(../images/icon/icon_slt.svg) calc(100% - 10px) center no-repeat !important;}
 textArea {width:100%; height:150px; font-size:14px; font-weight:400; color:#000;}
 textArea:read-only {color:#777; background:#efefef;}
 input:focus {outline:none;}
@@ -748,12 +746,14 @@ textArea.areaMd {height:150px;}
 
 .frmChoBox .iptChk:disabled + .iptLbl {color:#666; background:url(../images/icon/ic_chk_dis_off.svg) left center no-repeat;}
 .frmChoBox .iptChk:disabled:checked + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
+.frmChoBox .iptChk.readonly + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
 
 .frmChoBox .iptRdo + .iptLbl {padding-left:24px; font-size:14px; line-height:20px; color:#000; background:url(../images/icon/ic_slt_off.svg) left center no-repeat;}
 .frmChoBox .iptRdo:checked + .iptLbl {background:url(../images/icon/ic_slt_on.svg) left center no-repeat;}
 
 .frmChoBox .iptRdo:disabled + .iptLbl {color:#666; background:url(../images/icon/ic_slt_dis_off.svg) left center no-repeat;}
 .frmChoBox .iptRdo:disabled:checked + .iptLbl {background:url(../images/icon/ic_slt_dis_on.svg) left center no-repeat;}
+.frmChoBox .iptRdo.readonly + .iptLbl {background:url(../images/icon/ic_slt_dis_on.svg) left center no-repeat;}
 
 .frmChoBox:last-child {margin-right:0;}
 /* 체크박스/라디오 리스트 */
@@ -942,6 +942,7 @@ textArea.areaMd {height:150px;}
 .cptTable .gridBtn.dkbLine {color: var(--basic-dkBlue); background:#fff; border:1px solid var(--basic-dkBlue);}
 .cptTable .frmGroup .gridBtn {margin-left:5px;}
 .cptTable.complexView .tbView td:first-child {border-left:1px solid rgba(132, 132, 132, 0.2)}
+.cptTable .gridBtn.disabled {color: rgba(0, 0, 0, 0.3); border:1px solid rgba(132, 132, 132, 0.2); background:#f7f7f7; cursor:default;}
 
 /* ----------------------------------------- 단독사용 button ----------------------------------------- */
 .iptDate + .soloBtn, .iptText + .soloBtn, .iptSlt + .soloBtn, .iptBox + .soloBtn, .iptChk + .soloBtn, .iptLbl + .soloBtn, .iptRdo + .soloBtn {margin-left:10px;}

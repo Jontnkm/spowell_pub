@@ -1,14 +1,43 @@
 <!-- Guide : s -->
 <div class="g-area">
-    <strong class="g-area-tit">타이틀 있는 작은팝업</strong>  
+    <strong class="g-area-tit">ALERT POPUP</strong>  
     <xmp>
-        <button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">작은 팝업열기 버튼</button>
-        <div class="modPopup type01" id="clause01">
+        <button type="button" onclick="popOpen('alert01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">알림팝업 열기</button>
+        <div class="modPopup typeAlert" id="alert01">
             <div class="popupDim">딤 영역</div>
             <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
                 <!-- 팝업 타이틀 -->
                 <div class="popTitArea">
-                    <div class="tit">타이틀</div>
+                    <!-- <div class="tit">타이틀</div> -->
+                    <button class="closeBtn" onclick="popClose('alert01')">팝업 닫기</button>
+                </div>
+
+                <!-- 팝업 컨텐츠 -->
+                <div class="popContArea">
+                    <p class="alertTxt">
+                        아이디 또는 비밀번호를 확인해주세요.<br>
+                        5회 이상 실패 시 로그인이 제한됩니다.
+                    </p>                        
+                </div>
+
+                <!-- 팝업 버튼 -->
+                <div class="popBtnArea">
+                    <!-- <button type="button" class="popBtn sub" onclick="popClose('alert01')">취소</button> -->
+                    <button type="button" class="popBtn main" onclick="popClose('alert01')">확인</button>
+                </div>
+            </div>
+        </div>
+    </xmp>
+
+    <strong class="g-area-tit">팝업 공통</strong>  
+    <xmp>
+        <button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">공통팝업 열기</button>
+        <div class="modPopup type01" id="clause01">
+            <div class="popupDim">딤 영역</div>
+            <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+                <!-- 팝업 타이틀 -->
+                <div class="popTitArea">
+                    <div class="tit">비밀번호 변경 안내</div>
                     <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
                 </div>
 
@@ -28,43 +57,8 @@
 
                 <!-- 팝업 버튼 -->
                 <div class="popBtnArea">
-                    <button type="button" class="popBtn white" onclick="popClose('clause01')">취소</button>
-                    <button type="button" class="popBtn blue" onclick="popClose('clause01')">확인</button>
-                </div>
-            </div>
-        </div>
-    </xmp>
-
-    <strong class="g-area-tit">타이틀 있는 큰팝업</strong>  
-    <xmp>
-        <button type="button" onclick="popOpen('clause02')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">큰 팝업열기 버튼</button>
-        <div class="modPopup type01" id="clause02">
-            <div class="popupDim">딤 영역</div>
-            <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
-                <!-- 팝업 타이틀 -->
-                <div class="popTitArea">
-                    <div class="tit">타이틀</div>
-                    <button class="closeBtn" onclick="popClose('clause02')">팝업 닫기</button>
-                </div>
-
-                <!-- 팝업 컨텐츠 -->
-                <div class="popContArea">
-                    <div class="comClause">
-                        <p class="basicTxt">
-                            내용입니다.<br>
-                            내용입니다.<br>
-                            내용입니다.<br>
-                            내용입니다.<br>
-                            내용입니다.<br>
-                            내용입니다.<br>
-                        </p>                        
-                    </div>
-                </div>
-
-                <!-- 팝업 버튼 -->
-                <div class="popBtnArea">
-                    <button type="button" class="popBtn white" onclick="popClose('clause02')">취소</button>
-                    <button type="button" class="popBtn blue" onclick="popClose('clause02')">확인</button>
+                    <button type="button" class="popBtn sub" onclick="popClose('clause01')">취소</button>
+                    <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
                 </div>
             </div>
         </div>

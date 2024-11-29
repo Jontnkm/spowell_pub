@@ -1,7 +1,9 @@
 <%
 var title = locals.title ? locals.title : '';
 var url = locals.url ? locals.url : '../../';
+var page = locals.page ? locals.page : '';
 %>
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -16,7 +18,7 @@ var url = locals.url ? locals.url : '../../';
 
 	<title><%= title %></title>
 
-	<link rel="stylesheet" href="<%= url %>common/css/swiper.css" />
+	<link rel="stylesheet" href="<%= url %>common/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="<%= url %>common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="<%= url %>common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
@@ -24,8 +26,12 @@ var url = locals.url ? locals.url : '../../';
 	<script src="<%= url %>common/js/jquery-3.4.1.min.js"></script>
 	<script src="<%= url %>common/js/jquery-ui.min.js"></script>
 	<script src="<%= url %>common/js/tui-date-picker.js"></script>
-	<script src="<%= url %>common/js/swiper.js"></script>
+	<script src="<%= url %>common/js/swiper-bundle.min.js"></script>
 	<script src="<%= url %>common/js/common.js"></script>
+
+	<% if (page=="main") { %>
+		<script src="<%= url %>common/js/main.js"></script>
+	<% } %>
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>

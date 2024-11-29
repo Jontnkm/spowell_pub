@@ -1,0 +1,601 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:2,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                국내대학원 교육지원금 기존 대상자 신청
+                            </p>
+
+                            <p class="mptbTitle">
+                                신규 신청 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>신청 복지</th>
+                                            <td class="left">
+                                                국내대학원 교육지원금
+                                            </td>
+                                            <th>종목</th>
+                                            <td class="left">
+                                                태권도
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>체육인 구분</th>
+                                            <td class="left">
+                                                선수
+                                            </td>
+                                            <th>은행계좌</th>
+                                            <td class="left">
+                                                국민은행 000000-00-000000
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>학교</th>
+                                            <td class="left">
+                                                한국체육대학교
+                                            </td>
+                                            <th>대학원</th>
+                                            <td class="left">
+                                                일반대학원
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>체육전공</th>
+                                            <td class="left">
+                                                예
+                                            </td>
+                                            <th>전공</th>
+                                            <td class="left">
+                                                체육학과
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>과정</th>
+                                            <td class="left">
+                                                석사
+                                            </td>
+                                            <th>전공</th>
+                                            <td class="left">
+                                                체육학과
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>체육전공</th>
+                                            <td class="left">
+                                                예
+                                            </td>
+                                            <th>5학기 지원</th>
+                                            <td class="left">
+                                                예
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>지원기간</th>
+                                            <td class="left">
+                                                2025년 상반기 ~ 2026년 하반기
+                                            </td>
+                                            <th>신청학기</th>
+                                            <td class="left">
+                                                1학기
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                학기별 신청 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="combine">
+                                            <th>신청구분</th>
+                                            <td class="left">
+                                                <div class="cptForm rdoFlex">
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo011" name="rdo02" checked />
+                                                        <label for="rdo011">지원 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo012" name="rdo02" />
+                                                        <label for="rdo012">중지 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo013" name="rdo02" />
+                                                        <label for="rdo013">종료 신청</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>신청학기</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">학기</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">1학기</a></li>
+                                                                <li><a href="#none">2학기</a></li>
+                                                                <li><a href="#none">3학기</a></li>
+                                                                <li><a href="#none">4학기</a></li>
+                                                                <li><a href="#none">5학기</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine ">
+                                            <th>신청기간</th>
+                                            <td class="left">
+                                                <div class="cptForm ">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">2025</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Deco">년</div>
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">선택</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>신청금액</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">1,000,000</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">1,000,000</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Deco">원</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="tableOutTxt">
+                                    <ul>
+                                        <li>지원학기 : 지원 신청하는 정규수업 학기 선택</li>
+                                        <li>신청금액 : 학기당 300만원 범위 내의 입학금 및 등록금 지원</li>
+                                        <li>성적증명서 : 직전학기 평균 평점이 B0 미만인 경우 지원 불가</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <p class="mptbTitle">
+                                학기별 신청 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="combine">
+                                            <th>신청구분</th>
+                                            <td class="left">
+                                                <div class="cptForm rdoFlex">
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo011" name="rdo03"  />
+                                                        <label for="rdo011">지원 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo012" name="rdo03" checked/>
+                                                        <label for="rdo012">중지 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo013" name="rdo03" />
+                                                        <label for="rdo013">종료 신청</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>신청학기</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">학기</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">1학기</a></li>
+                                                                    <li><a href="#none">2학기</a></li>
+                                                                    <li><a href="#none">3학기</a></li>
+                                                                    <li><a href="#none">4학기</a></li>
+                                                                    <li><a href="#none">5학기</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Deco">~</div>
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">학기</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">1학기</a></li>
+                                                                    <li><a href="#none">2학기</a></li>
+                                                                    <li><a href="#none">3학기</a></li>
+                                                                    <li><a href="#none">4학기</a></li>
+                                                                    <li><a href="#none">5학기</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>신청기간</th>
+                                            <td class="left">
+                                                <div class="cptForm rdoFlex">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">2025</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Deco">년</div>
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">선택</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="Deco">~<br></div>
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">2025</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="Deco">년</div>
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">선택</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">2025</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>사유</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid">
+                                                        <div class="dropDown w155">
+                                                            <button type="button" class="" title="열기">선택</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none" class="selected">선택</a></li>
+                                                                    <li><a href="#none">2026</a></li>
+                                                                    <li><a href="#none">2027</a></li>
+                                                                    <li><a href="#none">2028</a></li>
+                                                                    <li><a href="#none">2029</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <textArea class="textarea" placeholder="중지신청 사유를 입력해 주세요."></textArea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                학기별 신청 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="combine">
+                                            <th>신청구분</th>
+                                            <td class="left">
+                                                <div class="cptForm rdoFlex">
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo011" name="rdo04"  />
+                                                        <label for="rdo011">지원 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo012" name="rdo04" />
+                                                        <label for="rdo012">중지 신청</label>
+                                                    </div>
+                                                    <div class="frmRdo ty02">
+                                                        <input type="radio" id="rdo013" name="rdo04" checked />
+                                                        <label for="rdo013">종료 신청</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle flex">
+                                <span>제출서류</span>
+                                <span class="comButton alignR">
+                                    <button type="button" class="btn h36 l-g ico">
+                                        <span class="txt">추가</span>
+                                        <span class="ico01"><span class="hidden">플러스 모양 아이콘 이미지</span></span>
+                                    </button>
+                                </span>
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo">
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col style="width:auto;">
+                                        <col style="width:150px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>제출서류 구분</th>
+                                            <th>첨부파일</th>
+                                            <th>추가/삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">등록금영수증</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">등록금영수증</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea on">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">등록금영수증</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">등록금영수증</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea on">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="comButton">
+                                                    <button type="button" class="btn h36 l-g ico">
+                                                        <span class="txt">삭제</span>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">등록금영수증</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">등록금영수증</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="comButton">
+                                                    <button type="button" class="btn h36 l-g ico">
+                                                        <span class="txt">삭제</span>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">취소</button>
+                                <button type="button" class="btn h56 f-dg">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

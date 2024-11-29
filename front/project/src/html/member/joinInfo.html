@@ -1,0 +1,349 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember-process">
+                            <ul>
+                                <li class="complete"><!--해당 단계 완료시 'complete' 클래스 추가-->
+                                    <span class="step">1</span>
+                                    <span>약관동의</span>
+                                </li>
+                                <li class="ongoing"><!--해당 단계 진행시 'ongoing' 클래스 추가-->
+                                    <span class="step">2</span>
+                                    <span>체육인 자격조회</span>
+                                </li>
+                                <li>
+                                    <span class="step">3</span>
+                                    <span>정보입력</span>
+                                </li>
+                                <li>
+                                    <span class="step">4</span>
+                                    <span>가입완료</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cptMember">
+                            <p class="title">정보입력</p>
+
+                            <!--※ 만 14세이상 체육인 인증 실패의 경우 해당 영역 숨김 필요-->
+                            <div class="spoInfoArea">
+                                <div class="top">
+                                    <div class="left">
+                                        <div class="infoTit">
+                                            <p>이름</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>홍길동</p>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="infoTit">
+                                            <p>주민등록번호</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>
+                                                880101 - 1●●●●●●
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bot">
+                                    <div class="left">
+                                        <div class="infoTit">
+                                            <p>체육인 구분</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>선수</p>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="infoTit">
+                                            <p>종목</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>양궁</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--만 14세 미만 체육인의 경우 해당 영역 표기-->
+                            <!--단 만 14세이상 체육인 인증 실패의 경우 해당 영역 숨김 필요-->
+                            <div class="spoInfoArea guardian">
+                                <div class="top">
+                                    <div class="left">
+                                        <div class="infoTit">
+                                            <p>법정대리인(부모님)</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>홍길자</p>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="infoTit">
+                                            <p>휴대폰번호</p>
+                                        </div>
+                                        <div class="infoData">
+                                            <p>
+                                                010-1234-1234
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //만 14세 미만 체육인의 경우 해당 영역 표기-->
+                             
+                            <div class="infoIptArea">
+                                <!-- 만14세 이상 체육인 인증 실패 CASE -->
+                                <div class="cptForm">
+                                    <div class="rowType">
+                                        <p class="lbTxt">이름</p>
+                                        <div class="ipt">
+                                            <input type="text" title="이름 입력란" placeholder="이름을 입력해주세요." value="홍길동"/>
+                                            <!-- <span class="ico">사용 가능합니다.</span> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">주민등록번호</p>
+                                        <div class="frmGroup">
+                                            <div class="ipt">
+                                                <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                                            </div>
+                                            <div class="deco">-</div>
+                                            <div class="ipt">
+                                                <input type="text" title="주민등록번호 뒷자리 입력" placeholder="1******" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">장애여부</p>
+                                        <div class="frmGroup gap30 alingMid">
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk03" checked />
+                                                <label for="chk03">장애</label>
+                                            </div>
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk04" />
+                                                <label for="chk04">비장애</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">종목</p>
+                                        <div class="dropDown hlf flBtn">
+                                            <button type="button" class="" title="열기">종목 선택</button>
+                                            <div class="dropDownBox hlfddCont ty01">
+                                                <ul class="ddCont">
+                                                    <li><a href="#none">야구</a></li>
+                                                    <li><a href="#none">축구</a></li>
+                                                    <li><a href="#none">농구</a></li>
+                                                    <li><a href="#none">배구</a></li>
+                                                    <li><a href="#none">배드민턴</a></li>
+                                                    <li><a href="#none" class="selected">수영</a></li>
+                                                    <li><a href="#none">태권도</a></li>
+                                                    <li><a href="#none">핸드볼</a></li>
+                                                    <li><a href="#none">탁구</a></li>
+                                                    <li><a href="#none">펜싱</a></li>
+                                                    <li><a href="#none">근대5종</a></li>
+                                                    <li><a href="#none">레슬링</a></li>
+                                                    <li><a href="#none">육상</a></li>
+                                                    <li><a href="#none">휠체어농구</a></li>
+                                                    <li><a href="#none">론볼</a></li>
+                                                    <li><a href="#none">보치아</a></li>
+                                                    <li><a href="#none">양궁</a></li>
+                                                    <li><a href="#none">유도</a></li>
+                                                    <li><a href="#none">스키</a></li>
+                                                    <li><a href="#none">사이클</a></li>
+                                                    <li><a href="#none">골볼</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">체육인 구분</p>
+                                        <div class="frmGroup gap30 alingMid">
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk05" checked />
+                                                <label for="chk05">선수</label>
+                                            </div>
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk06" />
+                                                <label for="chk06">지도자</label>
+                                            </div>
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk07" />
+                                                <label for="chk07">심판</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType sibling">
+                                        <p class="lbTxt typeHide"><span class="hidden">안내문구</span></p>
+                                        <span class="information">
+                                            ※ 「공무원연금법」에 따른 공무원 또는 「사립학교교직원 연금법」에 따른 교직원(이었던) 사람은 체육인에서 제외됩니다.
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //만14세 이상 체육인 인증 실패 CASE -->
+
+                                <!-- 공통 정보 입력 영역 -->
+                                <div class="cptForm">
+                                    <div class="rowType">
+                                        <p class="lbTxt">아이디</p>
+                                        <div class="frmGroup cascade">
+                                            <div class="ipt">
+                                                <input type="text" title="아이디 입력란" placeholder="아이디를 입력해주세요." class="success"/>
+                                                <span class="ico">사용 가능합니다.</span>
+                                            </div>
+                                            <div class="comButton">
+                                                <!-- 아이디 입력란에 타이핑이 될때 활성화 처리 필요 -->
+                                                <button type="button" class="btn h50 l-b" disabled>중복확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">비밀번호</p>
+                                        <div class="ipt">
+                                            <input type="text" title="비밀번호 입력" placeholder="비밀번호를 입력해주세요." />
+                                            <span class="ico">영문, 숫자, 특수기호를 조합하여 8~12자로 설정해주세요.</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="rowType">
+                                        <p class="lbTxt">비밀번호 확인</p>
+                                        <div class="ipt">
+                                            <input type="text" title="비밀번호 확인" placeholder="다시 한번 비밀번호를 입력해주세요." class="error"/>
+                                            <span class="ico">비밀번호가 일치하지 않습니다.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">이메일</p>
+                                        <div class="frmGroup alingMid cascade">
+                                            <div class="ipt">
+                                                <input type="text" title="이메일 아이디 입력 란" placeholder="이메일 아이디" />
+                                            </div>
+                                            <div class="deco">@</div>    
+                                            <div class="ipt">
+                                                <input type="text" title="이메일 주소 입력 란" placeholder="naver.com" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType sibling">
+                                        <p class="lbTxt typeHide"><span class="hidden">이메일 선택</span></p>
+                                        <div class="dropDown">
+                                            <button type="button" class="" title="열기">직접입력</button>
+                                            <div class="dropDownBox">
+                                                <ul class="ddCont">
+                                                    <li><a href="#none">naver.com</a></li>
+                                                    <li><a href="#none">naver.com</a></li>
+                                                    <li><a href="#none">naver.com</a></li>
+                                                    <li><a href="#none">naver.com</a></li>
+                                                    <li><a href="#none">naver.com</a></li>
+                                                    <li><a href="#none" class="selected">naver.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">휴대폰 번호</p>
+                                        <div class="ipt">
+                                            <input type="text" title="휴대폰 번호" placeholder="휴대폰 번호를 입력하세요"  value="010-1234-5668" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt">주소</p>
+                                        <div class="frmGroup cascade">
+                                            <div class="ipt">
+                                                <input type="text" title="우편번호" placeholder="주소검색을 눌러 검색해주세요." />
+                                            </div>
+                                            <div class="comButton">
+                                                <button type="button" class="btn h50 l-b">주소검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType sibling">
+                                        <p class="lbTxt typeHide"><span class="hidden">상세주소</span></p>
+                                        <div class="ipt">
+                                            <input type="text" title="상세 주소" placeholder="상세 주소" />
+                                        </div>
+                                    </div>
+
+                                    <div class="rowType">
+                                        <p class="lbTxt twoLine">SMS/이메일<br>수신여부</p>
+                                        <div class="frmGroup gap30 alingMid cascade">
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk01" checked />
+                                                <label for="chk01">SMS(알림톡) 수신 동의</label>
+                                            </div>
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk02" />
+                                                <label for="chk02">이메일 수신 동의</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  // 공통 정보 입력 영역 -->
+                            </div>
+
+                            <div class="comButton mT50">
+                                <button type="button" class="btn h56 l-g">이전</button>
+                                <button type="button" class="btn h56 f-dg">가입</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

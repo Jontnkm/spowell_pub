@@ -1,0 +1,295 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember-process">
+                            <ul>
+                                <li class="complete"><!--해당 단계 완료시 'complete' 클래스 추가-->
+                                    <span class="step">1</span>
+                                    <span>약관동의</span>
+                                </li>
+                                <li class="ongoing"><!--해당 단계 진행시 'ongoing' 클래스 추가-->
+                                    <span class="step">2</span>
+                                    <span>체육인 자격조회</span>
+                                </li>
+                                <li>
+                                    <span class="step">3</span>
+                                    <span>정보입력</span>
+                                </li>
+                                <li>
+                                    <span class="step">4</span>
+                                    <span>가입완료</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cptMember">
+                            <p class="title">약관동의</p>
+                            <p class="desc">
+                                서비스 이용을 위해 확인 후 동의해주세요.<br>개인정보 수집 및 이용에 관한 동의는 거부할 수 있으며, 동의하지 않는 경우 회원가입이 불가합니다.
+                            </p>
+
+                            <div class="cptForm">
+                                <div class="frmChk">
+                                    <input type="checkbox" id="chkAll" checked />
+                                    <label for="chkAll">전체 동의</label>
+                                </div>
+                            </div>
+
+                            <div class="cptAccordion">
+                                <div class="inner">
+                                    <ul>
+                                        <li>
+                                            <button type="button">
+                                                <div class="cptForm">
+                                                    <div class="frmChk">
+                                                        <input type="checkbox" id="chk01" checked />
+                                                        <label for="chk01">
+                                                            <span class="required">[필수]</span> 서비스 이용약관
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div class="answerBox">
+                                                <div class="ansInner">
+                                                    <p class="answer">
+                                                        서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <div class="cptForm">
+                                                    <div class="frmChk">
+                                                        <input type="checkbox" id="chk02" checked />
+                                                        <label for="chk02">
+                                                            <span class="required">[필수]</span> 서비스 이용약관
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div class="answerBox">
+                                                <div class="ansInner">
+                                                    <p class="answer">
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <div class="cptForm">
+                                                    <div class="frmChk">
+                                                        <input type="checkbox" id="chk02" checked />
+                                                        <label for="chk02">
+                                                            <span>[선택]</span> 서비스 이용약관
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <div class="answerBox">
+                                                <div class="ansInner">
+                                                    <p class="answer">
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                        서비스이용약관<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comButton mT50">
+                                <button type="button" class="btn h56 l-g">이전</button>
+                                <button type="button" class="btn h56 f-dg">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

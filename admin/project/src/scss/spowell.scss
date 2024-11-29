@@ -212,3 +212,7 @@ span.required {color:var(--basic-red);}
 .fix-top.fix-left , .fix-bottom.fix-left , .fix-top.fix-right , .fix-bottom.fix-right{
     z-index: 30;
 }
+
+button:disabled {
+    color: rgba(0, 0, 0, 0.3) !important; border:1px solid rgba(132, 132, 132, 0.2) !important; background:#f7f7f7 !important; cursor:default !important;
+}

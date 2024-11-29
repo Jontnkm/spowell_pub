@@ -1,0 +1,133 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:2,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+                        <div class="cptMyPage">
+
+                            <p class="mpTitle">
+                                생활지원금 신청현황
+                            </p>
+
+                            <p class="mptbTitle">
+                                신청 정보
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>신청일</th>
+                                            <td class="left">
+                                                2025.03.15
+                                            </td>
+                                            <th>신청상태</th>
+                                            <td class="left">
+                                                처리중
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>신청 복지</th>
+                                            <td class="left">
+                                                생활지원금
+                                            </td>
+                                            <th>종목</th>
+                                            <td class="left">
+                                                태권도
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>체육인 구분</th>
+                                            <td class="left">
+                                                선수
+                                            </td>
+                                            <th>은행계좌</th>
+                                            <td class="left">
+                                                국민은행 000000-00-000000
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th>제출서류</th>
+                                            <td colspan="3" class="left" >
+                                                <a href="#none" class="download">신청서.hwp</a>
+                                                <a href="#none" class="download">개인정보수집이용동의서.hwp</a>
+                                                <a href="#none" class="download">국가대표 선수 확인서.hwp</a>
+                                                <a href="#none" class="download">통장사본.jpg</a>
+                                                <a href="#none" class="download">기초생활수급자증명서.hwp</a>
+                                                <a href="#none" class="download">기타.hwp</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

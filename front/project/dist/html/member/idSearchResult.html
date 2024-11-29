@@ -1,5 +1,6 @@
- <!-- Header -->
- 
+<!-- Header -->
+
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -12,36 +13,27 @@
 	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
 	<!-- <meta name="theme-color" content="#4285f4"> -->
 
-	<title>sk우리동네광고</title>
+	<title>체육인복지지원</title>
 
-	<link rel="stylesheet" href="../../common/css/swiper.css" />
-	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
+	<link rel="stylesheet" href="../../common/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
 	
 	<script src="../../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../../common/js/jquery-ui.min.js"></script>
 	<script src="../../common/js/tui-date-picker.js"></script>
-	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/swiper-bundle.min.js"></script>
 	<script src="../../common/js/common.js"></script>
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script>
-		new WOW().init(); // wow 활성화
-	</script>
 	
-
-	<!--
-    <script src="../common/js/basic.js"></script>
-    -->
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
 <div class="wrap">
 
 <!-- 레이아웃 -->
-<div class="lytLayout">
+<div class="lytLayout member">
     <div class="layoutArea">
 
         <!-- 상단영역 -->
@@ -49,235 +41,242 @@
             <!-- Top -->
             
 <div class="cptHeader">
-	<div class="headerInner">
-		<div class="gnbArea">
-			<div class="leftArea">
-				<div class="logo">
-					<a href="#none">
-						<img src="../../images/common/btv_logo.svg" alt="" class="pcLogo">
-						<img src="../../images/common/btv_mo_logo.svg" alt="" class="moLogo">
-					</a>
-				</div>
-				<!--2024.09.04 pc menu-->
-				<div class="menu pcHeader">
-					<div class="headerMenu">
-						<!--2024.09.04 로그인 전 후-->
-						<dl>
-							<dt><a href="#none" class="item">광고만들기</a></dt>
-							<dd class="head2depth">
-								<a href="../createAd/createTemplate.html">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt><a href="#none" class="item">서비스 소개</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt><a href="#none" class="item">갤러리</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt><a href="#none" class="item">고객센터</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
-						<!-- 이슈로 인해 당분간 사용 안함 2024.10.29 kb -->
-						<!-- <dl>
-							<dt><a href="#none" class="item">소상공인 소식</a></dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl> -->
-						<!-- 2024.09.04 로그인 후 only !!!! -->
-						<dl>
-							<dt>
-								<a href="#none" class="item">
-									<span class="ico"><span class="hidden">티비아이콘</span></span>
-									<span class="txt">나의광고</span>
-								</a>
-							</dt>
-							<dd class="head2depth">
-								<a href="#none">2depth</a>
-								<a href="#none">2depth</a>
-							</dd>
-						</dl>
+	<div class="headerTop">
+		<div class="inner">
+			<div class="kspoLogo">
+				<a href="#none" target="_blank" title="새창열림">
+					<img src="../../images/common/kspoLogo.svg" alt="kspo 국민체육진흥공단" class="pcLogo"/>
+					<img src="../../images/common/kspoLogo_mo.svg" alt="kspo 국민체육진흥공단" class="moLogo" />
+				</a>
+			</div>
+			<div class="siteOption">
+				<div class="member">
+					<!-- 로그인 전 -->
+					<div class="beforeLogin">
+						<a href="#none" class="login">로그인</a>
+						<a href="#none" class="join">체육인 회원가입</a>
 					</div>
+
+					<!-- 로그인 후 -->
+					<!-- <div class="afterLogin">
+						<div class="info">
+							<span>홍길동</span>님 (<span>국가대표선수</span>)
+						</div>
+						<div class="time">
+							<span>09:21</span>
+						</div>
+						<a href="#none" class="logout">연장</a>
+						<a href="#none" class="logout">로그아웃</a>
+					</div> -->
+				</div>
+				<div class="ratio">
+					<a href="#none" class="minus"><span class="hidden">축소</span></a>
+					<span class="ratioRate">100</span>
+					<a href="#none" class="plus"><span class="hidden">확대</span></a>
 				</div>
 			</div>
-			<div class="rightArea pcMenu">
-				<div class="cptBtnForm"> <!--가로정렬 필요의 경우 d-flex 클래스 사용-->
-					<!--2024.09.04 로그인 전-->
-					<button type="button" class="btn scnd login">로그인</button>
-					<button type="button" class="btn scnd register">회원가입</button>
-					<!--2024.09.04 로그인 후-->
-					<div class="mypageCover">
-						<button type="button" class="btn scnd mypage">
-							<span class="userNm">홍길동</span>님 
-						</button>
-
-						<div class="dropDown">
-							<div class="status">
-								<ul class="statList">
-									<li><span>제작</span><span>000</span></li>
-									<li><span>심사</span><span>000</span></li>
-									<li><span>집행</span><span>000</span></li>
-								</ul>
-							</div>
-							<div class="loginOption">
-								<ul>
-									<li><a href="#none">나의정보</a></li>
-									<li><a href="#none">나의혜택/광고관리</a></li>
-									<li><a href="#none">결제정보</a></li>
-									<li><a href="#none">광고 효과 보기</a></li>
-									<li><a href="#none">로그아웃</a></li>
-								</ul>
+		</div>
+	</div>
+	<div class="headerBot">
+		<div class="inner">
+			<div class="spowellLogo">
+				<a href="#none">
+					<h1 class="pcLogo">
+						<img src="../../images/common/spowellLogo.svg" alt="spowell 체육인복지지원"/>
+					</h1>
+					<h1 class="moLogo">
+						<img src="../../images/common/spowellLogo_mo.svg" alt="spowell 체육인복지지원"/>
+					</h1>
+				</a>
+			</div>
+			<div class="menu">
+				<ul>
+					<li class="depth01" tabindex="0">
+						<p>사업소개</p>
+						<div class="depth02">
+							<div class="inner">
+								<div class="leftArea ico ico01">
+									<p class="title">사업소개</p>
+								</div>
+								<div class="rightArea">
+									<ul>
+										<li tabindex="0"><a href="#none">체육인복지 사업</a></li>
+										<li tabindex="0"><a href="#none">체육인복지법</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="moMenuBtn">
-					<div class="menuWrap">
-						<span class="line"></span>
-						<span class="line"></span>
-						<span class="line"></span>
-					</div>
-				</div>
+					</li>
+					<li class="depth01" tabindex="0">
+						<p>신청·안내</p>
+						<div class="depth02 withBg test">
+							<div class="inner">
+								<div class="leftArea ico ico02">
+									<p class="title">신청·안내</p>
+								</div>
+								<div class="rightArea">
+									<ul>
+										<li>
+											<a href="#none">복지신청</a>
+											<div class="depth03">
+												<ul>
+													<li><a href="#none">경기력 성과포상금(선수)</a></li>
+													<li><a href="#none">스포츠꿈나무 특기장려금</a></li>
+													<li><a href="#none">경기력 성과포상금(지도자)</a></li>
+													<li><a href="#none">원로체육인지원</a></li>
+													<li><a href="#none">생활지원금</a></li>
+													<li><a href="#none">체육유공자보상</a></li>
+													<li><a href="#none">교육지원금(국내 대학원)</a></li>
+													<li><a href="#none">창업지원</a></li>
+													<li><a href="#none">교육지원금(국외유학)</a></li>
+													<li><a href="#none">지도자연수</a></li>
+													<li><a href="#none">보험지원금</a></li>
+													<li><a href="#none">취업지원</a></li>
+													<li><a href="#none">체육장학금</a></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<a href="#none">복지캘린더</a>
+											<div class="depth03">
+												<ul>
+													<li><a href="#none">알람신청</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="depth01" tabindex="0">
+						<p>체육인서비스</p>
+						<div class="depth02">
+							<div class="inner">
+								<div class="leftArea ico ico03">
+									<p class="title">체육인 서비스</p>
+								</div>
+								<div class="rightArea">
+									<ul>
+										<li><a href="#none">교육훈련</a></li>
+										<li><a href="#none">권리·권익보호</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="depth01" tabindex="0">
+						<p>알림·소식</p>
+						<div class="depth02">
+							<div class="inner">
+								<div class="leftArea ico ico04">
+									<p class="title">알림·소식</p>
+								</div>
+								<div class="rightArea">
+									<ul>
+										<li class="type02"><a href="#none">공지사항</a></li>
+										<li class="type02"><a href="#none">체육인복지 소식</a></li>
+										<li class="type02"><a href="#none">보도자료</a></li>
+										<li class="type02"><a href="#none">서식 자료실</a></li>
+										<li class="type02"><a href="#none">자주찾는질문</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="depth01" tabindex="0">
+						<p>마이페이지</p>
+						<div class="depth02">
+							<div class="inner">
+								<div class="leftArea ico ico05">
+									<p class="title">마이페이지</p>
+								</div>
+								<div class="rightArea">
+									<ul>
+										<li class="type02"><a href="#none">나의 체육인복지</a></li>
+										<li class="type02"><a href="#none">복지신청 현황</a></li>
+										<li class="type02"><a href="#none">복지지원 현황</a></li>
+										<li class="type02"><a href="#none">대회참여 현황</a></li>
+										<li class="type02"><a href="#none">증명서 발급</a></li>
+										<li class="type02"><a href="#none">회원정보수정</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="allMenu"><a href="#none"><span class="hidden">전체메뉴열기</span></a></li>
+				</ul> 
 			</div>
 
-			<!--2024.09.05 mobile area-->
-			<!--2024.09.04 mobile menu-->
-			<div class="menu moHeader">
-				<div class="mobileMenuBox">
-					<div class="moQuick">
-						<ul>
-							<li class="item01">
-								<a href="#none">
-									<span class="icon"></span>
-									<span class="txt">영상제작<br>체험관</span>
-								</a>
-							</li>
-							<li class="item02">
-								<a href="#none">
-									<span class="icon"></span>
-									<span class="txt">광고비<br>알아보기</span>
-								</a>
-							</li>
-							<li class="item03">
-								<a href="#none">
-									<span class="icon"></span>
-									<span class="txt">광고 상담<br>신청</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<ul class="headerMenu">
-						<!--2024.09.04 로그인 전 후-->
-						<li>
-							<a href="#none">광고만들기</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#none">서비스 소개</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#none">갤러리</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#none">고객센터</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#none">이벤트</a>
-							<ul class="head2depth">
-								<li><a href="#none">2depth</a></li>
-								<li><a href="#none">2depth</a></li>
-							</ul>
-						</li>
-						<!-- 2024.09.04 로그인 후 only !!!! -->
-						<li class="afterLoginMenu">
-							<a href="#none">나의광고</a>
-						</li>
-					</ul>
-					<div class="cptBtnForm loginArea">
-						<!--2024.09.04 로그인 전-->
-						<button type="button" class="btn prmy">로그인</button>
-						<button type="button" class="btn scnd">회원가입</button>
-						<!--2024.09.04 로그인 후-->
-						<button type="button" class="btn scnd" style="display:none;">로그아웃</button>
-					</div>
-				</div>
+			<div class="moMenu">
+				<ul>
+					<li>
+						<a href="#none"><img src="../../images/common/mo_hIcon01.svg" alt="회원관련 아이콘 이미지"><span class="hidden">회원관리</span></a>
+					</li>
+					<li>
+						<a href="#none" class="menu-wrap">
+							<span class="line">모바일</span>
+							<span class="line">메뉴</span>
+							<span class="line">열기</span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </div>
 
+<script>
+	const menu = document.querySelector('.menu-wrap');
 
+	menu.addEventListener('click',function(){
+		if(menu.classList.contains('open')){
+			menu.classList.remove('open');
+		}else{
+			menu.classList.add('open');
+		}
+	});
+</script>
         </div>
         <!-- //상단영역 -->
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember">
+                            <p class="title">아이디 찾기</p>
+                            <!-- 아이디 찾기 결과가 있을경우 아이디 값 표기 -->
+                            <!-- <p class="desc">입력한 정보와 일치하는 아이디입니다.</p> -->
+                            <!-- 아이디값이 없을 경우 내용 표기 -->
+                            <p class="desc withInfo">입력하신 정보와 일치하는 아이디가 없습니다.<br>아이디가 없는 경우 회원가입 후 서비스를 이용해주세요.</p>
 
-            <!-- 메인 콘텐츠 영역 -->
-            <div class="memberPageArea">
-                <!-- KB 2024-10-24 수정 -->
-                <p class="memberTitle loginTitle">
-                    아이디 찾기
-                </p>
-                <!--// KB 2024-10-24 수정 -->
-                <p class="memberDesc">
-                    본인 인증 완료 후 아이디를 찾을 수 있습니다.
-                </p>
+                            <div class="resultBox round"> <!--아이디 찾기 결과가 없을경우 'round' 클래스명 추가 -->
+                                <!-- 아이디 찾기 결과가 있을경우 아이디 값 표기 -->
+                                <!-- <p class="resultValue">$member_id</p> -->
 
-                <div class="resultArea">
-                    <div class="inner">
-                        <!--2024.10.09 조회결과 유-->
-                        <div class="result">
-                            <p>회원님의 아이디입니다.</p>
-                            <p class="idRst">
-                                a1234!@34
-                            </p>
+                                <!-- 아이디값이 없을 경우 내용 표기 -->
+                                <div class="symbol">
+                                    <img src="../../images/sub/noResult.svg" alt="돋보기 모양의 아이콘 이미지">
+                                </div>
+                            </div>
+
+                             <div class="comButton">
+                                <!-- 아이디 찾기 결과가 있을경우 아이디 값 표기 -->
+                                <!-- <button type="button" class="btn h56 l-g">비밀번호 찾기</button>
+                                <button type="button" class="btn h56 f-dg">로그인</button> -->
+
+                                <!-- 아이디값이 없을 경우 내용 표기 -->
+                                <button type="button" class="btn h56 l-g">메인</button>
+                                <button type="button" class="btn h56 f-dg">회원가입</button>
+                            </div>
                         </div>
-                        <!--2024.10.09 조회결과 무-->
-                        <!-- <div class="result">
-                            <p>조회 결과 일치하는 정보가 없습니다.<br>다시 한번 확인해 주세요.</p>
-                        </div> -->
                     </div>
-                </div>
-                <div class="cptBtnForm">
-                    <button type="button" class="btn prmy">로그인 하기</button>
-                </div>
-
-                <div class="pwOption">
-                    <a href="#none" class="recom">비밀번호를 잊으셨나요?</a>
-                    <a href="#none" class="pwSch">비밀번호 찾기</a>
+                    <!-- //콘텐츠 영역 -->
                 </div>
             </div>
-            <!-- //메인 콘텐츠 영역 -->
 
         </div>
         <!-- //중단영역 -->
@@ -288,74 +287,202 @@
             <!-- Footer -->
             
 <div class="cptFooter">
-    <div class="footerArea">
-        <div class="footTop">
-            <div class="topArea">
+    <div class="footerTop">
+        <div class="inner">
+            <div class="affArea">
                 <ul>
-                    <li><a href="#none">회원 이용약관</a></li>
-                    <li><a href="#none">서비스 이용약관</a></li>
-                    <li><a href="#none" class="hglt">개인정보 처리방침</a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/kspoLogo.svg" alt="kspo국민체육진흥공단"></a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/footerLogo02.png" alt="문화체육관광부"></a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/footerLogo03.png" alt="대한체육회"></a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/footerLogo04.png" alt="대한장애인체육회"></a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/footerLogo05.png" alt="국민신문고"></a></li>
+                    <li><a href="#none" target="_blank" title="새창이동"><img src="../../images/common/footerLogo06.png" alt="기획재정부"></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footBtm">
-            <div class="btmArea">
-                <ul>
-                    <li>SK브로드밴드(주) 대표이사 사장 박진효</li>
-                    <li>서울시 중구 퇴계로 24 SK남산그린빌딩</li>
-                    <li>사업자등록번호 214-86-18758</li>
-                    <li>통신판매신고번호 서울 중구 제 2008-1608호</li>
-                </ul>
-                <p>COPYRIGHT ⓒ 2020 BY SK broadband CO.LTD.ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="footerBot">
+        <div class="inner">
+            <div class="linkArea">
+                <div class="leftArea">
+                    <p>주요서비스</p>
+                    <ul>
+                        <li><a href="#none">사업소개</a></li>
+                        <li><a href="#none">체육인복지신청</a></li>
+                        <li><a href="#none">체육인서비스</a></li>
+                        <li><a href="#none">공고알림신청</a></li>
+                        <li><a href="#none">증명서발급</a></li>
+                    </ul>
+                </div>
+                <div class="rightArea">
+                    <ul>
+                        <li>
+                            <a href="#none" title="열기">패밀리사이트</a>
+                            <div class="dropTopBox" style="display: none;">
+                                <ul>
+                                    <li class="section01">
+                                        <p>공단본부</p>
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">국민체육진흥공단</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">국립체육박물관</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">국민체력100</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">불법스포츠토토신고센터</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">서울국제스포츠레저산업전</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">소마미술관</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">스포츠가치센터</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">스포츠강좌이용권</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">스포츠산업지원</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">에콜리안 골프장</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">올림픽기념관</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">올림픽자료실</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="section02">
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">올림픽파크텔</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">장애인스포츠강좌이용권</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">체육시설알리미</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">체육지도자연수원</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">투르드코리아</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">K스포에듀</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">KSPO블로그</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">KSPO페이스북</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">KSPO인스타그램</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">KSPO유튜브</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="section03">
+                                        <p>경륜경정총괄본부</p>
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">KCYCLE 경륜</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">KBOAT 경정</a></li>
+                                        </ul>
+                                        <p class="twoTab">한국체육산업개발</p>
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">올림픽공원</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">올림픽스포츠센터</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">지샘터올림픽공원 도서관</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">한국체육산업개발</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="section04">
+                                        <p>한국스포츠과학원</p>
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">지역스포츠과학센터</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">한국스포츠과학원</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">한국스포츠과학원 도서관</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" title="열기">관련사이트</a>
+                            <div class="dropTopBox half">
+                                <ul>
+                                    <li class="section01">
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">국무총리실</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">기획재정부</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">대한장애인체육회</a></li>
+                                        </ul>
+                                        <ul class="twoTab">
+                                            <li><a href="#none" target="_blank" title="새창열기">저작권위원회</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">전자민원G4C</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">청와대</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">한국정책지식센터</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="section02">
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">대한체육회</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">문화체육관광부</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">문화체육관광부 통계포털</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">복권위원회</a></li>
+                                        </ul>
+                                        <ul class="twoTab diff">
+                                            <li><a href="#none" target="_blank" title="새창열기">사행성산업통합감동위원회</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">도로명주소안내</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none" title="열기">유용한사이트</a>
+                            <div class="dropTopBox half">
+                                <ul>
+                                    <li class="section01">
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">공공기관 경영신고센터</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">국민신문고</a></li>
+                                        </ul>
+                                        <ul class="twoTab">
+                                            <li><a href="#none" target="_blank" title="새창열기">KSPO원격지원</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="section02">
+                                        <ul>
+                                            <li><a href="#none" target="_blank" title="새창열기">기금지원시스템</a></li>
+                                            <li><a href="#none" target="_blank" title="새창열기">체육인연금증명서</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="infoArea">
+                <div class="infoBox">
+                    <div class="inLink">
+                        <ul>
+                            <li class="effect"><a href="#none">개인정보처리방침</a></li>
+                            <li><a href="#none">이용약관</a></li>
+                            <li><a href="#none">홈페이지저작권정책</a></li>
+                            <li><a href="#none">자주묻는질문</a></li>
+                            <li><a href="#none">사이트맵</a></li>
+                        </ul>
+                    </div>
+                    <div class="infoPart">
+                        <ul>
+                            <li>05540 서울시 송파구 올림픽로 424 올림픽회관</li>
+                            <li>TEL : 02-410-1298</li>
+                            <li>FAX : 02-410-1339</li>
+                        </ul>
+                        <p class="cpRyt">COPYRIGHT ⓒ 2021 국민체육진흥공단. ALL RIGHT RESERVED</p>
+                    </div>
+                </div>
+                <div class="authArea">
+                    <!-- 인증마크 영역 -->
+                    <img src="../../images/common/wa_mark.png" alt="웹접근성 인증마크" />
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    $(document).ready(function(){
+        $(".footerBot .rightArea > ul > li > a").click(function(){
+            if($(this).hasClass("on")){
+                $(this).next("div").hide();
+                $(this).removeClass("on");
+                $(this).attr("title","열기");
+            }else{
+                $("div.dropTopBox").hide();
+                $(".footerBot .rightArea > ul > li > a").removeClass("on");
+                $(".footerBot .rightArea > ul > li > a").attr("title","열기");
+                $(this).next("div").show();
+                $(this).addClass("on");
+                $(this).attr("title","접기");
+            }
+        })
+    })
+</script>
         </div>
         <!-- //하단영역 -->
 
-        <!-- 상단영역 -->
-        <div class="layoutQuick">
-            <!-- Top -->
-            
-<!--quick menus structure-->
-<div class="quickMenu">
-	<div class="qmInner">
-		<ul>
-			<li>
-				<span class="qmIcon tutorial">quickIcon</span>
-				<span class="qmTxt">영상제작<br>체험관</span>
-			</li>
-			<li>
-				<span class="qmIcon amount">quickIcon</span>
-				<span class="qmTxt">광고비<br>알아보기</span>
-			</li>
-			<li>
-				<span class="qmIcon consult">quickIcon</span>
-				<span class="qmTxt">광고 상담<br>신청</span>
-			</li>
-		</ul>
-	</div>
-</div>
-<!--floating menu structure-->
-<div class="quickFloat">
-	<ul>
-		<li class="chatbot">
-			<a href="#none">
-				<span class="hidden">챗봇연결</span>
-			</a>
-		</li>
-		<li class="topBtn">
-			<a href="#none">
-				<span>TOP</span>
-			</a>
-		</li>
-	</ul>
-</div>
-
-        </div>
-        <!-- //상단영역 -->
     </div>
 </div>
 
@@ -364,51 +491,34 @@
 <!-- Bottom -->
 
 </div>
+<div class="layoutQuick">
+    <!-- Top -->
+    
+<div class="cptQuick">
+	<div class="apply">
+		<a href="#none">
+			<p>창업지원<br>신청하기</p>
+			<span>3/10~3/31</span>
+		</a>
+	</div>
+	<div class="quickMenu">
+		<ul>
+			<li><a href="#none" class="ico ico01">복지 신청</a></li>
+			<li><a href="#none" class="ico ico02">복지 공고</a></li>
+			<li><a href="#none" class="ico ico03">복지캘린더</a></li>
+			<li><a href="#none" class="ico ico04">지원금조회</a></li>
+			<li><a href="#none" class="ico ico05">증명서 발급</a></li>
+		</ul>
+	</div>
+	<div class="top">
+		<a href="#none" class="topBtn">
+			<p>TOP</p>
+		</a>
+	</div>
+</div> 
+
+</div>
 </body>
-
-
 </html>
 
-
-<!--모바일전용 메뉴바 2024년 10월 30일-->
-<div class="moBarCov">
-    <div class="inner">
-        <img src="../images/common/moBar.svg" alt="" />
-        <a href="#none" class="barMenu">
-            <span class="midBtn">나의<br>광고</span>
-        </a>
-        <ul>
-            <li class="active"> <!--해당페이지 활성화시 메뉴 클래스추가-->
-                <a href="#none" class="barMenu">
-                    <span class="ico home"></span>
-                    <span class="txt">홈</span>
-                </a>
-            </li>
-            <li>
-                <a href="#none" class="barMenu">
-                    <span class="ico adcreate"></span>
-                    <span class="txt">광고만들기</span>
-                </a>
-            </li>
-            <li class="fakeBox"><span class="hidden">spaceArea</span></li>
-            <li>
-                <a href="#none" class="barMenu">
-                    <span class="ico exp"></span>
-                    <span class="txt">체험관</span>
-                </a>
-            </li>
-            <li>
-                <!--2024.10.30 로그인 후-->
-                <a href="#none" class="barMenu">
-                    <span class="ico mypage"></span>
-                    <span class="txt">마이페이지</span>
-                    <!--2024.10.30 로그인 전-->
-                    <!-- <span class="txt">로그인</span> -->
-                    <!-- //2024.10.30 로그인 전-->
-                </a>
-                <!-- //2024.10.30 로그인 후-->
-            </li>
-        </ul>
-    </div>
-</div>
-
+ 

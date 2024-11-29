@@ -1,0 +1,76 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember">
+                            <p class="title">휴면계정 복구</p>
+                            <p class="desc withInfo">개인정보 보호를 위하여 1년 이상 이용 기록이 없는 회원은 휴면계정으로 전환되었습니다.<br>본인인증 후 휴면계정을 복구할 수 있습니다.</p>
+                            <p class="desc02">만 14세 미만 회원인 경우 회원가입 시 인증한 법정대리인의 본인인증이 필요합니다.</p>
+
+                            <div class="authBox">
+                                <a href="#none" class="phone">
+                                    <p class="title">휴대폰 인증</p>
+                                    <p class="desc">
+                                        본인명의의 휴대폰으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                                <a href="#none" class="ipin">
+                                    <p class="title">I-PIN 인증</p>
+                                    <p class="desc">
+                                        본인명의의 아이핀으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                            </div>
+                            
+                            <div class="comButton">
+                                <button type="button" class="btn txt">로그인 페이지 이동</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

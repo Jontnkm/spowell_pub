@@ -1,0 +1,239 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember-process">
+                            <ul>
+                                <li class="complete"><!--해당 단계 완료시 'complete' 클래스 추가-->
+                                    <span class="step">1</span>
+                                    <span>약관동의</span>
+                                </li>
+                                <li class="ongoing"><!--해당 단계 진행시 'ongoing' 클래스 추가-->
+                                    <span class="step">2</span>
+                                    <span>체육인 자격조회</span>
+                                </li>
+                                <li>
+                                    <span class="step">3</span>
+                                    <span>정보입력</span>
+                                </li>
+                                <li>
+                                    <span class="step">4</span>
+                                    <span>가입완료</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cptMember">
+                            <p class="title">약관동의</p>
+                            <p class="desc">
+                                체육인 자격조회를 진행해주세요. 체육인 자격조회 후 본인인증을 통해 회원가입을 할 수 있습니다.<br>체육인 자격조회가 되지 않을 경우 본인인증 후 체육인 정보를 입력하여 회원가입 신청을 할 수 있습니다.<br>체육인 복지법상 공무원 및 사립학교 교직원은 체육인에 해당하지 않습니다.
+                            </p>
+
+                            <div class="chkQualification">
+                                <div class="inner">
+                                    <div class="cptForm">
+                                        <p class="lbTxt">이름</p>
+                                        <div class="ipt">
+                                            <input type="text" title="이름입력" placeholder="이름을 입력해주세요." />
+                                        </div>
+
+                                        <p class="lbTxt">주민등록번호</p>
+                                        <div class="frmGroup">
+                                            <div class="ipt">
+                                                <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                                            </div>
+                                            <div class="deco">-</div>
+                                            <div class="ipt">
+                                                <input type="text" title="주민등록번호 뒷자리 입력" placeholder="1******" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comButton mT50">
+                                        <button type="button" class="btn h56 f-dg" onclick="popOpen('clause01')">체육인 자격조회</button>
+                                    </div>
+                                </div>
+
+                                <div class="chkResult">
+                                    <!-- 조회결과 영역 -->
+                                    <div class="dbResult">
+                                        <p class="title">
+                                            체육인 조회 결과
+                                        </p>
+
+                                        <!-- 만 14세 이상 및 만 14세 미만 조회결과 데이터 표 -->
+                                        <!-- <div class="cptTable">
+                                            <table class="tbInfo">
+                                                <colgroup>
+                                                    <col style="width:20%;">
+                                                    <col style="width:30%;">
+                                                    <col style="width:20%;">
+                                                    <col style="width:30%;">
+                                                </colgroup>
+                                                <caption>체육인정보 (이름, 주민등록번호, 체육인구분, 종목)에 관한 표</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>이름</th>
+                                                        <td class="left">홍길동</td>
+                                                        <th>주민등록번호</th>
+                                                        <td class="left">980101-1******</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>체육인 구분</th>
+                                                        <td class="left">선수</td>
+                                                        <th>종목</th>
+                                                        <td class="left">양궁</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> -->
+
+                                        <!-- 체육인이 조회되지 않았을 경우 -->
+                                        <p class="noData">
+                                            체육인으로 조회되지 않습니다.<br>주민등록번호가 유효하지 않거나 체육인 복지지원 이력이 없는 경우 조회되지 않으므로<br>입력하신 정보를 확인하시고 다시 조회하시기 바랍니다.<br>
+                                            <span>
+                                                체육인 자격이 확인되지 않는 경우 체육인 회원가입 신청 후 담당자 승인을 거쳐<br>체육인복지지원 홈페이지를 이용하실 수 있습니다.<br>아래 본인인증 후 회원가입 신청을 진행해 주시기 바랍니다.
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <!-- //조회결과 영역 -->
+                                </div> 
+                            </div>
+
+                            <div class="qualResult">
+                                <div class="msgBox">
+                                    <!-- 만약 정상적으로 조회되었다면 (만 14세 이상 case) -->
+                                    <!-- <p>체육인으로 정상 확인 되었습니다<br><span>본인인증</span> 후 체육인 회원가입을 진행해 주세요.</p> -->
+                                    
+                                    <!-- 만약 정상적으로 조회되었다면 (만 14세 미만 case) -->
+                                    <!-- <p>체육인으로 정상 확인 되었습니다.<br>만 14세 미만인 경우 법정대리인의 동의를 위해 <span>부모님(법정대리인)</span> 본인인증이 필요합니다.</p> -->
+
+                                    <!-- 조회되지 않았을 경우 -->
+                                    <p>체육인으로 조회되지 않는 경우<br>본인인증 후 <span>체육인 회원 가입 신청</span>을 진행해 주시기 바랍니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="authBox">
+                                <a href="#none" class="phone">
+                                    <!--만14세이상일경우-->
+                                    <!-- <p class="title">휴대폰 인증</p> -->
+
+                                    <!--만14세미만일경우-->
+                                    <p class="title">부모님(법정대리인)<br>본인인증</p>
+                                    <p class="desc">
+                                        본인명의의 휴대폰으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                                <a href="#none" class="ipin">
+                                    <!-- 만14세이상일경우 -->
+                                    <!-- <p class="title">I-PIN 인증</p> -->
+                                    <!--만14세미만일경우-->
+                                    <p class="title">부모님(법정대리인)<br>I-PIN인증</p>
+                                    <p class="desc">
+                                        본인명의의 아이핀으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup typeAlert" id="alert01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                이름과 주민등록번호는<br>
+                필수입력 항목입니다.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert01')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert01')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup type01" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">체육인 자격조회 정보 확인</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="lt">
+                입력하신 정보로 체육인 자격조회를 하시겠습니까?
+            </p>
+            <div class="cptEtc">
+                <div class="dataView">
+                    <p>이름 : <span>홍길동</span></p>
+                    <p>
+                        주민등록번호 : <span>880101</span>-<span>1●●●●●●</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn sub" onclick="popClose('clause01')">취소</button>
+            <button type="button" class="popBtn main" onclick="popClose('clause01')">자격조회</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

@@ -1,0 +1,71 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember">
+                            <p class="title">체육인 회원가입</p>
+                            <p class="desc withInfo">
+                                SPOWell 체육인복지지원시스템 방문을 환영합니다.<br>체육인복지지원시스템은 전문 체육인만 이용하실 수 있습니다.
+                                <span>
+                                    회원가입 시 체육인 자격조회를 통해 전문 체육인인 경우 바로 회원가입을 완료할 수 있습니다.<br>체육인 자격조회가 되지 않는 경우 회원가입 신청 후<br>경기단체 승인을 통해 홈페이지를 이용하실 수 있습니다.
+                                </span>
+                            </p>
+
+                            <div class="resultBox round">
+                                <div class="symbol">
+                                    <img src="../../images/sub/ico_join.svg" alt="사람들이 모여있는 아이콘 이미지">
+                                </div>
+                            </div>
+
+                             <div class="comButton">
+                                <button type="button" class="btn h56 f-dg">회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

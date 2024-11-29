@@ -1,0 +1,206 @@
+
+/*========================================================================================*/
+/*=====================================FOOTER=============================================*/
+/*========================================================================================*/
+.cptFooter {
+    position:relative; width:100%;
+
+    > .footerTop {
+        border-top:1px solid var(--lbg1); padding:18px 0; background:var(--bg1); overflow:hidden;
+
+        .inner {
+            width:100%; max-width:1280px; margin:0 auto;
+            .affArea {
+                @include media ('tablet') {
+                    width:100%; overflow-x:scroll; padding-bottom:0;
+                    &::-webkit-scrollbar {display:none;}
+                }
+                > ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:81px;
+                    > li {
+                        img {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > .footerBot {
+        background:var(--bg4); padding:30px 0 70px;
+        @include media('tablet02') {
+            padding:30px 20px 50px;
+        }
+        .inner {
+            width:100%; max-width:1280px; margin:0 auto;
+            @include media('tablet02') {
+                max-width:auto;
+            }
+            .linkArea {
+                display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between; padding-bottom:21px; border-bottom:1px solid #3E4958;
+                @include media('tablet02') {
+                    flex-flow:column;  border-bottom:none; padding-bottom:0; margin-bottom:20px;
+                }
+                .leftArea {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:30px;
+                    @include media('tablet02') {
+                        flex-flow:column; gap:10px; padding-bottom:24px; margin-bottom:24px; border-bottom:1px solid #3E4958;
+                    }
+                    > p {font-size:18px; color:var(--bg3); font-weight:400;}
+                    > ul {
+                        display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:30px;
+                        @include media ('tablet') {
+                            flex-flow:row wrap; justify-content: center; gap:5px 30px;
+                        }
+                        > li {
+                            > a {
+                                position:relative; display:block; width:max-content; font-size:16px; color:#ccc; font-weight:400; padding-right:30px;
+                                &::after {
+                                    content:''; position:absolute; top:50%; right:0; width:1px; height:12px; background:#8B8B8B; transform:translateY(-50%);
+                                }
+                            }
+                            &:last-of-type {
+                                > a {
+                                    &::after {
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .rightArea {
+                    .twoTab {
+                        margin-top:60px;
+                        &.diff {
+                            margin-top:31px;
+                        }
+                    }
+                    > ul {
+                        display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:40px;
+                        @include media ('tablet02') {
+                            gap:20px;
+                        }
+                        > li {
+                            > a {
+                                position:relative; display:block; width:max-content; font-size:16px; color:#cbcbcb; font-weight:400; padding-right:30px;
+                                &::after {
+                                    content:''; position:absolute; top:50%; right:5px; width:12px; height:7px; background:url(../../images/common/footerArrow.png)50% 50% no-repeat; transform:translateY(-50%);
+                                }
+                                &.on {
+                                    &::after {
+                                        transform:translateY(-50%) rotate(180deg);
+                                    }
+                                }
+                            }
+                            > .dropTopBox {
+                                display:none; position:absolute; bottom:calc(100% - 76px); left:0; width:100%; background:var(--bg4); padding-top:30px;
+                                > ul {
+                                    width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
+                                    > li {
+                                        width:25%;
+                                        > p {
+                                            font-size:18px; color:var(--bg3); font-weight:400; margin-bottom:10px;
+                                        }
+                                        > ul {
+                                            display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:5px;
+                                            > li {
+                                                > a {
+                                                    display:block; width:max-content; font-size:16px; color:#ccc; font-weight:400;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.half {
+                                    > ul {
+                                        > li {
+                                            width:50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .infoArea {
+                display:flex; flex-flow:row nowrap; align-items: flex-start; justify-content: space-between;
+                @include media ('tablet02'){
+                    flex-flow:column; justify-content: center; align-items: center;
+                }
+                > .infoBox {
+                    position:relative; width:100%;
+                    > .inLink {
+                        padding:21px 0 29px;
+                        @include media ('tablet02') {
+                            padding: 0; margin-bottom:30px;
+                        }
+                        > ul {
+                            display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:24px;
+                            @include media ('tablet02') {
+                                flex-flow:row wrap; justify-content: center; gap:5px 24px;
+                            }
+                            li {
+                                > a {
+                                    position:relative; display:block; width:max-content; padding-right:24px; font-size:16px; color:#ccc; font-weight:400;
+                                    &::after {
+                                        content:''; position:absolute; top:50%; right:0; width:1px; height:12px; background:#8B8B8B; transform:translateY(-50%);
+                                    }
+                                }
+                                &:last-of-type {
+                                    > a {
+                                        &::after {
+                                            display:none;
+                                        }
+                                    }
+                                }
+                                &.effect {
+                                    > a {
+                                        color:#91c4ed;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    > .infoPart {
+                        > ul {
+                            display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:19px;
+                            @include media ('tablet02'){
+                                flex-flow:row wrap; align-items: center; justify-content: center;
+                            }
+                            > li {
+                                position:relative; display:block; width:max-content; padding-right:19px; font-size:16px; color:#ccc; font-weight:400;
+
+                                &::after {
+                                    content:''; position:absolute; top:50%; right:0; width:1px; height:12px; background:#8B8B8B; transform:translateY(-50%);
+                                }
+                                
+                                &:last-of-type {
+                                    &::after {
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+
+                        > p {
+                            margin-top:20px; font-size:16px; color:#888; font-weight:400;
+                            @include media ('tablet02') {
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+
+                > .authArea {
+                    padding-top:50px;
+                }
+            }
+        }
+    }
+}

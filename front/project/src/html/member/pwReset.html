@@ -1,0 +1,147 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember">
+                            <p class="title">비밀번호 재설정</p>
+                            <p class="desc">새로운 비밀번호를 입력해주세요.</p>
+
+                            <div class="resetArea">
+                                <div class="leftArea">
+                                    <div class="cptForm">
+                                        <p class="lbTxt">새 비밀번호</p>
+                                        <div class="ipt">
+                                            <input type="text" title="비밀번호 입력" placeholder="비밀번호를 입력해주세요." />
+                                        </div>
+                                        <p class="lbTxt">새 비밀번호 확인</p>
+                                        <div class="ipt">
+                                            <!-- <input type="text" title="이름입력" placeholder="이름을 입력해주세요."  class="error"/>
+                                            <span class="ico">영문, 숫자, 특수문자를 모두 포함하여 입력해주세요.</span> -->
+
+                                            <!-- <input type="text" title="이름입력" placeholder="이름을 입력해주세요."  class="error"/>
+                                            <span class="ico">최소 8자리 이상으로 입력해주세요.</span> -->
+
+                                            <!-- <input type="text" title="이름입력" placeholder="이름을 입력해주세요."  class="error"/>
+                                            <span class="ico">비밀번호가 일치하지 않습니다.</span> -->
+
+                                            <input type="text" title="비밀번호 재 입력" placeholder="다시 한 번 비밀번호를 입력해주세요."  class="success"/>
+                                            <span class="ico">비밀번호가 일치합니다.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 f-dg">비밀번호 변경</button>
+                                    </div>
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 l-g">취소</button>
+                                    </div>
+                                </div>
+                                <div class="rightArea">
+                                    <div class="inner">
+                                        <p class="title">비밀번호 변경 시 유의해주세요.</p>
+                                        <ul>
+                                            <li>영문, 숫자, 특수기호를 조합하여 8~12자로 설정해주세요.</li>
+                                            <li>아이디에 포함된 문자, 숫자와 3자리 이상 동일 하거나 2자리 이상 반복되는 숫자는 사용이 불가합니다.</li>
+                                            <li>사용 가능한 특수기호 : @#!%*#?&</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<div class="modPopup typeAlert" id="alert01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                입력하신 아이디가 맞지 않습니다.<br>
+                확인 후 다시 진행해주세요.
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <!-- <button type="button" class="popBtn sub" onclick="popClose('alert01')">취소</button> -->
+            <button type="button" class="popBtn main" onclick="popClose('alert01')">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="modPopup typeAlert" id="alert02">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox sm"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit">타이틀</div> -->
+            <button class="closeBtn" onclick="popClose('alert02')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <p class="alertTxt">
+                취소하면 비밀번호가 변경되지 않습니다.<br>
+                취소하시겠습니까?
+            </p>                        
+        </div>
+
+        <!-- 팝업 버튼 -->
+        <div class="popBtnArea">
+            <button type="button" class="popBtn sub" onclick="popClose('alert02')">취소</button>
+            <button type="button" class="popBtn main" onclick="popClose('alert02')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

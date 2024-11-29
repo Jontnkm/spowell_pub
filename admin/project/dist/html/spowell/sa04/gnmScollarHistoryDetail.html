@@ -255,8 +255,6 @@
             <colgroup>
                 <col style="width:150px">
                 <col style="width:auto">
-                <col style="width:150px">
-                <col style="width:auto">
             </colgroup>
             <thead>
                 <tr>
@@ -266,7 +264,28 @@
                         <div class="frmChoBox"><input id="chk002" type="checkbox" class="iptChk"><label for="chk002" class="iptLbl">의심</label></div>
                         <div class="frmChoBox"><input id="chk003" type="checkbox" class="iptChk"><label for="chk003" class="iptLbl">확정</label></div>
                     </td>
-                    <th>소명자료</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">소명자료</div>
+        </div>
+        <div class="alignR">
+            <button type="button" class="soloBtn bLine">추가</button>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <!-- <col style="width:150px">
+                <col style="width:auto"> -->
+
+                <col style="width:100%;">
+            </colgroup>
+            <tbody>
+                <tr>
                     <td>
                         <div class="frmGroup">
                             <div class="fileBox">
@@ -282,10 +301,25 @@
                         </div>
                     </td>
                 </tr>
-            </thead>
+                <tr>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn2" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
-
     <div class="comSmTit">
         <div class="alignL">
             <div class="title">메모</div>
@@ -301,15 +335,30 @@
     </div>
     <div class="cptDataHistory">
         <dl class="historyList">
-            <dt>2022-12-31 홍길동</dt>
+            <dt>
+                2022-12-31 홍길동
+                <span class="comSideOpt">
+                    <button type="button" class="srhBtn red">삭제</button>
+                </span>
+            </dt>
             <dd>변경사유 내용입니다.</dd>
         </dl>
         <dl class="historyList">
-            <dt>2022-12-31 홍길동</dt>
+            <dt>
+                2022-12-31 홍길동
+                <span class="comSideOpt">
+                    <button type="button" class="srhBtn red">삭제</button>
+                </span>
+            </dt>
             <dd>변경사유 내용입니다.</dd>
         </dl>
         <dl class="historyList">
-            <dt>2022-12-31 홍길동</dt>
+            <dt>
+                2022-12-31 홍길동
+                <span class="comSideOpt">
+                    <button type="button" class="srhBtn red">삭제</button>
+                </span>
+            </dt>
             <dd>변경사유 내용입니다.</dd>
         </dl>
     </div>

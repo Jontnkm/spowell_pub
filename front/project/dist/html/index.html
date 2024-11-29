@@ -1,5 +1,6 @@
  <!-- Header -->
  
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +15,7 @@
 
 	<title>SPOWELL-체육인복지지원</title>
 
-	<link rel="stylesheet" href="../common/css/swiper.css" />
+	<link rel="stylesheet" href="../common/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
@@ -22,8 +23,12 @@
 	<script src="../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../common/js/jquery-ui.min.js"></script>
 	<script src="../common/js/tui-date-picker.js"></script>
-	<script src="../common/js/swiper.js"></script>
+	<script src="../common/js/swiper-bundle.min.js"></script>
 	<script src="../common/js/common.js"></script>
+
+	
+		<script src="../common/js/main.js"></script>
+	
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
@@ -284,7 +289,7 @@
             </div>
 
             <div class="mainCont02">
-                <p class="title">체육인 대상별 복지지원</p>
+                <a href="#none" class="title">체육인 대상별 복지지원</a>
                 <div class="remote">
                     <div class="leftArea">
                         <ul>
@@ -303,6 +308,7 @@
 
                 <div class="supportSlide">
                     <div class="slideInner">
+                        
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <span class="flag type01">국가대표</span>
@@ -385,6 +391,11 @@
                                 </p>
                             </div>
                         </div>
+
+                        <div class="suppSlidePg_container">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination2"></div>
+                        </div>
                     </div>
 
                     <div class="swiper-button prevBtn">
@@ -397,7 +408,7 @@
             </div>
 
             <div class="mainCont03">
-                <div class="calendarInner">
+                <div class="calendarInner pcType">
                     <div class="leftArea">
                         <div class="cal-pagination"></div>
                         <p class="title">2025년도<br>연간일정</p>
@@ -548,6 +559,76 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="calendarInner moType">
+                    <div class="tbtitle">
+                        <p>2025년도 연간 일정</p>
+                    </div>
+                    <div class="mainTable">
+                        <table class="tbCal">
+                            <colgroup>
+                                <col style="width:70px">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>1월</th>
+                                    <td>
+                                        <ul>
+                                            <li>경기력 성과포상금 상시 접수(상시)</li>
+                                            <li>보험지원금 상시 지원(상시)</li>
+                                            <li>보험지원금 상시 지원</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2월</th>
+                                    <td>
+                                        <ul>
+                                            <li>생활지원금 공고</li>
+                                            <li>국내대학 교육지원금 1차</li>
+                                            <li>원로체육인 지원</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>3월</th>
+                                    <td>
+                                        <ul>
+                                            <li>스포츠 꿈나무 특기장려금(상시)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>7월</th>
+                                    <td>
+                                        <ul>
+                                            <li>국외대학 교육지원금</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>8월</th>
+                                    <td>
+                                        <ul>
+                                            <li>국외대학 교육지원금 2차</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10월</th>
+                                    <td>
+                                        <ul>
+                                            <li>체육장학금</li>
+                                        </ul>
+                                    </td>
+                                </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <button type="button" class="reservAlarm">공고알림 예약</button>
+                </div>
             </div>
 
             <div class="mainCont04">
@@ -674,7 +755,12 @@
                             <ul>
                                 <li>
                                     <a href="#none">
-                                        <p class="title new">스포츠꿈나무 특기장려금 사업 운영 사업자 선정</p><!-- 신규게시물 'new' 클래스 추가 -->
+                                        <p class="title new">
+                                            스포츠꿈나무 특기장려금 사업 운영 사업자 선정
+                                            <span class="newIco">
+                                                <img src="../../images/common/ico_new.svg" alt="신규게시글 아이콘 이미지" />
+                                            </span>
+                                        </p><!-- 신규게시물 'new' 클래스 추가 -->
                                         <span class="time">2024-11-05</span>
                                     </a>
                                 </li>
@@ -730,13 +816,39 @@
                                 <p class="desc">
                                     스포츠분야 취창업교육부터 체육인재 양성을 위한 온·오프라인 강의
                                 </p>
-                                <a href="#none" class="direct"></a>
+                                <a href="#none" class="direct">K스포에듀 바로가기</a>
                             </div>
                             <div class="service02">
-
+                                <p class="title">체육인 권리·권익보호</p>
+                                <p class="desc">
+                                    스포츠 인권침해·비리<br>도움이 필요할 때 익명 상담·신고
+                                </p>
+                                <a href="#none" class="direct">스포츠윤리센터 바로가기</a>
                             </div>
                             <div class="serviceOptions">
-
+                                <ul>
+                                    <li class="item01">
+                                        <a href="#none">
+                                            <p class="title">스포츠꿈나무 특기 장려금<br>카드 조회</p>
+                                            <p class="desc">하나카드 고객센터 1800-1111</p>
+                                        </a>
+                                    </li>
+                                    <li class="item02">
+                                        <a href="#none">
+                                            <p class="title">체육인복지 사업<br>소개</p>
+                                        </a>
+                                    </li>
+                                    <li class="item03">
+                                        <a href="#none">
+                                            <p class="title">자주찾는질문</p>
+                                        </a>
+                                    </li>
+                                    <li class="item04">
+                                        <a href="#none">
+                                            <p class="title">체육인복지법 조회</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -976,50 +1088,4 @@
 
 </div>
 </body>
-
-
 </html>
-
-<script>
-$(document).ready(function() {
-    const $counters = $(".counter");
-    const exposurePercentage = 100;
-    const duration = 1000;
-    const addCommas = true;
-
-    function updateCounter($el, start, end) {
-        let startTime;
-        function animateCounter(timestamp) {
-            if (!startTime) startTime = timestamp;
-            const progress = (timestamp - startTime) / duration;
-            const current = Math.round(start + progress * (end - start));
-            const formattedNumber = addCommas ? current.toLocaleString() : current;
-            $el.text(formattedNumber);
-            
-            if (progress < 1) {
-                requestAnimationFrame(animateCounter);
-            } else {
-                $el.text(addCommas ? end.toLocaleString() : end);
-            }
-        }
-        requestAnimationFrame(animateCounter);
-    }
-
-    $(window).on('scroll', function() {
-        $counters.each(function() {
-            const $el = $(this);
-            if (!$el.data('scrolled')) {
-                const rect = $el[0].getBoundingClientRect();
-                const winHeight = window.innerHeight;
-                const contentHeight = rect.bottom - rect.top;
-                if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
-                    const start = parseInt($el.data("start"));
-                    const end = parseInt($el.data("end"));
-                    updateCounter($el, start, end);
-                    $el.data('scrolled', true);
-                }
-            }
-        });
-    }).scroll();
-});
-</script>

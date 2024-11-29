@@ -88,7 +88,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>월정금</td>
+                        <td>
+                            <!--콤보 in 테이블-->
+                            <div class="cptForm">
+                                <div class="dropDown">
+                                    <button type="button" class="" title="열기">내용</button>
+                                    <div class="dropDownBox">
+                                        <ul class="ddCont">
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none" class="selected">내용</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                         <td>월정금</td>
                         <td>월정금</td>
                         <td>월정금</td>
@@ -103,8 +120,14 @@
                         <td>일시장려금</td>
                         <td>국민은행<br>000000-00-000000</td>
                         <td>일시장려금</td>
-                        <td>일시장려금</td>
-                        <td>일시장려금</td>
+                        <td>
+                            <span class="txtRed">일시장려금</span>
+                        </td>
+                        <td>
+                            <div class="cptForm">
+                                <input type="text" title="장려금입력창" placeholder="장려금종류를 입력해주세요">
+                            </div> 
+                        </td>
                         <td>일시장려금</td>
                     </tr>
                 </tbody>
@@ -116,7 +139,7 @@
 
     <xmp>
         <div class="cptTable">
-            <table class="tbInfo">
+            <table class="tbInfo type02">
                 <colgroup>
                     <col style="width:160px">
                     <col style="width:auto">
@@ -135,7 +158,7 @@
         </div>
         <br><br>
         <div class="cptTable">
-            <table class="tbInfo">
+            <table class="tbInfo type02">
                 <colgroup>
                     <col style="width:160px">
                     <col style="width:auto">
@@ -152,6 +175,28 @@
                     <tr>
                         <th>휴대전화</th>
                         <td class="left">010-0000-0000</td>
+                        <th>휴대전화</th>
+                        <td class="left">010-0000-0000</td>
+                    </tr>
+                    <tr>
+                        <th>종목</th>
+                        <td class="left">
+                            <div class="cptForm">
+                                <div class="dropDown w155">
+                                    <button type="button" class="" title="열기">내용</button>
+                                    <div class="dropDownBox">
+                                        <ul class="ddCont">
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none">제목테스트</a></li>
+                                            <li><a href="#none" class="selected">내용</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                         <th>휴대전화</th>
                         <td class="left">010-0000-0000</td>
                     </tr>
@@ -195,4 +240,28 @@
         }
         return false;
     });
+
+    var buttons = document.querySelectorAll(".dropDown > button");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {            
+            var parent = this.parentElement;
+            var drpdwBox = parent.querySelector(".dropDownBox");
+            if (parent.classList.contains("disabled")){
+                alert("비활성화된 항목입니다.");
+            } else {
+                if (this.classList.contains("active")) {
+                    parent.classList.remove("active");
+                    this.setAttribute("title","열기");
+                    this.classList.remove("active");
+                    drpdwBox.style.display = "none";
+                } else {
+                    parent.classList.add("active");
+                    this.classList.add("active");
+                    this.setAttribute("title","접기");
+                    drpdwBox.style.display = "block";
+                }
+            }
+        });
+    });
+
 </script>

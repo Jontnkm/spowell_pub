@@ -1441,7 +1441,7 @@ module.exports = {
       MMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
       MMMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
     },
-    titleFormat: 'yyyy년 MMMM',
+    titleFormat: 'yyyy년 &nbsp;&nbsp;&nbsp; MMMM',
     todayFormat: '오늘은 yyyy년 MMMM d일  DD입니다 ',
     time: 'Time',
     date: 'Date'
@@ -6256,29 +6256,28 @@ var template = __webpack_require__(11);
 
 module.exports = function(context) {
   var source =
-    '<table class="tui-calendar-body-inner" cellspacing="0" cellpadding="0">' +
-    '  <caption><span>Dates</span></caption>' +
-    '  <thead class="tui-calendar-body-header">' +
-    '    <tr>' +
-    '      <th class="tui-sun" scope="col">{{Sun}}</th>' +
-    '      <th scope="col">{{Mon}}</th>' +
-    '      <th scope="col">{{Tue}}</th>' +
-    '      <th scope="col">{{Wed}}</th>' +
-    '      <th scope="col">{{Thu}}</th>' +
-    '      <th scope="col">{{Fri}}</th>' +
-    '      <th class="tui-sat" scope="col">{{Sat}}</th>' +
-    '    </tr>' +
-    '  </thead>' +
-    '  <tbody>' +
+    '<div class="tui-calendar-body-inner">' +
+    '  <div class="tui-calendar-body-header">' +
+    '    <ul>' +
+    '      <li class="tui-sun" scope="col">{{Sun}}</li>' +
+    '      <li scope="col">{{Mon}}</li>' +
+    '      <li scope="col">{{Tue}}</li>' +
+    '      <li scope="col">{{Wed}}</li>' +
+    '      <li scope="col">{{Thu}}</li>' +
+    '      <li scope="col">{{Fri}}</li>' +
+    '      <li class="tui-sat" scope="col">{{Sat}}</li>' +
+    '    </ul>' +
+    '  </div>' +
+    '  <div class="tui-calendar-body-body">' +
     '    {{each weeks}}' +
-    '    <tr class="tui-calendar-week">' +
+    '    <ul class="tui-calendar-week">' +
     '      {{each @this}}' +
-    '      <td class="{{@this["className"]}}" data-timestamp="{{@this["timestamp"]}}">{{@this["dayInMonth"]}}</td>' +
+    '      <li class="{{@this["className"]}}" data-timestamp="{{@this["timestamp"]}}">{{@this["dayInMonth"]}}</li>' +
     '      {{/each}}' +
-    '    </tr>' +
+    '    </ul>' +
     '    {{/each}}' +
-    '  </tbody>' +
-    '</table>';
+    '  </div>' +
+    '</div>';
 
   return template(source, context);
 };
@@ -6388,29 +6387,28 @@ var template = __webpack_require__(11);
 
 module.exports = function(context) {
   var source =
-    '<table class="tui-calendar-body-inner">' +
-    '  <caption><span>Months</span></caption>' +
-    '  <tbody>' +
-    '    <tr class="tui-calendar-month-group">' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 0}}>{{Jan}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 1}}>{{Feb}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 2}}>{{Mar}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 3}}>{{Apr}}</td>' +
-    '    </tr>' +
-    '    <tr class="tui-calendar-month-group">' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 4}}>{{May}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 5}}>{{Jun}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 6}}>{{Jul}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 7}}>{{Aug}}</td>' +
-    '    </tr>' +
-    '    <tr class="tui-calendar-month-group">' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 8}}>{{Sep}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 9}}>{{Oct}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 10}}>{{Nov}}</td>' +
-    '      <td class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 11}}>{{Dec}}</td>' +
-    '    </tr>' +
-    '  </tbody>' +
-    '</table>';
+    '<div class="tui-calendar-body-inner">' +
+    '  <div>' +
+    '    <ul class="tui-calendar-month-group">' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 0}}>{{Jan}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 1}}>{{Feb}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 2}}>{{Mar}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 3}}>{{Apr}}</li>' +
+    '    </ul>' +
+    '    <ul class="tui-calendar-month-group">' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 4}}>{{May}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 5}}>{{Jun}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 6}}>{{Jul}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 7}}>{{Aug}}</li>' +
+    '    </ul>' +
+    '    <ul class="tui-calendar-month-group">' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 8}}>{{Sep}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 9}}>{{Oct}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 10}}>{{Nov}}</li>' +
+    '      <li class="tui-calendar-month" data-timestamp={{getFirstDayTimestamp year 11}}>{{Dec}}</li>' +
+    '    </ul>' +
+    '  </div>' +
+    '</div>';
 
   return template(source, context);
 };
@@ -6512,20 +6510,19 @@ var template = __webpack_require__(11);
 
 module.exports = function(context) {
   var source =
-    '<table class="tui-calendar-body-inner">' +
-    '  <caption><span>Years</span></caption>' +
-    '  <tbody>' +
+    '<div class="tui-calendar-body-inner">' +
+    '  <div>' +
     '    {{each yearGroups}}' +
-    '    <tr class="tui-calendar-year-group">' +
+    '    <ul class="tui-calendar-year-group">' +
     '      {{each @this}}' +
-    '      <td class="tui-calendar-year" data-timestamp={{getFirstDayTimestamp @this 0}}>' +
+    '      <li class="tui-calendar-year" data-timestamp={{getFirstDayTimestamp @this 0}}>' +
     '        {{@this}}' +
-    '      </td>' +
+    '      </li>' +
     '      {{/each}}' +
-    '    </tr>' +
+    '    </ul>' +
     '    {{/each}}' +
-    '  </tbody>' +
-    '</table>';
+    '  </div>' +
+    '</div>';
 
   return template(source, context);
 };

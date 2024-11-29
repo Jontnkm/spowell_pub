@@ -1,0 +1,88 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember-process">
+                            <ul>
+                                <li class="complete"><!--해당 단계 완료시 'complete' 클래스 추가-->
+                                    <span class="step">1</span>
+                                    <span>약관동의</span>
+                                </li>
+                                <li class="ongoing"><!--해당 단계 진행시 'ongoing' 클래스 추가-->
+                                    <span class="step">2</span>
+                                    <span>체육인 자격조회</span>
+                                </li>
+                                <li>
+                                    <span class="step">3</span>
+                                    <span>정보입력</span>
+                                </li>
+                                <li>
+                                    <span class="step">4</span>
+                                    <span>가입완료</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cptMember">
+                            <p class="title">체육인 회원가입 완료</p>
+                            <p class="desc withInfo">
+                                체육인 회원가입 신청이 완료되었습니다.<br>신청하신 체육인 정보에 대해 관리자 승인 후 사이트를 이용하실 수 있습니다.<br>체육인 자격 승인 결과는 심사 후 휴대폰번호로 개별 안내 드립니다.
+                            </p>
+
+                            <div class="resultBox round">
+                                <div class="symbol">
+                                    <img src="../../images/sub/ico_join_complete.svg" alt="트로피 모양의 아이콘 이미지">
+                                </div>
+                            </div>
+
+                             <div class="comButton">
+                                <button type="button" class="btn h56 f-dg">메인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

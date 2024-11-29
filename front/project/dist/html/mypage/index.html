@@ -1,5 +1,6 @@
 <!-- Header -->
 
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +15,7 @@
 
 	<title>체육인복지지원</title>
 
-	<link rel="stylesheet" href="../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../common/css/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../common/css/tui-date-picker.css" />
 	<link rel="stylesheet" href="../../common/css/style.css" />
 	<!-- <link rel="stylesheet" href="../common/css/jquery-ui.min.css" /> -->
@@ -22,8 +23,10 @@
 	<script src="../../common/js/jquery-3.4.1.min.js"></script>
 	<script src="../../common/js/jquery-ui.min.js"></script>
 	<script src="../../common/js/tui-date-picker.js"></script>
-	<script src="../../common/js/swiper.js"></script>
+	<script src="../../common/js/swiper-bundle.min.js"></script>
 	<script src="../../common/js/common.js"></script>
+
+	
 </head>
 <body>
 <div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
@@ -261,6 +264,9 @@
                     <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">복지신청현황</a></h3>
                 </li>
                 <li class="depth2Menu">
+                    <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">복지지원현황</a></h3>
+                </li>
+                <li class="depth2Menu">
                     <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">대회참여현황</a></h3>
                 </li>
                 <li class="depth2Menu">
@@ -272,9 +278,94 @@
             </ul>
         </div>
     </div>
+
+    <div class="moInner">
+        <div class="subMenuBox">
+            <div class="depth01">
+                <button type="button" title="열기"><h2>마이페이지</h2></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">사업소개</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">신청·안내</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">체육인서비스</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">알림·소식</a></h2>
+                            </li>
+                            <li class="active">
+                                <h2 class="depth1Menu"><a href="#none">마이페이지</a></h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="depth02">
+                <button type="button" title="열기"><h3></h3></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li class="depth2Menu active">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">나의체육인복지</a></h3>
+                            </li>
+                            <li class="depth2Menu">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">복지신청현황</a></h3>
+                            </li>
+                            <li class="depth2Menu">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">복지지원현황</a></h3>
+                            </li>
+                            <li class="depth2Menu">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">대회참여현황</a></h3>
+                            </li>
+                            <li class="depth2Menu">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">증명서발급</a></h3>
+                            </li>
+                            <li class="depth2Menu">
+                                <h3 class="depth2Name"><a href="../../html/help/notice.html" class="depth2Link">회원정보수정</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
+        $(".moInner .depth02 button h3").text(pgTit);
+    })
+
+    var buttons = document.querySelectorAll(".subMenuBox button");
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {            
+            var parent = this.parentElement;
+            var drpdwBox = parent.querySelector(".depthDrop");
+
+            if (this.classList.contains("active")) {
+                parent.classList.remove("active");
+                this.setAttribute("title","열기");
+                this.classList.remove("active");
+                drpdwBox.style.display = "none";
+            } else {
+                parent.classList.add("active");
+                this.classList.add("active");
+                this.setAttribute("title","접기");
+                drpdwBox.style.display = "block";
+            }
+            
+        });
+    });
+</script>
                     </div>
                     <!-- //좌측 메뉴 영역 -->
+
                     <!-- 콘텐츠 영역 -->
                     <div class="layoutCont">
                         
@@ -329,6 +420,269 @@
         $(".depthTxt > .dept02").text(pgTit);
     })
 </script>
+
+                        <div class="cptMyPage">
+                            <div class="staticBox">
+                                <ul>
+                                    <li>
+                                        <p class="title">복지신청현황</p>
+                                        <p class="count">
+                                            <span>1</span>건
+                                        </p>
+                                        <p class="detail">교육지원(국내대학원)</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">누적 복지지원현황</p>
+                                        <p class="count">
+                                            <span>36,700,000</span>원
+                                        </p>
+                                        <p class="detail">경기력 성과포상금</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">대회참여현황</p>
+                                        <p class="count">
+                                            <span>9</span>건
+                                        </p>
+                                        <p class="detail">세계선수권대회 2위</p>
+                                    </li>
+                                    <li>
+                                        <p class="title">누적평가점수</p>
+                                        <p class="count">
+                                            <span>77</span>점
+                                        </p>
+                                        <p class="detail">국가대표 선수·지도자</p>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="dataGroup">
+                                <div class="areaGroup tb01">
+                                    <div class="titleArea">
+                                        <a href="#none">
+                                            복지신청현황
+                                            <span class="count">
+                                                (<span>1</span>건)
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbInfo">
+                                            <caption>신청일, 신청복지, 상태변경일, 신청상태에 관한 표</caption>
+                                            <colgroup>
+                                                <col style="width:auto">
+                                                <col style="width:120px">
+                                                <col style="width:120px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>신청 복지</th>
+                                                    <th>신청 상태</th>
+                                                    <th>신청일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tit">
+                                                        스포츠클럽 창업지원
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">신청일</span>
+                                                        <span>2025.03.15</span>
+                                                    </td>
+                                                    <td class="badge">
+                                                        처리중
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="areaGroup tb02">
+                                    <div class="titleArea">
+                                        <a href="#none">
+                                            복지지원 현황
+                                            <span class="count">
+                                                (<span>2</span>건)
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbInfo">
+                                            <caption>지원복지, 지급개시일, 지급금액, 지급횟수, 지급총액, 구분에 관한 표</caption>
+                                            <colgroup>
+                                                <col style="width:auto">
+                                                <col style="width:100px">
+                                                <col style="width:150px">
+                                                <col style="width:100px">
+                                                <col style="width:150px">
+                                                <col style="width:120px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>지원 복지</th>
+                                                    <th>구분</th>
+                                                    <th>지급 금액</th>
+                                                    <th>지급 횟수</th>
+                                                    <th>지급 총액</th>
+                                                    <th>지급 개시일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tit">경기력 성과포상금 (선수)</td>
+                                                    <td class="badge">월정금</td>
+                                                    <td>
+                                                        <span class="mTit">지급 금액</span>
+                                                        <span>700,000원/월</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">지급횟수</span>
+                                                        <span>27회</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">지급횟수</span>
+                                                        <span>18,900,000원</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">지급 개시일</span>
+                                                        2025.03.15
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="areaGroup tb03">
+                                    <div class="titleArea">
+                                        <a href="#none">
+                                            대회참여 현황
+                                            <span class="count">
+                                                (<span>9</span>건)
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbInfo">
+                                            <caption>수상일, 구분, 대회명, 종목, 순위, 평가점수에 관한 표</caption>
+                                            <colgroup>
+                                                <col style="width:auto">
+                                                <col style="width:150px">
+                                                <col style="width:150px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:120px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>대회명</th>
+                                                    <th>구분</th>
+                                                    <th>종목</th>
+                                                    <th>순위</th>
+                                                    <th>평가점수</th>
+                                                    <th>수상일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tit">2022 세계태권도선수권대회</td>
+                                                    <td class="badge">세계선수권대회</td>
+                                                    <td>
+                                                        <span class="mTit">종목</span>
+                                                        <span>태권도 겨루기</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">순위</span>
+                                                        <span>1</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">평가점수</span>
+                                                        <span>50</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">수상일</span>
+                                                        <span>2022.08.15</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="areaGroup tb04">
+                                    <div class="titleArea spb">
+                                        <p>
+                                            나의 계좌번호
+                                        </p>
+                                        <div class="comButton alignR">
+                                            <button type="button" class="btn h36 l-g">계좌 변경신청</button>
+                                        </div>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbInfo">
+                                            <caption>복지, 은행, 계좌번호에 관한 표</caption>
+                                            <colgroup>
+                                                <col style="width:33.3333%">
+                                                <col style="width:33.3333%">
+                                                <col style="width:33.3333%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>복지</th>
+                                                    <th>은행</th>
+                                                    <th>계좌번호</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tit">경기력 성과포상금</td>
+                                                    <td>
+                                                        <span class="mTit">은행</span>
+                                                        <span>국민은행</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">계좌번호</span>
+                                                        <span>000000-00-000000</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tit">생활지원금</td>
+                                                    <td>
+                                                        <span class="mTit">은행</span>
+                                                        <span>신한은행</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">계좌번호</span>
+                                                        <span>000-000-000000</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="certificate">
+                                <p class="title">
+                                    증명서 발급
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p>경기력 성과포상금 지급확인서</p>
+                                        <div class="comButton alignL">
+                                            <button type="button" class="btn h32 f-b">발급 신청</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>체육장학증서</p>
+                                        <div class="comButton alignL">
+                                            <button type="button" class="btn h32 f-b">발급 신청</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>
@@ -575,8 +929,6 @@
 
 </div>
 </body>
-
-
 </html>
 
  

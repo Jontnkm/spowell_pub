@@ -6,11 +6,16 @@
     <xmp>
         <p class="guideTitle lt">CALENDAR - CUSTOMIZED</p>
         <div class="cptForm" style="display:flex; gap:20px;">
-            <div class="frmGroup">
+            <div class="frmGroup datepicker alingMid">
                 <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
-                    <input type="text" id="datepicker-input" aria-label="Date-Time" class="calendar">
+                    <input type="text" id="datepicker-input1" aria-label="Date-Time" class="calendar">
+                    <div id="wrapper1"></div>
                 </div>
-                <div id="wrapper" style="margin-top: 5px;"></div>
+                <div class="Deco">-</div>
+                <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                    <input type="text" id="datepicker-input2" aria-label="Date-Time" class="calendar">
+                    <div id="wrapper2"></div>
+                </div>
             </div>
             <!-- <div class="frmGroup">
                 <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
@@ -72,34 +77,113 @@
     <xmp>
         <p class="guideTitle lt">Default</p>
         <div class="cptForm">
-            <input type="text" title="000를위한 입력창" placeholder="텍스트" />
+            <div class="ipt">
+                <input type="text" title="000를위한 입력창" placeholder="텍스트" />
+            </div>
+            
+            <br><br>
+
+            <div class="ipt">
+                <input type="text" title="000를위한 입력창" placeholder="텍스트"/>
+                <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
+            </div>
+            
+            <br><br>
+
+            <div class="ipt">
+                <input type="text" title="000를위한 입력창" placeholder="텍스트" class="error"/>
+                <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
+            </div>
+            
+            <br><br>
+
+            <div class="ipt">
+                <input type="text" title="000를위한 입력창" placeholder="텍스트" class="success"/>
+                <span class="ico">비밀번호가 일치합니다.</span>
+            </div>
+            
+            <br><br>
+
+            <div class="ipt">
+                <input type="text" title="000를위한 입력창" placeholder="텍스트" disabled/>
+            </div>
         </div>
-        
-        <br>
 
+        <p class="guideTitle lt">Text + Input (COLUMN ARRANGE)</p>
         <div class="cptForm">
-            <input type="text" title="000를위한 입력창" placeholder="텍스트"/>
-            <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
+            <p class="lbTxt">이름</p>
+            <div class="ipt">
+                <input type="text" title="이름입력" placeholder="이름을 입력해주세요." />
+            </div>
+
+            <br><br>
+
+            <p class="lbTxt">주민등록번호</p>
+            <div class="frmGroup">
+                <div class="ipt">
+                    <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                </div>
+                <div class="deco">-</div>
+                <div class="ipt">
+                    <input type="text" title="주민등록번호 뒷자리 입력" placeholder="1******" />
+                </div>
+            </div>
+
+            <br><br>
+            
+            <p class="lbTxt">아이디</p>
+            <div class="frmGroup">
+                <div class="ipt">
+                    <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                </div>
+                <div class="comButton">
+                    <button type="button" class="btn h50 l-b">중복확인</button>
+                </div>
+            </div>
         </div>
-        
-        <br>
 
+        <p class="guideTitle lt">Text + Input (ROW ARRANGE)</p>
         <div class="cptForm">
-            <input type="text" title="000를위한 입력창" placeholder="텍스트" class="error"/>
-            <span class="ico">영문,숫자,특수기호를 조합하여 8~12자로 설정해주세요.</span>
-        </div>
+            <div class="rowType">
+                <p class="lbTxt">아이디</p>
+                <div class="frmGroup">
+                    <div class="ipt">
+                        <input type="text" title="아이디입력" placeholder="아이디를 입력해주세요." />
+                    </div>
+                    <div class="comButton">
+                        <button type="button" class="btn h50 l-b">중복확인</button>
+                    </div>
+                </div>
+            </div>
 
-        <br>
+            <br><br>
+            
+            <div class="rowType">
+                <p class="lbTxt">주민등록번호</p>
+                <div class="frmGroup">
+                    <div class="ipt">
+                        <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                    </div>
+                    <div class="deco">-</div>
+                    <div class="ipt">
+                        <input type="text" title="주민등록번호 뒷자리 입력" placeholder="1******" />
+                    </div>
+                </div>
+            </div>
 
-        <div class="cptForm">
-            <input type="text" title="000를위한 입력창" placeholder="텍스트" class="success"/>
-            <span class="ico">비밀번호가 일치합니다.</span>
-        </div>
-        
-        <br>
-
-        <div class="cptForm">
-            <input type="text" title="000를위한 입력창" placeholder="텍스트" disabled/>
+            <br><br>
+            
+            <div class="rowType">
+                <p class="lbTxt">아이디</p>
+                <div class="frmGroup">
+                    <div class="ipt">
+                        <input type="text" title="주민등록번호 앞자리 입력" placeholder="000000" />
+                    </div>
+                    <div class="comButton">
+                        <button type="button" class="btn h50 l-b">중복확인</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </xmp>
 
@@ -238,6 +322,24 @@
                 <label for="rdo03">3개월</label>
             </div>
         </div>
+
+        <br><br>
+
+        <p class="guideTitle lt">RADIO - CIRCLE</p>
+        <div class="cptForm" style="display:flex; gap:20px;">
+            <div class="frmRdo ty02">
+                <input type="radio" id="rdo011" name="rdo02" checked />
+                <label for="rdo011">6개월</label>
+            </div>
+            <div class="frmRdo ty02">
+                <input type="radio" id="rdo021" name="rdo02" />
+                <label for="rdo021">1년</label>
+            </div>
+            <div class="frmRdo ty02">
+                <input type="radio" id="rdo031" name="rdo02" disabled />
+                <label for="rdo031">3개월</label>
+            </div>
+        </div>
     </xmp>
 
 <style>
@@ -310,13 +412,21 @@
         return false;
     });
 
-    var datepicker = new tui.DatePicker('#wrapper', {
+    var datepicker = new tui.DatePicker('#wrapper1', {
         date: new Date(),
         input: {
-            element: '#datepicker-input',
+            element: '#datepicker-input1',
             format: 'yyyy-MM-dd'
         }
     });
+    var datepicker = new tui.DatePicker('#wrapper2', {
+        date: new Date(),
+        input: {
+            element: '#datepicker-input2',
+            format: 'yyyy-MM-dd'
+        }
+    });
+
     var buttons = document.querySelectorAll(".dropDown > button");
     buttons.forEach(function(button) {
         button.addEventListener("click", function() {            

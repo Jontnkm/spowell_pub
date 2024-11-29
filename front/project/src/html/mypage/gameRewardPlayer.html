@@ -1,0 +1,247 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+
+                    <!-- 좌측 메뉴 영역 -->
+                    <div class="layoutNav">
+                        <!-- Left Menu -->
+                        <%- include('../ejs/lnb05.ejs', {
+                            depth2:3,
+                            depth3:0,
+                            url: "../../",
+                        }) %>
+                    </div>
+                    <!-- //좌측 메뉴 영역 -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont">
+                        <%- include('../ejs/subTop.ejs', {
+                            url: "../../",
+                        }) %>
+
+                        <div class="modTab calDiv1 stb pcType">
+                            <div class="inner">
+                                <ul>
+                                    <li class="active"><a href="#none">경기력 성과포상금(선수)</a></li>
+                                    <li><a href="#none">경기력 성과포상금(지도자)</a></li>
+                                    <li><a href="#none">국내대학원 교육지원금</a></li>
+                                    <li><a href="#none">국외유학 교육지원금</a></li>
+                                    <li><a href="#none">생활지원금</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tabType">
+                            <div class="cptForm">
+                                <div class="dropDown">
+                                    <button type="button" class="" title="열기">경기력 성과포상금(선수)</button>
+                                    <div class="dropDownBox">
+                                        <ul class="ddCont">
+                                            <li><a href="#none" class="selected">경기력 성과포상금(선수)</a></li>
+                                            <li><a href="#none">경기력 성과포상금(지도자)</a></li>
+                                            <li><a href="#none">국내대학원 교육지원금</a></li>
+                                            <li><a href="#none">국외유학 교육지원금</a></li>
+                                            <li><a href="#none">생활지원금</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cptMyPage">
+                            <div class="priceOption">
+                                <p>
+                                    누적지급액
+                                    <span>45,350,000 <span>원<span></span>
+                                </p>
+                                <div class="comButton alignR">
+                                    <button type="button" class="btn h36 l-g ico">
+                                        <span class="txt">엑셀다운로드</span>
+                                        <span class="ico02"><span class="hidden">다운로드 아이콘 이미지</span></span>
+                                    </button>
+                                    <button type="button" class="btn h36 l-g">계좌번호 관리</button>
+                                </div>
+                            </div>
+
+                            <div class="filter">
+                                <div class="dateArea">
+                                    <p>조회기간</p>
+                                    <div class="cptForm" style="display:flex; gap:20px;">
+                                        <div class="frmGroup datepicker alingMid">
+                                            <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                <input type="text" id="datepicker-input1" aria-label="Date-Time" class="calendar">
+                                                <div id="wrapper1"></div>
+                                            </div>
+                                            <div class="Deco">-</div>
+                                            <div class="iptDate tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                <input type="text" id="datepicker-input2" aria-label="Date-Time" class="calendar">
+                                                <div id="wrapper2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="monthArea">
+                                    <div class="cptForm">
+                                        <div class="frmGroup alingMid">
+                                            <div class="frmRdo">
+                                                <input type="radio" id="rdo01" name="rdo01" checked />
+                                                <label for="rdo01">6개월</label>
+                                            </div>
+                                            <div class="frmRdo">
+                                                <input type="radio" id="rdo02" name="rdo01" />
+                                                <label for="rdo02">1년</label>
+                                            </div>
+                                            <div class="frmRdo">
+                                                <input type="radio" id="rdo03" name="rdo01" />
+                                                <label for="rdo03">3년</label>
+                                            </div>
+                                            <div class="frmRdo">
+                                                <input type="radio" id="rdo04" name="rdo01" />
+                                                <label for="rdo04">전체</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cptTable">
+                                <table class="tbData">
+                                    <colgroup>
+                                        <col style="width:100px">
+                                        <col style="width:130px">
+                                        <col style="width:155px">
+                                        <col style="width:130px">
+                                        <col style="width:155px">
+                                        <col style="width:130px">
+                                        <col style="width:170px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>지급일</th>
+                                            <th>지금액(원)</th>
+                                            <th>소급월</th>
+                                            <th>공제액(원)</th>
+                                            <th>은행</th>
+                                            <th>계좌번호</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="badge">월정금</td>
+                                            <td>
+                                                <span class="mTit">지급일</span>
+                                                <span>2025.01.01</span>
+                                            </td>
+                                            <td class="tit">1,000,000</td>
+                                            <td>
+                                                <span class="mTit">소급월</span>
+                                                <span>2025.01.01 ~ 2025.01.01</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">공제액(원)</span>
+                                                <span>-</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">은행</span>
+                                                <span>국민은행</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">계좌번호</span>
+                                                <span>000000-00-000000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="badge">일시장려금</td>
+                                            <td>
+                                                <span class="mTit">지급일</span>
+                                                <span>2025.01.01</span>
+                                            </td>
+                                            <td class="tit">1,000,000</td>
+                                            <td>
+                                                <span class="mTit">소급월</span>
+                                                <span>2025.01.01 ~ 2025.01.01</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">공제액(원)</span>
+                                                <span>500,000</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">은행</span>
+                                                <span>국민은행</span>
+                                            </td>
+                                            <td>
+                                                <span class="mTit">계좌번호</span>
+                                                <span>000000-00-000000</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g ico">
+                                    <span>더보기</span>
+                                    <span class="ico01"><span class="hidden">플러스 모양의 아이콘 이미지</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<script>
+    //datepicker
+    var datepicker = new tui.DatePicker('#wrapper1', {
+        date: new Date(),
+        input: {
+            element: '#datepicker-input1',
+            format: 'yyyy-MM-dd'
+        }
+    });
+    var datepicker = new tui.DatePicker('#wrapper2', {
+        date: new Date(),
+        input: {
+            element: '#datepicker-input2',
+            format: 'yyyy-MM-dd'
+        }
+    });
+</script>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

@@ -1,0 +1,240 @@
+
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">계좌번호 관리 (상세 & 수정) 열기</button>
+
+<div class="modPopup type01" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">계좌번호 관리</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="cptTable">
+                <table class="tbData">
+                    <colgroup>
+                        <col style="width:48px">
+                        <col style="width:auto">
+                        <col style="width:130px">
+                        <col style="width:200px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="cptForm">
+                                    <div class="frmChk fit">
+                                        <input type="checkbox" id="chk01" />
+                                        <label for="chk01"><span class="hidden">전체선택</span></label>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>지원복지</th>
+                            <th>은행</th>
+                            <th>계좌번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="frmChk fit">
+                                        <input type="checkbox" id="chk02" />
+                                        <label for="chk02"><span class="hidden">선택</span></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>경기력성과포상금(선수)</td>
+                            <td>국민은행</td>
+                            <td>000000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="frmChk fit">
+                                        <input type="checkbox" id="chk02" />
+                                        <label for="chk02"><span class="hidden">선택</span></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>교육지원금</td>
+                            <td>국민은행</td>
+                            <td>000000-00-000000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="frmChk fit">
+                                        <input type="checkbox" id="chk02" />
+                                        <label for="chk02"><span class="hidden">선택</span></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>생활지원금</td>
+                            <td>국민은행</td>
+                            <td>000000-00-000000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cptTable">
+                <table class="tbData">
+                    <colgroup>
+                        <col style="width:auto">
+                        <col style="width:130px">
+                        <col style="width:200px">
+                        <col style="width:145px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>지원복지</th>
+                            <th>은행</th>
+                            <th>계좌번호</th>
+                            <th>통장사본</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>경기력성과포상금(선수)</td>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="dropDown hlf">
+                                        <button type="button" class="" title="열기">국민은행</button>
+                                        <div class=" dropDownBox hlfddCont">
+                                            <ul>
+                                                <li><a href="#none" class="selected">내용</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="ipt">
+                                        <input type="text" value="000000-00-000000" placeholder="계좌번호를 입력하세요.">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="fileArea on">
+                                    <div class="before">
+                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                        <input type="file" id="attFile" class="fileIpt">
+                                    </div>
+                                    <div class="after">
+                                        <a href="#none" class="download notDw">통장사본.png</a>
+                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>교육지원금</td>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="dropDown hlf">
+                                        <button type="button" class="" title="열기">국민은행</button>
+                                        <div class=" dropDownBox hlfddCont">
+                                            <ul>
+                                                <li><a href="#none" class="selected">내용</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                                <li><a href="#none">제목테스트</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="cptForm">
+                                    <div class="ipt">
+                                        <input type="text" value="000000-00-000000" placeholder="계좌번호를 입력하세요.">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="fileArea">
+                                    <div class="before">
+                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                        <input type="file" id="attFile" class="fileIpt">
+                                    </div>
+                                    <div class="after">
+                                        <a href="#none" class="download notDw">파일명.hwp</a>
+                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tableOutTxt">
+                    <ul>
+                        <li>변경할 은행계좌 통장사본을 첨부해 주세요.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 팝업 버튼 -->
+            <div class="popBtnArea">
+                <!--단순 상세 목록일 경우의 버튼 표기-->
+                <button type="button" class="popBtn sub" onclick="popClose('clause01')">계좌변경</button>
+                <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
+
+                <!--수정 할때 버튼 표기-->
+                <!-- <button type="button" class="popBtn sub" onclick="popClose('clause01')">은행계좌 검증</button>
+                <button type="button" class="popBtn sub" onclick="popClose('clause01')">변경 신청</button>
+                <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>

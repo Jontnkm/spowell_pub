@@ -1,0 +1,83 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <div class="cptMember">
+                            <p class="title">비밀번호 찾기</p>
+                            <p class="desc withInfo">휴대폰 본인인증 또는 아이핀 인증을 통해 비밀번호를 재설정하실 수 있습니다.</p>
+                            <p class="desc02">만 14세 미만 회원인 경우 회원가입 시 인증한 법정대리인의 본인인증이 필요합니다.</p>
+
+                            <div class="cptForm forAuth">
+                                <p class="lbTxt">이름</p>
+                                <div class="ipt">
+                                    <input type="text" title="이름입력" placeholder="이름을 입력해주세요." />
+                                </div>
+                            </div>
+
+                            <div class="authBox">
+                                <a href="#none" class="phone">
+                                    <p class="title">휴대폰 인증</p>
+                                    <p class="desc">
+                                        본인명의의 휴대폰으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                                <a href="#none" class="ipin">
+                                    <p class="title">I-PIN 인증</p>
+                                    <p class="desc">
+                                        본인명의의 아이핀으로<br>본인인증을 할 수 있습니다.
+                                    </p>
+                                </a>
+                            </div> 
+                             
+                            <div class="comButton">
+                                <button type="button" class="btn txt">로그인 페이지 이동</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 
