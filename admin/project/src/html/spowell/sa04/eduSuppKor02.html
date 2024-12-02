@@ -1,0 +1,275 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    <div class="modTab out">
+        <ul class="tabMenu">
+            <li class="item on"><a href="#">엑셀파일 일괄등록</a></li>
+            <li class="item "><a href="#">일괄등록 데이터관리</a></li>
+        </ul>
+    </div>
+    <div class="listDescription">
+        <div class="horizonLyt spb">
+            <p class="dotCase">
+                <span>지원신청 데이터의 일괄등록은 규격에 맞는 엑셀파일로 등록해야 합니다.</span>
+                <span>일괄등록 데이터는 장애 또는 비장애를 구분해서 각각 등록하세요.</span>
+            </p>
+            <button type="button" class="soloBtn bLine">체육장학금 엑셀파일 양식 다운로드</button>
+        </div>
+    </div>
+    <!-- 검색조건 -->
+    <div class="cptTable">
+        <table class="tbWrite">
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>사업년도 <span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">2024년</option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">상반기</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>구분</th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
+                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>제목 <span class="required">*</span></th>
+                    <td class="left">
+                        <input type="text" class="iptText">
+                    </td>
+                    <th>파일선택 <span class="required">*</span></th>
+                    <td class="left">
+                        <div class="frmGroup">
+                            <div class="fileBox">
+                                <div class="fileBefore">
+                                    <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn2" class="uploadBtn">
+                                </div>
+                                <div class="fileAfter">
+                                    <div class="textBox"></div>
+                                    <button type="button" class="fileDel">삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <!-- <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue" onclick="openPopup('splAlt01')">선택삭제</button>
+            </div>
+        </div> -->
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">확인</button>
+                <!-- <button type="button" class="crudBtn dkBlue">목록</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span><span class="text"> / 중복제외 (총 <span class="total">100</span>건)</span></div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:75px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:150px;">
+                <col style="width:150px;">
+
+                <col style="width:200px;">
+                <col style="width:200px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:200px;">
+
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+
+                <col style="width:200px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th rowspan="2">중복제외</th>
+                    <th rowspan="2">추천순위</th>
+
+                    <th colspan="5">체육인정보</th>
+
+                    <th colspan="2">국가대표 활동기간</th>
+
+                    <th colspan="4">교육과정</th>
+
+                    <th colspan="4">지급신청</th>
+
+                    <th colspan="2">지원기간</th>
+
+                    <th colspan="2">기타사항</th>
+
+                    <th rowspan="2">비고</th>
+                </tr>
+                <tr>
+                    <th>종목</th>
+                    <th>성명</th>
+                    <th>성별</th>
+                    <th>주민등록번호</th>
+                    <th>휴대전화번호</th>
+
+                    <th>최초발탁일</th>
+                    <th>최종일자</th>
+
+                    <th>학교</th>
+                    <th>대학원</th>
+                    <th>전공</th>
+                    <th>과정</th>
+
+                    <th>현재학기</th>
+                    <th>신청금액</th>
+                    <th>은행</th>
+                    <th>계좌번호</th>
+
+                    <th>최초지원시기</th>
+                    <th>예상종료시기</th>
+
+                    <th>체육전공 여부</th>
+                    <th>5학기 지원</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td><span class="txtRed">중복</span></td>
+                    <td>1</td>
+
+                    <td></td>
+                    <td>홍길동</td>
+                    <td>남</td>
+                    <td>000000-0000000</td>
+                    <td>010-0000-0000</td>
+
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>대구대학교</td>
+                    <td>일반대학원</td>
+                    <td></td>
+                    <td></td>
+
+                    <td>1학기</td>
+                    <td class="right">300,000원</td>
+                    <td>국민은행</td>
+                    <td>000000-00-000000</td>
+                    
+                    <td>2024 상반기</td>
+                    <td>2025 하반기</td>
+
+                    <td>Y</td>
+                    <td>N</td>
+
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue" onclick="openPopup('splAlt01')">선택삭제</button>
+            </div>
+        </div>
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">등록</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- //그리드 -->
+    <div class="appFrmDesc">
+        <p> </p>
+        <p>중복확인의 중복 건은 일괄등록에서 제외하고 등록처리 됩니다.</p>
+        <p>중복확인 기준 : 장애여부 + 대상구분 + 성명 + 주민등록번호 + 입상일 + 기타정보가 모두 일치하는 최근 실적이 존재</p>
+        <p> </p>
+    </div>
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- //컨텐츠 내용 -->
+<div id="splAlt01" class="modAlert on"> <!-- addClass - on:팝업오픈 -->
+    <div class="alertArea">
+        <div class="alertTit">알림  메세지</div>
+        <div class="alertCont">중복확인된 것을 제외하고 일괄등록 하시겠습니까?</div>
+        <div class="alertBtm">
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>
