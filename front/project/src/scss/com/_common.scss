@@ -1484,18 +1484,18 @@
                     padding:14px; text-align:center; font-size:16px; color:var(--t1); font-weight:600; line-height:1.4; background:var(--bg1); border-right:1px solid var(--lbg1);
                     
                     &:last-of-type {
-                        border-right:none;
+                        font-size:14x; border-right:none;
                     }
                 }
 
                 td {
-                    padding:14px; text-align:center; font-size:16px; color:var(--t1); font-weight:400; line-height:1.4; border:1px solid var(--lbg1); border-top:none; word-break:break-all;
+                    padding:14px; text-align:center; font-size:16px; color:var(--t1); font-weight:400; line-height:1.4; border:1px solid var(--lbg1); border-top:none; word-break: keep-all;
 
                     &:first-of-type {border-left:none;}
                     &:last-of-type {border-right:none;}
                     
                     @include media ('mobile') {
-                        padding:14px 0;
+                        font-size:14px; padding:14px 4px;
                     }
                 }
             }

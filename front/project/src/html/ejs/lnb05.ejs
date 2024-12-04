@@ -121,14 +121,17 @@ for(var i=1;i<=6;i++){
         button.addEventListener("click", function() {            
             var parent = this.parentElement;
             var drpdwBox = parent.querySelector(".depthDrop");
+            var dpCov = document.querySelector(".subMenuBox");
 
             if (this.classList.contains("active")) {
                 parent.classList.remove("active");
+                dpCov.classList.remove("active");
                 this.setAttribute("title","열기");
                 this.classList.remove("active");
                 drpdwBox.style.display = "none";
             } else {
                 parent.classList.add("active");
+                dpCov.classList.add("active");
                 this.classList.add("active");
                 this.setAttribute("title","접기");
                 drpdwBox.style.display = "block";
