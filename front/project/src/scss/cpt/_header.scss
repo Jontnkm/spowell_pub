@@ -89,15 +89,36 @@
                     display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:50px;
 
                     > li {
-                        padding:38px 0;
-                        > p {
-                            position:relative; font-size:20px; color:var(--t1); font-weight:500;
+                        > a.depth01Title {
+                            display:block; position:relative; font-size:20px; color:var(--t1); font-weight:500; padding:38px 0;
                             &::after {
-                                content:''; width:0; background:var(--snd1); height:5px; position:absolute; bottom:-42px; left:50%; transform:translateX(-50%); transition:all 0.2s;
+                                content:''; width:0; background:var(--snd1); height:5px; position:absolute; bottom:0px; left:50%; transform:translateX(-50%); transition:all 0.2s;
+                            }
+
+                            &.on {
+                                font-weight:bold;
+                                &::after {
+                                    width:calc(100% + 32px); outline:none !important;                                    
+                                }
                             }
                         }
+
+                        
+
+                        &.allMenu {
+                            a {
+                                display:block; width:22px; height:18px; background:url(../../images/common/ico_allMenu.svg)50% 50% no-repeat;
+                            }
+                            &:hover, &:focus {
+                                > a {
+                                    &::after {display:none;}
+                                }
+                                > .depth02 {display:none;}
+                            }
+                        }
+
                         .depth02 {
-                            display:none; position:absolute; top:101%; left:0; width:100%; background:linear-gradient(to right, var(--prm1) 50%, var(--bg3) 50%); box-shadow:0px 20px 20px 0px rgba(0,0,0,0.1);
+                            display:none; position:absolute; top:100%; left:0; width:100%; background:linear-gradient(to right, var(--prm1) 50%, var(--bg3) 50%); box-shadow:0px 20px 20px 0px rgba(0,0,0,0.1); border-top:1px solid var(--l2);
                             > .inner {
                                 width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
 
@@ -116,7 +137,7 @@
                                             }
                                         }
                                         &.ico02 {
-                                            min-height:396px;
+                                            min-height:384px;
                                             &::after {
                                                 background:url(../../images/common/hMenu_ico02.svg)50% 50% no-repeat;
                                             }
@@ -197,31 +218,8 @@
                             }
                         }
 
-                        &:hover, &:focus {
-                            > p {
-                                font-weight:bold;
-                                &::after {
-                                    width:calc(100% + 32px);
-                                }
-                            }
-                            
-                            > .depth02 {display:block;}
-                        }
-
                         &:last-of-type {
                             &::after {display:none;}
-                        }
-
-                        &.allMenu {
-                            a {
-                                display:block; width:22px; height:18px; background:url(../../images/common/ico_allMenu.svg)50% 50% no-repeat;
-                            }
-                            &:hover {
-                                > a {
-                                    &::after {display:none;}
-                                }
-                                > .depth02 {display:none;}
-                            }
                         }
                     }
                 }

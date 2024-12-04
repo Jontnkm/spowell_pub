@@ -68,13 +68,18 @@ function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
 
     thispop.classList.add("popOpen");
+    thispop.setAttribute('tabindex',"0");
+    thispop.focus();
 }
 
 // Popup Close
 function popClose(popId){
+    var trig = document.querySelector('.trigger');
     let thispop = document.querySelector("#" + popId);
 
     thispop.classList.remove("popOpen");
+    thispop.setAttribute('tabindex',"");
+    trig.focus();
 }
 
 // 표 높이 조절

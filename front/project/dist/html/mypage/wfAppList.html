@@ -91,24 +91,24 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li class="depth01" tabindex="0">
-						<p>사업소개</p>
-						<div class="depth02">
+					<li class="depth01">
+						<a href="#none" class="depth01Title">사업소개</a>
+						<div class="depth02" tabindex="1">
 							<div class="inner">
 								<div class="leftArea ico ico01">
 									<p class="title">사업소개</p>
 								</div>
 								<div class="rightArea">
 									<ul>
-										<li tabindex="0"><a href="#none">체육인복지 사업</a></li>
-										<li tabindex="0"><a href="#none">체육인복지법</a></li>
+										<li><a href="#none">체육인복지 사업</a></li>
+										<li><a href="#none">체육인복지법</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</li>
-					<li class="depth01" tabindex="0">
-						<p>신청·안내</p>
+					<li class="depth01">
+						<a href="#none" class="depth01Title">신청·안내</a>
 						<div class="depth02 withBg test">
 							<div class="inner">
 								<div class="leftArea ico ico02">
@@ -149,8 +149,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="depth01" tabindex="0">
-						<p>체육인서비스</p>
+					<li class="depth01">
+						<a href="#none" class="depth01Title">체육인서비스</a>
 						<div class="depth02">
 							<div class="inner">
 								<div class="leftArea ico ico03">
@@ -165,8 +165,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="depth01" tabindex="0">
-						<p>알림·소식</p>
+					<li class="depth01">
+						<a href="#none" class="depth01Title">알림·소식</a>
 						<div class="depth02">
 							<div class="inner">
 								<div class="leftArea ico ico04">
@@ -184,8 +184,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="depth01" tabindex="0">
-						<p>마이페이지</p>
+					<li class="depth01">
+						<a href="#none" class="depth01Title">마이페이지</a>
 						<div class="depth02">
 							<div class="inner">
 								<div class="leftArea ico ico05">
@@ -234,6 +234,66 @@
 			menu.classList.remove('open');
 		}else{
 			menu.classList.add('open');
+		}
+	});
+
+	document.addEventListener("DOMContentLoaded", function() {
+		const depth01Titles = document.querySelectorAll(".depth01Title");
+		const menuLinks = document.querySelectorAll(".headerBot .menu li a");
+		const depth02Divs = document.querySelectorAll("div.depth02");
+		const menu = document.querySelector(".headerBot .menu");
+		const lastMenuLink = document.querySelector(".headerBot .menu li:last-of-type a");
+
+		// .depth01Title에 focusin 이벤트
+		depth01Titles.forEach(function(title) {
+			title.addEventListener("focusin", function() {
+				hideAllDepth02();
+				removeAllOnClasses();
+				const nextDiv = this.nextElementSibling;
+				if (nextDiv) nextDiv.style.display = "block";
+				this.classList.add("on");
+			});
+		});
+
+		// 마지막 메뉴 링크에 focusout 이벤트
+		if (lastMenuLink) {
+			lastMenuLink.addEventListener("focusout", function() {
+				hideAllDepth02();
+				removeAllOnClasses();
+			});
+		}
+
+		// .depth01Title에 mouseenter 이벤트
+		depth01Titles.forEach(function(title) {
+			title.addEventListener("mouseenter", function() {
+				hideAllDepth02();
+				removeAllOnClasses();
+				const nextDiv = this.nextElementSibling;
+				if (nextDiv) nextDiv.style.display = "block";
+				this.classList.add("on");
+			});
+		});
+
+		// 메뉴에 mouseleave 이벤트
+		if (menu) {
+			menu.addEventListener("mouseleave", function() {
+				hideAllDepth02();
+				removeAllOnClasses();
+			});
+		}
+
+		// 모든 depth02 div 숨기기
+		function hideAllDepth02() {
+			depth02Divs.forEach(function(div) {
+				div.style.display = "none";
+			});
+		}
+
+		// 모든 .on 클래스 제거
+		function removeAllOnClasses() {
+			menuLinks.forEach(function(link) {
+				link.classList.remove("on");
+			});
 		}
 	});
 </script>
@@ -576,6 +636,76 @@
                                 </table>
                             </div>
                         </div>
+
+                        <!--2024.12.04 테스트 영역-->
+                        <br><br>
+                        <div class="cptTable">
+                            <table class="tbMoType">
+                                <colgroup>
+                                    <col style="width:14.43%"><!--전체 970px에서 140px 퍼센트-->
+                                    <col style="width:20.62%"><!--전체 970px에서 140px 퍼센트-->
+                                    <col style="width:20.62%"><!--전체 970px에서 140px 퍼센트-->
+                                    <col style="width:44.33%"><!--전체 970px에서 140px 퍼센트-->
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>평가점수</th>
+                                        <th>산출방식</th>
+                                        <th>평가점수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4">월정금</td>
+                                        <td>10~30점</td>
+                                        <td>10점당 15만원</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31~100점</td>
+                                        <td>10점당 7.5만원</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101~110점</td>
+                                        <td>10점당 2.5만원</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>(최대)110점</td>
+                                        <td>100만원</td>
+                                        <td>올림픽 금메달은 평가점수가 90점이어도 100만원 지급</td>
+                                    </tr>
+                
+                                    <tr>
+                                       <td>일시 장려금</td> 
+                                       <td>110점 초과</td>
+                                       <td>10점당 150만원</td>
+                                       <td>초과점수가 올림픽 금메달인 경우 10점당 500만원</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">일시금</td>
+                                        <td>1~30점</td>
+                                        <td>1점당 112만원</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30점 초과</td>
+                                        <td>1점당 56만원</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특별 장려금</td>
+                                        <td colspan="2">아시아경기대회, 세계대학경기대회 등에서 금메달 1개를 획득한 선수 중 평가점수가 20점 미만인 경우</td>
+                                        <td>일시금 450만원 지급</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="tableOutTxt">
+                                <p>※ 평가점수 20점 이상 시, 월정금 또는 일시금 중 본인이 선택하여 수령 가능.</p>
+                            </div>
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>
@@ -589,6 +719,33 @@
         <div class="layoutFooter">
             <!-- Footer -->
             
+<div class="layoutQuick">
+    <!-- Top -->
+    
+<div class="cptQuick">
+	<div class="apply">
+		<a href="#none">
+			<p>창업지원<br>신청하기</p>
+			<span>3/10~3/31</span>
+		</a>
+	</div>
+	<div class="quickMenu">
+		<ul>
+			<li><a href="#none" class="ico ico01">복지 신청</a></li>
+			<li><a href="#none" class="ico ico02">복지 공고</a></li>
+			<li><a href="#none" class="ico ico03">복지캘린더</a></li>
+			<li><a href="#none" class="ico ico04">지원금조회</a></li>
+			<li><a href="#none" class="ico ico05">증명서 발급</a></li>
+		</ul>
+	</div>
+	<div class="top">
+		<a href="#none" class="topBtn">
+			<p>TOP</p>
+		</a>
+	</div>
+</div> 
+
+</div>
 <div class="cptFooter">
     <div class="footerTop">
         <div class="inner">
@@ -794,33 +951,7 @@
 <!-- Bottom -->
 
 </div>
-<div class="layoutQuick">
-    <!-- Top -->
-    
-<div class="cptQuick">
-	<div class="apply">
-		<a href="#none">
-			<p>창업지원<br>신청하기</p>
-			<span>3/10~3/31</span>
-		</a>
-	</div>
-	<div class="quickMenu">
-		<ul>
-			<li><a href="#none" class="ico ico01">복지 신청</a></li>
-			<li><a href="#none" class="ico ico02">복지 공고</a></li>
-			<li><a href="#none" class="ico ico03">복지캘린더</a></li>
-			<li><a href="#none" class="ico ico04">지원금조회</a></li>
-			<li><a href="#none" class="ico ico05">증명서 발급</a></li>
-		</ul>
-	</div>
-	<div class="top">
-		<a href="#none" class="topBtn">
-			<p>TOP</p>
-		</a>
-	</div>
-</div> 
 
-</div>
 </body>
 </html>
 

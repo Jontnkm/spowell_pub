@@ -475,7 +475,8 @@
 .cptTable .tbView tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); line-height:20px; border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
 .cptTable .tbView tbody th:last-child {border-right:0;}
 .cptTable .tbView td {height:42px; padding:6px 10px; font-size:14px; font-weight:400; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2);}
-.cptTable .tbView td:last-child {border-right:0;}
+.cptTable .tbView td:first-child {border-left:1px solid rgba(132, 132, 132, 0.2);}
+// .cptTable .tbView td.ext {border-right:1px solid rgba(132, 132, 132, 0.2);}
 .cptTable .tbView td.noList {border-bottom:0; height:60px;}
 
 .cptTable .required {margin-left:2px; color:var(--basic-color);}

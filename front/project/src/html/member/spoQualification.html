@@ -70,7 +70,7 @@
                                     </div>
 
                                     <div class="comButton mT50">
-                                        <button type="button" class="btn h56 f-dg" onclick="popOpen('clause01')">체육인 자격조회</button>
+                                        <button type="button" class="btn h56 f-dg trigger" onclick="popOpen('clause01')">체육인 자격조회</button>
                                     </div>
                                 </div>
 
@@ -236,4 +236,8 @@
 <!-- Bottom -->
 <%- include('../ejs/bottom.ejs', { }) %>
 
- 
+ <script>
+    $(".ddCont li:last-of-type a").focusout(function(){
+        
+    })
+ </script>
