@@ -160,6 +160,10 @@
                     &.lt {
                         text-align:left;
                     }
+
+                    &.withBox {
+                        border:1px solid var(--l1); border-radius:8px;
+                    }
                 }
 
                 .frmGroup {
