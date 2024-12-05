@@ -1,0 +1,37 @@
+<svg width="92" height="110" viewBox="0 0 92 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Layer_2" clip-path="url(#clip0_1108_14848)">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector" d="M90.7343 21.6382V1.27344H1.26562V108.728H22.5291V21.6382H90.7343Z" fill="#85B6FF"/>
+<path id="Vector_2" d="M90.7345 90.339V21.6387H22.5293V108.728H73.4199L90.7345 90.339Z" fill="white"/>
+</g>
+<path id="Vector_3" d="M73.4197 108.728L90.7343 90.3385V1.27344H1.26562V108.728H73.4197Z" stroke="#21409A" stroke-width="3.4"/>
+<path id="Vector_4" d="M73.4199 90.3379V108.727L90.7345 90.3379H73.4199Z" fill="white" stroke="#21409A" stroke-width="3.4" stroke-linejoin="round"/>
+</g>
+<path id="Vector_5" d="M57.9282 91.4225L54.1514 89.2333L56.3385 85.4251H51.9643V81.0264L48.1875 83.2257L46.0004 79.4277L43.8133 83.2257L40.0365 81.0264V85.4251H35.6623L37.8494 89.2333L34.0625 91.4225L37.8494 93.6219L35.6623 97.4301H40.0365V101.819L43.8133 99.6194L46.0004 103.428L48.1875 99.6194L51.9643 101.819V97.4301H56.3385L54.1514 93.6219L57.9282 91.4225Z" fill="#FFAC11"/>
+<path id="Vector_6" d="M11.3107 98.2793C13.4078 98.2793 15.1078 96.5698 15.1078 94.461C15.1078 92.3521 13.4078 90.6426 11.3107 90.6426C9.21367 90.6426 7.51367 92.3521 7.51367 94.461C7.51367 96.5698 9.21367 98.2793 11.3107 98.2793Z" stroke="white" stroke-width="3.4"/>
+<g id="Group_3">
+<g id="Group_4">
+<path id="Vector_7" d="M84.3055 38.7949H79.8301" stroke="#21409A" stroke-width="3.4"/>
+<path id="Vector_8" d="M76.286 38.7949H71.8105" stroke="#21409A" stroke-width="3.4"/>
+</g>
+<g id="Group_5">
+<path id="Vector_9" d="M78.0586 32.5117V37.0123" stroke="#21409A" stroke-width="3.4"/>
+<path id="Vector_10" d="M78.0586 40.5762V45.0768" stroke="#21409A" stroke-width="3.4"/>
+</g>
+</g>
+<g id="Group_6">
+<path id="Vector_11" d="M25.0605 33.3145H66.9395" stroke="#85B6FF" stroke-width="3.4"/>
+<path id="Vector_12" d="M25.0605 43.4961H66.9395" stroke="#85B6FF" stroke-width="3.4"/>
+<path id="Vector_13" d="M25.0605 53.6797H66.9395" stroke="#85B6FF" stroke-width="3.4"/>
+<path id="Vector_14" d="M25.0605 63.8613H66.9395" stroke="#85B6FF" stroke-width="3.4"/>
+<path id="Vector_15" d="M25.0605 74.043H66.9395" stroke="#85B6FF" stroke-width="3.4"/>
+</g>
+<path id="Vector_16" d="M26.7617 11.6387H65.2385" stroke="#21409A" stroke-width="3.4"/>
+</g>
+<defs>
+<clipPath id="clip0_1108_14848">
+<rect width="92" height="110" fill="white"/>
+</clipPath>
+</defs>
+</svg>
