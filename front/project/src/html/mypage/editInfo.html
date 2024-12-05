@@ -46,17 +46,29 @@
 
                             <div class="cptTable">
                                 <table class="tbInfo type02">
+                                    <caption>아이디, 비밀번호, 이름, 성별, 생년월일, 휴대전화, 주소에 관한 표</caption>
                                     <colgroup>
                                         <col style="width:160px">
                                         <col style="width:auto">
                                     </colgroup>
+                                    <thead class="thead-hidden">
+                                        <tr>
+                                            <th scope="col">아이디</th>
+                                            <th scope="col">비밀번호</th>
+                                            <th scope="col">이름</th>
+                                            <th scope="col">성별</th>
+                                            <th scope="col">생년월일</th>
+                                            <th scope="col">휴대전화</th>
+                                            <th scope="col">주소</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <th>아이디</th>
+                                            <th scope="row">아이디</th>
                                             <td class="left">memberId123</td>
                                         </tr>
                                         <tr class="combine">
-                                            <th>비밀번호</th>
+                                            <th scope="row">비밀번호</th>
                                             <td class="left">
                                                 <div class="comButton alignL">
                                                     <button type="button" class="btn h36 l-g" onclick="popOpen('chgPw')">비밀번호 변경</button>
@@ -64,32 +76,43 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>이름</th>
+                                            <th scope="row">이름</th>
                                             <td class="left">홍길동</td>
                                         </tr>
                                         <tr>
-                                            <th>성별</th>
+                                            <th scope="row">성별</th>
                                             <td class="left">남자</td>
                                         </tr>
                                         <tr>
-                                            <th>생년월일</th>
+                                            <th scope="row">생년월일</th>
                                             <td class="left">1990.05.05</td>
                                         </tr>
                                         <tr class="combine">
-                                            <th>휴대전화</th>
+                                            <th scope="row">휴대전화</th>
                                             <td class="left">
+                                                <!--2024.12.05 만 14세 이상 case-->
+                                                <span>010-1234-1234</span>
+
+                                                <!--2024.12.05 만 14세 미만 case-->
                                                 <div class="cptForm">
                                                     <div class="frmGroup alingMid">
-                                                        <span>010-1234-1234</span>
-                                                        <div class="comButton alignL">
-                                                            <button type="button" class="btn h36 l-g">휴대전화 변경</button>
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="휴대전화번호 앞 세자리" placeholder="010">
+                                                        </div>
+                                                        <div class="Deco">-</div>
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="휴대전화번호 중간 세자리 혹은 네자리" placeholder="0000">
+                                                        </div>
+                                                        <div class="Deco">-</div>
+                                                        <div class="ipt w155">
+                                                            <input type="text" title="휴대전화번호 마지막 세자리" placeholder=0000>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="combine">
-                                            <th>주소</th>
+                                            <th scope="row">주소</th>
                                             <td class="left">
                                                 <div class="cptForm">
                                                     <div class="frmGroup alingMid">
@@ -97,7 +120,7 @@
                                                             <input type="text" title="우편번호 입력창" />
                                                         </div>
                                                         <div class="comButton alignL">
-                                                            <button type="button" class="btn h36 l-g">우편번호</button>
+                                                            <button type="button" class="btn h36 l-g">주소검색</button>
                                                         </div>
                                                     </div>
                                                     <div class="frmGroup alingMid">
@@ -129,17 +152,24 @@
 
                             <div class="cptTable">
                                 <table class="tbInfo type02">
+                                    <caption>이름, 휴대전화에 관한 표</caption>
                                     <colgroup>
                                         <col style="width:160px">
                                         <col style="width:auto">
                                     </colgroup>
+                                    <thead class="thead-hidden">
+                                        <tr>
+                                            <th scope="col">이름</th>
+                                            <th scope="col">휴대전화</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <th>이름</th>
+                                            <th scope="row">이름</th>
                                             <td class="left">홍길동</td>
                                         </tr>
                                         <tr>
-                                            <th>휴대전화</th>
+                                            <th scope="row">휴대전화</th>
                                             <td class="left">
                                                 010-1234-1234
                                             </td>
@@ -154,17 +184,24 @@
 
                             <div class="cptTable">
                                 <table class="tbInfo type02">
+                                    <caption>체육인 구분, 종목에 관한 표</caption>
                                     <colgroup>
                                         <col style="width:160px">
                                         <col style="width:auto">
                                     </colgroup>
+                                    <thead class="thead-hidden">
+                                        <tr>
+                                            <th scope="col">체육인구분</th>
+                                            <th scope="col">종목</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
                                         <tr>
-                                            <th>체육인 구분</th>
+                                            <th scope="row">체육인 구분</th>
                                             <td class="left">선수,지도자</td>
                                         </tr>
                                         <tr>
-                                            <th>종목</th>
+                                            <th scope="row">종목</th>
                                             <td class="left">
                                                 테권도
                                             </td>

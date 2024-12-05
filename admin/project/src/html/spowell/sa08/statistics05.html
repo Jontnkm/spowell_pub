@@ -1,0 +1,262 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>장애여부</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                    </td>
+                    <th>대상구분</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">선수</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">지도자</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>지급항목</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">월정금</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">일시금</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">일시장려금</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">특별장려금</label></div>
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <!-- <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li> -->
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:auto;">
+
+                <col style="width:100px;">
+                <col style="width:120px;">
+                
+                <col style="width:100px;">
+                <col style="width:120px;">
+
+                <col style="width:100px;">
+                <col style="width:120px;">
+
+                <col style="width:100px;">
+                <col style="width:120px;">
+
+                <col style="width:100px;">
+                <col style="width:120px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">연령구분</th>
+                    <th colspan="2">2020</th>
+                    <th colspan="2">2021</th>
+                    <th colspan="2">2022</th>
+                    <th colspan="2">2023</th>
+                    <th colspan="2">2024</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>인원</th>
+                    <th>지급금액</th>
+                    <th>인원</th>
+                    <th>지급금액</th>
+                    <th>인원</th>
+                    <th>지급금액</th>
+                    <th>인원</th>
+                    <th>지급금액</th>
+                    <th>인원</th>
+                    <th>지급금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10 ~ 19</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>20 ~ 29</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>30 ~ 39</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>40 ~ 49</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>50 ~ 59</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>60 ~ 69</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>70 ~ 79</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>80 ~ 89</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+                <tr>
+                    <td>90 ~ </td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                    <td class="right">0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td>합계</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+                <td class="right">0</td>
+            </tfoot>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

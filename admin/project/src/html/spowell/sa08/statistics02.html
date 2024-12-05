@@ -1,0 +1,302 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>수상년도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <div class="textBox Deco">~</div>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <th>장애여부</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남자</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여자</label></div>
+                    </td>
+                    <th>대회구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <!-- <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li> -->
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:80px;">
+                <col style="width:150px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:200px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>연번</th>
+                    <th>등록번호</th>
+                    <th>종목</th>
+                    <th>성명</th>
+                    <th>주민등록번호</th>
+                    <th>수상일자</th>
+                    <th>대회구분</th>
+                    <th>대회명</th>
+                    <th>종목명</th>
+                    <th>수상종목명</th>
+                    <th>순위</th>
+                    <th>평가점수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

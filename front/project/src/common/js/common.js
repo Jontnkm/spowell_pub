@@ -91,6 +91,11 @@ $(document).ready(function(){
             $(this).find("th").css("height", `${h}px` );
             $(this).find("th").css("line-height", `${h}px` );
         })
+    }else {
+        $(".cptTable .combine").each(function(){
+            $(this).find("th").css("height", `auto` );
+            $(this).find("th").css("line-height", `22px` );
+        })
     }
 
     $(window).resize(function(){
@@ -100,6 +105,11 @@ $(document).ready(function(){
                 const h = $(this).find("td").outerHeight();
                 $(this).find("th").css("height", `${h}px` );
                 $(this).find("th").css("line-height", `${h}px` );
+            })
+        }else{
+            $(".cptTable .combine").each(function(){
+                $(this).find("th").css("height", `auto` );
+                $(this).find("th").css("line-height", `22px` );
             })
         }
     })

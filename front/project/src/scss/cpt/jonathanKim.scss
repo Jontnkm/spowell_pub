@@ -700,7 +700,7 @@
         }
 
         > p {
-            @include media('mobile') {
+            @include media('tablet02') {
                 text-align:center; word-break:keep-all;
             }
         }

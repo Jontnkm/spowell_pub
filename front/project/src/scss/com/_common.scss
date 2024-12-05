@@ -500,7 +500,7 @@
             position:absolute; top:0; left:0; width:1px; height:1px;
 
             & + label {
-                display:inline-block;  padding: 0 12px; height:34px; line-height:34px; font-size:16px; color:var(--prm1); border:1px solid var(--prm1); border-radius:6px; background:var(--bg3);
+                display:inline-block;  padding: 0 12px; height:34px; line-height:34px; font-size:16px; color:var(--prm1); border:1px solid var(--prm1); border-radius:6px; background:var(--bg3); cursor:pointer;
             }
 
             &:checked {
@@ -982,6 +982,9 @@
                     &:hover {
                         background:var(--prm3); color:var(--bg3); font-weight:700;
                     }
+                    @include media ('tablet02') {
+                        font-size:14px;
+                    }
                  }
                  &.active {
                     > a {
@@ -1177,8 +1180,13 @@
     }
 
     table {
-        border-collapse:collapse;
+        border-collapse:collapse; table-layout: fixed;
         
+        thead {
+            &.thead-hidden {
+                position:absolute; width:0; height:0; overflow:hidden;
+            }
+        } 
         &.tbData {
             width:100%; border-top:2px solid var(--prm1);
             @include media ('mobile'){
@@ -1203,7 +1211,7 @@
             }
 
             th {
-                font-size:16px; color:var(--bg3); font-weight:600; padding:14px; text-align:center; line-height:22px; background:var(--prm1); border-right:1px solid #3E5DB9;  word-break:break-all;
+                font-size:16px; color:var(--bg3); font-weight:600; padding:14px 10px; text-align:center; line-height:22px; background:var(--prm1); border-right:1px solid #3E5DB9;  word-break:break-all;
                 
                 &:last-of-type {
                     border-right:0;
@@ -1228,7 +1236,7 @@
                     text-align:center;
                 }
 
-                span.openLayer {cursor:pointer;}
+                span.openLayer {cursor:pointer; text-decoration:underline;}
 
                 .dropDown {
                     > button {
@@ -1300,7 +1308,7 @@
             }
 
             th {
-                font-size:16px; color:var(--t1); font-weight:600; padding:14px; text-align:center; line-height:22px; background:var(--bg1); border-right:1px solid var(--lbg1);
+                font-size:16px; color:var(--t1); font-weight:600; padding:14px 10px; text-align:center; line-height:22px; background:var(--bg1); border-right:1px solid var(--lbg1);
                 
                 &:last-of-type {
                     border-right:0;
@@ -1321,6 +1329,10 @@
                 &.btnType {
                     > span.date {
                         display:block; margin-top:10px;
+                    }
+
+                    > div {
+                        display:flex; flex-flow:column; align-items: center; justify-content: flex-start; gap:8px;
                     }
                 }
 
@@ -1377,15 +1389,15 @@
                         > span {text-align:left;}
                     }
                     .mTit {
-                        display:inline-block; width:70px; margin-right:16px; font-size:14px; color:var(--tbg1); font-weight:500; line-height:1.5;
+                        display:inline-block; width:70px; margin-right:16px; font-size:14px; color:var(--tbg1); font-weight:500; line-height:1.5; word-break:keep-all;
                     }
                     &:last-of-type {margin-bottom:0;}
                     &.badge {
-                        order:0;
+                        order:-1;
                         border:1px solid var(--prm1); border-radius:4px; text-align:center; background:var(--bg1); color:var(--prm1); font-size:14px; font-weight:500; line-height:24px; padding: 0 8px; margin-bottom:12px;
                     }
                     &.tit {
-                        width:100%; font-size:20px; color:var(--t1); font-weight:700; margin-bottom:12px;
+                        width:100%; font-size:20px; color:var(--t1); font-weight:700; margin-bottom:12px; order:0;
                     }
                     &.noData {
                         display:none;
