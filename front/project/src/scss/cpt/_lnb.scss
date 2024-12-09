@@ -83,6 +83,18 @@
                                     }
                                 }
                             }
+
+                            &.active {
+                                a {
+                                    color:var(--prm1);
+                                    &::before {
+                                        background:var(--prm1);
+                                    }
+                                    &::after {
+                                        width:calc(100% - 9px);
+                                    }
+                                }
+                            }
                         }
                     }
                 }

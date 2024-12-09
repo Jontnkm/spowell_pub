@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 @import 'default';
+
+@import 'com/color';
+@import 'com/root';
+@import 'com/function';
 @import 'com/maxin';
+
 @import 'com/common';
 @import 'lyt/layout';
 @import 'cpt/component';

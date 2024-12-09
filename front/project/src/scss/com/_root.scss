@@ -1,0 +1,5 @@
+:root {
+    @each $key, $value in $color {
+      --#{"" + $key}: #{$value};
+    }
+}

@@ -1,0 +1,59 @@
+
+$prm1 : #21409A !default;
+$prm2 : #2C99F2 !default;
+$prm3 : #252F3E !default;
+
+$snd1 : #FFAC11 !default;
+$snd2 : #D67D00 !default;
+$snd3 : #FF3E3E !default;
+
+$t1 : #000000 !default;
+
+$tbg1 : #6E7584 !default;
+$tbg2 : #848B9A !default;
+$tbg3 : #B9BDC6 !default;
+
+$l1 : #EEEEEE !default;
+$l2 : #DDDDDD !default;
+
+$lbg1 : #DEE2EA !default;
+$lbg2 : #BFC5CF !default;
+
+$bg1 : #F5F6F8 !default;
+$bg2 : #EFF1F5 !default;
+$bg3 : #FFFFFF !default;
+$bg4 : #1f2835 !default;
+$bg5 : #636d7b !default;
+$bg6 : #d7d9dc !default;
+$bg7 : #f5f9ff !default;
+
+$color: (
+    prm1: $prm1,
+    prm2: $prm2,
+    prm3: $prm3,
+
+    snd1: $snd1,
+    snd2: $snd2,
+    snd3: $snd3,
+
+    t1: $t1,
+
+    tbg1: $tbg1,
+    tbg2: $tbg2,
+    tbg3: $tbg3,
+
+    l1: $l1,
+    l2: $l2,
+
+    lbg1: $lbg1,
+    lbg2: $lbg2,
+
+    bg1: $bg1,
+    bg2: $bg2,
+    bg3: $bg3,
+    bg4: $bg4,
+    bg5: $bg5,
+    bg6: $bg6,
+    bg7: $bg7,
+) !default;
+
