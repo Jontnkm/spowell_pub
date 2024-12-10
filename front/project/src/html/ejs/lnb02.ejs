@@ -8,7 +8,7 @@ for(var i=1;i<=5;i++){
     depth3P[i] = [];
     if(depth2==i){
         depth2P[i] = ' active';
-        for(var j=1;j<=13;j++){
+        for(var j=1;j<=14;j++){
             if(depth3==j){
                 depth3P[i][j] = ' active';
             }else{
@@ -35,42 +35,45 @@ for(var i=1;i<=5;i++){
                     <h3 class="depth2Name"><a href="<%= url %>html/.html" class="depth2Link">복지신청</a></h3>
                     <ul class="depth3Group">
                         <li class="depth3Menu<%= depth3P[1][1] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">경기력 성과포상금(선수)</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">복지전체</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][2] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">경기력 성과포상금(지도자)</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">경기력 성과포상금(선수)</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][3] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">생활지원금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">경기력 성과포상금(지도자)</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][4] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국내대학원 교육지원금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">생활지원금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][5] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국외유학 교육지원금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국내대학원 교육지원금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][6] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">보험지원금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국외유학 교육지원금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][7] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">체육장학금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">보험지원금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][8] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">스포츠꿈나무 특기장려금</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">체육장학금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][9] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">원로체육인지원</a></h4>
-                        </li>
-                        <li class="depth3Menu<%= depth3P[1][11] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">스포츠클럽 창업지원</a></h4>
-                        </li>
-                        <li class="depth3Menu<%= depth3P[1][12] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국내외 지도자 현장연수</a></h4>
-                        </li>
-                        <li class="depth3Menu<%= depth3P[1][13] %>">
-                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">인턴십 취업지원</a></h4>
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">스포츠꿈나무 특기장려금</a></h4>
                         </li>
                         <li class="depth3Menu<%= depth3P[1][10] %>">
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">원로체육인지원</a></h4>
+                        </li>
+                        <li class="depth3Menu<%= depth3P[1][12] %>">
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">스포츠클럽 창업지원</a></h4>
+                        </li>
+                        <li class="depth3Menu<%= depth3P[1][13] %>">
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">국내외 지도자 현장연수</a></h4>
+                        </li>
+                        <li class="depth3Menu<%= depth3P[1][14] %>">
+                            <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">인턴십 취업지원</a></h4>
+                        </li>
+                        <li class="depth3Menu<%= depth3P[1][11] %>">
                             <h4 class="depth3Name"><a href="<%= url %>html/.html" class="depth03Item">대한민국 체육유공자 보상</a></h4>
                         </li>
                     </ul>
@@ -81,6 +84,50 @@ for(var i=1;i<=5;i++){
                     </h3>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="moInner">
+        <div class="subMenuBox">
+            <div class="depth01">
+                <button type="button" title="열기"><h2>신청·안내</h2></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">사업소개</a></h2>
+                            </li>
+                            <li class="active">
+                                <h2 class="depth1Menu"><a href="#none">신청·안내</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">체육인서비스</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">알림·소식</a></h2>
+                            </li>
+                            <li>
+                                <h2 class="depth1Menu"><a href="#none">마이페이지</a></h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="depth02">
+                <button type="button" title="열기"><h3></h3></button>
+                <div class="depthDrop">
+                    <div class="inner">
+                        <ul>
+                            <li class="depth2Menu<%= depth2P[1] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/.html" class="depth2Link">복지신청</a></h3>
+                            </li>
+                            <li class="depth2Menu<%= depth2P[2] %>">
+                                <h3 class="depth2Name"><a href="<%= url %>html/.html" class="depth2Link">복지캘린더</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

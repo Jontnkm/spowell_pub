@@ -182,22 +182,3 @@ var url = locals.url ? locals.url : '../../';
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        $(".footerBot .rightArea > ul > li > a").click(function(){
-            if($(this).hasClass("on")){
-                $(this).next("div").hide();
-                $(this).removeClass("on");
-                $(this).attr("title","열기");
-            }else{
-                $("div.dropTopBox").hide();
-                $(".footerBot .rightArea > ul > li > a").removeClass("on");
-                $(".footerBot .rightArea > ul > li > a").attr("title","열기");
-                $(this).next("div").show();
-                $(this).addClass("on");
-                $(this).attr("title","접기");
-            }
-        })
-    })
-</script>

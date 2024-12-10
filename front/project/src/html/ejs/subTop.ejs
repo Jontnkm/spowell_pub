@@ -40,15 +40,3 @@ var url = locals.url ? locals.url : '../../';
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
-        var dep01 = $(".cptLnb .titleArea h2").text();
-        console.log(pgTit, dep01);
-
-        $(".cptSubTop .titleArea > p").text(pgTit);
-        $(".depthTxt > .dept01").text(dep01);
-        $(".depthTxt > .dept02").text(pgTit);
-    })
-</script>

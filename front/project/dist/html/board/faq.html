@@ -24,7 +24,7 @@
 	<script src="../../common/js/jquery-ui.min.js"></script>
 	<script src="../../common/js/tui-date-picker.js"></script>
 	<script src="../../common/js/swiper-bundle.min.js"></script>
-	<script src="../../common/js/common.js"></script>
+	<script src="../../common/js/basic.js"></script>
 
 	
 </head>
@@ -93,7 +93,7 @@
 				<ul>
 					<li class="depth01">
 						<a href="#none" class="depth01Title">사업소개</a>
-						<div class="depth02" tabindex="1">
+						<div class="depth02">
 							<div class="inner">
 								<div class="leftArea ico ico01">
 									<p class="title">사업소개</p>
@@ -109,7 +109,7 @@
 					</li>
 					<li class="depth01">
 						<a href="#none" class="depth01Title">신청·안내</a>
-						<div class="depth02 withBg test">
+						<div class="depth02">
 							<div class="inner">
 								<div class="leftArea ico ico02">
 									<p class="title">신청·안내</p>
@@ -225,78 +225,6 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	const menu = document.querySelector('.menu-wrap');
-
-	menu.addEventListener('click',function(){
-		if(menu.classList.contains('open')){
-			menu.classList.remove('open');
-		}else{
-			menu.classList.add('open');
-		}
-	});
-
-	document.addEventListener("DOMContentLoaded", function() {
-		const depth01Titles = document.querySelectorAll(".depth01Title");
-		const menuLinks = document.querySelectorAll(".headerBot .menu li a");
-		const depth02Divs = document.querySelectorAll("div.depth02");
-		const menu = document.querySelector(".headerBot .menu");
-		const lastMenuLink = document.querySelector(".headerBot .menu li:last-of-type a");
-
-		// .depth01Title에 focusin 이벤트
-		depth01Titles.forEach(function(title) {
-			title.addEventListener("focusin", function() {
-				hideAllDepth02();
-				removeAllOnClasses();
-				const nextDiv = this.nextElementSibling;
-				if (nextDiv) nextDiv.style.display = "block";
-				this.classList.add("on");
-			});
-		});
-
-		// 마지막 메뉴 링크에 focusout 이벤트
-		if (lastMenuLink) {
-			lastMenuLink.addEventListener("focusout", function() {
-				hideAllDepth02();
-				removeAllOnClasses();
-			});
-		}
-
-		// .depth01Title에 mouseenter 이벤트
-		depth01Titles.forEach(function(title) {
-			title.addEventListener("mouseenter", function() {
-				hideAllDepth02();
-				removeAllOnClasses();
-				const nextDiv = this.nextElementSibling;
-				if (nextDiv) nextDiv.style.display = "block";
-				this.classList.add("on");
-			});
-		});
-
-		// 메뉴에 mouseleave 이벤트
-		if (menu) {
-			menu.addEventListener("mouseleave", function() {
-				hideAllDepth02();
-				removeAllOnClasses();
-			});
-		}
-
-		// 모든 depth02 div 숨기기
-		function hideAllDepth02() {
-			depth02Divs.forEach(function(div) {
-				div.style.display = "none";
-			});
-		}
-
-		// 모든 .on 클래스 제거
-		function removeAllOnClasses() {
-			menuLinks.forEach(function(link) {
-				link.classList.remove("on");
-			});
-		}
-	});
-</script>
         </div>
         <!-- //상단영역 -->
 
@@ -390,33 +318,6 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){
-        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
-        $(".moInner .depth02 button h3").text(pgTit);
-    })
-
-    var buttons = document.querySelectorAll(".subMenuBox button");
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function() {            
-            var parent = this.parentElement;
-            var drpdwBox = parent.querySelector(".depthDrop");
-
-            if (this.classList.contains("active")) {
-                parent.classList.remove("active");
-                this.setAttribute("title","열기");
-                this.classList.remove("active");
-                drpdwBox.style.display = "none";
-            } else {
-                parent.classList.add("active");
-                this.classList.add("active");
-                this.setAttribute("title","접기");
-                drpdwBox.style.display = "block";
-            }
-            
-        });
-    });
-</script>
                     </div>
                     <!-- //좌측 메뉴 영역 -->
                     <!-- 콘텐츠 영역 -->
@@ -462,17 +363,6 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){
-        var pgTit = $(".cptLnb .menuBox .depth2Menu.active > h3 > a").text();
-        var dep01 = $(".cptLnb .titleArea h2").text();
-        console.log(pgTit, dep01);
-
-        $(".cptSubTop .titleArea > p").text(pgTit);
-        $(".depthTxt > .dept01").text(dep01);
-        $(".depthTxt > .dept02").text(pgTit);
-    })
-</script>
 
                         <div class="modTab calDiv2 grp">
                             <div class="inner">
@@ -986,25 +876,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        $(".footerBot .rightArea > ul > li > a").click(function(){
-            if($(this).hasClass("on")){
-                $(this).next("div").hide();
-                $(this).removeClass("on");
-                $(this).attr("title","열기");
-            }else{
-                $("div.dropTopBox").hide();
-                $(".footerBot .rightArea > ul > li > a").removeClass("on");
-                $(".footerBot .rightArea > ul > li > a").attr("title","열기");
-                $(this).next("div").show();
-                $(this).addClass("on");
-                $(this).attr("title","접기");
-            }
-        })
-    })
-</script>
         </div>
         <!-- //하단영역 -->
 
