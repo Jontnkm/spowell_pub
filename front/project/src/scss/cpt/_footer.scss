@@ -86,7 +86,7 @@
                             > a {
                                 position:relative; display:block; width:max-content; font-size:16px; color:#cbcbcb; font-weight:400; padding-right:30px;
                                 &::after {
-                                    content:''; position:absolute; top:50%; right:5px; width:12px; height:7px; background:url(../../images/common/footerArrow.png)50% 50% no-repeat; transform:translateY(-50%);
+                                    content:''; position:absolute; top:50%; right:5px; width:12px; height:7px; background:url(../../common/images/common/footerArrow.png)50% 50% no-repeat; transform:translateY(-50%);
                                 }
                                 &.on {
                                     &::after {

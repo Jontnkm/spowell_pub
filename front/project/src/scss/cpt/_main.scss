@@ -56,19 +56,19 @@
             > .swiper-button-prev {
                 width:24px; height:24px; top:auto; margin-top:0; left:0; right:auto;
                 &::after {
-                    content:''; width:24px; height:24px; background:url(../../images/main/visualLeft.svg)50% 50% no-repeat;
+                    content:''; width:24px; height:24px; background:url(../../common/images/main/visualLeft.svg)50% 50% no-repeat;
                 }
             }
             > .swiper-button-playStop {
                 width:24px; height:24px; position:absolute; display:flex; align-items: center; justify-content: center; left:50%; transform:translateX(-50%);
                 &::after {
-                    content:''; width:24px; height:24px; background:url(../../images/main/visualStop.svg)50% 50% no-repeat;
+                    content:''; width:24px; height:24px; background:url(../../common/images/main/visualStop.svg)50% 50% no-repeat;
                 }
             }
             > .swiper-button-next {
                 width:24px; height:24px; top:auto; margin-top:0; left:auto; right:0;
                 &::after {
-                    content:''; width:24px; height:24px; background:url(../../images/main/visualRight.svg)50% 50% no-repeat;
+                    content:''; width:24px; height:24px; background:url(../../common/images/main/visualRight.svg)50% 50% no-repeat;
                 }
             }
         }
@@ -133,42 +133,42 @@
 
                             &.ico01 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico01.svg)50% 50% no-repeat;
+                                    background:url(../../common/images/main/mainCont01_ico01.svg)50% 50% no-repeat;
                                 }
                             }
                             &.ico02 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico02.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico02.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico03 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico03.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico03.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico04 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico04.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico04.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico05 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico05.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico05.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico06 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico06.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico06.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico07 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico07.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico07.svg)50% 50% no-repeat;   
                                 }
                             }
                             &.ico08 {
                                 &::after {
-                                    background:url(../../images/main/mainCont01_ico08.svg)50% 50% no-repeat;   
+                                    background:url(../../common/images/main/mainCont01_ico08.svg)50% 50% no-repeat;   
                                 }
                             }
 
@@ -202,7 +202,7 @@
         @include media ('tablet'){
             font-size:26px; width: max-content; padding-right:30px; pointer-events: all; margin-bottom:30px;
             &::after {
-                content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:26px; height:26px; background:url(../../images/main/ico_mo_more.svg)50% 50% no-repeat;
+                content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:26px; height:26px; background:url(../../common/images/main/ico_mo_more.svg)50% 50% no-repeat;
             }
         }
         
@@ -238,7 +238,7 @@
             }
             
             > a {
-                display:block; width:50px; height:50px; position:relative; background:var(--bg3) url(../../images/main/mainMore.svg)50% 50% no-repeat; border-radius:50%;
+                display:block; width:50px; height:50px; position:relative; background:var(--bg3) url(../../common/images/main/mainMore.svg)50% 50% no-repeat; border-radius:50%;
             }
         }
     }
@@ -318,7 +318,7 @@
                 > a {
                     display:block; width:100%; height:100%; background:var(--bg3); border-radius:50%;
                     &::after {
-                        content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../images/main/suppPrev.svg)50% 50% no-repeat; z-index:2;
+                        content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../common/images/main/suppPrev.svg)50% 50% no-repeat; z-index:2;
                     }
                 }
             }
@@ -328,7 +328,7 @@
                 > a {
                     display:block; width:100%; height:100%; background:var(--bg3); border-radius:50%;
                     &::after {
-                        content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../images/main/suppNext.svg)50% 50% no-repeat; z-index:2;
+                        content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background: url(../../common/images/main/suppNext.svg)50% 50% no-repeat; z-index:2;
                     }
                 }
             }
@@ -363,12 +363,12 @@
             > a {
                 position:relative; display:inline-block; width:max-content; padding:0 40px 0 18px; height:40px; line-height:36px; font-size:14px; color:var(--bg3); font-weight:600; border:2px solid rgba(255,255,255,0.37); border-radius:30px;
                 &::after {
-                    content:''; position:absolute; top:50%; right:15px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/main/calArrow.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:50%; right:15px; width:16px; height:16px; transform:translateY(-50%); background:url(../../common/images/main/calArrow.svg)50% 50% no-repeat;
                 }
             }
 
             &::after {
-                content:''; position:absolute; bottom:-17px; right:-9px; width:203px; height:175px; background:url(../../images/main/calCharacter.svg)50% 50% no-repeat;
+                content:''; position:absolute; bottom:-17px; right:-9px; width:203px; height:175px; background:url(../../common/images/main/calCharacter.svg)50% 50% no-repeat;
             }
         }
         > .rightArea {
@@ -404,7 +404,7 @@
                                         > span {
                                             width:54px; height:54px; position:relative;
                                             &::after {
-                                                content:''; position:absolute; bottom:-22px; left:-14px; width:8px; height:8px; background:url(../../images/main/calEdge_type01.svg)50% 50% no-repeat;
+                                                content:''; position:absolute; bottom:-22px; left:-14px; width:8px; height:8px; background:url(../../common/images/main/calEdge_type01.svg)50% 50% no-repeat;
                                             }
                                         }
                                     }
@@ -414,7 +414,7 @@
                                         > span {
                                             width:54px; height:54px; position:relative;
                                             &::after {
-                                                content:''; position:absolute; bottom:-22px; left:-14px; width:8px; height:8px; background:url(../../images/main/calEdge_type02.svg)50% 50% no-repeat;
+                                                content:''; position:absolute; bottom:-22px; left:-14px; width:8px; height:8px; background:url(../../common/images/main/calEdge_type02.svg)50% 50% no-repeat;
                                             }
                                         }
                                     }
@@ -454,7 +454,7 @@
                         font-size:20px; color:var(--bg3); font-weight:700;
                     }
                     &::after {
-                        content:''; position:absolute; bottom:0; right:24px; width:118px; height:90px; background:url(../../images/main/calcharacter_mo.svg)50% 50% no-repeat;
+                        content:''; position:absolute; bottom:0; right:24px; width:118px; height:90px; background:url(../../common/images/main/calcharacter_mo.svg)50% 50% no-repeat;
                     }
                 }
 
@@ -515,7 +515,7 @@
         margin:10px auto 0;
     }
     .inner {
-        width:100%; min-height:562px;  padding: 90px 0; position:relative; background:url(../../images/main/maincont04_img01.png)100% 100% no-repeat;
+        width:100%; min-height:562px;  padding: 90px 0; position:relative; background:url(../../common/images/main/maincont04_img01.png)100% 100% no-repeat;
         @include media ('tablet') {
             padding:40px 20px; background-position:center top; min-height:auto;
         }
@@ -627,42 +627,42 @@
 
                         &.ico01 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico01.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico01.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico02 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico02.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico02.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico03 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico03.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico03.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico04 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico04.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico04.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico05 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico05.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico05.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico06 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico06.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico06.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico07 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico07.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico07.svg)50% 50% no-repeat;
                             }
                         }
                         &.ico08 {
                             &::after {
-                                background:url(../../images/main/mainCont05_ico08.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont05_ico08.svg)50% 50% no-repeat;
                             }
                         }
                     }
@@ -673,7 +673,7 @@
                         > a {
                             display:block; width:100%; height:100%; border-radius:50%;
                             &::after {
-                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background: url(../../images/main/bsSlidePrev.svg)50% 50% no-repeat; z-index:2;
+                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background: url(../../common/images/main/bsSlidePrev.svg)50% 50% no-repeat; z-index:2;
                             }
                         }
                     }
@@ -683,7 +683,7 @@
                         > a {
                             display:block; width:100%; height:100%; border-radius:50%;
                             &::after {
-                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background: url(../../images/main/bsSlideNext.svg)50% 50% no-repeat; z-index:2;
+                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background: url(../../common/images/main/bsSlideNext.svg)50% 50% no-repeat; z-index:2;
                             }
                         }
                     }
@@ -728,7 +728,7 @@
                     position:relative;
                     
                     > a {
-                        display:block; width:50px; height:50px; position:relative; background:var(--bg3) url(../../images/main/mainMore.svg)50% 50% no-repeat; border-radius:50%;
+                        display:block; width:50px; height:50px; position:relative; background:var(--bg3) url(../../common/images/main/mainMore.svg)50% 50% no-repeat; border-radius:50%;
                     }
                 }
             }
@@ -755,7 +755,7 @@
                             > .time {
                                 position:relative; display:inline-block; padding-left:22px; font-size:16px; color:var(--tbg2);
                                 &::after {
-                                    content:''; position:absolute; top:50%; left:0; width:18px; height:18px; transform:translateY(-50%); background: url(../../images/common/ico_clock.svg)50% 50% no-repeat;
+                                    content:''; position:absolute; top:50%; left:0; width:18px; height:18px; transform:translateY(-50%); background: url(../../common/images/common/ico_clock.svg)50% 50% no-repeat;
                                 }
                             }
                         }
@@ -794,14 +794,14 @@
                     > a {
                         position:relative; display:block; width:100%; padding:6px 20px; background:var(--bg3); border-radius:30px; font-size:14px; color:var(--t1); font-weight:600; line-height:1.5;
                         &::after {
-                            content:''; position:absolute; top:50%; right:20px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/main/mainCont06_ico03.svg)50% 50% no-repeat;
+                            content:''; position:absolute; top:50%; right:20px; width:16px; height:16px; transform:translateY(-50%); background:url(../../common/images/main/mainCont06_ico03.svg)50% 50% no-repeat;
                         }
                     }
                     &.service01 {
                         width:343px; background:linear-gradient(340deg, #FF8000 7.75%, #FFB348 93.94%);
                         > .title {
                             &::after {
-                                background:url(../../images/main/mainCont06_ico01.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont06_ico01.svg)50% 50% no-repeat;
                             }
                         }
                     }
@@ -810,7 +810,7 @@
                         width:343px; background:linear-gradient(131deg, #4AAEFF 9.68%, #0088F8 77.22%);
                         > .title {
                             &::after {
-                                background:url(../../images/main/mainCont06_ico02.svg)50% 50% no-repeat;
+                                background:url(../../common/images/main/mainCont06_ico02.svg)50% 50% no-repeat;
                             }
                         }
                     }
@@ -843,7 +843,7 @@
                                     > a {
                                         border-right:1px solid #4F6381; border-bottom:1px solid #4f6381; height:136px;
                                         &::after {
-                                            background: url(../../images/main/mainCont06_ico04.svg)50% 50% no-repeat;
+                                            background: url(../../common/images/main/mainCont06_ico04.svg)50% 50% no-repeat;
                                         }
                                     }
                                 }
@@ -852,7 +852,7 @@
                                     > a {
                                         border-bottom:1px solid #4f6381;  height:136px;
                                         &::after {
-                                            background: url(../../images/main/mainCont06_ico05.svg)50% 50% no-repeat;
+                                            background: url(../../common/images/main/mainCont06_ico05.svg)50% 50% no-repeat;
                                         }
                                     }
                                 }
@@ -861,7 +861,7 @@
                                     > a {
                                         border-right:1px solid #4F6381; 
                                         &::after {
-                                            background: url(../../images/main/mainCont06_ico06.svg)50% 50% no-repeat;
+                                            background: url(../../common/images/main/mainCont06_ico06.svg)50% 50% no-repeat;
                                         }
                                     }
                                 }
@@ -869,7 +869,7 @@
                                 &.item04 {
                                     > a {
                                         &::after {
-                                            background: url(../../images/main/mainCont06_ico07.svg)50% 50% no-repeat;
+                                            background: url(../../common/images/main/mainCont06_ico07.svg)50% 50% no-repeat;
                                         }
                                     }
                                 }

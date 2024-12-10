@@ -24,7 +24,7 @@
                             position:relative; width:100%; display:block; padding:14px 30px 14px 0; font-size:18px; color:#000; font-weight:700; border-bottom:1px solid #DEE2EA; transition:all 0.4s;
 
                             &::after {
-                                content:''; position:absolute; top:50%; right:0; width:0px; height:20px; transform:translateY(-50%); background:url(../../images/common/ico_lnb_on.svg); transition:all 0.4s;
+                                content:''; position:absolute; top:50%; right:0; width:0px; height:20px; transform:translateY(-50%); background:url(../../common/images/common/ico_lnb_on.svg); transition:all 0.4s;
                             }
 
                             &:hover {
@@ -130,7 +130,7 @@
                     }
 
                     &::after {
-                        content:''; position:absolute; top:50%; right:20px; transform:translateY(-50%); width:20px; height:20px; background:url(../../images/common/ico_sub_drop.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; right:20px; transform:translateY(-50%); width:20px; height:20px; background:url(../../common/images/common/ico_sub_drop.svg)50% 50% no-repeat;
                     }
 
                     &.active {
@@ -217,11 +217,11 @@
 
                     > li {
                         > .home {
-                            display:block; width:20px; height:20px; background:url(../../images/common/ico_bread_home.svg)50% 50% no-repeat;
+                            display:block; width:20px; height:20px; background:url(../../common/images/common/ico_bread_home.svg)50% 50% no-repeat;
                         }
                         &.nxtArr {
                             > span {
-                                display:block; width:20px; height:20px; background: url(../../images/common/ico_bread_arr.svg)50% 50% no-repeat;
+                                display:block; width:20px; height:20px; background: url(../../common/images/common/ico_bread_arr.svg)50% 50% no-repeat;
                             }
                         }
                         > a.depthTxt {

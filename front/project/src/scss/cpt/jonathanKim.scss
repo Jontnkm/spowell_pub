@@ -70,7 +70,7 @@
 
                 &.complete {
                     > .step {
-                        background:var(--prm1) url(../../images/sub/ico_process_chk.svg)50% 50% no-repeat; text-indent:-99999px;
+                        background:var(--prm1) url(../../common/images/sub/ico_process_chk.svg)50% 50% no-repeat; text-indent:-99999px;
     
                         & + span {
                             color:var(--tbg2);
@@ -165,9 +165,9 @@
                 > a {
                     display:inline-block; position:relative; width:60px; height:60px;
 
-                    &:first-of-type { background:url(../../images/sub/ico_naver.svg)50% 50% no-repeat;}
+                    &:first-of-type { background:url(../../common/images/sub/ico_naver.svg)50% 50% no-repeat;}
 
-                    &:last-of-type {background:url(../../images/sub/ico_kakao.svg)50% 50% no-repeat;}
+                    &:last-of-type {background:url(../../common/images/sub/ico_kakao.svg)50% 50% no-repeat;}
 
                 }
             }
@@ -221,7 +221,7 @@
 
         .phone {
             &::after {
-                content:''; position:absolute; bottom:40px; right:40px; width:80px; height:80px; background:url(../../images/sub/ico_auth_phone.svg)50% 50% no-repeat;
+                content:''; position:absolute; bottom:40px; right:40px; width:80px; height:80px; background:url(../../common/images/sub/ico_auth_phone.svg)50% 50% no-repeat;
                 @include media ('mobile') {
                     bottom:20px; right:20px; width:60px; height:60px; background-size:100% 100%;
                 }
@@ -233,7 +233,7 @@
 
         .ipin {
             &::after {
-                content:''; position:absolute; bottom:40px; right:40px; width:80px; height:80px; background:url(../../images/sub/ico_auth_ipin.svg)50% 50% no-repeat;
+                content:''; position:absolute; bottom:40px; right:40px; width:80px; height:80px; background:url(../../common/images/sub/ico_auth_ipin.svg)50% 50% no-repeat;
                 @include media ('mobile') {
                     bottom:20px; right:20px; width:60px; height:60px;  background-size:100% 100%;
                 }
@@ -321,7 +321,7 @@
                     position:relative; padding-left:24px; font-size:16px; color:var(--prm3); font-weight:700; line-height:1.5; margin-bottom:14px;
 
                     &::before {
-                        content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:18px; height:18px; background:url(../../images/sub/ico_exclamatory.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; left:0; transform:translateY(-50%); width:18px; height:18px; background:url(../../common/images/sub/ico_exclamatory.svg)50% 50% no-repeat;
                     }
                 }
 
@@ -560,7 +560,7 @@
                     }
 
                     &::after {
-                        content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:22px; height:22px; border-radius:50%; background:#D5DAE4 url(../../images/sub/ico_more_plus.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:22px; height:22px; border-radius:50%; background:#D5DAE4 url(../../common/images/sub/ico_more_plus.svg)50% 50% no-repeat;
                     }
                 }
 
@@ -594,7 +594,7 @@
                         padding-left:0;
                     }
                     &::before {
-                        content:''; position:absolute; top:50%; left:0; width:26px; height:26px; transform:translateY(-50%); background:url(../../images/sub/ico_certi01.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; left:0; width:26px; height:26px; transform:translateY(-50%); background:url(../../common/images/sub/ico_certi01.svg)50% 50% no-repeat;
                         @include media ('mobile') {
                             display:none;
                         }
@@ -604,7 +604,7 @@
                 &:last-of-type {
                     > p {
                         &::before {
-                            background:url(../../images/sub/ico_certi02.svg)50% 50% no-repeat;
+                            background:url(../../common/images/sub/ico_certi02.svg)50% 50% no-repeat;
                         }
                     }
                 }
@@ -673,9 +673,9 @@
     }
 
     .certInfo {
-        width:100%; position:relative; padding:50px; background:var(--bg1) url(../../images/sub/img_cert01.svg)bottom 50px right 50px no-repeat; border-radius:30px 0; margin-bottom:40px;
+        width:100%; position:relative; padding:50px; background:var(--bg1) url(../../common/images/sub/img_cert01.svg)bottom 50px right 50px no-repeat; border-radius:30px 0; margin-bottom:40px;
         &.cert02 {
-            background:var(--bg1) url(../../images/sub/img_cert02.svg)bottom 50px right 50px no-repeat;
+            background:var(--bg1) url(../../common/images/sub/img_cert02.svg)bottom 50px right 50px no-repeat;
         }
         @include media('tablet02') {
             background:var(--bg1); margin-top:24px; padding:30px;

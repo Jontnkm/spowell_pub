@@ -119,7 +119,7 @@
         & + .ico {
             position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--tbg2); font-weight:400; margin-top:8px;
             &::before {
-                content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_ipt_info.svg)50% 50% no-repeat;
+                content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../common/images/common/ico_ipt_info.svg)50% 50% no-repeat;
             }
         }
 
@@ -128,7 +128,7 @@
             & + .ico {
                 position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--snd3); font-weight:400; margin-top:8px;
                 &::before {
-                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_error.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../common/images/common/ico_error.svg)50% 50% no-repeat;
                 }
             }
         }
@@ -138,7 +138,7 @@
             & + .ico {
                 position:relative; display:inline-block; padding-left:23px; font-size:14px; color:var(--prm2); font-weight:400; margin-top:8px;
                 &::before {
-                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../images/common/ico_success.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:0px; left:0; width:20px; height:20px; background: url(../../common/images/common/ico_success.svg)50% 50% no-repeat;
                 }
             }
         }
@@ -195,7 +195,7 @@
             > .iptDate {
                 position:relative; width:auto; border:none; background:none; display:block; height:auto;
                 &::after {
-                    content:''; position:absolute; top:50%; right:14px; transform:translateY(-50%); width:22px; height:22px; background:url(../../images/common/ico_cal.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:50%; right:14px; transform:translateY(-50%); width:22px; height:22px; background:url(../../common/images/common/ico_cal.svg)50% 50% no-repeat;
                 }
                 > .calendar {padding: 0 46px 0 14px; height:40px !important; line-height:40px !important; width:155px;}
 
@@ -320,7 +320,7 @@
         > button {
             width:100%; font-size:16px; color:var(--t1); font-weight:500; height:50px; line-height:50px; text-align:left; position:relative;
             &::after {
-                content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/common/ico_dropdown.svg)50% 50% no-repeat;
+                content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../common/images/common/ico_dropdown.svg)50% 50% no-repeat;
             }
             &.active {
                 border-bottom:1px solid var(--lbg1);
@@ -384,7 +384,7 @@
             > button {
                 width:max-content; padding:0 36px 0 10px; font-size:16px; color:var(--t1); font-weight:500; line-height:36px; height:36px; position:relative; border:1px solid var(--lbg1); border-radius:6px;
                 &::after {
-                    content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/common/ico_dropdown.svg)50% 50% no-repeat;
+                    content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../common/images/common/ico_dropdown.svg)50% 50% no-repeat;
                 }
                 &.active {
                     border:1px solid var(--prm3);
@@ -464,14 +464,14 @@
             & + label {
                 display:inline-block; padding-left:27px; font-size:16px; color:var(--prm3); font-weight:400; cursor:pointer;
                 &::before {
-                    content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform:translateY(-50%); background:url(../../images/common/ico_chk_off.svg)50% 50% no-repeat;
+                    content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform:translateY(-50%); background:url(../../common/images/common/ico_chk_off.svg)50% 50% no-repeat;
                 }
             }
 
             &:checked {
                 & + label {
                     &::before {
-                        background:url(../../images/common/ico_chk_on.svg)50% 50% no-repeat;
+                        background:url(../../common/images/common/ico_chk_on.svg)50% 50% no-repeat;
                         
                     }
                 }
@@ -480,7 +480,7 @@
             &:disabled {
                 & + label {
                     &::before {
-                        background:url(../../images/common/ico_chk_disabled.svg)50% 50% no-repeat;
+                        background:url(../../common/images/common/ico_chk_disabled.svg)50% 50% no-repeat;
                     }
                 }
             }
@@ -523,7 +523,7 @@
                 & + label {
                     display:inline-block; padding-left:27px; font-size:16px; color:var(--prm3); font-weight:400; cursor:pointer; border:0; border-radius:0;
                     &::before {
-                        content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform:translateY(-50%); background:url(../../images/common/ico_radio_off.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; left:0; width:20px; height:20px; transform:translateY(-50%); background:url(../../common/images/common/ico_radio_off.svg)50% 50% no-repeat;
                     }
                 }
     
@@ -531,7 +531,7 @@
                     & + label {
                         background:var(--bg3);
                         &::before {
-                            background:url(../../images/common/ico_radio_on.svg)50% 50% no-repeat;
+                            background:url(../../common/images/common/ico_radio_on.svg)50% 50% no-repeat;
                         }
                     }
                 }
@@ -540,7 +540,7 @@
                     & + label {
                         background:var(--bg3);
                         &::before {
-                            background:url(../../images/common/ico_radio_off.svg)50% 50% no-repeat;
+                            background:url(../../common/images/common/ico_radio_off.svg)50% 50% no-repeat;
                         }
                     }
                 }
@@ -579,12 +579,12 @@
 
         &.ico {
             display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:4px;
-            > .ico01 {display:block; width:22px; height:22px; background:url(../../images/common/ico_btn_more.svg)50% 50% no-repeat;}/*더보기 아이콘*/
-            > .ico02 {display:block; width:20px; height:20px; background:url(../../images/common/ico_btn_dl.svg)50% 50% no-repeat;}/*엑셀다운로드 아이콘*/
+            > .ico01 {display:block; width:22px; height:22px; background:url(../../common/images/common/ico_btn_more.svg)50% 50% no-repeat;}/*더보기 아이콘*/
+            > .ico02 {display:block; width:20px; height:20px; background:url(../../common/images/common/ico_btn_dl.svg)50% 50% no-repeat;}/*엑셀다운로드 아이콘*/
 
             &:disabled {
                 background:var(--bg2); color:var(--tbg3); border:1px solid var(--lbg2);
-                > .ico01 {background:url(../../images/common/ico_btn_more_disabled.svg)50% 50% no-repeat;}
+                > .ico01 {background:url(../../common/images/common/ico_btn_more_disabled.svg)50% 50% no-repeat;}
             }
         }
 
@@ -699,7 +699,7 @@
                     > button {
                         width:max-content; padding:9px 34px 9px 16px; font-size:16px; color:var(--t1); font-weight:500; line-height:1.4; position:relative;
                         &::after {
-                            content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../images/common/ico_dropdown.svg)50% 50% no-repeat;
+                            content:''; position:absolute ;top:50%; right:10px; width:16px; height:16px; transform:translateY(-50%); background:url(../../common/images/common/ico_dropdown.svg)50% 50% no-repeat;
                         }
                         &.active {
                             &::after {
@@ -739,7 +739,7 @@
                         &::-webkit-input-placeholder {font-size:16px; color:var(--tbg3);}
                     }
                     > a {
-                        position:absolute; top:50%; right:16px; width:20px; height:20px; transform:translateY(-50%); background:url(../../images/common/ico_scope.svg)50% 50% no-repeat;
+                        position:absolute; top:50%; right:16px; width:20px; height:20px; transform:translateY(-50%); background:url(../../common/images/common/ico_scope.svg)50% 50% no-repeat;
                     }
                 }
             }
@@ -836,7 +836,7 @@
                                 }
                                 &.new {
                                     &::after {
-                                        content:''; position:absolute; top:50%; right:0; width:26px; height:20px; background:url(../../images/common/ico_new.svg)50% 50% no-repeat; transform:translateY(-50%);
+                                        content:''; position:absolute; top:50%; right:0; width:26px; height:20px; background:url(../../common/images/common/ico_new.svg)50% 50% no-repeat; transform:translateY(-50%);
                                     }
                                 }  
                             }
@@ -866,7 +866,7 @@
                                 width:40px;
                             }
                             &.hvFile {
-                                &::after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:30px; height:30px; background:url(../../images/common/ico_board_file.svg)50% 50% no-repeat; }
+                                &::after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:30px; height:30px; background:url(../../common/images/common/ico_board_file.svg)50% 50% no-repeat; }
                             }
                         }
 
@@ -879,7 +879,7 @@
                                 display:none;
                             }
                             &::after {
-                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:30px; height:30px; background:url(../../images/common/ico_board_deatil.svg)50% 50% no-repeat; 
+                                content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:30px; height:30px; background:url(../../common/images/common/ico_board_deatil.svg)50% 50% no-repeat; 
                             }
                         }
                     }
@@ -955,7 +955,7 @@
                                 width:100%;
                             }
                             &::after {
-                                content:''; position:absolute; width:24px; height:24px; top:50%; right:0; transform:translateY(-50%); background:url(../../images/common/ico_download.svg)50% 50% no-repeat;
+                                content:''; position:absolute; width:24px; height:24px; top:50%; right:0; transform:translateY(-50%); background:url(../../common/images/common/ico_download.svg)50% 50% no-repeat;
                             }
                         }
                     }
@@ -1107,7 +1107,7 @@
                     }
 
                     &::after {
-                        content:''; position:absolute; top:50%; right:24px; transform:translateY(-50%); width:24px; height:24px; background:url(../../images/common/ico_accordion.svg)50% 50% no-repeat
+                        content:''; position:absolute; top:50%; right:24px; transform:translateY(-50%); width:24px; height:24px; background:url(../../common/images/common/ico_accordion.svg)50% 50% no-repeat
                     }
 
                     .cptForm {
@@ -1363,7 +1363,7 @@
                 > .download {
                     display:block; width:max-content; line-height:50px; height:50px; padding-right:25px; position:relative;
                     &::after {
-                        content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:20px; height:20px;  background:url(../../images/common/ico_download.svg)50% 50% no-repeat;
+                        content:''; position:absolute; top:50%; right:0; transform:translateY(-50%); width:20px; height:20px;  background:url(../../common/images/common/ico_download.svg)50% 50% no-repeat;
                     }
 
                     @include media ('mobile'){
@@ -1553,7 +1553,7 @@
             > a {
                 display:inline-block; width:max-content; padding-right:25px; position:relative; font-size:16px; color:var(--t1); font-weight:400; margin-right:5px;
                 &::after {
-                    content:''; position:absolute; top:50%; right:0; width:20px; height:20px; background:url(../../images/common/ico_download.svg)50% 50% no-repeat; transform:translateY(-50%);
+                    content:''; position:absolute; top:50%; right:0; width:20px; height:20px; background:url(../../common/images/common/ico_download.svg)50% 50% no-repeat; transform:translateY(-50%);
                 }
                 &.notDw {
                     padding-right:0;
@@ -1564,7 +1564,7 @@
             }
 
             > button {
-                display:inline-block; width:18px; height:18px; background:#d5dae4 url(../../images/common/btn_del.svg)50% 50% no-repeat; border-radius:50%;
+                display:inline-block; width:18px; height:18px; background:#d5dae4 url(../../common/images/common/btn_del.svg)50% 50% no-repeat; border-radius:50%;
             }
         }
         &.on {
@@ -1591,7 +1591,7 @@
         > a {
             display:block; width:100%; height:100%; position:relative;
             &::after {
-                content:''; position:absolute; bottom:-21px; left:50%; transform:translateX(-50%); width:54px; height:48px;  background:url(../../images/common/quickbg01.png)50% 50% no-repeat;
+                content:''; position:absolute; bottom:-21px; left:50%; transform:translateX(-50%); width:54px; height:48px;  background:url(../../common/images/common/quickbg01.png)50% 50% no-repeat;
             }
             > p {
                 text-align:center; font-size:14px; color:var(--bg3); font-weight:700; line-height:1.2;
@@ -1616,19 +1616,19 @@
                     }
 
                     &.ico01{
-                        &::after {background:url(../../images/common/ico_quick01.svg)center center no-repeat;}
+                        &::after {background:url(../../common/images/common/ico_quick01.svg)center center no-repeat;}
                     }
                     &.ico02{
-                        &::after {background:url(../../images/common/ico_quick02.svg)center center no-repeat;}
+                        &::after {background:url(../../common/images/common/ico_quick02.svg)center center no-repeat;}
                     }
                     &.ico03{
-                        &::after {background:url(../../images/common/ico_quick03.svg)center center no-repeat;}
+                        &::after {background:url(../../common/images/common/ico_quick03.svg)center center no-repeat;}
                     }
                     &.ico04{
-                        &::after {background:url(../../images/common/ico_quick04.svg)center center no-repeat;}
+                        &::after {background:url(../../common/images/common/ico_quick04.svg)center center no-repeat;}
                     }
                     &.ico05{
-                        &::after {background:url(../../images/common/ico_quick05.svg)center center no-repeat;}
+                        &::after {background:url(../../common/images/common/ico_quick05.svg)center center no-repeat;}
                     }
 
                 }
@@ -1641,7 +1641,7 @@
         > a {
             display:block; width:100%; height:100%; text-align:center; font-size:14px; color:var(--bg3); font-weight:bold; padding-top:20px;
             &::before {
-                content:''; position:absolute; top:23px; left:50%; transform:translateX(-50%); width:16px; height:16px; background:url(../../images/common/quickTop.svg)50% 50% no-repeat;
+                content:''; position:absolute; top:23px; left:50%; transform:translateX(-50%); width:16px; height:16px; background:url(../../common/images/common/quickTop.svg)50% 50% no-repeat;
             }
         }
     }
