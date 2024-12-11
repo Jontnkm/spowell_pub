@@ -15,7 +15,7 @@
     }
 
     &-process {
-        max-width:900px; margin:0 auto 50px;
+        max-width:900px; margin:-20px auto 50px;
         @include media ('tablet') {
             width:100%;
         }

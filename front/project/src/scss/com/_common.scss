@@ -750,7 +750,7 @@
 /*==================================== 페이징 처리 ====================================*/
 
 .comPagination {
-    width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: center;  gap:12px; margin-top:40px;
+    width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: center;  gap:4px; margin-top:40px;
     @include media ('mobile') {
         gap:8px; margin-top:20px;
     }
@@ -765,7 +765,7 @@
     }
 
     > .numList {
-        display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:12px;
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:12px; margin: 0 8px;
         @include media ('mobile') {
             gap:8px;
         }
@@ -830,7 +830,7 @@
                                 width: calc(100% - 100px); padding:15px;
                             }
                             > p.title {
-                                font-size:20px; color:var(--t1); font-weight:700; line-height:1.4; width:max-content; max-width:100%;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:30px; position:relative;
+                                font-size:20px; color:var(--t1); font-weight:500; line-height:1.4; width:max-content; max-width:100%;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:30px; position:relative;
                                 @include media ('tablet') {
                                     font-size:16px;
                                 }
@@ -838,7 +838,11 @@
                                     &::after {
                                         content:''; position:absolute; top:50%; right:0; width:26px; height:20px; background:url(../../common/images/common/ico_new.svg)50% 50% no-repeat; transform:translateY(-50%);
                                     }
-                                }  
+                                }
+
+                                &.fix {
+                                    font-weight:700;
+                                }
                             }
                             > p.dtView {
                                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:14px; margin-top:10px;
