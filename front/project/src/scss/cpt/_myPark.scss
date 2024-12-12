@@ -1,0 +1,89 @@
+/* 박문영 스타일 */
+
+/* 공통 : 컴포넌트 불릿 */
+.bulletList{
+    /* pc */
+    & {
+        & > li{
+            position:relative; padding-left:10px;
+            &:before{position:absolute; top:10px; left:0; content:'';display:block; width:5px; height:5px; border-radius:50%; background:var(--snd2); }
+            b{line-height:27px; font-size:18px; font-weight:500;}
+            strong{line-height:25px; font-size:18px; font-weight:700;}
+        }
+    }
+    &.small {
+        
+    }
+}
+
+/* 공통 : 콘텐츠 영역 하위 레이아웃 */
+.sectionArea {
+    /* pc */
+    & {
+        .sectionPart{
+            & + .sectionPart{margin-top:60px;}
+            .partHeader{
+                display:flex; align-items: center; margin-bottom:20px;
+                .partTit{
+                    position:relative; display:inline-block; font-size:24px; font-weight:800; 
+                    &:after{position:absolute; top:0; right:-14px; content:'';display:block;width:10px;height:10px; border-top-left-radius:3px; border-bottom-right-radius:3px; background: linear-gradient(321.01deg, #FF8000 3.73%, #FFB348 67.76%);}
+                }
+                .right-box{
+                    margin-left:auto;
+                    .unit{font-size:14px; font-weight:500; color:var(--tbg1);}
+                }
+            }
+            .partContainer{}
+        }
+    }
+
+    /* tablet */
+    @include media('tablet') {
+        .sectionPart{
+            & + .sectionPart{margin-top:40px;}
+        }
+    }
+
+    /* mobile */
+    @include media('mobile') {
+        .sectionPart{
+            & + .sectionPart{margin-top:40px;}
+        }
+    }
+}
+
+/* 사업소개 : cptAbout */
+.cptAbout{
+    /* pc */
+    & {
+        .explainArea {
+            position:relative; padding-bottom:45px;
+            .explainBox{
+                padding:50px; padding-right:500px; background:var(--prm3); border-top-left-radius:30px; border-bottom-right-radius:30px;
+                &:after{position:absolute; bottom:0; right:50px; content:'';display:block; width:503px; height:332px; background:url(../../common/images/sub/img_about_01.svg) no-repeat 40px 44px/contain;}
+                h4{font-size:32px; font-weight:800; color:var(--snd1);}
+                p{margin-top:14px; line-height:27px; word-break: keep-all; font-size:18px; font-weight:500; color:var(--bg3); }
+            }
+        }
+
+        .cptTable table.tbInfo th.tit{border-top:1px solid var(--lbg1);}
+    }
+
+    /* tablet02 */
+    @include media('tablet02') {
+        .explainArea {
+            padding-bottom:0;
+            .explainBox{
+                padding-right:50px;
+                &:after{display:none;}
+            }
+        }
+    }
+
+    /* mobile */
+    @include media('mobile') {
+        .cptTable table.tbInfo th.tit {
+            margin-bottom:12px; order:0; padding:0; width:100%; text-align:left; border:0; font-size:20px; color:var(--t1); font-weight:700; background: var(--bg3); 
+        }
+    }
+}
