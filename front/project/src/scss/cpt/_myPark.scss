@@ -60,7 +60,6 @@
 /* 사업소개 : cptAbout */
 .cptAbout{
     /* pc */
-    /* about/index [start] */
     .explainArea {
         position:relative; padding-bottom:45px;
         .explainBox{
@@ -70,9 +69,8 @@
             p{margin-top:14px; line-height:27px; word-break: keep-all; font-size:18px; font-weight:500; color:var(--bg3); }
         }
     }
-
     .cptTable table.tbInfo th.tit{border-top:1px solid var(--lbg1);}
-
+    .infoTxt{margin-top: 10px; font-size: 16px;color: var(--tbg2);font-weight: 400;}
     .introListArea{
         border-top:2px solid var(--prm1);
         .listBox{
@@ -89,9 +87,30 @@
             .tit{margin-bottom:20px; line-height:28px; font-size:20px; font-weight:700; }
             & > .bulletList.black{padding-left:10px;}
         }
-
     }
-    /* about/index [end] */
+    .aboutLawArea{
+        text-align:left;
+        h5{line-height:34px; font-size:24px; font-weight:800;}
+        p{margin-top:10px; line-height:27px; font-size:18px; font-weight:500;}
+
+        .aboutLawList{
+            display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:0 16px; margin-top:40px;
+            & > li{
+                position:relative; padding:124px 40px 34px 40px; width:100%; text-align:center; background:var(--bg1); border-radius:14px;
+                &:before{position:absolute; top:34px; left:50%; transform:translateX(-50%); content:'';display:block;width:80px; height:80px;}
+                &:first-child:before{background:url(../../common/images/sub/img_about_li_01.svg) no-repeat center/contain;}
+                &:nth-child(2):before{background:url(../../common/images/sub/img_about_li_02.svg) no-repeat center/contain;}
+                &:nth-child(3):before{background:url(../../common/images/sub/img_about_li_03.svg) no-repeat center/contain;}
+                &:nth-child(4):before{background:url(../../common/images/sub/img_about_li_04.svg) no-repeat center/contain;}
+
+                h6{line-height:25px; font-size:18px; font-weight:700;}
+                .comButton{
+                    flex-direction: column; margin-top:24px; gap:8px;
+                    .btn{width:100%;}
+                }
+            }
+        }
+    }
 
     /* tablet02 */
     @include media('tablet02') {
@@ -99,6 +118,10 @@
             padding-bottom:0;
             .explainBox {padding-right:50px;}
             .explainBox:after {display:none;}
+        }
+
+        .aboutLawArea {
+            .aboutLawList{grid-template-columns: 1fr 1fr; gap:16px; margin-top:30px;}
         }
     }
 
@@ -112,7 +135,6 @@
         .cptTable table.tbInfo th.tit {
             margin-bottom:12px; order:0; padding:0; width:100%; text-align:left; border:0; font-size:20px; color:var(--t1); font-weight:700; background: var(--bg3); 
         }
-
         .introListArea {
             //.listBox {padding:20px 15px; padding-left:85px;}
             //.listBox:before{top:20px; left:15px; width:50px;height:50px; background-size:25px 25px; }
@@ -120,6 +142,8 @@
             .listBox:before{display:none;}
             .listBox .tit{margin-bottom:10px;}
         }
-
+        .aboutLawArea {
+            .aboutLawList{grid-template-columns: 1fr; gap:16px; margin-top:20px;}
+        }
     }
 }
