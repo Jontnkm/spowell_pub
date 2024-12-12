@@ -3,38 +3,43 @@
 /* 공통 : 컴포넌트 불릿 */
 .bulletList{
     /* pc */
-    & {
+    &.black {
         & > li{
-            position:relative; padding-left:10px;
-            &:before{position:absolute; top:10px; left:0; content:'';display:block; width:5px; height:5px; border-radius:50%; background:var(--snd2); }
-            b{line-height:27px; font-size:18px; font-weight:500;}
-            strong{line-height:25px; font-size:18px; font-weight:700;}
+            font-size:16px; font-weight:400; line-height:24px;
+            &:before{position:absolute; top:11px; left:0; content:'';display:block; width:3px; height:2px; border-radius:50%; background:var(--t1); }
+            & + li{margin-top:8px;}
+            span{font-size:16px; font-weight:400; line-height:24px;}
         }
     }
-    &.small {
-        
+
+    & > li{
+        position:relative; padding-left:10px; 
+        & + li{margin-top:20px;}
+        &:before{position:absolute; top:10px; left:0; content:'';display:block; width:5px; height:5px; border-radius:50%; background:var(--snd2); }
+        b{line-height:27px; font-size:18px; font-weight:500;}
+        strong{line-height:25px; font-size:18px; font-weight:700;}
+
+        .bulletList.black{margin-top:10px;}
     }
 }
 
 /* 공통 : 콘텐츠 영역 하위 레이아웃 */
 .sectionArea {
     /* pc */
-    & {
-        .sectionPart{
-            & + .sectionPart{margin-top:60px;}
-            .partHeader{
-                display:flex; align-items: center; margin-bottom:20px;
-                .partTit{
-                    position:relative; display:inline-block; font-size:24px; font-weight:800; 
-                    &:after{position:absolute; top:0; right:-14px; content:'';display:block;width:10px;height:10px; border-top-left-radius:3px; border-bottom-right-radius:3px; background: linear-gradient(321.01deg, #FF8000 3.73%, #FFB348 67.76%);}
-                }
-                .right-box{
-                    margin-left:auto;
-                    .unit{font-size:14px; font-weight:500; color:var(--tbg1);}
-                }
+    .sectionPart{
+        & + .sectionPart{margin-top:60px;}
+        .partHeader{
+            display:flex; align-items: center; margin-bottom:20px;
+            .partTit{
+                position:relative; display:inline-block; font-size:24px; font-weight:800; 
+                &:after{position:absolute; top:0; right:-14px; content:'';display:block;width:10px;height:10px; border-top-left-radius:3px; border-bottom-right-radius:3px; background: linear-gradient(321.01deg, #FF8000 3.73%, #FFB348 67.76%);}
             }
-            .partContainer{}
+            .right-box{
+                margin-left:auto;
+                .unit{font-size:14px; font-weight:500; color:var(--tbg1);}
+            }
         }
+        .partContainer{}
     }
 
     /* tablet */
@@ -47,7 +52,7 @@
     /* mobile */
     @include media('mobile') {
         .sectionPart{
-            & + .sectionPart{margin-top:40px;}
+            & + .sectionPart{margin-top:30px;}
         }
     }
 }
@@ -55,29 +60,51 @@
 /* 사업소개 : cptAbout */
 .cptAbout{
     /* pc */
-    & {
-        .explainArea {
-            position:relative; padding-bottom:45px;
-            .explainBox{
-                padding:50px; padding-right:500px; background:var(--prm3); border-top-left-radius:30px; border-bottom-right-radius:30px;
-                &:after{position:absolute; bottom:0; right:50px; content:'';display:block; width:503px; height:332px; background:url(../../common/images/sub/img_about_01.svg) no-repeat 40px 44px/contain;}
-                h4{font-size:32px; font-weight:800; color:var(--snd1);}
-                p{margin-top:14px; line-height:27px; word-break: keep-all; font-size:18px; font-weight:500; color:var(--bg3); }
-            }
+    /* about/index [start] */
+    .explainArea {
+        position:relative; padding-bottom:45px;
+        .explainBox{
+            padding:50px; padding-right:500px; background:var(--prm3); border-top-left-radius:30px; border-bottom-right-radius:30px;
+            &:after{position:absolute; bottom:0; right:50px; content:'';display:block; width:503px; height:332px; background:url(../../common/images/sub/img_about_01.svg) no-repeat 40px 44px/contain;}
+            h4{font-size:32px; font-weight:800; color:var(--snd1);}
+            p{margin-top:14px; line-height:27px; word-break: keep-all; font-size:18px; font-weight:500; color:var(--bg3); }
+        }
+    }
+
+    .cptTable table.tbInfo th.tit{border-top:1px solid var(--lbg1);}
+
+    .introListArea{
+        border-top:2px solid var(--prm1);
+        .listBox{
+            position:relative; padding:40px 30px; padding-left:170px; border-bottom:1px solid var(--lbg1);
+            &:before{position:absolute; top:40px; left:30px; content:'';display:block;width:100px;height:100px;border-radius:50%; background-repeat: no-repeat; background-position: center; background-size:50px 50px; background-color:var(--bg1);}
+            &:first-child:before{background-image: url(../../common/images/sub/img_about_icon_01.svg);}
+            &:nth-child(2):before{background-image: url(../../common/images/sub/img_about_icon_02.svg);}
+            &:nth-child(3):before{background-image: url(../../common/images/sub/img_about_icon_03.svg);}
+            &:nth-child(4):before{background-image: url(../../common/images/sub/img_about_icon_04.svg);}
+            &:nth-child(5):before{background-image: url(../../common/images/sub/img_about_icon_05.svg);}
+            &:nth-child(6):before{background-image: url(../../common/images/sub/img_about_icon_06.svg);}
+            &:nth-child(7):before{background-image: url(../../common/images/sub/img_about_icon_07.svg);}
+            
+            .tit{margin-bottom:20px; line-height:28px; font-size:20px; font-weight:700; }
+            & > .bulletList.black{padding-left:10px;}
         }
 
-        .cptTable table.tbInfo th.tit{border-top:1px solid var(--lbg1);}
     }
+    /* about/index [end] */
 
     /* tablet02 */
     @include media('tablet02') {
         .explainArea {
             padding-bottom:0;
-            .explainBox{
-                padding-right:50px;
-                &:after{display:none;}
-            }
+            .explainBox {padding-right:50px;}
+            .explainBox:after {display:none;}
         }
+    }
+
+    /* tablet */
+    @include media('tablet') {
+
     }
 
     /* mobile */
@@ -85,5 +112,14 @@
         .cptTable table.tbInfo th.tit {
             margin-bottom:12px; order:0; padding:0; width:100%; text-align:left; border:0; font-size:20px; color:var(--t1); font-weight:700; background: var(--bg3); 
         }
+
+        .introListArea {
+            //.listBox {padding:20px 15px; padding-left:85px;}
+            //.listBox:before{top:20px; left:15px; width:50px;height:50px; background-size:25px 25px; }
+            .listBox {padding:20px 15px;}
+            .listBox:before{display:none;}
+            .listBox .tit{margin-bottom:10px;}
+        }
+
     }
 }
