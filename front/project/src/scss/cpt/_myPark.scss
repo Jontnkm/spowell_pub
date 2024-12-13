@@ -289,3 +289,67 @@
     }
 
 }
+
+/* 신청.안내 : cptApply */
+.cptApply{
+    /* pc */
+    .applyListWrap{
+        .applyListArea{
+            display:flex; flex-wrap:wrap; margin-left:-20px; margin-top:-20px;
+
+            .list{
+                margin-left:20px; margin-top:20px; width:calc(33.3% - 20px); height:256px;
+                .link{
+                    position:relative; display:block; padding:30px 30px 0px 30px; width:100%; height:100%; border-radius:20px; background:var(--bg1);
+                    .classifyBox{
+                        display:flex; justify-content: space-between; align-items: center;
+                        .targeting{
+                            display:inline-block; padding:0 14px; line-height:30px; border-radius:90px; text-align:center; background:var(--prm1);
+                            font-size:14px; font-weight:600; color:var(--bg3);
+
+                            &.national{background:var(--prm1);}
+                            &.retire{background:var(--prm2);}
+                            &.student{background:var(--snd2);}
+                            &.elder{background:#008A4E;}
+                            &.major{background:var(--prm3);}
+                        }
+                        .status{
+                            position:relative; padding-left:15px; font-size:14px; font-weight:600; color:var(--tbg1);
+                            &:before{position:absolute; top:50%; left:0; margin-top:-5px; content:'';display:block;width:10px;height:10px;border-radius:50%; background:black;}
+                            &.alarm:before{background:#008A4E;}
+                            &.always:before{background:var(--snd2);}
+                            &.ing:before{background:var(--snd2);}
+                            &.end:before{background:#888888;}
+                        }
+                    }
+
+                    .tit{display:block; margin-top:14px; line-height:33.6px; font-size:24px; font-weight:800; }
+                    .txt{margin-top:8px; max-height:72px; line-height:24px; font-size:16px; color:#555555;}
+                    .hash{
+                        position:absolute; bottom:30px; left:30px; display:inline-block; padding:0 8px; line-height:26px; border-radius:6px; border:1px solid var(--prm1); color:var(--prm1); font-size:14px;
+                        &:before{content:'#'; margin-right:2px;}
+                    }
+                }
+            }
+        }
+    }
+
+    /* tablet02 1160px */
+    @include media('tablet02') {
+        .applyListWrap{
+            .applyListArea .list{width:calc(50% - 20px);}
+        }
+    }
+
+    /* tablet 1023px */
+    @include media('tablet') {
+    }
+
+    /* mobile 767px */
+    @include media('mobile') {
+        .applyListWrap{
+            .applyListArea .list{width:100%;}
+        }
+    }
+
+}
