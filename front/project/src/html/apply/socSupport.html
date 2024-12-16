@@ -37,6 +37,190 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 콘텐츠 영역 하위 레이아웃 : 윗간격 60  -->
+                        <div class="sectionArea cptApply">
+                            <div class="sectionPart">
+                                <div class="bannerArea">
+                                    <div class="bannerTop">
+                                        <!-- 페이지 개발시 '접수상태'별 클래스명 추가적용
+                                        * 클래스명 [status]에 분류에 따라 더블클래스 추가
+                                        [알림예약 - alarm] [상시접수 - always] [접수중 - ing] [종료 - end]
+                                        -->
+                                        <span class="status end">종료</span> 
+                                        <!-- 
+                                        <span class="status always">상시접수</span>
+                                        <span class="status alarm">알림예약</span>
+                                        <span class="status ing">접수중</span>
+                                        <span class="status end">종료</span> 
+                                        -->
+                                        <!--// 페이지 개발시 '접수상태'별 클래스명 추가적용 -->
+
+                                        <h4 class="tit">생활지원금</h4>
+                                        <p class="txt">
+                                            국가대표 선수·지도자 중 경제적으로 어려움이 있는 사람에게 생활지원금을 지원합니다.
+                                        </p>
+                                    </div>
+
+                                    <ul class="bannerList">
+                                        <li class="applyTarget">
+                                            <strong class="tit">지원대상</strong>
+                                            <p class="txt">경제여건이 어려운 국가대표선수 및 지도자</p>
+                                        </li>
+                                        <li class="applyText">
+                                            <strong class="tit">지원내용</strong>
+                                            <p class="txt">1인당 월 50만원</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원대상</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">국가대표 선수 또는 지도자로 활동한 경력이 있는 사람</p>
+                                    <p class="bulletTxt">아래 기준 중 어느 하나에 해당하는 사람</p>
+                                    <ul class="bulletList">
+                                        <li>「국민기초생활보장법」 제2조제2호에 따른 수급자</li>
+                                        <li>「국민기초생활보장법」 제2조제10호에 따른 차상위계층</li>
+                                        <li>그 밖에 수급자·차상위계층에 준하는 경제적 어려움이 있는 사람 중 체육회장 또는 경기단체장의 추천을 받을 사람 (생활지원금 추천서 제출 필수)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">제외대상</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">아래 기준 중 어느 하나에 해당하는 사람</p>
+                                    <ul class="bulletList">
+                                        <li>’23년도 생활지원금 지원을 받은 사람(2년 연속 지원불가)</li>
+                                        <li>동일가구 내 다른 구성원이 지원을 받는 사람(가구 내 최대 1명 선정)</li>
+                                        <li>’24년도 원로 체육인 지원 사업의 지원을 받는 사람(동시신청 가능, 원로 체육인 지원 우선 선정)</li>
+                                        <li>「체육인 복지법」 제22조에 따른 범죄경력이 있는 사람</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원내용</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt light">지원기간 내 1인 월 50만원 지원 (매월 20일 지급)</p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원기간</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt light">2024년 3월 ~ 12월</p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">선정기준</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="cptTable">
+                                        <table class="tbMoType">
+                                            <caption>선정기준에 대한 표로써 우선순위, 수급자 여부 등, 동일 순위 내 선발기준 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:10%">
+                                                <col style="width:25%">
+                                                <col style="width:65%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>우선순위</th>
+                                                    <th>수급자 여부 등</th>
+                                                    <th>동일 순위 내 선발기준</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="left">① 기초생활수급자(조건부수급자 제외)</td>
+                                                    <td rowspan="3">
+                                                        <p class="numList">
+                                                            1. ①에 해당하는 경우, 생계·의료·주거·교육급여 수급 순 <br>
+                                                            2. 소득금액증명·건강보험관련 자료에 따른 저소득자 우선 <br>
+                                                            3. 경기력 성과포상금을 받지 않은 사람 우선 <br>
+                                                            4. ③에 해당하는 경우, 「사회복지사업법」에 따른 지원을 받고 있지 않는 사람 우선 <br>
+                                                            5. ’23년 이후 국가대표로 활동한 선수 중 2개월 이상의 장기부상으로 인한 경기 불참가자*(동순위 시 의료비 지출액 상위자 우선) <br>
+                                                            6. ’23년 이후 국가대표로 활동한 선수 <br>
+                                                            7. 공단 각종 지원금을 받지 않은 사람
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td class="left">② 차상위계층</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td class="left">③ 이에 준하는 경제상황으로 체육회 혹은 경기단체의 추천을 받은 경우</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <p class="bulletSign">2개월 이상 장기부상으로 인한 경기 불참가자 우선선발 대상기준</p>
+                                    <ul class="bulletList hypen">
+                                        <li> ’23년 이후 국가대표로 활동했거나 활동하고 있는 선수</li>
+                                        <li>부상으로 2개월 이상 경기에 참가하지 못한 증빙자료를 제출한 사람</li>
+                                        <li>병명이나 상처부위, 치료기간 등의 확인이 가능한 자료를 제출한 사람</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지급절차</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="stapListArea">
+                                        <ul class="stapList">
+                                            <li>
+                                                <b>STEP 01</b>
+                                                <strong class="imgText">
+                                                    대상자 신청 및 서류 제출
+                                                </strong>
+                                                <p>신청자 → 경기단체 → 대한체육회, 대한장애인체육회</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 02</b>
+                                                <strong class="imgRecommend">대한체육회, 대한장애인체육회 추천</strong>
+                                                <p>대한체육회, 대한장애인체육회 → 공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 03</b>
+                                                <strong class="imgFile">추천내역 검토 및 지급 확정</strong>
+                                                <p>공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 04</b>
+                                                <strong class="imgMoney">생활지원금 지급</strong>
+                                                <p>공단 → 대상자</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partFooter">
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 l-g">복지 전체보기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>

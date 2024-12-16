@@ -37,6 +37,248 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 콘텐츠 영역 하위 레이아웃 : 윗간격 60  -->
+                        <div class="sectionArea cptApply">
+                            <div class="sectionPart">
+                                <!-- 신청하기 버튼 있을시 .addBtnApply 추가 -->
+                                <div class="bannerArea addBtn addBtnApply">
+                                    <div class="bannerTop">
+                                        <!-- 페이지 개발시 '접수상태'별 클래스명 추가적용
+                                        * 클래스명 [status]에 분류에 따라 더블클래스 추가
+                                        [알림예약 - alarm] [상시접수 - always] [접수중 - ing] [종료 - end]
+                                        -->
+                                        <span class="status ing">접수중</span>
+                                        <!-- 
+                                        <span class="status alarm">알림예약</span>
+                                        <span class="status always">상시접수</span>
+                                        <span class="status ing">접수중</span>
+                                        <span class="status end">종료</span> 
+                                        -->
+                                        <!--// 페이지 개발시 '접수상태'별 클래스명 추가적용 -->
+
+                                        <h4 class="tit">국내대학원 교육지원금</h4>
+                                        <p class="txt">
+                                            국내대학원 진학 국가대표 선수 및 지도자에게 장학금을 지원합니다.
+                                        </p>
+                                    </div>
+
+                                    <ul class="bannerList">
+                                        <li class="applyTarget">
+                                            <strong class="tit">지원대상</strong>
+                                            <p class="txt">국내대학원 진학을 희망하는 국가대표 선수·지도자</p>
+                                        </li>
+                                        <li class="applyText">
+                                            <strong class="tit">지원내용</strong>
+                                            <p class="txt">학기당 300만원 범위 내의 입학금 및 등록금</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 f-b ico">
+                                            <span class="txt">기존대상자 지원 신청하기</span>
+                                            <span class="ico icoApply"><span class="hidden">연필 모양 아이콘 이미지</span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원대상</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt light">국내 대학원의 교육과정을 이수하고자 하는 국가대표 선수·지도자</p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원내용</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">교육지원금 지원기준</p>
+                                    <ul class="bulletList">
+                                        <li>교육지원금의 지급기간은 정규 수업연한 4개 학기 이내</li>
+                                        <li>다만, 학칙에서 인정하는 정규 수업연한이 5개 학기 이상인 경우, 5개 학기까지 지원기간을 연장 가능 (학칙 내 수업연한이 명시되어 있고, 연구등록 등이 아닌 정규등록일 경우)</li>
+                                        <li>편입, 전공변경 등의 경우 수업연한 잔여학기만 지원 (사전 요청 및 승인 필요)</li>
+                                    </ul>
+
+                                    <p class="bulletTxt">지원 학위과정</p>
+                                    <ul class="bulletList">
+                                        <li>석사, 박사 또는 석·박사 통합 과정 (별도 전공 제한 없음)</li>
+                                        <li>
+                                            1인에게 1개 과정에 대하여만 지원가능 (2회 이상 수혜 불가)
+                                            <p class="grayTxt">ex) 석사과정을 지원받은 이력이 있는 경우, 박사과정 지원 불가</p>
+                                        </li>
+                                    </ul>
+
+                                    <p class="bulletTxt">지원금액</p>
+                                    <ul class="bulletList">
+                                        <li>학기당 300만원 범위 내 본인부담 입학·등록금 실비</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">선정기준</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">기존 대상자</p>
+                                    <ul class="bulletList">
+                                        <li>지원기준을 충족하며, 직전학기 평균 평점이 B0(100점 환산 시 80점) 이상 (미충족 시 기존대상자 자격 박탈)</li>
+                                    </ul>
+
+                                    <p class="bulletTxt">신규 신청자</p>
+                                    <p class="boldTxt">정량평가·정성평가 등 종합 평가점수 상위자 선정</p>
+                                    <ul class="bulletList">
+                                        <li>공단의 생활지원금·교육지원금을 받지 않은 사람 우선 선정</li>
+                                        <li>학업계획서 평가 합산점수가 18점[미흡] 이하일 경우 선정에서 제외</li>
+                                        <li>체육회 추천인원이 지원 인원 이내일 경우, 적부 형식으로 평가</li>
+                                    </ul>
+
+                                    <div class="tbTitArea">
+                                        <strong class="tit">종합 평가점수 산출표</strong>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbInfo">
+                                            <caption>종합 평가점수 산출표로써 구분, 지급시기, 반영비율 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:50%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>지급시기</th>
+                                                    <th>반영비율</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="left">
+                                                        <span>① 체육회 추천 순위(정량평가)</span>
+                                                    </td>
+                                                    <td class="left">
+                                                        <span class="mTit">지급시기</span>
+                                                        <span>추천순위 분위별 점수 차등부여 (체육회별 자체 평가기준에 따름)</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">반영비율</span>
+                                                        <span>50%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left">
+                                                        <span>② 학업계획서 평가(정성평가)</span>
+                                                    </td>
+                                                    <td class="left">
+                                                        <span class="mTit">지급시기</span>
+                                                        <span>평가위원회 서면평가(내·외부 평가위원 4명 구성)</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">반영비율</span>
+                                                        <span>45%%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left">
+                                                        <span>③ 체육학문 발전기여</span>
+                                                    </td>
+                                                    <td class="left">
+                                                        <span class="mTit">지급시기</span>
+                                                        <span>체육분야 전공 우대</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="mTit">반영비율</span>
+                                                        <span>5%</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="tableOutTxt">
+                                            <p>※ 신규대상자 선정 시 공단의 생활지원금·교육지원금(국내대학원, 국외유학)을 받지 않은 사람을 우선하여 선정</p>
+                                            <p>※ 최종점수 동점자 발생 시 학업계획 평가점수 상위자를 우선하여 최종 순위배정(그럼에도 동률 시 체육회 순위로 판단)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">신규 신청자 지급절차</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="stapListArea">
+                                        <ul class="stapList">
+                                            <li>
+                                                <b>STEP 01</b>
+                                                <strong class="imgText">
+                                                    신규 신청 및 서류 제출
+                                                </strong>
+                                                <p>신청자 → 경기단체 → 대한체육회, 대한장애인체육회</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 02</b>
+                                                <strong class="imgRecommend">대한체육회, 대한장애인체육회 추천</strong>
+                                                <p>대한체육회, 대한장애인체육회 → 공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 03</b>
+                                                <strong class="imgFile">추천내역 검토 및 지급 확정</strong>
+                                                <p>공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 04</b>
+                                                <strong class="imgHouse">국내대학원 교육지원금지급</strong>
+                                                <p>공단 → 대상자</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">기존 신청자 지급절차</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="stapListArea">
+                                        <ul class="stapList">
+                                            <li>
+                                                <b>STEP 01</b>
+                                                <strong class="imgPeople3">기존 대상자 온라인 신청</strong>
+                                                <p>체육인복지지원 홈페이지 회원가입 및 로그인</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 02</b>
+                                                <strong class="imgRecommend">국내대학원 교육지원금 신청 현황 조회</strong>
+                                                <p>마이페이지 > 복지신청 현황</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 03</b>
+                                                <strong class="imgFile">학기별 신청 및 서류 제출</strong>
+                                                <p>기존 대상자 지원 신청 버튼 선택 후 작성</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 04</b>
+                                                <strong class="imgHouse">국내대학원 교육지원금지급</strong>
+                                                <p>공단 → 대상자</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partFooter">
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 l-g">복지 전체보기</button>
+                                        <button type="button" class="btn h56 f-dg">기존대상자 지원 신청하기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>
