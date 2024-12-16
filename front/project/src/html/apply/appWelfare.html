@@ -37,6 +37,192 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 콘텐츠 영역 하위 레이아웃  -->
+                        <div class="sectionArea cptApply">
+                            <!-- tab1 -->
+                            <div class="modTab calDiv2 grp">
+                                <div class="inner">
+                                    <ul>
+                                        <li class="active"><a href="#none">전체</a></li>
+                                        <li class=""><a href="#none">국가대표</a></li>
+                                        <li class=""><a href="#none">은퇴선수</a></li>
+                                        <li class=""><a href="#none">학생선수</a></li>
+                                        <li class=""><a href="#none">원로체육인</a></li>
+                                        <li class=""><a href="#none">체육유공자</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="applyListWrap">
+                                <ul class="applyListArea">
+
+                                    <!-- 개발 필요한 부분 주석으로 설명되어있는 샘플케이스 -->
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                                <!-- 페이지 개발시 '접수상태'별 클래스명 추가적용
+                                                    * 클래스명 [status]에 분류에 따라 더블클래스 추가
+                                                    [알림예약 - alarm] [상시접수 - always] [접수중 - ing] [종료 - end]
+                                                 -->
+                                                <span class="status alarm">알림예약</span>
+                                                <!-- 
+                                                <span class="status always">상시접수</span>
+                                                <span class="status ing">접수중</span>
+                                                <span class="status end">종료</span> 
+                                                -->
+                                                <!--// 페이지 개발시 '접수상태'별 클래스명 추가적용 -->
+                                            </div>
+                                            <strong class="tit">경기력 성과포상금(선수)</strong>
+                                            <p class="txt">국제대회에 참가하여 포상금 평가점수 20점 이상 획득한 선수</p>
+                                        </a>
+                                    </li>
+                                    <!--// 개발 필요한 부분 주석으로 설명되어있는 샘플케이스 -->
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                                <span class="status always">상시접수</span>
+                                            </div>
+                                            <strong class="tit">경기력 성과포상금(지도자)</strong>
+                                            <p class="txt">국제대회에서 입상한 국각대표선수를 직접 지도한 감독·코치등 지도자</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                                <span class="status end">종료</span> 
+                                            </div>
+                                            <strong class="tit">생활지원금</strong>
+                                            <p class="txt">「국민기초생활 보장법」에 따른 수급자·차상위계층 혹은 이에 준하는 사람 중 국가대표 선수·지도자</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">국내대학원 교육지원금</strong>
+                                            <p class="txt">국내 대학원의 교육과정을 이수하고자 하는 국가대표 선수·지도자</p>
+                                            <span class="hash">기존 대상자 온라인 신청 가능</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">국외유학 교육지원금</strong>
+                                            <p class="txt">국외 교육기관의 교육과정 및 연수기관의 연수과정을 통한 체육분야 국외유학을 희망하는  국가대표 선수·지도자</p>
+                                            <span class="hash">기존 대상자 온라인 신청 가능</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting national">국가대표 선수</b>
+                                            </div>
+                                            <strong class="tit">보험지원금</strong>
+                                            <p class="txt">국제대회에 참가하거나 국제대회 참가를 위한 훈련에 참여하는 국가대표 선수·지도자</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting retire">은퇴선수</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">스포츠클럽 창업지원</strong>
+                                            <p class="txt">은퇴(예정)선수 중 스포츠클럽 창업으로 경력전환 희망자</p>
+                                            <span class="hash">온라인 신청 가능</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting retire">은퇴선수</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">국내외 지도자 현장연수</strong>
+                                            <p class="txt">은퇴(예정)선수 중 지도자로  경력전환 희망자</p>
+                                            <span class="hash">온라인 신청 가능</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting retire">은퇴선수</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">인턴십 취업지원</strong>
+                                            <p class="txt">체육인 중 비스포츠분야 취업을 희망하는 자</p>
+                                            <span class="hash">온라인 신청 가능</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting student">학생선수</b>
+                                                <span class="status alarm">알림예약</span>
+                                            </div>
+                                            <strong class="tit">체육장학금</strong>
+                                            <p class="txt">대한체육회, 대한장애인체육회, 중앙경기종목단체가 주최하는 전국 규모대회에서 3위 이상으로 상위 입상한 학생선수</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting student">학생선수</b>
+                                                <span class="status alarm">알림예약</span>
+                                            </div>
+                                            <strong class="tit">스포츠꿈나무 특기장려금</strong>
+                                            <p class="txt">
+                                                •법정 저소득층 가구(기초생활수급가구, 차상위계층)<br>
+                                                •체육단체 종목 선수로 등록된 학생
+                                            </p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting elder">원로체육인</b>
+                                                <span class="status ing">접수중</span>
+                                            </div>
+                                            <strong class="tit">원로체육인지원</strong>
+                                            <p class="txt">체육진흥의 공로가 있는 60세 이상의 원로 체육인</p>
+                                        </a>
+                                    </li>
+
+                                    <li class="list">
+                                        <a href="#none" class="link">
+                                            <div class="classifyBox">
+                                                <b class="targeting major">체육유공자</b>
+                                                <span class="status always">상시접수</span>
+                                            </div>
+                                            <strong class="tit">대한민국 체육유공자 보상</strong>
+                                            <p class="txt">국가대표선수나 국가대표선수 지도자 국제경기대회의 경기 훈련 또는 이를 위한 지도 중 사망, 심한 장애를 갖게 된 경우</p>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>
