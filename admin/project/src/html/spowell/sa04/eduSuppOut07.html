@@ -1,0 +1,437 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+    
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인정보</div>
+        </div>
+    </div>
+    
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>이름 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" disabled>
+                        </div>
+                    </td>
+                    <th>주민등록번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText"disabled>
+                            <!-- <button type="button" class="soloBtn bLine">번호확인</button> -->
+                        </div>
+                    </td>
+                    <th>등록번호</th>
+                    <td>00000</td>
+                </tr>
+                <tr>
+                    <th>대상구분 <span class="required">*</span></th>
+                    <td>
+                        선수 / 지도자 / 심판
+                    </td>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>
+                        비장애 / 장애
+                    </td>
+                    <th>종목 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt"disabled>
+                                <option value="">선택</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대전화 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt"disabled>
+                                <option value="">010</option>
+                            </select>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText"disabled>
+                            <div class="textBox deco">-</div>
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                    <th>이메일 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                            <div class="textBox Deco">@</div>
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                    <th>국가대표 경력 <span class="required">*</span></th>
+                    <td>
+                        예 / 아니오
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td colspan="3">
+                        <div class="frmGroup">
+                            <!-- <button type="button" class="soloBtn bLine">주소검색</button> -->
+                            <input type="text" class="iptText"disabled>
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                    <th>소속</th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">교육과정정보</div>
+        </div>
+    </div>
+    
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>유학국가 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                    <th>유학기관 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                    <th>유학과정 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText"disabled>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>과정 <span class="required">*</span></th>
+                    <td>
+                        석사 / 박사 / 석박사
+                    </td>
+                    <th>전공 <span class="required">*</span></th>
+                    <td>
+                        000
+                    </td>
+                    <th>학업기간 <span class="required">*</span></th>
+                    <td>
+                        2024~10 - 2025~01
+                    </td>
+                </tr>
+                <tr>
+                    <th>진로계획 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" disabled>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">지원회차정보</div>
+        </div>
+    </div>
+    
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>1회차</th>
+                    <th>2회차</th>
+                    <th>3회차</th>
+                    <th>4회차</th>
+                    <th>5회차</th>
+                    <th>6회차</th>
+                    <th>7회차</th>
+                    <th>8회차</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>지원시기</th>
+                    <td class="center">YYYY 상반기</td>
+                    <td class="center">YYYY 상반기</td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">2024년</option>
+                            </select>
+                            <select name="" id="" class="iptSlt">
+                                <option value="">상반기</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>지원금액</th>
+                    <td class="center">1,000 <span class="currency">달러</span></td>
+                    <td class="center">1,320원</td>
+                    <td class="center">1,320,000 원</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                </tr>
+                <tr>
+                    <th>적용환율</th>
+                    <td class="center">500 <span class="currency">달러</span></td>
+                    <td class="center">1,320원</td>
+                    <td class="center">675,000 원</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                </tr>
+                <tr>
+                    <th>실지급금액(원)</th>
+                    <td class="center">500 <span class="currency">달러</span></td>
+                    <td class="center">1,320원</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                </tr>
+                <tr>
+                    <th>지급일자</th>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                </tr>
+                <tr>
+                    <th>확정일자</th>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                    <td class="center">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">진행상태정보</div>
+        </div>
+    </div>
+    
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:auto">
+                <col style="width:auto">
+                <col style="width:auto">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>진행상태</th>
+                    <th>사유</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        <div class="frmGRoup">
+                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001" checked><label for="rdo001" class="iptLbl">진행</label></div>
+                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">취소</label></div>
+                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">종료</label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        -
+                    </td>
+                    <td class="center">
+                        <input type="text" class="iptTxt">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmGRoup">
+                            <div class="frmChoBox"><input id="rdo0011" type="radio" class="iptRdo" name="rdo002" ><label for="rdo0011" class="iptLbl">진행</label></div>
+                            <div class="frmChoBox"><input id="rdo0022" type="radio" class="iptRdo" name="rdo002"checked><label for="rdo0022" class="iptLbl">취소</label></div>
+                            <div class="frmChoBox"><input id="rdo0033" type="radio" class="iptRdo" name="rdo002"><label for="rdo0033" class="iptLbl">종료</label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGRoup">
+                            <div class="frmChoBox"><input id="rdo00111" type="radio" class="iptRdo" name="rdo003" ><label for="rdo00111" class="iptLbl">성적미달</label></div>
+                            <div class="frmChoBox"><input id="rdo00222" type="radio" class="iptRdo" name="rdo003"><label for="rdo00222" class="iptLbl">자퇴</label></div>
+                            <div class="frmChoBox"><input id="rdo00333" type="radio" class="iptRdo" name="rdo003"><label for="rdo00333" class="iptLbl">징계</label></div>
+                            <div class="frmChoBox"><input id="rdo00333" type="radio" class="iptRdo" name="rdo003"><label for="rdo00333" class="iptLbl">기타</label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <input type="text" class="iptTxt">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <div class="frmGRoup">
+                            <div class="frmChoBox"><input id="rdo00111" type="radio" class="iptRdo" name="rdo003" ><label for="rdo00111" class="iptLbl">진행</label></div>
+                            <div class="frmChoBox"><input id="rdo00222" type="radio" class="iptRdo" name="rdo003"><label for="rdo00222" class="iptLbl">취소</label></div>
+                            <div class="frmChoBox"><input id="rdo00333" type="radio" class="iptRdo" name="rdo003"checked><label for="rdo00333" class="iptLbl">종료</label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <div class="frmGRoup">
+                            <div class="frmChoBox"><input id="rdo00111" type="radio" class="iptRdo" name="rdo003" ><label for="rdo00111" class="iptLbl">지원기간 종료</label></div>
+                            <div class="frmChoBox"><input id="rdo00222" type="radio" class="iptRdo" name="rdo003"><label for="rdo00222" class="iptLbl">학위취득</label></div>
+                            <div class="frmChoBox"><input id="rdo00333" type="radio" class="iptRdo" name="rdo003"><label for="rdo00333" class="iptLbl">기타</label></div>
+                        </div>
+                    </td>
+                    <td class="center">
+                        <input type="text" class="iptTxt">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="txtBox clar">
+        연장신청 : '학업기간'에 대한 항목을 수정해서 반영합니다.<br>
+        <!-- 중지신청 : 예정된 학기의 지원시기를 복학예정시기로 수정해서 반영합니다.<br> -->
+        종료/취소신청 : 진행상태와 사유정보를 등록해서 반영합니다.
+    </div>
+
+
+     <!-- 그리드/테이블 하단 버튼 양측 -->  
+     <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignR">
+            <div class="comSideOpt">
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>
