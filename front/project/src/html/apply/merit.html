@@ -37,6 +37,264 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 콘텐츠 영역 하위 레이아웃 : 윗간격 60  -->
+                        <div class="sectionArea cptApply">
+                            <div class="sectionPart">
+                                <div class="bannerArea">
+                                    <div class="bannerTop">
+                                        <!-- 페이지 개발시 '접수상태'별 클래스명 추가적용
+                                        * 클래스명 [status]에 분류에 따라 더블클래스 추가
+                                        [알림예약 - alarm] [상시접수 - always] [접수중 - ing] [종료 - end]
+                                        -->
+                                        <span class="status always">상시접수</span>
+                                        <!-- 
+                                        <span class="status alarm">알림예약</span>
+                                        <span class="status ing">접수중</span>
+                                        <span class="status end">종료</span> 
+                                        -->
+                                        <!--// 페이지 개발시 '접수상태'별 클래스명 추가적용 -->
+
+                                        <h4 class="tit">대한민국 체육유공자 보상</h4>
+                                        <p class="txt">
+                                            대한민국체육유공자 및 유족 대상으로 연금, 수당 등 보상을 지원합니다.
+                                        </p>
+                                    </div>
+
+                                    <ul class="bannerList">
+                                        <li class="applyTarget">
+                                            <strong class="tit">지원대상</strong>
+                                            <p class="txt">국가대표 선수·지도자 중 국제경기대회의 경기 · 훈련 · 지도 중 사망한 자, 심한 장애를 가진 자 등</p>
+                                        </li>
+                                        <li class="applyText">
+                                            <strong class="tit">지원내용</strong>
+                                            <p class="txt">연금(유공자, 가족) 및 간호수당 등 각종 수당</p>
+                                        </li>
+                                        <li class="applyHow">
+                                            <strong class="tit">신청방법</strong>
+                                            <p class="txt">국민체육진흥공단에 문의</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원대상</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">국가대표선수나 국가대표 지도자 중에서 국제경기대회의 경기 훈련 또는 이를 위한 지도 중</p>
+                                    <ul class="bulletList">
+                                        <li>사망한 경우</li>
+                                        <li>「장애인복지법」에 따른 ‘장애의 정도가 심한 장애’를 갖게 된 경우</li>
+                                        <li>「장애인복지법」에 따른 ‘장애의 정도가 심하지 않은 장애’가 ‘장애의 정도가 심한 장애’가 된 경우</li>
+                                        <li>「장애인복지법」에 따른 ‘장애의 정도가 심한 장애’를 가진 사람이 다른 ‘장애의 정도가 심한 장애’를 갖게 된 경우</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원내용</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="cptTable">
+                                        <table class="tbMoType">
+                                            <caption>지원내용에 대한 표로써 구분, 지원기준, 지원대상 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:10%">
+                                                <col style="width:10%">
+                                                <col style="width:15%">
+                                                <col style="width:15%">
+                                                <col style="width:15%">
+                                                <col style="width:15%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">구분</th>
+                                                    <th colspan="4">지원기준</th>
+                                                    <th>지원대상</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2" rowspan="3">연금</td>
+                                                    <td rowspan="2">구분</td>
+                                                    <td rowspan="2">유공자</td>
+                                                    <td colspan="2">유족</td>
+                                                    <td rowspan="2">본인 또는 유족 1명</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25세 미만 자녀/미성년 동생</td>
+                                                    <td>그외</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>지급액(천원)</td>
+                                                    <td>2,245</td>
+                                                    <td>1,400</td>
+                                                    <td>1,200</td>
+                                                    <td rowspan="7">연금수급자</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2" rowspan="6">생활안정수당</td>
+                                                    <td colspan="4">연금수급자 중 생활이 곤란한 사람</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">구분</td>
+                                                    <td colspan="2">지급액(천원)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" rowspan="2">「국민기초생활 보장법」에 따른 수급자</td>
+                                                    <td colspan="2">3인 가족 이하 200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">4인 가족 이상 250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" rowspan="2">「국민기초생활 보장법」에 다른 차상위층</td>
+                                                    <td colspan="2">3인 가족 이하 150</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">4인 가족 이상 200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" rowspan="2">간호수당</td>
+                                                    <td colspan="2">구분</td>
+                                                    <td colspan="2">월 지급액(천원)</td>
+                                                    <td rowspan="2">본인</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">「장애인복지법」에 따른 장애의 정도가 심한 장애인으로서 다른 사람의 보호 없이는 활동이 어려운 사람</td>
+                                                    <td colspan="2">2,100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" rowspan="2">사망위로금</td>
+                                                    <td colspan="2">구분</td>
+                                                    <td colspan="2">지급액(천원)</td>
+                                                    <td rowspan="2">유족</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">사망한 대한민국체육유공자가 「장애인복지법」에 따른 장애의 정도가 심한 장애인에 해당하는 경우</td>
+                                                    <td colspan="2">1,504</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">취업지원</td>
+                                                    <td colspan="4">
+                                                        1. 직업능력개발훈련시설에서의 훈련비용(월 40천원) <br>
+                                                        2. 취업에 필요한 자격 취득 등에 드는 비용 일부 <br>
+                                                        - (유공자) 수강료의 ½, 연간 500천원 이내 <br>
+                                                        - (배우자·자녀) 수강료의 ½, 연간 250천원 이내
+                                                    </td>
+                                                    <td>본인, 배우자, 자녀</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">주택 우선공급</td>
+                                                    <td colspan="4">
+                                                        「주택공급에 관한 규칙」에 따라 국민주택·민영주택의 특별분양 특례 <br>
+                                                        - 신청일로부터 입주할 때까지 무주택 세대구성원인 경우 <br>
+                                                    </td>
+                                                    <td>본인 및 유가족</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">생업지원</td>
+                                                    <td colspan="4">
+                                                        국민체육진흥공단, 대한체육회, 대한장애인체육회, 태권도진흥재단 등 체육 분야 공공기관의 소관 시설 안 일상 생활용품 판매를 위한 매점 운영 및 자동판매기 설치 허가 신청 시 우선 반영
+                                                    </td>
+                                                    <td>본인 및 유가족</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2">그 밖의 지원</td>
+                                                    <td>요양지원</td>
+                                                    <td colspan="4">「노인장기요양보험법」에 따른 재가급여·시설급여를 받는 경우 본인부담비용의 80%이내 지원</td>
+                                                    <td>본인, 배우자, 유족 중 부모</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>고궁 등의 이용지원</td>
+                                                    <td colspan="4">국가나 지방자치단체에서 관리하는 고궁, 공원, 기념관, 공연장, 수목원 등 이용 시 무료 또는 요금 할인</td>
+                                                    <td>본인 및 보조자, 배우자, 선순위 유족</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지급시기</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="tbTitArea">
+                                        <strong class="tit">연중지급</strong>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbMoType">
+                                            <caption>지급시기에 대한 표로써 구분, 지급시기 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:35%">
+                                                <col style="width:65%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>지급시기</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>연금, 간호수당</td>
+                                                    <td>매월 30일 지급</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>그 외</td>
+                                                    <td>수급자 신청에 따라 지급</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지급절차</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="stapListArea">
+                                        <ul class="stapList">
+                                            <li>
+                                                <b>STEP 01</b>
+                                                <strong class="imgPeople1">유공자 지정 신청</strong>
+                                                <p>신청자 → 공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 02</b>
+                                                <strong class="imgFile">신청접수 및 내용검토</strong>
+                                                <p>공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 03</b>
+                                                <strong class="imgCheck">지정심사위원회 심사·의결</strong>
+                                                <p>문화체육관광부</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 04</b>
+                                                <strong class="imgAdjust36">유공자 등록, 보상시행</strong>
+                                                <p>공단</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partFooter">
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 l-g">복지 전체보기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>

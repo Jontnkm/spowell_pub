@@ -37,6 +37,177 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 공통 : 신청하기 페이지 -->
+                        <div class="cptApplyCreate">
+                            <h4 class="applyTit">스포츠클럽 창업지원 신청</h4>
+
+                            <div class="tbArea">
+                                <div class="tbTitArea">
+                                    <strong class="tit">신청인 기본정보</strong>
+                                </div>
+                                <div class="cptTable defaultInfo">
+                                    <table class="tbInfo type02">
+                                        <caption>신청인 기본정보의 표로써 이름, 주민등록번호, 체육인 구분, 종목 등으로 구성됨</caption>
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col style="width:auto">
+                                            <col style="width:160px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">이름</th>
+                                                <td class="left">홍길동</td>
+                                                <th scope="row">주민등록번호</th>
+                                                <td class="left">880101-1******</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">체육인 구분</th>
+                                                <td class="left">선수</td>
+                                                <th scope="row">종목</th>
+                                                <td class="left">양궁</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tbArea">
+                                <div class="tbTitArea">
+                                    <strong class="tit">신청인 추가정보</strong>
+                                </div>
+                                <div class="cptTable addInfo">
+                                    <table class="tbMoType">
+                                        <colgroup>
+                                            <col style="width:160px">
+                                            <col style="width:auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>항목1</th>
+                                                <td class="left">
+                                                    <div class="cptForm">
+                                                        <div class="ipt">
+                                                            <!-- title 안의 내용을 th의 문구와 일치 필요 -->
+                                                            <input type="text" title="항목1 입력" placeholder="" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>항목2</th>
+                                                <td class="left">
+                                                    <div class="cptForm">
+                                                        <div class="ipt">
+                                                            <!-- title 안의 내용을 th의 문구와 일치 필요 -->
+                                                            <input type="text" title="항목2 입력" placeholder="" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>항목3</th>
+                                                <td class="left">
+                                                    <div class="cptForm">
+                                                        <div class="ipt">
+                                                            <!-- title 안의 내용을 th의 문구와 일치 필요 -->
+                                                            <input type="text" title="항목3 입력" placeholder="" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tbArea">
+                                <div class="tbTitArea">
+                                    <strong class="tit">제출서류</strong>
+                                </div>
+                                <div class="cptTable">
+                                    <table class="tbInfo">
+                                        <colgroup>
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                            <col style="width:12.5%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                                <th rowspan="2">구분</th>
+                                            </tr>
+                                            <tr class="scnd">
+                                                <th>구분</th>
+                                                <th>구분</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <!--콤보 in 테이블-->
+                                                    <div class="cptForm">
+                                                        <div class="dropDown">
+                                                            <button type="button" class="" title="열기">내용</button>
+                                                            <div class="dropDownBox">
+                                                                <ul class="ddCont">
+                                                                    <li><a href="#none">제목테스트</a></li>
+                                                                    <li><a href="#none">제목테스트</a></li>
+                                                                    <li><a href="#none">제목테스트</a></li>
+                                                                    <li><a href="#none">제목테스트</a></li>
+                                                                    <li><a href="#none">제목테스트</a></li>
+                                                                    <li><a href="#none" class="selected">내용</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                                <td>월정금</td>
+                                            </tr>
+                                            <tr>
+                                                <td>일시장려금</td>
+                                                <td>일시장려금</td>
+                                                <td>일시장려금</td>
+                                                <td>국민은행<br>000000-00-000000</td>
+                                                <td>일시장려금</td>
+                                                <td>
+                                                    <span class="txtRed">일시장려금</span>
+                                                </td>
+                                                <td>
+                                                    <div class="cptForm">
+                                                        <input type="text" title="장려금입력창" placeholder="장려금종류를 입력해주세요">
+                                                    </div> 
+                                                </td>
+                                                <td>일시장려금</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">이전</button>
+                                <button type="button" class="btn h56 f-dg">신청하기</button>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>

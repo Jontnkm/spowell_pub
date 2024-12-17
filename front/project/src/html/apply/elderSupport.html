@@ -37,6 +37,300 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <!-- 콘텐츠 영역 하위 레이아웃 : 윗간격 60  -->
+                        <div class="sectionArea cptApply">
+                            <div class="sectionPart">
+                                <div class="bannerArea">
+                                    <div class="bannerTop">
+                                        <!-- 페이지 개발시 '접수상태'별 클래스명 추가적용
+                                        * 클래스명 [status]에 분류에 따라 더블클래스 추가
+                                        [알림예약 - alarm] [상시접수 - always] [접수중 - ing] [종료 - end]
+                                        -->
+                                        <span class="status ing">접수중</span>
+                                        <!-- 
+                                        <span class="status alarm">알림예약</span>
+                                        <span class="status ing">접수중</span>
+                                        <span class="status always">상시접수</span>
+                                        <span class="status ing">접수중</span>
+                                        <span class="status end">종료</span> 
+                                        -->
+                                        <!--// 페이지 개발시 '접수상태'별 클래스명 추가적용 -->
+
+                                        <h4 class="tit">원로체육인지원</h4>
+                                        <p class="txt">
+                                            체육진흥에 뚜렷한 공적이 있는 60세 이상의 체육인에게 의료비·생계비를 지원합니다.
+                                        </p>
+                                    </div>
+
+                                    <ul class="bannerList">
+                                        <li class="applyTarget">
+                                            <strong class="tit">지원대상</strong>
+                                            <p class="txt">체육진흥의 공로가 있는 60세 이상 원로 체육인</p>
+                                        </li>
+                                        <li class="applyText">
+                                            <strong class="tit">지원내용</strong>
+                                            <p class="txt">
+                                                의료비 지원 : 1인당 최고 3,000만원 이내 진료비 <br>
+                                                생활비 지원 : 1인당 최고 1,000만원
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원대상</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt light">체육진흥에 공로가 있는 60세 이상의 원로체육인</p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지원내용</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt light">1인당 매월 40만원 장려금 지원(단, 사용부문 한정)</p>
+                                    <div class="cptTable">
+                                        <table class="tbMoType">
+                                            <caption>지원내용에 대한 표로써 구분, 지원내용 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col style="width:70%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>구분</th>
+                                                    <th>지원내용</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>의료비 지원</td>
+                                                    <td>질병, 부상 등으로 1년 이상 장기요양 중인 사람을 대상으로 3,000만원 이내, 진료일수가 180일 이내인 진료금액 중 자기부담금 지원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>생계비 지원</td>
+                                                    <td>「국민기초생활 보장법」에 의한 수급자 또는 차상위계층을 대상으로 1,000만원 이내 지원</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="bulletSign">의료비 지원 기준 - 마지막 진료기록이 공고일 기준 90일 이내일 경우 인정</p>
+                                    <p class="grayTxt">
+                                        ※ 의료비 지원 대상 제외 항목 <br>
+                                        ① 미용·성형을 위한 비용 ② 간병을 위한 비용 ③ 요양병원 의료비용 ④ 치과 보철 및 임플란트 비용 ⑤ 질병의 예방을 위한 진료비용 ⑥ 한방첩약 조제비 ⑦ 국가 등 의료비지원금 및 민간보험금 ⑧ 특실 또는 1인용 병상 이용 부담비용(부득이한 사유로 인한 경우 제외) ⑨ 그 밖에 신체의 필수 기능개선 목적이 아닌 진료 등 지원 필요성이 적다고 인정되는 비용
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">선정기준</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <p class="bulletTxt">‘원로 체육인 지원 대상 세부 기준’에 따른 평가점수 상위자 선정</p>
+                                    <ul class="bulletList">
+                                        <li>원로 체육인 지원 대상 세부 기준 항목</li>
+                                        <li>선수 경기력 성과포상금 및 원로 체육인 지원을 수혜 받지 않은 자 우선 선정</li>
+                                        <li>‘생활지원금’과 동시 신청 시 ‘원로 체육인 지원’ 우선(중복지원 불가)</li>
+                                        <li>제외대상 : 「체육인 복지법」 제22조에 따른 범죄경력이 있는 사람</li>
+                                    </ul>
+
+
+                                    <div class="tbTitArea">
+                                        <strong class="tit">원로 체육인 지원 대상 세부 기준</strong>
+                                    </div>
+                                    <div class="cptTable">
+                                        <table class="tbMoType">
+                                            <caption>원로 체육인 지원 대상 세부 기준에 대한 표로써 구분, 평가항목, 만점, 배점항목 및 기준, (비중)점수구간, 평가방법 등으로 구성됨</caption>
+                                            <colgroup>
+                                                <col style="width:15%">
+                                                <col style="width:10%">
+                                                <col style="width:5%">
+                                                <col style="width:30%">
+                                                <col style="width:15%">
+                                                <col style="width:25%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">구분</th>
+                                                    <th colspan="2" rowspan="2">배점항목 및 기준</th>
+                                                    <th rowspan="2">(비중)점수구간</th>
+                                                    <th rowspan="2">평가방법</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="tbBdTop">평가항목</th>
+                                                    <th class="tbBdTop tbBdRight">만점</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="4">체육진흥의 공</td>
+                                                    <td rowspan="4">20</td>
+                                                    <td colspan="2">상훈기록</td>
+                                                    <td>(20%)</td>
+                                                    <td rowspan="4">최고 상훈기록 기준 점수 책정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>정부 훈·포장, 체육상</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>B</td>
+                                                    <td>체육회 체육상</td>
+                                                    <td>17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C</td>
+                                                    <td>기타 상훈</td>
+                                                    <td>14</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="5">소득수준</td>
+                                                    <td rowspan="5">30</td>
+                                                    <td colspan="2">「국민기초생활 보장법」에 따른 급여의 종류 등</td>
+                                                    <td>(30%)</td>
+                                                    <td rowspan="5">수급자 또는 차상위계층 증명서 기반 점수책정 *조건부수급 제외</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>생계급여</td>
+                                                    <td>30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>B</td>
+                                                    <td>의료급여</td>
+                                                    <td>26</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C</td>
+                                                    <td>주거급여</td>
+                                                    <td>22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>D</td>
+                                                    <td>교육급여(또는 차상위계층)</td>
+                                                    <td>18</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="6">연간 의료비 수준</td>
+                                                    <td rowspan="6">25</td>
+                                                    <td colspan="2">연간 의료비 수준</td>
+                                                    <td>(25%)</td>
+                                                    <td rowspan="6">병원비 진료 영수증 기반 금액산정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>3천만원 초과</td>
+                                                    <td>25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>B</td>
+                                                    <td>2천만원 이상 3천만원 미만</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C</td>
+                                                    <td>1천만원 이상 2천만원 미만</td>
+                                                    <td>18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>D</td>
+                                                    <td>5백만원 이상 1천만원 미만</td>
+                                                    <td>14</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>E</td>
+                                                    <td>5백만원 미만이나 불치병</td>
+                                                    <td>10</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="5">투병기간</td>
+                                                    <td rowspan="5">25</td>
+                                                    <td colspan="2">투병기간</td>
+                                                    <td>(25%)</td>
+                                                    <td rowspan="5">의료비기록 기준</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>20년 이상</td>
+                                                    <td>25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>B</td>
+                                                    <td>15년 이상 20년 미만</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C</td>
+                                                    <td>10년 이상 15년 미만</td>
+                                                    <td>18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>D</td>
+                                                    <td>1년 이상 10년 미만</td>
+                                                    <td>14</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">합계</td>
+                                                    <td colspan="4">100</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="bulletSign">동점 시, ①소득(자산포함)이 적은 사람, ②부양가족이 없는 사람, ③연간의료비 지출이 많은 사람, ④장애인, ⑤주민등록상 고연령자 순으로 순위를 산정한다.</p>
+                                    <p class="bulletSign">
+                                        체육진흥의 공 상훈 기록 <br>
+                                        가. 체육훈·포장 : 「상훈법」 시행령 증서 양식 내 ‘체육활동을 통해 국위선양과 국가 체육발전에 이바지한 공로’에 따른 훈·포장 사유 적시 <br>
+                                        나. 대한민국체육상 : 「국민체육진흥법」 시행령 제13조에 따라 체육발전·연구·지도·진흥에 뚜렷한 공적이 인정되는 경우 수여 <br>
+                                        다. 체육회 체육상 : 창의적이고 헌신적 노력으로 스포츠 발전에 기여하는 등 뚜렷한 공적이 있는 유공자 선정·포상 <br>
+                                        라. 기타 상훈 : 수여사유가 지원 취지와 부합하고, 수여기관의 신뢰도(지자체·공공기관·경기단체 등)가 보장되는 경우 인정
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="sectionPart">
+                                <div class="partHeader">
+                                    <h4 class="partTit">지급절차</h4>
+                                </div>
+                                <div class="partContainer">
+                                    <div class="stapListArea">
+                                        <ul class="stapList">
+                                            <li>
+                                                <b>STEP 01</b>
+                                                <strong class="imgText">대상자 신청 및 서류 제출</strong>
+                                                <p>신청자 → 공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 02</b>
+                                                <strong class="imgFile">신청내역 검토 및 지급 확정</strong>
+                                                <p>공단</p>
+                                            </li>
+                                            <li>
+                                                <b>STEP 03</b>
+                                                <strong class="imgMedal">원로체육인 지원 시행</strong>
+                                                <p>공단 → 대상자</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="partFooter">
+                                    <div class="comButton">
+                                        <button type="button" class="btn h56 l-g">복지 전체보기</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>
