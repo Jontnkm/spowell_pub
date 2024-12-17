@@ -23,7 +23,7 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>출생년도</th>
+                    <th>사업년도</th>
                     <td>
                         <div class="frmGroup">
                             <select name="" id="" class="iptSlt frmSm">
@@ -33,8 +33,12 @@
                                 <option value=""></option>
                                 <option value=""></option>
                             </select>
-                            <div class="textBox Deco">~</div>
-                            <select name="" id="" class="iptSlt frmSm">
+                        </div> 
+                    </td>
+                    <th>종목구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
                                 <option value=""></option>
                                 <option value=""></option>
                                 <option value=""></option>
@@ -42,20 +46,6 @@
                                 <option value=""></option>
                             </select>
                         </div> 
-                    </td>
-                    <th>장애여부</th>
-                    <td>
-                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
-                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
-                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>성별</th>
-                    <td>
-                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
-                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남자</label></div>
-                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여자</label></div>
                     </td>
                 </tr>
                 <tr>
@@ -71,7 +61,7 @@
     <!-- 그리드/테이블 상단 -->
     <div class="cptGroupTop">
         <div class="alignL">
-            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+            <div class="unit"><span class="text">사업년도 : <span class="total">2024</span>년</span></div>
         </div>
         <div class="alignR">
             <div class="comSideOpt">
@@ -94,83 +84,75 @@
     <div class="cptGrid withScroll">
         <table class="gridTb">
             <colgroup>
-                <col style="width:50px;">
-                <col style="width:100px;">
-                <col style="width:120px;">
-                <col style="width:100px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
-                <col style="width:150px;">
+                
             </colgroup>
             <thead>
                 <tr>
-                    <th>연번</th>
-                    <th>등록번호</th>
-                    <th>종목</th>
-                    <th>성명</th>
-                    <th>주민등록번호</th>
-                    <th>지급총액</th>
-                    <th>월정금</th>
-                    <th>일시금</th>
-                    <th>일시장려금</th>
-                    <th>특별장려금</th>
-                    <th>누락평가점수</th>
+                    <th colspan="2">지역구분</th>
+                    <th colspan="2">계</th>
+                    <th colspan="2">초등학교</th>
+                    <th colspan="2">중학교</th>
+                    <th colspan="2">고등학교</th>
+                    <th colspan="2">특수학교</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>시/도</th>
+                    <th>시/군/구</th>
+                    <th>신청인원</th>
+                    <th>비율(%)</th>
+                    <th>신청인원</th>
+                    <th>비율(%)</th>
+                    <th>신청인원</th>
+                    <th>비율(%)</th>
+                    <th>신청인원</th>
+                    <th>비율(%)</th>
+                    <th>신청인원</th>
+                    <th>비율(%)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>10015</td>
-                    <td>양궁</td>
-                    <td>김재덕</td>
-                    <td>000412 - 3******</td>
-                    <td class="right">980,000,000</td>
-                    <td class="right">177,000,000</td>
-                    <td class="right">0</td>
-                    <td class="right">803,300,000</td>
-                    <td class="right">0</td>
-                    <td>1,989</td>
+                    <td rowspan="3">서울</td>
+                    <td>송파구</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>10015</td>
-                    <td>양궁</td>
-                    <td>김재덕</td>
-                    <td>000412 - 3******</td>
-                    <td class="right">980,000,000</td>
-                    <td class="right">177,000,000</td>
-                    <td class="right">0</td>
-                    <td class="right">803,300,000</td>
-                    <td class="right">0</td>
-                    <td>1,989</td>
+                <tr class="scndLine">
+                    <td>영등포구</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>10015</td>
-                    <td>양궁</td>
-                    <td>김재덕</td>
-                    <td>000412 - 3******</td>
-                    <td class="right">980,000,000</td>
-                    <td class="right">177,000,000</td>
-                    <td class="right">0</td>
-                    <td class="right">803,300,000</td>
-                    <td class="right">0</td>
-                    <td>1,989</td>
+                <tr class="scndLine">
+                    <td>용산구</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
+                    <td>000 명</td>
+                    <td>00.00 %</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <td colspan="5">합계</td>
-                <td class="right">980,000,000</td>
-                <td class="right">177,000,000</td>
-                <td class="right">0</td>
-                <td class="right">803,300,000</td>
-                <td class="right">0</td>
-                <td>1,989</td>
-            </tfoot>
+            
         </table>
     </div>
     <!-- //그리드 -->

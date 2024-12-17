@@ -1,0 +1,94 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">본인인증 팝업 열기</button>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit"></div> -->
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="popAuthBox">
+                <p class="title">본인인증</p>
+                <p class="desc">
+                    간편 로그인을 이용하기 위해 본인인증이 필요합니다.<br>
+                    본인인증 진행 후 다음 로그인부터 SNS 계정으로 로그인이 가능합니다.<br>
+                    SPOWELL 체육인복지지원 홈페이지 회원이 아닌 경우, 회원가입이 진행됩니다.
+                </p>
+                <div class="authOption">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                <p class="optTit">휴대폰 인증</p>
+                                <p class="optDesc">
+                                    본인명의의 휴대폰으로 본인인증을 할 수 있습니다.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <p class="optTit">I-PIN 인증</p>
+                                <p class="optDesc">
+                                    본인명의 아이핀으로 본인인증을 할 수 있습니다.
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 
