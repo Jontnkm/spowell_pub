@@ -91,8 +91,8 @@ label {font-size: 0;}
 
 .hidden {font-size:0 !important; position:fixed; left:-5000px; top:0;}
 
-*::-webkit-scrollbar {width:4px;}
-*::-webkit-scrollbar-thumb {background:var(--txt-gray04); border-radius:8px;}
+// *::-webkit-scrollbar {width:4px;}
+// *::-webkit-scrollbar-thumb {background:#dfdfdf; border-radius:8px;}
 // :root::-webkit-scrollbar{
 //   width:8px; background:rgba(0,0,0,0.1);
 // }

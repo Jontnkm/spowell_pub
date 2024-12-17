@@ -216,14 +216,53 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>사업년도</th>
+                    <th>수상년도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <div class="textBox Deco">~</div>
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <th>장애여부</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">남자</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">여자</label></div>
+                    </td>
+                    <th>대회구분</th>
                     <td>
                         <select name="" id="" class="iptSlt">
-                            <option value="">1</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
                         </select>
                     </td>
-                    
-                    <td colspan="2" class="right">
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
                         <button type="button" class="btnSearch">조회</button>
                         <button type="button" class="btnReset">초기화</button>
                     </td>
@@ -255,153 +294,194 @@
     </div>
 
     <!-- 그리드 -->
-    <div class="cptGrid">
+    <div class="cptGrid withScroll">
         <table class="gridTb">
             <colgroup>
-                <col style="width:auto;">
-                <col style="width:auto;">
-
-                <col style="width:120px;">
-                <col style="width:120px;">
-                
-                <col style="width:120px;">
-                <col style="width:120px;">
-
-                <col style="width:120px;">
-                <col style="width:120px;">
-
+                <col style="width:50px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:80px;">
                 <col style="width:150px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:200px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="2">구간구분</th>
-                    <th colspan="2">계</th>
-                    <th colspan="2">일반</th>
-                    <th colspan="2">장애</th>
-                    <th rowspan="2">평균연령</th>
-                </tr>
-                <tr class="scndLine">
-                    <th>점수(점)</th>
-                    <th>월정금(천원)</th>
-                    <th>인원</th>
-                    <th>비율(%)</th>
-                    <th>인원</th>
-                    <th>비율(%)</th>
-                    <th>인원</th>
-                    <th>비율(%)</th>
+                    <th>연번</th>
+                    <th>등록번호</th>
+                    <th>종목</th>
+                    <th>성명</th>
+                    <th>주민등록번호</th>
+                    <th>수상일자</th>
+                    <th>대회구분</th>
+                    <th>대회명</th>
+                    <th>종목명</th>
+                    <th>수상종목명</th>
+                    <th>순위</th>
+                    <th>평가점수</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>30 ~ 39</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>40 ~ 49</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>50 ~ 59</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>60 ~ 69</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>70 ~ 79</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>80 ~ 89</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>90 ~ 99</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>100 ~ 109</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
                 <tr>
-                    <td>110 ~</td>
-                    <td>300</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>000</td>
-                    <td>00.0%</td>
-                    <td>00.00</td>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>10015</td>
+                    <td>양궁</td>
+                    <td>김재덕</td>
+                    <td>000412 - 3******</td>
+                    <td>2021-08-08</td>
+                    <td>올림픽대회</td>
+                    <td class="left">2020년 도쿄올림픽</td>
+                    <td>단체</td>
+                    <td class="left">혼성 단체</td>
+                    <td>1</td>
+                    <td>90</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <td colspan="2">합계</td>
-                <td>0</td>
-                <td>100</td>
-                <td>0</td>
-                <td>100</td>
-                <td>0</td>
-                <td>100</td>
-                <td>00.00</td>
-            </tfoot>
         </table>
     </div>
     <!-- //그리드 -->

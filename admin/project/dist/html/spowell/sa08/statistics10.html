@@ -216,19 +216,20 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>사업년도</th>
+                    <th>장애여부</th>
                     <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt frmSm">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div> 
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
                     </td>
-                    <td colspan="2" class="right">
+                    <th>종목구분</th>
+                    <td>
+                        <select name="" id="" class="iptSlt">
+                            <option value="">1</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="right">
                         <button type="button" class="btnSearch">조회</button>
                         <button type="button" class="btnReset">초기화</button>
                     </td>
@@ -240,7 +241,7 @@
     <!-- 그리드/테이블 상단 -->
     <div class="cptGroupTop">
         <div class="alignL">
-            <div class="unit"><span class="text">사업년도 : <span class="total">2024</span>년</span></div>
+            <div class="unit"><span class="text">사업년도 : <span class="total">2024 / 비장애 / 올림픽</span></span></div>
         </div>
         <div class="alignR">
             <div class="comSideOpt">
@@ -260,264 +261,151 @@
     </div>
 
     <!-- 그리드 -->
-    <div class="cptGrid fix">
+    <div class="cptGrid">
         <table class="gridTb">
             <colgroup>
                 
             </colgroup>
             <thead>
                 <tr>
-                    <th colspan="2" rowspan="2">사업구분</th>
-                    <th colspan="3">계</th>
-                    <th colspan="3">비장애</th>
-                    <th colspan="3">장애</th>
+                    <th rowspan="2">연령구분</th>
+                    <th colspan="2">대상구분</th>
+                    <th colspan="2">성별구분</th>
+                    <th colspan="5">지급중지 사유구분</th>
                 </tr>
                 <tr class="scndLine">
-                    <th>신청인원</th>
-                    <th>선정인원</th>
-                    <th>비율(%)</th>
-                    <th>신청인원</th>
-                    <th>선정인원</th>
-                    <th>비율(%)</th>
-                    <th>신청인원</th>
-                    <th>선정인원</th>
-                    <th>비율(%)</th>
+                    <th>선수</th>
+                    <th>지도자</th>
+                    <th>남자</th>
+                    <th>여자</th>
+                    <th>사망</th>
+                    <th>국적상실</th>
+                    <th>체육단체 징계</th>
+                    <th>범죄경력</th>
+                    <th>기타</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="2">경기력<br>성과포상금</td>
-                    <td>선수</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>지도자</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>10 ~ 19</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
                 <tr>
-                    <td colspan="2">생활지원금</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>20 ~ 29</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
                 <tr>
-                    <td rowspan="5">국내<br>교육지원금</td>
-                    <td>1학기</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>2학기</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>3학기</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>4학기</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>5학기</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>30 ~ 39</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
                 <tr>
-                    <td rowspan="8">국외<br>교육지원금</td>
-                    <td>1회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>2회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>3회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>4회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>5회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>6회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>7회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
-                <tr class="scndLine">
-                    <td>8회차</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>40 ~ 49</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
                 <tr>
-                    <td colspan="2">원로체육인지원</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>50 ~ 59</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
                 <tr>
-                    <td colspan="2">체육장학금</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
+                    <td>60 ~ 69</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                </tr>
+                <tr>
+                    <td>70 ~ 79</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                </tr>
+                <tr>
+                    <td>80 ~ 89</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                </tr>
+                <tr>
+                    <td>90 ~</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
                 </tr>
             </tbody>
             <tfoot>
-                <tr>
-                    <td colspan="2">합계</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                    <td>000 명</td>
-                    <td>000 명</td>
-                    <td>00.00 %</td>
-                </tr>
+                <td>계</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
+                <td>00 명</td>
             </tfoot>
         </table>
     </div>
