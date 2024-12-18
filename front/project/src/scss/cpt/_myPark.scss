@@ -123,6 +123,23 @@
     }
 }
 
+/* 공통 팝업 : 콘텐츠 */
+.popContBox {
+    .explainTxt{
+        margin-bottom:20px; line-height:27px; font-size:18px; font-weight:500;
+        b{font-weight:700; color:var(--prm1); }
+    }
+    .grayBox{
+        margin-top:20px; padding:24px; background:var(--bg1);
+        .tit{line-height:24px; font-size:16px; font-weight:500;}
+        .bulletList {
+            margin-top:0;
+            & > li {margin-top:0; line-height:24px; font-weight:500;}
+        }
+    }
+    .agreeArea{display:flex; justify-content: center; margin-top:20px; }
+}
+
 /* 사업소개 : cptAbout */
 .cptAbout{
     /* pc */
@@ -558,7 +575,5 @@
                 tbody tr td{width:calc(100% - 110px);}
             }
         }
-
-
     }
 }
