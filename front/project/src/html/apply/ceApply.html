@@ -37,6 +37,251 @@
                         <%- include('../ejs/subTop.ejs', {
                             url: "../../",
                         }) %>
+
+                        <div class="cptMyPage cptApplyCreate">
+                            <p class="mpTitle">
+                                국내외 지도자 현장연수 신청
+                            </p>
+
+                            <p class="mptbTitle">
+                                신청인 기본정보
+                            </p>
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <caption>신청인 기본정보에 대한 표로써 이름, 주민등록번호, 체육인 구분, 종목 등으로 구성됨</caption>
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead class="thead-hidden">
+                                        <tr>
+                                            <th scope="col">이름</th>
+                                            <th scope="col">주민등록번호</th>
+                                            <th scope="col">체육인구분</th>
+                                            <th scope="col">종목</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">신이름</th>
+                                            <td class="left">
+                                                홍길동
+                                            </td>
+                                            <th scope="row">주민등록번호</th>
+                                            <td class="left">
+                                                880101-1******
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">체육인 구분</th>
+                                            <td class="left">
+                                                선수
+                                            </td>
+                                            <th scope="row">종목</th>
+                                            <td class="left">
+                                                양궁
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle">
+                                신청인 추가정보
+                            </p>
+                            <div class="cptTable">
+                                <table class="tbInfo type02">
+                                    <caption>신청인 추가정보에 대한 표로써 항목1, 항목2, 항목3 등으로 구성됨</caption>
+                                    <colgroup>
+                                        <col style="width:160px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <thead class="thead-hidden">
+                                        <tr>
+                                            <th scope="col">항목1</th>
+                                            <th scope="col">항목2</th>
+                                            <th scope="col">항목3</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="combine">
+                                            <th scope="row">항목1</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="ipt">
+                                                        <input type="text" title="항목1 입력창" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th scope="row">항목2</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="ipt">
+                                                        <input type="text" title="항목2 입력창" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th scope="row">항목3</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="ipt">
+                                                        <input type="text" title="항목3 입력창" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mptbTitle flex">
+                                <span>제출서류</span>
+                                <span class="comButton alignR">
+                                    <button type="button" class="btn h36 l-g ico">
+                                        <span class="txt">추가</span>
+                                        <span class="ico01"><span class="hidden">플러스 모양 아이콘 이미지</span></span>
+                                    </button>
+                                </span>
+                            </p>
+
+                            <div class="cptTable">
+                                <table class="tbInfo">
+                                    <caption>제출서류 구분, 첨부파일, 삭제에 관한 표</caption>
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col style="width:auto;">
+                                        <col style="width:150px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">제출서류 구분</th>
+                                            <th scope="col">첨부파일</th>
+                                            <th scope="col">삭제</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">제출서류1</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">제출서류1</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea on">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">제출서류2</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">제출서류2</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea on">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="comButton">
+                                                    <button type="button" class="btn h36 l-g ico">
+                                                        <span class="txt">삭제</span>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cptForm">
+                                                    <div class="dropDown w155">
+                                                        <button type="button" class="" title="열기">제출서류3</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">제출서류3</a></li>
+                                                                <li><a href="#none">2026</a></li>
+                                                                <li><a href="#none">2027</a></li>
+                                                                <li><a href="#none">2028</a></li>
+                                                                <li><a href="#none">2029</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="left">
+                                                <div class="fileArea">
+                                                    <div class="before">
+                                                        <label for="attFile" class="fileBtn">파일선택</label>
+                                                        <input type="file" id="attFile" class="fileIpt">
+                                                    </div>
+                                                    <div class="after">
+                                                        <a href="#none" class="download">파일명.hwp</a>
+                                                        <button type="button" class="delBtn"><span class="hidden">삭제</span></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="comButton">
+                                                    <button type="button" class="btn h36 l-g ico">
+                                                        <span class="txt">삭제</span>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="comButton">
+                                <button type="button" class="btn h56 l-g">이전</button>
+                                <button type="button" class="btn h56 f-dg">신청하기</button>
+                            </div>
+                        </div>
                     </div>
                     <!-- //콘텐츠 영역 -->
                 </div>

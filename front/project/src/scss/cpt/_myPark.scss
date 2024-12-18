@@ -528,7 +528,12 @@
 /* 신청.안내 - 신청하기 페이지 cptApplyCreate */
 .cptApplyCreate{
     /* pc */
+    .applyTit{margin-bottom:40px;}
     .cptTable{
+        /* col 사이즈  */
+        .colMdTh{width:160px !important;}
+        .colMdTd{width:calc(100% - 160px) !important;}
+
         th{border-bottom:1px solid var(--lbg1);}
     }
 
@@ -544,8 +549,14 @@
     /* mobile 767px */
     @include media('mobile') {
         .cptTable{
-            &.defaultInfo table.tbInfo.type02 tbody tr th{width:auto; min-width:120px;}
-            &.addInfo table.tbMoType tr th{width:auto; min-width:120px; background:pink;}
+            /* col 사이즈  */
+            .colMdTh{width:110px !important;}
+            .colMdTd{width:calc(100% - 110px) !important;}
+
+            table.tbInfo.type02 {
+                tbody tr th{width:110px;}
+                tbody tr td{width:calc(100% - 110px);}
+            }
         }
 
 
