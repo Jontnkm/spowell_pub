@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menu = document.querySelector('.menu-wrap');
 
-	menu.addEventListener('click',function(){
-		if(menu.classList.contains('open')){
-			menu.classList.remove('open');
-		}else{
-			menu.classList.add('open');
-		}
-	});
+    if(menu !== null && menu !== undefined){
+        menu.addEventListener('click',function(){
+            if(menu.classList.contains('open')){
+                menu.classList.remove('open');
+            }else{
+                menu.classList.add('open');
+            }
+        });
+    }
 
     const depth01Titles = document.querySelectorAll(".depth01Title");
     const menuLinks = document.querySelectorAll(".headerBot .menu li a");
