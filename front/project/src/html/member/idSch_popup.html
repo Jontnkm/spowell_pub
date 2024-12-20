@@ -7,15 +7,15 @@
 <!-- 레이아웃 -->
 <div class="lytLayout member">
     <div class="layoutArea">
-
         <!-- 상단영역 -->
-        <div class="layoutTop">
+        <div class="memberLayoutTop">
             <!-- Top -->
-            <%- include('../ejs/header.ejs', {
+            <%- include('../ejs/memberTop.ejs', {
                 url: "../../"
             }) %>
         </div>
         <!-- //상단영역 -->
+
 
         <!-- 중단영역 -->
         <div class="layoutContainer" id="container">
@@ -31,17 +31,14 @@
 
         </div>
         <!-- //중단영역 -->
-
-
-        <!-- 하단영역 -->
-        <div class="layoutFooter">
+         <!-- 하단영역 -->
+        <div class="memberLayoutBot">
             <!-- Footer -->
-            <%- include('../ejs/footer.ejs', {
+            <%- include('../ejs/memberBot.ejs', {
                 url: "../../"
             }) %>
         </div>
         <!-- //하단영역 -->
-
     </div>
 </div>
 

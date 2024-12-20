@@ -15,7 +15,7 @@
     }
 
     &-process {
-        max-width:900px; margin:-20px auto 50px;
+        max-width:900px; margin:0px auto 50px; padding-top:20px;
         @include media ('tablet') {
             width:100%;
         }
@@ -918,6 +918,30 @@
                     font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5;
                 }
             }
+        }
+    }
+}
+
+/*2024.12.20 회원관련 페이지 레이아웃 정의*/
+.memberTop {
+    width:100%; position:relative; padding-top:140px; text-align:center;
+
+    > img {
+        display:inline;
+    }
+}
+
+.memberBot {
+    width:100%; position:relative; padding-bottom:40px;
+    > .inner {
+        display:flex; flex-flow: row nowrap; align-items: baseline; justify-content: center; gap:9px;
+        
+        @include media ('mobile') {
+            flex-flow:column; align-items:center; 
+        }
+
+        span {
+            font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5;
         }
     }
 }

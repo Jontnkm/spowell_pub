@@ -7,9 +7,9 @@
         background:var(--bg1);
 
         .subContArea {
-            display:block !important; max-width:100% !important; margin:80px auto 120px !important;
+            display:block !important; max-width:100% !important; margin:40px auto 140px !important;
             @include media ('mobile') {
-                margin:60px auto !important;
+                margin:40px auto !important;
             }
         }
 

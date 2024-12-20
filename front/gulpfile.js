@@ -29,8 +29,8 @@ function commonCopy(cb){
 //image 폴더 복사
 function imageCopy(cb){
     console.log("image 파일을 복사합니다.");
-    return src(['./project/src/images/**/*'])
-        .pipe(dest('./project/dist/images'));
+    return src(['./project/src/common/images/**/*'])
+        .pipe(dest('./project/dist/common/images'));
     cb();
 }
 

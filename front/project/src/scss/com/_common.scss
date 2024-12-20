@@ -561,6 +561,14 @@
             display:block;
         }
     }
+
+    /*2024.12.20 추가*/
+    & + .cptForm {
+        margin-top:8px;
+        > .alingMid {
+            min-height:auto;
+        }
+    }
 }
 
 /*==================================== 버튼 ====================================*/
@@ -1168,6 +1176,31 @@
 }
 
 /*===================================== TABLE GUIDE =============================================*/
+/*no data in table case 2024.12.20*/
+.cptNoDataTb {
+    width:100%; position:relative; border-radius:8px; background:var(--bg1); padding:20px;
+
+    > p {
+        font-size:16px; color:var(--tbg1); font-weight:500; line-height:1.5; text-align:center;
+    }
+}
+
+/*no data in table case2 2024.12.20*/
+.cptNoDataList {
+    width:100%; position:relative;
+
+    > .ico {
+        display:block; width:100%; text-align:center; margin-top:100px;
+        > img {
+            display:inline;
+        }
+    }
+
+    > .infoTxt {
+        display:block; width:100%; margin-top:10px; font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center;
+    }
+}
+
 .cptTable {
     width:100%; position:relative;
 
@@ -1177,7 +1210,12 @@
     .w130 {
         width:130px;
     }
-
+    .w345 {
+        width:345px;
+        @include media ('mobile') {
+            width:100%;
+        }
+    }
     .mw155 {
         min-width:155px; width:max-content;
     }
@@ -1470,9 +1508,6 @@
                             }
                         }
                     }
-                    
-
-                    
                 }
             }
         }
