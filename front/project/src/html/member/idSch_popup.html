@@ -1,0 +1,97 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+
+        <!-- 상단영역 -->
+        <div class="layoutTop">
+            <!-- Top -->
+            <%- include('../ejs/header.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">본인인증 팝업 열기</button>
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+
+
+        <!-- 하단영역 -->
+        <div class="layoutFooter">
+            <!-- Footer -->
+            <%- include('../ejs/footer.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit"></div> -->
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="popAuthBox">
+                <p class="title">간편 로그인 아이디 확인</p>
+                <p class="desc">
+                    입력한 정보와 일치하는 아이디가 2건 이상 확인됩니다.<br>
+                    간편 로그인으로 적용할 아이디를 선택해 주세요.
+                </p>
+                <div class="idResult">
+                    <ul>
+                        <li>
+                            <div class="cptForm">
+                                <div class="frmRdo ty02">
+                                    <input type="radio" id="rdo011" name="rdo02" />
+                                    <label for="rdo011">$member_Id01</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cptForm">
+                                <div class="frmRdo ty02">
+                                    <input type="radio" id="rdo012" name="rdo02" />
+                                    <label for="rdo012">$member_Id02</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="popBtnArea">
+            <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

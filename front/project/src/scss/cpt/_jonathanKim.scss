@@ -261,7 +261,7 @@
     
     /*아이디찾기 - 결과*/
     .resultBox {
-        width:100%; position:relative; border:1px solid var(--lbg1); border-radius:20px; margin:50px 0; padding:40px; min-height:200px;
+        width:100%; position:relative; border:1px solid var(--lbg1); border-radius:20px; margin:50px 0; padding:60px 40px;
         @include media ('mobile'){
             min-height:auto;
         }
@@ -278,7 +278,11 @@
             }
         }
         > .resultValue {
-            font-size:26px; color:var(--t1); font-weight:700; text-align:center; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+            font-size:26px; color:var(--t1); font-weight:700; text-align:center;
+
+            &:not(:first-of-type) {
+                margin-top:10px;
+            }
         }
     }
 
@@ -766,7 +770,7 @@
     width:100%; position:relative;
 
     > .title {
-        font-size:36px; color:var(--t1); font-weight:800; text-align:center; margin-bottom:14px;
+        font-size:32px; color:var(--t1); font-weight:800; text-align:center; margin-bottom:14px;
     }
 
     > .desc {
@@ -843,6 +847,17 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .idResult {
+        border:1px solid var(--lbg1); border-radius:20px; padding: 40px 36px;
+        > ul {
+            display:flex; flex-flow: column; align-items: center ; justify-content: center; gap:20px;
+
+            > li {
+                width:max-content;
             }
         }
     }
