@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             disableOnInteraction: false,
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination1",
             type: "fraction",
         },
         navigation: {
@@ -16,48 +16,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
-    
-
-    //복지지원 슬라이드
-    var supportSlide = new Swiper(".supportSlide > .slideInner", {        
-        slidesPerView : 1,
-        spaceBetween : 20,
-        slidesPerGroupSkip: 8,
-        
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        scrollbar: {
-            el: ".swiper-scrollbar",
-        },
-        breakpoints: {
-            1023: {
-                slidesPerView : 2,
-                spaceBetween : 20,
-                slidesPerGroupSkip: 1,
-            },
-            1260: {
-                slidesPerView : 4,
-                spaceBetween : 20,
-                slidesPerGroupSkip: 1,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev"
-                },
-            }
-        }
-        
-    });
-
-    var pagingSwiper02 = new Swiper(".supportSlide > .slideInner", {
+    var pagingBar = new Swiper(".mainVisual", {
         pagination: {
             el: ".swiper-pagination2",
             type: "progressbar",
         },
     });
     
-    supportSlide.controller.control = pagingSwiper02;
+    if(pagingBar !== null && pagingBar !== undefined){
+        mainSlide.controller.control = pagingBar;
+    }
+
+    //복지지원 슬라이드
+    var supportSlide = new Swiper(".supportSlideInner", {        
+        slidesPerView : 4,
+        spaceBetween : 24,
+        pagination: {
+            el: ".swiper-pagination01",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        
+    });
+
+    var pagingBar02 = new Swiper(".supportSlideInner", {
+        pagination: {
+            el: ".swiper-pagination02",
+            type: "progressbar",
+        },
+    });
+    
+    if(pagingBar02 !== null && pagingBar02 !== undefined){
+        supportSlide.controller.control = pagingBar02;
+    }
 
     //일정 슬라이드
     var calendarSlide = new Swiper(".calSlide", {        

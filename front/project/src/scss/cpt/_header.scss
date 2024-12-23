@@ -90,7 +90,7 @@
 
                     > li {
                         > a.depth01Title {
-                            display:block; position:relative; font-size:20px; color:var(--t1); font-weight:500; padding:38px 0;
+                            display:block; position:relative; font-size:20px; color:var(--t1); font-weight:500; padding:25px 0;
                             &::after {
                                 content:''; width:0; background:var(--snd1); height:5px; position:absolute; bottom:0px; left:50%; transform:translateX(-50%); transition:all 0.2s;
                             }

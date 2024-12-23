@@ -96,7 +96,7 @@ function watcher(cb){
     watch('./project/src/common/css/**/*', parallel(compileCss));
     watch('./project/src/scss/**/*', parallel(compileScss));
     watch('./project/src/common/js/**/*', parallel(compileJs));
-    watch('./project/src/images/**/*', parallel(imageCopy));
+    watch('./project/src/common/images/**/*', parallel(imageCopy)); 
     watch('./project/src/guide/**/*', parallel(guideCopy));
     console.log("와처가 실행중");
 }

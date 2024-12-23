@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var pgTit = pgTitElement ? pgTitElement.textContent : "";
     var dep01 = dep01Element ? dep01Element.textContent : "";
 
-    console.log(pgTit, dep01);
+    // console.log(pgTit, dep01);
 
     var titleParagraph = document.querySelector(".cptSubTop .titleArea > p");
     if (titleParagraph) {
@@ -169,8 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var list2 = document.querySelectorAll(".calDiv2 ul li");
     var listLength2 = list2.length;
     
-    console.log(listLength1);
-    console.log(listLength2);
+    // console.log(listLength1);
+    // console.log(listLength2);
 
     list1.forEach(function(item1) {
         item1.style.width = "calc(100% / " + listLength1 + ")";
