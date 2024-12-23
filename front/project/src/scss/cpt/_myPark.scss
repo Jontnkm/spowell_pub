@@ -577,3 +577,53 @@
         }
     }
 }
+
+/* 레이아웃 - lnb:X,  */
+.noSideContArea{
+
+}
+
+/* 부가정보 */
+.termsWrap{
+    padding:40px 0 120px; background:var(--bg1);
+    .termsArea{
+        margin:0 auto; max-width:1200px;
+
+        /* 공통스타일 초기화 */
+        .cptMember-process{max-width:unset;}
+        .cptMember{max-width:unset;}
+        .cptAccordion {
+            .cptForm .frmChk {padding-right:30px; width:auto; text-align:left; }
+            .inner > ul > li > .answerBox .answer {font-size:16px; color:var(--t1); font-weight:400; line-height:1.7; word-break:break-all; padding-right:8px;}
+        }
+
+        .cptTable {
+            .left{text-align: left !important;}
+            th,td{background:#fff !important; }
+            thead th{border-bottom:1px solid var(--lbg1) !important;}
+            tbody th:first-child{border-right:1px solid var(--lbg1) !important;}
+        }
+
+        .termsPartList{
+            display:flex; flex-wrap:wrap; margin-bottom:30px;
+            & > li{
+                display:flex; width:50%;
+                .listTit{display:block; padding-right:14px; line-height:32px; font-size:16px;}
+            }
+        }
+
+        .termSection{
+            & + .termSection{margin-top:30px;}
+        }
+
+        .secTit{margin-bottom:14px; line-height:32px; font-size:18px; font-weight:700; }
+        .partTit{line-height:32px; font-size:16px; font-weight:700; }
+        .partTxt{margin-bottom:14px; line-height:32px; font-size:16px; font-weight:400; }
+
+    }
+
+    /* mobile 767px */
+    @include media('mobile') {
+        .termsPartList > li{width:100% !important;}
+    }
+}
