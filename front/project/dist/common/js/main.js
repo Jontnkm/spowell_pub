@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween : 0,
         pagination: {
             el: ".cal-pagination",
-            type: "bullets",
+            type: "fraction",
         },
     });
 
