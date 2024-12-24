@@ -712,8 +712,14 @@
             }
 
             .swiperControl {
-                .swiper {
+                &.mo {
+                    display:none;
 
+                    @include media ('tablet03'){
+                        display:block;
+                    }
+                }
+                .swiper {
                     &-prev {
                         position:absolute; top:50%; left:50px; transform:translateY(-50%); width:26px; height:26px; background:url(../../common/images/main/bsSlidePrev.svg)50% 50% no-repeat; cursor:pointer;
 
@@ -776,7 +782,11 @@
             }
             > .remote {
                 width:100%; position:relative; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; margin-bottom:20px;
-
+                @include media ('tablet') {
+                    overflow-x:scroll;
+        
+                    &::-webkit-scrollbar {display:none;}
+                }
                 > .leftArea {
                     position:relative;
         
@@ -938,6 +948,13 @@
                         position:relative; width:100%; margin-bottom:17px; font-size:22px; color:var(--t1); font-weight:700; letter-spacing:-0.1px;
                         &::after {
                             content:''; position:absolute; top:50%; right:0; width:70px; height:70px; transform:translateY(-50%); 
+                        }
+
+                        @include media ('tablet') {
+                            > br {
+                                display:none;
+                            }
+                            word-break:keep-all;
                         }
                     }
 

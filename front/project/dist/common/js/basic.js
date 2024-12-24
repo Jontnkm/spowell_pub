@@ -381,7 +381,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    //탑버튼
+    const dm = document.documentElements;
+    const topButton = document.querySelector(".topBtn > a");
+    const documnetHeight = dm.scrollHeight;
 
+    window.addEventListener('scroll', function() {
+        let scrollToTop = dm.scrollTop;
+
+        if (documnetHeight != 0) {
+            const actionHeight = documnetHeight / 4;
+
+            if (scrollToTop > actionHeight) {
+                topButton.classList.add('on');
+            } else {
+                topButton.classList.remove('on');
+            }
+        }
+    })
+
+    topButton.addEventListener('click', function(e){
+        e.preventDefault();
+        scrollUp();
+    })
+
+    function scrollUp() {
+        let upper = setInterval(function() {
+            if(dm.scrollTop != 0){
+                window.scrollBy(0 , -55);
+            }else{
+                clearInterval(upper);
+            }
+        }, 10);
+    }
 });
 function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
@@ -399,4 +431,17 @@ function popClose(popId){
     trig.focus();
 }
 
+
+$(document).ready(function(){
+    $(".quickOpen").click(function(){
+        $(this).addClass("hide");
+        $(this).next(".cptQuick").addClass("on");
+    })
+
+    $(".clsQuick a").click(function(){
+        $(".quickOpen").removeClass("hide");
+        $(".cptQuick").removeClass("on");
+    })
+    
+})
 
