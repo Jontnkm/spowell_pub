@@ -381,39 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
-    //탑버튼
-    const dm = document.documentElements;
-    const topButton = document.querySelector(".topBtn > a");
-    const documnetHeight = dm.scrollHeight;
-
-    window.addEventListener('scroll', function() {
-        let scrollToTop = dm.scrollTop;
-
-        if (documnetHeight != 0) {
-            const actionHeight = documnetHeight / 4;
-
-            if (scrollToTop > actionHeight) {
-                topButton.classList.add('on');
-            } else {
-                topButton.classList.remove('on');
-            }
-        }
-    })
-
-    topButton.addEventListener('click', function(e){
-        e.preventDefault();
-        scrollUp();
-    })
-
-    function scrollUp() {
-        let upper = setInterval(function() {
-            if(dm.scrollTop != 0){
-                window.scrollBy(0 , -55);
-            }else{
-                clearInterval(upper);
-            }
-        }, 10);
-    }
 });
 function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
@@ -443,5 +410,26 @@ $(document).ready(function(){
         $(".cptQuick").removeClass("on");
     })
     
+
+    //탑버튼
+    $(window).scroll(function(){
+        var dh = $(document).height();
+        var point = dh / 4;
+        var scr = $(window).scrollTop();
+        var topButton = $(".topBtn");
+
+        // console.log("scroll = " + scr + "window = " + dh);
+
+        if(point <= scr) {
+            topButton.addClass("on");
+        }else if(point > scr){
+            topButton.removeClass("on");
+        }
+    })
+
+    $(".topBtn").click(function(){
+        $("html, body").animate({scrollTop:0}, 400);
+        return false;
+    })
 })
 
