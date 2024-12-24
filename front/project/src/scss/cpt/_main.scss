@@ -749,7 +749,7 @@
 
 .mainCont06 {
     width:100%; max-width:1280px; margin:0 auto; padding: 80px 0 120px;
-    @include media ('mobile') {
+    @include media ('tablet') {
         padding:40px 20px;
     }
     > .title {
@@ -766,12 +766,12 @@
 
     > .topBox {
         display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:34px;
-        @include media ('mobile') {
+        @include media ('tablet') {
             display:block;
         }
         .leftCont {
             width:calc(100% - 360px); background:var(--bg3); padding:30px 40px 40px 40px; border-radius:30px;
-            @include media ('mobile') {
+            @include media ('tablet') {
                 width:100%; background:transparent; padding:0; border-radius:0; 
             }
             > .remote {
@@ -795,7 +795,7 @@
                 }
                 > .rightArea {
                     position:relative;
-                    @include media ('mobile') {
+                    @include media ('tablet') {
                         display:none;       
                     }
                     > a {
@@ -812,12 +812,12 @@
 
                 > ul {
                     display:flex; flex-flow:row wrap; align-items: flex-start; justify-content: flex-start; gap:16px;
-                    @include media ('mobile') {
+                    @include media ('tablet') {
                         flex-flow:column; gap:12px; margin-bottom:30px;
                     }
                     > li {
                         width:calc(50% - 8px);
-                        @include media ('mobile') {
+                        @include media ('tablet') {
                             width:100%;
                         }
                         > a {
@@ -870,7 +870,7 @@
 
         .rightCont {
             width:326px; border-radius:30px; overflow:hidden; position:relative;
-            @include media ('mobile') {
+            @include media ('tablet') {
                 width:100%;
             }
 
@@ -919,7 +919,7 @@
 
     > .botBox {
         width:100%; position:relative; margin-top:36px;
-        @include media ('mobile') {
+        @include media ('tablet') {
             margin-top:30px;                   
         }
 
@@ -928,7 +928,7 @@
 
             > .informCover {
                 width:100%; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; gap:34px; 
-                @include media ('mobile') {
+                @include media ('tablet') {
                     flex-flow:column; gap:0;
                 }
                 > div {
@@ -980,7 +980,7 @@
 
                     &.service01 {
                         width:285.5px;
-                        @include media ('mobile') {
+                        @include media ('tablet') {
                             width:100%; margin-bottom:20px;
                         }
                         > .title {
@@ -992,7 +992,7 @@
 
                     &.service02 {
                         width:285.5px;
-                        @include media ('mobile') {
+                        @include media ('tablet') {
                             width:100%; margin-bottom:20px;
                         }
                         > .title {
@@ -1004,7 +1004,7 @@
 
                     &.service03 {
                         width:281px;
-                        @include media ('mobile') {
+                        @include media ('tablet') {
                             width:100%;  margin-bottom:30px;
                         }
                         > .title {
@@ -1017,7 +1017,7 @@
 
                     &.serviceOptions {
                         width:326px; padding:0; border-radius:0;
-                        @include media ('mobile') {
+                        @include media ('tablet') {
                             width:100%;
                         }
 
@@ -1029,7 +1029,7 @@
                                 > a {
                                     display:block; width:100%; padding: 0 30px 0 68px; line-height:80px; position:relative; background:var(--prm1);
                                     font-size:18px; color:var(--bg3); font-weight:700; letter-spacing:-0.36px;
-                                    @include media ('mobile') {
+                                    @include media ('tablet') {
                                         line-height:70px;
                                     }
                                     > .desc {
