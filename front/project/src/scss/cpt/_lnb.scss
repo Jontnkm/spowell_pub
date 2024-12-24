@@ -233,3 +233,49 @@
         }
     }
 }
+
+.subTopMarkup {
+    width:100%; position:relative; margin-bottom:40px;
+    @include media ('tablet') {
+        margin:30px auto;
+    }
+    > .inner {
+        width:100%;
+
+        > .titleArea {
+            width:100%; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; padding-bottom:24px; border-bottom:1px solid #DEE2EA;
+            @include media ('tablet') {
+                display:block; padding-bottom:0; border-bottom:0;
+            }
+            > p.pageTitle {
+                font-size:32px; color:var(--prm3); font-weight:800; line-height:1.4; letter-spacing:-0.064px;
+                @include media ('tablet') {
+                    text-align:center; font-size:26px;
+                }
+            }
+
+            > .breadCrumb {
+                @include media ('tablet') {
+                    display:none;
+                }
+                > ul {
+                    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:5px;
+
+                    > li {
+                        > .home {
+                            display:block; width:20px; height:20px; background:url(../../common/images/common/ico_bread_home.svg)50% 50% no-repeat;
+                        }
+                        &.nxtArr {
+                            > span {
+                                display:block; width:20px; height:20px; background: url(../../common/images/common/ico_bread_arr.svg)50% 50% no-repeat;
+                            }
+                        }
+                        > a.depthTxtMarkup {
+                            display:block; width:max-content; font-size:14px; color:var(--prm3); font-weight:500; line-height:1.4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

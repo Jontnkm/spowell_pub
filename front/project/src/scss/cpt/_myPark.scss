@@ -609,9 +609,15 @@
 
         .termsPartList{
             display:flex; flex-wrap:wrap; margin-bottom:30px;
-            & > li{
+            .list{
                 display:flex; width:50%;
-                .listTit{display:block; padding-right:14px; line-height:32px; font-size:16px;}
+                .listTit{
+                    position:relative; display:block; padding-right:14px; line-height:32px; font-size:16px;
+                    &:focus-visible {
+                        outline:0; font-weight:600;
+                        &:after{position:absolute; bottom:6px; left:0; content:'';display:block;width:calc(100% - 10px);height:2px;background:black;}
+                    }
+                }
             }
         }
 
@@ -627,14 +633,15 @@
 
     /* mobile 767px */
     @include media('mobile') {
-        .termsPartList > li{width:100% !important;}
+        .termsPartList .list{width:100% !important;}
     }
 }
 
 .cptCopyright{
     .txt{line-height:27px; font-size:18px; font-weight:500; }
+    .roundBox{margin-top:20px;}
     .imgBox{
-        display:inline-block;
+        display:inline-block; margin-top:0;
         img{width:152px;}
     }
 }
