@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //복지지원 슬라이드
     var supportSlide = new Swiper(".supportSlideInner", {        
-        slidesPerView : 4,
+        slidesPerView : 1,
         spaceBetween : 24,
         pagination: {
             el: ".swiper-pagination01",
@@ -40,19 +40,27 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },
 
+        breakpoints: {
+            1023: {
+                slidesPerView : 2,
+            },
+            1300: {
+                slidesPerView : 4,
+            }
+        }
         
     });
 
-    var pagingBar02 = new Swiper(".supportSlideInner", {
-        pagination: {
-            el: ".swiper-pagination02",
-            type: "progressbar",
-        },
-    });
+    // var pagingBar02 = new Swiper(".supportSlideInner", {
+    //     pagination: {
+    //         el: ".swiper-pagination02",
+    //         type: "progressbar",
+    //     },
+    // });
     
-    if(pagingBar02 !== null && pagingBar02 !== undefined){
-        supportSlide.controller.control = pagingBar02;
-    }
+    // if(pagingBar02 !== null && pagingBar02 !== undefined){
+    //     supportSlide.controller.control = pagingBar02;
+    // }
 
     //일정 슬라이드
     var calendarSlide = new Swiper(".calSlide", {        
@@ -64,18 +72,32 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    //사업 슬라이드
-    var bsSlide = new Swiper(".businessSlide .slideInner", {        
-        slidesPerView : 3,
+    //소식 슬라이드
+    var newsSlide = new Swiper(".newsSlide", {        
+        slidesPerView : 1,
         spaceBetween : 40,
         navigation: {
-            nextEl: ".swiper-button-next02",
-            prevEl: ".swiper-button-prev02"
+            nextEl: ".swiper-button-next03",
+            prevEl: ".swiper-button-prev03"
         },
-        breakPoints: {
-            1023: {
-                slidesPerView : 5,
-            }
+        pagination: {
+            el: ".swiper-pagination03",
+            type: "fraction",
+        },
+    });
+
+    //소식 슬라이드
+    var businessSlide = new Swiper(".bsSlide", {        
+        slidesPerView : 3,
+        spaceBetween : 14,
+        slidesPerGroup : 3,
+        navigation: {
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev"
+        },
+
+        pagination: {
+            el: ".swiper-paging"
         }
     });
 

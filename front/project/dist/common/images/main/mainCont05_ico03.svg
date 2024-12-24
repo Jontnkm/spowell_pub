@@ -1,22 +1,8 @@
-<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M43 22.27C43 19.92 41.1 18.02 38.75 18.02H9.75C7.4 18.02 5.5 19.92 5.5 22.27C5.5 24.62 7.38 26.49 9.71 26.52C9.71 26.68 9.69 26.84 9.71 27L10.8 38.04C11.05 40.78 13.5 43.02 16.25 43.02H32.25C35 43.02 37.45 40.78 37.7 38.04L38.79 27C38.81 26.83 38.79 26.68 38.79 26.52C41.12 26.5 43 24.61 43 22.27Z" stroke="#252F3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11 18L20 8" stroke="#252F3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M38 18L29 8" stroke="#252F3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 29V33" stroke="url(#paint0_linear_410_8037)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24 29V33" stroke="url(#paint1_linear_410_8037)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M31 29V33" stroke="url(#paint2_linear_410_8037)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_410_8037" x1="17.9167" y1="33" x2="16.0366" y2="32.3537" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8000"/>
-<stop offset="1" stop-color="#FFB348"/>
-</linearGradient>
-<linearGradient id="paint1_linear_410_8037" x1="24.9167" y1="33" x2="23.0366" y2="32.3537" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8000"/>
-<stop offset="1" stop-color="#FFB348"/>
-</linearGradient>
-<linearGradient id="paint2_linear_410_8037" x1="31.9167" y1="33" x2="30.0366" y2="32.3537" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8000"/>
-<stop offset="1" stop-color="#FFB348"/>
-</linearGradient>
-</defs>
+<svg width="35" height="37" viewBox="0 0 35 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 653">
+<path id="Rectangle 2512" d="M1.50011 10.6638L22.8092 2.52813C24.7731 1.77831 26.8792 3.22861 26.8792 5.33081V21.2623C26.8792 22.8732 25.607 24.1966 23.9974 24.26L1.50011 25.1465V10.6638Z" fill="#FFAC11" stroke="black" stroke-width="2"/>
+<path id="Rectangle 2511" d="M1.50011 11.8535H30.4999C32.1567 11.8535 33.4999 13.1967 33.4999 14.8535V32.0258C33.4999 33.6826 32.1567 35.0258 30.4999 35.0258H1.50011V11.8535Z" fill="white" stroke="black" stroke-width="2"/>
+<circle id="Ellipse 491" cx="26.3274" cy="23.4396" r="2.65516" fill="#FFAC11" stroke="black" stroke-width="2"/>
+<path id="Line 115" d="M12.5343 11.8535L26.5 6.59993" stroke="black" stroke-width="2"/>
+</g>
 </svg>
