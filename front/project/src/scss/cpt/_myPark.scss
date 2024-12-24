@@ -46,6 +46,9 @@
 }
 .grayTxt{position: relative; margin-top:8px; line-height: 24px;font-size: 16px;font-weight: 400;color: var(--tbg1);}
 .boldTxt{line-height:24px; font-size:16px; font-weight:700; }
+.roundBox{
+    padding:24px; border:1px solid var(--lbg1); border-radius:14px; line-height:32px; font-size:16px; word-break: keep-all;
+}
 
 /* 테이블 스타일 커스텀 */
 .customTable{
@@ -578,13 +581,13 @@
     }
 }
 
-/* 레이아웃 - lnb:X,  */
-.noSideContArea{
-
+/* 공통 : 레이아웃 - max-width:1280, width:100%  */
+.layoutCont.wide{
+    width:100% !important;
 }
 
 /* 부가정보 */
-.termsWrap{
+.cptTerms{
     padding:40px 0 120px; background:var(--bg1);
     .termsArea{
         margin:0 auto; max-width:1200px;
@@ -625,5 +628,13 @@
     /* mobile 767px */
     @include media('mobile') {
         .termsPartList > li{width:100% !important;}
+    }
+}
+
+.cptCopyright{
+    .txt{line-height:27px; font-size:18px; font-weight:500; }
+    .imgBox{
+        display:inline-block;
+        img{width:152px;}
     }
 }
