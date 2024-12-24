@@ -305,6 +305,83 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    /* 
+    **약관동의 - 항목버튼 클릭시 내용으로 스크롤 이동 
+    **project\src\html\terms\policy.html
+    */
+    let termsScroll = document.getElementById('termsScroll');
+    let termsScrollBtns = termsScroll.querySelectorAll('.listTit');
+    let termsScrollCont = termsScroll.querySelectorAll('.termPart');
+    // 버튼 클릭 이벤트 등록
+    termsScrollBtns.forEach((btnItem, index) => {
+        btnItem.addEventListener('click', () => handleButtonClick(btnItem, index));
+    });
+    // 버튼 클릭 시 스크롤 및 포커스 이동
+    function handleButtonClick(btnItem, index) {
+        const _target = termsScrollCont[index];
+
+        // 콘텐츠에 포커스 설정
+        if (_target) {
+            _target.setAttribute('tabindex', '0');
+            _target.focus({ preventScroll: true });
+            _target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            termsScroll.scrollTo({
+                top: _target.offsetTop,
+                behavior: 'smooth'
+            });
+        } else {
+            console.log('no Target');
+            return false; 
+        }
+
+        // 블러 시 tabindex 제거
+        _target.addEventListener('blur', () => _target.removeAttribute('tabindex'));
+
+        // 탭/역탭 키 이벤트 처리
+        _target.addEventListener('keydown', (e) => handleKeyNavigation(e, btnItem, index));
+    }
+    // 키보드 내비게이션 처리
+    function handleKeyNavigation(e, btnItem, index) {
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            if (e.shiftKey) {
+                // 역탭: 이전 버튼으로 이동
+                btnItem.focus();
+            } else {
+                // 탭: 다음 버튼 또는 외부 요소로 이동
+                const nextButton = termsScrollBtns[index + 1];
+                if (nextButton) {
+                    nextButton.focus();
+                } else {
+                    moveToNextFocusable(termsScrollCont[index]);
+                }
+            }
+        }
+    }
+    // 다음 포커스 가능한 요소로 이동
+    function moveToNextFocusable(currentElement) {
+        const focusableSelectors = [
+            'a[href]',
+            'button:not([disabled])',
+            'textarea:not([disabled])',
+            'input[type="text"]:not([disabled])',
+            'select:not([disabled])',
+            '[tabindex]:not([tabindex="-1"])',
+        ];
+
+        const focusableElements = Array.from(
+            document.querySelectorAll(focusableSelectors.join(','))
+        );
+
+        // 현재 요소 이후의 포커스 가능한 요소 탐색
+        const currentIndex = focusableElements.indexOf(currentElement);
+        if (currentIndex !== -1 && currentIndex < focusableElements.length - 1) {
+            focusableElements[currentIndex + 1].focus();
+        }
+    }
+    
+
 });
 function popOpen(popId){
     let thispop = document.querySelector("#" + popId);
