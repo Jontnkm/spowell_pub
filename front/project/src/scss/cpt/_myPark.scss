@@ -162,7 +162,7 @@
         .listBox{
             position:relative; padding:40px 30px; padding-left:170px; border-bottom:1px solid var(--lbg1);
             &:before{position:absolute; top:40px; left:30px; content:'';display:block;width:100px;height:100px;border-radius:50%; background-repeat: no-repeat; background-position: center; background-size:50px 50px; background-color:var(--bg1);}
-            &:first-child:before{background-image: url(../../common/images/sub/about/img_about_icon_01.svg);}
+            &:first-child:before{background-image: url(../../common/images/sub/about/img_about_icon_08.svg);}
             &:nth-child(2):before{background-image: url(../../common/images/sub/about/img_about_icon_02.svg);}
             &:nth-child(3):before{background-image: url(../../common/images/sub/about/img_about_icon_03.svg);}
             &:nth-child(4):before{background-image: url(../../common/images/sub/about/img_about_icon_04.svg);}
@@ -378,8 +378,8 @@
 
                             &.national{background:var(--prm1);}
                             &.retire{background:var(--prm2);}
-                            &.student{background:var(--snd2);}
-                            &.elder{background:#008A4E;}
+                            &.student{background:#752CF2;}
+                            &.elder{background:#007C8A;}
                             &.major{background:var(--prm3);}
                         }
                     }
