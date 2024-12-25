@@ -163,12 +163,12 @@
             position:relative; padding:40px 30px; padding-left:170px; border-bottom:1px solid var(--lbg1);
             &:before{position:absolute; top:40px; left:30px; content:'';display:block;width:100px;height:100px;border-radius:50%; background-repeat: no-repeat; background-position: center; background-size:50px 50px; background-color:var(--bg1);}
             &:first-child:before{background-image: url(../../common/images/sub/about/img_about_icon_08.svg);}
-            &:nth-child(2):before{background-image: url(../../common/images/sub/about/img_about_icon_02.svg);}
-            &:nth-child(3):before{background-image: url(../../common/images/sub/about/img_about_icon_03.svg);}
-            &:nth-child(4):before{background-image: url(../../common/images/sub/about/img_about_icon_04.svg);}
-            &:nth-child(5):before{background-image: url(../../common/images/sub/about/img_about_icon_05.svg);}
-            &:nth-child(6):before{background-image: url(../../common/images/sub/about/img_about_icon_06.svg);}
-            &:nth-child(7):before{background-image: url(../../common/images/sub/about/img_about_icon_07.svg);}
+            &:nth-child(2):before{background-image: url(../../common/images/sub/about/img_about_icon_09.svg);}
+            &:nth-child(3):before{background-image: url(../../common/images/sub/about/img_about_icon_10.svg);}
+            &:nth-child(4):before{background-image: url(../../common/images/sub/about/img_about_icon_11.svg);}
+            &:nth-child(5):before{background-image: url(../../common/images/sub/about/img_about_icon_12.svg);}
+            &:nth-child(6):before{background-image: url(../../common/images/sub/about/img_about_icon_13.svg);}
+            &:nth-child(7):before{background-image: url(../../common/images/sub/about/img_about_icon_14.svg);}
             
             .tit{margin-bottom:20px; line-height:28px; font-size:20px; font-weight:700; }
             & > .bulletList.black{padding-left:10px;}
