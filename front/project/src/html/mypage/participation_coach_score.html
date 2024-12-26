@@ -1,0 +1,33 @@
+
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">국제대회 평가점수 및 지급기준</button>
+
+<div class="modPopup type01" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <div class="tit">국제대회 평가점수 및 지급기준</div>
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <!-- 컨텐츠 내용 -->
+             <!--// 컨텐츠 내용 -->
+            
+            <!-- 팝업 버튼 -->
+            <div class="popBtnArea">
+                <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
