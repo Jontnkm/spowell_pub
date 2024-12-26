@@ -484,6 +484,11 @@
             }
         }
     }
+    
+    .copyrightTextArea {
+        display:flex; justify-content: end; margin-top:60px; padding-top:20px; border-top:1px solid var(--lbg1);
+        .txt{display:block; margin-right:12px; line-height:19.6px; font-size:14px;}
+    }
 
     /* tablet02 1160px */
     @include media('tablet02') {
