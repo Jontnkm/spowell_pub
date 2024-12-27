@@ -325,8 +325,8 @@
 
         @include media ('mobile') {
             .popupBox .popTitArea .logo{
-                width:50%;
-                img{margin-top:6px; width:70%;}
+                width:70%; max-width:300px;
+                img{margin-top:6px; width:100%;}
             }
 
             .mapBox {
