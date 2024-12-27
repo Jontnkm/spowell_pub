@@ -385,7 +385,7 @@
                     }
 
                     .tit{display:block; margin-top:14px; line-height:33.6px; font-size:24px; font-weight:800; }
-                    .txt{margin-top:8px; max-height:72px; line-height:24px; font-size:16px; color:#555555;}
+                    .txt{margin-top:8px; max-height:72px; line-height:24px; font-size:16px; color:var(--t1);}
                     .hash{
                         position:absolute; bottom:30px; left:30px; display:inline-block; padding:0 8px; line-height:26px; border-radius:6px; border:1px solid var(--prm1); color:var(--prm1); font-size:14px;
                         &:before{content:'#'; margin-right:2px;}
