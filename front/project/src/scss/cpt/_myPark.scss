@@ -650,3 +650,38 @@
         img{width:152px;}
     }
 }
+
+/* 공통 탭 */
+.tabArea{
+    .inner{
+        & > ul{
+            display:flex; justify-content: center;
+            & > li{
+                min-width:220px; height:42px;
+                & + li {margin-left:8px;}
+                & > a{display:flex; justify-content: center; align-items: center; height:42px; font-size:16px; font-weight:500; border:1px solid var(--lbg2); border-radius:90px; }
+                &.active > a{border:1px solid var(--prm1); background:var(--prm1); color:var(--bg3); font-weight:700;}
+            }
+        }
+    }
+
+    .tabCont{
+        .contBox{display:none;}
+        .contBox.active{display:block;}
+    }
+
+    @include media('mobile') {
+        .inner > ul > li {min-width:50%; max-width:220px;}
+    }
+}
+
+/* 팝업 내부 탭 (평가점수 및 지급기준) */
+.cptPopTabArea{
+    .tabCont{padding-top:20px;}
+    .tbTitArea{
+        display:flex; justify-content: space-between; align-items: center; margin-bottom:16px;
+        .tit{display:inline-block; line-height:25px; font-size:18px; font-weight:700; }
+        .unit{line-height:19.6px; font-size:14px; font-weight:500; color:var(--tbg1);}
+    }
+    .scrollArea{height:auto; max-height:calc(100vh - 340px); overflow-y:auto;}
+}

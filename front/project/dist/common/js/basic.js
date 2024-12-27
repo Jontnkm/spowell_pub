@@ -431,5 +431,27 @@ $(document).ready(function(){
         $("html, body").animate({scrollTop:0}, 400);
         return false;
     })
+
+
+    /* 공통 : 탭 - 최상위클래스 .tabArea 사용, 그 하위마크업은 가이드와 동일 */
+    let tabs = document.querySelectorAll('.tabArea');
+    tabs.forEach(function(tab){
+        let tabBtns = tab.querySelectorAll('.inner > ul > li > a');
+        let tabConts = tab.querySelectorAll('.tabCont > .contBox');
+
+        tabBtns.forEach(function(btn,index){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                // 탭 버튼 활성화
+                tabBtns.forEach(item => item.parentElement.classList.remove('active'));
+                btn.parentElement.classList.add('active');
+
+                // 탭 콘텐츠 활성화
+                tabConts.forEach(cont => cont.classList.remove('active'));
+                tabConts[index].classList.add('active');
+            })
+        })
+    })
+
 })
 
