@@ -96,7 +96,83 @@
                             }
                             > .dropTopBox {
                                 display:none; position:absolute; bottom:calc(100% - 76px); left:0; width:100%; background:var(--bg4); padding-top:30px;
-                                > ul {
+                                &.mo {display:none;}
+                                @include media ('tablet') {
+                                    padding:40px;
+                                    &.pc {display:none;}
+                                    &.mo {display:block;}
+                                }
+                                > div {
+                                    > ul {
+                                        width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
+                                        > li {
+                                            width:25%;
+                                            > p {
+                                                font-size:18px; color:var(--bg3); font-weight:400; margin-bottom:10px;
+                                            }
+                                            > ul {
+                                                display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:5px;
+                                                > li {
+                                                    > a {
+                                                        display:block; width:max-content; font-size:16px; color:#ccc; font-weight:400;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.moType {display:none;}
+                                    @include media ('mobile') {
+                                        &.pcType {display:none;}
+                                        &.moType {
+                                            display:block; overflow:hidden; margin:0 20px;
+                                            
+                                            > .swiper-control {
+                                                position:static; 
+                                                > .swiper {
+                                                    &-button {
+                                                        &-prev {
+                                                            position:absolute; top:50%; transform:translateY(50%); left:10px; background:url(../../common/images/common/ico_footer_arr01.svg)50% 50% no-repeat;
+                                                            &::after {
+                                                                content:'';
+                                                            }
+                                                        }
+
+                                                        &-next {
+                                                            position:absolute; top:50%; transform:translateY(50%); right:10px; background:url(../../common/images/common/ico_footer_arr02.svg)50% 50% no-repeat;
+                                                            &::after {
+                                                                content:'';
+                                                            }
+                                                        }
+
+                                                    }
+                                                }
+                                            }
+
+                                            > ul {
+                                                width:100%;
+                                                > li {
+                                                    width:100%; display:flex; flex-flow: row nowrap; align-items: flex-start ;justify-content: space-between;
+                                                    > div {
+                                                        > p {
+                                                            font-size:18px; color:var(--bg3); font-weight:400; margin-bottom:10px;
+                                                        }
+                                                        > ul {
+                                                            display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; gap:5px;
+                                                            > li {
+                                                                > a {
+                                                                    display:block; width:max-content; font-size:16px; color:#ccc; font-weight:400;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .normal {
                                     width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
                                     > li {
                                         width:25%;

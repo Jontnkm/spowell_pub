@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //메인 비주얼 슬라이드
     
     var mainSlide = new Swiper(".mainVisual", {
+        rewind: true,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //복지지원 슬라이드
     var supportSlide = new Swiper(".supportSlideInner", {        
+        rewind: true,
         slidesPerView : 1,
         spaceBetween : 24,
         pagination: {
@@ -73,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //소식 슬라이드
-    var newsSlide = new Swiper(".newsSlide", {        
+    var newsSlide = new Swiper(".newsSlide", {      
+        rewind: true,  
         slidesPerView : 1,
         spaceBetween : 40,
         navigation: {
@@ -99,6 +102,15 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: {
             el: ".swiper-paging"
         }
+    });
+
+    //푸터 패밀리사이트 슬라이드
+    var familySlide = new Swiper(".familySlide", {
+        rewind: true,   
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
     //탭메뉴
