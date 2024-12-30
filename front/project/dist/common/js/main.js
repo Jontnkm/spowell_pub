@@ -104,6 +104,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    //푸터 협력사 슬라이드
+    var affSlide = new Swiper(".affSlide", {
+        slidesPerView : 3,
+        spaceBetween : 14,
+        slidesPerGroup : 3,
+        rewind: true,
+        navigation: {
+            nextEl: ".swiper-button-next01",
+            prevEl: ".swiper-button-prev01",
+        },
+    });
+
     //푸터 패밀리사이트 슬라이드
     var familySlide = new Swiper(".familySlide", {
         rewind: true,   

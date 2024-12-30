@@ -489,6 +489,7 @@
 
                 .mainTable {
                     height:330px; overflow-y:scroll;
+                    &::-webkit-scrollbar {display:none;}
                     .tbCal {
                         width:100%; border-collapse: collapse; height:330px;
                         
