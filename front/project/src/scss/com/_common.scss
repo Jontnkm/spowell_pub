@@ -1626,6 +1626,10 @@
 /*========================================================================================*/
 .quickOpen {
     position:fixed; top:350px; right:0; background:var(--bg3); padding:14px; border-radius: 90px 0 0 90px; z-index:5; box-shadow: 1px 4px 20px 0px rgba(35, 48, 66, 0.12); transition:all .5s;
+
+    @include media('tablet03') {
+        display:none;
+    }
     > * {
         display:inline-block; vertical-align: middle; 
     }

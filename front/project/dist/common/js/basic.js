@@ -452,5 +452,26 @@ $(document).ready(function(){
         return false;
     })
 
+    $(".menu-wrap").click(function(){
+        $("body").css("overflow","hidden");
+        $(".moMenuBox").show();
+    })
+
+    $(".moMenuBox .menuList .left ul li a").click(function(){
+        var menu = $(".moMenuBox .menuList .left ul li a");
+        var idx = $(this).parent("li").index();
+        var loc = $(".moMenuBox .menuList .right .inner > div");
+
+        $(loc).removeClass("on");
+        $(loc).eq(idx).addClass("on");
+        
+        $(menu).removeClass("on")
+        $(this).addClass("on");
+    })
+
+    $(".closeBtn").click(function(){
+        $("body").css("overflow","visible");
+        $(".moMenuBox").hide();
+    })
 })
 
