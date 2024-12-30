@@ -260,34 +260,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
-    if(uploadFiles !== null && uploadFiles !== undefined){
-        uploadFiles.forEach(function(uploadFile,idx){
-            uploadFile.addEventListener("change",function(event){
-                const fileBox = parentsElementFind(this, "fileBox");
-                let fileName;
-                if(window.FileReader){
-                    fileName = this.files[0].name;
-                } else {
-                    console.log("noFileReader");
-                }
-                fileBox.querySelector(".textBox").innerText = fileName;
-                fileBox.classList.add("on");
-            });
+    const uploadFiles = document.querySelectorAll(".fileArea .fileIpt");
+    uploadFiles.forEach(function(uploadFile,idx){
+        uploadFile.addEventListener("change",function(event){
+            const fileArea = this.parentElement.parentElement;
+            let fileName;
+            if(window.FileReader){
+                fileName = this.files[0].name;
+            } else {
+                console.log("noFileReader");
+            }
+            fileArea.querySelector(".download").innerText = fileName;
+            fileArea.classList.add("on");
         });
-    }
-
-    const delFiles = document.querySelectorAll(".fileBox .fileDel");
-    if(delFiles !== null && delFiles !== undefined){
-        delFiles.forEach(function(delFile,idx){
-            delFile.addEventListener("click",function(event){
-                const fileBox = parentsElementFind(this, "fileBox");
-                fileBox.querySelector(".uploadBtn").value = "";
-                fileBox.querySelector(".textBox").innerText = "";
-                fileBox.classList.remove("on");
-            });
+    });
+        
+    const delFiles = document.querySelectorAll(".fileArea .delBtn");
+    delFiles.forEach(function(delFile,idx){
+        delFile.addEventListener("click",function(event){
+            const fileArea = this.parentElement.parentElement;
+            fileArea.querySelector(".fileIpt").value = "";
+            fileArea.querySelector(".download").innerText = "";
+            fileArea.classList.remove("on");
         });
-    }
+    });
+        
 
     if(datepicker !== null && datepicker !== undefined){
         var datepicker = new tui.DatePicker('#wrapper1', {
