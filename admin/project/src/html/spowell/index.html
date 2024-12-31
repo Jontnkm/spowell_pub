@@ -1,0 +1,238 @@
+<%- include('../layout/type_spowell/header.ejs', {
+    url: "../../"
+}) %>
+
+<style>
+    /*대시보드 화면에서는 좌측 메뉴 영역이 없어져야함 */
+    /*꼭 html 페이지에 추가시켜줄것*/
+    .lytLayout .layoutContainer .layoutNav {display:none;}
+    .lytLayout .layoutContainer .layoutCont {width:100%;}
+</style>
+
+<div class="lytSpowellDashBoard">
+    <div class="infoStaticCov">
+        <div class="infoArea">
+            <div class="pInfo">
+                <p>안녕하세요, <span><b>홍길동</b>님!</span></p>
+                <p>부서 : <span>서울시 송파체력센터</span></p>
+                <p>최종 로그인 날짜 : <span>2022-12-30 AM 09:30:32</span></p>
+            </div>
+            <div class="taskCov">
+                <p class="staticTit">이달의 집행계획</p>
+                <div>
+                    <div class="staticArea kspoUserCov">
+                        <div class="grp01">
+                            <ul>
+                                <li>
+                                    <p class="minTit">경기력 성과포상금</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">생활지원금</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">국내 교육지원금</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">국외 교육지원금</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">원로체육인지원</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">체육유공자지원</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                                <li>
+                                    <p class="minTit">체육장학금</p>
+                                    <a href="#none" class="grp01Cnt">10</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contArea">
+        <div class="topArea">
+            <div class="leftBox">
+                <p class="title">지원사업별 업무현황</p>
+                <table>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">사업구분</th>
+                            <th colspan="2">지원신청</th>
+                            <th colspan="2">공단승인</th>
+                        </tr>
+                        <tr class="scndLine">
+                            <th>적격심사</th>
+                            <th>적격심사</th>
+                            <th>승인요청</th>
+                            <th>승인반려</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>경기력성과포상금</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>생활지원금</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>국내 교육지원금</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>국외 교육지원금</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>원로체육인지원</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>체육유공자지원</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>체육장학금</th>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                        <tr>
+                            <th>꿈나무장학금</th>
+                            <td colspan="4">선발대기 : <a href="#none">10건</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rightBox">
+                <p class="title center">주요메뉴 바로가기</p>
+                <div class="buttonBox">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash01.svg">
+                                <span>메시지<br>발송</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash02.svg">
+                                <span>대회정보<br>관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash03.svg">
+                                <span>지원실적<br>조회</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash04.svg">
+                                <span>지급보류<br>관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash05.svg">
+                                <span>지급중지<br>관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../../common/images/common/ico_dash06.svg">
+                                <span>지급환수<br>관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="botArea">
+            <div class="leftBox">
+                <p class="title">
+                    직업안정지원 업무현황
+                    <span>대기상태</span>
+                </p>
+                <table>
+                    <colgroup>
+                        <col style="width:33.3333%">
+                        <col style="width:33.3333%">
+                        <col style="width:33.3333%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>스포츠클럽창업지원</th>
+                            <th>지도자현장연수지원</th>
+                            <th>취업인턴쉽지원</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="rightBox">
+                <p class="title">체육인 인증신청</p>
+                <table>
+                    <colgroup>
+                        <col style="width:50%">
+                        <col style="width:50%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>비장애</th>
+                            <th>장애</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#none">10건</a></td>
+                            <td><a href="#none">10건</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
