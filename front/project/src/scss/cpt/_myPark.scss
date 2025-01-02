@@ -49,6 +49,7 @@
 .roundBox{
     padding:24px; border:1px solid var(--lbg1); border-radius:14px; line-height:32px; font-size:16px; word-break: keep-all;
 }
+.contTit {margin-bottom:20px; line-height:33.6px; font-size:24px; font-weight:800; }
 
 /* 테이블 스타일 커스텀 */
 .customTable{
@@ -489,6 +490,36 @@
         display:flex; justify-content: end; margin-top:60px; padding-top:20px; border-top:1px solid var(--lbg1);
         .txt{display:block; margin-right:12px; line-height:19.6px; font-size:14px;}
     }
+    
+    .applyCalendarArea {
+        .calendarList{
+            padding:0 30px; border-top:1px solid black; border-bottom:1px solid var(--lbg1);
+            & > li{
+                position:relative; padding:30px; padding-left:140px; min-height:160px;
+                & + li{border-top:1px solid var(--lbg1);}
+                .month{
+                    position:absolute; top:30px; left:0; display:flex; justify-content: center; align-items: center; width:100px; height:100px; border-radius:50%; background:var(--bg1);
+                    span{display:inline-block; width:50px; line-height:28px; font-size:20px; font-weight:700; text-align:center; }
+                }
+                .monthList{
+                    margin-top:8px;
+                    & > li{
+                        & + li{margin-top:20px;}
+                        .titBox{display:flex; align-items: center;}
+                        .link{
+                            position:relative; display:inline-block; margin-right:10px; padding-left:15px; line-height:25px; font-size:18px; font-weight:700; 
+                            &:before{position:absolute; top:6px; left:0; transform:rotate(-45deg);  content:'';display:block; width:8px;height: 4px; border-bottom:2px solid var(--snd2); border-left:2px solid var(--snd2); }
+                        }
+                        .btn{
+                            position:relative; padding:5px 32px 5px 14px; border:1px solid var(--lbg2); border-radius:6px; font-size:14px; font-weight:500; 
+                            &:after{position:absolute; top:5px; right:10px; content:'';display:block;width:20px;height:20px; background:url(../../common/images/sub/apply/ico_cal_detail.svg) no-repeat center/contain; }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 
     /* tablet02 1160px */
     @include media('tablet02') {
@@ -542,6 +573,32 @@
                     & + li{
                         margin:30px 0 0 0;
                         &:before{top:-16px; left:50%; margin-top:-6px; transform:rotate(90deg); }
+                    }
+                }
+            }
+        }
+
+        .applyCalendarArea {
+            .calendarList{
+                padding:0;
+                & > li{
+                    position:relative; padding:15px 0; min-height:160px;
+                    & + li{border-top:unset;}
+                    .month{
+                        position:relative; top:unset; left:unset; width:auto; height:40px; border-radius: unset;
+                        span{width:auto;}
+                    }
+                    .monthList{
+                        margin-top:20px;
+                        & > li{
+                            & + li{margin-top:10px;}
+                            .btn{
+                                position:relative; padding:0; width:30px; height:30px;
+                                &:after{right:4px;}
+                                .mHidden {overflow: hidden;position: absolute;clip: rect(0, 0, 0, 0);clip-path: polygon(0 0, 0 0, 0 0);width: 1px;height: 1px;margin: -1px;}
+                            }
+    
+                        }
                     }
                 }
             }
