@@ -582,7 +582,7 @@
             .calendarList{
                 padding:0;
                 & > li{
-                    position:relative; padding:15px 0; min-height:160px;
+                    position:relative; padding:15px 0; min-height:unset;
                     & + li{border-top:unset;}
                     .month{
                         position:relative; top:unset; left:unset; width:auto; height:40px; border-radius: unset;
@@ -597,7 +597,7 @@
                                 &:after{right:4px;}
                                 .mHidden {overflow: hidden;position: absolute;clip: rect(0, 0, 0, 0);clip-path: polygon(0 0, 0 0, 0 0);width: 1px;height: 1px;margin: -1px;}
                             }
-    
+                            .bulletList{margin-top:5px;}
                         }
                     }
                 }
