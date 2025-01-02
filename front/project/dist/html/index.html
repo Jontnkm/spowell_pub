@@ -718,163 +718,325 @@
                 <div class="calendarInner pcType">
                     <div class="leftArea">
                         <p class="title">2025년도<br>연간일정</p>
+                        <div class="tabBtn">
+                            <ul>
+                                <li><a href="javscript:void(0)" class="on" >상반기</a></li>
+                                <li><a href="javscript:void(0)">하반기</a></li>
+                            </ul>
+                        </div>
                         <a href="#none" class="reservAlarm">신청 알림 예약</a>
                     </div>
                     <div class="rightArea">
-                        <div class="inner">
-                            <div class="cal-pagination"></div>
-                            <div class="calSlide">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <!--1월부터 6월-->
-                                        <div class="schedule">
-                                            <div class="jan">
-                                                <div class="month">
-                                                    <span>1월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post alltime type01 first">
-                                                        <span class="atFlag">연간<br>상시접수</span>
-                                                        <ul class="atList">
-                                                            <li>
-                                                                <span>경기력 성과포상금 (선수/지도자)</span>
-                                                                <span>2025.01.01 ~ 2025.01.01</span>
-                                                            </li>
-                                                            <li>
-                                                                <span>체육유공자지원</span>
-                                                                <span>2025.01.01 ~ 2025.01.01</span>
-                                                            </li>
-                                                            <li>
-                                                                <span>국개대표 보험지원금</span>
-                                                                <span>2025.01.01 ~ 2025.01.01</span>
-                                                            </li>
-                                                        </ul>
+                        <div class="tabCont">
+                            <!-- 
+                            
+                                 *공통
+                                 - .evtAb = 행사항목 (고정 값)
+                                 - .scnd = 2번째줄
+                                 - .thrd = 3번째줄
+                                 - .frth = 4번째줄
+                                 - .ffth = 5번째줄
+                                 - .sxth = 6번째줄
+                                 - .svth = 7번째줄
+                                 - .egth = 8번째줄
+                                 - .nith = 9번째줄
+                                 - .hideBox = 마우스오버 노출 박스 전용
+                                 - .mon2 = 2달치
+                                 - .mon3 = 3달치
+
+                                * 연간 상시접수 용
+                                 - .year = 연간행사 전용 class
+                                 - .title = 연간상시접수 타이틀 용 only
+                                 - .evtTit = 행사명 class
+                                 - 
+
+                            -->
+                            <div class="firstSem">
+                                <ul>
+                                    <li class="jan">
+                                        <div class="month">
+                                            <span>1월</span>
+                                        </div>
+                                    </li>
+                                    <li class="feb">
+                                        <div class="month">
+                                            <span>2월</span>
+                                        </div>
+                                    </li>
+                                    <li class="mar">
+                                        <div class="month">
+                                            <span>3월</span>
+                                        </div>
+                                    </li>
+                                    <li class="apr">
+                                        <div class="month">
+                                            <span>4월</span>
+                                        </div>
+                                    </li>
+                                    <li class="may">
+                                        <div class="month">
+                                            <span>5월</span>
+                                        </div>
+                                    </li>
+                                    <li class="jun">
+                                        <div class="month">
+                                            <span>6월</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="double"> <!--만약 하나의 evtAb에 이중클래스로 egth(8번째)이상으로 추가 될 경우 클래스 ".double 추가 필요"-->
+                                    <li class="jan">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt year">
+                                                    <div class="evtAb">
+                                                        <div class="inner">
+                                                            <span class="title">연간 상시접수</span>
+                                                            <div class="yrList">
+                                                                <span>선수 경기력 성과포상금</span>
+                                                                <span>지도자 경기력 성과포상금</span>
+                                                                <span>대한민국 체육유공자 지원</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="feb">
-                                                <div class="month">
-                                                    <span>2월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post type02 second">
-                                                        <span>국내외 지도자 현장연수</span>
-                                                        <span>2025.01.01. ~ 2025.01.01</span>
-                                                    </div>
-                                                    <div class="post type02 third">
-                                                        <span>생활지원금</span>
-                                                        <span>2025.01.01. ~ 2025.01.01</span>
-                                                    </div>
-                                                    <div class="post type02 fourth">
-                                                        <span>원로 체육인 지원</span>
-                                                        <span>2025.01.01. ~ 2025.01.01</span>
-                                                    </div>
-                                                    <div class="post type02 sixth">
-                                                        <span>상반기 국내대학원 교육지원금</span>
-                                                        <span>2025.01.01. ~ 2025.01.01</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mar">
-                                                <div class="month">
-                                                    <span>3월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post type02 fifth">
-                                                        <span>스포츠꿈나무 특기장려금</span>
-                                                        <span>2025.01.01. ~ 2025.01.01</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="apr">
-                                                <div class="month">
-                                                    <span>4월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="may">
-                                                <div class="month">
-                                                    <span>5월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="jun">
-                                                <div class="month">
-                                                    <span>6월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <!--7월부터 12월-->
-                                        <div class="schedule">
-                                            <div class="jul">
-                                                <div class="month">
-                                                    <span>7월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post alltime type01 first">
-                                                        연간 상시접수 | 경기력 성과포상금(선수/지도자) · 체육유공자지원 · 국가대표 보험지원금 
+                                    </li>
+                                    <li class="feb">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt">
+                                                    <div class="evtAb scnd">
+                                                        <p>국내외 지도자 현장 연수</p>
                                                     </div>
-                                                    <div class="post type02 second">
-                                                        국외대학 교육지원금
+                                                    <div class="hideBox">
+                                                        <p>국내외 지도자 현장 연수</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+
+                                                <div class="evt">
+                                                    <div class="evtAb thrd mon2">
+                                                        <p>생활지원금</p>
                                                     </div>
+                                                    <div class="hideBox">
+                                                        <p>생활지원금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
                                                 </div>
-                                            </div>
-                                            <div class="aug">
-                                                <div class="month">
-                                                    <span>8월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post type01 third">
-                                                        국내대학 교유지원금 2차
+
+                                                <div class="evt">
+                                                    <div class="evtAb frth mon2">
+                                                        <p>원로 체육인 지원</p>
                                                     </div>
+                                                    <div class="hideBox">
+                                                        <p>원로 체육인 지원</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
                                                 </div>
-                                            </div>
-                                            <div class="sep">
-                                                <div class="month">
-                                                    <span>9월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="oct">
-                                                <div class="month">
-                                                    <span>10월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    <div class="post type02 fourth">
-                                                        체육장학금
+
+                                                <div class="evt">
+                                                    <div class="evtAb ffth mon2">
+                                                        <p>상반기 국내대학원 교육지원금</p>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="nov">
-                                                <div class="month">
-                                                    <span>11월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="dec">
-                                                <div class="month">
-                                                    <span>12월</span>
-                                                </div>
-                                                <div class="calBox">
-                                                    
+                                                    <div class="hideBox">
+                                                        <p>상반기 국내대학원 교육지원금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li class="mar">
+                                        <div class="eventList" >
+                                            <div class="dataBox">
+                                                <div class="evt">
+                                                    <div class="evtAb scnd">
+                                                        <p>스포츠꿈나무 특기 장려금</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>스포츠꿈나무 특기 장려금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                                <div class="evt"></div>
+                                                <div class="evt"></div>
+                                                <div class="evt"></div>
+                                                <div class="evt">
+                                                    <div class="evtAb sxth">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                                <div class="evt">
+                                                    <div class="evtAb svth">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                                <div class="evt botUp"><!--egth 이상부터는 botUp 클래스 추가 필수-->
+                                                    <div class="evtAb egth">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>스포츠클럽 창업 지원</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                                <div class="evt botUp">
+                                                    <div class="evtAb nith mon3">
+                                                        <p>상반기 국내대학원 교육지원금</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>상반기 국내대학원 교육지원금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="apr">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt">
+                                                    <div class="evtAb scnd">
+                                                        <p>인턴십 취업지원</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>인턴십 취업지원</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="may">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <!-- no data -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="jun">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt">
+                                                    <div class="evtAb scnd">
+                                                        <p>국외유학 교육지원금</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>국외유학 교육지원금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="secondSem">
+                                <ul>
+                                    <li class="jul">
+                                        <div class="month">
+                                            <span>7월</span>
+                                        </div>
+                                    </li>
+                                    <li class="aug">
+                                        <div class="month">
+                                            <span>8월</span>
+                                        </div>
+                                    </li>
+                                    <li class="sep">
+                                        <div class="month">
+                                            <span>9월</span>
+                                        </div>
+                                    </li>
+                                    <li class="oct">
+                                        <div class="month">
+                                            <span>10월</span>
+                                        </div>
+                                    </li>
+                                    <li class="nov">
+                                        <div class="month">
+                                            <span>11월</span>
+                                        </div>
+                                    </li>
+                                    <li class="dec">
+                                        <div class="month">
+                                            <span>12월</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="jul">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt year">
+                                                    <div class="evtAb">
+                                                        <div class="inner">
+                                                            <span class="title">연간 상시접수</span>
+                                                            <div class="yrList">
+                                                                <span>선수 경기력 성과포상금</span>
+                                                                <span>지도자 경기력 성과포상금</span>
+                                                                <span>대한민국 체육유공자 지원</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="aug">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <!-- no data -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sep">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <!-- no data -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="oct">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <div class="evt">
+                                                    <div class="evtAb scnd mon2">
+                                                        <p>하반기 국내대학원 교육지원금</p>
+                                                    </div>
+                                                    <div class="hideBox">
+                                                        <p>하반기 국내대학원 교육지원금</p>
+                                                        <p>2025.02.01 ~ 2025.02.28</p>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nov">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <!-- no data -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dec">
+                                        <div class="eventList">
+                                            <div class="dataBox">
+                                                <!-- no data -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

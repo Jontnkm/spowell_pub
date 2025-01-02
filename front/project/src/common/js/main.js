@@ -187,3 +187,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }).scroll();
 });
+
+$(document).ready(function(){
+     //달력 오버 기능 2025.01.02
+     $(".evtAb").mouseenter(function(){
+        var sbl = $(this).next('.hideBox');
+        var hb = $(".hideBox");
+        hb.hide();
+        sbl.show();
+    })
+
+    $(".dataBox").mouseleave(function(){
+        var hb = $(".hideBox");
+        hb.hide();
+    })
+
+    $(".tabBtn ul li a").click(function(){
+        var e = $(".tabBtn ul li a");
+        var idx = $(this).parent("li").index();
+        var box = $(".mainCont03 .rightArea .tabCont > div");
+
+        $(e).removeClass("on");
+        $(this).addClass("on");
+        $(box).hide();
+        $(box).eq(idx).show();
+    })
+})
