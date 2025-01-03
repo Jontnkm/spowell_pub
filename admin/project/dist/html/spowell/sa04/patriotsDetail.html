@@ -207,17 +207,8 @@
     <!-- 작은 타이틀 -->
     <div class="comSmTit">
         <div class="alignL">
-            <div class="title">체육유공자정보</div>
+            <div class="title">체육인 조회</div>
         </div>
-        <!-- <div class="alignR">
-            <span class="titText">최근수정 : 2022-12-31</span>
-            <span class="titText">수정자 : 홍길동</span>
-            <div class="comSideOpt">
-                <ul class="opList">
-                    <li class="item"><button type="button" class="srhBtn dkbLine">PAR-Q 출력</button></li>
-                </ul>
-            </div>
-        </div> -->
     </div>
 
     <div class="cptTable">
@@ -232,16 +223,10 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th>유공자번호 <span class="required">*</span></th>
+                    <th>성명 <span class="required">*</span></th>
                     <td>
                         <div class="frmGroup">
-                            <input type="text" class="iptText" disabled>
-                        </div>
-                    </td>
-                    <th>이름 <span class="required">*</span></th>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText" disabled>
+                            <input type="text" class="iptText">
                         </div>
                     </td>
                     <th>주민등록번호 <span class="required">*</span></th>
@@ -250,26 +235,146 @@
                             <input type="text" class="iptText" disabled>
                             <div class="textBox deco">-</div>
                             <input type="text" class="iptText" disabled>
+                            <button type="button" class="soloBtn bLine" onclick="openPopup('sample01')">체육인확인</button>
                         </div>
                     </td>
+                    <th>등록번호</th>
+                    <td>00000</td>
                 </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육유공자정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
                 <tr>
                     <th>대상구분 <span class="required">*</span></th>
                     <td>
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">사망유공자</label></div>
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">장애유공자</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">선수</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">지도자</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">심판</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">기타</label></div>
+                    </td>
+                    <th>장애여부 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">비장애</label></div>
+                            <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">장애</label></div>
+                            (<select name="" id="" class="iptSlt frmSm">
+                                <option value="">장애유형선택</option>
+                            </select>)
+                        </div>
                     </td>
                     <th>종목 <span class="required">*</span></th>
                     <td>
                         <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">종목</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>휴대전화 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">010</option>
+                            </select>
+                            <div class="textBox dash">-</div>
+                            <input type="text" class="iptText">
+                            <div class="textBox dash">-</div>
                             <input type="text" class="iptText">
                         </div>
                     </td>
+                    <th>이메일 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText">
+                            <div class="textBox">@</div>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <th>국가대표경력</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">예</label></div>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl">아니오</label></div>
+                    </td>
+                </tr>
+                <tr>
                     <th>소속</th>
                     <td>
                         <div class="frmGroup">
                             <input type="text" class="iptText">
                         </div>
+                    </td>
+                    <th>은행계좌</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">은행명</option>
+                            </select>
+                            <input type="text" class="iptText">
+                            <button type="button" class="soloBtn bLine">확인</button>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- 작은 타이틀 -->
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육유공자 지정 정보</div>
+        </div>
+    </div>
+
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+                <col style="width:150px;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>접수번호 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <input type="text" class="iptText" >
+                        </div>
+                    </td>
+                    <th>접수일자 <span class="required">*</span></th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
+                        </div>
+                    </td>
+                    <th>대상구분</th>
+                    <td>
+                        
                     </td>
                 </tr>
                 <tr>
@@ -289,399 +394,570 @@
                             </div>
                         </div>
                     </td>
-                    <th>등록번호</th>
-                    <td>00000</td>
-                </tr>
-            </thead>
-        </table>
-    </div>
-
-    <!-- 작은 타이틀 -->
-    <div class="comSmTit">
-        <div class="alignL">
-            <div class="title">신청인 정보</div>
-        </div>
-    </div>
-
-    <div class="cptTable">
-        <table class="tbView">
-            <colgroup>
-                <col style="width:150px;">
-                <col style="width:auto;">
-                <col style="width:150px;">
-                <col style="width:auto;">
-                <col style="width:150px;">
-                <col style="width:auto;">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>성명 <span class="required">*</span></th>
+                    <th>사망일자</th>
                     <td>
                         <div class="frmGroup">
-                            <input type="text" class="iptText" >
-                        </div>
-                    </td>
-                    <th>대상자와의 관계 <span class="required">*</span></th>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText" >
-                        </div>
-                    </td>
-                    <th>우편번호</th>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText" >
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3" disabled>
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <th>휴대전화 <span class="required">*</span></th>
+                    <th>지정일자</th>
                     <td>
                         <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value="">010</option>
-                            </select>
-                            <div class="textBox Deco">-</div>
-                            <input type="text" class="iptText">
-                            <div class="textBox Deco">-</div>
-                            <input type="text" class="iptText">
+                            <div class="iptDate">
+                                <input type="text" class="iptText" id="datepicker3">
+                            </div>
                         </div>
                     </td>
-                    <th>이메일</th>
+                    <th>체육유공자번호</th>
                     <td>
                         <div class="frmGroup">
                             <input type="text" class="iptText">
                         </div>
                     </td>
-                    <th>주소</th>
+                    <th>체육유공자증서</th>
                     <td>
                         <div class="frmGroup">
-                            <input type="text" class="iptText">
+                            <div class="fileBox on">
+                                <!-- <div class="fileBefore">
+                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                    <input type="file" id="uploadBtn1" class="uploadBtn">
+                                </div> -->
+                                <div class="fileAfter">
+                                    <div class="textBox">유공자증서.pdf</div>
+                                    <button class="fileDel">삭제</button>
+                                </div>
+                            </div>
                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비고</th>
+                    <td colspan="5">
+                        <textarea name="" id="" class="textArea Mid"></textarea>
                     </td>
                 </tr>
             </thead>
         </table>
     </div>
     
-    <!-- 작은 타이틀 -->
-    <div class="comSmTit">
-        <div class="alignL">
-            <div class="title">유족 또는 가족</div>
-        </div>
-    </div>
-    <div class="cptTable">
-        <table class="tbView">
-            <colgroup>
-                <col style="width:120px">
-                <col style="width:120px">
-                <col style="width:120px">
-                <col style="width:300px">
-                <col style="width:150px">
-                <col style="width:150px">
-                <col style="width:auto">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>선택</th>
-                    <th>유공자와의 관계</th>
-                    <th>성명</th>
-                    <th>주민등록번호</th>
-                    <th>직업</th>
-                    <th>월소득</th>
-                    <th>비고</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center">
-                        <span class="txtRed">유족대표</span>
-                    </td>
-                    <td class="center">배우자</td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="right"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="center">
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"></div>
-                    </td>
-                    <td class="center">자녀</td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="right"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="center">
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"></div>
-                    </td>
-                    <td class="center">자녀</td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="right"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="center">
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"></div>
-                    </td>
-                    <td class="center">기타</td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="center"></td>
-                    <td class="right"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"></div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                            <div class="textBox Deco">-</div>
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText"> 원
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="cptGroupBtnCov">
-        <div class="cptGroupBtm alignL">
-            <div class="comSideOpt">
-                <button type="button" class="srhBtn  dkBlue">유족대표지정</button>
+    <div class="divGrid">
+        <div class="gLeft">
+            <!-- 작은 타이틀 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">유족 또는 가족</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:120px">
+                        <col style="width:120px">
+                        <col style="width:120px">
+                        <col style="width:300px">
+                        <col style="width:150px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>선택</th>
+                            <th>유공자와의 관계</th>
+                            <th>성명</th>
+                            <th>주민등록번호</th>
+                            <th>직업</th>
+                            <th>월소득</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">
+                                <span class="txtRed">유족대표</span>
+                            </td>
+                            <td class="center">배우자</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl"></label></div>
+                            </td>
+                            <td class="center">자녀</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl"></label></div>
+                            </td>
+                            <td class="center">자녀</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl"></label></div>
+                            </td>
+                            <td class="center">기타</td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="center"></td>
+                            <td class="right"></td>
+                        </tr>
+                        <tr>
+                            <td class="center">
+                                <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo001"><label for="rdo004" class="iptLbl"></label></div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                    <div class="textBox Deco">-</div>
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText"> 원
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="cptGroupBtnCov">
+                <div class="cptGroupBtm alignL">
+                    <div class="comSideOpt">
+                        <button type="button" class="srhBtn  dkBlue">유족대표지정</button>
+                    </div>
+                </div>
+                <div class="cptGroupBtm alignR">
+                    <div class="comSideOpt">
+                        <button type="button" class="srhBtn bLine">추가</button>
+                        <button type="button" class="srhBtn gLine">삭제</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 작은 타이틀 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">적격심사 및 지급계획</div>
+                </div>
+            </div>
+
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                        <col style="width:150px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>성명</th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                            <th>대상자와의 관계</th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>휴대전화</th>
+                            <td>
+                                <div class="frmGroup">
+                                    <select name="" id="" class="iptSlt">
+                                        <option value="">010</option>
+                                    </select>
+                                    <div class="textBox dash">-</div>
+                                    <input type="text" class="iptText">
+                                    <div class="textBox dash">-</div>
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                            <th>이메일</th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>우편번호</th>
+                            <td colspan="3">
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText frmSm">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td>
+                                <div class="frmGroup">
+                                    <input type="text" class="iptText">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="cptGroupBtm alignR">
-            <div class="comSideOpt">
-                <button type="button" class="srhBtn bLine">추가</button>
-                <button type="button" class="srhBtn gLine">삭제</button>
+        <div class="gRight">
+            <!-- 작은 타이틀 -->
+            <div class="comSmTit">
+                <div class="alignL">
+                    <div class="title">제출서류</div>
+                </div>
+            </div>
+            <div class="cptTable">
+                <table class="tbView">
+                    <colgroup>
+                        <col style="width:100px;">
+                        <col style="width:300px;">
+                        <col style="width:500px">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제출서류구분</th>
+                            <th>첨부파일</th>
+                            <th>확인</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center" rowspan="9">필수</td>
+                            <td class="center">체육유공자 지정신청서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">확인서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">국가대표확인서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">진단서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">통합.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">대상자 사진</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">가족관계증명서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">신청인의 주민등록등본</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">국가대표 선발 공문, 훈련일지 등</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">경기실적증명서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">사고경위서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox">
+                                        <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div>
+                                        <div class="fileAfter">
+                                            <div class="textBox"></div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="center" rowspan="4">선택</td>
+                            <td class="center">사실혼 관계 증명서</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">대상자 양육/부양사실 증명</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">장애인증명서(해당자)</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="center">기타서류</td>
+                            <td>
+                                <div class="frmGroup">
+                                    <div class="fileBox on">
+                                        <!-- <div class="fileBefore">
+                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                        </div> -->
+                                        <div class="fileAfter">
+                                            <div class="textBox">지급신청서.pdf</div>
+                                            <button class="fileDel">삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="center">
+                                <div class="frmGroup">
+                                    <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl"></label></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="center">비고</td>
+                            <td colspan="3">
+                                <textarea name="" id="" class="textArea Mid"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-
-    <!-- 작은 타이틀 -->
-    <div class="comSmTit">
-        <div class="alignL">
-            <div class="title">제출서류</div>
-        </div>
-        <div class="alignR">
-            <button type="button" class="soloBtn bLine">추가</button>
-        </div>
-    </div>
-    <div class="cptTable">
-        <table class="tbView">
-            <colgroup>
-                <col style="width:50px;">
-                <col style="width:300px;">
-                <col style="width:auto;">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>제출서류구분</th>
-                    <th>첨부파일</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center">1</td>
-                    <td class="center">지급신청서</td>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="fileBox on">
-                                <!-- <div class="fileBefore">
-                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                    <input type="file" id="uploadBtn1" class="uploadBtn">
-                                </div> -->
-                                <div class="fileAfter">
-                                    <div class="textBox">지급신청서.pdf</div>
-                                    <button class="fileDel">삭제</button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">2</td>
-                    <td class="center">국가대표확인서</td>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="fileBox on">
-                                <!-- <div class="fileBefore">
-                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                    <input type="file" id="uploadBtn1" class="uploadBtn">
-                                </div> -->
-                                <div class="fileAfter">
-                                    <div class="textBox">국가대표확인서.pdf</div>
-                                    <button class="fileDel">삭제</button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">3</td>
-                    <td class="center">통합</td>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="fileBox on">
-                                <!-- <div class="fileBefore">
-                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                    <input type="file" id="uploadBtn1" class="uploadBtn">
-                                </div> -->
-                                <div class="fileAfter">
-                                    <div class="textBox">통합.pdf</div>
-                                    <button class="fileDel">삭제</button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="center">4</td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="fileBox">
-                                <div class="fileBefore">
-                                    <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                    <input type="file" id="uploadBtn1" class="uploadBtn">
-                                </div>
-                                <div class="fileAfter">
-                                    <div class="textBox"></div>
-                                    <button class="fileDel">삭제</button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- 작은 타이틀 -->
-    <div class="comSmTit">
-        <div class="alignL">
-            <div class="title">적격심사 및 지급계획</div>
-        </div>
-    </div>
-    <div class="cptTable">
-        <table class="tbView">
-            <colgroup>
-                <col style="width:120px;">
-
-                <col style="width:250px;">
-                <col style="width:200px;">
-
-                <col style="width:120px;">
-                <col style="width:120px;">
-                <col style="width:120px;">
-                <col style="width:120px;">
-
-                <col style="width:120px;">
-                <col style="width:120px;">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th rowspan="2">등록일자</th>
-                    <th rowspan="2">적격심사</th>
-                    <th rowspan="2">지급신청</th>
-                    <th colspan="4">지급계획</th>
-                    <th rowspan="2">공단승인</th>
-                    <th rowspan="2">승인일자</th>
-                </tr>
-                <tr class="scndLine">
-                    <th>총지급액</th>
-                    <th>월지급액</th>
-                    <th>지급시작일자</th>
-                    <th>지급종료일자</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">심사대기</label></div>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">적격</label></div>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">부적격</label></div>
-                    </td>
-                    <td class="center">
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">선정대기</label></div>
-                        <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">지급선정</label></div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <div class="iptDate">
-                                <input type="text" class="iptText" id="datepicker3">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <div class="iptDate">
-                                <input type="text" class="iptText" id="datepicker3">
-                            </div>
-                        </div>
-                    </td>
-                    <td class="center">
-                        <span class="txtBlue">승인완료</span>
-                        <!-- <span class="txtRed">승인거절</span> -->
-                        <!-- <span>승인대기</span> -->
-                    </td>
-                    <td class="center">YYYY-MM-DD</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
      <!-- 그리드/테이블 하단 버튼 양측 -->  

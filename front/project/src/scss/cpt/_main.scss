@@ -14,6 +14,10 @@
                     @include media ('tablet02') {
                         display:none;
                     }
+
+                    &:focus-visible {
+                        border:3px solid var(--prm1);
+                    }
                 }
 
                 &.mo {
@@ -22,6 +26,7 @@
                         display:block;
                     }
                 }
+                
                 height:600px; overflow:hidden;
                 @include media ('tablet02') {
                     height:auto;
@@ -761,9 +766,11 @@
 
                 .bsList {
                     > a {
-                        position:relative; display:block; text-align:center; font-size:18px; color:var(--t1); width:94px; padding-top:104px; line-height:1.5; font-weight:500;
+                        position:relative; display:block; text-align:center; font-size:18px; color:var(--t1); min-width:94px; padding-top:104px; line-height:1.5; font-weight:500;
                         &::after {content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:94px; height:94px; border-radius:50%;}
-
+                        &:focus {
+                            outline:none; border:2px solid var(--prm1);
+                        }
                         &.ico01 {
                             &::after {
                                 background:var(--bg1) url(../../common/images/main/mainCont05_ico01.svg)50% 50% no-repeat;
@@ -1167,6 +1174,10 @@
 
                                     &::after {
                                         content:''; position:absolute; top:50%; right:30px; transform:translateY(-50%); width:24px; height:24px;
+                                    }
+
+                                    &:focus {
+                                        outline:0; border:2px solid var(--t1);
                                     }
                                 }
 

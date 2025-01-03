@@ -140,12 +140,15 @@
                                 }
                             }
                             > .dropTopBox {
-                                display:none; position:absolute; bottom:calc(100% - 115px); left:0; width:100%; background:var(--bg4); padding-top:30px; z-index:999;
+                                display:none; position:absolute; bottom:calc(100% - 76px); left:0; width:100%; background:var(--bg4); padding-top:30px; z-index:999;
                                 &.mo {display:none;}
                                 @include media ('tablet') {
                                     padding:40px;
                                     &.pc {display:none;}
                                     &.mo {display:block;}
+                                }
+                                @include media ('mobile') {
+                                    bottom:calc(100% - 115px);
                                 }
                                 > div {
                                     > ul {
