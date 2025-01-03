@@ -210,11 +210,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function(){
      //달력 오버 기능 2025.01.02
-     $(".evtAb").mouseenter(function(){
+    $(".evtAb").mouseenter(function(){
         var sbl = $(this).next('.hideBox');
         var hb = $(".hideBox");
         hb.hide();
         sbl.show();
+    })
+
+    $(".evtAb").focus(function(){
+        var sbl = $(this).next('.hideBox');
+        var hb = $(".hideBox");
+        hb.hide();
+        sbl.show();
+    })
+
+    $(".dataBox").mouseleave(function(){
+        var hb = $(".hideBox");
+        hb.hide();
     })
 
     $(".dataBox").mouseleave(function(){
