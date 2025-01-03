@@ -1112,7 +1112,7 @@
                         display:inline-block; width:30px; height:30px; font-size:22px; color:var(--t1); font-weight:700; line-height:1.4;
                     }
                     > .question {
-                        font-size:18px; color:var(--t1); font-weight:700; line-height:1.4; text-align:left;
+                        display:block; font-size:18px; color:var(--t1); font-weight:700; line-height:1.4; text-align:left;
                         @include media ('tablet') {
                             font-size:16px; width:80%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left;
                         }
