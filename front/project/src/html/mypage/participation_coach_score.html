@@ -5,7 +5,7 @@
     url: "../../"
 }) %>
 
-<button type="button" onclick="popOpen('clause01')" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">국제대회 평가점수 및 지급기준</button>
+<button type="button" onclick="popOpen('clause01', event)" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">국제대회 평가점수 및 지급기준</button> <!-- 2025.01.03 팝업오픈 이벤트 객체 추가 -->
 
 <div class="modPopup type01" id="clause01">
     <div class="popupDim">딤 영역</div>
@@ -223,6 +223,7 @@
                         </div>
                     </div>
                 </div>
+            </div> <!-- 2025.01.03 닫는div태그 빠져있던것 추가 -->
              <!--// 컨텐츠 내용 -->
             
             <!-- 팝업 버튼 -->
