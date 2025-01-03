@@ -402,20 +402,22 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     
 });
-function popOpen(popId){
+function popOpen(popId, event){ // 2025.01.03 - event 매개변수 추가
     let thispop = document.querySelector("#" + popId);
 
     thispop.classList.add("popOpen");
     thispop.setAttribute('tabindex',"0");
+    thispop.target = event.target; // 2025.01.03 - 추가 
     thispop.focus();
 }
 function popClose(popId){
-    var trig = document.querySelector('.trigger');
+    // var trig = document.querySelector('.trigger'); :: 2025.01.03 - 삭제
     let thispop = document.querySelector("#" + popId);
 
     thispop.classList.remove("popOpen");
     thispop.setAttribute('tabindex',"");
-    trig.focus();
+    // trig.focus(); :: 2025.01.03 - 삭제
+    thispop.target.focus(); // 2025.01.03 - 추가 
 }
 
 
