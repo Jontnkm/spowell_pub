@@ -1,4 +1,4 @@
-
+.swiper-notification {display:none;}
 .mainCont01 {
     width:100%; max-width:1920px; margin:0 auto; position:relative; z-index:1;
 
@@ -638,7 +638,7 @@
                 }
 
                 .reservAlarm {
-                    width:100%; height:56px; line-height:56px; border:1px solid var(--lbg2); border-radius:90px; text-align:center; font-size:18px; color:var(--prm3); font-weight:600; background:var(--bg3); margin-top:30px;
+                    display:block; width:100%; height:56px; line-height:56px; border:1px solid var(--lbg2); border-radius:90px; text-align:center; font-size:18px; color:var(--prm3); font-weight:600; background:var(--bg3); margin-top:30px;
                 }
             }
         }
