@@ -79,9 +79,18 @@
                 }
             }
             > .swiper-button-playStop {
-                width:24px; height:24px; position:absolute; display:flex; align-items: center; justify-content: center; left:50%; transform:translateX(-50%);
-                &::after {
-                    content:''; width:24px; height:24px; background:url(../../common/images/main/visualStop.svg)50% 50% no-repeat;
+                width:24px; height:24px; position:absolute; display:flex; align-items: center; justify-content: center; left:50%; transform:translateX(-50%); cursor:pointer;
+
+                &.play {
+                    &::after {
+                        content:''; width:24px; height:24px; background:url(../../common/images/main/visualStop.svg)50% 50% no-repeat;
+                    }
+                }
+
+                &.stop {
+                    &::after {
+                        content:''; width:24px; height:24px; background:url(../../common/images/main/visualPlay.svg)50% 50% no-repeat;
+                    }
                 }
             }
             > .swiper-button-next {
@@ -1012,7 +1021,13 @@
                         }
 
                         &-button-playStop02 {
-                            display:block; width:24px; height:24px; background:url(../../common/images/main/mainCont06_pause.svg)50% 50% no-repeat; cursor:pointer;
+                            display:block; width:24px; height:24px;  cursor:pointer;
+                            &.play {
+                                background:url(../../common/images/main/mainCont06_pause.svg)50% 50% no-repeat;
+                            }
+                            &.stop {
+                                background:url(../../common/images/main/mainCont06_play.svg)50% 50% no-repeat;
+                            }
                         }
                     }
                 }

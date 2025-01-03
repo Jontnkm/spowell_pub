@@ -23,6 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
             type: "progressbar",
         },
     });
+
+    const mvStop = document.querySelector(".swiper-button-playStop")
+    mvStop.addEventListener('click', function(){
+        if(this.classList.contains('play')){
+            // console.log('재생중');
+            this.classList.remove('play')
+            this.classList.add('stop')
+            mainSlide.autoplay.stop();
+        }else if(this.classList.contains('stop')){
+            // console.log('멈추었음');
+            this.classList.remove('stop')
+            this.classList.add('play')
+            mainSlide.autoplay.start();
+        }
+    })
     
     if(pagingBar !== null && pagingBar !== undefined){
         mainSlide.controller.control = pagingBar;
@@ -53,17 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         
     });
 
-    // var pagingBar02 = new Swiper(".supportSlideInner", {
-    //     pagination: {
-    //         el: ".swiper-pagination02",
-    //         type: "progressbar",
-    //     },
-    // });
-    
-    // if(pagingBar02 !== null && pagingBar02 !== undefined){
-    //     supportSlide.controller.control = pagingBar02;
-    // }
-
     //일정 슬라이드
     var calendarSlide = new Swiper(".calSlide", {        
         slidesPerView : 1,
@@ -74,22 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    //소식 슬라이드
-    var newsSlide = new Swiper(".newsSlide", {      
-        rewind: true,  
-        slidesPerView : 1,
-        spaceBetween : 40,
-        navigation: {
-            nextEl: ".swiper-button-next03",
-            prevEl: ".swiper-button-prev03"
-        },
-        pagination: {
-            el: ".swiper-pagination03",
-            type: "fraction",
-        },
-    });
-
-    //소식 슬라이드
+    //주요복지사업 모바일 슬라이드
     var businessSlide = new Swiper(".bsSlide", {        
         slidesPerView : 3,
         spaceBetween : 14,
@@ -103,6 +92,37 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-paging"
         }
     });
+    
+    //소식 슬라이드
+    var newsSlide = new Swiper(".newsSlide", {      
+        rewind: true,  
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next03",
+            prevEl: ".swiper-button-prev03"
+        },
+        pagination: {
+            el: ".swiper-pagination03",
+            type: "fraction",
+        },
+    });
+    const newsSTop = document.querySelector(".swiper-button-playStop02")
+    newsSTop.addEventListener('click', function(){
+        if(this.classList.contains('play')){
+            // console.log('재생중');
+            this.classList.remove('play')
+            this.classList.add('stop')
+            newsSlide.autoplay.stop();
+        }else if(this.classList.contains('stop')){
+            // console.log('멈추었음');
+            this.classList.remove('stop')
+            this.classList.add('play')
+            newsSlide.autoplay.start();
+        }
+    })
 
     //푸터 협력사 슬라이드
     var affSlide = new Swiper(".affSlide", {
