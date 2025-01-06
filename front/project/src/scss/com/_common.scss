@@ -454,7 +454,7 @@
     /*==================================== CHECKBOX & RADIO BUTTON ====================================*/
 
     .frmChk {
-        position:relative; width:max-content;
+        position:relative; width:max-content; display:block;
         &.fit {
             width:20px; height:20px;
         }

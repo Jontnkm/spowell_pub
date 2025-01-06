@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var pgTitElementMo = document.querySelector(".cptLnb .menuBox .depth2Menu.active > h3 > a");
     var pgTitMo = pgTitElementMo ? pgTitElementMo.textContent : "";
-    var targetElement = document.querySelector(".moInner .depth02 button h3");
+    var targetElement = document.querySelector(".moInner .depth02 button");
     if (targetElement) {
         targetElement.textContent = pgTitMo;
     }
@@ -401,7 +401,106 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
     
+    //푸터 협력사 슬라이드
+    var affSlide = new Swiper(".affSlide", {
+        slidesPerView : 3,
+        spaceBetween : 14,
+        slidesPerGroup : 3,
+        rewind: true,
+        navigation: {
+            nextEl: ".swiper-button-next01",
+            prevEl: ".swiper-button-prev01",
+        },
+    });
+
+    //푸터 패밀리사이트 슬라이드
+    var familySlide = new Swiper(".familySlide", {
+        rewind: true,   
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    //quick menu function
+    const qOpn = document.querySelector(".quickOpen");
+    const qCls = document.querySelector(".clsQuick > a");
+
+    qOpn.addEventListener('click',function(){
+        this.classList.add("hide");
+        this.nextElementSibling.classList.add("on");
+    });
+
+    qCls.addEventListener('click',function(){
+        document.querySelector(".quickOpen").classList.remove("hide");
+        document.querySelector(".cptQuick").classList.remove("on");
+    });
+
+    //mobile menu open, inner control and close function
+    const mOpn = document.querySelector(".menu-wrap");
+    const body = document.body;
+    const mMenu = document.querySelector(".moMenuBox");
+    const mInner = document.querySelectorAll(".moMenuBox .menuList .left ul li a");
+    const mCls = document.querySelector(".closeBtn");
+
+    mOpn.addEventListener("click",function(){
+        body.style.overflow = "hidden";
+        mMenu.style.display = "block";
+    })
+
+    mInner.forEach(function(menuItem){
+        menuItem.addEventListener("click", function(){
+            event.preventDefault();
+
+            var menu = document.querySelectorAll(".moMenuBox .menuList .left ul li a");
+            var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
+            var loc = document.querySelectorAll(".moMenuBox .menuList .right .inner > div")
+
+            depth02.forEach(function(item) {
+                item.classList.remove("on");
+            });
+            loc[idx].classList.add("on");
+            
+            menu.forEach(function(item) {
+                item.classList.remove("on");
+            });
+            this.classList.add("on");
+        })
+    });
+
+    mCls.addEventListener("click", function(){
+        body.style.overflow = "visible";
+        mMenu.style.display = "none";
+    })
+
+    //top button function
+    
+    window.addEventListener("scroll", function() {
+        var dh = document.documentElement.scrollHeight;
+        var point = dh / 4;
+        var scr = window.scrollY;
+        var topButton = document.querySelector(".topBtn");
+    
+        if (scr >= point) {
+            topButton.classList.add("on");
+        } else {
+            topButton.classList.remove("on");
+        }
+    });
+    
+    const tBtn = document.querySelector(".topBtn");
+    tBtn.addEventListener("click", function(event){
+        event.preventDefault(); // 기본 동작 방지
+        
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    })
+
 });
+
+//popup control
 function popOpen(popId, event){ // 2025.01.03 - event 매개변수 추가
     let thispop = document.querySelector("#" + popId);
 
@@ -410,6 +509,7 @@ function popOpen(popId, event){ // 2025.01.03 - event 매개변수 추가
     thispop.target = event.target; // 2025.01.03 - 추가 
     thispop.focus();
 }
+
 function popClose(popId){
     // var trig = document.querySelector('.trigger'); :: 2025.01.03 - 삭제
     let thispop = document.querySelector("#" + popId);
@@ -419,61 +519,4 @@ function popClose(popId){
     // trig.focus(); :: 2025.01.03 - 삭제
     thispop.target.focus(); // 2025.01.03 - 추가 
 }
-
-
-$(document).ready(function(){
-    $(".quickOpen").click(function(){
-        $(this).addClass("hide");
-        $(this).next(".cptQuick").addClass("on");
-    })
-
-    $(".clsQuick a").click(function(){
-        $(".quickOpen").removeClass("hide");
-        $(".cptQuick").removeClass("on");
-    })
-    
-
-    //탑버튼
-    $(window).scroll(function(){
-        var dh = $(document).height();
-        var point = dh / 4;
-        var scr = $(window).scrollTop();
-        var topButton = $(".topBtn");
-
-        // console.log("scroll = " + scr + "window = " + dh);
-
-        if(point <= scr) {
-            topButton.addClass("on");
-        }else if(point > scr){
-            topButton.removeClass("on");
-        }
-    })
-
-    $(".topBtn").click(function(){
-        $("html, body").animate({scrollTop:0}, 400);
-        return false;
-    })
-
-    $(".menu-wrap").click(function(){
-        $("body").css("overflow","hidden");
-        $(".moMenuBox").show();
-    })
-
-    $(".moMenuBox .menuList .left ul li a").click(function(){
-        var menu = $(".moMenuBox .menuList .left ul li a");
-        var idx = $(this).parent("li").index();
-        var loc = $(".moMenuBox .menuList .right .inner > div");
-
-        $(loc).removeClass("on");
-        $(loc).eq(idx).addClass("on");
-        
-        $(menu).removeClass("on")
-        $(this).addClass("on");
-    })
-
-    $(".closeBtn").click(function(){
-        $("body").css("overflow","visible");
-        $(".moMenuBox").hide();
-    })
-})
 
