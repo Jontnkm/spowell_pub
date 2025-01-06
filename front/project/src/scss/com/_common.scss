@@ -1122,6 +1122,12 @@
                         content:''; position:absolute; top:50%; right:24px; transform:translateY(-50%); width:24px; height:24px; background:url(../../common/images/common/ico_accordion.svg)50% 50% no-repeat
                     }
 
+                    &.on {
+                        &::after {
+                            transform:translateY(-50%) rotate(180deg);
+                        }
+                    }
+
                     .cptForm {
                         label {
                             font-size:18px; color:var(--t1); font-weight:700; line-height:1.4;

@@ -3,9 +3,9 @@
     width:100%; max-width:1920px; margin:0 auto; position:relative; z-index:1;
 
     > .mainVisual {
-        width:100%; position:relative; border-radius: 0 0 0 250px; background:var(--bg3); overflow:hidden;
-        @include media ('tablet03') {
-            border-radius:0;
+        width:100%; position:relative; border-radius: 0 0 0 150px; background:var(--bg3); overflow:hidden;
+        @include media ('tablet04') {
+            border-radius:0 !important;
         }
         .swiper-wrapper {
             .swiper-slide {
@@ -690,6 +690,9 @@
                         }
                         &.txt {
                             font-size:18px; font-weight:500; color:var(--bg3);
+                            @include media ('mobile') {
+                                font-size:14px; word-break:keep-all;
+                            }
                         }
                         &.count {
                             font-weight:800; margin:10px 0; font-size:24px; color:var(--snd1);
@@ -698,6 +701,9 @@
                                 @include media ('tablet') {
                                     font-size:28px;
                                 }
+                            }
+                            @include media ('mobile') {
+                                font-size:18px;
                             }
                         }   
                     }

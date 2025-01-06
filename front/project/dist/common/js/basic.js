@@ -121,8 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //아코디언 메뉴
-    var acc = document.querySelectorAll(".cptAccordion ul li button");
-    
+    var acc = document.querySelectorAll(".cptAccordion ul li .accBtnCov");
+    var chk = document.querySelectorAll(".cptAccordion ul li .accBtnCov input[type='checkbox']");
+
     acc.forEach(function(accor) {
         accor.addEventListener("click", function() {            
             var parent = this.parentElement;
@@ -138,6 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    chk.forEach(function(item){
+        item.addEventListener("click", function() {            
+            if (this.classList.contains("on")) {
+                parent.classList.remove("on");
+                this.classList.remove("on");
+                accAnswer.classList.remove("on");
+            } else {
+                parent.classList.add("on");
+                this.classList.add("on");
+                accAnswer.classList.add("on");
+            }
+        });
+    })
 
     var buttons = document.querySelectorAll(".dropDown > button");
     if(buttons){
@@ -558,6 +573,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 
+    //어코디언 클릭시 펼치기 스크립트
 });
 
 //popup control

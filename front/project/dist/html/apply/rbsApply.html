@@ -566,7 +566,7 @@
     <div class="moInner">
         <div class="subMenuBox">
             <div class="depth01">
-                <button type="button" title="열기"><h2>신청·안내</h2></button>
+                <button type="button" title="열기">신청·안내</button>
                 <div class="depthDrop">
                     <div class="inner">
                         <ul>
@@ -590,7 +590,7 @@
                 </div>
             </div>
             <div class="depth02">
-                <button type="button" title="열기"><h3></h3></button>
+                <button type="button" title="열기"></button>
                 <div class="depthDrop">
                     <div class="inner">
                         <ul>
@@ -680,7 +680,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">신이름</th>
+                                            <th scope="row">이름</th>
                                             <td class="left">
                                                 홍길동
                                             </td>
@@ -899,7 +899,7 @@
 
                             <div class="comButton">
                                 <button type="button" class="btn h56 l-g">이전</button>
-                                <button type="button" class="btn h56 f-dg">신청하기</button>
+                                <button type="button" class="btn h56 f-dg" onclick="locMove()">신청하기</button>
                             </div>
                         </div>
 
@@ -1247,7 +1247,12 @@
 
     </div>
 </div>
-
+<!--임시 스크립트 실 개발 시 삭제바람-->
+<script>
+    function locMove() {
+        location.href = "rbsApplyDone.html";
+    }
+</script>
 <!-- 팝업이 들어오는 영역 -->
 
 <!-- Bottom -->
