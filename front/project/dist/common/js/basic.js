@@ -397,24 +397,64 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* 공통 : 탭 - 최상위클래스 .tabArea 사용, 그 하위마크업은 가이드와 동일 */
-    let tabs = document.querySelectorAll('.tabArea');
-    tabs.forEach(function(tab){
-        let tabBtns = tab.querySelectorAll('.inner > ul > li > a');
-        let tabConts = tab.querySelectorAll('.tabCont > .contBox');
+    let tabBtns = document.querySelectorAll('.tabArea > .inner > ul > li > a');
+    tabBtns.forEach((tabBtn)=>{
+        tabBtn.addEventListener('click',function(e){
+            e.preventDefault();
 
-        tabBtns.forEach(function(btn,index){
-            btn.addEventListener('click',function(e){
-                e.preventDefault();
-                // 탭 버튼 활성화
-                tabBtns.forEach(item => item.parentElement.classList.remove('active'));
-                btn.parentElement.classList.add('active');
+            let tabArea = e.target.closest('.tabArea');
+            let targetBtn = e.target.parentElement;
+            let tabBtns = tabArea.children[0].querySelectorAll('.inner > ul > li > a');
+            let tabConts = tabArea.children[1].children;
 
-                // 탭 콘텐츠 활성화
-                tabConts.forEach(cont => cont.classList.remove('active'));
+            // 클릭된 버튼의 인덱스 가져오기
+            let index = Array.from(tabBtns).indexOf(e.target);
+
+            // 탭버튼 활성화
+            tabBtns.forEach(item => item.parentElement.classList.remove('active'));
+            targetBtn.classList.add('active');
+
+            // 탭 콘텐츠 활성화 처리
+            Array.from(tabConts).forEach((cont) => cont.classList.remove('active')); // 변환 후 forEach
+            if (tabConts[index]) {
                 tabConts[index].classList.add('active');
-            })
-        })
+            }
+        });
     })
+
+    // 복지캘린더 모바일 달력 숨김처리 & 목록 강제포커싱
+    const typeCalendar = document.querySelector('.typeCalendar');
+    function handleCalendarResize() {
+        const width = window.innerWidth; // 현재 창의 너비
+
+        if (typeCalendar) {
+            const tabBtns = typeCalendar.querySelectorAll('.inner > ul > li > a');
+            const tabConts = typeCalendar.querySelectorAll('.tabCont > .contBox');
+
+            if (width <= 1160) {
+                typeCalendar.classList.add('typeMo'); // width가 1160 이하일 때 클래스 추가
+
+                // 첫 번째 탭 비활성화
+                tabBtns[0].parentElement.classList.remove('active');
+                tabConts[0].classList.remove('active');
+
+                // 두 번째 탭 활성화
+                tabBtns[1].parentElement.classList.add('active');
+                tabConts[1].classList.add('active');
+            } else {
+                typeCalendar.classList.remove('typeMo'); // width가 1160 초과일 때 클래스 제거
+
+                // 기존 탭 상태 초기화 (활성화 상태 복구)
+                tabBtns.forEach((tabBtn, index) => {
+                    const isActive = tabBtn.parentElement.classList.contains('active');
+                    tabConts[index].classList.toggle('active', isActive);
+                });
+            }
+        }
+    }
+    // 초기 실행
+    handleCalendarResize();
+    window.addEventListener('resize', handleCalendarResize);
 
     // 메인 & 복지캘린더
     const calItem = document.querySelectorAll(".evtAb");

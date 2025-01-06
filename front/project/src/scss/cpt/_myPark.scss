@@ -522,6 +522,30 @@
     }
 
     // 메인달력과 동일한 복지캘린더 마크업- 스타일분리
+    .typeCalendar {
+        & > .inner{
+            & > ul{
+                justify-content: flex-end;
+                & > li {
+                    min-width:unset; height:42px;
+                    & > a{
+                        padding:0 12px; border-radius:8px;
+                        &:before{position:absolute; top:50%; left:13px; margin-top:-10px; content:'';display:block;width:18px;height:18px; }
+                        &.icoCal,
+                        &.icoList{padding-left:36px;}
+                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_blue.svg) no-repeat center/contain;}
+                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_blue.svg) no-repeat center/contain;}
+                    }
+                    &.active > a{
+                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_white.svg) no-repeat center/contain;}
+                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_white.svg) no-repeat center/contain;}
+                    }
+                }
+            }
+        }
+        .tabCont{padding-top:20px;}
+    }
+
     .mainCont03 {
         .calendarInner{position:relative; padding:0; border-radius:0; background:transparent;}
         .calendarInner > .leftArea {position:absolute; top:-62px; left:0; padding:0; width:auto; min-height:unset; }
@@ -538,6 +562,11 @@
     @include media('tablet02') {
         .applyListWrap{
             .applyListArea .list{width:calc(50% - 20px);}
+        }
+
+        .typeCalendar.typeMo {
+            & > .inner > ul > li:first-child{display:none;}
+            & > .tabCont > .contBox:first-child{display:none;}
         }
     }
 
@@ -741,30 +770,6 @@
     .tabCont{
         .contBox{display:none;}
         .contBox.active{display:block;}
-    }
-
-    &.typeCalendar {
-        .inner{
-            & > ul{
-                justify-content: flex-end;
-                & > li {
-                    min-width:unset; height:42px;
-                    & > a{
-                        padding:0 12px; border-radius:8px;
-                        &:before{position:absolute; top:50%; left:13px; margin-top:-10px; content:'';display:block;width:18px;height:18px; }
-                        &.icoCal,
-                        &.icoList{padding-left:36px;}
-                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_blue.svg) no-repeat center/contain;}
-                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_blue.svg) no-repeat center/contain;}
-                    }
-                    &.active > a{
-                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_white.svg) no-repeat center/contain;}
-                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_white.svg) no-repeat center/contain;}
-                    }
-                }
-            }
-        }
-        .tabCont{padding-top:20px;}
     }
 
     @include media('mobile') {
