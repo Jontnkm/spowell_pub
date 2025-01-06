@@ -173,7 +173,7 @@
                                     @include media ('mobile') {
                                         &.pcType {display:none;}
                                         &.moType {
-                                            display:block; overflow:hidden; margin:0 20px;
+                                            display:block; overflow:hidden;
                                             
                                             > .swiper-control {
                                                 position:static; 
@@ -210,6 +210,9 @@
                                                             > li {
                                                                 > a {
                                                                     display:block; width:max-content; font-size:16px; color:#ccc; font-weight:400;
+                                                                    @include media ('mobile') {
+                                                                        font-size:14px;
+                                                                    }
                                                                 }
                                                             }
                                                         }

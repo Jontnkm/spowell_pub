@@ -841,6 +841,10 @@
                         &.swiper-button-disabled {
                             background:url(../../common/images/main/bsSlidePrev_disabled.svg)50% 50% no-repeat;
                         }
+
+                        @include media ('mobileDeep'){
+                            display:none;
+                        }
                     }
 
                     &-next {
@@ -848,6 +852,9 @@
                         
                         &.swiper-button-disabled {
                             background:url(../../common/images/main/bsSlideNext_disabled.svg)50% 50% no-repeat;
+                        }
+                        @include media ('mobileDeep'){
+                            display:none;
                         }
                     }
 
@@ -1065,11 +1072,16 @@
                 > div {
                     border-radius:30px; overflow:hidden; padding: 36px 40px; background:var(--bg3); min-height:268px; position:relative;
 
+                    &::after {
+                        content:''; position:absolute; top:36px; right:40px; width:70px; height:70px; 
+
+                        @include media ('mobile') {
+                            top:auto; bottom:36px;
+                        }
+                    }
+
                     > p.title {
                         position:relative; width:100%; margin-bottom:17px; font-size:22px; color:var(--t1); font-weight:700; letter-spacing:-0.1px;
-                        &::after {
-                            content:''; position:absolute; top:50%; right:0; width:70px; height:70px; transform:translateY(-50%); 
-                        }
 
                         @include media ('tablet') {
                             > br {
@@ -1121,10 +1133,8 @@
                         @include media ('tablet') {
                             width:100%; margin-bottom:20px;
                         }
-                        > .title {
-                            &::after {
-                                background:url(../../common/images/main/mainCont06_ico01.svg)50% 50% no-repeat;
-                            }
+                        &::after {
+                            background:url(../../common/images/main/mainCont06_ico01.svg)50% 50% no-repeat;
                         }
                     }
 
@@ -1133,10 +1143,8 @@
                         @include media ('tablet') {
                             width:100%; margin-bottom:20px;
                         }
-                        > .title {
-                            &::after {
-                                background:url(../../common/images/main/mainCont06_ico02.svg)50% 50% no-repeat;
-                            }
+                        &::after {
+                            background:url(../../common/images/main/mainCont06_ico02.svg)50% 50% no-repeat;
                         }
                     }
 
