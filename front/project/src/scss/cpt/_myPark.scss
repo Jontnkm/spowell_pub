@@ -529,6 +529,9 @@
         .calendarInner > .leftArea > .tabBtn > ul > li > a{padding:0 12px; border-radius:8px; border: 1px solid var(--lbg2); background:#fff; color:black;}
         .calendarInner > .leftArea > .tabBtn > ul > li > a.on{border: 1px solid var(--prm1); background:var(--prm1); color: var(--bg3);}
         .calendarInner > .rightArea {width:100%; border-top:1px solid black; border-bottom:1px solid black; border-radius:0;}
+        .calendarInner > .rightArea .tabCont > div > ul > li .eventList > .dataBox > .evt > .hideBox:before {
+            position:absolute; top:-6px; right:-6px; content:'';display:block; width:20px; height:20px; background:url(../../common/images/sub/apply/ico_cal_alarm.svg) no-repeat center/contain;
+        }
     }
 
     /* tablet02 1160px */
