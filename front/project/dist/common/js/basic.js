@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var pgTitElementMo = document.querySelector(".cptLnb .menuBox .depth2Menu.active > h3 > a");
     var pgTitMo = pgTitElementMo ? pgTitElementMo.textContent : "";
-    var targetElement = document.querySelector(".moInner .depth02 button h3");
+    var targetElement = document.querySelector(".moInner .depth02 button");
     if (targetElement) {
         targetElement.textContent = pgTitMo;
     }
@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
             var loc = document.querySelectorAll(".moMenuBox .menuList .right .inner > div")
 
-            loc.forEach(function(item) {
+            depth02.forEach(function(item) {
                 item.classList.remove("on");
             });
             loc[idx].classList.add("on");
