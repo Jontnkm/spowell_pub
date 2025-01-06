@@ -41,170 +41,516 @@
                         <div class="sectionArea cptApply">
                             <h4 class="contTit">2025년 체육인복지 연간일정</h4>
 
-                            <div class="applyCalendarArea">
-                                <ul class="calendarList">
-                                    <li>
-                                        <b class="month"><span>상시 접수</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">국내외 지도자 현장연수</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
+                            <!-- 탭 -->
+                            <div class="tabArea typeCalendar">
+                                <div class="inner">
+                                    <ul>
+                                        <li class="active"><a href="javascript:void(0)" class="icoCal">달력</a></li>
+                                        <li><a href="javascript:void(0)" class="icoList">목록</a></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tabCont">
+                                    <div class="contBox active">
+                                        <!-- 달력 -->
+                                        <div class="mainCont03">
+                                            <div class="calendarInner pcType">
+                                                <div class="leftArea">
+                                                    <div class="tabBtn">
+                                                        <ul>
+                                                            <li><a href="javascript:void(0)" class="on" >상반기</a></li>
+                                                            <li><a href="javascript:void(0)">하반기</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.02.28</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">생활지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                <div class="rightArea">
+                                                    <div class="tabCont">
+                                                        <!-- 
+                                                        
+                                                             *공통
+                                                             - .evtAb = 행사항목 (고정 값)
+                                                             - .scnd = 2번째줄
+                                                             - .thrd = 3번째줄
+                                                             - .frth = 4번째줄
+                                                             - .ffth = 5번째줄
+                                                             - .sxth = 6번째줄
+                                                             - .svth = 7번째줄
+                                                             - .egth = 8번째줄
+                                                             - .nith = 9번째줄
+                                                             - .hideBox = 마우스오버 노출 박스 전용
+                                                             - .mon2 = 2달치
+                                                             - .mon3 = 3달치
+                            
+                                                            * 연간 상시접수 용
+                                                             - .year = 연간행사 전용 class
+                                                             - .title = 연간상시접수 타이틀 용 only
+                                                             - .evtTit = 행사명 class
+                                                             - 
+                            
+                                                        -->
+                                                        <div class="firstSem">
+                                                            <ul>
+                                                                <li class="jan">
+                                                                    <div class="month">
+                                                                        <span>1월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="feb">
+                                                                    <div class="month">
+                                                                        <span>2월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="mar">
+                                                                    <div class="month">
+                                                                        <span>3월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="apr">
+                                                                    <div class="month">
+                                                                        <span>4월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="may">
+                                                                    <div class="month">
+                                                                        <span>5월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="jun">
+                                                                    <div class="month">
+                                                                        <span>6월</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="double"> <!--만약 하나의 evtAb에 이중클래스로 egth(8번째)이상으로 추가 될 경우 클래스 ".double 추가 필요"-->
+                                                                <li class="jan">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt year">
+                                                                                <a href="apply/welfareCal_list.html" class="evtAb" title="복지캘린더 바로가기">
+                                                                                    <div class="inner">
+                                                                                        <span class="title">연간 상시접수</span>
+                                                                                        <div class="yrList">
+                                                                                            <span>선수 경기력 성과포상금</span>
+                                                                                            <span>지도자 경기력 성과포상금</span>
+                                                                                            <span>대한민국 체육유공자 지원</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="feb">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt">
+                                                                                <div class="evtAb scnd" tabindex="0">
+                                                                                    <p>국내외 지도자 현장 연수</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>국내외 지도자 현장 연수</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                            
+                                                                            <div class="evt">
+                                                                                <div class="evtAb thrd mon2" tabindex="0">
+                                                                                    <p>생활지원금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>생활지원금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                            
+                                                                            <div class="evt">
+                                                                                <div class="evtAb frth mon2" tabindex="0">
+                                                                                    <p>원로 체육인 지원</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>원로 체육인 지원</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                            
+                                                                            <div class="evt">
+                                                                                <div class="evtAb ffth mon2" tabindex="0">
+                                                                                    <p>상반기 국내대학원 교육지원금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>상반기 국내대학원 교육지원금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="mar">
+                                                                    <div class="eventList" >
+                                                                        <div class="dataBox">
+                                                                            <div class="evt">
+                                                                                <div class="evtAb scnd" tabindex="0">
+                                                                                    <p>스포츠꿈나무 특기 장려금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>스포츠꿈나무 특기 장려금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                            <div class="evt"></div>
+                                                                            <div class="evt"></div>
+                                                                            <div class="evt"></div>
+                                                                            <div class="evt">
+                                                                                <div class="evtAb sxth" tabindex="0">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                            <div class="evt">
+                                                                                <div class="evtAb svth" tabindex="0">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                            <div class="evt botUp"><!--egth 이상부터는 botUp 클래스 추가 필수-->
+                                                                                <div class="evtAb egth" tabindex="0">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>스포츠클럽 창업 지원</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                            <div class="evt botUp">
+                                                                                <div class="evtAb nith mon3" tabindex="0">
+                                                                                    <p>상반기 국내대학원 교육지원금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>상반기 국내대학원 교육지원금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="apr">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt">
+                                                                                <div class="evtAb scnd" tabindex="0">
+                                                                                    <p>인턴십 취업지원</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>인턴십 취업지원</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="may">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <!-- no data -->
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="jun">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt">
+                                                                                <div class="evtAb scnd" tabindex="0">
+                                                                                    <p>국외유학 교육지원금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>국외유학 교육지원금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="secondSem">
+                                                            <ul>
+                                                                <li class="jul">
+                                                                    <div class="month">
+                                                                        <span>7월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="aug">
+                                                                    <div class="month">
+                                                                        <span>8월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="sep">
+                                                                    <div class="month">
+                                                                        <span>9월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="oct">
+                                                                    <div class="month">
+                                                                        <span>10월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="nov">
+                                                                    <div class="month">
+                                                                        <span>11월</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="dec">
+                                                                    <div class="month">
+                                                                        <span>12월</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li class="jul">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt year">
+                                                                                <a href="apply/welfareCal_list.html" class="evtAb" title="복지캘린더 바로가기">
+                                                                                    <div class="inner">
+                                                                                        <span class="title">연간 상시접수</span>
+                                                                                        <div class="yrList">
+                                                                                            <span>선수 경기력 성과포상금</span>
+                                                                                            <span>지도자 경기력 성과포상금</span>
+                                                                                            <span>대한민국 체육유공자 지원</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="aug">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <!-- no data -->
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="sep">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <!-- no data -->
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="oct">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <div class="evt">
+                                                                                <div class="evtAb scnd mon2" tabindex="0">
+                                                                                    <p>하반기 국내대학원 교육지원금</p>
+                                                                                </div>
+                                                                                <a href="apply/welfareCal_list.html" class="hideBox" title="복지캘린더 바로가기">
+                                                                                    <p>하반기 국내대학원 교육지원금</p>
+                                                                                    <p>2025.02.01 ~ 2025.02.28</p>
+                                                                                </a> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="nov">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <!-- no data -->
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="dec">
+                                                                    <div class="eventList">
+                                                                        <div class="dataBox">
+                                                                            <!-- no data -->
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">원로 체육인 지원</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">상반기 국내대학원 교육지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>2월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">국내외 지도자 현장연수</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.02.28</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">생활지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">원로 체육인 지원</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">상반기 국내대학원 교육지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>3월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">스포츠꿈나무 특기장려금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.03.10 ~ 2025.03.31</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">스포츠클럽 창업지원</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.03.10 ~ 2025.03.31</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>4월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">인턴십 취업지원</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.04.10 ~ 2025.04.30</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>6월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">국외유학 교육지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.06.10 ~ 2025.07.10</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>8월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">하반기 국내대학원 교육지원금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.08.10 ~ 2025.09.10</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <b class="month"><span>10월</span></b>
-                                        <ul class="monthList">
-                                            <li>
-                                                <div class="titBox">
-                                                    <a href="javascript:void(0);" class="link">체육장학금</a>
-                                                    <button class="btn"><span class="mHidden">알림신청</span></button>
-                                                </div>
-                                                <ul class="bulletList">
-                                                    <li>신청기간 : 2025.10.10 ~ 2025.10.30</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--// 달력 -->
+                                    </div> 
+                                    <div class="contBox">
+                                        <!-- 목록 -->
+                                        <div class="applyCalendarArea">
+                                            <ul class="calendarList">
+                                                <li>
+                                                    <b class="month"><span>상시 접수</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">국내외 지도자 현장연수</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.02.28</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">생활지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">원로 체육인 지원</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">상반기 국내대학원 교육지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>2월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">국내외 지도자 현장연수</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.02.28</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">생활지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">원로 체육인 지원</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">상반기 국내대학원 교육지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.02.10 ~ 2025.03.10</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>3월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">스포츠꿈나무 특기장려금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.03.10 ~ 2025.03.31</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">스포츠클럽 창업지원</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.03.10 ~ 2025.03.31</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>4월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">인턴십 취업지원</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.04.10 ~ 2025.04.30</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>6월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">국외유학 교육지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.06.10 ~ 2025.07.10</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>8월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">하반기 국내대학원 교육지원금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.08.10 ~ 2025.09.10</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <b class="month"><span>10월</span></b>
+                                                    <ul class="monthList">
+                                                        <li>
+                                                            <div class="titBox">
+                                                                <a href="javascript:void(0);" class="link">체육장학금</a>
+                                                                <button class="btn"><span class="mHidden">알림신청</span></button>
+                                                            </div>
+                                                            <ul class="bulletList">
+                                                                <li>신청기간 : 2025.10.10 ~ 2025.10.30</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <p class="bulletSign">모집시기는 사업 운영 계획에 따라 변동될 수 있습니다.</p>
                                 <p class="bulletSign">복지별 알림 신청 시 해당 복지의 모집시기가 되면 알림을 받아볼 수 있습니다.</p>
                             </div>

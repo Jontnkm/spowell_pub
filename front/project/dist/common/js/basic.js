@@ -400,6 +400,66 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     })
+
+    // 메인 & 복지캘린더
+    const calItem = document.querySelectorAll(".evtAb");
+    const db = document.querySelectorAll(".dataBox");
+    calItem.forEach(function(item){
+        item.addEventListener("mouseover", function(event){
+            // console.log(this);
+            var sbl = this.nextElementSibling;
+            var hb = document.querySelectorAll(".hideBox");
+            if(event.target === item) {
+                hb.forEach(function(hBox){
+                    hBox.style.display = "none";
+                })
+                sbl.style.display = "block";
+            }
+        })
+
+        item.addEventListener("focus", function(event){
+            var sbl = this.nextElementSibling;
+            var hb = document.querySelectorAll(".hideBox");
+            if(event.target === item) {
+                
+                hb.forEach(function(hBox){
+                    hBox.style.display = "none";
+                })
+                sbl.style.display = "block";
+            }
+        })
+    })
+    db.forEach(function(line){
+        line.addEventListener("mouseleave", function(event){
+            // console.log(this);
+            var hb = document.querySelectorAll(".hideBox");
+            if(event.target === line) {
+                hb.forEach(function(hBox){
+                    hBox.style.display = "none";
+                })
+            }
+        })
+    })
+    const calTab = document.querySelectorAll(".tabBtn ul li a");
+    calTab.forEach(function(ct){
+        ct.addEventListener("click", function(){
+            var e = document.querySelectorAll(".tabBtn ul li a");
+            var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
+            var box = document.querySelectorAll(".mainCont03 .rightArea .tabCont > div");
+
+            e.forEach(function(item){
+                item.classList.remove("on");
+            })
+
+            this.classList.add("on");
+
+            box.forEach(function(item){
+                item.style.display = "none";
+            })
+
+            box[idx].style.display = "block";
+        })
+    })
     
     //푸터 협력사 슬라이드
     var affSlide = new Swiper(".affSlide", {

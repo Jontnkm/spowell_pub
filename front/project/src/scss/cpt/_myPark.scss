@@ -521,6 +521,19 @@
         }
     }
 
+    // 메인달력과 동일한 복지캘린더 마크업- 스타일분리
+    .mainCont03 {
+        .calendarInner{position:relative; padding:0; border-radius:0; background:transparent;}
+        .calendarInner > .leftArea {position:absolute; top:-62px; left:0; padding:0; width:auto; min-height:unset; }
+        .calendarInner > .leftArea::after {display:none;}
+        .calendarInner > .leftArea > .tabBtn > ul > li > a{padding:0 12px; border-radius:8px; border: 1px solid var(--lbg2); background:#fff; color:black;}
+        .calendarInner > .leftArea > .tabBtn > ul > li > a.on{border: 1px solid var(--prm1); background:var(--prm1); color: var(--bg3);}
+        .calendarInner > .rightArea {width:100%; border-top:1px solid black; border-bottom:1px solid black; border-radius:0;}
+        .calendarInner > .rightArea .tabCont > div > ul > li .eventList > .dataBox > .evt > .hideBox:before {
+            position:absolute; top:-6px; right:-6px; content:'';display:block; width:20px; height:20px; background:url(../../common/images/sub/apply/ico_cal_alarm.svg) no-repeat center/contain;
+        }
+    }
+
     /* tablet02 1160px */
     @include media('tablet02') {
         .applyListWrap{
@@ -716,8 +729,11 @@
             & > li{
                 min-width:220px; height:42px;
                 & + li {margin-left:8px;}
-                & > a{display:flex; justify-content: center; align-items: center; height:42px; font-size:16px; font-weight:500; border:1px solid var(--lbg2); border-radius:90px; }
-                &.active > a{border:1px solid var(--prm1); background:var(--prm1); color:var(--bg3); font-weight:700;}
+                & > a{position:relative; display:flex; justify-content: center; align-items: center; height:42px; font-size:16px; font-weight:500; border:1px solid var(--lbg2); border-radius:90px; }
+                &.active > a{
+                    border:1px solid var(--prm1); background:var(--prm1); color:var(--bg3); font-weight:700;
+                    &:after{content:'선택됨'; overflow: hidden;position: absolute;clip: rect(0, 0, 0, 0);clip-path: polygon(0 0, 0 0, 0 0);width: 1px;height: 1px;margin: -1px;}
+                }
             }
         }
     }
@@ -725,6 +741,30 @@
     .tabCont{
         .contBox{display:none;}
         .contBox.active{display:block;}
+    }
+
+    &.typeCalendar {
+        .inner{
+            & > ul{
+                justify-content: flex-end;
+                & > li {
+                    min-width:unset; height:42px;
+                    & > a{
+                        padding:0 12px; border-radius:8px;
+                        &:before{position:absolute; top:50%; left:13px; margin-top:-10px; content:'';display:block;width:18px;height:18px; }
+                        &.icoCal,
+                        &.icoList{padding-left:36px;}
+                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_blue.svg) no-repeat center/contain;}
+                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_blue.svg) no-repeat center/contain;}
+                    }
+                    &.active > a{
+                        &.icoCal:before{background:url(../../common/images/sub/apply/ico_cal_white.svg) no-repeat center/contain;}
+                        &.icoList:before{background:url(../../common/images/sub/apply/ico_cal_list_white.svg) no-repeat center/contain;}
+                    }
+                }
+            }
+        }
+        .tabCont{padding-top:20px;}
     }
 
     @include media('mobile') {
