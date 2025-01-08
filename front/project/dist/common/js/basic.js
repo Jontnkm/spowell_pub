@@ -613,7 +613,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 
-    //어코디언 클릭시 펼치기 스크립트
+    //헤더메뉴 접근성 처리
+    //*마지막 2-depth 메뉴 포커스 이탈시 박스 숨김 처리
+    const dep02 = document.querySelector(".allLast");
+
+    dep02.addEventListener("focusout", function(){
+        hideAllDepth02();
+        removeAllOnClasses();
+    })
 });
 
 //popup control
