@@ -557,6 +557,7 @@
         .calendarInner > .rightArea .tabCont > div > ul > li .eventList > .dataBox > .evt > .hideBox:after {
             content:'알림신청';display:inline-block; transform: translateX(50%); margin-top: 10px; padding:0 32px 0 14px; line-height:34px; border:1px solid var(--lbg2); border-radius:6px; font-size:14px; font-weight:500; background:url(../../common/images/sub/apply/ico_cal_alarm.svg) no-repeat calc(100% - 6px) center/20px 20px;
         }
+        .calendarInner > .rightArea .tabCont > div > ul > li .eventList > .dataBox > .evt.year > .evtAb .inner .title{white-space: nowrap;}
     }
 
     /* tablet02 1160px */
