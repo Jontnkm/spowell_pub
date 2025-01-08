@@ -75,6 +75,11 @@
                         <div class="cptMember">
                             <p class="title">정보입력</p>
 
+                            <!--2025.01.08 필수항목 안내 문구 추가-->
+                            <p class="infoRequired">
+                                표시는 필수 입력 사항 입니다.
+                            </p>
+
                             <!--※ 만 14세이상 체육인 인증 실패의 경우 해당 영역 숨김 필요-->
                             <div class="spoInfoArea">
                                 <div class="top">
@@ -149,13 +154,14 @@
                                     <div class="rowType">
                                         <p class="lbTxt">장애여부</p>
                                         <div class="frmGroup gap30 alingMid">
-                                            <div class="frmChk">
-                                                <input type="checkbox" id="chk03" checked />
-                                                <label for="chk03">장애</label>
-                                            </div>
+                                            <!-- 2025.01.08 순서변경 -->
                                             <div class="frmChk">
                                                 <input type="checkbox" id="chk04" />
                                                 <label for="chk04">비장애</label>
+                                            </div>
+                                            <div class="frmChk">
+                                                <input type="checkbox" id="chk03" checked />
+                                                <label for="chk03">장애</label>
                                             </div>
                                         </div>
                                     </div>
@@ -222,7 +228,7 @@
                                 <!-- 공통 정보 입력 영역 -->
                                 <div class="cptForm">
                                     <div class="rowType">
-                                        <p class="lbTxt">아이디</p>
+                                        <p class="lbTxt req">아이디</p><!-- 2025.01.08 필수항목 관련 req 클래스 추가 -->
                                         <div class="frmGroup cascade">
                                             <div class="ipt">
                                                 <input type="text" title="아이디 입력란" placeholder="아이디를 입력해주세요." class="success"/>
@@ -236,7 +242,7 @@
                                     </div>
 
                                     <div class="rowType">
-                                        <p class="lbTxt">비밀번호</p>
+                                        <p class="lbTxt req">비밀번호</p><!-- 2025.01.08 필수항목 관련 req 클래스 추가 -->
                                         <div class="ipt">
                                             <input type="text" title="비밀번호 입력" placeholder="비밀번호를 입력해주세요." />
                                             <span class="ico">영문, 숫자, 특수기호를 조합하여 8~12자로 설정해주세요.</span>
@@ -244,7 +250,7 @@
                                     </div>
                                     
                                     <div class="rowType">
-                                        <p class="lbTxt">비밀번호 확인</p>
+                                        <p class="lbTxt req">비밀번호 확인</p><!-- 2025.01.08 필수항목 관련 req 클래스 추가 -->
                                         <div class="ipt">
                                             <input type="text" title="비밀번호 확인" placeholder="다시 한번 비밀번호를 입력해주세요." class="error"/>
                                             <span class="ico">비밀번호가 일치하지 않습니다.</span>

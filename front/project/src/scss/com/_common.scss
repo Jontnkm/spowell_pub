@@ -42,6 +42,14 @@
                     display:none;
                 }
             }   
+
+            &.req {
+                position:relative; 
+
+                &::before {
+                    content:''; position:absolute; top:50%; left:-20px; width:11px; height:8px; background:url(../../common/images/common/ico_required.png)50% 50% no-repeat; transform:translateY(-50%);
+                }
+            }
         }
         &:not(:first-of-type) {margin-top:20px;}
 
