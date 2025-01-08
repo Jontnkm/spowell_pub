@@ -593,13 +593,21 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function() {
         var dh = document.documentElement.scrollHeight;
         var point = dh / 4;
+        var point02 = dh / 8;
         var scr = window.scrollY;
         var topButton = document.querySelector(".topBtn");
+        var quick = document.querySelector(".cptQuick");
     
         if (scr >= point) {
             topButton.classList.add("on");
         } else {
             topButton.classList.remove("on");
+        }
+
+        if(scr >= point02){
+            quick.classList.add("scr");
+        }else{
+            quick.classList.remove("scr");
         }
     });
     

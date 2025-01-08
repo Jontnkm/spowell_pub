@@ -1663,6 +1663,9 @@
     &.on {
         right:20px;
     }
+    &.scr {
+        top:3%;
+    }
     @include media('tablet03') {
         display:none;
     }
