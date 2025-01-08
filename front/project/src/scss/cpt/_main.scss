@@ -505,7 +505,7 @@
                                                     display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:45px;
 
                                                     .title {
-                                                        display:inline-block; padding-left:10px; font-size:16px; color:var(--snd1); font-weight:700; letter-spacing:-0.32px; position:relative;
+                                                        width:100px; display:inline-block; padding-left:10px; font-size:16px; color:var(--snd1); font-weight:700; letter-spacing:-0.32px; position:relative;
 
                                                         &::before {
                                                             content:''; width:4px; height:4px; border-radius:50%; background:var(--snd1); position:absolute; top:50%; left:0; transform:translateY(-50%);
@@ -513,27 +513,38 @@
                                                     }
 
                                                     .yrList {
-                                                        display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:0;
+                                                        width: calc(100% - 101px); overflow-x:scroll;
+
+                                                        &::-webkit-scrollbar {
+                                                            display:none;
+                                                        }
+
                                                         @include media ('tablet03') {
                                                             gap:20px;
                                                         }
 
-                                                        > span {
-                                                            position:relative; display:block; width:236px; font-size:16px; color:var(--bg3); font-weight:600; letter-spacing:-0.32px; text-align:center;
-                                                            @include media ('tablet03') {
-                                                                width:max-content;
-                                                            }
-
-                                                            &::after {
-                                                                content:''; position:absolute; top:50%; right:0; width:2px; height:16px; background:rgba(255,255,255,.2); transform:translateY(-50%);
-                                                                @include media ('tablet03') {
-                                                                    right:-11px;
+                                                        > ul {
+                                                            width:max-content;  display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:60px;
+                                                            > li {
+                                                                position:relative;
+                                                                > span {
+                                                                    position:relative; display:block; width:max-content; font-size:16px; color:var(--bg3); font-weight:600; letter-spacing:-0.32px; text-align:center;
+                                                                    @include media ('tablet03') {
+                                                                        width:max-content;
+                                                                    }
                                                                 }
-                                                            }
 
-                                                            &:last-of-type {
                                                                 &::after {
-                                                                    display:none;
+                                                                    content:''; position:absolute; top:50%; right:-28px; width:2px; height:16px; background:rgba(255,255,255,.2); transform:translateY(-50%);
+                                                                    @include media ('tablet03') {
+                                                                        right:-11px;
+                                                                    }
+                                                                }
+
+                                                                &:last-of-type {
+                                                                    &::after {
+                                                                        display:none;
+                                                                    }
                                                                 }
                                                             }
                                                         }
