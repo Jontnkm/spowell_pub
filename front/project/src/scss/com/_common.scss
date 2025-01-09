@@ -224,7 +224,17 @@
                 .tui-calendar {
                     width:100% !important;
                 }
-                .tui-calendar-btn {display:none !important;}
+                .tui-calendar-btn {
+                    background:transparent !important; 
+
+                    &.tui-calendar-btn-prev-month {
+                        left:97px;
+                    }
+
+                    &.tui-calendar-btn-next-month {
+                        right:97px !important;
+                    }
+                }
                 .tui-calendar-header-inner {
                     background:var(--bg7); padding:14px 0 !important; 
                 }
