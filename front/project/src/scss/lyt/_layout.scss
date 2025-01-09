@@ -205,11 +205,14 @@
     &.siteMap {
         .popupDim {background:rgba(224, 234, 248, 0.9); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
         .popupBox{
-            max-width:1280px;
+            max-width:1280px; max-height: 95%; overflow-y:scroll;
+            &::-webkit-scrollbar {
+                display:none;
+            }
             &:before{display:none;}
 
             .popTitArea{
-                display:flex; justify-content: space-between; align-items: center; margin-bottom:100px;
+                display:flex; justify-content: space-between; align-items: center; margin-bottom:100px; margin-top:20px;
             }
 
             .siteMapArea{
@@ -283,7 +286,7 @@
             }
 
             .popBtnArea {
-                position:absolute; top:-15px; right:0; display:block; 
+                position:absolute; top:8px; right:0; display:block; 
                 .popBtn {
                     display:block; width:50px; height:50px; border-radius:50%; 
                     background:url(../../common/images/common/icon_sitemap_close.svg) no-repeat center/24px var(--prm1);

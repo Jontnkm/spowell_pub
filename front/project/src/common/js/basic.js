@@ -608,7 +608,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
             var loc = document.querySelectorAll(".moMenuBox .menuList .right .inner > div")
 
-            depth02.forEach(function(item) {
+            loc.forEach(function(item) {
                 item.classList.remove("on");
             });
             loc[idx].classList.add("on");
@@ -671,7 +671,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //popup control
 function popOpen(popId, event){ // 2025.01.03 - event 매개변수 추가
     let thispop = document.querySelector("#" + popId);
+    let body = document.body;
 
+    body.style.overflow = "hidden";
     thispop.classList.add("popOpen");
     thispop.setAttribute('tabindex',"0");
     thispop.target = event.target; // 2025.01.03 - 추가 
@@ -681,7 +683,9 @@ function popOpen(popId, event){ // 2025.01.03 - event 매개변수 추가
 function popClose(popId){
     // var trig = document.querySelector('.trigger'); :: 2025.01.03 - 삭제
     let thispop = document.querySelector("#" + popId);
+    let body = document.body;
 
+    body.style.overflow = "";
     thispop.classList.remove("popOpen");
     thispop.setAttribute('tabindex',"");
     // trig.focus(); :: 2025.01.03 - 삭제
