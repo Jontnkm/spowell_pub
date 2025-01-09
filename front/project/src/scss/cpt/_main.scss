@@ -414,23 +414,28 @@
             .tabCont {
                 width:100%;
                 > div {
+                    position:relative;
                     &.secondSem {
                         display:none; 
                     }
 
                     > ul {
-                        display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; gap:0;
+                        z-index:4; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start; gap:0;
 
                         &:last-of-type {
-                            overflow-y:scroll; height:460px;
+                            position:relative; margin:0 -20px; padding:0 20px; margin-bottom:10px; 
+                            overflow-y:auto; height:400px; 
                         }
-                        &::-webkit-scrollbar {
-                            display:none;
+                        &::-webkit-scrollbar { 
+                            width:6px; 
+                            // display:none;
                         }
+                        &::-webkit-scrollbar-thumb {background: rgba(33,64,154,1); border-radius: 10px;}
+                        &::-webkit-scrollbar-track {background: rgba(33,64,154,0.1); }
 
                         &.double {
                             .eventList {
-                                height:120%;
+                                height:100%;
                             }
                         }
 
@@ -453,7 +458,7 @@
                                 }
 
                                 .eventList {
-                                    border-right:1px solid var(--lbg1);
+                                    // border-right:1px solid var(--lbg1);
                                 }
                             }
 
@@ -466,7 +471,8 @@
                             }
 
                             .eventList {
-                                padding:16px 5px; border-left:1px solid var(--lbg1); height:100%;
+                                padding:16px 5px;  height:100%;
+                                // border-left:1px solid var(--lbg1); 
 
                                 > .dataBox {
 
@@ -579,6 +585,20 @@
                             }
                         }
                     }
+                }
+
+                .fakeBox{
+                    z-index:3; position:absolute; top:54px; left:0; right:0; bottom:0; width:100%; height:calc(100% - 54px); 
+                    display:flex; flex-wrap:wrap;
+                    & > li{
+                        position:relative; width:calc(100% / 6); height:100%; border-left:1px solid var(--lbg1); border-right:1px solid var(--lbg1);
+                        //&:last-child:after{position:absolute; top:0; left:calc(100% + 6px); content:'';display:block;width:1px;height:100%;background:var(--lbg1);}
+                    }
+
+                    &.addScroll{
+                        width:calc(100% - 6px);
+                    }
+
                 }
             }
         }
