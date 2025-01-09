@@ -468,7 +468,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 hb.forEach(function(hBox){
                     hBox.style.display = "none";
                 })
-                sbl.style.display = "block";
+                if(sbl){
+                    sbl.style.display = "block";
+                }
             }
         })
 
@@ -480,7 +482,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 hb.forEach(function(hBox){
                     hBox.style.display = "none";
                 })
-                sbl.style.display = "block";
+                if(sbl){
+                    sbl.style.display = "block";
+                }
             }
         })
     })
@@ -531,19 +535,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // _target의 height를 계산
                 let targetHeight = _target.scrollHeight;
-                console.log('Target Height:', targetHeight);
+                // console.log('Target Height:', targetHeight);
     
                 // 조건에 따라 클래스 추가
                 if (targetHeight > 454) {
                     _fakeBox.classList.add('addScroll');
-                    console.log('addScroll 추가');
-                    console.log(_target);
-                    console.log(_fakeBox);
+                    // console.log('addScroll 추가');
+                    // console.log(_target);
+                    // console.log(_fakeBox);
                 } else {
                     _fakeBox.classList.remove('addScroll');
-                    console.log('addScroll 삭제');
-                    console.log(_target);
-                    console.log(_fakeBox);
+                    // console.log('addScroll 삭제');
+                    // console.log(_target);
+                    // console.log(_fakeBox);
                 }
             })
         }
