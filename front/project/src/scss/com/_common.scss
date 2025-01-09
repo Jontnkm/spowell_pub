@@ -215,6 +215,9 @@
             .tui-datepicker {
                 top:calc(100% + 5px); left:0; z-index:2; width:370px;
                 border:1px solid var(--prm3) !important; border-radius:6px; overflow:hidden;
+                @include media ('mobile') {
+                    position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+                }
                 .tui-datepicker-type-date {
                     width:100% !important;
                 }

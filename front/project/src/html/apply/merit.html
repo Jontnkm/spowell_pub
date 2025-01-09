@@ -35,6 +35,12 @@
                     <!-- 콘텐츠 영역 -->
                     <div class="layoutCont">
                         <%- include('../ejs/subTop.ejs', {
+                            depth3:11,
+                            url: "../../",
+                        }) %>
+
+                        <!--2025.01.09 모바일전용 메뉴 추가-->
+                        <%- include('../ejs/lnb02Sub.ejs', {
                             url: "../../",
                         }) %>
 

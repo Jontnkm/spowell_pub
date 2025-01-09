@@ -666,6 +666,16 @@ document.addEventListener("DOMContentLoaded", function () {
         hideAllDepth02();
         removeAllOnClasses();
     })
+
+
+    //2025.01.09 신청안내 전용 3depth 모바일메뉴 스크립트
+    var locTit = document.querySelector(".locationTit");
+    var target = document.querySelector(".ddCont > li > .selected");
+
+    if (target && locTit) {
+        var tText = target.textContent;
+        locTit.textContent = tText;
+    }
 });
 
 //popup control
