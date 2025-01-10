@@ -1441,7 +1441,7 @@ module.exports = {
       MMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
       MMMM: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']
     },
-    titleFormat: 'yyyy년MMMM',
+    titleFormat: 'yyyy년&nbsp;&nbsp;&nbsp;MMMM',
     todayFormat: '오늘은 yyyy년 MMMM d일  DD입니다 ',
     time: 'Time',
     date: 'Date'
@@ -5726,7 +5726,7 @@ module.exports = function(context) {
     '{{else}}' +
     '  <div class="tui-calendar-header-inner">' +
     '    <button class="tui-calendar-btn tui-calendar-btn-prev-year">Prev year</button>' +
-    '    <a href="javascript:void(0)" title="연도선택" class="tui-calendar-title {{titleClass}}">{{title}}</em>' +
+    '    <a href="javascript:void(0)" title="연도선택" class="tui-calendar-title {{titleClass}}">{{title}}</a>' +
     '    <button class="tui-calendar-btn tui-calendar-btn-next-year">Next year</button>' +
     '  </div>' +
     '{{/if}}' +

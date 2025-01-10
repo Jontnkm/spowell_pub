@@ -118,7 +118,7 @@
         &::-webkit-inner-spin-button {
             appearance:none; -webkit-appearance: none;
         }
-        
+
         &::-webkit-input-placeholder {
             color:var(--tbg3);
         }
@@ -235,8 +235,12 @@
                     background:var(--bg7); padding:14px 0 !important; 
                 }
                 .tui-calendar-title {
-                    font-size:16px; color:var(--t1); font-weight:600; line-height:1.4 !important;
+                    display:inline-block; padding-right:20px; font-size:16px; color:var(--t1); font-weight:600; line-height:1.4 !important; position:relative;
+                    &::after {
+                        content:''; position:absolute; top:50%; right:0; width:0; height:0; border-top:8px solid var(--t1); border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:0px solid transparent; transform:translateY(-50%);
+                    }
                 }
+
                 .tui-calendar-header-info {display:none !important;}
 
                 .tui-calendar-body {

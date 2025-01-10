@@ -124,36 +124,40 @@ document.addEventListener("DOMContentLoaded", function () {
     var acc = document.querySelectorAll(".cptAccordion ul li .accBtnCov");
     var chk = document.querySelectorAll(".cptAccordion ul li .accBtnCov input[type='checkbox']");
 
-    acc.forEach(function(accor) {
-        accor.addEventListener("click", function() {            
-            var parent = this.parentElement;
-            var accAnswer = parent.querySelector(".answerBox");
-            if (this.classList.contains("on")) {
-                parent.classList.remove("on");
-                this.classList.remove("on");
-                accAnswer.classList.remove("on");
-            } else {
-                parent.classList.add("on");
-                this.classList.add("on");
-                accAnswer.classList.add("on");
-            }
+    if(acc){
+        acc.forEach(function(accor) {
+            accor.addEventListener("click", function() {            
+                var parent = this.parentElement;
+                var accAnswer = parent.querySelector(".answerBox");
+                if (this.classList.contains("on")) {
+                    parent.classList.remove("on");
+                    this.classList.remove("on");
+                    accAnswer.classList.remove("on");
+                } else {
+                    parent.classList.add("on");
+                    this.classList.add("on");
+                    accAnswer.classList.add("on");
+                }
+            });
         });
-    });
-
-    chk.forEach(function(item){
-        item.addEventListener("click", function() {            
-            if (this.classList.contains("on")) {
-                parent.classList.remove("on");
-                this.classList.remove("on");
-                accAnswer.classList.remove("on");
-            } else {
-                parent.classList.add("on");
-                this.classList.add("on");
-                accAnswer.classList.add("on");
-            }
-        });
-    })
-
+    }
+    
+    if(chk){
+        chk.forEach(function(item){
+            item.addEventListener("click", function() {            
+                if (this.classList.contains("on")) {
+                    parent.classList.remove("on");
+                    this.classList.remove("on");
+                    accAnswer.classList.remove("on");
+                } else {
+                    parent.classList.add("on");
+                    this.classList.add("on");
+                    accAnswer.classList.add("on");
+                }
+            });
+        })
+    }
+    
     var buttons = document.querySelectorAll(".dropDown > button");
     if(buttons){
         buttons.forEach(function(button) {
@@ -187,42 +191,47 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log(listLength1);
     // console.log(listLength2);
 
-    list1.forEach(function(item1) {
-        item1.style.width = "calc(100% / " + listLength1 + ")";
-    });
+    if(list1){
+        list1.forEach(function(item1) {
+            item1.style.width = "calc(100% / " + listLength1 + ")";
+        });   
+    }
 
-    list2.forEach(function(item2) {
-        item2.style.width = "calc(100% / " + listLength2 + ")";
-    });
+    if(list2){
+        list2.forEach(function(item2) {
+            item2.style.width = "calc(100% / " + listLength2 + ")";
+        });
+    }
 
     var links = document.querySelectorAll(".footerBot .rightArea > ul > li > a");
     
-    links.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            var isOn = link.classList.contains("on");
-
-            document.querySelectorAll("div.dropTopBox").forEach(function(box) {
-                box.style.display = "none";
-            });
-
-            links.forEach(function(item) {
-                item.classList.remove("on");
-                item.setAttribute("title", "열기");
-            });
-
-            if (!isOn) {
-                var dropBox = link.nextElementSibling;
-                if (dropBox) {
-                    dropBox.style.display = "block";
-                }
-                link.classList.add("on");
-                link.setAttribute("title", "접기");
-            }
-        });
-    });
+    if(links){
+        links.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                var isOn = link.classList.contains("on");
     
-
+                document.querySelectorAll("div.dropTopBox").forEach(function(box) {
+                    box.style.display = "none";
+                });
+    
+                links.forEach(function(item) {
+                    item.classList.remove("on");
+                    item.setAttribute("title", "열기");
+                });
+    
+                if (!isOn) {
+                    var dropBox = link.nextElementSibling;
+                    if (dropBox) {
+                        dropBox.style.display = "block";
+                    }
+                    link.classList.add("on");
+                    link.setAttribute("title", "접기");
+                }
+            });
+        });
+    }
+    
     function adjustTable() {
         var wWid = window.innerWidth;
         var combines = document.querySelectorAll(".cptTable .combine");
@@ -276,30 +285,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const uploadFiles = document.querySelectorAll(".fileArea .fileIpt");
-    uploadFiles.forEach(function(uploadFile,idx){
-        uploadFile.addEventListener("change",function(event){
-            const fileArea = this.parentElement.parentElement;
-            let fileName;
-            if(window.FileReader){
-                fileName = this.files[0].name;
-            } else {
-                console.log("noFileReader");
-            }
-            fileArea.querySelector(".download").innerText = fileName;
-            fileArea.classList.add("on");
+    if(uploadFiles){
+        uploadFiles.forEach(function(uploadFile,idx){
+            uploadFile.addEventListener("change",function(event){
+                const fileArea = this.parentElement.parentElement;
+                let fileName;
+                if(window.FileReader){
+                    fileName = this.files[0].name;
+                } else {
+                    console.log("noFileReader");
+                }
+                fileArea.querySelector(".download").innerText = fileName;
+                fileArea.classList.add("on");
+            });
         });
-    });
-        
+    }
+    
     const delFiles = document.querySelectorAll(".fileArea .delBtn");
-    delFiles.forEach(function(delFile,idx){
-        delFile.addEventListener("click",function(event){
-            const fileArea = this.parentElement.parentElement;
-            fileArea.querySelector(".fileIpt").value = "";
-            fileArea.querySelector(".download").innerText = "";
-            fileArea.classList.remove("on");
+    if(delFiles) {
+        delFiles.forEach(function(delFile,idx){
+            delFile.addEventListener("click",function(event){
+                const fileArea = this.parentElement.parentElement;
+                fileArea.querySelector(".fileIpt").value = "";
+                fileArea.querySelector(".download").innerText = "";
+                fileArea.classList.remove("on");
+            });
         });
-    });
-        
+    }
 
     if(datepicker !== null && datepicker !== undefined){
         var datepicker = new tui.DatePicker('#wrapper1', {
@@ -398,30 +410,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* 공통 : 탭 - 최상위클래스 .tabArea 사용, 그 하위마크업은 가이드와 동일 */
     let tabBtns = document.querySelectorAll('.tabArea > .inner > ul > li > a');
-    tabBtns.forEach((tabBtn)=>{
-        tabBtn.addEventListener('click',function(e){
-            e.preventDefault();
-
-            let tabArea = e.target.closest('.tabArea');
-            let targetBtn = e.target.parentElement;
-            let tabBtns = tabArea.children[0].querySelectorAll('.inner > ul > li > a');
-            let tabConts = tabArea.children[1].children;
-
-            // 클릭된 버튼의 인덱스 가져오기
-            let index = Array.from(tabBtns).indexOf(e.target);
-
-            // 탭버튼 활성화
-            tabBtns.forEach(item => item.parentElement.classList.remove('active'));
-            targetBtn.classList.add('active');
-
-            // 탭 콘텐츠 활성화 처리
-            Array.from(tabConts).forEach((cont) => cont.classList.remove('active')); // 변환 후 forEach
-            if (tabConts[index]) {
-                tabConts[index].classList.add('active');
-            }
-        });
-    })
-
+    if(tabBtns){
+        tabBtns.forEach((tabBtn)=>{
+            tabBtn.addEventListener('click',function(e){
+                e.preventDefault();
+    
+                let tabArea = e.target.closest('.tabArea');
+                let targetBtn = e.target.parentElement;
+                let tabBtns = tabArea.children[0].querySelectorAll('.inner > ul > li > a');
+                let tabConts = tabArea.children[1].children;
+    
+                // 클릭된 버튼의 인덱스 가져오기
+                let index = Array.from(tabBtns).indexOf(e.target);
+    
+                // 탭버튼 활성화
+                tabBtns.forEach(item => item.parentElement.classList.remove('active'));
+                targetBtn.classList.add('active');
+    
+                // 탭 콘텐츠 활성화 처리
+                Array.from(tabConts).forEach((cont) => cont.classList.remove('active')); // 변환 후 forEach
+                if (tabConts[index]) {
+                    tabConts[index].classList.add('active');
+                }
+            });
+        })
+    }
+    
     // 복지캘린더 모바일 달력 숨김처리 & 목록 강제포커싱
     const typeCalendar = document.querySelector('.typeCalendar');
     function handleCalendarResize() {
@@ -454,74 +468,83 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // 초기 실행
     handleCalendarResize();
-    window.addEventListener('resize', handleCalendarResize);
+    if(window) {
+        window.addEventListener('resize', handleCalendarResize);
+    }
 
     // 메인 & 복지캘린더
     const calItem = document.querySelectorAll(".evtAb");
     const db = document.querySelectorAll(".dataBox");
-    calItem.forEach(function(item){
-        item.addEventListener("mouseover", function(event){
-            // console.log(this);
-            var sbl = this.nextElementSibling;
-            var hb = document.querySelectorAll(".hideBox");
-            if(event.target === item) {
-                hb.forEach(function(hBox){
-                    hBox.style.display = "none";
-                })
-                if(sbl){
-                    sbl.style.display = "block";
+    if(calItem) {
+        calItem.forEach(function(item){
+            item.addEventListener("mouseover", function(event){
+                // console.log(this);
+                var sbl = this.nextElementSibling;
+                var hb = document.querySelectorAll(".hideBox");
+                if(event.target === item) {
+                    hb.forEach(function(hBox){
+                        hBox.style.display = "none";
+                    })
+                    if(sbl){
+                        sbl.style.display = "block";
+                    }
                 }
-            }
-        })
-
-        item.addEventListener("focus", function(event){
-            var sbl = this.nextElementSibling;
-            var hb = document.querySelectorAll(".hideBox");
-            if(event.target === item) {
-                
-                hb.forEach(function(hBox){
-                    hBox.style.display = "none";
-                })
-                if(sbl){
-                    sbl.style.display = "block";
+            })
+    
+            item.addEventListener("focus", function(event){
+                var sbl = this.nextElementSibling;
+                var hb = document.querySelectorAll(".hideBox");
+                if(event.target === item) {
+                    
+                    hb.forEach(function(hBox){
+                        hBox.style.display = "none";
+                    })
+                    if(sbl){
+                        sbl.style.display = "block";
+                    }
                 }
-            }
+            })
         })
-    })
-    db.forEach(function(line){
-        line.addEventListener("mouseleave", function(event){
-            // console.log(this);
-            var hb = document.querySelectorAll(".hideBox");
-            if(event.target === line) {
-                hb.forEach(function(hBox){
-                    hBox.style.display = "none";
-                })
-            }
+    }
+    if(db) {
+        db.forEach(function(line){
+            line.addEventListener("mouseleave", function(event){
+                // console.log(this);
+                var hb = document.querySelectorAll(".hideBox");
+                if(event.target === line) {
+                    hb.forEach(function(hBox){
+                        hBox.style.display = "none";
+                    })
+                }
+            })
         })
-    })
+    }
+    
     const calTab = document.querySelectorAll(".tabBtn ul li a");
-    calTab.forEach(function(ct){
-        ct.addEventListener("click", function(){
-            var e = document.querySelectorAll(".tabBtn ul li a");
-            var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
-            var box = document.querySelectorAll(".mainCont03 .rightArea .tabCont > div");
-
-            e.forEach(function(item){
-                item.classList.remove("on");
+    if(calTab) {
+        calTab.forEach(function(ct){
+            ct.addEventListener("click", function(){
+                var e = document.querySelectorAll(".tabBtn ul li a");
+                var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
+                var box = document.querySelectorAll(".mainCont03 .rightArea .tabCont > div");
+    
+                e.forEach(function(item){
+                    item.classList.remove("on");
+                })
+    
+                this.classList.add("on");
+    
+                box.forEach(function(item){
+                    item.style.display = "none";
+                })
+    
+                box[idx].style.display = "block";
+    
+                // 클릭후 발동
+                handleCalendarHeight();
             })
-
-            this.classList.add("on");
-
-            box.forEach(function(item){
-                item.style.display = "none";
-            })
-
-            box[idx].style.display = "block";
-
-            // 클릭후 발동
-            handleCalendarHeight();
         })
-    })
+    }   
 
     // 메인 & 복지캘린더 가로스크롤 너비 계산
     handleCalendarHeight();
@@ -578,15 +601,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const qOpn = document.querySelector(".quickOpen");
     const qCls = document.querySelector(".clsQuick > a");
 
-    qOpn.addEventListener('click',function(){
-        this.classList.add("hide");
-        this.nextElementSibling.classList.add("on");
-    });
-
-    qCls.addEventListener('click',function(){
-        document.querySelector(".quickOpen").classList.remove("hide");
-        document.querySelector(".cptQuick").classList.remove("on");
-    });
+    if(qOpn){
+        qOpn.addEventListener('click',function(){
+            this.classList.add("hide");
+            this.nextElementSibling.classList.add("on");
+        });
+    }
+    
+    if(qCls) {
+        qCls.addEventListener('click',function(){
+            document.querySelector(".quickOpen").classList.remove("hide");
+            document.querySelector(".cptQuick").classList.remove("on");
+        });
+    }
 
     //mobile menu open, inner control and close function
     const mOpn = document.querySelector(".menu-wrap");
@@ -595,68 +622,79 @@ document.addEventListener("DOMContentLoaded", function () {
     const mInner = document.querySelectorAll(".moMenuBox .menuList .left ul li a");
     const mCls = document.querySelector(".closeBtn");
 
-    mOpn.addEventListener("click",function(){
-        body.style.overflow = "hidden";
-        mMenu.style.display = "block";
-    })
-
-    mInner.forEach(function(menuItem){
-        menuItem.addEventListener("click", function(){
-            event.preventDefault();
-
-            var menu = document.querySelectorAll(".moMenuBox .menuList .left ul li a");
-            var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
-            var loc = document.querySelectorAll(".moMenuBox .menuList .right .inner > div")
-
-            loc.forEach(function(item) {
-                item.classList.remove("on");
-            });
-            loc[idx].classList.add("on");
-            
-            menu.forEach(function(item) {
-                item.classList.remove("on");
-            });
-            this.classList.add("on");
+    if(mOpn) {
+        mOpn.addEventListener("click",function(){
+            body.style.overflow = "hidden";
+            mMenu.style.display = "block";
         })
-    });
+    }
 
-    mCls.addEventListener("click", function(){
-        body.style.overflow = "visible";
-        mMenu.style.display = "none";
-    })
+    if(mInner) {
+        mInner.forEach(function(menuItem){
+            menuItem.addEventListener("click", function(){
+                event.preventDefault();
+    
+                var menu = document.querySelectorAll(".moMenuBox .menuList .left ul li a");
+                var idx = Array.prototype.indexOf.call(this.parentNode.parentNode.children, this.parentNode);
+                var loc = document.querySelectorAll(".moMenuBox .menuList .right .inner > div")
+    
+                loc.forEach(function(item) {
+                    item.classList.remove("on");
+                });
+                loc[idx].classList.add("on");
+                
+                menu.forEach(function(item) {
+                    item.classList.remove("on");
+                });
+                this.classList.add("on");
+            })
+        });
+    }
+    
+    if(mCls){
+        mCls.addEventListener("click", function(){
+            body.style.overflow = "visible";
+            mMenu.style.display = "none";
+        })
+    }
 
     //top button function
     
-    window.addEventListener("scroll", function() {
-        var dh = document.documentElement.scrollHeight;
-        var point = dh / 4;
-        var point02 = dh / 8;
-        var scr = window.scrollY;
-        var topButton = document.querySelector(".topBtn");
-        var quick = document.querySelector(".cptQuick");
+    if(window) {
+        window.addEventListener("scroll", function() {
+            var dh = document.documentElement.scrollHeight;
+            var point = dh / 4;
+            var point02 = dh / 8;
+            var scr = window.scrollY;
+            var topButton = document.querySelector(".topBtn");
+            var quick = document.querySelector(".cptQuick");
+        
+            if (scr >= point) {
+                topButton.classList.add("on");
+            } else {
+                topButton.classList.remove("on");
+            }
     
-        if (scr >= point) {
-            topButton.classList.add("on");
-        } else {
-            topButton.classList.remove("on");
-        }
-
-        if(scr >= point02){
-            quick.classList.add("scr");
-        }else{
-            quick.classList.remove("scr");
-        }
-    });
+            if(scr >= point02){
+                quick.classList.add("scr");
+            }else{
+                quick.classList.remove("scr");
+            }
+        });
+    }
     
     const tBtn = document.querySelector(".topBtn");
-    tBtn.addEventListener("click", function(event){
-        event.preventDefault(); // 기본 동작 방지
-        
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    })
+    if(tBtn) {
+        tBtn.addEventListener("click", function(event){
+            event.preventDefault(); // 기본 동작 방지
+            
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        })
+    }
+    
 
     //헤더메뉴 접근성 처리
     //*마지막 2-depth 메뉴 포커스 이탈시 박스 숨김 처리
@@ -682,38 +720,44 @@ document.addEventListener("DOMContentLoaded", function () {
     var other01 = document.querySelectorAll(".btn");
     var other02 = document.querySelectorAll(".frmRdo label");
     var datepickers = document.querySelectorAll(".tui-datepicker");
-    tui.forEach(function(input) {
-        input.addEventListener("focus", function() {
-            var datepickers = document.querySelectorAll(".tui-datepicker");
-            datepickers.forEach(function(dp) {
-                dp.classList.add("tui-hidden");
-            });
-
-            var wrap = this.nextElementSibling;
-            if (wrap) {
-                var cal = wrap.querySelector(".tui-datepicker");
-                if (cal) {
-                    cal.classList.remove("tui-hidden");
+    if(tui) {
+        tui.forEach(function(input) {
+            input.addEventListener("focus", function() {
+                var datepickers = document.querySelectorAll(".tui-datepicker");
+                datepickers.forEach(function(dp) {
+                    dp.classList.add("tui-hidden");
+                });
+    
+                var wrap = this.nextElementSibling;
+                if (wrap) {
+                    var cal = wrap.querySelector(".tui-datepicker");
+                    if (cal) {
+                        cal.classList.remove("tui-hidden");
+                    }
                 }
-            }
+            });
         });
-    });
-
-    other01.forEach(function(btns) {
-        btns.addEventListener("focus", function(){
-            datepickers.forEach(function(dp2) {
-                dp2.classList.add("tui-hidden");
-            });
+    }
+    
+    if(other01) {
+        other01.forEach(function(btns) {
+            btns.addEventListener("focus", function(){
+                datepickers.forEach(function(dp2) {
+                    dp2.classList.add("tui-hidden");
+                });
+            })
         })
-    })
-
-    other02.forEach(function(btns) {
-        btns.addEventListener("focus", function(){
-            datepickers.forEach(function(dp3) {
-                dp3.classList.add("tui-hidden");
-            });
+    }
+    
+    if(other02) {
+        other02.forEach(function(btns) {
+            btns.addEventListener("focus", function(){
+                datepickers.forEach(function(dp3) {
+                    dp3.classList.add("tui-hidden");
+                });
+            })
         })
-    })
+    }
 });
 
 //popup control
