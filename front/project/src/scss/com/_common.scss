@@ -111,9 +111,13 @@
         }
     }
 
-    input[type="text"],input[type="password"] {
+    input[type="text"],input[type="password"],input[type="number"] {
         width:100%; border:1px solid var(--lbg1); background:var(--bg3); border-radius:6px; padding:0 16px; 
         line-height:50px; height:50px; font-size:16px; font-weight:400; color:var(--t1);
+
+        &::-webkit-inner-spin-button {
+            appearance:none; -webkit-appearance: none;
+        }
         
         &::-webkit-input-placeholder {
             color:var(--tbg3);
@@ -225,15 +229,7 @@
                     width:100% !important;
                 }
                 .tui-calendar-btn {
-                    background:transparent !important; 
-
-                    &.tui-calendar-btn-prev-month {
-                        left:97px;
-                    }
-
-                    &.tui-calendar-btn-next-month {
-                        right:97px !important;
-                    }
+                    background:transparent !important;
                 }
                 .tui-calendar-header-inner {
                     background:var(--bg7); padding:14px 0 !important; 
@@ -253,9 +249,12 @@
                         .tui-calendar-month-group {
                             display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
                             > li {
-                                width:25%; font-size:16px; color:var(--tbg3); font-weight:600; line-height:50px;
-                                &.tui-is-selected {
-                                    background:var(--prm2) !important; color:var(--bg3) !important;
+                                width:25%;
+                                > a {
+                                    display:block; width:100%; font-size:16px; color:var(--tbg3); font-weight:600; line-height:50px;
+                                    &.tui-is-selected {
+                                        background:var(--prm2) !important; color:var(--bg3) !important;
+                                    }
                                 }
                             }
                         }
@@ -268,9 +267,12 @@
                         .tui-calendar-year-group {
                             display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start;
                             > li {
-                                width:33.33333%; font-size:16px; color:var(--tbg3); font-weight:600; line-height:50px;
-                                &.tui-is-selected {
-                                    background:var(--prm2) !important; color:var(--bg3) !important;
+                                width:33.3333%;
+                                > a {
+                                    display:block; width:100%; font-size:16px; color:var(--tbg3); font-weight:600; line-height:50px;
+                                    &.tui-is-selected {
+                                        background:var(--prm2) !important; color:var(--bg3) !important;
+                                    }
                                 }
                             }
                         }
@@ -296,33 +298,36 @@
                         display:flex; flex-flow: row nowrap; align-items: center ;justify-content: flex-start; gap:16px;
 
                         > li {
-                            font-size:16px; color:var(--prm3); font-weight:600; width:32px; height:32px; text-align:center; line-height:32px; margin-bottom:13px;
+                            > a {
+                                display:block; font-size:16px; color:var(--prm3); font-weight:600; width:32px; height:32px; text-align:center; line-height:32px; margin-bottom:13px;
 
-                            &.tui-calendar-sun {
-                                color:var(--snd3) !important;
-                            }
+                                &.tui-calendar-sun {
+                                    color:var(--snd3) !important;
+                                }
 
-                            &.tui-calendar-sat {
-                                color:var(--prm2) !important; 
-                            }
+                                &.tui-calendar-sat {
+                                    color:var(--prm2) !important; 
+                                }
 
-                            &.tui-is-selected {
-                                background:var(--prm2) !important; color:var(--bg3) !important; border-radius:50%;
-                            }
+                                &.tui-is-selected {
+                                    background:var(--prm2) !important; color:var(--bg3) !important; border-radius:50%;
+                                }
 
-                            &.tui-calendar-today {
-                                background:var(--bg3); border:1px solid #6e7584; border-radius:50% !important;
-                            }
+                                &.tui-calendar-today {
+                                    background:var(--bg3); border:1px solid #6e7584; border-radius:50% !important;
+                                }
 
-                            &:hover {
-                                border-radius:50%; overflow:hidden;
-                            }
+                                &:hover {
+                                    border-radius:50%; overflow:hidden;
+                                }
 
-                            &.tui-calendar-prev-month,
-                            &.tui-calendar-next-month {
-                                visibility:visible;
-                                color: var(--tbg3) !important;
+                                &.tui-calendar-prev-month,
+                                &.tui-calendar-next-month {
+                                    visibility:visible;
+                                    color: var(--tbg3) !important;
+                                }
                             }
+                            
                         }
                         &:last-of-type {
                             display:none !important
@@ -1547,7 +1552,7 @@
             color:var(--snd3);
         }
         
-        input[type="text"] {
+        input[type="text"],input[type="number"],input[type="password"] {
             padding:0 10px; line-height:36px; height:36px;
         }
 

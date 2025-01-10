@@ -676,6 +676,44 @@ document.addEventListener("DOMContentLoaded", function () {
         var tText = target.textContent;
         locTit.textContent = tText;
     }
+
+    //2025.01.10 tui datepicker focusing event
+    var tui = document.querySelectorAll(".tui-datepicker-input > input[type='text']");
+    var other01 = document.querySelectorAll(".btn");
+    var other02 = document.querySelectorAll(".frmRdo label");
+    var datepickers = document.querySelectorAll(".tui-datepicker");
+    tui.forEach(function(input) {
+        input.addEventListener("focus", function() {
+            var datepickers = document.querySelectorAll(".tui-datepicker");
+            datepickers.forEach(function(dp) {
+                dp.classList.add("tui-hidden");
+            });
+
+            var wrap = this.nextElementSibling;
+            if (wrap) {
+                var cal = wrap.querySelector(".tui-datepicker");
+                if (cal) {
+                    cal.classList.remove("tui-hidden");
+                }
+            }
+        });
+    });
+
+    other01.forEach(function(btns) {
+        btns.addEventListener("focus", function(){
+            datepickers.forEach(function(dp2) {
+                dp2.classList.add("tui-hidden");
+            });
+        })
+    })
+
+    other02.forEach(function(btns) {
+        btns.addEventListener("focus", function(){
+            datepickers.forEach(function(dp3) {
+                dp3.classList.add("tui-hidden");
+            });
+        })
+    })
 });
 
 //popup control
