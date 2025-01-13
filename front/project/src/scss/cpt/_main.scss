@@ -289,7 +289,7 @@
                 .title {display:block; font-size:24px; color:var(--t1); font-weight:800; line-height:1.4; margin:14px 0 6px;}
 
                 .desc {
-                    display:block; font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5; word-break:keep-all; margin-bottom:30px;
+                    display:block; font-size:16px; color:var(--t1); font-weight:400; line-height:1.5; word-break:keep-all; margin-bottom:30px;
                 }
 
                 .ammount {
@@ -496,13 +496,17 @@
 
                                             &.mon2 {width:calc(200% + 10px);}
 
-                                            &.mon3 {width:calc(300% + 10px);
-                                            
-                                            }
+                                            &.mon3 {width:calc(300% + 20px);}
+
+                                            &.mon4 {width:calc(400% + 30px);}
+
+                                            &.mon5 {width:calc(500% + 40px);}
+
+                                            &.mon6 {width:calc(600% + 50px);}
                                         }
 
                                         &.year {
-                                            margin:0;
+                                            margin-top:0;
 
                                             > .evtAb {
                                                 position:absolute; top:0; left:0; width:calc(600% + 50px); height:46px; background:var(--prm3); border-radius:10px; padding:12px 20px; border:0;
