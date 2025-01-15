@@ -1272,7 +1272,11 @@
 }
 
 .mobileFloating {
-    position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--t1); border-radius:12px; padding:13px 18px; z-index:9; width:93.75%;
+    display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--t1); border-radius:12px; padding:13px 18px; z-index:9; width:93.75%;
+
+    @include media ('mobile'){
+        display:block;
+    }
 
     .inner {
         display:flex; flex-flow :row nowrap; align-items: center; justify-content: center; gap:10px;

@@ -77,7 +77,7 @@ function compileScss(cb){
     return src('./project/src/scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(scss(scssOptions).on('error',scss.logError))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('../maps'))
         .pipe(dest('./project/dist/common/css'));
     cb();
 }
