@@ -192,7 +192,13 @@
                 width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 8px;
                 .popBtn {
                     display:inline-block; padding: 0 40px; height:42px; line-height:42px; border-radius: 76px; font-size: 16px; text-align: center;
-                    &.main { background:var(--prm3); color:var(--bg3);}
+                    &.main { 
+                        background:var(--prm3); color:var(--bg3);
+
+                        &:disabled {
+                            background:var(--bg2); color:var(--tbg3);
+                        }
+                    }
                     &.sub { background:var(--bg3); color:var(--t1); border:1px solid var(--lbg2); padding: 0 26px;}
                 }
 

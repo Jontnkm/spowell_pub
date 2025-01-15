@@ -1131,9 +1131,9 @@
                     }
 
                     > a {
-                        position:absolute; display:block; width:max-content; padding-right:16px; background:var(--bg3); border-radius:30px; font-size:16px; color:var(--prm1); font-weight:500; bottom:36px; left:40px;
+                        position:absolute; display:block; width:max-content; padding-right:26px; background:var(--bg3); border-radius:30px; font-size:16px; color:var(--prm1); font-weight:500; bottom:36px; left:40px;
                         &::after {
-                            content:''; position:absolute; top:50%; right:0; width:14px; height:14px; transform:translateY(-50%); background:url(../../common/images/main/mainCont06_arr02.svg)50% 50% no-repeat;
+                            content:''; position:absolute; top:50%; right:0; width:22px; height:22px; transform:translateY(-50%); background:#1B3275 url(../../common/images/main/mainCont06_arr02.svg)50% 50% no-repeat; border-radius:50%;
                         }
                     }
 
@@ -1269,4 +1269,39 @@
             }
         }
     }
+}
+
+.mobileFloating {
+    position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--t1); border-radius:12px; padding:13px 18px; z-index:9; width:93.75%;
+
+    .inner {
+        display:flex; flex-flow :row nowrap; align-items: center; justify-content: center; gap:10px;
+
+        > p {
+            font-size:18px; color:var(--bg3); font-weight:700; letter-spacing:-0.54px;
+
+            > span {
+                color: var(--snd1);
+            }
+        }
+        
+        > a {
+            display:block; padding:10px 24px; background:linear-gradient(324deg, #FF8000 3.51%, #FFB348 92.03%); border-radius:90px; text-align:center; font-size:16px; color:var(--t1); font-weight:700; letter-spacing:-0.2px;
+        }
+    }
+
+     + .layoutFooter {
+        /*mobile main page only*/
+        .topBtn {
+            @include media ('mobile') {
+                bottom:110px;
+            }
+        }
+
+        .cptFooter > .footerBot {
+            @include media ('mobile') {
+                padding:30px 20px 120px !important;
+            }
+        }
+     }
 }

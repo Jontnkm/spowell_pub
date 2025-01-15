@@ -700,10 +700,12 @@ document.addEventListener("DOMContentLoaded", function () {
     //*마지막 2-depth 메뉴 포커스 이탈시 박스 숨김 처리
     const dep02 = document.querySelector(".allLast");
 
-    dep02.addEventListener("focusout", function(){
-        hideAllDepth02();
-        removeAllOnClasses();
-    })
+    if(dep02){
+        dep02.addEventListener("focusout", function(){
+            hideAllDepth02();
+            removeAllOnClasses();
+        })
+    }
 
 
     //2025.01.09 신청안내 전용 3depth 모바일메뉴 스크립트
