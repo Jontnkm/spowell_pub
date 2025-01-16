@@ -216,6 +216,10 @@ label {
 	margin-bottom: 24px;
 }
 
+.mB8 {
+	margin-bottom: 8px;
+}
+
 .pcType {
 	display: block;
 }
@@ -2397,6 +2401,9 @@ label {
 		display: block;
 	}
 }
+.cptTable table.tbInfo tr.scnd td {
+	border-right: 1px solid var(--lbg1);
+}
 .cptTable table.tbInfo th {
 	font-size: 16px;
 	color: var(--t1);
@@ -2574,6 +2581,14 @@ label {
 	.cptTable table.tbInfo td.btnType span.date {
 		display: block;
 		order: 0;
+	}
+}
+.cptTable table.tbInfo td.forMobile {
+	display: none;
+}
+@media screen and (max-width: 767px) {
+	.cptTable table.tbInfo td.forMobile {
+		display: block;
 	}
 }
 .cptTable table.tbInfo tbody th {
@@ -6592,7 +6607,7 @@ label {
 	left: 0;
 	width: 100%;
 	background: var(--bg4);
-	padding-top: 30px;
+	padding: 30px 0;
 	z-index: 999;
 }
 .cptFooter > .footerBot .inner .linkArea .rightArea > ul > li > .dropTopBox.mo {
@@ -6607,11 +6622,6 @@ label {
 	}
 	.cptFooter > .footerBot .inner .linkArea .rightArea > ul > li > .dropTopBox.mo {
 		display: block;
-	}
-}
-@media screen and (max-width: 767px) {
-	.cptFooter > .footerBot .inner .linkArea .rightArea > ul > li > .dropTopBox {
-		bottom: calc(100% - 115px);
 	}
 }
 .cptFooter > .footerBot .inner .linkArea .rightArea > ul > li > .dropTopBox > div > ul {
@@ -8792,8 +8802,10 @@ label {
 	padding-top: 140px;
 	text-align: center;
 }
-.memberTop > img {
-	display: inline;
+.memberTop > a {
+	display: block;
+	width: max-content;
+	margin: 0 auto;
 }
 
 .memberBot {

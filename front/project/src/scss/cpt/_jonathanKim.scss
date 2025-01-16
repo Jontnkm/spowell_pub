@@ -939,8 +939,8 @@
 .memberTop {
     width:100%; position:relative; padding-top:140px; text-align:center;
 
-    > img {
-        display:inline;
+    > a {
+        display:block; width:max-content; margin:0 auto;
     }
 }
 

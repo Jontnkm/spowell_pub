@@ -41,7 +41,7 @@
             <!-- Top -->
             
 <div class="memberTop">
-	<img src="../../common/images/common/spowellLogo.svg" alt="">
+	<a href="../../html/index.html"><img src="../../common/images/common/spowellLogo.svg" alt=""></a>
 </div> 
         </div>
         <!-- //상단영역 -->
@@ -68,7 +68,7 @@
                                 </li>
                                 <li>
                                     <span class="step">4</span>
-                                    <span>가입완료</span>
+                                    <span>가입신청 완료</span><!-- 2025.01.16 텍스트수정 -->
                                 </li>
                             </ul>
                         </div>
@@ -152,22 +152,22 @@
                                 <div class="cptForm">
 
                                     <div class="rowType">
-                                        <p class="lbTxt">장애여부</p>
+                                        <p class="lbTxt req">장애여부</p><!-- 2025.01.16 req클래스 추가 -->
                                         <div class="frmGroup gap30 alingMid">
-                                            <!-- 2025.01.08 순서변경 -->
-                                            <div class="frmChk">
-                                                <input type="checkbox" id="chk04" />
-                                                <label for="chk04">비장애</label>
+                                            <!-- 2025.01.16 라디오타입으로 변경 -->
+                                            <div class="frmRdo ty02">
+                                                <input type="radio" id="rdo011" name="rdo02" checked />
+                                                <label for="rdo011">비장애</label>
                                             </div>
-                                            <div class="frmChk">
-                                                <input type="checkbox" id="chk03" checked />
-                                                <label for="chk03">장애</label>
+                                            <div class="frmRdo ty02">
+                                                <input type="radio" id="rdo021" name="rdo02" />
+                                                <label for="rdo021">장애</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="rowType">
-                                        <p class="lbTxt">종목</p>
+                                        <p class="lbTxt req">종목</p><!-- 2025.01.16 req클래스 추가 -->
                                         <div class="dropDown hlf flBtn">
                                             <button type="button" class="" title="열기">종목 선택</button>
                                             <div class="dropDownBox hlfddCont ty01">
@@ -199,7 +199,7 @@
                                     </div>
 
                                     <div class="rowType">
-                                        <p class="lbTxt">체육인 구분</p>
+                                        <p class="lbTxt req">체육인 구분</p><!-- 2025.01.16 req클래스 추가 -->
                                         <div class="frmGroup gap30 alingMid">
                                             <div class="frmChk">
                                                 <input type="checkbox" id="chk05" checked />

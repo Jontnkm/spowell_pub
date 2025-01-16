@@ -179,7 +179,7 @@
 										<li class="type02"><a href="../../html/board/welfareNewsList.html">체육인복지 소식</a></li>
 										<li class="type02"><a href="../../html/board/newsList.html">보도자료</a></li>
 										<li class="type02"><a href="../../html/board/archiveList.html">서식 자료실</a></li>
-										<li class="type02"><a href="../../html/board/faq.html">자주찾는질문</a></li>
+										<li class="type02"><a href="../../html/board/faq.html">자주묻는질문</a></li>
 									</ul>
 								</div>
 							</div>
@@ -310,7 +310,7 @@
 									<li><a href="../../html/board/welfareNewsList.html">체육인복지 소식</a></li>
 									<li><a href="../../html/board/newsList.html">보도자료</a></li>
 									<li><a href="../../html/board/archiveList.html">서식 자료실</a></li>
-									<li><a href="../../html/board/faq.html">자주찾는질문</a></li>
+									<li><a href="../../html/board/faq.html">자주묻는질문</a></li>
 								</ul>
 							</div>
 
@@ -471,7 +471,7 @@
                                     <li class="depth2"><a href="../../html/board/welfareNewsList.html" class="depth2Link">체육인복지 소식</a></li>
                                     <li class="depth2"><a href="../../html/board/newsList.html" class="depth2Link">보도자료</a></li>
                                     <li class="depth2"><a href="../../html/board/archiveList.html" class="depth2Link">서식 자료실</a></li>
-                                    <li class="depth2"><a href="../../html/board/faq.html" class="depth2Link">자주찾는질문</a></li>
+                                    <li class="depth2"><a href="../../html/board/faq.html" class="depth2Link">자주묻는질문</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -627,7 +627,7 @@
                                         </li>
                                         <li>
                                             <strong>사전조사</strong>
-                                            <p>사후관리</p>
+                                            <p>사전조사 및 징계조치 요구 후속점검 및 사후관리</p> <!-- 2025.01.16 문구 수정 -->
                                         </li>
                                         <li>
                                             <strong>스포츠 윤리교육</strong>
@@ -674,7 +674,7 @@
                                     <p class="bulletTxt light">운동경기 중 발생하는 승부조작 또는 편파판정, 체육 관련 입시비리, 체육단체 등의 횡령·배임 및 뇌물수수 등 체육계의 투명성과 공정성에 해를 끼치는 행위를 말합니다.</p>
                                     <div class="borderColArea col4">
                                         <ul class="bulletList">
-                                            <li>승편파판정</li>
+                                            <li>편파판정</li> <!-- 2025.01.16 수정 -->
                                             <li>승부조작</li>
                                             <li>부정입학</li>
                                             <li>횡령·배임</li>
@@ -692,7 +692,7 @@
 
                                 <div class="partFooter">
                                     <div class="comButton">
-                                        <button type="button" class="btn h56 f-dg">스포츠 윤리센터 바로가기</button>
+                                        <button type="button" class="btn h56 f-dg" onclick="locMove()" title="새창열림">스포츠 윤리센터 바로가기</button>
                                     </div>
                                 </div>
                             </div>
@@ -745,7 +745,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="../../apply/welfareCal_list.html" class="ico ico03">
+				<a href="../../html/apply/welfareCal_list.html" class="ico ico03">
 					<img src="../../common/images/common/ico_quick03.svg" alt="복지 캘린더 아이콘">
 					<span>복지 캘린더</span>
 				</a>
@@ -1026,7 +1026,7 @@
                             <li>TEL : 02-410-1298</li>
                             <li>FAX : 02-410-1339</li>
                         </ul>
-                        <p class="cpRyt">COPYRIGHT ⓒ 2021 국민체육진흥공단. ALL RIGHT RESERVED</p>
+                        <p class="cpRyt">COPYRIGHT ⓒ 2025 국민체육진흥공단. ALL RIGHT RESERVED</p>
                     </div>
                 </div>
                 <div class="authArea">
@@ -1041,6 +1041,12 @@
         <!-- //하단영역 -->
 
     </div>
+    <script>
+        function locMove() {
+            var openNewWindow = window.open("about:blank");
+            openNewWindow.location.href = "https://www.k-sec.or.kr/";
+        }
+    </script>
 </div>
 
 <!-- 팝업이 들어오는 영역 -->

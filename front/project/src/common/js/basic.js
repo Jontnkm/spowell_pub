@@ -193,7 +193,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(list1){
         list1.forEach(function(item1) {
-            item1.style.width = "calc(100% / " + listLength1 + ")";
+            if(listLength1 == 1){
+                item1.style.width = "100%";
+                item1.style.borderBottom = "2px solid var(--prm1)";
+                item1.style.borderRadius = "10px";
+            }else{
+                item1.style.width = "calc(100% / " + listLength1 + ")";
+            }
         });   
     }
 

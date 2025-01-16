@@ -86,7 +86,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="tit" rowspan="6">예비인재</td>
+                                                    <td class="tit" rowspan="5">예비인재</td> <!-- 2025.01.16 rowspan 수정 6 -> 5 -->
                                                     <td>
                                                         <span>스포츠 예비행정가과정</span>
                                                     </td>
@@ -114,14 +114,15 @@
                                                         <span>스포츠 인턴십과정</span>
                                                     </td>
                                                 </tr>
+
                                                 <tr>
+                                                    <td class="tit" rowspan="6">행정인재</td> <!-- 2025.01.16 제목위치 변경 -->
                                                     <td>
                                                         <span>스포츠 행정실무자과정</span>
                                                     </td>
                                                 </tr>
-
                                                 <tr>
-                                                    <td class="tit" rowspan="6">행정인재</td>
+                                                     <!-- 2025.01.16 rowspan 기존 행정인제 제목 위치 변경 -->
                                                     <td>
                                                         <span>체력측정 · 관리행정과정</span>
                                                     </td>
@@ -136,18 +137,13 @@
                                                     <td>
                                                         <span>스포츠정책 과정</span>
                                                     </td>
-                                                    <td class="tit" rowspan="4">
+                                                    <td class="tit" rowspan="3">  <!-- 2025.01.16 rowspan 수정 4 -> 3 -->
                                                         <span>온라인<br>(콘텐츠)</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <span>스포츠시설 안전관리과정</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span>레저스포츠 안전관리과정</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -216,10 +212,14 @@
                                     <p class="bulletTxt">교육과정</p>
                                     <ul class="bulletList">
                                         <li>[미래인재] 진로탐색 과정</li>
-                                        <li>[도전인재] 도전 과정, 재진출 과정, 해외학위 취득 지원</li>
+                                        <li>
+                                            [도전인재] 도전 과정, 재진출 과정, 해외학위 취득 지원
+                                            <!-- 2025.01.16 bulletSign 추가 -->
+                                            <p class="bulletSign">해외학위 취득지원 : AISTS(IOC 설립), FIFA Master(FIFA 설립) 석사과정 입학 허가서 취득자 대상 학비, 항공료 등 인당 20백만원 정액 지원(3명 이내)</p>
+                                        </li>
                                         <li>
                                             [진출인재] 진출인재 과정
-                                            <p class="bulletSign">해외학위 취득지원 : AISTS(IOC 설립), FIFA Master(FIFA 설립) 석사과정 입학 허가서 취득자 대상 학비, 항공료 등 인당 20백만원 정액 지원(3명 이내)</p>
+                                            <!-- 2025.01.16 기존 bulletSign 위치변경으로 제거 -->
                                         </li>
                                     </ul>
 
@@ -324,7 +324,7 @@
 
                                 <div class="partFooter">
                                     <div class="comButton">
-                                        <button type="button" class="btn h56 f-dg">K스포에듀 바로가기</button>
+                                        <button type="button" class="btn h56 f-dg" onclick="locMove()" title="새창열림">K스포에듀 바로가기</button> <!-- 2025.01.16 새창열림 링크 function 추가 -->
                                     </div>
                                 </div>
                             </div>
@@ -348,6 +348,12 @@
         <!-- //하단영역 -->
 
     </div>
+    <script>
+        function locMove() {
+            var openNewWindow = window.open("about:blank");
+            openNewWindow.location.href = "https://edu.kspo.or.kr/main/main.do";
+        }
+    </script>
 </div>
 
 <!-- 팝업이 들어오는 영역 -->

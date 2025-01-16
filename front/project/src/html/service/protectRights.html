@@ -58,7 +58,7 @@
                                         </li>
                                         <li>
                                             <strong>사전조사</strong>
-                                            <p>사후관리</p>
+                                            <p>사전조사 및 징계조치 요구 후속점검 및 사후관리</p> <!-- 2025.01.16 문구 수정 -->
                                         </li>
                                         <li>
                                             <strong>스포츠 윤리교육</strong>
@@ -105,7 +105,7 @@
                                     <p class="bulletTxt light">운동경기 중 발생하는 승부조작 또는 편파판정, 체육 관련 입시비리, 체육단체 등의 횡령·배임 및 뇌물수수 등 체육계의 투명성과 공정성에 해를 끼치는 행위를 말합니다.</p>
                                     <div class="borderColArea col4">
                                         <ul class="bulletList">
-                                            <li>승편파판정</li>
+                                            <li>편파판정</li> <!-- 2025.01.16 수정 -->
                                             <li>승부조작</li>
                                             <li>부정입학</li>
                                             <li>횡령·배임</li>
@@ -123,7 +123,7 @@
 
                                 <div class="partFooter">
                                     <div class="comButton">
-                                        <button type="button" class="btn h56 f-dg">스포츠 윤리센터 바로가기</button>
+                                        <button type="button" class="btn h56 f-dg" onclick="locMove()" title="새창열림">스포츠 윤리센터 바로가기</button>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +148,12 @@
         <!-- //하단영역 -->
 
     </div>
+    <script>
+        function locMove() {
+            var openNewWindow = window.open("about:blank");
+            openNewWindow.location.href = "https://www.k-sec.or.kr/";
+        }
+    </script>
 </div>
 
 <!-- 팝업이 들어오는 영역 -->

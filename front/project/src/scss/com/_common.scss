@@ -5,6 +5,7 @@
 .mT24 {margin-top:24px;}
 .mT50 {margin-top:50px;}
 .mB24 {margin-bottom:24px;}
+.mB8 {margin-bottom:8px;}
 
 .pcType {
     display:block;
@@ -1386,6 +1387,9 @@
                             display:block;
                         }
                     }
+                    td {
+                        border-right:1px solid var(--lbg1);
+                    }
                 }
             }
 
@@ -1498,6 +1502,14 @@
                         }
 
                         
+                    }
+                }
+
+                &.forMobile {
+                    display:none;
+
+                    @include media ('mobile') {
+                        display:block;
                     }
                 }
             }
