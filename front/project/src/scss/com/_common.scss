@@ -1659,7 +1659,14 @@
     .fileArea {
         position:relative;
         .before {
-            .fileIpt {position:absolute; top:0; left:0; width:1px; height:1px;}
+            .fileIpt {
+                position:absolute; top:0; left:0; width:1px; height:1px;
+
+                // 2025.01.21 모바일에서 파일버튼 삭제 처리 
+                z-index:-1; margin-left:-1px; overflow:hidden !important; -webkit-appearance: none;appearance: none; opacity:0;
+                &::file-selector-button {display: none; }
+                &::-webkit-file-upload-button {display: none; }
+            }
             .fileBtn {
                 display:inline-block; padding: 0 14px; line-height:36px; height:36px; border:1px solid var(--lbg2); border-radius:6px; background:var(--bg3); font-size:14px; color:var(--prm3); font-weight:500; cursor:pointer;
                 &:hover {
