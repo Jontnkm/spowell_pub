@@ -50,6 +50,11 @@
                 &::before {
                     content:''; position:absolute; top:50%; left:-20px; width:11px; height:8px; background:url(../../common/images/common/ico_required.png)50% 50% no-repeat; transform:translateY(-50%);
                 }
+
+                @include media ('mobile') {
+                    display:inline-block; padding-right:16px; width:auto;
+                    &::before{left:unset; right:0;}
+                }
             }
         }
         &:not(:first-of-type) {margin-top:20px;}
@@ -164,7 +169,8 @@
         }
     }
 
-    .Deco {
+    .Deco,
+    .deco {
         display:block; font-size:16px; color:var(--t1); font-weight:400;
         
         @include media ('mobile') {
@@ -202,6 +208,8 @@
         &.alingMid {
             align-items: center;
         }
+
+        &.flexWrap{flex-wrap:wrap;}
 
         &.datepicker {
             min-height:40px;
@@ -603,6 +611,16 @@
         }
     }
 
+    /* 2025.01.21 비밀번호변경 */
+    &.pwChange {
+        .frmGroup{
+            flex-wrap:wrap;
+            & + .frmGroup {margin-top:24px !important;}
+            .ipt{width:100% !important;}
+            .simpleTxt {line-height:normal !important;}
+        }
+    }
+
     /*2024.12.20 추가*/
     & + .cptForm {
         margin-top:8px;
@@ -610,6 +628,7 @@
             min-height:auto;
         }
     }
+
 }
 
 /*==================================== 버튼 ====================================*/
@@ -1454,6 +1473,7 @@
                 &.center {
                     text-align:center;
                 }
+                &.bdRight {border-right:1px solid var(--lbg1); }
                 
                 .dropDown {
                     > button {
@@ -1646,7 +1666,14 @@
     .fileArea {
         position:relative;
         .before {
-            .fileIpt {position:absolute; top:0; left:0; width:1px; height:1px;}
+            .fileIpt {
+                position:absolute; top:0; left:0; width:1px; height:1px;
+
+                // 2025.01.21 모바일에서 파일버튼 삭제 처리 
+                z-index:-1; margin-left:-1px; overflow:hidden !important; -webkit-appearance: none;appearance: none; opacity:0;
+                &::file-selector-button {display: none; }
+                &::-webkit-file-upload-button {display: none; }
+            }
             .fileBtn {
                 display:inline-block; padding: 0 14px; line-height:36px; height:36px; border:1px solid var(--lbg2); border-radius:6px; background:var(--bg3); font-size:14px; color:var(--prm3); font-weight:500; cursor:pointer;
                 &:hover {
