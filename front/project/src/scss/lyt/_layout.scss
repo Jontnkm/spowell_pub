@@ -82,7 +82,7 @@
     .popupBox {
         width: 100%; margin: 0 auto; position: relative; display: flex; flex-flow: column; z-index: 1;
         @include media ('tablet'){
-            width:90.75%;
+            width:93.75%;
         }
         & > * {opacity: 0;}
         &::before {display: block; content: ""; width: 0; height: 0;background: var(--bg3); position: absolute; top: 50%; left: 50%; z-index: -1;}
@@ -99,7 +99,7 @@
     }
     @keyframes popOut {
         from {width: 0; height: 0;top: 50%; left: 50%;}
-        to {width: 100%; height: 100%;top: 0; left: 0;}
+        to {width: 100%; height: 100%;top: 0; left: 0; }
     }
     @keyframes opaci1 {
         from {opacity: 0;}
@@ -108,7 +108,7 @@
     //알럿창
     &.typeAlert {
         .popupBox {
-            max-height: 95%; border-radius: 20px; padding:30px;
+            max-height: 80%; border-radius: 20px; padding:30px;
             &::before {border-radius: 20px;} 
                                 
             .popTitArea {
@@ -141,7 +141,10 @@
     
     &.type01 {
         .popupBox {
-            max-height: 95%; border-radius: 20px; padding:30px 40px;
+            max-height: 80%; border-radius: 20px; padding:30px 40px;
+            @supports (-webkit-touch-callout: none) {
+                margin-top:-100px;
+            }
             &::before {border-radius: 20px;} 
 
             .popTitArea {
@@ -214,7 +217,7 @@
     &.siteMap {
         .popupDim {background:rgba(224, 234, 248, 0.9); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
         .popupBox{
-            max-width:1280px; max-height: 95%; overflow-y:scroll;
+            max-width:1280px; max-height: 80%; overflow-y:scroll;
             &::-webkit-scrollbar {
                 display:none;
             }

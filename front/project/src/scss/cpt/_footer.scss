@@ -50,14 +50,14 @@
                             > .swiper {
                                 &-button {
                                     &-prev01 {
-                                        position:absolute; top:50%; transform:translateY(50%); left:-25px; width:12px; height:22px; background:url(../../common/images/common/ico_footer_arr03.svg)50% 50% no-repeat;
+                                        position:absolute; top:50%; transform:translateY(50%); left:-25px; width:12px; height:22px; background:url(../../common/images/common/ico_footer_arr03.svg)50% 50% no-repeat; margin-top:-6px;
                                         &::after {
                                             content:'';
                                         }
                                     }
 
                                     &-next01 {
-                                        position:absolute; top:50%; transform:translateY(50%); right:-25px; width:12px; height:22px; background:url(../../common/images/common/ico_footer_arr04.svg)50% 50% no-repeat;
+                                        position:absolute; top:50%; transform:translateY(50%); right:-25px; width:12px; height:22px; background:url(../../common/images/common/ico_footer_arr04.svg)50% 50% no-repeat; margin-top:-6px;
                                         &::after {
                                             content:'';
                                         }

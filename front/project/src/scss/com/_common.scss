@@ -1517,7 +1517,7 @@
                     &:last-of-type {margin-bottom:0;}
                     &.badge {
                         order:-1;
-                        border:1px solid var(--prm1); border-radius:4px; text-align:center; background:var(--bg1); color:var(--prm1); font-size:14px; font-weight:500; line-height:24px; padding: 0 8px; margin-bottom:12px;
+                        border:1px solid var(--prm1); border-radius:4px; text-align:center; background:var(--bg1); color:var(--prm1); font-size:14px; font-weight:500; line-height:24px; padding: 0 8px; margin-bottom:12px; width:max-content;
                     }
                     &.tit {
                         width:100%; font-size:20px; color:var(--t1); font-weight:700; margin-bottom:12px; order:0;
@@ -1638,7 +1638,7 @@
                 }
 
                 td {
-                    padding:14px; text-align:center; font-size:16px; color:var(--t1); font-weight:400; line-height:1.4; border:1px solid var(--lbg1); border-top:none; word-break: keep-all;
+                    padding:14px; text-align:center; font-size:16px; color:var(--t1); font-weight:400; line-height:1.4; border:1px solid var(--lbg1); border-top:none; word-break: break-word;
 
                     &:first-of-type {border-left:none;}
                     &:last-of-type {border-right:none;}

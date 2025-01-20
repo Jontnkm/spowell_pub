@@ -2611,6 +2611,7 @@ label {
 		line-height: 24px;
 		padding: 0 8px;
 		margin-bottom: 12px;
+		width: max-content;
 	}
 	.cptTable table.tbInfo td.tit {
 		width: 100%;
@@ -2756,7 +2757,7 @@ label {
 	line-height: 1.4;
 	border: 1px solid var(--lbg1);
 	border-top: none;
-	word-break: keep-all;
+	word-break: break-word;
 }
 .cptTable table.tbMoType tr td:first-of-type {
 	border-left: none;
@@ -3213,7 +3214,7 @@ label {
 }
 @media screen and (max-width: 1023px) {
 	.modPopup .popupBox {
-		width: 90.75%;
+		width: 93.75%;
 	}
 }
 .modPopup .popupBox > * {
@@ -3265,7 +3266,7 @@ label {
 	}
 }
 .modPopup.typeAlert .popupBox {
-	max-height: 95%;
+	max-height: 80%;
 	border-radius: 20px;
 	padding: 30px;
 }
@@ -3335,9 +3336,14 @@ label {
 	max-width: 340px;
 }
 .modPopup.type01 .popupBox {
-	max-height: 95%;
+	max-height: 80%;
 	border-radius: 20px;
 	padding: 30px 40px;
+}
+@supports (-webkit-touch-callout: none) {
+	.modPopup.type01 .popupBox {
+		margin-top: -100px;
+	}
 }
 .modPopup.type01 .popupBox::before {
 	border-radius: 20px;
@@ -3460,7 +3466,7 @@ label {
 }
 .modPopup.siteMap .popupBox {
 	max-width: 1280px;
-	max-height: 95%;
+	max-height: 80%;
 	overflow-y: scroll;
 }
 .modPopup.siteMap .popupBox::-webkit-scrollbar {
@@ -3723,6 +3729,11 @@ label {
 	position: relative;
 	z-index: 6;
 	background: var(--bg3);
+}
+@media screen and (max-width: 767px) {
+	.cptHeader {
+		z-index: 999;
+	}
 }
 .cptHeader .headerTop {
 	width: 100%;
@@ -6536,6 +6547,7 @@ label {
 		width: 12px;
 		height: 22px;
 		background: url(../../common/images/common/ico_footer_arr03.svg) 50% 50% no-repeat;
+		margin-top: -6px;
 	}
 	.cptFooter > .footerTop .inner .affArea div.moType > .swiper-control > .swiper-button-prev01::after {
 		content: "";
@@ -6548,6 +6560,7 @@ label {
 		width: 12px;
 		height: 22px;
 		background: url(../../common/images/common/ico_footer_arr04.svg) 50% 50% no-repeat;
+		margin-top: -6px;
 	}
 	.cptFooter > .footerTop .inner .affArea div.moType > .swiper-control > .swiper-button-next01::after {
 		content: "";
@@ -10561,14 +10574,12 @@ label {
 /* 공통 탭 */
 .tabArea .inner > ul {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+	gap: 10px;
 }
 .tabArea .inner > ul > li {
-	min-width: 220px;
+	min-width: calc(50% - 5px);
 	height: 42px;
-}
-.tabArea .inner > ul > li + li {
-	margin-left: 8px;
 }
 .tabArea .inner > ul > li > a {
 	position: relative;
@@ -10602,12 +10613,6 @@ label {
 }
 .tabArea .tabCont .contBox.active {
 	display: block;
-}
-@media screen and (max-width: 767px) {
-	.tabArea .inner > ul > li {
-		min-width: 50%;
-		max-width: 220px;
-	}
 }
 
 /* 팝업 내부 탭 (평가점수 및 지급기준) */

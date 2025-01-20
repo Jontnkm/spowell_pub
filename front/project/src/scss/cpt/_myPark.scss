@@ -763,10 +763,10 @@
 .tabArea{
     .inner{
         & > ul{
-            display:flex; justify-content: center;
+            display:flex; justify-content: flex-start; gap:10px; 
             & > li{
-                min-width:220px; height:42px;
-                & + li {margin-left:8px;}
+                min-width:calc(50% - 5px); height:42px;
+                // & + li {margin-left:8px;}
                 & > a{position:relative; display:flex; justify-content: center; align-items: center; height:42px; font-size:16px; font-weight:500; border:1px solid var(--lbg2); border-radius:90px; }
                 &.active > a{
                     border:1px solid var(--prm1); background:var(--prm1); color:var(--bg3); font-weight:700;
@@ -781,9 +781,9 @@
         .contBox.active{display:block;}
     }
 
-    @include media('mobile') {
-        .inner > ul > li {min-width:50%; max-width:220px;}
-    }
+    // @include media('mobile') {
+    //     .inner > ul > li {min-width:calc(50% - 10px); max-width:220px;}
+    // }
 }
 
 /* 팝업 내부 탭 (평가점수 및 지급기준) */

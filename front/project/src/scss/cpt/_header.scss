@@ -5,6 +5,10 @@
 .cptHeader {
     width:100%; position:relative; z-index:6; background:var(--bg3);
 
+    @include media ('mobile') {
+        z-index:999;
+    }
+
     .headerTop {
         width:100%; border-bottom:1px solid var(--l1);
         > .inner {
