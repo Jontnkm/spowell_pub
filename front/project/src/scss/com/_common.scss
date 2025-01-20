@@ -1406,7 +1406,7 @@
             }
             tr{
                 @include media ('mobile'){
-                    position:relative; width:100%; display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start; border-bottom:1px solid var(--lbg1); padding:20px 12px;
+                    position:relative; width:100%; display:flex; flex-flow: column;  justify-content: flex-start; border-bottom:1px solid var(--lbg1); padding:20px 12px;
                     
                 }
                 &.scnd {
@@ -1567,18 +1567,18 @@
                     tbody {
                         display:block;
                         tr {
-                            display:flex; flex-flow: row wrap; align-items: center; justify-content: flex-start; gap:0; border:0; padding:0; height:100%;
+                            display:flex; flex-flow: row wrap;  justify-content: flex-start; gap:0; border:0; padding:0; height:100%;
                             &.combine {
                                 th {
                                     padding:0;
                                 }
                             }
                             th {
-                                display: block; width: 160px; padding:14px 0; height:100%; order:1; 
+                                display: flex; width: 160px; padding:14px 0; order:1; align-items: center; justify-content: center;
                             }
 
                             td {
-                                display:block; width: calc(100% - 160px); padding:14px; border-bottom:1px solid var(--lbg1); margin-bottom:0;
+                                display:flex; width: calc(100% - 160px); padding:14px; border-bottom:1px solid var(--lbg1); margin-bottom:0;  align-items: center;
 
                                 .frmGroup  {
                                     min-height:auto;
@@ -1589,6 +1589,15 @@
                                 }
                                 .comButton {
                                     display:block; width:110px;
+                                }
+                            }
+
+                            &.combine {
+                                td {
+                                    display:block;
+                                    a {
+                                        word-break:break-word;
+                                    }
                                 }
                             }
                         }

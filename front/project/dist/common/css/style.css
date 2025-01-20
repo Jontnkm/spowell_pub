@@ -2436,7 +2436,6 @@ label {
 		width: 100%;
 		display: flex;
 		flex-flow: column;
-		align-items: flex-start;
 		justify-content: flex-start;
 		border-bottom: 1px solid var(--lbg1);
 		padding: 20px 12px;
@@ -2670,7 +2669,6 @@ label {
 	.cptTable table.tbInfo.type02 tbody tr {
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
 		justify-content: flex-start;
 		gap: 0;
 		border: 0;
@@ -2681,18 +2679,20 @@ label {
 		padding: 0;
 	}
 	.cptTable table.tbInfo.type02 tbody tr th {
-		display: block;
+		display: flex;
 		width: 160px;
 		padding: 14px 0;
-		height: 100%;
 		order: 1;
+		align-items: center;
+		justify-content: center;
 	}
 	.cptTable table.tbInfo.type02 tbody tr td {
-		display: block;
+		display: flex;
 		width: calc(100% - 160px);
 		padding: 14px;
 		border-bottom: 1px solid var(--lbg1);
 		margin-bottom: 0;
+		align-items: center;
 	}
 	.cptTable table.tbInfo.type02 tbody tr td .frmGroup {
 		min-height: auto;
@@ -2703,6 +2703,12 @@ label {
 	.cptTable table.tbInfo.type02 tbody tr td .comButton {
 		display: block;
 		width: 110px;
+	}
+	.cptTable table.tbInfo.type02 tbody tr.combine td {
+		display: block;
+	}
+	.cptTable table.tbInfo.type02 tbody tr.combine td a {
+		word-break: break-word;
 	}
 }
 .cptTable table .mTit {

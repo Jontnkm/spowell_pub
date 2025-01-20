@@ -273,69 +273,69 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-    function adjustTable() {
-        var wWid = window.innerWidth;
-        var combines = document.querySelectorAll(".cptTable tr");
+    // function adjustTable() {
+    //     var wWid = window.innerWidth;
+    //     var combines = document.querySelectorAll(".cptTable tr");
 
-        if (wWid < 1023) {
-            combines.forEach(function(combine) {
-                var th = combine.querySelectorAll("th");
-                var td = combine.querySelectorAll("td");
-                td.forEach(function(td){    
-                    var h = td.offsetHeight;
-                    th.forEach(function(target){
-                        target.style.height = h + "px";
-                        if(combine.classList.contains('combine')){
-                            target.style.lineHeight = h + "px";
-                        }
-                    })
-                })
-            });
-        } else {
-            combines.forEach(function(combine) {
-                var th = combine.querySelectorAll("th");
-                th.forEach(function(target){
-                    if (target) {
-                        target.style.height = "auto";
-                        target.style.lineHeight = "22px";
-                    }
-                })
-            });
-        }
-    }
+    //     if (wWid < 1023) {
+    //         combines.forEach(function(combine) {
+    //             var th = combine.querySelectorAll("th");
+    //             var td = combine.querySelectorAll("td");
+    //             td.forEach(function(td){    
+    //                 var h = td.offsetHeight;
+    //                 th.forEach(function(target){
+    //                     target.style.height = h + "px";
+    //                     if(combine.classList.contains('combine')){
+    //                         target.style.lineHeight = h + "px";
+    //                     }
+    //                 })
+    //             })
+    //         });
+    //     } else {
+    //         combines.forEach(function(combine) {
+    //             var th = combine.querySelectorAll("th");
+    //             th.forEach(function(target){
+    //                 if (target) {
+    //                     target.style.height = "auto";
+    //                     target.style.lineHeight = "22px";
+    //                 }
+    //             })
+    //         });
+    //     }
+    // }
 
-    adjustTable();
+    // adjustTable();
 
-    window.addEventListener("resize", function() {
-        var wWid2 = window.innerWidth;
-        var combines = document.querySelectorAll(".cptTable tr");
+    // window.addEventListener("resize", function() {
+    //     var wWid2 = window.innerWidth;
+    //     var combines = document.querySelectorAll(".cptTable tr");
 
-        if (wWid2 < 767) {
-            combines.forEach(function(combine) {
-                var th = combine.querySelectorAll("th");
-                var td = combine.querySelectorAll("td");
-                td.forEach(function(td){    
-                    var h = td.offsetHeight;
-                    th.forEach(function(target){
-                        target.style.height = h + "px";
-                        if(combine.classList.contains('combine')){
-                            target.style.lineHeight = h + "px";
-                        }
-                    })
-                })
-            });
-        } else {
-            combines.forEach(function(combine) {
-                var th = combine.querySelectorAll("th");
-                th.forEach(function(target){
-                    if (target) {
-                        target.style.height = "auto";
-                        target.style.lineHeight = "22px";
-                    }
-                })
-            });
-        }
-    });
+    //     if (wWid2 < 767) {
+    //         combines.forEach(function(combine) {
+    //             var th = combine.querySelectorAll("th");
+    //             var td = combine.querySelectorAll("td");
+    //             td.forEach(function(td){    
+    //                 var h = td.offsetHeight;
+    //                 th.forEach(function(target){
+    //                     target.style.height = h + "px";
+    //                     if(combine.classList.contains('combine')){
+    //                         target.style.lineHeight = h + "px";
+    //                     }
+    //                 })
+    //             })
+    //         });
+    //     } else {
+    //         combines.forEach(function(combine) {
+    //             var th = combine.querySelectorAll("th");
+    //             th.forEach(function(target){
+    //                 if (target) {
+    //                     target.style.height = "auto";
+    //                     target.style.lineHeight = "22px";
+    //                 }
+    //             })
+    //         });
+    //     }
+    // });
 
     const uploadFiles = document.querySelectorAll(".fileArea .fileIpt");
     if(uploadFiles){
