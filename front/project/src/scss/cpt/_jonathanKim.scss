@@ -759,6 +759,7 @@
 
             &.ty02 {
                 width:384px;
+                max-width:100%;
             }
 
             @include media ('mobile') {

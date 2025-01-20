@@ -129,6 +129,7 @@
 
 /* 공통 팝업 : 콘텐츠 */
 .popContBox {
+    //overflow-y: auto; max-height: calc(100vh - 200px);
     .explainTxt{
         margin-bottom:20px; line-height:27px; font-size:18px; font-weight:500;
         b{font-weight:700; color:var(--prm1); }
@@ -571,13 +572,15 @@
         }
 
         .typeCalendar.typeMo {
-            & > .inner > ul > li:first-child{display:none;}
+            // & > .inner > ul > li:first-child{display:none;}
+            & > .inner {display:none;}
             & > .tabCont > .contBox:first-child{display:none;}
         }
     }
 
     /* tablet 1023px */
     @include media('tablet') {
+        .cptTable table.tbInfo td .mTit{min-width:70px;}
     }
 
     /* mobile 767px */
