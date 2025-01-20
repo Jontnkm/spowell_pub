@@ -14,7 +14,9 @@
 	<!-- <meta name="theme-color" content="#4285f4"> -->
 
 	<title>체육인복지지원</title>
-
+	<!--2025.01.20 add for goole click2call issue-->
+	<meta name="format-detection" content="telephone=no">
+	
 	<link rel="stylesheet" href="../../common/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../../common/css/tui-date-picker.css">
 	<link rel="stylesheet" href="../../common/css/style.css">
@@ -570,10 +572,10 @@
                 <div class="depthDrop">
                     <div class="inner">
                         <ul>
-                            <li class="active">
+                            <li>
                                 <h2 class="depth1Menu"><a href="../../html/about/index.html">사업소개</a></h2>
                             </li>
-                            <li>
+                            <li class="active">
                                 <h2 class="depth1Menu"><a href="../../html/apply/appWelfare.html">신청·안내</a></h2>
                             </li>
                             <li>
@@ -679,6 +681,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(".ddCont li a").click(function(){
+        console.log(this);
+    })
+</script>
 
                         <!-- 콘텐츠 영역 하위 레이아웃 : 윗간격 60  -->
                         <div class="sectionArea cptApply">

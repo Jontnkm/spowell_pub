@@ -240,25 +240,31 @@ document.addEventListener("DOMContentLoaded", function () {
     
     function adjustTable() {
         var wWid = window.innerWidth;
-        var combines = document.querySelectorAll(".cptTable .combine");
+        var combines = document.querySelectorAll(".cptTable tr");
 
         if (wWid < 1023) {
             combines.forEach(function(combine) {
-                var td = combine.querySelector("td");
-                var th = combine.querySelector("th");
-                if (td && th) {
+                var th = combine.querySelectorAll("th");
+                var td = combine.querySelectorAll("td");
+                td.forEach(function(td){    
                     var h = td.offsetHeight;
-                    th.style.height = h + "px";
-                    th.style.lineHeight = h + "px";
-                }
+                    th.forEach(function(target){
+                        target.style.height = h + "px";
+                        if(combine.classList.contains('combine')){
+                            target.style.lineHeight = h + "px";
+                        }
+                    })
+                })
             });
         } else {
             combines.forEach(function(combine) {
-                var th = combine.querySelector("th");
-                if (th) {
-                    th.style.height = "auto";
-                    th.style.lineHeight = "22px";
-                }
+                var th = combine.querySelectorAll("th");
+                th.forEach(function(target){
+                    if (target) {
+                        target.style.height = "auto";
+                        target.style.lineHeight = "22px";
+                    }
+                })
             });
         }
     }
@@ -267,25 +273,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("resize", function() {
         var wWid2 = window.innerWidth;
-        var combines = document.querySelectorAll(".cptTable .combine");
+        var combines = document.querySelectorAll(".cptTable tr");
 
         if (wWid2 < 767) {
             combines.forEach(function(combine) {
-                var td = combine.querySelector("td");
-                var th = combine.querySelector("th");
-                if (td && th) {
+                var th = combine.querySelectorAll("th");
+                var td = combine.querySelectorAll("td");
+                td.forEach(function(td){    
                     var h = td.offsetHeight;
-                    th.style.height = h + "px";
-                    th.style.lineHeight = h + "px";
-                }
+                    th.forEach(function(target){
+                        target.style.height = h + "px";
+                        if(combine.classList.contains('combine')){
+                            target.style.lineHeight = h + "px";
+                        }
+                    })
+                })
             });
         } else {
             combines.forEach(function(combine) {
-                var th = combine.querySelector("th");
-                if (th) {
-                    th.style.height = "auto";
-                    th.style.lineHeight = "22px";
-                }
+                var th = combine.querySelectorAll("th");
+                th.forEach(function(target){
+                    if (target) {
+                        target.style.height = "auto";
+                        target.style.lineHeight = "22px";
+                    }
+                })
             });
         }
     });

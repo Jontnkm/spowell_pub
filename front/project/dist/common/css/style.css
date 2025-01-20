@@ -2458,6 +2458,13 @@ label {
 	border-bottom: 1px solid var(--lbg1);
 	order: 1;
 }
+.cptTable table.tbInfo td > span {
+	width: 100%;
+	word-break: break-word;
+}
+.cptTable table.tbInfo td > span em {
+	display: block;
+}
 .cptTable table.tbInfo td > a {
 	text-decoration: underline;
 }
@@ -3309,6 +3316,12 @@ label {
 }
 .modPopup.type01 .popupBox .popTitArea.type02 {
 	border-bottom: 0;
+}
+.modPopup.type01 .popupBox .popContArea {
+	overflow-y: scroll;
+}
+.modPopup.type01 .popupBox .popContArea::-webkit-scrollbar {
+	display: none;
 }
 .modPopup.type01 .popupBox .popContArea > p {
 	font-size: 16px;
@@ -7523,12 +7536,22 @@ label {
 	justify-content: space-between;
 	margin: 16px 0 40px;
 }
+@media screen and (max-width: 767px) {
+	.cptMember .loginOption {
+		flex-flow: column;
+	}
+}
 .cptMember .loginOption > .options {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: flex-start;
 	gap: 16px;
+}
+@media screen and (max-width: 767px) {
+	.cptMember .loginOption > .options {
+		margin-top: 20px;
+	}
 }
 .cptMember .loginOption > .options > a {
 	width: max-content;
@@ -8822,6 +8845,11 @@ label {
 	position: relative;
 	padding-top: 140px;
 	text-align: center;
+}
+@media screen and (max-width: 767px) {
+	.memberTop {
+		padding-top: 40px;
+	}
 }
 .memberTop > a {
 	display: block;

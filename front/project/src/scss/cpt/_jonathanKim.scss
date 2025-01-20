@@ -135,9 +135,15 @@
     .loginOption {
         display:flex; flex-flow: row nowrap; align-items: center ;justify-content: space-between; margin:16px 0 40px;
 
+        @include media ('mobile') {
+            flex-flow:column;
+        }
+
         > .options { 
             display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:16px;
-
+            @include media ('mobile') {
+                margin-top:20px;
+            }
             > a {
                 width:max-content; font-size:16px; color:var(--prm3); font-weight:400; position:relative; display:inline-block; 
 
@@ -938,6 +944,10 @@
 /*2024.12.20 회원관련 페이지 레이아웃 정의*/
 .memberTop {
     width:100%; position:relative; padding-top:140px; text-align:center;
+
+    @include media ('mobile') {
+        padding-top:40px;
+    }
 
     > a {
         display:block; width:max-content; margin:0 auto;

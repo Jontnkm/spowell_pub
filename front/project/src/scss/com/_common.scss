@@ -371,7 +371,7 @@
                 }
             }
         }
-        
+
         > div {
             display:none; position:absolute; top:100%; left:-1px; padding:10px 16px; width:calc(100% + 2px); background:var(--bg3); z-index:2;
             .ddCont {
@@ -1418,6 +1418,13 @@
             td {
                 font-size:16px; color:var(--t1); font-weight:400; padding:14px; text-align:center; line-height:22px; background:var(--bg3); border-right:1px solid var(--lbg1); border-bottom:1px solid var(--lbg1); order:1;
                 
+                > span {
+                    em {
+                        display:block;
+                    }
+                    width:100%; word-break:break-word;
+                }
+
                 > a {
                     text-decoration:underline;
                 }
