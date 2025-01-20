@@ -99,23 +99,58 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var buttonsMoMenu = document.querySelectorAll(".subMenuBox button");
-    if(buttonsMoMenu !== null && buttonsMoMenu !== undefined){
-        buttonsMoMenu.forEach(function(button) {
-            button.addEventListener("click", function() {
-                var parent = this.parentElement;
-                var drpdwBox = parent.querySelector(".depthDrop");
+    // if(buttonsMoMenu !== null && buttonsMoMenu !== undefined){
+    //     buttonsMoMenu.forEach(function(button) {
+    //         button.addEventListener("click", function() {
+    //             var parent = this.parentElement;
+    //             var drpdwBox = parent.querySelector(".depthDrop");
 
-                if (this.classList.contains("active")) {
+    //             if (this.classList.contains("active")) {
+    //                 parent.classList.remove("active");
+    //                 this.setAttribute("title", "열기");
+    //                 this.classList.remove("active");
+    //                 drpdwBox.style.display = "none";
+    //             } else {
+    //                 parent.classList.add("active");
+    //                 this.classList.add("active");
+    //                 this.setAttribute("title", "접기");
+    //                 drpdwBox.style.display = "block";
+    //             }
+    //         });
+    //     });
+    // }
+
+    if (buttonsMoMenu) {
+        buttonsMoMenu.forEach(button => {
+            button.addEventListener("click", function () {
+                const parent = this.parentElement;
+                const drpdwBox = parent.querySelector(".depthDrop");
+                const isActive = this.classList.contains("active");
+
+                // 모든 드롭다운 메뉴 초기화 (열려 있는 상태를 닫음)
+                document.querySelectorAll(".depthDrop").forEach(dropdown => {
+                    const parentElement = dropdown.parentNode;
+                    parentElement.classList.remove("active");
+                    dropdown.setAttribute("title", "열기");
+                    dropdown.classList.remove("active");
+                    dropdown.previousElementSibling?.classList.remove("active");
+                    dropdown.style.display = "none";
+                });
+
+                // 현재 버튼이 활성화 상태라면 닫기만 처리
+                if (isActive) {
                     parent.classList.remove("active");
                     this.setAttribute("title", "열기");
                     this.classList.remove("active");
                     drpdwBox.style.display = "none";
-                } else {
-                    parent.classList.add("active");
-                    this.classList.add("active");
-                    this.setAttribute("title", "접기");
-                    drpdwBox.style.display = "block";
+                    return; // 이미 열려 있는 상태에서 닫았으므로 종료
                 }
+
+                // 클릭된 버튼의 드롭다운 처리 (열기)
+                parent.classList.add("active");
+                this.classList.add("active");
+                this.setAttribute("title", "접기");
+                drpdwBox.style.display = "block";
             });
         });
     }
