@@ -762,6 +762,27 @@ label {
 .cptForm .dropDown > button.active::after {
 	transform: translateY(-50%) rotate(180deg);
 }
+.cptForm .dropDown.error {
+	border: 2px solid var(--snd3);
+}
+.cptForm .dropDown.error + .ico {
+	position: relative;
+	display: inline-block;
+	padding-left: 23px;
+	font-size: 14px;
+	color: var(--snd3);
+	font-weight: 400;
+	margin-top: 8px;
+}
+.cptForm .dropDown.error + .ico::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: url(../../common/images/common/ico_error.svg) 50% 50% no-repeat;
+}
 .cptForm .dropDown > div {
 	display: none;
 	position: absolute;
