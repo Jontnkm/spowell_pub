@@ -7386,11 +7386,11 @@ label {
 	.cptMember {
 		width: calc(100% - 40px);
 		max-width: 100%;
-		padding: 40px;
+		padding: 40px 10px;
 	}
 	.cptMember.ty01 {
 		max-width: 100%;
-		padding: 40px;
+		padding: 40px 10px;
 	}
 }
 .cptMember-process {
@@ -8926,6 +8926,7 @@ label {
 	color: var(--tbg1);
 	font-weight: 400;
 	line-height: 1.5;
+	text-align: center;
 }
 
 /*박문영 css*/

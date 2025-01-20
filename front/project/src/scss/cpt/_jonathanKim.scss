@@ -7,10 +7,10 @@
     }
     
     @include media ('mobile') { 
-        width:calc(100% - 40px); max-width:100%; padding: 40px; 
+        width:calc(100% - 40px); max-width:100%; padding: 40px 10px; 
 
         &.ty01 {
-            max-width:100%; padding:40px;
+            max-width:100%; padding:40px 10px;
         }   
     }
 
@@ -965,7 +965,7 @@
         }
 
         span {
-            font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5;
+            font-size:16px; color:var(--tbg1); font-weight:400; line-height:1.5; text-align:center;
         }
     }
 }
