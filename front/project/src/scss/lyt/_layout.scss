@@ -108,7 +108,7 @@
     //알럿창
     &.typeAlert {
         .popupBox {
-            max-height: 95%; border-radius: 20px; padding:30px;
+            max-height: 85%; border-radius: 20px; padding:30px;
             @supports (-webkit-touch-callout: none) {
                 max-height: 80%;
             }
@@ -144,7 +144,7 @@
     
     &.type01 {
         .popupBox {
-            max-height: 95%; border-radius: 20px; padding:30px 40px;
+            max-height: 85%; border-radius: 20px; padding:30px 40px; margin-top:-50px;
             @supports (-webkit-touch-callout: none) {
                 max-height: 80%; margin-top:-100px;
             }
@@ -220,7 +220,7 @@
     &.siteMap {
         .popupDim {background:rgba(224, 234, 248, 0.9); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);}
         .popupBox{
-            max-width:1280px; max-height: 95%; overflow-y:scroll;
+            max-width:1280px; max-height: 85%; overflow-y:scroll;
             @supports (-webkit-touch-callout: none) {
                 max-height: 80%;
             }

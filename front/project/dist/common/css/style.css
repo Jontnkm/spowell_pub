@@ -3266,7 +3266,7 @@ label {
 	}
 }
 .modPopup.typeAlert .popupBox {
-	max-height: 95%;
+	max-height: 85%;
 	border-radius: 20px;
 	padding: 30px;
 }
@@ -3341,9 +3341,10 @@ label {
 	max-width: 340px;
 }
 .modPopup.type01 .popupBox {
-	max-height: 95%;
+	max-height: 85%;
 	border-radius: 20px;
 	padding: 30px 40px;
+	margin-top: -50px;
 }
 @supports (-webkit-touch-callout: none) {
 	.modPopup.type01 .popupBox {
@@ -3472,7 +3473,7 @@ label {
 }
 .modPopup.siteMap .popupBox {
 	max-width: 1280px;
-	max-height: 95%;
+	max-height: 85%;
 	overflow-y: scroll;
 }
 @supports (-webkit-touch-callout: none) {
