@@ -3266,9 +3266,14 @@ label {
 	}
 }
 .modPopup.typeAlert .popupBox {
-	max-height: 80%;
+	max-height: 95%;
 	border-radius: 20px;
 	padding: 30px;
+}
+@supports (-webkit-touch-callout: none) {
+	.modPopup.typeAlert .popupBox {
+		max-height: 80%;
+	}
 }
 .modPopup.typeAlert .popupBox::before {
 	border-radius: 20px;
@@ -3336,12 +3341,13 @@ label {
 	max-width: 340px;
 }
 .modPopup.type01 .popupBox {
-	max-height: 80%;
+	max-height: 95%;
 	border-radius: 20px;
 	padding: 30px 40px;
 }
 @supports (-webkit-touch-callout: none) {
 	.modPopup.type01 .popupBox {
+		max-height: 80%;
 		margin-top: -100px;
 	}
 }
@@ -3466,8 +3472,13 @@ label {
 }
 .modPopup.siteMap .popupBox {
 	max-width: 1280px;
-	max-height: 80%;
+	max-height: 95%;
 	overflow-y: scroll;
+}
+@supports (-webkit-touch-callout: none) {
+	.modPopup.siteMap .popupBox {
+		max-height: 80%;
+	}
 }
 .modPopup.siteMap .popupBox::-webkit-scrollbar {
 	display: none;
