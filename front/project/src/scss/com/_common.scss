@@ -1512,7 +1512,7 @@
                         > span {text-align:left;}
                     }
                     .mTit {
-                        display:inline-block; width:70px; margin-right:16px; font-size:14px; color:var(--tbg1); font-weight:500; line-height:1.5; word-break:keep-all;
+                        display:inline-block; width:auto; min-width:70px; margin-right:16px; font-size:14px; color:var(--tbg1); font-weight:500; line-height:1.5; word-break:keep-all;
                     }
                     &:last-of-type {margin-bottom:0;}
                     &.badge {

@@ -2588,7 +2588,8 @@ label {
 	}
 	.cptTable table.tbInfo td .mTit {
 		display: inline-block;
-		width: 70px;
+		width: auto;
+		min-width: 70px;
 		margin-right: 16px;
 		font-size: 14px;
 		color: var(--tbg1);
