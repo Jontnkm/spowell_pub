@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
+            allowTouchMove: false,
         },
         pagination: {
             el: ".swiper-pagination1",
