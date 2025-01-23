@@ -2548,6 +2548,11 @@ label {
 		line-height: 22px;
 		height: 22px;
 		margin-bottom: 20px;
+		width: max-content;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.cptTable table.tbInfo td > .download:last-of-type {
 		margin-bottom: 0;
@@ -9450,13 +9455,27 @@ label {
 	font-size: 18px;
 	font-weight: 700;
 }
-.cptAbout .aboutLawArea .aboutLawList > li .comButton {
+.cptAbout .aboutLawArea .aboutLawList > li .lawBtnArea {
+	display: flex;
 	flex-direction: column;
 	margin-top: 24px;
 	gap: 8px;
 }
-.cptAbout .aboutLawArea .aboutLawList > li .comButton .btn {
+.cptAbout .aboutLawArea .aboutLawList > li .lawBtnArea > a {
+	display: block;
 	width: 100%;
+	font-size: 14px;
+	color: var(--bg3);
+	font-weight: 700;
+	line-height: 32px;
+}
+.cptAbout .aboutLawArea .aboutLawList > li .lawBtnArea > a.showLaw {
+	background: var(--prm1);
+	border-radius: 90px;
+}
+.cptAbout .aboutLawArea .aboutLawList > li .lawBtnArea > a.downloadBtn {
+	background: var(--prm3);
+	border-radius: 90px;
 }
 @media screen and (max-width: 1160px) {
 	.cptAbout .explainArea {

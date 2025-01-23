@@ -1,3 +1,6 @@
+<%
+    var url = locals.url ? locals.url : '../../';
+%>
 <!-- Header -->
 <%- include('../ejs/top.ejs', {
     title: "체육인복지지원",
@@ -46,30 +49,50 @@
                                 <ul class="aboutLawList">
                                     <li>
                                         <h6>체육인<br>복지법</h6>
-                                        <div class="comButton">
-                                            <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
-                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button>
+                                        <div class="lawBtnArea"><!-- 2025.01.23 클래스명 변경 -->
+                                            <!-- 2025.01.23 추가 -->
+                                            <a href="https://www.law.go.kr/법령/체육인 복지법" target="_blank" title="새창 열림" class="showLaw">법령보기</a>
+                                            <a href="<%= url %>common/file/체육인_복지법.pdf" download class="downloadBtn">다운로드</a>
+                                            
+                                            <!-- 2025.01.23 주석처리 (태그 타입 변경) -->
+                                            <!-- <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
+                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button> -->
                                         </div>
                                     </li>
                                     <li>
                                         <h6>체육인 복지법<br>시행령</h6>
-                                        <div class="comButton">
-                                            <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
-                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button>
+                                        <div class="lawBtnArea"><!-- 2025.01.23 클래스명 변경 -->
+                                            <!-- 2025.01.23 추가 -->
+                                            <a href="https://www.law.go.kr/법령/체육인 복지법 시행령" target="_blank" title="새창 열림" class="showLaw">법령보기</a>
+                                            <a href="<%= url %>common/file/체육인_복지법_시행령.pdf" download class="downloadBtn">다운로드</a>
+
+                                            <!-- 2025.01.23 주석처리 (태그 타입 변경) -->
+                                            <!-- <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
+                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button> -->
                                         </div>
                                     </li>
                                     <li>
                                         <h6>체육인 복지법<br>시행규칙</h6>
-                                        <div class="comButton">
-                                            <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
-                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button>
+                                        <div class="lawBtnArea"><!-- 2025.01.23 클래스명 변경 -->
+                                            <!-- 2025.01.23 추가 -->
+                                            <a href="https://www.law.go.kr/법령/체육인 복지법 시행규칙" target="_blank" title="새창 열림" class="showLaw">법령보기</a>
+                                            <a href="<%= url %>common/file/체육인_복지법_시행규칙.pdf" download class="downloadBtn">다운로드</a>
+
+                                            <!-- 2025.01.23 주석처리 (태그 타입 변경) -->
+                                            <!-- <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
+                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button> -->
                                         </div>
                                     </li>
                                     <li>
                                         <h6>체육인 복지<br>지원사업 시행지침</h6>
-                                        <div class="comButton">
-                                            <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
-                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button>
+                                        <div class="lawBtnArea"><!-- 2025.01.23 클래스명 변경 -->
+                                            <!-- 2025.01.23 추가 -->
+                                            <a href="https://www.law.go.kr/행정규칙/체육인 복지 지원사업 시행지침" target="_blank" title="새창 열림" class="showLaw">법령보기</a>
+                                            <a href="<%= url %>common/file/체육인_복지_지원사업_시행지침.pdf" download class="downloadBtn">다운로드</a>
+
+                                            <!-- 2025.01.23 주석처리 (태그 타입 변경) -->
+                                            <!-- <button class="btn h32 f-b" title="국가법령정보센터 새창 열림">법령보기</button>
+                                            <button class="btn h32 f-dg" title="체육인 복지법 파일 다운로드">다운로드</button> -->
                                         </div>
                                     </li>
                                 </ul>

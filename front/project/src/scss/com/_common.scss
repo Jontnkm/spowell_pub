@@ -1490,7 +1490,7 @@
                     }
 
                     @include media ('mobile'){
-                        line-height:22px; height:22px; margin-bottom:20px;
+                        line-height:22px; height:22px; margin-bottom:20px; width:max-content; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
 
                         &:last-of-type {
                             margin-bottom:0;

@@ -192,9 +192,20 @@
                 &:nth-child(4):before{background:url(../../common/images/sub/about/img_about_li_04.svg) no-repeat center/contain;}
 
                 h6{line-height:25px; font-size:18px; font-weight:700;}
-                .comButton{
-                    flex-direction: column; margin-top:24px; gap:8px;
-                    .btn{width:100%;}
+                .lawBtnArea {
+                    display:flex; flex-direction: column; margin-top:24px; gap:8px;
+
+                    > a {
+                        display:block; width:100%; font-size:14px; color:var(--bg3); font-weight:700; line-height:32px;
+
+                        &.showLaw {
+                            background:var(--prm1); border-radius:90px;
+                        }
+
+                        &.downloadBtn {
+                            background:var(--prm3); border-radius:90px;
+                        }
+                    }
                 }
             }
         }

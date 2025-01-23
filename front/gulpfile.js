@@ -34,6 +34,14 @@ function imageCopy(cb){
     cb();
 }
 
+//file 폴더 복사
+function imageCopy(cb){
+    console.log("file 속 파일을 복사합니다.");
+    return src(['./project/src/common/file/**/*'])
+        .pipe(dest('./project/dist/common/file'));
+    cb();
+}
+
 //guide 파일 복사//guide 폴더 복사
 function guideCopy(cb){
     console.log("guide 파일을 복사합니다.");
@@ -50,9 +58,6 @@ function compileEjs(cb){
         .pipe(dest('./project/dist/html'));
     cb();
 }
-
-
-
 
 //scss 적용
 var scssOptions = {
