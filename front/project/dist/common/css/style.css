@@ -4900,10 +4900,12 @@ label {
 	padding: 40px;
 	background: var(--bg3);
 	border-radius: 30px;
+	min-height: 328px;
+	position: relative;
 }
 @media screen and (max-width: 767px) {
 	.mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide {
-		min-height: 290px;
+		min-height: 328px;
 	}
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .flag {
@@ -4930,13 +4932,17 @@ label {
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .flag.type04 {
 	background: #007C8A;
 }
+.mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .flag.type05 {
+	background: var(--prm3);
+}
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .title {
 	display: block;
-	font-size: 24px;
+	font-size: 22px;
 	color: var(--t1);
 	font-weight: 800;
 	line-height: 1.4;
 	margin: 14px 0 6px;
+	letter-spacing: -1.6px;
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .desc {
 	display: block;
@@ -4948,7 +4954,9 @@ label {
 	margin-bottom: 30px;
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .ammount {
-	display: block;
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
 	font-size: 16px;
 	color: var(--t1);
 	font-weight: 500;
@@ -4956,7 +4964,7 @@ label {
 	text-align: right;
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide .ammount > span {
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 700;
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide > a {
@@ -4976,6 +4984,8 @@ label {
 }
 .mainCont02 > .supportSlide .swiper-wrapper > .swiper-slide:hover .ammount {
 	color: var(--prm1);
+	bottom: 38px;
+	right: 38px;
 }
 @media screen and (max-width: 1023px) {
 	.mainCont02 > .supportSlide > .swiper-button {
