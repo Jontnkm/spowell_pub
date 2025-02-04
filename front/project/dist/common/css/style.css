@@ -2958,8 +2958,6 @@ label {
 	height: 130px;
 	position: relative;
 	border-radius: 16px;
-	background: var(--prm2);
-	padding: 18px 14px;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -6512,6 +6510,165 @@ label {
 	}
 }
 
+/*2025.02.03 팝업 추가*/
+.mainPopDim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.mainPop {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--bg3);
+	width: 590px;
+	z-index: 99999;
+	box-shadow: 3px 8px 36px 0px rgba(37, 47, 62, 0.1);
+	border-radius: 20px;
+	overflow: hidden;
+}
+.mainPop .inner.txtTy {
+	padding: 30px 30px 24px 30px;
+}
+.mainPop .inner.txtTy > .contArea {
+	width: 100%;
+	position: relative;
+}
+.mainPop .inner.txtTy > .contArea > div .titleArea {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.mainPop .inner.txtTy > .contArea > div .titleArea > .title {
+	font-size: 20px;
+	color: var(--t1);
+	font-weight: 700;
+}
+.mainPop .inner.txtTy > .contArea > div .titleArea > a {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+.mainPop .inner.txtTy > .contArea > div .titleArea > a::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: url(../../common/images/common/mainPopCls.svg) 50% 50% no-repeat;
+}
+.mainPop .inner.txtTy > .contArea > div.textType {
+	margin-bottom: 20px;
+}
+.mainPop .inner.txtTy > .contArea > div.textType .textContBox {
+	padding: 24px 20px;
+	position: relative;
+	width: 100%;
+	border: 1px solid var(--lbg1);
+	border-radius: 12px;
+}
+.mainPop .inner.txtTy > .contArea > div.textType .textContBox .txtInner {
+	max-height: 240px;
+	overflow-y: scroll;
+}
+.mainPop .inner.txtTy > .contArea > div.textType .textContBox .txtInner::-webkit-scrollbar {
+	width: 6px;
+	background: var(--bg2);
+}
+.mainPop .inner.txtTy > .contArea > div.textType .textContBox .txtInner::-webkit-scrollbar-thumb {
+	background: var(--prm1);
+	border-radius: 8px;
+}
+.mainPop .inner.txtTy > .contArea > div.textType .textContBox .txtInner p {
+	padding-right: 20px;
+	font-size: 16px;
+	color: var(--t1);
+	font-weight: 500;
+	line-height: 32px;
+	letter-spacing: -0.32px;
+}
+.mainPop .inner.imgTy > .contArea {
+	width: 100%;
+	position: relative;
+}
+.mainPop .inner.imgTy > .contArea > div .titleArea {
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.mainPop .inner.imgTy > .contArea > div .titleArea > a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+}
+.mainPop .inner.imgTy > .contArea > div .titleArea > a::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: url(../../common/images/common/mainPopCls02.svg) 50% 50% no-repeat;
+}
+.mainPop .inner.imgTy > .contArea > div.imgType {
+	margin-bottom: 6px;
+}
+.mainPop .inner.imgTy > .contArea > div.imgType .imgBox {
+	width: 100%;
+	height: 368px;
+	overflow: hidden;
+}
+.mainPop .inner.imgTy > .contArea > div.imgType .imgBox img {
+	width: 100%;
+}
+.mainPop .inner.imgTy > .btnArea {
+	padding: 0 30px 6px;
+}
+.mainPop .inner.imgTy > .btnArea .right > a {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 25px;
+	font-size: 14px;
+}
+.mainPop .inner .btnArea {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.mainPop .inner .btnArea .right > a {
+	display: flex;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 16px;
+	color: var(--bg3);
+	font-weight: 600;
+	background: var(--prm3);
+	border-radius: 76px;
+	padding: 0 40px;
+}
+
 /* 메인 콘텐츠 */
 /*========================================================================================*/
 /*=====================================FOOTER=============================================*/
@@ -8938,6 +9095,9 @@ label {
 	position: relative;
 	padding-top: 140px;
 	text-align: center;
+}
+.memberTop > img {
+	display: inline;
 }
 @media screen and (max-width: 767px) {
 	.memberTop {
