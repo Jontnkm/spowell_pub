@@ -6519,9 +6519,11 @@ label {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 999;
+	display: none;
 }
 
 .mainPop {
+	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -6532,6 +6534,11 @@ label {
 	box-shadow: 3px 8px 36px 0px rgba(37, 47, 62, 0.1);
 	border-radius: 20px;
 	overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+	.mainPop {
+		width: 93.75%;
+	}
 }
 .mainPop .inner.txtTy {
 	padding: 30px 30px 24px 30px;
@@ -6636,8 +6643,18 @@ label {
 	height: 368px;
 	overflow: hidden;
 }
+@media screen and (max-width: 1023px) {
+	.mainPop .inner.imgTy > .contArea > div.imgType .imgBox {
+		height: auto;
+	}
+}
 .mainPop .inner.imgTy > .contArea > div.imgType .imgBox img {
 	width: 100%;
+}
+@media screen and (max-width: 1023px) {
+	.mainPop .inner.imgTy > .contArea > div.imgType .imgBox img {
+		width: -webkit-fill-available;
+	}
 }
 .mainPop .inner.imgTy > .btnArea {
 	padding: 0 30px 6px;
@@ -7937,16 +7954,19 @@ label {
 	font-weight: 400;
 	line-height: 1.5;
 }
-@media (hover: hover) {
+.cptMember .authBox > a:hover {
+	border: 3px solid var(--snd1);
+	box-sizing: border-box;
+	padding: 37px 118px 37px 38px;
+}
+@media screen and (max-width: 767px) {
 	.cptMember .authBox > a:hover {
-		border: 3px solid var(--snd1);
-		box-sizing: border-box;
-		padding: 37px 118px 37px 38px;
+		padding: 17px;
 	}
-	.cptMember .authBox > a:hover::after {
-		bottom: 37px;
-		right: 38px;
-	}
+}
+.cptMember .authBox > a:hover::after {
+	bottom: 37px;
+	right: 38px;
 }
 .cptMember .authBox .phone::after {
 	content: "";
@@ -8886,6 +8906,11 @@ label {
 	text-align: center;
 	margin-bottom: 30px;
 }
+@media screen and (max-width: 767px) {
+	.popAuthBox > .desc {
+		word-break: keep-all;
+	}
+}
 .popAuthBox > .authOption {
 	width: 100%;
 	position: relative;
@@ -9001,6 +9026,104 @@ label {
 }
 .popAuthBox .idResult > ul > li {
 	width: max-content;
+}
+.popAuthBox .authNumbBox {
+	border: 1px solid var(--lbg1);
+	border-radius: 20px;
+	padding: 40px 36px;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox {
+		padding: 40px 36px 88px 36px;
+	}
+}
+.popAuthBox .authNumbBox > .inner {
+	position: relative;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox > .inner {
+		padding-top: 30px;
+	}
+}
+.popAuthBox .authNumbBox > .inner span.ico {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox > .inner span.ico br {
+		display: inline-block;
+	}
+}
+.popAuthBox .authNumbBox > .inner span.ico > a {
+	display: inline;
+	color: inherit;
+	font-weight: bold;
+	width: max-content;
+	text-align: center;
+	border: 1px solid var(--snd3);
+	border-radius: 8px;
+	padding: 8px 14px;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox > .inner span.ico > a {
+		position: absolute;
+		bottom: -48px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox > .inner span.ico {
+		display: block;
+	}
+}
+.popAuthBox .authNumbBox > .inner > .time {
+	position: absolute;
+	top: 14px;
+	right: 20px;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .authNumbBox > .inner > .time {
+		top: 0;
+		right: 0;
+	}
+}
+.popAuthBox .authNumbBox > .inner > .time > span {
+	font-size: 16px;
+	color: var(--t1);
+	font-weight: 500;
+	line-height: 1.4;
+	letter-spacing: -0.38px;
+}
+.popAuthBox .infoTxtArea {
+	width: 100%;
+	position: relative;
+	margin-top: 8px;
+}
+.popAuthBox .infoTxtArea > p {
+	font-size: 14px;
+	color: var(--t1);
+	font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .infoTxtArea > p {
+		text-align: center;
+	}
+}
+.popAuthBox .infoTxtArea > p > a {
+	display: inline;
+	text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+	.popAuthBox .infoTxtArea > p > a {
+		display: block;
+		width: max-content;
+		margin: 4px auto 0;
+		text-align: center;
+	}
 }
 
 /*에러페이지*/

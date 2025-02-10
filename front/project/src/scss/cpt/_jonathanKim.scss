@@ -219,12 +219,14 @@
                 font-size:16px; color:var(--prm3); font-weight:400;line-height:1.5;
             }
 
-            @media (hover: hover) {   
-                &:hover {
-                    border:3px solid var(--snd1); box-sizing: border-box; padding:37px 118px 37px 38px;
-                    &::after {
-                        bottom:37px; right:38px;
-                    }
+            
+            &:hover {
+                border:3px solid var(--snd1); box-sizing: border-box; padding:37px 118px 37px 38px;
+                @include media ('mobile') {
+                    padding:17px;
+                }
+                &::after {
+                    bottom:37px; right:38px;
                 }
             }
         }
@@ -795,6 +797,9 @@
 
     > .desc {
         font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; margin-bottom:30px;
+        @include media ('mobile') {
+            word-break:keep-all;
+        }
     }
 
     > .authOption {
@@ -878,6 +883,70 @@
 
             > li {
                 width:max-content;
+            }
+        }
+    }
+
+    .authNumbBox {
+        border:1px solid var(--lbg1); border-radius:20px; padding: 40px 36px;
+        @include media ('mobile') {
+            padding:40px 36px 88px 36px;
+        }
+        > .inner {
+            position:relative;
+            @include media('mobile') {
+                padding-top:30px;
+            }
+
+            span.ico {
+                position:relative; display:flex; flex-flow: row nowrap; align-items: center ;justify-content: space-between;
+                br {
+                    // display:none;
+
+                    @include media ('mobile') {
+                        display:inline-block;
+                    }
+                }
+
+                > a {
+                    display:inline; color:inherit; font-weight:bold; width:max-content; text-align:center; border:1px solid var(--snd3); border-radius:8px; padding: 8px 14px;
+
+                    @include media ('mobile') {
+                        position:absolute; bottom:-48px; left:50%; transform:translateX(-50%);
+                    }
+                }
+                @include media ('mobile') {
+                    display:block;
+                }
+            }
+
+            > .time {
+                position:absolute; top:14px; right:20px; 
+                @include media('mobile'){
+                    top:0; right:0;
+                }
+
+                > span {
+                    font-size:16px; color:var(--t1); font-weight:500; line-height:1.4; letter-spacing:-0.38px;
+                }
+            }
+        }
+    }
+
+    .infoTxtArea {
+        width:100%; position:relative; margin-top:8px;
+
+        > p {
+            font-size:14px; color:var(--t1); font-weight:500;
+            @include media ('mobile') {
+                text-align:center;
+            }
+            > a {
+                display:inline;  text-decoration:underline;
+
+                @include media ('mobile') {
+                    display:block; width:max-content; margin:4px auto 0; text-align:center;
+                }
             }
         }
     }

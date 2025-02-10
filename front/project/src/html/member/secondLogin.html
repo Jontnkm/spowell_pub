@@ -1,0 +1,101 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+        <!-- 상단영역 -->
+        <div class="memberLayoutTop">
+            <!-- Top -->
+            <%- include('../ejs/memberTop.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <button type="button" onclick="popOpen('clause01', event)" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">2단계인증 팝업 열기</button> <!-- 2025.01.03 팝업오픈 이벤트 객체 추가 -->
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+         <!-- 하단영역 -->
+        <div class="memberLayoutBot">
+            <!-- Footer -->
+            <%- include('../ejs/memberBot.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit"></div> -->
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="popAuthBox">
+                <p class="title">2단계 인증</p>
+                <p class="desc">
+                    안전한 계정 보안을 위해 2단계 인증 후 로그인이 완료됩니다.<br>
+                    휴대폰으로 전송된 6자리 인증번호를 입력해 주세요.
+                </p>
+                <div class="authNumbBox">
+                    <div class="inner">
+                        <div class="cptForm">
+                            <div class="ipt">
+                                <input type="text" title="인증번호 입력창" placeholder="인증번호를 입력해주세요." class="error"/>
+                                <span class="ico">
+                                    <span>
+                                        인증번호 유효시간이 만료되었습니다.<br>인증번호 재발송 후 다시 입력해 주세요.
+                                    </span>
+                                    <a href="javascript:void(0)">인증번호 재발송</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <span>인증유효시간</span>
+                            <span>
+                                <em class="min">3</em>:<em class="sec">00</em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoTxtArea">
+                    <p>
+                        휴대폰 번호가 변경된 경우 본인인증 후 로그인할 수 있습니다.
+                        <a href="javascript:void(0);">(본인인증 바로가기)</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="popBtnArea">
+            <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 
