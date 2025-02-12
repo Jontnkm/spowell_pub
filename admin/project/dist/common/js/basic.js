@@ -384,6 +384,7 @@ const StickyOnTable = {
         for(let i=0,m=arr.length;i<m;i++){
             const td = arr[i];
             if(!td.__fix_inited){continue;}
+            console.log(td)
             delete td.__fix_inited;
             td.setAttribute('data-row-idx',Math.floor(i/cellCount))
             td.setAttribute('data-cell-idx',i%cellCount)
@@ -458,10 +459,9 @@ const StickyOnTable = {
 
 
 }
-$(function(){
+document.addEventListener("DOMContentLoaded", function () {
     StickyOnTable.apply(document.querySelector("body")) //일부로 에러냄
     document.querySelectorAll('.fix').forEach((item, i) => {
         StickyOnTable.apply(item);
     });
-
 })
