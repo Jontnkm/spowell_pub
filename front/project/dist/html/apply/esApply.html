@@ -54,13 +54,13 @@
 			<div class="siteOption">
 				<div class="member">
 					<!-- 로그인 전 -->
-					<div class="beforeLogin">
+					<!-- <div class="beforeLogin">
 						<a href="../../html/member/login.html" class="login">로그인</a>
 						<a href="../../html/member/join.html" class="join">체육인 회원가입</a>
-					</div>
+					</div> -->
 
 					<!-- 로그인 후 -->
-					<!-- <div class="afterLogin">
+					<div class="afterLogin">
 						<div class="info">
 							<span>홍길동</span>님 (<span>국가대표선수</span>)
 						</div>
@@ -69,7 +69,7 @@
 						</div>
 						<a  href="javascript:void(0)" class="logout">연장</a>
 						<a  href="javascript:void(0)" class="logout">로그아웃</a>
-					</div> -->
+					</div>
 				</div>
 				<div class="ratio">
 					<a  href="javascript:void(0)" class="minus"><span class="hidden">축소</span></a>
@@ -132,7 +132,7 @@
 													<li><a href="../../html/apply/spoScollar.html">체육장학금</a></li>
 													<li><a href="../../html/apply/prospectScollar.html">스포츠꿈나무 특기장려금</a></li>
 													<li><a href="../../html/apply/elderSupport.html">원로체육인지원</a></li>
-													<li><a href="../../html/apply/rebuildSupport.html">스포츠클럽 창업지원</a></li>
+													<li><a href="../../html/apply/rebuildSupport.html">체육인 창업지원</a></li>
 													<li><a href="../../html/apply/coachEducate.html">국내외 지도자 현장연수</a></li>
 													<li><a href="../../html/apply/employmentSupport.html">인턴십 취업지원</a></li>
 													<li><a href="../../html/apply/merit.html">대한민국 체육유공자 보상</a></li>
@@ -240,11 +240,15 @@
 						<ul>
 							<li>
 								<a href="../../html/member/login.html" class="login"><span>로그인</span></a>
-								<a href="../../html/mypage/index.html" class="mypage" style="display: none;"><span>마이페이지</span></a>
 							</li>
 							<li>
 								<a href="../../html/member/join.html" class="join"><span>회원가입</span></a>
-								<a href="javascript:void(0)" class="logout" style="display: none;"><span>로그아웃</span></a>
+							</li>
+							<li style="display: none;">
+								<a href="../../html/mypage/index.html" class="mypage"><span>마이페이지</span></a>
+							</li>
+							<li style="display: none;">
+								<a href="javascript:void(0)" class="logout"><span>로그아웃</span></a>
 							</li>
 						</ul>
 					</div>
@@ -543,7 +547,7 @@
                             <h4 class="depth3Name"><a href="../../html/apply/elderSupport.html" class="depth03Item">원로체육인지원</a></h4>
                         </li>
                         <li class="depth3Menu">
-                            <h4 class="depth3Name"><a href="../../html/apply/rebuildSupport.html" class="depth03Item">스포츠클럽 창업지원</a></h4>
+                            <h4 class="depth3Name"><a href="../../html/apply/rebuildSupport.html" class="depth03Item">체육인 창업지원</a></h4>
                         </li>
                         <li class="depth3Menu">
                             <h4 class="depth3Name"><a href="../../html/apply/coachEducate.html" class="depth03Item">국내외 지도자 현장연수</a></h4>
@@ -701,6 +705,52 @@
                                                 양궁
                                             </td>
                                         </tr>
+                                        <!-- 2025.02.13 추가 -->
+                                        <tr>
+                                            <th scope="row">휴대폰번호</th>
+                                            <td class="left">010-0000-0000</td>
+                                            <th scope="row">이메일</th>
+                                            <td class="left">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid minAuto">
+                                                        <div class="ipt">
+                                                            <input type="text" title="이메일 아이디 입력" placeholder="아이디">
+                                                        </div>
+                                                        <div class="deco">@</div>
+                                                        <div class="ipt">
+                                                            <input type="text" title="이메일 나머지 주소 입력" placeholder="naver.com">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="combine">
+                                            <th scope="row">주소</th>
+                                            <td class="left" colspan="3">
+                                                <div class="cptForm">
+                                                    <div class="frmGroup alingMid minAuto">
+                                                        <div class="ipt w150">
+                                                            <input type="text" title="우편번호" placeholder="우편번호">
+                                                        </div>
+                                                        <div class="comButton alignL">
+                                                            <button type="button" class="btn h36 l-g">주소검색</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="frmGroup alingMid minAuto">
+                                                        <div class="ipt">
+                                                            <input type="text" title="기본주소" placeholder="기본주소">
+                                                        </div>
+                                                        <span class="simpleTxt">기본주소</span>
+                                                    </div>
+                                                    <div class="frmGroup alingMid minAuto">
+                                                        <div class="ipt">
+                                                            <input type="text" title="상세주소" placeholder="상세주소">
+                                                        </div>
+                                                        <span class="simpleTxt">상세주소</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -726,31 +776,45 @@
                                     </thead>
                                     <tbody>
                                         <tr class="combine">
-                                            <th scope="row">항목1</th>
+                                            <th scope="row">신청사업</th>
                                             <td class="left">
-                                                <div class="cptForm">
-                                                    <div class="ipt">
-                                                        <input type="text" title="항목1 입력창" placeholder="" />
+                                                <div class="cptForm w155">
+                                                    <div class="dropDown">
+                                                        <button type="button" class="" title="열기">선택</button>
+                                                        <div class="dropDownBox">
+                                                            <ul class="ddCont">
+                                                                <li><a href="#none" class="selected">창업씨앗(창업교육)</a></li>
+                                                                <li><a href="#none">창업새싹(창업보육)</a></li>
+                                                                <li><a href="#none">창업열매(창업점검)</a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="combine">
-                                            <th scope="row">항목2</th>
+                                            <th scope="row">기타 지원금 수혜여부</th>
                                             <td class="left">
                                                 <div class="cptForm">
-                                                    <div class="ipt">
-                                                        <input type="text" title="항목2 입력창" placeholder="" />
+                                                    <div class="rowType gap20">
+                                                        <div class="frmRdo ty02">
+                                                            <input type="radio" id="sprtRcvfvrYn_Y" name="sprtRcvfvrYn"/>
+                                                            <label for="sprtRcvfvrYn_Y">해당</label>
+                                                        </div>
+                                                        <div class="frmRdo ty02">
+                                                            <input type="radio" id="sprtRcvfvrYn_N" name="sprtRcvfvrYn" checked/>
+                                                            <label for="sprtRcvfvrYn_N">미해당</label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="combine">
-                                            <th scope="row">항목3</th>
+                                            <th scope="row">지원동기</th>
                                             <td class="left">
                                                 <div class="cptForm">
                                                     <div class="ipt">
-                                                        <input type="text" title="항목3 입력창" placeholder="" />
+                                                        <input type="text" name="aplySync" id="aplySync" title="지원동기 입력창" maxlength="166" placeholder="" />
                                                     </div>
                                                 </div>
                                             </td>
@@ -771,22 +835,22 @@
 
                             <div class="cptTable">
                                 <table class="tbInfo">
-                                    <caption>제출서류 구분, 첨부파일, 삭제에 관한 표</caption>
+                                    <caption>첨부파일, 삭제에 관한 표</caption>
                                     <colgroup>
-                                        <col style="width:200px;">
+                                        <!-- <col style="width:200px;"> -->
                                         <col style="width:auto;">
-                                        <col style="width:150px;">
+                                        <col style="width:200px;">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col">제출서류 구분</th>
+                                            <!-- <th scope="col">제출서류 구분</th> -->
                                             <th scope="col">첨부파일</th>
                                             <th scope="col">삭제</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
+                                            <!-- <td>
                                                 <div class="cptForm">
                                                     <div class="dropDown w155">
                                                         <button type="button" class="" title="열기">제출서류1</button>
@@ -801,13 +865,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td class="left">
                                                 <div class="fileArea on">
                                                     <div class="before">
                                                         <!-- 2025.01.06 id,for 화면 고유값으로 수정 -->
-                                                        <label for="attFile1" class="fileBtn">파일선택</label>
-                                                        <input type="file" id="attFile1" class="fileIpt">
+                                                        <label for="attFile1" class="fileBtn">파일선택</label> 
+                                                        <input type="file" id="attFile1" class="fileIpt"> <!-- 2025.01.21 클래스명 수정 -->
                                                     </div>
                                                     <div class="after">
                                                         <a href="#none" class="download">파일명.hwp</a>
@@ -816,11 +880,15 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                
+                                                <span class="comButton">
+                                                    <button type="button" class="btn h36 l-g ico">
+                                                        <span class="txt">삭제</span>
+                                                    </button>
+                                                </span>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                            <!-- <td>
                                                 <div class="cptForm">
                                                     <div class="dropDown w155">
                                                         <button type="button" class="" title="열기">제출서류2</button>
@@ -835,7 +903,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td class="left">
                                                 <div class="fileArea on">
                                                     <div class="before">
@@ -858,7 +926,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                            <!-- <td>
                                                 <div class="cptForm">
                                                     <div class="dropDown w155">
                                                         <button type="button" class="" title="열기">제출서류3</button>
@@ -873,10 +941,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td class="left">
                                                 <div class="fileArea">
                                                     <div class="before">
+                                                        <!-- 2025.01.06 id,for 화면 고유값으로 수정 -->
                                                         <label for="attFile3" class="fileBtn">파일선택</label>
                                                         <input type="file" id="attFile3" class="fileIpt">
                                                     </div>

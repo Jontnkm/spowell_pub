@@ -1,7 +1,7 @@
 /* ---------------------------------------- 기본 레이아웃 ---------------------------------------- */
 
 .lytLayout{
-    width:100%;
+    width:100%; min-height:calc(100vh - 361px);
     /*로그인 및 회원가입 배경 설정*/
     &.member {
         background:var(--bg1);
@@ -196,7 +196,9 @@
                     }
                 }
             }
-
+            .popBank {
+                overflow:visible;
+            }
             .popBtnArea {
                 width: 100%; padding-top: 30px; display: flex; justify-content: center; align-items: center; column-gap: 8px;
                 .popBtn {

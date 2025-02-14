@@ -1,0 +1,102 @@
+<!-- Header -->
+<%- include('../ejs/top.ejs', {
+    title: "체육인복지지원",
+    url: "../../"
+}) %>
+
+<!-- 레이아웃 -->
+<div class="lytLayout member">
+    <div class="layoutArea">
+        <!-- 상단영역 -->
+        <div class="memberLayoutTop">
+            <!-- Top -->
+            <%- include('../ejs/memberTop.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //상단영역 -->
+
+
+        <!-- 중단영역 -->
+        <div class="layoutContainer" id="container">
+            <div class="layoutSubCont">
+                <div class="subContArea">
+                    <!-- 콘텐츠 영역 -->
+                    <div class="layoutCont ">
+                        <button type="button" onclick="popOpen('clause01', event)" style="border:1px solid #dfdfdf; border-radius:5px; line-height:35px; padding:0 20px; text-align:center; font-size:14px; font-weight:bold;">아이핀 인증자 전화번호 입력 팝업 열기</button> <!-- 2025.01.03 팝업오픈 이벤트 객체 추가 -->
+                    </div>
+                    <!-- //콘텐츠 영역 -->
+                </div>
+            </div>
+
+        </div>
+        <!-- //중단영역 -->
+         <!-- 하단영역 -->
+        <div class="memberLayoutBot">
+            <!-- Footer -->
+            <%- include('../ejs/memberBot.ejs', {
+                url: "../../"
+            }) %>
+        </div>
+        <!-- //하단영역 -->
+    </div>
+</div>
+
+<!-- 팝업이 들어오는 영역 -->
+<div class="modPopup type01 popOpen" id="clause01">
+    <div class="popupDim">딤 영역</div>
+    <div class="popupBox lg"><!--2024.09.24 팝업사이즈 표기 필수 sm (작은사이즈), lg(큰사이즈)-->
+        <!-- 팝업 타이틀 -->
+        <div class="popTitArea">
+            <!-- <div class="tit"></div> -->
+            <button class="closeBtn" onclick="popClose('clause01')">팝업 닫기</button>
+        </div>
+
+        <!-- 팝업 컨텐츠 -->
+        <div class="popContArea">
+            <div class="popAuthBox">
+                <p class="title">휴대폰번호 확인</p>
+                <p class="desc">
+                    아이핀으로 본인인증 하신 경우<br>로그인 시 인증번호를 전송 받을 수 있는 휴대폰 번호를 등록해 주세요.
+                </p>
+                <div class="ipinPhoneBox">
+                    <div class="inner">
+                        <div class="cptForm">
+                            <div class="frmGroup">
+                                <div class="dropDown">
+                                    <button type="button" class="" title="열기">010</button>
+                                    <div class="dropDownBox">
+                                        <ul class="ddCont">
+                                            <li><a href="#none">010</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="deco">-</div>
+                                <div class="ipt">
+                                    <input type="text" title="휴대폰번호 가운데 자리" />
+                                </div>
+                                <div class="deco">-</div>
+                                <div class="ipt">
+                                    <input type="text" title="휴대폰번호 마지막 4자리리" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoTxtArea">
+                    <p>
+                        휴대폰 번호 확인 후 다시 로그인 해 주세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="popBtnArea">
+            <button type="button" class="popBtn main" onclick="popClose('clause01')">확인</button>
+        </div>
+    </div>
+</div>
+<!-- Bottom -->
+<%- include('../ejs/bottom.ejs', { }) %>
+
+ 

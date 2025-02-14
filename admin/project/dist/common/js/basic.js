@@ -383,11 +383,12 @@ const StickyOnTable = {
         };
         for(let i=0,m=arr.length;i<m;i++){
             const td = arr[i];
-            if(!td.__fix_inited){continue;}
-            console.log(td)
+            if (!td || !td.__fix_inited) continue;  // 잘못된 인덱스를 건너뛰기
+
             delete td.__fix_inited;
-            td.setAttribute('data-row-idx',Math.floor(i/cellCount))
-            td.setAttribute('data-cell-idx',i%cellCount)
+            td.setAttribute('data-row-idx', Math.floor(i / cellCount));  // 행 인덱스
+            td.setAttribute('data-cell-idx', i % cellCount );  // 열 인덱스
+            console.log("i = " + i + " / cellCount = " + cellCount);
         }
     },
     "applySticky":function(div,conf) {
@@ -407,17 +408,15 @@ const StickyOnTable = {
                 let top = topTd - tableTable.top;
                 td.classList.add('fix-top');
                 td.style.top = top+'px';
-            };
+            }
         }
         let lefts = new Array(conf.cellCount);
         for(let i2=0,m2=conf.left;i2<m2;i2++){
             table.querySelectorAll(':scope td[data-cell-idx="'+i2+'"] , :scope th[data-cell-idx="'+i2+'"]').forEach((td, i) => {
                 const idx = parseInt(td.getAttribute('data-cell-idx'),10);
                 let leftTd = lefts[idx];
-                if(leftTd===undefined){
                     leftTd = td.getBoundingClientRect().left;
                     lefts[idx] = leftTd;
-                }
                 let left = leftTd - tableTable.left;
                 td.classList.add('fix-left');
                 td.style.left = left+'px';

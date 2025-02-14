@@ -273,7 +273,7 @@
         }
         .swiper-wrapper {
             > .swiper-slide {
-                padding:40px; background:var(--bg3); border-radius:30px; min-height:328px; position:relative;
+                padding:40px; background:var(--bg3); border-radius:30px; min-height:328px; position:relative; border:2px solid var(--bg3);
                 @include media ('mobile') {
                     min-height:328px;
                 }
@@ -305,7 +305,7 @@
                 }
 
                 &:hover {
-                    border:2px solid var(--prm1); padding: 38px;
+                    border:2px solid var(--prm1);
 
                     .title {
                         color: var(--prm1);
@@ -317,8 +317,6 @@
 
                     .ammount {
                         color: var(--prm1);
-
-                        bottom:38px; right:38px;
                     }
                 }
             }
@@ -492,7 +490,6 @@
 
                                         > .evtAb {
                                             position:absolute; top:0; left:0; width:100%; height:46px; background:#FFF3DD; border:2px solid var(--snd1); border-radius:10px; padding:12px 14px; z-index:99;
-
                                             > p {
                                                 font-size:16px; color:var(--t1); font-weight:600; letter-spacing:-0.032px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
                                             }
@@ -512,7 +509,7 @@
                                             margin-top:0;
 
                                             > .evtAb {
-                                                position:absolute; top:0; left:0; width:calc(600% + 50px); height:46px; background:var(--prm3); border-radius:10px; padding:12px 20px; border:0;
+                                                position:absolute; top:0; left:0; width:calc(600% + 50px); height:46px; background:var(--prm3); border-radius:10px; padding:12px 20px; border:0; cursor:default !important;
 
                                                 .inner {
                                                     display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:45px;
@@ -1315,7 +1312,7 @@
 
 /*2025.02.03 팝업 추가*/
 .mainPopDim {
-    position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999; display:none;
+    display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;
 }
 
 .mainPop {

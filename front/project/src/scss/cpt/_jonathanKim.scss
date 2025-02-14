@@ -222,11 +222,15 @@
             
             &:hover {
                 border:3px solid var(--snd1); box-sizing: border-box; padding:37px 118px 37px 38px;
-                @include media ('mobile') {
-                    padding:17px;
-                }
                 &::after {
                     bottom:37px; right:38px;
+                }
+                @include media ('mobile') {
+                    padding:18px;
+
+                    &::after {
+                        bottom:18px; right:18px;
+                    }
                 }
             }
         }
@@ -305,9 +309,9 @@
             flex-flow: column; gap:20px;
         }
         > .leftArea {
-            padding-right:40px; border-right:1px solid #eee;
+            padding-right:40px; border-right:1px solid #eee; width:calc(100% - 300px);
             @include media ('mobile') {
-                padding-right:0; border-right:0;
+                padding-right:0; border-right:0; width:100%;
             }
             .comButton {
                 margin-top:30px;
@@ -520,7 +524,11 @@
             }
         }
     }
-
+    .cptTable {
+        & + .cptTable {
+            margin-top:20px;
+        }
+    }
     .mptbTitle {
         font-size:18px; color:var(--t1); font-weight:700; margin-bottom:16px;
         &:not(:first-of-type) {
@@ -928,6 +936,43 @@
 
                 > span {
                     font-size:16px; color:var(--t1); font-weight:500; line-height:1.4; letter-spacing:-0.38px;
+                }
+            }
+        }
+    }
+
+    .ipinPhoneBox {
+        border:1px solid var(--lbg1); border-radius:20px; padding: 40px 36px;
+        @include media ('mobile') {
+            padding: 20px 30px;
+        }
+        > .inner {
+            position:relative;
+
+            .frmGroup {
+                align-items:center !important; justify-content: center;
+                > div {
+                    display:flex; width:160px;
+                    &.deco {
+                        width:max-content;
+                    }
+                    &.ipt {
+                        height:50px !important;
+                        > input {
+                            height:50px !important; line-height:50px !important;
+                        }
+                    }
+
+                    &.dropDown {
+                        @include media ('mobile') {
+                            button {
+                                padding-right:0;
+                                &::after {
+                                    right:0;
+                                }
+                            }   
+                        }
+                    }
                 }
             }
         }

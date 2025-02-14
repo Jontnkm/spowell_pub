@@ -8,6 +8,8 @@
     --basic-red : #b01f1f;
     --basic-dkBlue: #2a2d3e;
     --basic-purple: #263688;
+    --basic-gray: #acacac;
+	--basic-green: #008209;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -21,11 +23,11 @@
 .mT5 {margin-top:5px;}
 .mT10 {margin-top:10px;}
 .mT15 {margin-top:15px;}
-.mT20 {margin-top:20px;}
+.mT20 {margin-top:20px !important;}
 .mT25 {margin-top:25px;}
 .mT30 {margin-top:30px;}
 .mT35 {margin-top:35px;}
-.mT40 {margin-top:40px;}
+.mT40 {margin-top:40px !important;}
 .mT45 {margin-top:45px;}
 .mT50 {margin-top:50px;}
 .mT60 {margin-top:60px;}
@@ -34,7 +36,7 @@
 .mBzero {margin-bottom:0px !important;} /*20230214 각위치별 여백 무효화 css 추가*/
 .mB5 {margin-bottom:5px;}
 .mB10 {margin-bottom:10px;}
-.mB15 {margin-bottom:15px;}
+.mB15 {margin-bottom:15px !important;}
 .mB20 {margin-bottom:20px;}
 .mB25 {margin-bottom:25px;}
 .mB30 {margin-bottom:30px;}
@@ -158,7 +160,7 @@
 .comH3Group h3 {/*font-size:28px; font-weight:500; line-height:1; color:#000;*/}
 
 /* 작은 타이틀 (대부분 팝업용) */
-.comSmTit {width:100%; margin-top:40px; margin-bottom:12px; display:flex; justify-content:space-between; align-items: center;}
+.comSmTit {width:100%; margin-top:40px; margin-bottom:12px; display:flex; justify-content:space-between; align-items: center; min-height:30px;}
 .comSmTit:first-child {margin-top:0;}
 .comSmTit .alignL {display:flex; align-items:end;}
 .comSmTit .alignR {display:flex; align-items:end; width:auto;}
@@ -244,6 +246,7 @@
 .comSideOpt input[type=checkbox] {}
 .comSideOpt input[type=radio] {}
 .comSideOpt select {width:100px; height:30px; padding-left:8px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff url(../images/icon/icon_slt.svg) right center no-repeat;}
+.comSideOpt select.w150 {width:150px;}
 .comSideOpt button.viewBtn {min-width:50px; height:30px; padding:0 7px; font-size:14px; color:#000; border:1px solid #9fa0a0; border-radius:15px; background:#fff;}
 .comSideOpt button.viewBtn.on {color:#fff; border:1px solid var(--basic-color); background:var(--basic-color);}
 
@@ -300,7 +303,7 @@
 /* ---------------------------------------------- 테이블, 그리드 등 그룹상단 ---------------------------------------------- */
 .cptGroupTop {width:100%; margin-top:40px; margin-bottom:13px; position:relative;}
 .cptGroupTop:first-child {margin-top:0;}
-.cptGroupTop .alignL {min-height:30px; display:flex; justify-content:start; align-items:flex-end;}
+.cptGroupTop .alignL {min-height:30px; display:flex; justify-content:start; align-items:center;}
 .cptGroupTop .alignR {position:absolute; bottom:0; right:0;}
 .cptGroupTop .groupTitle {font-size:24px; line-height:30px; font-weight:500; display:inline-block;}
 .cptGroupTop .title {font-size:18px; font-weight:500; color:#000; line-height:26px; margin-right:5px;}
@@ -332,6 +335,7 @@
 .cptGrid .gridTb thead tr:first-child th:last-child {border-radius:0 10px 0 0;}
 .cptGrid .gridTb thead th:last-child {padding-right:20px;}
 .cptGrid .gridTb tbody td {padding:5px 5px; height:48px; font-size:14px; font-weight:400; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#fff; position:relative;}
+.cptGrid .gridTb tbody td.hglt {background:#f1faf9; font-weight:bold;}
 .cptGrid .gridTb tbody td a.boardLink {display:block; width:100%;}
 .cptGrid .gridTb tbody td a.boardLink > span:first-of-type {text-decoration:underline;}
 .cptGrid .gridTb tbody td:first-child {padding-left:20px;}
@@ -343,7 +347,7 @@
 .cptGrid .gridTb tbody tr:last-child td:first-child::after {display:none;}
 .cptGrid .gridTb tbody tr:last-child td:last-child {border-radius:0 0 10px 0;}
 .cptGrid .gridTb tbody tr:last-child td:last-child::after {display:none;}
-.cptGrid .gridTb tfoot td {padding:5px 5px; height:48px; font-size:14px; font-weight:400; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#dadffd; position:relative;}
+.cptGrid .gridTb tfoot td {padding:5px 5px; height:48px; font-size:16px; font-weight:bold; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#dadffd; position:relative;}
 .cptGrid .gridTb tfoot td a.boardLink {display:block; width:100%;}
 .cptGrid .gridTb tfoot td a.boardLink > span:first-of-type {text-decoration:underline;}
 .cptGrid .gridTb tfoot td:first-child {padding-left:20px;}
@@ -360,6 +364,13 @@
 .cptGrid .gridTb .thum {width:100%;}
 .txtBlue {color:var(--basic-color) !important;}
 .txtRed {color:var(--basic-red) !important;}
+.txtGray {
+	color: var(--basic-gray) !important;
+}
+
+.txtGreen {
+	color: var(--basic-green) !important;
+}
 /* 그리드 내부 폼 */
 .cptGrid .frmChoBox.only {width:20px; height:20px; margin:0 auto; display:block; position:relative;}
 .cptGrid .frmChoBox.only .iptChk + .iptLbl {height: 20px; margin: 0; padding-left: 20px; min-height:auto;}
@@ -370,6 +381,7 @@
 
 /* 추가조작 */
 .cptGrid .gridTb tr .left {text-align:left;}
+.cptGrid .gridTb tr .title {cursor:pointer;}
 .cptGrid .gridTb tr .center {text-align:center;}
 .cptGrid .gridTb tr .right {text-align:right;}
 .cptGrid .gridTb tr .top {vertical-align:top;}
@@ -454,6 +466,7 @@
 /* 그리드 내부 폼 */
 /* 추가조작 */
 .cptViewTopArea table tr .left {text-align:left;}
+.cptViewTopArea table tr .title {cursor:pointer;}
 .cptViewTopArea table tr .center {text-align:center;}
 .cptViewTopArea table tr .right {text-align:right;}
 .cptViewTopArea table tr .top {vertical-align:top;}
@@ -470,6 +483,7 @@
 .cptTable .tbWrite td {height:42px; padding:6px 10px; font-size:14px; font-weight:500; color:#000; border-bottom:1px solid rgba(132, 132, 132, 0.2);}
 
 .cptTable .tbView {width:100%;}
+.cptTable .tbView .exc{word-break: keep-all; padding: 0;}
 .cptTable .tbView thead th {height:42px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5; padding:6px 10px;}
 .cptTable .tbView thead th:last-child {border-right:0;}
 .cptTable .tbView tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); line-height:20px; border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
@@ -484,6 +498,7 @@
 
 /* 추가조작 */
 .cptTable table tr .left {text-align:left;}
+.cptTable table tr .title {cursor:pointer;}
 .cptTable table tr .addRtLine {border-right:1px solid rgba(132, 132, 132, 0.2) !important;}
 .cptTable table tr .center {text-align:center;}
 .cptTable table tr .center .frmGroup {justify-content: center;}
@@ -575,7 +590,7 @@
 .modTab .tabMenu > .item.on a:after {content:""; width:100%; height:6px; background:#5a7eff; display:block; position:absolute; left:0; bottom:-1px;}
 .modTab .tabContGroup {}
 .modTab .tabContGroup .tabCont {display:none;}
-.modTab .tabContGroup .tabCont.on {display:block;}
+.modTab .tabContGroup .tabCont.on {display:block; position:relative;}
 
 /*2024.03.21 돌봄 케이스*/
 /* .modTab.dolbom .tabMenu > .item.on a:after {background:#fe794d;} */
@@ -740,14 +755,20 @@ textArea.areaMd {height:150px;}
 /* ------------------------------------------------ 라디오/체크박스 ------------------------------------------------ */
 /* 일반 체크박스/라디오 박스 */
 .frmChoBox {margin-right:30px; display:inline-block; position:relative;}
+.frmChoBox.withDate {width:45%;margin-left:5px;}
 .frmChoBox .iptLbl {min-height:30px; margin-right:10px; padding-top:5px; padding-bottom:5px; word-break:keep-all;}
 .frmChoBox .iptLbl:last-child {margin-right:0;}
-.frmChoBox .iptChk + .iptLbl {padding-left:24px; font-size:14px; line-height:20px; color:#000; background:url(../images/icon/ic_chk_off.svg) left center no-repeat;}
-.frmChoBox .iptChk:checked + .iptLbl {background:url(../images/icon/ic_chk_on.svg) left center no-repeat;}
+.frmChoBox .iptChk + .iptLbl,
+.frmChoBox .iptChk + input[type=hidden] + .iptLbl {padding-left:24px; font-size:14px; line-height:20px; color:#000; background:url(../images/icon/ic_chk_off.svg) left center no-repeat;}
+.frmChoBox .iptChk:checked + .iptLbl,
+.frmChoBox .iptChk:checked + input[type=hidden] + .iptLbl {background:url(../images/icon/ic_chk_on.svg) left center no-repeat;}
 
-.frmChoBox .iptChk:disabled + .iptLbl {color:#666; background:url(../images/icon/ic_chk_dis_off.svg) left center no-repeat;}
-.frmChoBox .iptChk:disabled:checked + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
-.frmChoBox .iptChk.readonly + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
+.frmChoBox .iptChk:disabled + .iptLbl,
+.frmChoBox .iptChk:disabled + input[type=hidden] + .iptLbl {color:#666; background:url(../images/icon/ic_chk_dis_off.svg) left center no-repeat;}
+.frmChoBox .iptChk:disabled:checked + .iptLbl,
+.frmChoBox .iptChk:disabled:checked + input[type=hidden] + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
+.frmChoBox .iptChk.readonly + .iptLbl,
+.frmChoBox .iptChk.readonly + input[type=hidden] + .iptLbl {background:url(../images/icon/ic_chk_dis_on.svg) left center no-repeat;}
 
 .frmChoBox .iptRdo + .iptLbl {padding-left:24px; font-size:14px; line-height:20px; color:#000; background:url(../images/icon/ic_slt_off.svg) left center no-repeat;}
 .frmChoBox .iptRdo:checked + .iptLbl {background:url(../images/icon/ic_slt_on.svg) left center no-repeat;}
@@ -1174,9 +1195,15 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin .lgInner > div.titBox .btTit span {font-weight:bold; color:var(--basic-color); vertical-align: top;}
 .lytLogin .cptLogin .lgInner > div.fnBox {width:600px; height:500px; background:#fff; padding: 60px 100px; box-sizing:border-box;}
 .lytLogin .cptLogin .lgInner > div.fnBox > p {font-size:40px; color:#000; font-weight:bold; letter-spacing:normal; margin-bottom:20px;}
-.lytLogin .cptLogin .lgInner > div.fnBox > .iptBox {width:100%; margin-bottom:10px;}
+.lytLogin .cptLogin .lgInner > div.fnBox > .iptBox {width:100%; margin-bottom:10px; position:relative;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input {border:1px solid #bbb; border-radius:5px; height:60px; line-height:60px; font-size: 16px; color:#000; font-weight:500;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input::-webkit-input-placeholder {color:#ccc; font-weight:400;}
+.lytLogin .cptLogin .lgInner > div.fnBox .codeInfo {font-size:14px; color:#333; font-weight:500; line-height:1.4; letter-spacing:-0.32px; margin-bottom:10px;}
+.lytLogin .cptLogin .lgInner > div.fnBox .codeInfo span {font-weight:bold;}
+.lytLogin .cptLogin .lgInner > div.fnBox .codeResend {display:none; font-size:14px; color:red; font-weight:500; line-height:1.4; letter-spacing:-0.32px; margin-bottom:10px;}
+.lytLogin .cptLogin .lgInner > div.fnBox .codeResend span {font-weight:bold;}
+.lytLogin .cptLogin .lgInner > div.fnBox .timeCnt {position:absolute; top:50%; right:20px; font-size:14px; color:#000; font-weight:500; line-height:1; transform:translateY(-50%);}
+.lytLogin .cptLogin .lgInner > div.fnBox .resendBtn {position:absolute; top:50%; right:20px; font-size:14px; color:red; font-weight:500; line-height:1; transform:translateY(-50%); border:1px solid red; border-radius:8px; text-align:center; line-height:40px; height:40px; padding: 0 20px; background:#fff;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgBtn {width:100%; margin-top:10px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgBtn a {display:block; width:100%; height:66px; background:var(--basic-color); font-size:18px; color:#fff; font-weight:500; text-align:center; line-height:66px; border-radius:5px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgFunc {width:100%; display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center; margin:12px 0 33px 0;}
@@ -1185,6 +1212,7 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn {border-top:1px solid rgba(132, 132, 132, 0.2); padding: 10px 0; box-sizing:border-box; display:flex; flex-flow:row nowrap; justify-content:start; align-items: top;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn img {height:19px; margin-right:5px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn span {font-size:13px; color:#757575;}
+.lytLogin .cptLogin .lgInner > div.fnBox .backToLogin {font-size: 14px; color: #333; font-weight: 500; text-decoration: underline; text-align: center; margin: 20px 0;}
 /*20240429 신규 로그인 타입 (공동인증서 타입)*/
 .lytLogin .cptLogin .lgInner > div.authLogin {padding-top:80px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .authCov > .authLoginBtn {display:block; width:100%; background:var(--basic-color); height:216px; text-align:center; padding-top:60px; border-radius:10px; margin-top:20px; transition:all 0.4s;}

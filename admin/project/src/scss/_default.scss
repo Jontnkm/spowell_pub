@@ -177,7 +177,7 @@ input:-ms-input-placeholder {color: #ccc;}
 
 textarea {
   margin: 0;  resize: none;  font: inherit;  color: inherit;  width: 100%;  border: 1px solid #ddd;  
-  padding: 10px;  background: url(none);  -webkit-border-radius: 1px;  -webkit-appearance: none;
+  padding: 10px;  background: none;  -webkit-border-radius: 1px;  -webkit-appearance: none;
 }
 
 select {
@@ -214,7 +214,9 @@ address, em {
 .blind {
   overflow: hidden;  position: absolute;  top: 0;  left: 0;  width: 0;  height: 0;  font-size: 0;  line-height: 0;
 }
-
+.m0 {
+  margin:0 !important;
+}
 /* skipnavi */
 #skipnavi {
   position: fixed;  left: 0;  top: 0;  width: 100%;  margin-left: 0;  z-index: 99999;

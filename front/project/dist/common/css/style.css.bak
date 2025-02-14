@@ -257,7 +257,7 @@ label {
 	/*2024.12.20 추가*/
 }
 .cptForm .rowType {
-	width: max-content;
+	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: flex-start;
@@ -371,9 +371,6 @@ label {
 }
 .cptForm .ipt {
 	width: 100%;
-}
-.cptForm .ipt.w150 {
-	width: 150px;
 }
 .cptForm .lbTxt {
 	font-size: 16px;
@@ -496,6 +493,12 @@ label {
 	color: var(--t1);
 	font-weight: 400;
 }
+@media screen and (max-width: 767px) {
+	.cptForm .Deco,
+	.cptForm .deco {
+		display: none;
+	}
+}
 .cptForm .frmGroup {
 	/*width:100%;*/
 	display: flex;
@@ -532,9 +535,6 @@ label {
 }
 .cptForm .frmGroup.alingMid {
 	align-items: center;
-}
-.cptForm .frmGroup.minAuto {
-	min-height: auto;
 }
 .cptForm .frmGroup.flexWrap {
 	flex-wrap: wrap;
@@ -748,23 +748,12 @@ label {
 .cptForm .frmGroup.datepicker .tui-datepicker .tui-calendar-body-body .tui-calendar-week:last-of-type {
 	margin-bottom: 0;
 }
-.cptForm .frmGroup + .frmGroup {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.cptForm .frmGroup + .frmGroup:last-of-type {
-	margin-top: 0px;
-	margin-bottom: 0;
-}
 .cptForm .dropDown {
 	width: 100%;
 	position: relative;
 	border: 1px solid var(--lbg1);
 	border-radius: 6px;
 	padding: 0 16px;
-}
-.cptForm .dropDown.w150 {
-	width: 150px;
 }
 .cptForm .dropDown > button {
 	width: 100%;
@@ -2576,13 +2565,11 @@ label {
 	width: 100%;
 	word-break: break-word;
 }
-@media screen and (max-width: 767px) {
-	.cptTable table.tbInfo td > span.comButton {
-		position: absolute;
-		top: 20px;
-		right: 12px;
-		width: max-content;
-	}
+.cptTable table.tbInfo td > span.comButton {
+	position: absolute;
+	top: 20px;
+	right: 12px;
+	width: max-content;
 }
 .cptTable table.tbInfo td > span em {
 	display: block;

@@ -31,7 +31,10 @@
 .cptForm {
     width:100%; position:relative;
     .rowType {
-        width:100%; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
+        width:max-content; display:flex; flex-flow: row nowrap; align-items: flex-start; justify-content: flex-start;
+        &.gap20{
+            gap:20px;
+        }
         @include media ('mobile') {
             flex-flow: column;
         }
@@ -101,7 +104,15 @@
             height:50px; line-height:50px; font-size:16px; color:var(--t1); font-weight:400;
         }
     }
-    .ipt {width:100%;}
+
+    .ipt {
+        width:100%;
+
+        &.w150 {
+            width:150px;
+        }
+    }
+
     .lbTxt {
         font-size:16px; color:var(--t1); font-weight:700; line-height:1.5; margin-bottom:10px;
         &:not(:first-of-type) {margin-top:20px;}
@@ -172,10 +183,6 @@
     .Deco,
     .deco {
         display:block; font-size:16px; color:var(--t1); font-weight:400;
-        
-        @include media ('mobile') {
-            display:none;
-        }
     }
 
     /*가로정렬 타입*/
@@ -207,6 +214,10 @@
 
         &.alingMid {
             align-items: center;
+        }
+
+        &.minAuto {
+            min-height:auto;
         }
 
         &.flexWrap{flex-wrap:wrap;}
@@ -352,10 +363,22 @@
                 }
             }
         }
+
+        & + .frmGroup {
+            margin-top:10px; margin-bottom:10px;
+
+            &:last-of-type {
+                margin-top:0px; margin-bottom:0;
+            }
+        }
     }
 
     .dropDown {
         width:100%; position:relative; border:1px solid var(--lbg1); border-radius:6px; padding: 0 16px;
+        &.w150 {
+            width:150px;
+        }
+        
         > button {
             width:100%; font-size:16px; color:var(--t1); font-weight:500; height:50px; line-height:50px; text-align:left; position:relative; padding-right:30px;
             &::after {
@@ -898,7 +921,7 @@
                                 width: calc(100% - 100px); padding:15px;
                             }
                             > p.title {
-                                font-size:20px; color:var(--t1); font-weight:500; line-height:1.4; width:max-content; max-width:100%;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:30px; position:relative;
+                                font-size:20px; color:var(--t1); font-weight:500; line-height:1.4; width:max-content; max-width:100%;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:30px; position:relative; cursor:pointer;
                                 @include media ('tablet') {
                                     font-size:16px;
                                 }
@@ -975,7 +998,7 @@
             }
             
             > p.title {
-                font-size:20px; color:var(--t1); font-weight:700; line-height:1.4; width:max-content; max-width:100%;  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding-right:30px; position:relative;
+                font-size:20px; color:var(--t1); font-weight:700; line-height:1.4; width:max-content; max-width:100%; /* overflow:hidden; text-overflow:ellipsis; white-space:nowrap;*/ padding-right:30px; position:relative; word-break:keep-all;
             }
             > p.dtView {
                 display:flex; flex-flow:row nowrap; align-items: center; justify-content: flex-start; gap:14px; margin-top:10px;
@@ -1113,7 +1136,7 @@
                         width:max-content !important;
                     }
                     > a{
-                        display:block; width:100%; background:var(--bg3); border-radius:0; position:relative; font-size:16px; padding: 0 18px;
+                        display:flex; width:100%; background:var(--bg3); border-radius:0; position:relative; font-size:16px; padding: 0 18px; align-items:center; justify-content: center; line-height:1;
                         @include media ('mobile') {
                             border:1px solid var(--lbg1); border-radius:90px;
                         }
@@ -1228,8 +1251,71 @@
                         > span.a {
                             display:inline-block; width:30px; height:30px; font-size:22px; color:var(--t1); font-weight:700; line-height:1.4;
                         }
-                        > p.answer {
-                            font-size:16px; color:var(--t1); font-weight:400; line-height:1.7; word-break:break-all; padding-right:8px;
+                        > .answer {
+                            width:100%; font-size:16px; color:var(--t1); font-weight:400; line-height:1.7; padding-right:8px; word-break:keep-all;
+                            * {
+                                font-size: 16px !important; color: var(--t1) !important; font-weight: 400 !important; line-height: 1.7 !important; word-break: break-all !important; font-family: "Pretendard GOV" !important; word-break:keep-all !important;
+                            }
+
+                            figure {
+                                margin:20px 0; width:100%;
+
+                                table {
+                                    width:100% !important; border:none; border-top:2px solid var(--t1) !important;
+                                    thead {
+                                        th {
+                                            font-weight:600 !important; padding:14px 10px !important; text-align:center;  line-height:22px !important; background:var(--bg2) !important; border-right:1px solid var(--lbg1) !important;
+
+                                            &:last-of-type {
+                                                border-right:0 !important;
+                                            }
+                                        }
+                                    }
+
+                                    tbody {
+                                        th {
+                                            background:var(--bg2) !important; text-align:center;
+                                        }
+                                        td {
+                                            padding: 14px !important; text-align: center; line-height: 22px !important; background: var(--bg3) !important; border-right: 1px solid var(--lbg1) !important; border-bottom: 1px solid var(--lbg1) !important; border-left: none !important; border-top: none !important;
+                                            &:last-of-type {
+                                                border-right:0 !important;
+                                            }
+                                            &.left {
+                                                text-align:left !important;
+                                            }
+                                            span.red {
+                                                color:red !important; font-size:18px !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                font-size:26px !important;
+                            }
+
+                            h3 {
+                                font-size:22px !important;
+                            }
+
+                            h4 {
+                                font-size:18px !important;
+                            }
+
+                            strong {
+                                font-weight:bold !important;
+                            }
+
+                            a {
+                                font-weight:500 !important; text-decoration:underline;
+                            }
+
+
+
+
+
                             @include media ('tablet') {
                                 font-size:14px;
                             }
@@ -1436,8 +1522,14 @@
             
             td {
                 font-size:16px; color:var(--t1); font-weight:400; padding:14px; text-align:center; line-height:22px; background:var(--bg3); border-right:1px solid var(--lbg1); border-bottom:1px solid var(--lbg1); order:1;
-                
+
                 > span {
+                    @include media ('mobile') {
+                        &.comButton {
+                            position:absolute; top:20px; right:12px; width:max-content;
+                        }
+                    }
+
                     em {
                         display:block;
                     }
