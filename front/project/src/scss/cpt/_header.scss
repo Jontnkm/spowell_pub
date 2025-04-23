@@ -13,8 +13,8 @@
         width:100%; border-bottom:1px solid var(--l1);
         > .inner {
             width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
-            @include media ('tablet'){
-                max-width:auto; padding: 8px 20px;
+            @include media ('tablet02'){
+                max-width: none; padding: 8px 20px;
             }
             > .kspoLogo {
                 padding:13px 0;
@@ -101,8 +101,8 @@
         position:relative; border-bottom:1px solid var(--l2);
         > .inner {
             width:100%; max-width:1280px; margin:0 auto; display:flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
-            @include media ('tablet'){
-                max-width:auto; padding: 24px 20px;
+            @include media ('tablet02'){
+                max-width:none; padding: 24px 20px;
             }
             .spowellLogo {
                 .pcLogo {
@@ -118,7 +118,7 @@
                 }
             }
             .menu {
-                @include media ('tablet'){
+                @include media ('tablet02'){
                     display:none;
                 }
                 > ul {
@@ -263,7 +263,7 @@
             /*모바일메뉴 영역*/
             .moMenu {
                 display:none; 
-                @include media('tablet'){
+                @include media('tablet02'){
                     display:block;
                 }
                 > ul {

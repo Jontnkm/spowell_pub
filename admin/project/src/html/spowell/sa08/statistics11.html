@@ -1,0 +1,237 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr> 
+                    <th>선발년도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <td colspan="2" class="right">
+                        
+                    </td>
+                </tr>  
+                <tr>
+                    <th>시/도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <!-- <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li> -->
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:100px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="3">선발년도</th>
+                    <th rowspan="3">시/도</th>
+                    <th rowspan="3">목표인원</th>
+                    <th colspan="20">선발인원</th>
+                    <th colspan="4">선발결과</th>
+                </tr>
+                <tr class="scndLine">
+                    <th colspan="5">초등학교</th>
+                    <th colspan="5">중학교</th>
+                    <th colspan="5">고등학교</th>
+                    <th colspan="5">특수학교</th>
+                    <th rowspan="2">선발</th>
+                    <th rowspan="2">미선발</th>
+                    <th rowspan="2">추가선발</th>
+                    <th rowspan="2">지원중단</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>선발</th>
+                    <th>미선발</th>
+                    <th>추가선발</th>
+                    <th>지원중단</th>
+                    <th>합계</th>
+                    <th>선발</th>
+                    <th>미선발</th>
+                    <th>추가선발</th>
+                    <th>지원중단</th>
+                    <th>합계</th>
+                    <th>선발</th>
+                    <th>미선발</th>
+                    <th>추가선발</th>
+                    <th>지원중단</th>
+                    <th>합계</th>
+                    <th>선발</th>
+                    <th>미선발</th>
+                    <th>추가선발</th>
+                    <th>지원중단</th>
+                    <th>합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024년</td>
+                    <td>서울특별시</td>
+                    <td>00 명</td>
+
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                    <td>00 명</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">합계</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tfoot>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

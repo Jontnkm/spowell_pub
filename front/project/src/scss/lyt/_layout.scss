@@ -1,13 +1,13 @@
 /* ---------------------------------------- 기본 레이아웃 ---------------------------------------- */
 
 .lytLayout{
-    width:100%; min-height:calc(100vh - 361px);
+    width:100%; min-height:calc(100vh - 353px);
     /*로그인 및 회원가입 배경 설정*/
     &.member {
-        background:var(--bg1);
+        background:var(--bg1); min-height:100vh !important;
 
         .subContArea {
-            display:block !important; max-width:100% !important; margin:40px auto 140px !important;
+            display:block !important; max-width:100% !important; margin:40px auto 40px !important;
             @include media ('mobile') {
                 margin:40px auto !important;
             }
@@ -16,9 +16,13 @@
         .layoutCont {
             width:100% !important;
         }
+
+        .layoutArea {
+            position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:var(--bg1); max-height:100%; overflow-y:auto; padding-bottom: 0 !important;
+        }
     }
     .layoutArea {
-        width:100%;
+        width:100%; padding-bottom:120px;
 
         .mainLayout {
             background:#F5F6F8;
@@ -40,9 +44,9 @@
                 width:100%;
             }
             .subContArea{
-                width:100%; max-width:1280px; margin:60px auto 120px; display:flex; flex-flow :row nowrap; align-items: flex-start; justify-content: flex-start; gap:50px;
+                width:100%; max-width:1280px; margin:60px auto 0; display:flex; flex-flow :row nowrap; align-items: flex-start; justify-content: flex-start; gap:50px;
                 @include media ('tablet'){
-                    display:block; max-width:100%; margin:0 auto 120px;
+                    display:block; max-width:100%; margin:0 auto;
                 }
             }
             .layoutNav{
@@ -75,10 +79,10 @@
 
 /*--------------------------------- 레이어팝업 --------------------------------*/
 .modPopup {
-    width: 100%; height: 100vh; position: fixed; top: 0;left: 0;right: 0;bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 999; display: none;
+    width: 100%; position: fixed; top: 0;left: 0;right: 0;bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 999; display: none;
 
     // 팝업동작 기본설정
-    .popupDim {width: 100%; height: 100vh; font-size: 0; background: rgba(0,0,0,0.75); position: absolute; top: 0;left: 0;right: 0; bottom: 0; opacity: 0;}
+    .popupDim {width: 100%; height: 100%; font-size: 0; background: rgba(0,0,0,0.75); position: absolute; top: 0;left: 0;right: 0; bottom: 0; opacity: 0;}
     .popupBox {
         width: 100%; margin: 0 auto; position: relative; display: flex; flex-flow: column; z-index: 1;
         @include media ('tablet'){
@@ -144,9 +148,9 @@
     
     &.type01 {
         .popupBox {
-            max-height: 85%; border-radius: 20px; padding:30px 40px; margin-top:-50px;
+            max-height: 100%; border-radius: 20px; padding:30px 40px;
             @supports (-webkit-touch-callout: none) {
-                max-height: 80%; margin-top:-100px;
+                max-height: 100dvh;
             }
             &::before {border-radius: 20px;} 
 
@@ -154,6 +158,9 @@
                 width: 100%; margin-bottom:20px; display: flex; justify-content: space-between; align-items: center;
                 .tit {
                     font-size:20px; color:var(--t1); font-weight:700;
+                    @include media ('mobile') {
+                        font-size:18px; letter-spacing:-1px;
+                    }
                     b {color: #005ce6;}
                 }
                 .closeBtn {margin-left: auto; width: 24px; height: 24px; font-size: 0; background: url(../../common/images/common/ico_pop_close.svg) center no-repeat;}
@@ -162,9 +169,8 @@
             }
 
             .popContArea {
-                overflow-y:scroll;
-
-                &::-webkit-scrollbar {display:none;}
+                overflow-y:auto;
+                
                 > p {
                     font-size:16px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; word-break:keep-all; padding:24px 0;
                     @include media ('mobile') {
@@ -216,6 +222,30 @@
             }
             &.sm {max-width:440px;}
             &.lg {max-width:710px;}
+        }
+
+        &.specialCase {
+            .popupBox {
+                .popContArea {
+                    overflow-y:visible;
+
+                    .scrollBox {
+                        overflow-y:auto; padding-right:8px; max-height:59vh;
+
+                        &::-webkit-scrollbar {
+                            width:6px;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: rgb(33,64,154); border-radius:10px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: rgba(33,64,154,0.1);
+                        }
+                    }
+                }
+            }
         }
     }
 

@@ -3,7 +3,7 @@
     /*공통*/
     width:100%; max-width:900px; margin:0 auto; padding: 60px; background:var(--bg3); border-radius:24px;
     &.ty01 {
-        max-width:540px; padding:60px 70px;
+        max-width:540px; padding:45px 70px;
     }
     
     @include media ('mobile') { 
@@ -11,7 +11,15 @@
 
         &.ty01 {
             max-width:100%; padding:40px 10px;
-        }   
+        }
+        
+        .allAgree {
+            margin-left:13px;
+
+            label {
+                font-weight:bold !important; font-size:18px !important;
+            }
+        }
     }
 
     &-process {
@@ -43,12 +51,12 @@
                 }
 
                 > .step {
-                    display:inline-block; width:40px; height:40px; background:var(--tbg3); border-radius:50%; font-size:20px; color:var(--bg3); font-weight:600; text-align:center; line-height:40px;
+                    display:inline-block; width:40px; height:40px; background:#575757; border-radius:50%; font-size:20px; color:var(--bg3); font-weight:600; text-align:center; line-height:40px;
                     @include media ('mobile') {
                         width:30px; height:30px; line-height:30px; font-size:18px;
                     }
                     & + span {
-                        font-size:18px; color:var(--tbg2); font-weight:700;
+                        font-size:18px; color:#575757; font-weight:700;
                         @include media ('mobile') {
                             font-size:16px; display:none;
                         }
@@ -86,6 +94,12 @@
     
     > .title {
         font-size:36px; color:var(--t1); font-weight:800; text-align:center;
+        &.diff {
+            font-size:24px;
+            @include media ('mobile') {
+                font-size:22px;
+            }
+        }
         @include media ('mobile') {
             font-size:26px; word-break:keep-all;
         }
@@ -118,7 +132,7 @@
     /*로그인 페이지*/
     .loginBox {
         > .title {
-            font-size:36px; color:var(--t1); font-weight:800; text-align:center;
+            font-size:36px; color:var(--t1); font-weight:800; text-align:center; margin-bottom:20px;
             @include media ('mobile') {
                 font-size:34px;
             }
@@ -389,11 +403,9 @@
 
         .noData {
             font-size:16px; color:var(--t1); font-weight:400; line-height:1.5;
-            @include media ('mobile') {
-                font-size:14px;
-            }
+
             > span {
-                display:inline-block; margin-top:8px;
+                display:inline-block; margin-top:8px; font-weight:bold; font-size:18px;
             }
         }
     }
@@ -466,18 +478,39 @@
                         }
                     }
                 }
+
+                &.bot {
+                    > .right {
+                        .infoData {
+                            @include media ('mobile') {
+                                border-bottom: 0 !important;
+                                margin-bottom: 0 !important;
+                                padding-bottom: 0 !important;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         &.guardian {
             margin-top:16px;
+            > div {
+                > .right {
+                    > .infoData {
+                        border-bottom: 0 !important;
+                        margin-bottom: 0 !important;
+                        padding-bottom: 0 !important;
+                    }
+                }
+            }
         }
     }
 
     .infoIptArea {
         width:100%; position:relative; padding:60px 130px; border:1px solid var(--lbg1); border-radius:14px;
         @include media ('mobile') {
-            padding: 20px;
+            padding: 20px; margin-top:20px;
         }
         > div:first-of-type {
             border-bottom:1px solid #eee; padding-bottom:16px; margin-bottom:30px;
@@ -510,6 +543,14 @@
 
 .cptMyPage {
     width:100%; position:relative;
+
+    .noMatchList {
+        padding: 40px; border:1px solid var(--prm1); border-radius:8px;
+
+        > p {
+            font-size:14px; font-weight:400; color:var(--t1); text-align:center; line-height:21px;
+        }
+    }
 
     /*타이틀 요소*/
     .mpTitle {
@@ -557,16 +598,24 @@
                 @include media ('tablet') {
                     width:calc(50% - 3px); padding:20px 18px;
                 }
-                > p {
+                p {
                     text-align:center; 
                     &.title {
                         font-size:16px; color:var(--bg3); font-weight:700;
                     }
                     &.count {
-                        font-size:24px; color:var(--snd1); font-weight:800; margin: 16px 0 22px; letter-spacing:-0.48px;
+                        font-size:26px; color:var(--snd1); font-weight:800; margin: 16px 0 22px; letter-spacing:-0.48px;
                     }
                     &.detail {
-                        font-size:16px; color:var(--bg3); font-weight:700; line-height:40px; height:40px; background:rgba(0,0,0,0.2); border-radius:8px;
+                        font-size:16px; color:var(--bg3); font-weight:700; line-height:40px; height:40px; background:rgba(0,0,0,0.2); border-radius:8px; padding: 0 15px; overflow:hidden; text-overflow: ellipsis; white-space:nowrap;
+                        &.noData {
+                            background:var(--prm3);
+                        }
+                    }
+                    @include media ('mobileDeep') {
+                        &.title {font-size:14px;}
+                        &.count {font-size:20px;}
+                        &.detail {font-size:14px;}
                     }
                 }
 
@@ -793,18 +842,58 @@
             }
         }
     }
+
+    #modifyForm {
+        > .comButton {
+            &:last-of-type {
+                margin-top:24px;
+            }
+        }
+    }
+
+    .modPopup {
+        table {
+            td {
+                word-break: auto-phrase !important;
+            }
+        }
+    }
 }
 
+#chgPwPopup {
+    .frmGroup {
+        flex-flow:column; align-items:flex-start; justify-content:flex-start; gap:0; margin: 0 !important; 
+
+        .ipt {
+            width:100%;
+        }
+
+        .simpleTxt {
+            width:100%;
+        }
+    }
+}
+#withdrawalForm {
+    .personalAuth {
+        .cptForm {
+            &:first-of-type {
+                .lbTxt {
+                    margin-bottom:10px;
+                }
+            }
+        }
+    }
+}
 /*본인인증 팝업 용*/
 .popAuthBox {
-    width:100%; position:relative;
+    width:97%; position:relative;
 
     > .title {
         font-size:32px; color:var(--t1); font-weight:800; text-align:center; margin-bottom:14px;
     }
 
     > .desc {
-        font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; margin-bottom:30px;
+        font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center; margin-bottom:30px; word-break:keep-all;
         @include media ('mobile') {
             word-break:keep-all;
         }
@@ -898,7 +987,7 @@
     .authNumbBox {
         border:1px solid var(--lbg1); border-radius:20px; padding: 40px 36px;
         @include media ('mobile') {
-            padding:40px 36px 88px 36px;
+            padding:40px 30px 70px 30px;
         }
         > .inner {
             position:relative;
@@ -929,13 +1018,17 @@
             }
 
             > .time {
-                position:absolute; top:14px; right:20px; 
+                position:absolute; top:8px; right:20px; display:flex; align-items:center;
                 @include media('mobile'){
-                    top:0; right:0;
+                    top:-20px; right:auto; left:50%; transform:translateX(-50%); width:max-content;
                 }
 
                 > span {
-                    font-size:16px; color:var(--t1); font-weight:500; line-height:1.4; letter-spacing:-0.38px;
+                    font-size:16px; color:var(--t1); font-weight:500; line-height:33px; letter-spacing:-0.38px;
+                }
+
+                > button {
+                    font-size:16px; color:var(--t1); font-weight:500; line-height:1.4; letter-spacing:-0.38px; border:1px solid var(--lbg2); border-radius:8px; padding:5px 10px; text-align:center; margin-left:10px;
                 }
             }
         }
@@ -982,7 +1075,7 @@
         width:100%; position:relative; margin-top:8px;
 
         > p {
-            font-size:14px; color:var(--t1); font-weight:500;
+            font-size:14px; color:var(--t1); font-weight:500; word-break:keep-all;
             @include media ('mobile') {
                 text-align:center;
             }
@@ -1029,7 +1122,7 @@
                 }
 
                 > .txt {
-                    font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center;  margin-bottom:50px;
+                    font-size:18px; color:var(--t1); font-weight:500; line-height:1.5; text-align:center;  margin-bottom:50px; word-break:keep-all;
 
                     > .hglt {
                         display:block; margin-top:8px; color:var(--snd3);
@@ -1040,7 +1133,9 @@
 
         > .cpRyt {
             position:absolute; bottom:40px; left:50%; transform:translateX(-50%); width:max-content;
-            
+            @include media ('mobile') {
+                width:100%; text-align:center;
+            }
             > .inner {
                 display:flex; flex-flow: row nowrap; align-items: baseline; justify-content: flex-start; gap:9px;
                 
@@ -1058,7 +1153,7 @@
 
 /*2024.12.20 회원관련 페이지 레이아웃 정의*/
 .memberTop {
-    width:100%; position:relative; padding-top:140px; text-align:center;
+    width:100%; position:relative; padding-top:40px; text-align:center;
 
     > img {
         display:inline;

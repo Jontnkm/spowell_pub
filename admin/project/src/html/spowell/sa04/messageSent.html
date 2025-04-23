@@ -1,0 +1,262 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>등록일자</th>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker3"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker4"></div>
+                        </div>
+                    </td>
+                    <th>사업구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">경기력성과포상금</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>지급항목</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">일시장려금</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>메세지구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">선수 경기력성과포상금 지급(월정금)</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>장애구분</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">비장애</label></div>
+                        <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">장애</label></div>
+                    </td>
+                    <th>대상구분</th>
+                    <td>
+                        <div class="frmChoBox"><input id="rdo004" type="radio" class="iptRdo" name="rdo002"><label for="rdo004" class="iptLbl">전체</label></div>
+                        <div class="frmChoBox"><input id="rdo005" type="radio" class="iptRdo" name="rdo002"><label for="rdo005" class="iptLbl">선수</label></div>
+                        <div class="frmChoBox"><input id="rdo006" type="radio" class="iptRdo" name="rdo002"><label for="rdo006" class="iptLbl">지도자</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>키워드</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value="">성명</option>
+                                <option value="">등록번호</option>
+                                <option value="">휴대전화</option>
+                            </select>
+                            <input type="text" class="iptText">
+                        </div>
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span></div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:150px;">
+                <col style="width:200px;">
+                <col style="width:150px;">
+                <col style="width:250px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:150px;">
+                <col style="width:160px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th>등록일자</th>
+                    <th>사업구분</th>
+                    <th>지급항목</th>
+                    <th>메세지구분</th>
+                    <th>장애구분</th>
+                    <th>대상구분</th>
+                    <th>이름</th>
+                    <th>등록번호</th>
+                    <th>휴대전화</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>YYYY-MM-DD</td>
+                    <td>경기력성과포상금</td>
+                    <td>일시장려금</td>
+                    <td>선수 경기력성과포상금 지급(월정금)</td>
+                    <td>비장애</td>
+                    <td>선수</td>
+                    <td>홍길동</td>
+                    <td>00203098</td>
+                    <td>010-0000-0000</td>
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">메세지 내용</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>YYYY-MM-DD</td>
+                    <td>경기력성과포상금</td>
+                    <td>일시장려금</td>
+                    <td>선수 경기력성과포상금 지급(월정금)</td>
+                    <td>비장애</td>
+                    <td>지도자</td>
+                    <td>김네글자</td>
+                    <td>00203098</td>
+                    <td>010-0000-0000</td>
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">메세지 내용</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+    <!-- 그리드/테이블 하단 버튼 양측 -->  
+    <div class="cptGroupBtnCov">
+        <div class="cptGroupBtm alignL">
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue">선택삭제</button>
+                <button type="button" class="srhBtn dkBlue">선택 발송처리</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 페이징 -->
+    <div class="comPaging">
+        <a class="start" href="#"></a>
+        <a class="prev" href="#"></a>
+        <ul class="numList">
+            <li><a href="#">1</a></li>
+            <li class="on"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+        <a class="next" href="#"></a>
+        <a class="end" href="#"></a>
+    </div>
+</div>
+<!-- //컨텐츠 내용 -->
+
+<!-- 팝업 영역 -->
+<div id="sample01" class="modPopup sm"> <!-- class - md : 중간 팝업, on : 팝업오픈 -->
+    <div class="popupDim">딤영역</div>
+    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
+        <div class="popupInMotion">
+            <div class="popupContainer">
+                <div class="popupContArea">
+                    <button type="button" type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <div class="popTitle">메세지 내용</div>
+                    <div class="popCont">
+                        
+                        <!-- 팝업 컨텐츠 영역 -->
+
+                        <!-- 작은 타이틀 -->
+                        <p class="popMsg mB20">
+                            [SPOWELL 알림]<br><br>
+                            홍길동님, &lt;생활지원금&gt;이 아래와 같이 지급될 예정입니다.<br><br>
+                            [생활지원금 지급계획]<br>
+                            - 지급금액 : 500,000원<br>
+                            - 지급일자 : 2025-03-22<br><br>
+
+                            [체육인복지지원홈페이지]<br>
+                            spowell.kspo.or.kr<br><br>
+
+                            * 사업 관련 추가 문의는 아래 연락처로 문의해 주시기 바랍니다.<br>
+                            - 연락처 : 02-410-1624
+                        </p>
+                        <!-- //팝업 컨텐츠 영역 -->
+
+                    </div>
+                    <!-- 팝업 버튼 영역 -->
+                    <div class="popBtm">
+                        <div class="alignR">                            
+                            <button type="button" type="button" class="btn dkBlue" onclick="closePopup('sample01');">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

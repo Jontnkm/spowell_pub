@@ -23,7 +23,7 @@
 .lytLayout .layoutContainer .layoutCont {width:calc(100% - 260px); transition:all 0.3s;}
 /* .lytLayout .layoutContainer .layoutCont form {height:100%;} 20230407 폼태그 추가로 무너지는 레이아웃 재구축 *//*팝업 가운데정렬 이슈로 우선 삭제*/
 .lytLayout .layoutContainer.on .layoutCont {width:100%;}
-.lytLayout .layoutContainer .layoutCont .layoutContArea {width:100%; min-height:100%; padding:30px 40px 100px 40px; vertical-align:top; background:#f5f6fa;}
+.lytLayout .layoutContainer .layoutCont .layoutContArea {width:100%; min-height:calc(100% - 74px); padding:30px 40px 80px 40px; vertical-align:top; background:#f5f6fa;}
 .lytLayout .layoutMultiGroup {width:100%; display:flex;}
 .lytLayout .layoutMultiGroup .multiCont {width:calc(50% - 10px); margin-left:20px;}
 .lytLayout .layoutMultiGroup .multiCont:first-child {margin-left:0;}
@@ -40,6 +40,13 @@
 .cptHeader .headerGroup .headerDate dd {font-size:14px; font-weight:400; color:#757575; line-height:24px; display:inline-block;}
 .cptHeader .headerGroup .headerUser {height:24px; padding-left:24px; margin-left:10px; font-size:16px; font-weight:400; color:#000; line-height:24px; background:url(../images/layout/type01/icon_name.svg) left center no-repeat; display:inline-block;}
 .cptHeader .headerGroup .headerUser b {font-weight:500;}
+.cptHeader .headerGroup .sessionTime { position: relative; display: flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:8px;	 }
+.cptHeader .headerGroup .sessionTime span{ font-size: 14px; font-weight: bold; color: var(--basic-color);}
+.cptHeader .headerGroup .sessionTime span.min { margin-left:10px;}
+.cptHeader .headerGroup .sessionTime span.min::before { content: '('; position: absolute; top: 1px; left: 3px; font-size: 14px; font-weight: bold;  color: black;}
+.cptHeader .headerGroup .sessionTime span.min::after { content: ':'; position: absolute; top: 0; left: 50%; transform:translate(-50%, 0%); font-size: 14px; font-weight: bold;  color: black; margin-left:-12px; color:var(--basic-color);}
+.cptHeader .headerGroup .sessionTime span.sec::after { content: ')'; position: absolute; top: 1px; right: -6px; font-size: 14px; font-weight: bold;  color: black;}
+.cptHeader .headerGroup .sessionTime .extend { font-size: 15px; font-weight: 500;  color: black;}
 .cptHeader .headerGroup .headerBtn {height:24px; padding:0 10px; margin-left:10px; font-size:13px; font-weight:500; color:#333; border:1px solid #333; border-radius:12px; }
 .cptHeader .headerGroup .headerNav {width:100%; padding-top:14px; padding-right:40px; display:flex; justify-content:end;}
 .cptHeader .headerGroup .headerNav .menuList {width:calc(100% - 80px); display:flex; justify-content:flex-end;}
@@ -78,11 +85,11 @@
 .cptSnav .snavMenu .menuItem.dropDown {background: url(../images/layout/type01/icon_menu_arr.svg) calc(100% - 20px) 13px no-repeat;}
 .cptSnav .snavMenu .menuItem.dropDown.on {background: url(../images/layout/type01/icon_menu_arr_on.svg) calc(100% - 20px) 13px no-repeat;}
 .cptSnav .snavMenu .menuItem a {display:block; width: 100%;} 
-.cptSnav .snavMenu .menuItem > a {min-height:50px; padding:13px 20px 13px 20px; font-size:16px; color: #999; line-height: 24px; font-weight: 400;}
+.cptSnav .snavMenu .menuItem > a {min-height:50px; padding:13px 20px 13px 20px; font-size:16px; color: #fff; line-height: 24px; font-weight: 400;}
 .cptSnav .snavMenu .menuItem:hover > a {color:var(--basic-color); background:rgba(0,0,0,0.2);}
 .cptSnav .snavMenu .subMenu {display:none; overflow:hidden;}
 .cptSnav .snavMenu .subMenu li {min-height:40px; position:relative;}
-.cptSnav .snavMenu .subMenu li a {display: block; width: 100%; height: 100%; padding:10px 20px 10px 40px; color:#999; line-height: 20px; font-size: 14px;}
+.cptSnav .snavMenu .subMenu li a {display: block; width: 100%; height: 100%; padding:10px 20px 10px 40px; color:#fff; line-height: 20px; font-size: 14px;}
 .cptSnav .snavMenu .subMenu li a:hover {color: var(--basic-color);}
 .cptSnav .snavMenu .subMenu li a.on {color: var(--basic-color);}
 .cptSnav .snavMenu .menuItem.on > a { color :var(--basic-color); background:rgba(0,0,0,0.2);}

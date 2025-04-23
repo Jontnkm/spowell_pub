@@ -1,0 +1,454 @@
+<%- include('../../layout/type_spowell/header.ejs', {
+    url: "../../../"
+}) %>
+
+
+<!-- 컨텐츠 내용 -->
+<div class="layoutContArea">
+    
+    <!-- h2 타이틀 -->
+    <%- include('../../layout/type_spowell/topTitle.ejs', {
+        url: "../../../"
+    }) %>
+
+    <!-- 검색조건 -->
+    <div class="cptSearchArea">
+        <table>
+            <caption></caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr> 
+                    <th>선발년도</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <th>학교구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmSm">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                </tr>  
+                <tr>
+                    <th>종목</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt frmMd">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div> 
+                    </td>
+                    <td colspan="2" class="right">
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 그리드/테이블 상단 -->
+    <div class="cptGroupTop">
+        <div class="alignL">
+            
+        </div>
+        <div class="alignR">
+            <div class="comSideOpt">
+                <ul class="opList">
+                    <!-- <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li> -->
+                    <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 그리드 -->
+    <div class="cptGrid withScroll">
+        <table class="gridTb">
+            <colgroup>
+                <col style="width:100px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+
+                <col style="width:80px;">
+                <col style="width:80px;">
+                
+                <col style="width:80px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">선발년도</th>
+                    <th rowspan="2">학교구분</th>
+                    <th rowspan="2">종목</th>
+                    <th colspan="17">지역</th>
+                    <th rowspan="2">합계</th>
+                </tr>
+                <tr class="scndLine">
+                    <th>서울</th>
+                    <th>부산</th>
+                    <th>대구</th>
+                    <th>인천</th>
+                    <th>광주</th>
+                    <th>대전</th>
+                    <th>울산</th>
+                    <th>세종</th>
+                    <th>경기</th>
+                    <th>강원</th>
+
+                    <th>충북</th>
+                    <th>충남</th>
+                    <th>전북</th>
+                    <th>전남</th>
+                    <th>경북</th>
+                    <th>경남</th>
+                    <th>제주</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="10">2024년</td>
+                    <td rowspan="10">초등학교</td>
+                    <td>축구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>농구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>야구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>탁구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>배구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>수구</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>펜싱</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>태권도</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>수영</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+                <tr class="scndLine">
+                    <td>피겨스케이팅</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>34</td>
+                    <td>34</td>
+
+                    <td>3435</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">합계</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+                <td>34</td>
+
+                <td>34</td>
+                <td>34</td>
+
+                <td>34</td>
+            </tfoot>
+        </table>
+    </div>
+    <!-- //그리드 -->
+
+</div>
+<!-- //컨텐츠 내용 -->
+
+
+<%- include('../../layout/type_spowell/bottom.ejs', {
+    url: "../../../"
+}) %>

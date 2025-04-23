@@ -1,4 +1,5 @@
 /* 본고딕 Thin */
+/*
 @font-face {
     font-family: "Pretendard GOV";
     font-style: normal;
@@ -7,7 +8,9 @@
       url("../../common/webfont/PretendardGOV-Thin.woff2") format("font-woff2"),
       url("../../common/webfont/PretendardGOV-Thin.otf") format("opentype");   
   }
+*/
   /* 본고딕 Light */
+  /*
   @font-face {
     font-family: "Pretendard GOV";
     font-style: normal;
@@ -17,6 +20,7 @@
       url("../../common/webfont/PretendardGOV-Light.otf") format("opentype");
       
   }
+*/
   /* 본고딕 Regular */
   @font-face {
     font-family: "Pretendard GOV";
@@ -54,6 +58,7 @@
       url("../../common/webfont/PretendardGOV-Bold.otf") format("opentype");
   }
   /* 본고딕 Bold */
+  /*
   @font-face {
     font-family: "Pretendard GOV";
     font-style: normal;
@@ -62,6 +67,7 @@
       url("../../common/webfont/PretendardGOV-ExtraBold.woff2") format("font-woff2"),
       url("../../common/webfont/PretendardGOV-ExtraBold.otf") format("opentype");
   }
+*/
 
 * {box-sizing: border-box; font-family:'Pretendard GOV'; letter-spacing: -0.4px; line-height:1.4;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
@@ -77,7 +83,7 @@ body,th,td,input,select,textarea,button {font-size:10px;line-height:1.5; font-fa
 a {color:#000;text-decoration:none}
 a:active, a:hover {text-decoration:none;}
 address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
-caption {font-size: 0;}
+caption {font-size: 0 !important;}
 
 input[type=radio] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}
 input[type=checkbox] {width:1px; height:1px; font-size:0; opacity:0.01; overflow:hidden;}

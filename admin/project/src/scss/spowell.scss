@@ -60,15 +60,27 @@
 
     tr {
         &.scndLine {
+
+            th {
+                &:first-of-type {
+                    padding-left:5px;
+                }
+
+                &:last-of-type {
+                    padding-right:5px; 
+
+                    &::after {display:none;}
+                }
+            }
+            
             th,td {
                 &:first-of-type {
                     padding-left:5px;
 
                     &::after {display:none;}
                 }
-
                 &:last-of-type {
-                    padding-right:5px; 
+                    padding-left:5px;
 
                     &::after {display:none;}
                 }
@@ -547,6 +559,127 @@ button:disabled {
                     font-size:16px; color:#6E7584; font-weight:400; line-height:1.5;
                 }
             }
+        }
+    }
+}
+
+
+/*2025.02.14 체육인정보조회 이름 자동완성 검색*/
+.atcFrame {
+    position:relative; width:100%;
+
+    .autoComp {
+        display:none; position:absolute; top:32px; left:0; width:100%; padding: 20px; border:1px solid #bbbbbb; background:#fff; border-radius:4px; z-index:99;
+        &.on {
+            display:unset;
+        }
+        > .inner {
+            position:relative;  height:auto; max-height:150px; overflow-y:auto;
+            &::-webkit-scrollbar{
+              width:8px; background:#dfdfdf;
+            }
+            &::-webkit-scrollbar-thumb{
+              background:rgba(0,0,0,0.2);
+            }
+            
+            > ul {
+                display:flex; flex-flow: column; align-items: flex-start; justify-content: flex-start;
+
+                > li {
+                    border-bottom:1px solid #dfdfdf; width:100%;
+
+                    > a {
+                        display:block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; padding:5px 10px;
+
+                        > span {
+                            position:relative; margin-left:10px;
+
+                            &::after {
+                                content:'/'; position:absolute; top:0; right:-9px;
+                            }
+
+                            &:first-of-type {
+                                margin-left:0;
+                            }
+
+                            &:last-of-type {
+                                &::after {
+                                    display:none;
+                                }
+                            }
+                        }
+
+                        > input[type=radio] {
+                            display:none;
+
+                            &:checked {
+                                background-color: rgba(90,126,255,0.25);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > div {
+            &.createNew {
+                position:relative; border-bottom:0; height:32px; margin-top:15px;
+    
+                > a {
+                    position:absolute; top:50%; right:0; transform:translateY(-50%); border:1px solid var(--basic-color); border-radius:4px; text-align:center ;line-height:30px; padding: 0 10px; color:var(--basic-color); 
+                }
+            }
+        }
+    }
+}
+
+.foldBox {
+    position:relative;
+
+    .foldListBox {
+        position:absolute; top:0; left:0; width:100%; max-height:0px; background:#fff; position:relative; transition:all 0.4s; overflow:hidden;
+
+        textarea {
+            width:100%; padding: 20px; border:1px solid #dcdcdc; font-size:12px; font-weight:bold;    
+
+            &:focus {
+                border:1px solid #000;
+            }
+        }
+    }
+}
+.cptFooter {
+    width:100%; position:relative; background:#f5f6fa; padding: 10px 0 40px;
+
+    > .inner {
+        display:flex; flex-flow :row nowrap; align-items: flex-end ;justify-content: center; gap:20px;
+
+        > .txt {
+            font-size:12px; color:#000; font-weight:500; line-height:1;
+        }
+    }
+}
+
+/*2025.04.07 로그인 capslock 말풍선 추가*/
+.infoBalloon {
+    position:relative;
+
+    .balloon {
+        position:absolute; top:-50px; left:50%; transform:translateX(-50%); border:1px solid #dfdfdf; border-radius:8px; padding: 10px 20px; background:#fff; margin-left:100px; width:max-content;
+
+        >.inner {
+            position:relative;
+
+            > p {
+                font-size:14px; font-weight:bold; color:#666;
+            }
+        }
+
+        &::before {
+            content:''; border-top:9px solid #fff; border-left:8px solid transparent; border-right:8px solid transparent; position:absolute; bottom:-9px; left:28px; z-index:2;
+        }
+        &::after {
+            content:''; border-top:9px solid #dfdfdf; border-left:8px solid transparent; border-right:8px solid transparent; position:absolute; bottom:-10px; left:28px; z-index:1;
         }
     }
 }

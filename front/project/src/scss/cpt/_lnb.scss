@@ -112,7 +112,7 @@
             display:flex; flex-flow: row nowrap; align-items: flex-start ;justify-content: flex-start;
             &.active {
                 .depth01 {
-                    button {                        
+                    > a {                        
                         &::after {
                             display:none;
                         }
@@ -120,9 +120,9 @@
                 }
             }
             > div {
-                width:50%; position:relative;
-                > button {
-                    background:var(--bg1); padding: 11px 20px; width:100%; border-left:1px solid var(--bg1); border-right:1px solid var(--bg1);
+                width:50%; position:relative; display:block !important;
+                > a {
+                    display:block; background:var(--bg1); padding: 11px 20px; width:100%; border-left:1px solid var(--bg1); border-right:1px solid var(--bg1);
                     font-size:16px; color:var(--prm3); font-weight:500; line-height:22px; text-align:left;
                 
                     &::before {
@@ -137,7 +137,7 @@
                 }
 
                 &.depth01 {
-                    button {
+                    > a {
                         &::after {
                             content:''; position:absolute; top:50%; right:0; width:1px; height:16px; background:var(--lbg1); transform:translateY(-50%);
                         }
@@ -145,13 +145,13 @@
                 }
 
                 &.active {
-                    button {
+                    > a {
                         background:var(--bg1); border-left:1px solid var(--lbg1); border-right:1px solid var(--lbg1);
                     }
                 }
 
                 > div {
-                    display:none; position:absolute; top:100%; left:0; width:100%; background:var(--bg1); border-radius:0 0 6px 6px; padding:10px 20px 20px 20px; z-index:2; border:1px solid var(--lbg1); border-top:0;
+                    display:none; position:absolute; top:100%; left:0; width:100%; background:var(--bg1); border-radius:0 0 6px 6px; padding:10px 20px 20px 20px; z-index:2; border:1px solid var(--lbg1); border-top:0; z-index:3;
 
                     .inner {
                         > ul {

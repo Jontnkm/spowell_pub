@@ -162,7 +162,24 @@
 /* 작은 타이틀 (대부분 팝업용) */
 .comSmTit {width:100%; margin-top:40px; margin-bottom:12px; display:flex; justify-content:space-between; align-items: center; min-height:30px;}
 .comSmTit:first-child {margin-top:0;}
-.comSmTit .alignL {display:flex; align-items:end;}
+.comSmTit .alignL {
+    display:flex; align-items:center; gap:10px;
+    .countBox {
+        display:flex; flex-flow: row nowrap; align-items:center;
+
+        span {
+            display:flex; font-size:14px; font-weight:500;
+            
+            &:last-of-type {
+                width:auto;
+            }
+        }
+
+        input {
+            display:flex; margin-left:10px; width:100px; font-size:14px; font-weight:500;
+        }
+    }
+}
 .comSmTit .alignR {display:flex; align-items:end; width:auto;}
 .comSmTit .title {font-size:18px; font-weight:500; color:#000; line-height:26px;}
 .comSmTit .titText {padding-left:13px; font-size:12px; font-weight:400; color:#333; line-height:17px; display:inline-block; position:relative;}
@@ -241,7 +258,7 @@
 .comSideOpt .opList > .item {margin-left:5px;;}
 .comSideOpt .opList > .item:first-child {margin-left:0;}
 /* 사이드 폼 */
-.comSideOpt input[type=text] {width:100px; height:30px; padding-left:8px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
+.comSideOpt input[type=text] {width:100px; height:30px; padding:0 5px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
 .comSideOpt input[type=password] {width:100px; height:30px; padding-left:8px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px;}
 .comSideOpt input[type=checkbox] {}
 .comSideOpt input[type=radio] {}
@@ -260,9 +277,9 @@
 .comPaging .next {width:20px; height:26px; margin-left:5px; font-size:0; vertical-align:top; background:url(../images/icon/ic_paging_next.svg) center no-repeat; display:inline-block;}
 .comPaging .end {width:20px; height:26px; font-size:0; vertical-align:top; background:url(../images/icon/ic_paging_end.svg) center no-repeat; display:inline-block;}
 .comPaging .numList {vertical-align:top; display:inline-block;}
-.comPaging .numList > li {width:26px; height:26px; margin-left:5px; font-size:0; display:inline-block;}
-.comPaging .numList > li a {width:100%; height:100%; font-size:14px; border-radius:50%; color:#757575; line-height:26px; display:block;}
-.comPaging .numList > li.on a {color:#fff; background:var(--basic-color);}
+.comPaging .numList > li {width:max-content; min-width:26px; height:26px; margin-left:5px; font-size:0; display:inline-block;}
+.comPaging .numList > li a {width:max-content; min-width:100%; height:100%; font-size:14px; border-radius:50%; color:#757575; line-height:26px; display:block;}
+.comPaging .numList > li.on a {color:#fff; background:var(--basic-color); padding: 0 5px;}
 
 
 /* ---------------------------------------------- 폼 하단 설명, 주의, 경고, 등의 텍스트 ---------------------------------------------- */
@@ -303,7 +320,7 @@
 /* ---------------------------------------------- 테이블, 그리드 등 그룹상단 ---------------------------------------------- */
 .cptGroupTop {width:100%; margin-top:40px; margin-bottom:13px; position:relative;}
 .cptGroupTop:first-child {margin-top:0;}
-.cptGroupTop .alignL {min-height:30px; display:flex; justify-content:start; align-items:center;}
+.cptGroupTop .alignL {min-height:30px; display:flex; justify-content:start; align-items:center; gap:12px;}
 .cptGroupTop .alignR {position:absolute; bottom:0; right:0;}
 .cptGroupTop .groupTitle {font-size:24px; line-height:30px; font-weight:500; display:inline-block;}
 .cptGroupTop .title {font-size:18px; font-weight:500; color:#000; line-height:26px; margin-right:5px;}
@@ -347,6 +364,8 @@
 .cptGrid .gridTb tbody tr:last-child td:first-child::after {display:none;}
 .cptGrid .gridTb tbody tr:last-child td:last-child {border-radius:0 0 10px 0;}
 .cptGrid .gridTb tbody tr:last-child td:last-child::after {display:none;}
+.cptGrid .gridTb tbody tr.scndLine td:first-child {padding-left: 5px;}
+.cptGrid .gridTb tbody tr.scndLine td:last-child:not(.right) {padding-right: 5px; }
 .cptGrid .gridTb tfoot td {padding:5px 5px; height:48px; font-size:16px; font-weight:bold; color:#333; text-align:center; line-height:1.6; border-top:1px solid #ddd; background:#dadffd; position:relative;}
 .cptGrid .gridTb tfoot td a.boardLink {display:block; width:100%;}
 .cptGrid .gridTb tfoot td a.boardLink > span:first-of-type {text-decoration:underline;}
@@ -378,6 +397,7 @@
 .cptGrid .listTit.hlgt {font-weight:bold; color:#005ce6;}
 .cptGrid .frmGroup input[readonly] {border:0;}
 .cptGrid .gridTb tr .center .frmGroup input[readonly] {padding:0; text-align:center;}
+.cptGrid .gridTb tr .center .frmGroup input[readonly].right {text-align: right;}
 
 /* 추가조작 */
 .cptGrid .gridTb tr .left {text-align:left;}
@@ -392,6 +412,16 @@
 .cptGrid .gridTb tr .noLast:last-child {padding: 5px;}
 .cptGrid .gridTb tr .noLast:last-child::after {display: none;}
 .cptGrid td span.newBtn {display:inline-block; vertical-align:middle; margin:6px 0 0 5px;}
+.cptGrid{
+    &.hor {
+        table {
+            border-collapse:separate; border-spacing:0;
+        }
+        thead {
+            position:sticky !important; top:0; left:0; z-index:9;
+        }
+    }
+}
 
 
 /* ---------------------------------------------- 갤러리형 게시판 ---------------------------------------------- */
@@ -583,7 +613,7 @@
 
 /* --------------------------------------------- tab in/out --------------------------------------------- */
 .modTab {}
-.modTab .tabMenu {width:100%; height:60px; display:flex;}
+.modTab .tabMenu {width:100%; height:60px; display:flex; margin-top:40px;}
 .modTab .tabMenu > .item {width:100%; height:100%; display:flex;}
 .modTab .tabMenu > .item a {width:100%; height:100%; font-size:16px; font-weight:500; color:rgba(0,0,0,0.3); border-bottom:1px solid rgba(112,112,112,0.3); display:flex; justify-content:center; align-items:center; position:relative;}
 .modTab .tabMenu > .item.on a {color:rgba(0,0,0,1);}
@@ -685,9 +715,10 @@
 /* ------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------ Form ----------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */
-input[type=text] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
+input[type=text] {width:100%; height:34px; padding: 0 5px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
 input[type=text]:disabled,
-input[type=text].readonly {color:#777 !important;}
+input[type=text].readonly,
+input[type=text]:read-only {color:#777 !important; background:#f5f5f5; border:1px solid #eaeaea;}
 input[type=password] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px;}
 input[type=password]:disabled {color:#777; background:#efefef;}
 input[type=checkbox].readonly + label,
@@ -711,7 +742,7 @@ select.iptSlt {font-size:14px;}
 .fileAfter .textBox::before {content: ''; position:absolute; top:50%; left:0; width:13px; height:17px; background:url(../images/common/btn_download.png)50% 50% no-repeat;  transform:translateY(-50%);}/*20240419 추가*/
 .textBoxFnt {margin-right:5px; height:34px; line-height:37px; display:inline-block; min-width:40px;}
 .textBox.deco {width:15px; min-width:15px; margin-left:2px; text-align:center;}
-.textBox.clar {font-size:12px; line-height:17px; margin-top:2px;}
+.textBox.clar {font-size:12px; line-height:17px; margin-top:5px; margin-left:0;}
 .textBox.noM {margin:0; height:15px;}
 .iptDate {width:100%; margin-left:5px; position:relative;}
 .iptDate:first-child {margin-left:0;}
@@ -724,7 +755,7 @@ select.iptSlt {font-size:14px;}
 .iptSlt + .frmChoBox {margin-left:30px;} 
 .fileBox {position:relative;}
 .fileBox .fileName {width:auto; height:30px; line-height:29px; font-size:14px; color:#000; border:0;}
-.fileBox .fileDel {width:20px; height:20px; margin-left:5px; font-size:0; border:0; background:url(../images/icon/btn_del.svg) center no-repeat;}
+.fileBox .fileDel {width:25px; height:25px; margin-left:5px; font-size:0; border:0; background:url(../images/icon/btn_del.svg) center no-repeat;}
 .fileBox .fileDel2 {width:20px; height:20px; margin-left:5px; font-size:0; border:0; background:url(../images/icon/btn_del.svg) center no-repeat;} /*20230404 추가*/
 .fileBox .fileAfter {align-items: center; display:none;}
 .fileBox .fileAfter .limit200 {width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
@@ -832,6 +863,7 @@ textArea.areaMd {height:150px;}
 
 /* ------------------------------ 한줄 안에 여러폼을 넣어야 할 경우 ------------------------------ */
 .frmGroup {display:flex; align-items:center;}
+.frmGroup.ff {flex-flow:row wrap}
 .frmGroup .iptText, .frmGroup .iptSlt, .frmGroup .textBox {margin-left:5px;}
 .frmGroup .textBox.clar {margin-top:0; margin-left:5px;}
 .frmGroup.multiLine {flex-wrap: wrap;}
@@ -859,6 +891,7 @@ textArea.areaMd {height:150px;}
 .cptTable input.iptText {height:30px;}
 .cptTable select.iptSlt {height:30px;}
 .cptTable .textBox {height:30px; line-height:29px;}
+.cptTable .fileAfter .textBox { display: block; width: 100%; min-width: auto; height: auto; line-height: 1.4;}
 
 .cptTable .iptDate {height:30px;}
 .cptTable .iptDate .dateBtn {width:30px; height:30px;}
@@ -1196,7 +1229,7 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin .lgInner > div.fnBox {width:600px; height:500px; background:#fff; padding: 60px 100px; box-sizing:border-box;}
 .lytLogin .cptLogin .lgInner > div.fnBox > p {font-size:40px; color:#000; font-weight:bold; letter-spacing:normal; margin-bottom:20px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .iptBox {width:100%; margin-bottom:10px; position:relative;}
-.lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input {border:1px solid #bbb; border-radius:5px; height:60px; line-height:60px; font-size: 16px; color:#000; font-weight:500;}
+.lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input {border:1px solid #bbb; border-radius:5px; height:60px; line-height:60px; font-size: 16px; color:#000; font-weight:500; padding-left:12px !important;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input::-webkit-input-placeholder {color:#ccc; font-weight:400;}
 .lytLogin .cptLogin .lgInner > div.fnBox .codeInfo {font-size:14px; color:#333; font-weight:500; line-height:1.4; letter-spacing:-0.32px; margin-bottom:10px;}
 .lytLogin .cptLogin .lgInner > div.fnBox .codeInfo span {font-weight:bold;}
